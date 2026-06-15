@@ -4,8 +4,9 @@
 Mapper 4 (MMC3), PRG 128KB
 """
 import struct
+from rom_utils import find_rom_path
 
-ROM_PATH = '/tmp/rom_hack/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes'
+ROM_PATH = find_rom_path()
 
 with open(ROM_PATH, 'rb') as f:
     data = f.read()

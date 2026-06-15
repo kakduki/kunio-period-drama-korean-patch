@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import re
+from rom_utils import find_rom_path
 
-with open('/tmp/rom_hack/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes', 'rb') as f:
+with open(find_rom_path(), 'rb') as f:
     data = f.read()
 
 prg = data[16:131088]  # PRG ROM

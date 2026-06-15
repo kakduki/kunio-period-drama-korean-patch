@@ -5,8 +5,9 @@ MMC3 mapper 4, PRG 128KB
 텍스트 포인터 찾기 + 실제 텍스트 덤프
 """
 import struct, sys
+from rom_utils import find_rom_path
 
-ROM_PATH = '/tmp/rom_hack/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes'
+ROM_PATH = find_rom_path()
 
 with open(ROM_PATH, 'rb') as f:
     data = f.read()
