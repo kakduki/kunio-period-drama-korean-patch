@@ -22,6 +22,7 @@
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
+- `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
@@ -77,6 +78,13 @@ Verified run:
 - FCEUX did not create `fceux_trace.log` in this run. The verified runtime trace
   artifact is `fceux_lua/events.tsv`, which records Lua-captured `$2006/$2007`
   writes instead of the debugger Trace Logger's full CPU instruction log.
+- `scripts/analyze_fceux_lua_events.py` groups the Lua event log by frame and
+  address range. It found that the first coarse PPU burst list was too broad:
+  palette-only frames are less useful, while frame clusters `22-27` and
+  `313-318` contain substantial nametable writes. Frame `314` remains the
+  strongest current candidate, but frames `313`, `315`, `316`, `317`, and `318`
+  should be inspected together because they appear to be one multi-frame screen
+  composition sequence.
 
 ## Next FCEUX targets
 
