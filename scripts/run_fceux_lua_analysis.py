@@ -13,6 +13,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -22,6 +23,7 @@ DEFAULT_QFCEUX = ROOT / "tools" / "fceux-2.6.6-win64-QtSDL" / "bin" / "qfceux.ex
 DEFAULT_FCEUX = ROOT / "tools" / "fceux-2.6.6-win64" / "fceux64.exe"
 LUA_SCRIPT = ROOT / "lua" / "kunio_auto_dump.lua"
 FINAL_OUTPUT = ROOT / "rom_analysis" / "fceux_lua"
+STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
 
 
 def find_rom() -> Path:
@@ -61,6 +63,22 @@ def copytree_contents(src: Path, dst: Path) -> None:
             shutil.copytree(item, target)
         else:
             shutil.copy2(item, target)
+
+
+def stage_fceux(exe: Path) -> Path:
+    """Copy FCEUX beside ASCII-only runtime files.
+
+    FCEUX 2.6.6 on Windows can launch from a non-ASCII path, but Lua loading is
+    unreliable there. Running from %TEMP% avoids mojibake in the Lua loader.
+    """
+
+    if STAGED_FCEUX.exists():
+        shutil.rmtree(STAGED_FCEUX)
+    shutil.copytree(exe.parent, STAGED_FCEUX)
+    staged_exe = STAGED_FCEUX / exe.name
+    if not staged_exe.exists():
+        raise FileNotFoundError(f"Staged FCEUX executable was not copied: {staged_exe}")
+    return staged_exe
 
 
 def update_cfg(exe: Path, lua_script_name: str, output_dir_name: str) -> None:
@@ -108,7 +126,8 @@ def update_cfg(exe: Path, lua_script_name: str, output_dir_name: str) -> None:
 
 def launch(args: argparse.Namespace) -> int:
     rom = Path(args.rom).expanduser().resolve() if args.rom else find_rom()
-    exe = find_fceux(args.fceux)
+    source_exe = find_fceux(args.fceux)
+    exe = stage_fceux(source_exe)
     fceux_workdir = exe.parent
     ascii_rom = fceux_workdir / "rom.nes"
     ascii_lua = fceux_workdir / "kunio_auto_dump.lua"
@@ -136,13 +155,21 @@ def launch(args: argparse.Namespace) -> int:
 
     proc = subprocess.Popen(cmd, cwd=fceux_workdir, env=env)
     deadline = time.monotonic() + args.timeout
+    completed = False
+    summary = ascii_output / "summary.tsv"
 
     try:
         while proc.poll() is None and time.monotonic() < deadline:
+            if summary.exists() and "lua_done" in summary.read_text(encoding="utf-8", errors="ignore"):
+                completed = True
+                print("Lua script reported completion; stopping FCEUX.")
+                proc.terminate()
+                break
             time.sleep(1)
     finally:
         if proc.poll() is None:
-            print(f"Timeout reached ({args.timeout}s); stopping FCEUX.")
+            if not completed:
+                print(f"Timeout reached ({args.timeout}s); stopping FCEUX.")
             proc.terminate()
             try:
                 proc.wait(timeout=5)
@@ -152,6 +179,8 @@ def launch(args: argparse.Namespace) -> int:
 
     copytree_contents(ascii_output, FINAL_OUTPUT)
     print("Copied Lua output into:", FINAL_OUTPUT)
+    if completed:
+        return 0
     return proc.returncode or 0
 
 

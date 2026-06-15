@@ -53,11 +53,10 @@
 
 ## FCEUX Lua automation
 
-The repository now includes `lua/kunio_auto_dump.lua` and
+The repository includes `lua/kunio_auto_dump.lua` and
 `scripts/run_fceux_lua_analysis.py` to reduce manual GUI work. The launcher
-opens FCEUX with the ROM, configures trace/logging-related settings, runs the
-Lua script when supported, and mirrors generated dumps into
-`rom_analysis/fceux_lua/`.
+stages FCEUX in an ASCII-only `%TEMP%` path, opens the ROM, runs the Lua script,
+and mirrors generated dumps into `rom_analysis/fceux_lua/`.
 
 Run:
 
@@ -67,6 +66,17 @@ python scripts/run_fceux_lua_analysis.py --frames 10800 --timeout 240
 
 If the Lua overlay does not appear in FCEUX, load `lua/kunio_auto_dump.lua`
 manually from the FCEUX Lua menu while the ROM is open.
+
+Verified run:
+
+- Command: `python scripts/run_fceux_lua_analysis.py --frames 900 --timeout 90 --snapshot-every 180`
+- Result: Lua completed automatically and saved 14 dump sets.
+- Strong PPU burst frames: `33`, `95`, `125`, `233`, `284`, `314`, `653`
+- Frame `314` is especially interesting because the tracked PPU address reached
+  `$20A1`, a nametable-region address likely related to visible text/UI writes.
+- FCEUX did not create `fceux_trace.log` in this run. The verified runtime trace
+  artifact is `fceux_lua/events.tsv`, which records Lua-captured `$2006/$2007`
+  writes instead of the debugger Trace Logger's full CPU instruction log.
 
 ## Next FCEUX targets
 

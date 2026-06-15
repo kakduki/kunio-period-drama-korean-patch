@@ -26,10 +26,12 @@ python scripts/run_fceux_lua_analysis.py --fceux C:\path\to\qfceux.exe
 python scripts/run_fceux_lua_analysis.py --rom C:\path\to\game.nes
 ```
 
-The launcher copies the ROM and Lua script beside the selected FCEUX executable
-and writes temporary Lua output there using ASCII-only relative paths. This
-avoids Windows path encoding issues. When FCEUX exits or the timeout is reached,
-it mirrors the output to:
+The launcher copies the selected FCEUX directory to an ASCII-only staging path
+under `%TEMP%\kunio_fceux_ascii_bin`, then copies the ROM and Lua script beside
+that staged executable. This avoids Windows path encoding issues that prevent
+FCEUX 2.6.6 from loading Lua scripts from the repository's Korean path. When
+the Lua script reports completion, the launcher stops FCEUX and mirrors the
+output to:
 
 ```text
 rom_analysis/fceux_lua/
@@ -37,8 +39,8 @@ rom_analysis/fceux_lua/
 
 ## If Lua does not autoload
 
-The launcher uses FCEUX's `--loadlua` option. If the emulator opens without the
-overlay text:
+The launcher uses FCEUX's `--loadlua` option from the ASCII staging directory.
+If the emulator opens without the overlay text:
 
 1. Keep the ROM open.
 2. Open `File > Lua > New Lua Script Window` or `File > Run Lua Script`.
@@ -57,3 +59,8 @@ overlay text:
 The important follow-up is to compare dump frames with the static candidates in
 `rom_analysis/README.md`, especially the `$2006/$2007` writer region and the
 bank16 `1` text-like candidate offsets.
+
+Note: the launcher enables trace-related FCEUX config keys, but the verified
+automatic artifact is the Lua event trace (`events.tsv`). In the tested FCEUX
+2.6.6 Qt/SDL build, the debugger Trace Logger did not emit `fceux_trace.log`
+without manual debugger interaction.
