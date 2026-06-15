@@ -23,6 +23,7 @@
 - `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
+- `fceux_lua_nametable_reconstruction.md`: 32x30 nametable tile-grid reconstruction from `$2007` events for the strongest text/UI candidate frames
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
@@ -85,6 +86,11 @@ Verified run:
   strongest current candidate, but frames `313`, `315`, `316`, `317`, and `318`
   should be inspected together because they appear to be one multi-frame screen
   composition sequence.
+- `scripts/reconstruct_nametable_from_events.py` rebuilds 32x30 tile grids from
+  `$2007` events. The reconstruction shows frame cluster `313-317` writing
+  mostly to nametable rows `04-05`, while frames `339-361` update row `24` two
+  cells at a time. This gives a text-file equivalent of the PPU Viewer for the
+  automated run.
 
 ## Next FCEUX targets
 
