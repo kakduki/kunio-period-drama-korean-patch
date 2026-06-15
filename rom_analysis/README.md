@@ -32,6 +32,9 @@
 - `fceux_lua_long/events.tsv`: 7,200-frame `$2006/$2007` runtime event log
 - `fceux_lua_long_event_summary.md`: grouped event summary for the 7,200-frame run, starting after frame `900`
 - `fceux_lua_long_nametable_reconstruction.md`: selected 32x30 nametable reconstructions from the strongest long-run non-zero tile-write candidates
+- `fceux_bank1_watch/summary.tsv`: optional Bank 1 read-watch run summary from `lua/kunio_bank1_watch.lua`
+- `fceux_bank1_watch/bank1_reads.tsv`: optional CPU read hits for the Bank 1 candidate records, generated when the emulator build supports Lua read callbacks
+- `fceux_bank1_watch_test_summary.md`: short 900-frame validation summary for the Bank 1 read watcher
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
@@ -80,6 +83,12 @@ Run:
 python scripts/run_fceux_lua_analysis.py --frames 10800 --timeout 240
 ```
 
+To watch the current Bank 1 item/status/UI candidate records for CPU reads:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py --lua-script lua/kunio_bank1_watch.lua --frames 10800 --timeout 240 --final-output rom_analysis/fceux_bank1_watch --no-dump-hex --no-dump-bin
+```
+
 If the Lua overlay does not appear in FCEUX, load `lua/kunio_auto_dump.lua`
 manually from the FCEUX Lua menu while the ROM is open.
 
@@ -109,6 +118,14 @@ Verified run:
   Strong non-zero nametable candidates include frame groups `1020-1026`,
   `2903-2908`, `5184-5187`, `5464-5470`, plus smaller row updates at `6614`
   and `7091`. These are better next targets than palette-only bursts.
+- `lua/kunio_bank1_watch.lua` registers read callbacks for the current
+  breakpoint-ready Bank 1 records, including `ROM+0x05644`, `0x05BDF`,
+  `0x06DE3`, `0x0736A`, and `0x0739D`. A non-empty `bank1_reads.tsv`
+  would be stronger evidence that the candidate record is used at runtime.
+- A 900-frame validation run confirmed `memory.registerread` support in the
+  local FCEUX build: 124 watched CPU addresses were registered and 247 read
+  hits were captured. The run observed `ROM+0x071A4` (`ちから` candidate) and
+  `ROM+0x06FA1` (`そうび` candidate) being read at runtime.
 
 ## Next FCEUX targets
 

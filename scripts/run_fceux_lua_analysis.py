@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QFCEUX = ROOT / "tools" / "fceux-2.6.6-win64-QtSDL" / "bin" / "qfceux.exe"
 DEFAULT_FCEUX = ROOT / "tools" / "fceux-2.6.6-win64" / "fceux64.exe"
-LUA_SCRIPT = ROOT / "lua" / "kunio_auto_dump.lua"
+DEFAULT_LUA_SCRIPT = ROOT / "lua" / "kunio_auto_dump.lua"
 STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
 
 
@@ -48,6 +48,16 @@ def find_fceux(explicit: str | None) -> Path:
         "FCEUX executable was not found under tools/. "
         "Pass --fceux C:\\path\\to\\qfceux.exe or install/extract FCEUX there."
     )
+
+
+def find_lua_script(explicit: str | None) -> Path:
+    lua_script = Path(explicit).expanduser() if explicit else DEFAULT_LUA_SCRIPT
+    if not lua_script.is_absolute():
+        lua_script = ROOT / lua_script
+    lua_script = lua_script.resolve()
+    if not lua_script.exists():
+        raise FileNotFoundError(f"Lua script not found: {lua_script}")
+    return lua_script
 
 
 def copytree_contents(src: Path, dst: Path) -> None:
@@ -126,11 +136,12 @@ def update_cfg(exe: Path, lua_script_name: str, output_dir_name: str) -> None:
 def launch(args: argparse.Namespace) -> int:
     rom = Path(args.rom).expanduser().resolve() if args.rom else find_rom()
     source_exe = find_fceux(args.fceux)
+    lua_script = find_lua_script(args.lua_script)
     final_output = Path(args.final_output).expanduser().resolve()
     exe = stage_fceux(source_exe)
     fceux_workdir = exe.parent
     ascii_rom = fceux_workdir / "rom.nes"
-    ascii_lua = fceux_workdir / "kunio_auto_dump.lua"
+    ascii_lua = fceux_workdir / lua_script.name
     ascii_output = fceux_workdir / "kunio_fceux_lua_output"
 
     ascii_output.mkdir(parents=True, exist_ok=True)
@@ -138,7 +149,7 @@ def launch(args: argparse.Namespace) -> int:
         shutil.rmtree(final_output)
     final_output.mkdir(parents=True, exist_ok=True)
     shutil.copy2(rom, ascii_rom)
-    shutil.copy2(LUA_SCRIPT, ascii_lua)
+    shutil.copy2(lua_script, ascii_lua)
 
     update_cfg(exe, ascii_lua.name, ascii_output.name)
 
@@ -149,10 +160,11 @@ def launch(args: argparse.Namespace) -> int:
     env["KUNIO_PPU_BURST_THRESHOLD"] = str(args.ppu_burst_threshold)
     env["KUNIO_DUMP_HEX"] = "1" if args.dump_hex else "0"
     env["KUNIO_DUMP_BIN"] = "1" if args.dump_bin else "0"
+    env["KUNIO_HIT_LIMIT"] = str(args.hit_limit)
 
     cmd = [str(exe), "--loadlua", ascii_lua.name, "--sound", "0", ascii_rom.name]
     print("Launching:", " ".join(cmd))
-    print("Lua script:", LUA_SCRIPT)
+    print("Lua script:", lua_script)
     print("FCEUX working dir:", fceux_workdir)
     print("Temporary output:", ascii_output)
     print("Final output:", final_output)
@@ -192,10 +204,12 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rom", help="Path to the .nes ROM. Defaults to first rom/*.nes.")
     parser.add_argument("--fceux", help="Path to qfceux.exe or fceux64.exe.")
+    parser.add_argument("--lua-script", default=str(DEFAULT_LUA_SCRIPT), help="Lua script to stage and run inside FCEUX.")
     parser.add_argument("--frames", type=int, default=7200, help="Frames to run in Lua.")
     parser.add_argument("--timeout", type=int, default=180, help="Seconds before stopping FCEUX.")
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")
     parser.add_argument("--ppu-burst-threshold", type=int, default=24, help="PPUDATA/PPUADDR writes per frame that trigger a dump.")
+    parser.add_argument("--hit-limit", type=int, default=20000, help="Maximum read hits for watcher Lua scripts that support KUNIO_HIT_LIMIT.")
     parser.add_argument("--final-output", default=str(ROOT / "rom_analysis" / "fceux_lua"), help="Directory where Lua output is mirrored after FCEUX exits.")
     parser.add_argument("--clean-output", action="store_true", help="Delete the final output directory before copying new results.")
     parser.add_argument("--dump-hex", action=argparse.BooleanOptionalAction, default=True, help="Write text hex dumps at snapshot frames.")
