@@ -124,8 +124,10 @@ Verified run:
   would be stronger evidence that the candidate record is used at runtime.
 - A 900-frame validation run confirmed `memory.registerread` support in the
   local FCEUX build: 124 watched CPU addresses were registered and 247 read
-  hits were captured. The run observed `ROM+0x071A4` (`ちから` candidate) and
-  `ROM+0x06FA1` (`そうび` candidate) being read at runtime.
+  hits were captured. The run observed a strong context match for
+  `ROM+0x071A4` (`ちから` candidate); `ROM+0x06FA1` was also read frequently,
+  but its hit contexts did not include the expected candidate bytes in the
+  short run, so treat it as an address/bank-switch follow-up target.
 
 ## Next FCEUX targets
 
