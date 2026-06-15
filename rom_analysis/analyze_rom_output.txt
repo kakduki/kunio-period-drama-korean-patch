@@ -1,0 +1,76 @@
+﻿=== ASCII 문자열 ===
+  PRG+0x00395: "8`)?"
+  PRG+0x009D9: "lXD2!"
+  PRG+0x009EC: "yrlf`[VQLIE@=963"
+  PRG+0x00AF1: "@BA@@"
+  PRG+0x00AFA: "AAA@"
+  PRG+0x00B01: "@@A@"
+  PRG+0x00B14: "FFHI"
+  PRG+0x00B89: "iede"
+  PRG+0x00B92: "ikl6p"
+  PRG+0x00B98: "pqpq"
+  PRG+0x00BA8: "|zwzw"
+  PRG+0x00BAE: "uzwu"
+  PRG+0x00BE7: "pn0p"
+  PRG+0x00D34: "]Q]0"
+  PRG+0x00DC9: "BBBD"
+  PRG+0x00DDA: "BBBBAADH"
+  PRG+0x00DED: "BBAB"
+  PRG+0x00E04: "BDDHH"
+  PRG+0x00E58: "ecfec_^"
+  PRG+0x00EC3: "ecde"
+  PRG+0x00ECC: "hijj"
+  PRG+0x00ED3: "jhij"
+  PRG+0x00EEC: "qokjhec_"
+  PRG+0x00F0B: "\^ec_^\YWS"
+  PRG+0x00F3C: "VWVU"
+  PRG+0x00F76: "Y\^MMY"
+  PRG+0x00F83: "FRIU"
+  PRG+0x00F93: "WMYK"
+  PRG+0x00F98: "WKGS"
+  PRG+0x00FA1: "KGFFM"
+
+=== Shift-JIS 텍스트 ===
+  PRG+0x00A4E ( 10bytes): 刊犀埴置毎
+  PRG+0x00AB5 (  6bytes): 感龍犇
+  PRG+0x03FC3 (  6bytes): 韲諂浅
+  PRG+0x04160 ( 10bytes): 肘返符兵斂
+  PRG+0x04453 (  6bytes): 黒嵯在
+  PRG+0x04877 (  8bytes): 斡或委鞍
+  PRG+0x052A4 (  6bytes): ｂн孫
+  PRG+0x052E2 ( 30bytes): 徹吐堵套屯屯惇邸猫杯噺挽被隼膏
+  PRG+0x054C3 (  6bytes): 板攣姿
+  PRG+0x05517 (  6bytes): 峠蔑勦
+  PRG+0x0560C ( 18bytes): 凡魔枚膜桝末麿毎漫
+  PRG+0x0562C (  6bytes): ョ草窒
+  PRG+0x0567A (  6bytes): 坩賢ヶ
+  PRG+0x05702 (  8bytes): 汲性Ε┘
+  PRG+0x05757 (  8bytes): 鍵剄横弌
+  PRG+0x05888 (  6bytes): 召剄殴
+  PRG+0x058AB (  6bytes): 召性ユ
+  PRG+0x058D3 (  6bytes): Δ性レ
+  PRG+0x05919 (  6bytes): 拷性ヨ
+  PRG+0x0599B (  6bytes): 孫レ草
+  PRG+0x05A19 ( 54bytes): 妁侫姨娥娉娶嫋嫣嫻嬪孑孵寃寥尓屆屶岼峺嵜崙嶇嶽巖帑幎幺
+  PRG+0x05A88 (  6bytes): 浙嚼睡
+  PRG+0x05AE8 (  6bytes): 仲江厳
+  PRG+0x05B2F (  6bytes): 浙嚊ョ
+  PRG+0x05B37 (  6bytes): 浙嚶ぐ
+  PRG+0x05BAC (  6bytes): ╋巣悵
+  PRG+0x05BD4 (  8bytes): 尸洸囁汞
+  PRG+0x05BF4 (  6bytes): 恃ｐ合
+  PRG+0x05C42 (  6bytes): 校ｈ雫
+  PRG+0x05C97 (  6bytes): 拷拷剞
+  PRG+0x05CB0 (  6bytes): 式粍刎
+  PRG+0x05CBA ( 26bytes): 愽慘慴慟慵憔憮懈憺懺戉恊お
+  PRG+0x05EE0 (  6bytes): ┓鹿坏
+  PRG+0x05F64 (  6bytes): 元竜浹
+  PRG+0x06019 (  8bytes): ≠研倹佻
+  PRG+0x06034 (  6bytes): う倹傀
+  PRG+0x060B8 (  8bytes): 套旭赴え
+  PRG+0x06104 (  8bytes): 塘倹株→
+  PRG+0x0612A (  6bytes): ｐ研彩
+  PRG+0x06134 (  6bytes): 粥延株
+
+Total SJIS text regions found: 40
+PRG ROM size: 131072 bytes

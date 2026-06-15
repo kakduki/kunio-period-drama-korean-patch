@@ -1,0 +1,22 @@
+﻿============================================================
+CHR ROM font analysis and 8x16 font preparation
+============================================================
+CHR bank images generated.
+
+=== 8x16 tile usage by bank ===
+  Bank 00: 255/256 tiles used
+  Bank 01: 256/256 tiles used
+  Bank 02: 256/256 tiles used
+  Bank 03: 256/256 tiles used
+  Bank 04: 253/256 tiles used
+  Bank 05: 256/256 tiles used
+  Bank 06: 256/256 tiles used
+  Bank 07: 255/256 tiles used
+  Bank 08: 256/256 tiles used
+  Bank 09: 256/256 tiles used
+  Bank 10: 256/256 tiles used
+  Bank 11: 256/256 tiles used
+  Bank 12: 256/256 tiles used
+  Bank 13: 256/256 tiles used
+  Bank 14: 256/256 tiles used
+  Bank 15: 250/256 tiles used

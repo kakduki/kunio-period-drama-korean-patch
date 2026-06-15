@@ -1,0 +1,32 @@
+﻿PRG: 131072 bytes, CHR: 131072 bytes, Mapper: 4
+
+CHR ROM: 8192 타일 (8x8)
+
+=== PRG ASCII 텍스트 ===
+  PRG+0x00395: "8`)?"
+  PRG+0x009D9: "lXD2!"
+  PRG+0x009EC: "yrlf`[VQLIE@=963"
+  PRG+0x00AF1: "@BA@@"
+  PRG+0x00AFA: "AAA@"
+  PRG+0x00B01: "@@A@"
+  PRG+0x00B14: "FFHI"
+  PRG+0x00B89: "iede"
+  PRG+0x00B92: "ikl6p"
+  PRG+0x00B98: "pqpq"
+  PRG+0x00BA8: "|zwzw"
+  PRG+0x00BAE: "uzwu"
+  PRG+0x00BE7: "pn0p"
+  PRG+0x00D34: "]Q]0"
+  PRG+0x00DC9: "BBBD"
+  PRG+0x00DDA: "BBBBAADH"
+  PRG+0x00DED: "BBAB"
+  PRG+0x00E04: "BDDHH"
+  PRG+0x00E58: "ecfec_^"
+  PRG+0x00EC3: "ecde"
+
+=== PRG 끝부분 (0xC000-0xFFFF) 분석 ===
+Fixed bank dump saved to C:\Users\kakdu\OneDrive\문서\자산관리\kunio-period-drama-korean-patch\rom_analysis\chr\bank_fixed.txt
+
+=== 키워드로 텍스트 위치 검색 ===
+
+분석 완료. 결과: C:\Users\kakdu\OneDrive\문서\자산관리\kunio-period-drama-korean-patch\rom_analysis\chr/

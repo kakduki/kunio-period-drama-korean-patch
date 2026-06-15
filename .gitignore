@@ -1,5 +1,9 @@
 rom/*.nes
 rom/*.zip
 output/*.ips
+tools/
+rom_analysis/chr/
+rom_analysis/font/
+rom_analysis/disasm_6502_output.txt
 __pycache__/
 .DS_Store
