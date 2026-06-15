@@ -1,0 +1,59 @@
+# FCEUX Lua automation
+
+This repository includes a Lua automation script for Windows FCEUX runtime
+analysis:
+
+- `lua/kunio_auto_dump.lua`
+- `scripts/run_fceux_lua_analysis.py`
+
+The script opens after the ROM is loaded, advances the game with conservative
+controller input, samples likely text-rendering moments, and writes dumps into
+`rom_analysis/fceux_lua/`.
+
+## Run from Codex or PowerShell
+
+Put the ROM in `rom/` first, then run:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py
+```
+
+Useful options:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py --frames 10800 --timeout 240
+python scripts/run_fceux_lua_analysis.py --fceux C:\path\to\qfceux.exe
+python scripts/run_fceux_lua_analysis.py --rom C:\path\to\game.nes
+```
+
+The launcher copies the ROM and Lua script beside the selected FCEUX executable
+and writes temporary Lua output there using ASCII-only relative paths. This
+avoids Windows path encoding issues. When FCEUX exits or the timeout is reached,
+it mirrors the output to:
+
+```text
+rom_analysis/fceux_lua/
+```
+
+## If Lua does not autoload
+
+The launcher uses FCEUX's `--loadlua` option. If the emulator opens without the
+overlay text:
+
+1. Keep the ROM open.
+2. Open `File > Lua > New Lua Script Window` or `File > Run Lua Script`.
+3. Select `lua/kunio_auto_dump.lua`.
+4. Let it run until it pauses or until the launcher timeout stops FCEUX.
+
+## Output files
+
+- `summary.tsv`: frame, trigger reason, PPU-write count, last tracked PPU address, dump stem.
+- `events.tsv`: `$2006/$2007` write events when the running FCEUX build supports Lua write callbacks.
+- `frame_*_cpu_ram.txt`: CPU RAM hex dump.
+- `frame_*_sram_6000_7fff.txt`: SRAM/expanded CPU address range dump.
+- `frame_*_nametable_2000_2fff.txt`: nametable-oriented dump, using the PPU domain when supported.
+- `*.bin`: raw dumps, generated locally and ignored by git by default.
+
+The important follow-up is to compare dump frames with the static candidates in
+`rom_analysis/README.md`, especially the `$2006/$2007` writer region and the
+bank16 `1` text-like candidate offsets.

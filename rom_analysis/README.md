@@ -20,6 +20,8 @@
 - `font_mapping_notes.md`: preliminary visual CHR bank 07 tile mapping
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
+- `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
+- `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
@@ -48,6 +50,23 @@
   - `add=0x82` around `PRG+0x066E0` and `0x06830` decodes visible `ちから` fragments.
   - `add=0x93` around `PRG+0x07350` and `0x07380` decodes visible `らいふ` fragments.
 - The bank16 `5` cluster around `PRG+0x17D30-0x17D80` repeatedly decodes `たから`/`ちから`, but the regular `00 00 FC/FD/FE` structure looks table-like. Treat it as a lower-confidence text candidate until FCEUX confirms reads during UI rendering.
+
+## FCEUX Lua automation
+
+The repository now includes `lua/kunio_auto_dump.lua` and
+`scripts/run_fceux_lua_analysis.py` to reduce manual GUI work. The launcher
+opens FCEUX with the ROM, configures trace/logging-related settings, runs the
+Lua script when supported, and mirrors generated dumps into
+`rom_analysis/fceux_lua/`.
+
+Run:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py --frames 10800 --timeout 240
+```
+
+If the Lua overlay does not appear in FCEUX, load `lua/kunio_auto_dump.lua`
+manually from the FCEUX Lua menu while the ROM is open.
 
 ## Next FCEUX targets
 

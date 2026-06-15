@@ -4,6 +4,7 @@ output/*.ips
 tools/
 rom_analysis/chr/
 rom_analysis/font/
+rom_analysis/fceux_lua/*.bin
 rom_analysis/disasm_6502_output.txt
 __pycache__/
 .DS_Store
