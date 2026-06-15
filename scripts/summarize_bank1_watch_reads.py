@@ -26,6 +26,8 @@ class ReadHit:
     record_cpu_range: str
     expected_bytes: str
     context: str
+    active_expected_match: bool
+    record_snapshot: str
 
 
 def read_summary(input_dir: Path) -> dict[str, str]:
@@ -70,6 +72,8 @@ def read_hits(input_dir: Path) -> list[ReadHit]:
                 record_cpu_range=row.get("record_cpu_range", ""),
                 expected_bytes=row.get("expected_bytes", ""),
                 context=row.get("context", ""),
+                active_expected_match=row.get("active_expected_match", "").lower() == "true",
+                record_snapshot=row.get("record_snapshot", ""),
             )
         )
     return hits
@@ -80,6 +84,15 @@ def context_matches_expected(hit: ReadHit) -> bool:
     if not expected:
         return False
     return expected in hit.context
+
+
+def record_matches_expected(hit: ReadHit) -> bool:
+    if hit.active_expected_match:
+        return True
+    expected = hit.expected_bytes.strip()
+    if not expected or not hit.record_snapshot:
+        return False
+    return expected in hit.record_snapshot
 
 
 def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
@@ -94,6 +107,8 @@ def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
         cpu_addrs = Counter(hit.cpu_addr for hit in label_hits)
         values = Counter(hit.value for hit in label_hits)
         evidence_hit = next((hit for hit in label_hits if context_matches_expected(hit)), first)
+        record_evidence_hit = next((hit for hit in label_hits if record_matches_expected(hit)), first)
+        active_matches = sum(1 for hit in label_hits if record_matches_expected(hit))
         rows.append(
             {
                 "label": label,
@@ -109,6 +124,9 @@ def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
                 "expected_bytes": first.expected_bytes,
                 "context": evidence_hit.context,
                 "context_matches_expected": context_matches_expected(evidence_hit),
+                "active_expected_matches": active_matches,
+                "record_snapshot": record_evidence_hit.record_snapshot,
+                "record_matches_expected": record_matches_expected(record_evidence_hit),
             }
         )
 
@@ -155,8 +173,8 @@ def write_markdown(
         [
             "## Observed labels",
             "",
-            "| label | category | ROM hit | CPU record range | hits | first frame | last frame | unique CPU addrs | expected bytes in context | evidence context |",
-            "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- |",
+            "| label | category | ROM hit | CPU record range | hits | first frame | last frame | unique CPU addrs | active expected matches | expected bytes in context | evidence context |",
+            "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |",
         ]
     )
     if rows:
@@ -165,24 +183,26 @@ def write_markdown(
                 f"| `{row['label']}` | {row['category']} | `{row['rom_hit']}` | "
                 f"`{row['record_cpu_range']}` | {row['hits']} | {row['first_frame']} | "
                 f"{row['last_frame']} | {row['unique_cpu_addrs']} | "
+                f"{row['active_expected_matches']} | "
                 f"{'yes' if row['context_matches_expected'] else 'no'} | "
                 f"`{row['context']}` |"
             )
     else:
-        lines.append("| _none_ |  |  |  | 0 |  |  |  |  |  |")
+        lines.append("| _none_ |  |  |  | 0 |  |  |  | 0 |  |  |")
 
     lines.extend(
         [
             "",
             "## Details",
             "",
-            "| label | top CPU addresses | top values | expected bytes |",
-            "| --- | --- | --- | --- |",
+            "| label | top CPU addresses | top values | expected bytes | record snapshot evidence |",
+            "| --- | --- | --- | --- | --- |",
         ]
     )
     for row in rows:
         lines.append(
-            f"| `{row['label']}` | {row['top_cpu_addrs']} | {row['top_values']} | `{row['expected_bytes']}` |"
+            f"| `{row['label']}` | {row['top_cpu_addrs']} | {row['top_values']} | "
+            f"`{row['expected_bytes']}` | `{'yes' if row['record_matches_expected'] else 'no'}: {row['record_snapshot']}` |"
         )
 
     lines.extend(
@@ -191,6 +211,7 @@ def write_markdown(
             "## Notes",
             "",
             "- A hit means the emulator read a watched CPU address while the Lua watcher was active.",
+            "- `active expected matches` counts hits where the watched CPU record currently contained the expected byte sequence.",
             "- A context match is stronger evidence because the surrounding bytes include the translation candidate's expected byte sequence.",
             "- This still needs to be paired with screen state/PPU writes before treating every candidate as final patch text.",
         ]

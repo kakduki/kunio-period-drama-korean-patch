@@ -96,6 +96,48 @@ local function read_context(addr)
 	return table.concat(bytes, " ")
 end
 
+local function split_expected_bytes(bytes)
+	local out = {}
+	for token in string.gmatch(bytes, "%S+") do
+		out[#out + 1] = tonumber(token, 16) or -1
+	end
+	return out
+end
+
+local function read_record(target)
+	local bytes = {}
+	for addr = target.start, target.stop do
+		bytes[#bytes + 1] = hex2(byte_at(addr))
+	end
+	return table.concat(bytes, " ")
+end
+
+local function record_has_expected(target)
+	local expected = split_expected_bytes(target.bytes)
+	if #expected == 0 then
+		return false
+	end
+
+	local record = {}
+	for addr = target.start, target.stop do
+		record[#record + 1] = byte_at(addr)
+	end
+
+	for start_idx = 1, #record - #expected + 1 do
+		local matched = true
+		for offset = 1, #expected do
+			if record[start_idx + offset - 1] ~= expected[offset] then
+				matched = false
+				break
+			end
+		end
+		if matched then
+			return true
+		end
+	end
+	return false
+end
+
 local function on_read_for(target)
 	return function(addr, size, value)
 		if hit_count >= HIT_LIMIT then
@@ -117,7 +159,9 @@ local function on_read_for(target)
 			hex2(actual_value),
 			"$" .. hex4(target.start) .. "-$" .. hex4(target.stop),
 			target.bytes,
-			read_context(actual_addr)
+			read_context(actual_addr),
+			tostring(record_has_expected(target)),
+			read_record(target)
 		}, "\t"))
 	end
 end
@@ -136,7 +180,7 @@ end
 
 mkdir(OUT_DIR)
 append(summary_path, "frame\treason\tregistered\thits\tdetail")
-append(reads_path, "frame\tlabel\tcategory\trom_hit\tcpu_addr\tvalue\trecord_cpu_range\texpected_bytes\tcontext")
+append(reads_path, "frame\tlabel\tcategory\trom_hit\tcpu_addr\tvalue\trecord_cpu_range\texpected_bytes\tcontext\tactive_expected_match\trecord_snapshot")
 
 for _, target in ipairs(targets) do
 	for addr = target.start, target.stop do
