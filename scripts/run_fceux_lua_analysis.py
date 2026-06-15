@@ -22,7 +22,6 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QFCEUX = ROOT / "tools" / "fceux-2.6.6-win64-QtSDL" / "bin" / "qfceux.exe"
 DEFAULT_FCEUX = ROOT / "tools" / "fceux-2.6.6-win64" / "fceux64.exe"
 LUA_SCRIPT = ROOT / "lua" / "kunio_auto_dump.lua"
-FINAL_OUTPUT = ROOT / "rom_analysis" / "fceux_lua"
 STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
 
 
@@ -127,6 +126,7 @@ def update_cfg(exe: Path, lua_script_name: str, output_dir_name: str) -> None:
 def launch(args: argparse.Namespace) -> int:
     rom = Path(args.rom).expanduser().resolve() if args.rom else find_rom()
     source_exe = find_fceux(args.fceux)
+    final_output = Path(args.final_output).expanduser().resolve()
     exe = stage_fceux(source_exe)
     fceux_workdir = exe.parent
     ascii_rom = fceux_workdir / "rom.nes"
@@ -134,7 +134,9 @@ def launch(args: argparse.Namespace) -> int:
     ascii_output = fceux_workdir / "kunio_fceux_lua_output"
 
     ascii_output.mkdir(parents=True, exist_ok=True)
-    FINAL_OUTPUT.mkdir(parents=True, exist_ok=True)
+    if args.clean_output and final_output.exists():
+        shutil.rmtree(final_output)
+    final_output.mkdir(parents=True, exist_ok=True)
     shutil.copy2(rom, ascii_rom)
     shutil.copy2(LUA_SCRIPT, ascii_lua)
 
@@ -145,13 +147,15 @@ def launch(args: argparse.Namespace) -> int:
     env["KUNIO_MAX_FRAMES"] = str(args.frames)
     env["KUNIO_SNAPSHOT_EVERY"] = str(args.snapshot_every)
     env["KUNIO_PPU_BURST_THRESHOLD"] = str(args.ppu_burst_threshold)
+    env["KUNIO_DUMP_HEX"] = "1" if args.dump_hex else "0"
+    env["KUNIO_DUMP_BIN"] = "1" if args.dump_bin else "0"
 
     cmd = [str(exe), "--loadlua", ascii_lua.name, "--sound", "0", ascii_rom.name]
     print("Launching:", " ".join(cmd))
     print("Lua script:", LUA_SCRIPT)
     print("FCEUX working dir:", fceux_workdir)
     print("Temporary output:", ascii_output)
-    print("Final output:", FINAL_OUTPUT)
+    print("Final output:", final_output)
 
     proc = subprocess.Popen(cmd, cwd=fceux_workdir, env=env)
     deadline = time.monotonic() + args.timeout
@@ -177,8 +181,8 @@ def launch(args: argparse.Namespace) -> int:
                 proc.kill()
                 proc.wait(timeout=5)
 
-    copytree_contents(ascii_output, FINAL_OUTPUT)
-    print("Copied Lua output into:", FINAL_OUTPUT)
+    copytree_contents(ascii_output, final_output)
+    print("Copied Lua output into:", final_output)
     if completed:
         return 0
     return proc.returncode or 0
@@ -192,6 +196,10 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--timeout", type=int, default=180, help="Seconds before stopping FCEUX.")
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")
     parser.add_argument("--ppu-burst-threshold", type=int, default=24, help="PPUDATA/PPUADDR writes per frame that trigger a dump.")
+    parser.add_argument("--final-output", default=str(ROOT / "rom_analysis" / "fceux_lua"), help="Directory where Lua output is mirrored after FCEUX exits.")
+    parser.add_argument("--clean-output", action="store_true", help="Delete the final output directory before copying new results.")
+    parser.add_argument("--dump-hex", action=argparse.BooleanOptionalAction, default=True, help="Write text hex dumps at snapshot frames.")
+    parser.add_argument("--dump-bin", action=argparse.BooleanOptionalAction, default=True, help="Write raw binary dumps at snapshot frames.")
     return parser.parse_args(argv)
 
 

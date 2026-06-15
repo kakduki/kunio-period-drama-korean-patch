@@ -7,6 +7,7 @@ nametable memory, which are the most useful candidates for text/UI rendering.
 
 from __future__ import annotations
 
+import argparse
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -113,13 +114,23 @@ def hex_values(values: list[int], limit: int = 48) -> str:
     return shown
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--events", type=Path, default=LUA_DIR / "events.tsv")
+    parser.add_argument("--summary", type=Path, default=LUA_DIR / "summary.tsv")
+    parser.add_argument("--out", type=Path, default=OUT)
+    parser.add_argument("--min-frame", type=int, default=0)
+    return parser.parse_args()
+
+
 def main() -> int:
-    events_path = LUA_DIR / "events.tsv"
-    summary_path = LUA_DIR / "summary.tsv"
+    args = parse_args()
+    events_path = args.events
+    summary_path = args.summary
     if not events_path.exists():
         raise FileNotFoundError(f"Missing {events_path}")
 
-    events = read_events(events_path)
+    events = [event for event in read_events(events_path) if event.frame >= args.min_frame]
     summary = parse_summary(summary_path)
     by_frame: dict[int, list[Event]] = defaultdict(list)
     for event in events:
@@ -163,7 +174,11 @@ def main() -> int:
     lines: list[str] = []
     lines.append("# FCEUX Lua event summary")
     lines.append("")
-    lines.append("Generated from `rom_analysis/fceux_lua/events.tsv`.")
+    try:
+        rel_events = events_path.resolve().relative_to(ROOT)
+    except ValueError:
+        rel_events = events_path
+    lines.append(f"Generated from `{rel_events}`.")
     lines.append("")
     lines.append("## Frame overview")
     lines.append("")
@@ -217,21 +232,22 @@ def main() -> int:
 
     lines.append("## Interpretation")
     lines.append("")
+    if interesting:
+        best = interesting[0]
+        lines.append(
+            f"- Strongest nametable/attribute candidate in this run: frame `{best['frame']}` "
+            f"with {best['regions'].get('nametable', 0)} nametable writes and "
+            f"{best['regions'].get('attribute', 0)} attribute writes."
+        )
+    lines.append("- Palette-only frames are less useful for text extraction.")
+    lines.append("- Nametable clear/fill frames are useful for screen-transition timing.")
     lines.append(
-        "- Palette-only frames such as `33`, `95`, `125`, and `284` are less useful for text extraction."
-    )
-    lines.append(
-        "- Clear/fill frames such as `233` and `653` write zeroes into nametable rows and are useful for screen-transition timing."
-    )
-    lines.append(
-        "- Frame `314` is the strongest current text/UI rendering candidate because it writes many non-zero tile values across `$2086-$23EB`."
-    )
-    lines.append(
-        "- The next practical breakpoint target is the code path that writes these frame `314` PPUDATA values, then backtrack to the source text buffer/table."
+        "- Frames with many non-zero nametable values are the best next breakpoint targets; "
+        "backtrack from the corresponding `$2007` writes to the source text buffer/table."
     )
 
-    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"Wrote {OUT}")
+    args.out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"Wrote {args.out}")
     return 0
 
 

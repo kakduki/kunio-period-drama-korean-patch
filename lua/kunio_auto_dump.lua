@@ -8,6 +8,8 @@ local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/fceux_lua"
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "7200")
 local SNAPSHOT_EVERY = tonumber(os.getenv("KUNIO_SNAPSHOT_EVERY") or "300")
 local BURST_THRESHOLD = tonumber(os.getenv("KUNIO_PPU_BURST_THRESHOLD") or "24")
+local DUMP_HEX = os.getenv("KUNIO_DUMP_HEX") ~= "0"
+local DUMP_BIN = os.getenv("KUNIO_DUMP_BIN") ~= "0"
 
 local summary_path = OUT_DIR .. "/summary.tsv"
 local events_path = OUT_DIR .. "/events.tsv"
@@ -110,15 +112,20 @@ local function snapshot(reason)
 	dump_count = dump_count + 1
 
 	local stem = string.format("%s/frame_%06d_%03d_%s", OUT_DIR, frame, dump_count, reason)
-	dump_range(stem .. "_cpu_ram.bin", 0x0000, 0x0800)
-	dump_hex(stem .. "_cpu_ram.txt", 0x0000, 0x0800)
-	dump_range(stem .. "_sram_6000_7fff.bin", 0x6000, 0x2000)
-	dump_hex(stem .. "_sram_6000_7fff.txt", 0x6000, 0x2000)
+	if DUMP_BIN then
+		dump_range(stem .. "_cpu_ram.bin", 0x0000, 0x0800)
+		dump_range(stem .. "_sram_6000_7fff.bin", 0x6000, 0x2000)
+		-- Newer FCEUX builds may support explicit memory domains. If this
+		-- build does not, this file will still be produced from the default
+		-- domain.
+		dump_range(stem .. "_ppu_0000_3fff.bin", 0x0000, 0x4000, "ppu")
+	end
 
-	-- Newer FCEUX builds may support explicit memory domains. If this build
-	-- does not, these files will still be produced from the default domain.
-	dump_range(stem .. "_ppu_0000_3fff.bin", 0x0000, 0x4000, "ppu")
-	dump_hex(stem .. "_nametable_2000_2fff.txt", 0x2000, 0x1000, "ppu")
+	if DUMP_HEX then
+		dump_hex(stem .. "_cpu_ram.txt", 0x0000, 0x0800)
+		dump_hex(stem .. "_sram_6000_7fff.txt", 0x6000, 0x2000)
+		dump_hex(stem .. "_nametable_2000_2fff.txt", 0x2000, 0x1000, "ppu")
+	end
 
 	append(summary_path, table.concat({
 		frame,

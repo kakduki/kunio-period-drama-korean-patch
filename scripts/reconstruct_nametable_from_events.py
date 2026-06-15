@@ -118,7 +118,11 @@ def main() -> int:
     lines: list[str] = []
     lines.append("# FCEUX Lua nametable reconstruction")
     lines.append("")
-    lines.append("Generated from `$2007` events in `rom_analysis/fceux_lua/events.tsv`.")
+    try:
+        rel_events = args.events.resolve().relative_to(ROOT)
+    except ValueError:
+        rel_events = args.events
+    lines.append(f"Generated from `$2007` events in `{rel_events}`.")
     lines.append("Rows are NES nametable tile rows, 32 tiles wide. `__` means unknown/unwritten in the cumulative grid; `..` means unchanged in the per-frame overlay.")
     lines.append("")
 

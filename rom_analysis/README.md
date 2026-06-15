@@ -24,6 +24,10 @@
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
 - `fceux_lua_nametable_reconstruction.md`: 32x30 nametable tile-grid reconstruction from `$2007` events for the strongest text/UI candidate frames
+- `fceux_lua_long/summary.tsv`: 7,200-frame Lua automation summary, collected with bulky memory dumps disabled
+- `fceux_lua_long/events.tsv`: 7,200-frame `$2006/$2007` runtime event log
+- `fceux_lua_long_event_summary.md`: grouped event summary for the 7,200-frame run, starting after frame `900`
+- `fceux_lua_long_nametable_reconstruction.md`: selected 32x30 nametable reconstructions from the strongest long-run non-zero tile-write candidates
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
@@ -91,6 +95,10 @@ Verified run:
   mostly to nametable rows `04-05`, while frames `339-361` update row `24` two
   cells at a time. This gives a text-file equivalent of the PPU Viewer for the
   automated run.
+- A longer 7,200-frame event-only run reached additional UI/text-like clusters.
+  Strong non-zero nametable candidates include frame groups `1020-1026`,
+  `2903-2908`, `5184-5187`, `5464-5470`, plus smaller row updates at `6614`
+  and `7091`. These are better next targets than palette-only bursts.
 
 ## Next FCEUX targets
 
