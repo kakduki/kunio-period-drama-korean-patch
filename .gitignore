@@ -1,0 +1,5 @@
+rom/*.nes
+rom/*.zip
+output/*.ips
+__pycache__/
+.DS_Store
