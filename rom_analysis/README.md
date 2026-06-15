@@ -20,6 +20,8 @@
 - `font_mapping_notes.md`: preliminary visual CHR bank 07 tile mapping
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
+- `bank1_text_block_map.md`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis
+- `translation_offset_candidates.md`: translation-data-to-ROM candidate table for Bank 1, including exact `plus-0x7A` matches and lower-confidence shifted-offset hits
 - `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
@@ -56,6 +58,10 @@
   - `add=0x82` around `PRG+0x066E0` and `0x06830` decodes visible `ちから` fragments.
   - `add=0x93` around `PRG+0x07350` and `0x07380` decodes visible `らいふ` fragments.
 - The bank16 `5` cluster around `PRG+0x17D30-0x17D80` repeatedly decodes `たから`/`ちから`, but the regular `00 00 FC/FD/FE` structure looks table-like. Treat it as a lower-confidence text candidate until FCEUX confirms reads during UI rendering.
+
+- The `ROM+0x05610-0x05810` watch range splits into 73 tentative `0xFF`-delimited blocks under the `plus-0x7A` hypothesis. Only `はし` at `ROM+0x0569D` currently exact-matches `translation_data.txt` in that model, so the range likely mixes controls, table-specific shifts, and non-text bytes.
+- The broader translation-offset scan found 315 total candidates, including 119 in Bank 1 and 9 inside the `ROM+0x05610-0x05810` watch range. High-value Bank 1 candidates include `カタナ` at `ROM+0x05644`, `0x06295`, `0x0631C`, `0x0635A`, `0x07227`; `くすり` at `0x05BDF`; `ちから` at `0x06605`, `0x066FB`, `0x06845`, `0x06B4A`, `0x071A4`; `そうび` at `0x0602E`, `0x06BDF`, `0x06FA1`; `おかね` at `0x06DE3`; and `ライフ` at `0x0736A`, `0x0739D`.
+- A YouTube gameplay video can help transcribe dialogue and confirm scene order, but it does not replace ROM analysis because patching still needs exact ROM offsets, byte encodings, control codes, and active runtime banks.
 
 ## FCEUX Lua automation
 
@@ -113,4 +119,5 @@ Once FCEUX is available on the visible desktop:
 5. In `Debug > Hex Editor` / debugger, watch writes to `$2006` and `$2007`.
 6. Pay special attention to execution near CPU approx `$9702-$97DB` and `$97EB-$97F6`.
 7. Also check whether reads near PRG bank16 `1`, ROM offsets `0x05640`, `0x06290`, `0x066E0`, `0x06830`, `0x07350`, and `0x07380` occur when item/status text appears.
-8. Save the trace log, PPU screenshots, and any nametable/memory dumps into this `rom_analysis/` folder.
+8. Confirm whether the candidate offsets in `translation_offset_candidates.md` are read when their corresponding item/status/menu text appears.
+9. Save the trace log, PPU screenshots, and any nametable/memory dumps into this `rom_analysis/` folder.
