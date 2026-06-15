@@ -17,15 +17,18 @@
 - `analyze_chr_output.txt`: CHR dump and fixed-bank dump
 - `disasm_6502_output.txt`: rough 6502 fixed-bank disassembly scan, generated locally only and ignored by git
 - `ppu_register_refs.txt`: static references to PPU registers
+- `font_mapping_notes.md`: preliminary visual CHR bank 07 tile mapping
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
 - `font/chr_bank_##_8x16.png`: CHR banks rendered as 8x16 tile pairs, generated locally only and ignored by git
+- `font/chr_bank_##_*_labeled.png`: labeled tile sheets, generated locally only and ignored by git
 
 ## Findings so far
 
 - Plain Shift-JIS extraction does not produce normal dialogue. The hits are mostly false positives from binary data, so the game likely uses a custom tile/code mapping rather than raw Shift-JIS strings.
 - `font/chr_bank_07_8x16.png` is the strongest font candidate. It visibly contains kana, numerals, Latin letters, and symbols.
+- After rendering bank 07 as `8x8`, the font block is clearer than the `8x16` view. Hiragana begins around tile `0x101`; numerals begin around `0x1C0`; Latin capitals begin around `0x1E1`.
 - `font/chr_bank_06_8x16.png` also contains visible numerals/UI-like tiles, but it is more mixed with sprite/background data.
 - Static PPU reference scanning found the most relevant nametable/text-output candidates around:
   - `$2006 PPUADDR`: `ROM+0x1D7FB` through `ROM+0x1D806`, bank 7, CPU approx `$97EB-$97F6`
