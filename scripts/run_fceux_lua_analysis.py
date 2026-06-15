@@ -150,6 +150,9 @@ def launch(args: argparse.Namespace) -> int:
     final_output.mkdir(parents=True, exist_ok=True)
     shutil.copy2(rom, ascii_rom)
     shutil.copy2(lua_script, ascii_lua)
+    lua_targets = lua_script.parent / "kunio_bank1_targets.lua"
+    if lua_targets.exists():
+        shutil.copy2(lua_targets, fceux_workdir / lua_targets.name)
 
     update_cfg(exe, ascii_lua.name, ascii_output.name)
 
