@@ -8,11 +8,18 @@ The generated reference images are local-only and ignored by git:
 - `rom_analysis/font/chr_bank_07_rows_100_13f.png`
 - `rom_analysis/font/chr_bank_07_rows_1c0_1ff.png`
 
+Structured exports derived from this map:
+
+- `rom_analysis/chr_bank07_tile_map.json`
+- `rom_analysis/chr_bank07_tile_map.md`
+
 ## CHR bank 07 observations
 
 - The font is much clearer when rendered as `8x8` tiles, not paired `8x16` tiles.
 - The hiragana block starts around tile `0x101`.
+- The hiragana sequence has a gap at tile `0x11F`; `ま` starts at `0x120` and `ん` is at `0x12F`.
 - The numeric/Latin block starts around tile `0x1C0`.
+- CHR ROM starts at `ROM+0x20010`; the rendered 8KB CHR bank 07 range is `ROM+0x2E010-0x3000F`.
 - This is still a CHR tile index map, not yet confirmed as the in-ROM text byte encoding. FCEUX tracing is still needed to connect PRG text bytes to these CHR tile indexes.
 
 ## Preliminary visible tile map
