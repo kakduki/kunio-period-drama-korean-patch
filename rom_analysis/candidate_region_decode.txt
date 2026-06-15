@@ -1,0 +1,205 @@
+﻿=== Candidate region offset decoding ===
+Legend: middot=00, |=FF, square=F0/F8/F9, dots=unknown/non-kana
+
+## bank1_items_a PRG+0x05600-0x05800 ROM+0x05610-0x05810
+
+-- add=0x7A --
+PRG+0x05600 score=31 96 87 96 8C 96 91 96 96 96 9B 96 88 96 9F 8B FF  ふすふつふぬふふふみふせふやち|
+PRG+0x057C0 score=29 A7 8B 88 FF A6 98 8D 89 FF A6 8C 9F 92 FF 93 A9  わちせ|ろほてそ|ろつやね|のん
+PRG+0x056B0 score=29 83 82 94 87 91 FF 9F 8B 87 91 FF 90 A3 8D 89 FF  けくはすぬ|やちすぬ|にりてそ|
+PRG+0x05780 score=27 9F 92 FF 8A 83 87 91 FF 8D 84 9F 92 FF 90 89 0C  やね|たけすぬ|てこやね|にそ.
+PRG+0x05680 score=27 90 FF 9F 92 A3 94 FF 85 8A 94 FF FF 85 A0 92 FF  に|やねりは|さたは||さゆね|
+PRG+0x05740 score=26 83 FF 8D A0 8B 88 FF 8C AE 99 8D 89 A1 98 9F 92  け|てゆちせ|つ..てそよほやね
+PRG+0x05720 score=26 A7 84 A3 AE 94 A2 8B 88 FF 85 99 87 91 FF A4 90  わこり.はらちせ|さ.すぬ|るに
+PRG+0x05770 score=25 8B 9F 92 FF 8B 9D 82 FF FF 87 8D 89 FF FF 99 A8  ちやね|ちめく||すてそ||.を
+PRG+0x056D0 score=25 8D 89 FF FF 9A AE 8D 89 FF 8A 83 84 A3 AE 9B A7  てそ||ま.てそ|たけこり.みわ
+PRG+0x05630 score=25 AB 88 FF 9D 82 8C 91 FF 87 AE 8D 89 FF 90 A2 87  .せ|めくつぬ|す.てそ|にらす
+PRG+0x057D0 score=24 0F 83 FF 8D A4 87 91 FF A3 A8 99 8D 89 82 8C 0A  .け|てるすぬ|りを.てそくつ.
+PRG+0x05790 score=24 AB 83 83 A2 9F 92 FF 1E 1C 9F 92 FF A5 83 84 A3  .けけらやね|..やね|れけこり
+
+-- add=0x7C --
+PRG+0x057C0 score=29 A7 8B 88 FF A6 98 8D 89 FF A6 8C 9F 92 FF 93 A9  れそし|るふちす|るために|ぬわ
+PRG+0x056B0 score=29 83 82 94 87 91 FF 9F 8B 87 91 FF 90 A3 8D 89 FF  きかねさな|めそさな|とよちす|
+PRG+0x05600 score=29 96 87 96 8C 96 91 96 96 96 9B 96 88 96 9F 8B FF  はさはたはなははは.はしはめそ|
+PRG+0x05740 score=28 83 FF 8D A0 8B 88 FF 8C AE 99 8D 89 A1 98 9F 92  き|ちもそし|た.へちすやふめに
+PRG+0x05720 score=28 A7 84 A3 AE 94 A2 8B 88 FF 85 99 87 91 FF A4 90  れくよ.ねゆそし|けへさな|らと
+PRG+0x05780 score=27 9F 92 FF 8A 83 87 91 FF 8D 84 9F 92 FF 90 89 0C  めに|せきさな|ちくめに|とす.
+PRG+0x05770 score=27 8B 9F 92 FF 8B 9D 82 FF FF 87 8D 89 FF FF 99 A8  そめに|そみか||さちす||へろ
+PRG+0x05680 score=27 90 FF 9F 92 A3 94 FF 85 8A 94 FF FF 85 A0 92 FF  と|めによね|けせね||けもに|
+PRG+0x05630 score=27 AB 88 FF 9D 82 8C 91 FF 87 AE 8D 89 FF 90 A2 87  んし|みかたな|さ.ちす|とゆさ
+PRG+0x057D0 score=26 0F 83 FF 8D A4 87 91 FF A3 A8 99 8D 89 82 8C 0A  .き|ちらさな|よろへちすかた.
+PRG+0x05790 score=26 AB 83 83 A2 9F 92 FF 1E 1C 9F 92 FF A5 83 84 A3  んききゆめに|..めに|りきくよ
+PRG+0x05730 score=26 87 91 FF 82 8F AB 88 FF A8 9D 82 FF FF 91 84 0F  さな|かてんし|ろみか||なく.
+
+-- add=0x82 --
+PRG+0x05600 score=31 96 87 96 8C 96 91 96 96 96 9B 96 88 96 9F 8B FF  とおとことそとととのとかとへけ|
+PRG+0x05720 score=30 A7 84 A3 AE 94 A2 8B 88 FF 85 99 87 91 FF A4 90  やいみろつまけか|うぬおそ|むせ
+PRG+0x057C0 score=29 A7 8B 88 FF A6 98 8D 89 FF A6 8C 9F 92 FF 93 A9  やけか|もにさき|もこへた|ちよ
+PRG+0x056D0 score=29 8D 89 FF FF 9A AE 8D 89 FF 8A 83 84 A3 AE 9B A7  さき||ねろさき|くあいみろのや
+PRG+0x05740 score=28 83 FF 8D A0 8B 88 FF 8C AE 99 8D 89 A1 98 9F 92  あ|さほけか|ころぬさき.にへた
+PRG+0x05710 score=28 94 A3 9F 92 FF 88 9F 9A 91 FF AC 90 0A AB 83 83  つみへた|かへねそ|るせ.りああ
+PRG+0x05660 score=28 A6 99 8D 89 FF 94 A7 0F 83 FF 9A AE 8C AB 83 96  もぬさき|つや.あ|ねろこりあと
+PRG+0x05780 score=27 9F 92 FF 8A 83 87 91 FF 8D 84 9F 92 FF 90 89 0C  へた|くあおそ|さいへた|せき.
+PRG+0x05700 score=27 83 8B 10 87 91 FF 8E 87 0A AB 83 A6 92 84 A3 AE  あけ.おそ|しお.りあもたいみろ
+PRG+0x056B0 score=27 83 82 94 87 91 FF 9F 8B 87 91 FF 90 A3 8D 89 FF  あ.つおそ|へけおそ|せみさき|
+PRG+0x05680 score=27 90 FF 9F 92 A3 94 FF 85 8A 94 FF FF 85 A0 92 FF  せ|へたみつ|うくつ||うほた|
+PRG+0x05630 score=27 AB 88 FF 9D 82 8C 91 FF 87 AE 8D 89 FF 90 A2 87  りか|ひ.こそ|おろさき|せまお
+
+## bank1_items_b PRG+0x06240-0x063A0 ROM+0x06250-0x063B0
+
+-- add=0x7C --
+PRG+0x06310 score=29 81 96 87 96 00 A6 B3 88 92 90 84 94 82 93 A4 A9  おはさは·る.しにとくねかぬらわ
+PRG+0x062F0 score=25 F9 00 81 88 94 83 96 8C 94 88 95 AF 00 A3 B4 93  □·おしねきはたねしの.·よ.ぬ
+PRG+0x062B0 score=25 A2 B2 90 91 86 82 CA 00 81 88 94 83 93 B2 99 9A  ゆ.となこか.·おしねきぬ.へほ
+PRG+0x06330 score=23 A4 8B 96 B5 AF F8 F9 00 92 82 93 8A A7 AA A2 B2  らそは..□□·にかぬせれをゆ.
+PRG+0x06280 score=23 00 10 06 00 9D 82 8C 91 99 81 96 87 96 B5 00 86  ·..·みかたなへおはさは.·こ
+PRG+0x06240 score=23 88 94 83 95 AE 0B 00 8C B7 8E AE 90 82 8C 90 8A  しねきの..·た.つ.とかたとせ
+PRG+0x062E0 score=22 96 92 84 B2 CB 00 81 B4 8C 99 9F 89 B4 8D A6 F8  はにく..·お.たへめす.ちる□
+PRG+0x062D0 score=22 82 93 96 95 B4 93 A4 A9 0E CA FF F0 BB 90 8C 86  かぬはの.ぬらわ..|□.とたこ
+PRG+0x06380 score=21 85 A4 1C AE 9A F8 F9 00 85 A2 B2 8B AE 90 91 90  けら..ほ□□·けゆ.そ.となと
+PRG+0x06250 score=21 90 AF 95 82 A4 95 F8 F9 00 81 B4 8C 9B 94 A8 13  と.のからの□□·お.た.ねろ.
+PRG+0x06300 score=20 B2 98 B2 9A 95 8C 10 CA FF F0 BB 9D 82 8C 91 99  .ふ.ほのた..|□.みかたなへ
+PRG+0x06360 score=19 91 B5 82 B4 90 82 F8 F9 00 95 96 A3 AE 95 AE 13  な.か.とか□□·のはよ.の..
+
+-- add=0x82 --
+PRG+0x06380 score=25 85 A4 1C AE 9A F8 F9 00 85 A2 B2 8B AE 90 91 90  うむ.ろね□□·うま.けろせそせ
+PRG+0x06310 score=25 81 96 87 96 00 A6 B3 88 92 90 84 94 82 93 A4 A9  .とおと·も.かたせいつ.ちむよ
+PRG+0x062F0 score=25 F9 00 81 88 94 83 96 8C 94 88 95 AF 00 A3 B4 93  □·.かつあとこつかてわ·み.ち
+PRG+0x06240 score=25 88 94 83 95 AE 0B 00 8C B7 8E AE 90 82 8C 90 8A  かつあてろ.·こ.しろせ.こせく
+PRG+0x06330 score=23 A4 8B 96 B5 AF F8 F9 00 92 82 93 8A A7 AA A2 B2  むけと.わ□□·た.ちくやらま.
+PRG+0x06270 score=23 91 06 00 8A AE 95 96 92 84 B2 90 AF 95 CB F8 F9  そ.·くろてとたい.せわて.□□
+PRG+0x06350 score=21 AE 8D FF F0 BB 92 A6 82 CB 00 85 A2 B2 8B AE 90  ろさ|□.たも..·うま.けろせ
+PRG+0x062B0 score=21 A2 B2 90 91 86 82 CA 00 81 88 94 83 93 B2 99 9A  ま.せそえ..·.かつあち.ぬね
+PRG+0x06250 score=21 90 AF 95 82 A4 95 F8 F9 00 81 B4 8C 9B 94 A8 13  せわて.むて□□·..このつゆ.
+PRG+0x062E0 score=20 96 92 84 B2 CB 00 81 B4 8C 99 9F 89 B4 8D A6 F8  とたい..·..こぬへき.さも□
+PRG+0x062D0 score=20 82 93 96 95 B4 93 A4 A9 0E CA FF F0 BB 90 8C 86  .ちとて.ちむよ..|□.せこえ
+PRG+0x06360 score=19 91 B5 82 B4 90 82 F8 F9 00 95 96 A3 AE 95 AE 13  そ...せ.□□·てとみろてろ.
+
+-- add=0x84 --
+PRG+0x06380 score=27 85 A4 1C AE 9A F8 F9 00 85 A2 B2 8B AE 90 91 90  あま.るに□□·あほをきるしすし
+PRG+0x06330 score=25 A4 8B 96 B5 AF F8 F9 00 92 82 93 8A A7 AA A2 B2  まきつ.れ□□·せ.そかめゆほを
+PRG+0x06310 score=25 81 96 87 96 00 A6 B3 88 92 90 84 94 82 93 A4 A9  .つうつ·むんえせし.た.そまや
+PRG+0x06350 score=23 AE 8D FF F0 BB 92 A6 82 CB 00 85 A2 B2 8B AE 90  るけ|□.せむ..·あほをきるし
+PRG+0x062B0 score=23 A2 B2 90 91 86 82 CA 00 81 88 94 83 93 B2 99 9A  ほをしすい..·.えた.そをなに
+PRG+0x06270 score=23 91 06 00 8A AE 95 96 92 84 B2 90 AF 95 CB F8 F9  す.·かるちつせ.をしれち.□□
+PRG+0x06240 score=23 88 94 83 95 AE 0B 00 8C B7 8E AE 90 82 8C 90 8A  えた.ちる.·く.こるし.くしか
+PRG+0x06300 score=22 B2 98 B2 9A 95 8C 10 CA FF F0 BB 9D 82 8C 91 99  をとをにちく..|□.の.くすな
+PRG+0x062F0 score=21 F9 00 81 88 94 83 96 8C 94 88 95 AF 00 A3 B4 93  □·.えた.つくたえちれ·..そ
+PRG+0x06250 score=21 90 AF 95 82 A4 95 F8 F9 00 81 B4 8C 9B 94 A8 13  しれち.まち□□·..くぬたも.
+PRG+0x062E0 score=20 96 92 84 B2 CB 00 81 B4 8C 99 9F 89 B4 8D A6 F8  つせ.を.·..くなひお.けむ□
+PRG+0x062D0 score=20 82 93 96 95 B4 93 A4 A9 0E CA FF F0 BB 90 8C 86  .そつち.そまや..|□.しくい
+
+## bank1_status_a PRG+0x065C0-0x06C00 ROM+0x065D0-0x06C10
+
+-- add=0x7C --
+PRG+0x06AE0 score=28 AE 95 A7 00 A4 92 96 00 86 93 A9 86 A3 8C AA 98  .のれ·らには·こぬわこよたをふ
+PRG+0x06A10 score=27 86 8C 94 87 95 00 8D 9F 87 96 8C 93 A4 A9 0E B4  こたねさの·ちめさはたぬらわ..
+PRG+0x066E0 score=27 AE 99 95 86 9F 94 A4 A7 96 00 8C 93 88 AA 98 B2  .へのこめねられは·たぬしをふ.
+PRG+0x068A0 score=26 92 AA 82 82 90 8C A4 8D FF F0 BB 81 8B 0C AB 83  にをかかとたらち|□.おそ.んき
+PRG+0x06620 score=26 81 B4 90 A7 00 9F 90 85 81 82 8C A4 8C B7 83 FF  お.とれ·めとけおかたらた.き|
+PRG+0x06BE0 score=25 85 A2 84 90 91 B5 00 9F AE 9F 94 10 9F 8B AA 90  けゆくとな.·め.めね.めそをと
+PRG+0x068B0 score=25 99 83 A7 96 9A 00 10 AA 86 82 A9 B4 93 B2 9A 95  へきれはほ·.をこかわ.ぬ.ほの
+PRG+0x067F0 score=25 86 82 00 88 8F 83 CB FF F0 BB 90 82 8C 90 8A 94  こか·してき.|□.とかたとせね
+PRG+0x067C0 score=25 93 92 8A 83 90 AF F8 F9 00 1A 86 95 9A 95 8C A6  ぬにせきと.□□·.このほのたる
+PRG+0x06710 score=25 A2 AD 8B A7 B4 90 99 9A 90 8C 86 96 00 81 B4 8C  ゆ.それ.とへほとたこは·お.た
+PRG+0x06B10 score=24 A4 8C 86 B4 90 A7 00 87 95 8B 82 CA 00 9C B4 9C  らたこ.とれ·さのそか.·ま.ま
+PRG+0x06A90 score=24 90 98 F8 F9 00 94 A7 0F 83 AD 00 90 85 8C 95 8D  とふ□□·ねれ.き.·とけたのち
+
+-- add=0x80 --
+PRG+0x06AE0 score=30 AE 95 A7 00 A4 92 96 00 86 93 A9 86 A3 8C AA 98  をなよ·もつに·かてりかめしるね
+PRG+0x06660 score=29 94 A7 0F 83 8B AE 9A 00 85 AE 95 AD 8B A7 83 9E  とよ.うさをは·おをなわさようほ
+PRG+0x067C0 score=27 93 92 8A 83 90 AF F8 F9 00 1A 86 95 9A 95 8C A6  てつこうたん□□·.かなはなしゆ
+PRG+0x06710 score=27 A2 AD 8B A7 B4 90 99 9A 90 8C 86 96 00 81 B4 8C  むわさよ.たのはたしかに·あ.し
+PRG+0x066E0 score=27 AE 99 95 86 9F 94 A4 A7 96 00 8C 93 88 AA 98 B2  をのなか.ともよに·してくるね.
+PRG+0x06A90 score=26 90 98 F8 F9 00 94 A7 0F 83 AD 00 90 85 8C 95 8D  たね□□·とよ.うわ·たおしなす
+PRG+0x06950 score=26 8B 84 00 95 88 95 A8 B5 AF 00 81 94 9A A6 F8 F9  さえ·なくなら.ん·あとはゆ□□
+PRG+0x068A0 score=26 92 AA 82 82 90 8C A4 8D FF F0 BB 81 8B 0C AB 83  つるいいたしもす|□.あさ.れう
+PRG+0x065F0 score=26 AD 83 89 94 B4 93 88 AA 00 81 B4 8C 99 00 82 99  わうけと.てくる·あ.しの·いの
+PRG+0x06B00 score=25 B2 90 91 99 9A 86 AD 87 A2 93 A4 B4 90 0E F8 88  .たちのはかわきむても.た.□く
+PRG+0x06A10 score=25 86 8C 94 87 95 00 8D 9F 87 96 8C 93 A4 A9 0E B4  かしときな·す.きにしてもり..
+PRG+0x069A0 score=25 06 AA A3 AE 96 8C 91 B5 AF F8 F9 00 93 84 8C 90  .るめをにしち.ん□□·てえした
+
+-- add=0x82 --
+PRG+0x06AE0 score=30 AE 95 A7 00 A4 92 96 00 86 93 A9 86 A3 8C AA 98  ろてや·むたと·えちよえみこらに
+PRG+0x066E0 score=29 AE 99 95 86 9F 94 A4 A7 96 00 8C 93 88 AA 98 B2  ろぬてえへつむやと·こちからに.
+PRG+0x06660 score=29 94 A7 0F 83 8B AE 9A 00 85 AE 95 AD 8B A7 83 9E  つや.あけろね·うろてれけやあふ
+PRG+0x06BE0 score=27 85 A2 84 90 91 B5 00 9F AE 9F 94 10 9F 8B AA 90  うまいせそ.·へろへつ.へけらせ
+PRG+0x06A10 score=27 86 8C 94 87 95 00 8D 9F 87 96 8C 93 A4 A9 0E B4  えこつおて·さへおとこちむよ..
+PRG+0x067C0 score=27 93 92 8A 83 90 AF F8 F9 00 1A 86 95 9A 95 8C A6  ちたくあせわ□□·.えてねてこも
+PRG+0x06A90 score=26 90 98 F8 F9 00 94 A7 0F 83 AD 00 90 85 8C 95 8D  せに□□·つや.あれ·せうこてさ
+PRG+0x06990 score=26 83 BB A6 88 00 8A 8A 9F 13 8A AA 90 95 AF 00 95  あ.もか·くくへ.くらせてわ·て
+PRG+0x06B00 score=25 B2 90 91 99 9A 86 AD 87 A2 93 A4 B4 90 0E F8 88  .せそぬねえれおまちむ.せ.□か
+PRG+0x069A0 score=25 06 AA A3 AE 96 8C 91 B5 AF F8 F9 00 93 84 8C 90  .らみろとこそ.わ□□·ちいこせ
+PRG+0x06830 score=25 8C 96 9F 86 8C 93 88 AA FF F0 BB FA 8B AE 00 85  ことへえこちから|□..けろ·う
+PRG+0x06710 score=25 A2 AD 8B A7 B4 90 99 9A 90 8C 86 96 00 81 B4 8C  まれけや.せぬねせこえと·..こ
+
+## bank1_status_b PRG+0x07140-0x07400 ROM+0x07150-0x07410
+
+-- add=0x82 --
+PRG+0x071D0 score=27 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF  とへけけろ.うへそこちへこせ.|
+PRG+0x07180 score=27 95 88 95 A8 A4 8C 90 FF 92 A9 9F 92 BB 81 96 87  てかてゆむこせ|たよへた..とお
+PRG+0x07330 score=25 FF F0 BB 95 96 A3 86 A3 00 85 A2 B2 8B AE 99 85  |□.てとみえみ·うま.けろぬう
+PRG+0x071E0 score=25 88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B  かとへけ.うくつけろ.□□·うの
+PRG+0x07300 score=24 96 00 9F 86 8C 94 82 93 85 88 AE 95 8E B2 CA FF  と·へえこつ.ちうかろてし..|
+PRG+0x07280 score=24 CA 00 85 A2 B2 8B AE 96 F8 F9 00 8A AE 95 86 90  .·うま.けろと□□·くろてえせ
+PRG+0x072E0 score=23 B2 9A 95 8C 10 CA FF 88 96 9F 8B BB 85 9A 95 8C  .ねてこ..|かとへけ.うねてこ
+PRG+0x07270 score=23 1C AE 0F 83 BB 85 85 00 88 96 9F 8B 8B AE 86 82  .ろ.あ.うう·かとへけけろえ.
+PRG+0x07360 score=22 8B AE A6 CB FF F0 BB 8A 99 00 85 8A 94 94 00 82  けろも.|□.くぬ·うくつつ·.
+PRG+0x07260 score=22 A4 1C AE CA 00 CB 85 8F 88 95 A8 A4 8C 90 CA FF  む.ろ.·.うすかてゆむこせ.|
+PRG+0x07220 score=22 13 F8 F9 00 81 8B 0C AB 83 94 00 A3 83 8C A4 8D  .□□·.け.りあつ·みあこむさ
+PRG+0x071C0 score=22 00 93 B2 9D AE 95 AE 13 84 CA FF 85 8A 94 BB 88  ·ち.ひろてろ.い.|うくつ.か
+
+-- add=0x84 --
+PRG+0x071D0 score=27 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF  つひききる.あひすくそひくし.|
+PRG+0x07180 score=27 95 88 95 A8 A4 8C 90 FF 92 A9 9F 92 BB 81 96 87  ちえちもまくし|せやひせ..つう
+PRG+0x07300 score=26 96 00 9F 86 8C 94 82 93 85 88 AE 95 8E B2 CA FF  つ·ひいくた.そあえるちこを.|
+PRG+0x07280 score=26 CA 00 85 A2 B2 8B AE 96 F8 F9 00 8A AE 95 86 90  .·あほをきるつ□□·かるちいし
+PRG+0x072E0 score=25 B2 9A 95 8C 10 CA FF 88 96 9F 8B BB 85 9A 95 8C  をにちく..|えつひき.あにちく
+PRG+0x071E0 score=25 88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B  えつひき.あかたきる.□□·あぬ
+PRG+0x07330 score=23 FF F0 BB 95 96 A3 86 A3 00 85 A2 B2 8B AE 99 85  |□.ちつ.い.·あほをきるなあ
+PRG+0x072A0 score=23 BB 8A AE 95 13 B2 0C 95 94 87 96 CB 00 8A 99 94  .かるち.を.ちたうつ.·かなた
+PRG+0x07360 score=22 8B AE A6 CB FF F0 BB 8A 99 00 85 8A 94 94 00 82  きるむ.|□.かな·あかたた·.
+PRG+0x07260 score=22 A4 1C AE CA 00 CB 85 8F 88 95 A8 A4 8C 90 CA FF  ま.る.·.あさえちもまくし.|
+PRG+0x071C0 score=22 00 93 B2 9D AE 95 AE 13 84 CA FF 85 8A 94 BB 88  ·そをのるちる...|あかた.え
+PRG+0x07140 score=22 8B A9 FF 85 8A 94 BB 88 8D AE CB 00 81 A8 06 94  きや|あかた.えける.·.も.た
+
+-- add=0x93 --
+PRG+0x07330 score=19 FF F0 BB 95 96 A3 86 A3 00 85 A2 B2 8B AE 99 85  |□らいうた.た·.そ..ひか.
+PRG+0x07370 score=18 B4 8C B7 AE 95 B4 93 F8 F9 00 82 B4 86 AD 00 92  み.もひいみ.□□·.み.は·.
+PRG+0x072D0 score=18 BB 88 71 B4 00 9F B4 90 88 00 A2 AE 1E 88 99 98  ら.qみ·しみ..·そひ..かお
+PRG+0x072A0 score=17 BB 8A AE 95 13 B2 0C 95 94 87 96 CB 00 8A 99 94  ら.ひい...いあ.う.·.かあ
+PRG+0x07200 score=17 8A 99 9B 94 9A CB FF 81 8B 0C AB 83 BB 9C B4 CB  .かくあき.|...ね.らけみ.
+PRG+0x07180 score=17 95 88 95 A8 A4 8C 90 FF 92 A9 9F 92 BB 81 96 87  い.いなち..|.にし.ら.う.
+PRG+0x07380 score=16 82 0C B5 AF 88 AA 98 B2 86 82 CC FF F0 BB 95 AF  ..むふ.ぬお....|□らいふ
+PRG+0x07360 score=16 8B AE A6 CB FF F0 BB 8A 99 00 85 8A 94 94 00 82  .ひて.|□ら.か·..ああ·.
+PRG+0x07350 score=15 82 8A 90 AF 98 B2 A6 CA FF F0 BB 95 AF CB 00 FA  ...ふお.て.|□らいふ.·.
+PRG+0x072E0 score=15 B2 9A 95 8C 10 CA FF 88 96 9F 8B BB 85 9A 95 8C  .きい...|.うし.ら.きい.
+PRG+0x07240 score=15 B4 00 95 86 9D CB F8 F9 00 85 A4 1C AE 06 00 85  み·い.こ.□□·.ち.ひ.·.
+PRG+0x071E0 score=15 88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B  .うし.ら..あ.ひ.□□·.く
+
+## bank5_cluster PRG+0x17D00-0x17DA0 ROM+0x17D10-0x17DB0
+
+-- add=0x75 --
+PRG+0x17D90 score=21 81 88 7C 84 00 00 F8 14 7C 84 80 A6 00 00 BC 79  してきそ··□.きそさ.··.え
+PRG+0x17D80 score=20 7D 83 78 A0 00 00 F6 0A 7D 83 7C 84 00 00 F6 0A  くせうれ··..くせきそ··..
+PRG+0x17D70 score=20 79 87 7C 9E 00 00 F6 0A 7D 83 85 A0 00 00 FE 18  えつきり··..くせたれ··..
+PRG+0x17D60 score=20 7A 86 7C 9E 00 00 FC 0C 7A 86 7C 9E 00 00 FB 0E  おちきり··..おちきり··..
+PRG+0x17D50 score=20 79 87 7C 9E 00 00 FC 0A 79 87 7C 9E 00 00 FC 0E  えつきり··..えつきり··..
+PRG+0x17D40 score=20 7A 86 7C 9E 00 00 FE 0A 7C 84 7C 9E 00 00 FD 0C  おちきり··..きそきり··..
+PRG+0x17D30 score=20 7B 85 7C 84 00 00 FD 0A 7A 86 7C 9E 00 00 FC 0E  かたきそ··..おちきり··..
+PRG+0x17D20 score=20 7A 86 7C 84 00 00 FC 20 7C 84 78 88 00 00 F6 0A  おちきそ··. きそうて··..
+PRG+0x17D10 score=20 7C 84 78 88 00 00 FE 1C 7C 84 78 88 00 00 F6 0C  きそうて··..きそうて··..
+PRG+0x17D00 score=12 A4 34 A6 33 18 60 F6 0A 78 7F 7C 84 00 00 FC 20  ん4.3.`..うこきそ··. 
+
+-- add=0x76 --
+PRG+0x17D90 score=21 81 88 7C 84 00 00 F8 14 7C 84 80 A6 00 00 BC 79  さつかせ··□.かせこ.··.う
+PRG+0x17D80 score=20 7D 83 78 A0 00 00 F6 0A 7D 83 7C 84 00 00 F6 0A  きすいる··..きすかせ··..
+PRG+0x17D70 score=20 79 87 7C 9E 00 00 F6 0A 7D 83 85 A0 00 00 FE 18  うちから··..きすそる··..
+PRG+0x17D60 score=20 7A 86 7C 9E 00 00 FC 0C 7A 86 7C 9E 00 00 FB 0E  えたから··..えたから··..
+PRG+0x17D50 score=20 79 87 7C 9E 00 00 FC 0A 79 87 7C 9E 00 00 FC 0E  うちから··..うちから··..
+PRG+0x17D40 score=20 7A 86 7C 9E 00 00 FE 0A 7C 84 7C 9E 00 00 FD 0C  えたから··..かせから··..
+PRG+0x17D30 score=20 7B 85 7C 84 00 00 FD 0A 7A 86 7C 9E 00 00 FC 0E  おそかせ··..えたから··..
+PRG+0x17D20 score=20 7A 86 7C 84 00 00 FC 20 7C 84 78 88 00 00 F6 0A  えたかせ··. かせいつ··..
+PRG+0x17D10 score=20 7C 84 78 88 00 00 FE 1C 7C 84 78 88 00 00 F6 0C  かせいつ··..かせいつ··..
+PRG+0x17D00 score=12 A4 34 A6 33 18 60 F6 0A 78 7F 7C 84 00 00 FC 20  を4.3.`..いけかせ··. 
+
