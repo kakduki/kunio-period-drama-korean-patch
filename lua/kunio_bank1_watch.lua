@@ -16,7 +16,7 @@ local registered_count = 0
 local callback_mode = false
 local stopped_for_limit = false
 
-local targets = {
+local fallback_targets = {
 	-- label, category, ROM hit, CPU record start, CPU record end, expected bytes
 	{ label = "katana_watch_weapon", category = "weapon", rom = 0x05644, start = 0x9633, stop = 0x9637, bytes = "82 8C 91" },
 	{ label = "kusuri_recovery", category = "recovery", rom = 0x05BDF, start = 0x9BCD, stop = 0x9BD3, bytes = "82 87 A3" },
@@ -32,6 +32,15 @@ local targets = {
 	{ label = "raifu_ui_a", category = "ui", rom = 0x0736A, start = 0xB359, stop = 0xB35E, bytes = "BB 95 AF" },
 	{ label = "raifu_ui_b", category = "ui", rom = 0x0739D, start = 0xB38C, stop = 0xB391, bytes = "BB 95 AF" },
 }
+
+local targets = fallback_targets
+local target_source = "fallback"
+
+local ok_targets, generated_targets = pcall(function() return dofile("kunio_bank1_targets.lua") end)
+if ok_targets and type(generated_targets) == "table" and #generated_targets > 0 then
+	targets = generated_targets
+	target_source = "generated"
+end
 
 local function mkdir(path)
 	os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -199,7 +208,7 @@ append(summary_path, table.concat({
 	"lua_start",
 	registered_count,
 	0,
-	"callback_mode=" .. tostring(callback_mode)
+	"callback_mode=" .. tostring(callback_mode) .. ";target_source=" .. target_source .. ";targets=" .. tostring(#targets)
 }, "\t"))
 
 while emu.framecount() < MAX_FRAMES and not stopped_for_limit do
