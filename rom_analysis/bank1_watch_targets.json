@@ -1,0 +1,905 @@
+{
+  "source": "rom_analysis/bank1_candidate_contexts.md",
+  "description": "Breakpoint-ready Bank 1 item/menu/UI targets generated from translation-data candidate contexts.",
+  "target_count": 36,
+  "targets": [
+    {
+      "label": "rom_05644_candidate_7c",
+      "category": "무기",
+      "source": "カタナ",
+      "korean": "카타나",
+      "rom_hit": "0x05644",
+      "prg_hit": "0x05634",
+      "record_rom_range": [
+        "0x05643",
+        "0x05647"
+      ],
+      "record_cpu_range": [
+        "0x9633",
+        "0x9637"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7C",
+      "expected_bytes": "82 8C 91",
+      "decoded_record": "みかたな",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x055EF"
+      ]
+    },
+    {
+      "label": "rom_058fb_candidate_79",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x058FB",
+      "prg_hit": "0x058EB",
+      "record_rom_range": [
+        "0x058FB",
+        "0x058FF"
+      ],
+      "record_cpu_range": [
+        "0x98EB",
+        "0x98EF"
+      ],
+      "mode": "shifted-low",
+      "base": "0x79",
+      "expected_bytes": "9E A2",
+      "decoded_record": "やりつそ",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_05aa3_candidate_77",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x05AA3",
+      "prg_hit": "0x05A93",
+      "record_rom_range": [
+        "0x05AA0",
+        "0x05AA7"
+      ],
+      "record_cpu_range": [
+        "0x9A90",
+        "0x9A97"
+      ],
+      "mode": "shifted-low",
+      "base": "0x77",
+      "expected_bytes": "9C A0",
+      "decoded_record": "ら<B4>めやりやり",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05901",
+        "0x05933",
+        "0x059E8",
+        "0x18CDD"
+      ]
+    },
+    {
+      "label": "rom_05aa5_candidate_77",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x05AA5",
+      "prg_hit": "0x05A95",
+      "record_rom_range": [
+        "0x05AA0",
+        "0x05AA7"
+      ],
+      "record_cpu_range": [
+        "0x9A90",
+        "0x9A97"
+      ],
+      "mode": "shifted-low",
+      "base": "0x77",
+      "expected_bytes": "9C A0",
+      "decoded_record": "ら<B4>めやりやり",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05901",
+        "0x05933",
+        "0x059E8",
+        "0x18CDD"
+      ]
+    },
+    {
+      "label": "rom_05bba_candidate_7a",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x05BBA",
+      "prg_hit": "0x05BAA",
+      "record_rom_range": [
+        "0x05BB5",
+        "0x05BBD"
+      ],
+      "record_cpu_range": [
+        "0x9BA5",
+        "0x9BAD"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7A",
+      "expected_bytes": "9F A3",
+      "decoded_record": "むねけ<99>さやりを",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05A3A"
+      ]
+    },
+    {
+      "label": "rom_05bdf_candidate_7a",
+      "category": "회복",
+      "source": "くすり",
+      "korean": "약",
+      "rom_hit": "0x05BDF",
+      "prg_hit": "0x05BCF",
+      "record_rom_range": [
+        "0x05BDD",
+        "0x05BE3"
+      ],
+      "record_cpu_range": [
+        "0x9BCD",
+        "0x9BD3"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7A",
+      "expected_bytes": "82 87 A3",
+      "decoded_record": "にしくすり<99>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05A44"
+      ]
+    },
+    {
+      "label": "rom_05c09_candidate_7a",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x05C09",
+      "prg_hit": "0x05BF9",
+      "record_rom_range": [
+        "0x05C04",
+        "0x05C0C"
+      ],
+      "record_cpu_range": [
+        "0x9BF4",
+        "0x9BFC"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7A",
+      "expected_bytes": "9F A3",
+      "decoded_record": "ひをに<99>さやりを",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05A4E"
+      ]
+    },
+    {
+      "label": "rom_05c69_candidate_7a",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x05C69",
+      "prg_hit": "0x05C59",
+      "record_rom_range": [
+        "0x05C64",
+        "0x05C6C"
+      ],
+      "record_cpu_range": [
+        "0x9C54",
+        "0x9C5C"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7A",
+      "expected_bytes": "9F A3",
+      "decoded_record": "ち<AE>すぬさやりを",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05A66",
+        "0x08B29"
+      ]
+    },
+    {
+      "label": "rom_06001_candidate_7e",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06001",
+      "prg_hit": "0x05FF1",
+      "record_rom_range": [
+        "0x05FFB",
+        "0x06008"
+      ],
+      "record_cpu_range": [
+        "0x9FEB",
+        "0x9FF8"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7E",
+      "expected_bytes": "A3 A7",
+      "decoded_record": "せ<B7>お<1C>せなやりえゆそ<0E><CA>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_0602e_candidate_8d",
+      "category": "UI",
+      "source": "そうび",
+      "korean": "장비",
+      "rom_hit": "0x0602E",
+      "prg_hit": "0x0601E",
+      "record_rom_range": [
+        "0x0602A",
+        "0x0603B"
+      ],
+      "record_cpu_range": [
+        "0xA01A",
+        "0xA02B"
+      ],
+      "mode": "shifted-low",
+      "base": "0x8D",
+      "expected_bytes": "9C 90 A8",
+      "decoded_record": "てる<83>くそうひ<08>て<06><82>ぬ<8C>うさ<F8><F9>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x03D6E",
+        "0x044DA",
+        "0x0C7D0",
+        "0x0C87E",
+        "0x0FA01",
+        "0x0FF04",
+        "0x158C7",
+        "0x16F39",
+        "0x18712",
+        "0x1EAC0"
+      ]
+    },
+    {
+      "label": "rom_06295_candidate_7c",
+      "category": "무기",
+      "source": "カタナ",
+      "korean": "카타나",
+      "rom_hit": "0x06295",
+      "prg_hit": "0x06285",
+      "record_rom_range": [
+        "0x06294",
+        "0x0629E"
+      ],
+      "record_cpu_range": [
+        "0xA284",
+        "0xA28E"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7C",
+      "expected_bytes": "82 8C 91",
+      "decoded_record": "みかたなへおはさは<B5>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x043F5"
+      ]
+    },
+    {
+      "label": "rom_0631c_candidate_7c",
+      "category": "무기",
+      "source": "カタナ",
+      "korean": "카타나",
+      "rom_hit": "0x0631C",
+      "prg_hit": "0x0630C",
+      "record_rom_range": [
+        "0x06319",
+        "0x06324"
+      ],
+      "record_cpu_range": [
+        "0xA309",
+        "0xA314"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7C",
+      "expected_bytes": "82 8C 91",
+      "decoded_record": "<F0><BB>みかたなへおはさは",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05E12",
+        "0x063B2"
+      ]
+    },
+    {
+      "label": "rom_0635a_candidate_7c",
+      "category": "무기",
+      "source": "カタナ",
+      "korean": "카타나",
+      "rom_hit": "0x0635A",
+      "prg_hit": "0x0634A",
+      "record_rom_range": [
+        "0x06359",
+        "0x06362"
+      ],
+      "record_cpu_range": [
+        "0xA349",
+        "0xA352"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7C",
+      "expected_bytes": "82 8C 91",
+      "decoded_record": "みかたな<13><0A><0B><AE>ち",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_06479_candidate_7f",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06479",
+      "prg_hit": "0x06469",
+      "record_rom_range": [
+        "0x06478",
+        "0x06481"
+      ],
+      "record_cpu_range": [
+        "0xA468",
+        "0xA471"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7F",
+      "expected_bytes": "A4 A8",
+      "decoded_record": "ひやりやまうぬくけ",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_065b0_candidate_80",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x065B0",
+      "prg_hit": "0x065A0",
+      "record_rom_range": [
+        "0x065B0",
+        "0x065B6"
+      ],
+      "record_cpu_range": [
+        "0xA5A0",
+        "0xA5A6"
+      ],
+      "mode": "shifted-low",
+      "base": "0x80",
+      "expected_bytes": "A5 A9",
+      "decoded_record": "やりせね<B2><CA>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_06605_candidate_82",
+      "category": "능력치",
+      "source": "ちから",
+      "korean": "힘",
+      "rom_hit": "0x06605",
+      "prg_hit": "0x065F5",
+      "record_rom_range": [
+        "0x065FE",
+        "0x06608"
+      ],
+      "record_cpu_range": [
+        "0xA5EE",
+        "0xA5F8"
+      ],
+      "mode": "shifted-low",
+      "base": "0x82",
+      "expected_bytes": "93 88 AA",
+      "decoded_record": "<14>されあきつ<B4>ちから",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_066fb_candidate_82",
+      "category": "능력치",
+      "source": "ちから",
+      "korean": "힘",
+      "rom_hit": "0x066FB",
+      "prg_hit": "0x066EB",
+      "record_rom_range": [
+        "0x066FA",
+        "0x06702"
+      ],
+      "record_cpu_range": [
+        "0xA6EA",
+        "0xA6F2"
+      ],
+      "mode": "shifted-low",
+      "base": "0x82",
+      "expected_bytes": "93 88 AA",
+      "decoded_record": "こちからに<B2>えを",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x026D1",
+        "0x026DB",
+        "0x026E4",
+        "0x026EE",
+        "0x166E4",
+        "0x1EA2D",
+        "0x1EA5E"
+      ]
+    },
+    {
+      "label": "rom_06839_candidate_7e",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06839",
+      "prg_hit": "0x06829",
+      "record_rom_range": [
+        "0x06832",
+        "0x0683D"
+      ],
+      "record_cpu_range": [
+        "0xA822",
+        "0xA82D"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7E",
+      "expected_bytes": "A3 A7",
+      "decoded_record": "そさ<10>てすせなやりお<0E>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x0419E",
+        "0x1BFB2"
+      ]
+    },
+    {
+      "label": "rom_06845_candidate_82",
+      "category": "능력치",
+      "source": "ちから",
+      "korean": "힘",
+      "rom_hit": "0x06845",
+      "prg_hit": "0x06835",
+      "record_rom_range": [
+        "0x0683E",
+        "0x06848"
+      ],
+      "record_cpu_range": [
+        "0xA82E",
+        "0xA838"
+      ],
+      "mode": "shifted-low",
+      "base": "0x82",
+      "expected_bytes": "93 88 AA",
+      "decoded_record": "<81><B4>ことへえこちから",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x02845"
+      ]
+    },
+    {
+      "label": "rom_068c3_candidate_71",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x068C3",
+      "prg_hit": "0x068B3",
+      "record_rom_range": [
+        "0x068B9",
+        "0x068C5"
+      ],
+      "record_cpu_range": [
+        "0xA8A9",
+        "0xA8B5"
+      ],
+      "mode": "shifted-low",
+      "base": "0x71",
+      "expected_bytes": "96 9A",
+      "decoded_record": "<F0><BB>たは<0C><AB>つらつ<A7>やり",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05E74",
+        "0x0AA2F",
+        "0x0AA86"
+      ]
+    },
+    {
+      "label": "rom_0691e_candidate_80",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x0691E",
+      "prg_hit": "0x0690E",
+      "record_rom_range": [
+        "0x0691E",
+        "0x06923"
+      ],
+      "record_cpu_range": [
+        "0xA90E",
+        "0xA913"
+      ],
+      "mode": "shifted-low",
+      "base": "0x80",
+      "expected_bytes": "A5 A9",
+      "decoded_record": "やりして<CA>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x0416C",
+        "0x0CADE",
+        "0x1119E",
+        "0x11BD6",
+        "0x11C15",
+        "0x11C39",
+        "0x11C5A",
+        "0x11C76",
+        "0x11CC0",
+        "0x11DE8"
+      ]
+    },
+    {
+      "label": "rom_069c5_candidate_79",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x069C5",
+      "prg_hit": "0x069B5",
+      "record_rom_range": [
+        "0x069C5",
+        "0x069CC"
+      ],
+      "record_cpu_range": [
+        "0xA9B5",
+        "0xA9BC"
+      ],
+      "mode": "shifted-low",
+      "base": "0x79",
+      "expected_bytes": "9E A2",
+      "decoded_record": "やりはれ<A9><0E><CA>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x0296C",
+        "0x02985",
+        "0x05ADC",
+        "0x05AE4",
+        "0x05AED",
+        "0x05B16",
+        "0x0758E",
+        "0x13802",
+        "0x1380C",
+        "0x13817"
+      ]
+    },
+    {
+      "label": "rom_06a3d_candidate_79",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06A3D",
+      "prg_hit": "0x06A2D",
+      "record_rom_range": [
+        "0x06A3D",
+        "0x06A46"
+      ],
+      "record_cpu_range": [
+        "0xAA2D",
+        "0xAA36"
+      ],
+      "mode": "shifted-low",
+      "base": "0x79",
+      "expected_bytes": "9E A2",
+      "decoded_record": "やりはれ<A9><0E><CB><F8><F9>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_06a66_candidate_79",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06A66",
+      "prg_hit": "0x06A56",
+      "record_rom_range": [
+        "0x06A66",
+        "0x06A6D"
+      ],
+      "record_cpu_range": [
+        "0xAA56",
+        "0xAA5D"
+      ],
+      "mode": "shifted-low",
+      "base": "0x79",
+      "expected_bytes": "9E A2",
+      "decoded_record": "やりはれ<A9><0E><CA>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_06b4a_candidate_82",
+      "category": "능력치",
+      "source": "ちから",
+      "korean": "힘",
+      "rom_hit": "0x06B4A",
+      "prg_hit": "0x06B3A",
+      "record_rom_range": [
+        "0x06B42",
+        "0x06B4F"
+      ],
+      "record_cpu_range": [
+        "0xAB32",
+        "0xAB3F"
+      ],
+      "mode": "shifted-low",
+      "base": "0x82",
+      "expected_bytes": "93 88 AA",
+      "decoded_record": "<81><B4>これたらち<B4>ちから<B4><CA>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_06bc6_candidate_7b",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06BC6",
+      "prg_hit": "0x06BB6",
+      "record_rom_range": [
+        "0x06BBF",
+        "0x06BCA"
+      ],
+      "record_cpu_range": [
+        "0xABAF",
+        "0xABBA"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7B",
+      "expected_bytes": "A0 A4",
+      "decoded_record": "<FB><04><BB>よけ<14>ほやり<09>ひ",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05EA6"
+      ]
+    },
+    {
+      "label": "rom_06bdf_candidate_8d",
+      "category": "UI",
+      "source": "そうび",
+      "korean": "장비",
+      "rom_hit": "0x06BDF",
+      "prg_hit": "0x06BCF",
+      "record_rom_range": [
+        "0x06BDB",
+        "0x06BE3"
+      ],
+      "record_cpu_range": [
+        "0xABCB",
+        "0xABD3"
+      ],
+      "mode": "shifted-low",
+      "base": "0x8D",
+      "expected_bytes": "9C 90 A8",
+      "decoded_record": "<81>よ<8C>はそうひ<06>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x061A5"
+      ]
+    },
+    {
+      "label": "rom_06d1b_candidate_80",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06D1B",
+      "prg_hit": "0x06D0B",
+      "record_rom_range": [
+        "0x06D19",
+        "0x06D22"
+      ],
+      "record_cpu_range": [
+        "0xAD09",
+        "0xAD12"
+      ],
+      "mode": "shifted-low",
+      "base": "0x80",
+      "expected_bytes": "A5 A9",
+      "decoded_record": "<F0><BB>やりしても<B4>て",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x001D5",
+        "0x042F1",
+        "0x05106",
+        "0x05ECA",
+        "0x0B7A3",
+        "0x16719",
+        "0x1B01D"
+      ]
+    },
+    {
+      "label": "rom_06de3_candidate_80",
+      "category": "UI",
+      "source": "おかね",
+      "korean": "돈",
+      "rom_hit": "0x06DE3",
+      "prg_hit": "0x06DD3",
+      "record_rom_range": [
+        "0x06DE1",
+        "0x06DE7"
+      ],
+      "record_cpu_range": [
+        "0xADD1",
+        "0xADD7"
+      ],
+      "mode": "shifted-low",
+      "base": "0x80",
+      "expected_bytes": "85 86 98",
+      "decoded_record": "<F0><BB>おかね<06>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05EE8"
+      ]
+    },
+    {
+      "label": "rom_06fa1_candidate_8d",
+      "category": "UI",
+      "source": "そうび",
+      "korean": "장비",
+      "rom_hit": "0x06FA1",
+      "prg_hit": "0x06F91",
+      "record_rom_range": [
+        "0x06FA1",
+        "0x06FAA"
+      ],
+      "record_cpu_range": [
+        "0xAF91",
+        "0xAF9A"
+      ],
+      "mode": "shifted-low",
+      "base": "0x8D",
+      "expected_bytes": "9C 90 A8",
+      "decoded_record": "そうひ<08>て<13><CB><F8><F9>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x08902",
+        "0x08912",
+        "0x08914",
+        "0x08916",
+        "0x08918",
+        "0x0891A",
+        "0x0891C",
+        "0x0891E",
+        "0x08920",
+        "0x08922"
+      ]
+    },
+    {
+      "label": "rom_06fde_candidate_80",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x06FDE",
+      "prg_hit": "0x06FCE",
+      "record_rom_range": [
+        "0x06FDE",
+        "0x06FE5"
+      ],
+      "record_cpu_range": [
+        "0xAFCE",
+        "0xAFD5"
+      ],
+      "mode": "shifted-low",
+      "base": "0x80",
+      "expected_bytes": "A5 A9",
+      "decoded_record": "やりせね<B2><CA><CA>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_0704f_candidate_7a",
+      "category": "무기",
+      "source": "やり",
+      "korean": "창",
+      "rom_hit": "0x0704F",
+      "prg_hit": "0x0703F",
+      "record_rom_range": [
+        "0x0704E",
+        "0x07053"
+      ],
+      "record_cpu_range": [
+        "0xB03E",
+        "0xB043"
+      ],
+      "mode": "shifted-low",
+      "base": "0x7A",
+      "expected_bytes": "9F A3",
+      "decoded_record": "さやりを<13>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_071a4_candidate_82",
+      "category": "능력치",
+      "source": "ちから",
+      "korean": "힘",
+      "rom_hit": "0x071A4",
+      "prg_hit": "0x07194",
+      "record_rom_range": [
+        "0x071A2",
+        "0x071AC"
+      ],
+      "record_cpu_range": [
+        "0xB192",
+        "0xB19C"
+      ],
+      "mode": "shifted-low",
+      "base": "0x82",
+      "expected_bytes": "93 88 AA",
+      "decoded_record": "へ<B4>ちからもあ<CA><F8><F9>",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_07227_candidate_84",
+      "category": "무기",
+      "source": "カタナ",
+      "korean": "카타나",
+      "rom_hit": "0x07227",
+      "prg_hit": "0x07217",
+      "record_rom_range": [
+        "0x07226",
+        "0x0722A"
+      ],
+      "record_cpu_range": [
+        "0xB216",
+        "0xB21A"
+      ],
+      "mode": "shifted-low",
+      "base": "0x84",
+      "expected_bytes": "8A 94 99",
+      "decoded_record": "あかたな",
+      "confidence": "medium",
+      "pointer_refs": []
+    },
+    {
+      "label": "rom_0736a_candidate_93",
+      "category": "UI",
+      "source": "ライフ",
+      "korean": "라이프",
+      "rom_hit": "0x0736A",
+      "prg_hit": "0x0735A",
+      "record_rom_range": [
+        "0x07369",
+        "0x0736E"
+      ],
+      "record_cpu_range": [
+        "0xB359",
+        "0xB35E"
+      ],
+      "mode": "shifted-low",
+      "base": "0x93",
+      "expected_bytes": "BB 95 AF",
+      "decoded_record": "<F0>らいふ<CB>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x03370",
+        "0x05F60"
+      ]
+    },
+    {
+      "label": "rom_0739d_candidate_93",
+      "category": "UI",
+      "source": "ライフ",
+      "korean": "라이프",
+      "rom_hit": "0x0739D",
+      "prg_hit": "0x0738D",
+      "record_rom_range": [
+        "0x0739C",
+        "0x073A1"
+      ],
+      "record_cpu_range": [
+        "0xB38C",
+        "0xB391"
+      ],
+      "mode": "shifted-low",
+      "base": "0x93",
+      "expected_bytes": "BB 95 AF",
+      "decoded_record": "<F0>らいふ<CA>",
+      "confidence": "medium",
+      "pointer_refs": [
+        "0x05F64"
+      ]
+    }
+  ]
+}

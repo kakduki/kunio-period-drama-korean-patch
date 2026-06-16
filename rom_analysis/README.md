@@ -24,6 +24,7 @@
 - `bank1_text_block_map.md`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis
 - `translation_offset_candidates.md`: translation-data-to-ROM candidate table for Bank 1, including exact `plus-0x7A` matches and lower-confidence shifted-offset hits
 - `bank1_candidate_contexts.md`: focused Bank 1 candidate contexts with delimiter-bounded record ranges, CPU record addresses, and raw little-endian pointer references
+- `bank1_watch_targets.json`: generated Bank 1 read-watch target list derived from `bank1_candidate_contexts.md`; the Lua copy is `lua/kunio_bank1_targets.lua`
 - `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
@@ -119,9 +120,12 @@ Verified run:
   `2903-2908`, `5184-5187`, `5464-5470`, plus smaller row updates at `6614`
   and `7091`. These are better next targets than palette-only bursts.
 - `lua/kunio_bank1_watch.lua` registers read callbacks for the current
-  breakpoint-ready Bank 1 records, including `ROM+0x05644`, `0x05BDF`,
-  `0x06DE3`, `0x0736A`, and `0x0739D`. A non-empty `bank1_reads.tsv`
-  would be stronger evidence that the candidate record is used at runtime.
+  breakpoint-ready Bank 1 records. It now loads the generated
+  `lua/kunio_bank1_targets.lua` file when present; the current generated list
+  contains 36 item/menu/UI-style targets from `bank1_watch_targets.json`.
+  A non-empty `bank1_reads.tsv` is evidence that the CPU address was read, and
+  `active_expected_match=true` is stronger evidence that the expected candidate
+  bytes were actually mapped at that CPU range during the read.
 - A 900-frame validation run confirmed `memory.registerread` support in the
   local FCEUX build: 124 watched CPU addresses were registered and 247 read
   hits were captured. The run observed a strong context match for
