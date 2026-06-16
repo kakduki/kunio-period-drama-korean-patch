@@ -827,7 +827,8 @@
       "base": "0x82",
       "expected_bytes": "93 88 AA",
       "decoded_record": "へ<B4>ちからもあ<CA><F8><F9>",
-      "confidence": "medium",
+      "confidence": "high",
+      "confidence_evidence": "active_expected_match=11 hits in autoplay_v1 (frames 358-4316); record snapshot confirmed: 9F B4 93 88 AA A6 83 CA F8 F9 00",
       "pointer_refs": []
     },
     {
@@ -849,7 +850,8 @@
       "base": "0x84",
       "expected_bytes": "8A 94 99",
       "decoded_record": "あかたな",
-      "confidence": "medium",
+      "confidence": "high",
+      "confidence_evidence": "active_expected_match=5 hits in autoplay_v1 (frames 1975-4213); record snapshot confirmed: 85 8A 94 99 00",
       "pointer_refs": []
     },
     {

@@ -28,6 +28,7 @@ class ReadHit:
     context: str
     active_expected_match: bool
     record_snapshot: str
+    byte_diff: str = ""
 
 
 def read_summary(input_dir: Path) -> dict[str, str]:
@@ -74,6 +75,7 @@ def read_hits(input_dir: Path) -> list[ReadHit]:
                 context=row.get("context", ""),
                 active_expected_match=row.get("active_expected_match", "").lower() == "true",
                 record_snapshot=row.get("record_snapshot", ""),
+                byte_diff=row.get("byte_diff", ""),
             )
         )
     return hits
@@ -109,6 +111,10 @@ def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
         evidence_hit = next((hit for hit in label_hits if context_matches_expected(hit)), first)
         record_evidence_hit = next((hit for hit in label_hits if record_matches_expected(hit)), first)
         active_matches = sum(1 for hit in label_hits if record_matches_expected(hit))
+        # byte_diff: most common non-empty diff pattern (= means match, X>Y means mismatch)
+        diffs = Counter(h.byte_diff for h in label_hits if h.byte_diff)
+        top_diff = diffs.most_common(1)[0][0] if diffs else ""
+        full_match = top_diff.startswith("=") and all(p.startswith("=") for p in top_diff.split()) if top_diff else False
         rows.append(
             {
                 "label": label,
@@ -127,6 +133,8 @@ def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
                 "active_expected_matches": active_matches,
                 "record_snapshot": record_evidence_hit.record_snapshot,
                 "record_matches_expected": record_matches_expected(record_evidence_hit),
+                "top_byte_diff": top_diff,
+                "byte_diff_full_match": full_match,
             }
         )
 
@@ -195,14 +203,17 @@ def write_markdown(
             "",
             "## Details",
             "",
-            "| label | top CPU addresses | top values | expected bytes | record snapshot evidence |",
-            "| --- | --- | --- | --- | --- |",
+            "| label | top CPU addresses | top values | expected bytes | top byte diff | record snapshot evidence |",
+            "| --- | --- | --- | --- | --- | --- |",
         ]
     )
     for row in rows:
+        diff_cell = row.get("top_byte_diff", "")
+        diff_note = " ✓" if row.get("byte_diff_full_match") else ""
         lines.append(
             f"| `{row['label']}` | {row['top_cpu_addrs']} | {row['top_values']} | "
-            f"`{row['expected_bytes']}` | `{'yes' if row['record_matches_expected'] else 'no'}: {row['record_snapshot']}` |"
+            f"`{row['expected_bytes']}` | `{diff_cell}`{diff_note} | "
+            f"`{'yes' if row['record_matches_expected'] else 'no'}: {row['record_snapshot']}` |"
         )
 
     lines.extend(
