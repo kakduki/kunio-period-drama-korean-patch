@@ -125,7 +125,8 @@
       "confidence": "medium",
       "pointer_refs": [
         "0x05A3A"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes 01 01 don't encode with any consistent base (candidates: 0xD8, 0xDC); expected_bytes unchanged"
     },
     {
       "label": "rom_05bdf_candidate_7a",
@@ -220,7 +221,8 @@
       "expected_bytes": "A3 A7",
       "decoded_record": "せ<B7>お<1C>せなやりえゆそ<0E><CA>",
       "confidence": "medium",
-      "pointer_refs": []
+      "pointer_refs": [],
+      "runtime_base_note": "runtime bytes 01 00 don't encode with any consistent base (candidates: 0xD7, 0xDC); expected_bytes unchanged"
     },
     {
       "label": "rom_0602e_candidate_8d",
@@ -253,7 +255,8 @@
         "0x16F39",
         "0x18712",
         "0x1EAC0"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes 20 32 88 don't encode with any consistent base (candidates: 0x11, 0x2F, 0x6D); expected_bytes unchanged"
     },
     {
       "label": "rom_06295_candidate_7c",
@@ -346,7 +349,8 @@
       "expected_bytes": "A4 A8",
       "decoded_record": "ひやりやまうぬくけ",
       "confidence": "medium",
-      "pointer_refs": []
+      "pointer_refs": [],
+      "runtime_base_note": "runtime bytes F0 E8 don't encode with any consistent base (candidates: 0xBF, 0xCB); expected_bytes unchanged"
     },
     {
       "label": "rom_065b0_candidate_80",
@@ -420,7 +424,8 @@
         "0x166E4",
         "0x1EA2D",
         "0x1EA5E"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes 03 70 6B don't encode with any consistent base (candidates: 0x43, 0x6A, 0xF2); expected_bytes unchanged"
     },
     {
       "label": "rom_06839_candidate_7e",
@@ -561,7 +566,8 @@
         "0x13802",
         "0x1380C",
         "0x13817"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes E3 7A don't encode with any consistent base (candidates: 0x51, 0xBE); expected_bytes unchanged"
     },
     {
       "label": "rom_06a3d_candidate_79",
@@ -583,7 +589,8 @@
       "expected_bytes": "9E A2",
       "decoded_record": "やりはれ<A9><0E><CB><F8><F9>",
       "confidence": "medium",
-      "pointer_refs": []
+      "pointer_refs": [],
+      "runtime_base_note": "runtime bytes 4A 4A don't encode with any consistent base (candidates: 0x21, 0x25); expected_bytes unchanged"
     },
     {
       "label": "rom_06a66_candidate_79",
@@ -605,7 +612,8 @@
       "expected_bytes": "9E A2",
       "decoded_record": "やりはれ<A9><0E><CA>",
       "confidence": "medium",
-      "pointer_refs": []
+      "pointer_refs": [],
+      "runtime_base_note": "runtime bytes 71 E8 don't encode with any consistent base (candidates: 0x4C, 0xBF); expected_bytes unchanged"
     },
     {
       "label": "rom_06b4a_candidate_82",
@@ -627,7 +635,8 @@
       "expected_bytes": "93 88 AA",
       "decoded_record": "<81><B4>これたらち<B4>ちから<B4><CA>",
       "confidence": "medium",
-      "pointer_refs": []
+      "pointer_refs": [],
+      "runtime_base_note": "runtime bytes F0 08 C8 don't encode with any consistent base (candidates: 0x02, 0xA0, 0xDF); expected_bytes unchanged"
     },
     {
       "label": "rom_06bc6_candidate_7b",
@@ -651,7 +660,8 @@
       "confidence": "medium",
       "pointer_refs": [
         "0x05EA6"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes BD F4 don't encode with any consistent base (candidates: 0x98, 0xCB); expected_bytes unchanged"
     },
     {
       "label": "rom_06bdf_candidate_8d",
@@ -675,7 +685,8 @@
       "confidence": "medium",
       "pointer_refs": [
         "0x061A5"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes BD F4 AB don't encode with any consistent base (candidates: 0x90, 0xAE, 0xF1); expected_bytes unchanged"
     },
     {
       "label": "rom_06d1b_candidate_80",
@@ -729,7 +740,8 @@
       "confidence": "medium",
       "pointer_refs": [
         "0x05EE8"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes 49 FF 18 don't encode with any consistent base (candidates: 0x00, 0x44, 0xF9); expected_bytes unchanged"
     },
     {
       "label": "rom_06fa1_candidate_8d",
@@ -762,7 +774,8 @@
         "0x0891E",
         "0x08920",
         "0x08922"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes 53 70 60 don't encode with any consistent base (candidates: 0x44, 0x45, 0x6D); expected_bytes unchanged"
     },
     {
       "label": "rom_06fde_candidate_80",
@@ -829,7 +842,8 @@
       "decoded_record": "へ<B4>ちからもあ<CA><F8><F9>",
       "confidence": "high",
       "confidence_evidence": "active_expected_match=11 hits in autoplay_v1 (frames 358-4316); record snapshot confirmed: 9F B4 93 88 AA A6 83 CA F8 F9 00",
-      "pointer_refs": []
+      "pointer_refs": [],
+      "runtime_base_note": "runtime bytes 19 57 00 don't encode with any consistent base (candidates: 0x08, 0x51, 0xD8); expected_bytes unchanged"
     },
     {
       "label": "rom_07227_candidate_84",
@@ -877,7 +891,8 @@
       "pointer_refs": [
         "0x03370",
         "0x05F60"
-      ]
+      ],
+      "runtime_base_note": "runtime bytes 2A 00 6C don't encode with any consistent base (candidates: 0x02, 0x50, 0xFE); expected_bytes unchanged"
     },
     {
       "label": "rom_0739d_candidate_93",

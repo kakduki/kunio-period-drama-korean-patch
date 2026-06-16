@@ -212,7 +212,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--timeout", type=int, default=180, help="Seconds before stopping FCEUX.")
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")
     parser.add_argument("--ppu-burst-threshold", type=int, default=24, help="PPUDATA/PPUADDR writes per frame that trigger a dump.")
-    parser.add_argument("--hit-limit", type=int, default=30000, help="Maximum read hits for watcher Lua scripts that support KUNIO_HIT_LIMIT.")
+    parser.add_argument("--hit-limit", type=int, default=50000, help="Maximum read hits for watcher Lua scripts that support KUNIO_HIT_LIMIT.")
     parser.add_argument("--final-output", default=str(ROOT / "rom_analysis" / "fceux_lua"), help="Directory where Lua output is mirrored after FCEUX exits.")
     parser.add_argument("--clean-output", action="store_true", help="Delete the final output directory before copying new results.")
     parser.add_argument("--dump-hex", action=argparse.BooleanOptionalAction, default=True, help="Write text hex dumps at snapshot frames.")

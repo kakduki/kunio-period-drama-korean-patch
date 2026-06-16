@@ -17,12 +17,18 @@
 
 local OUT_DIR   = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/fceux_bank1_watch_test"
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "5000")
-local HIT_LIMIT  = tonumber(os.getenv("KUNIO_HIT_LIMIT")  or "30000")
+local HIT_LIMIT  = tonumber(os.getenv("KUNIO_HIT_LIMIT")  or "50000")
+-- per-phase hit budget: phase 2 (menu) gets 30000, phase 3 (stage) gets 20000
+local PHASE2_LIMIT = tonumber(os.getenv("KUNIO_PHASE2_LIMIT") or "30000")
+local PHASE3_LIMIT = tonumber(os.getenv("KUNIO_PHASE3_LIMIT") or "20000")
 
 local summary_path = OUT_DIR .. "/summary.tsv"
 local reads_path   = OUT_DIR .. "/bank1_reads.tsv"
 
 local hit_count        = 0
+local phase2_hits      = 0
+local phase3_hits      = 0
+local current_phase    = 1   -- updated each frame in main loop; safe to read from callbacks
 local registered_count = 0
 local callback_mode    = false
 local stopped_for_limit = false
@@ -131,8 +137,13 @@ end
 
 local function on_read_for(target)
     return function(addr, size, value)
+        -- use global current_phase (updated each frame in main loop)
+        if current_phase == 2 and phase2_hits >= PHASE2_LIMIT then return end
+        if current_phase == 3 and phase3_hits >= PHASE3_LIMIT then return end
         if hit_count >= HIT_LIMIT then stopped_for_limit = true; return end
         hit_count = hit_count + 1
+        if current_phase == 2 then phase2_hits = phase2_hits + 1 end
+        if current_phase == 3 then phase3_hits = phase3_hits + 1 end
         local a = addr or 0
         local v = value
         if v == nil then v = byte_at(a) end
@@ -239,11 +250,12 @@ print("max_frames=" .. MAX_FRAMES)
 -- Main loop -------------------------------------------------------------
 while emu.framecount() < MAX_FRAMES and not stopped_for_limit do
     local frame = emu.framecount()
-    local phase = get_phase(frame)
+    current_phase = get_phase(frame)
+    local phase = current_phase
 
     joypad.set(1, joy_for_frame(frame))
-    gui.text(2, 8,  "AutoPlay Watch v2  frame=" .. tostring(frame) .. "  phase=" .. tostring(phase))
-    gui.text(2, 17, "hits=" .. tostring(hit_count) .. "  reg=" .. tostring(registered_count))
+    gui.text(2, 8,  "AutoPlay Watch v3  frame=" .. tostring(frame) .. "  phase=" .. tostring(phase))
+    gui.text(2, 17, "hits=" .. tostring(hit_count) .. "  p2=" .. tostring(phase2_hits) .. "  p3=" .. tostring(phase3_hits))
     emu.frameadvance()
 
     if frame % 300 == 0 then
