@@ -3,7 +3,7 @@
 
 실행 흐름:
 1) webhook 조건 검증 (repo, ref)
-2) 5분 대기
+2) 지연 없음(필요 시 옵션으로 조정)
 3) git pull
 4) git status / HEAD 출력
 5) 목표1 텍스트 탐지
@@ -30,7 +30,7 @@ from typing import Dict, List, Optional, Tuple
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TARGET_REPO = "kakduki/kunio-period-drama-korean-patch"
 TARGET_REF = "refs/heads/main"
-DEFAULT_DELAY = 300
+DEFAULT_DELAY = 0
 
 
 @dataclass
