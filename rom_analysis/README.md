@@ -26,6 +26,9 @@
 - `prg_padding_options.md` / `prg_padding_options.json`: compares planned Korean PRG bytes against original candidate byte spans and classifies equal-length vs padding-risk replacements
 - `prg_padding_experiment_plan.md` / `prg_padding_experiment_plan.json`: explicit padding-strategy matrix for shortened PRG replacements that need FCEUX screen verification
 - `../output/kunio_period_drama_korean_prg_padding_exp_build_report.json`: generated FCEUX-only ROM set for testing `ROM+0x071A4` padding strategies
+- `prg_padding_fceux_targets.md` / `prg_padding_fceux_targets.json`: FCEUX read-watch target files for the padding experiment ROMs
+- `fceux_padding_exp_pad_00_watch/summary.tsv` / `bank1_reads.tsv`: FCEUX read-watch output for the `pad_00` padding experiment ROM
+- `fceux_padding_exp_pad_00_watch_summary.md`: summary of the `pad_00` padding experiment read-watch run
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness
@@ -78,6 +81,7 @@
 - `prg_padding_options.md` confirms direct equal-length replacements are safe candidates for the current `カタナ` -> `카타나` records, while `ちから` -> `힘` remains `needs-padding-rule` because it leaves non-fill tail bytes `88 AA`. Do not apply shortened replacements until FCEUX confirms the renderer's padding/terminator behavior for that record.
 - `prg_padding_experiment_plan.json` turns the 29 `needs-padding-rule` targets into explicit test strategies. The first runtime-confirmed padding blocker is `ROM+0x071A4` (`ちから`/Chikara -> `힘`), original bytes `93 88 AA`, planned byte `87`, tail `88 AA`. Candidate experiment byte spans are `87 00 00`, `87 7A 7A`, `87 FF FF`, `87 F8 F9`, and baseline `87 88 AA`; none is considered safe until FCEUX confirms visible rendering and neighboring fields.
 - `scripts/build_padding_experiment_roms.py` builds five FCEUX-only padding ROMs for `ROM+0x071A4`: `pad_00`, `pad_7a`, `pad_ff`, `pad_f8f9`, and `preserve_tail`. These are not final patch candidates; use them to reach the same status screen/read-watch route and compare visible rendering of the `ちから`/Chikara label.
+- A 3,600-frame FCEUX read-watch run against the `pad_00` experiment ROM confirmed that `ROM+0x071A4` patched bytes `87 00 00` were active in CPU record `$B192-$B19C`: 11 read hits, 11 active expected matches, record snapshot `9F B4 87 00 00 A6 83 CA F8 F9 00`. This proves the experiment byte span is loaded on the known route; it still does not prove visual acceptance of `pad_00`.
 - A v0.4 PPU write-watch run captured 19,926 nametable writes across the same 88 useful frames as the original PPU run. The corrected v2 analysis found patched byte sequence `8B 8C` during phase 2, matching five watch-range targets at `ROM+0x0561A`, `0x0569D`, `0x056DA`, `0x0571C`, and `0x057D4`. This proves the patched tile sequence reached the PPU stream, but it does not distinguish the exact source ROM offset because all five targets share the same two-byte sequence.
 - `font/chr_bank_06_8x16.png` also contains visible numerals/UI-like tiles, but it is more mixed with sprite/background data.
 - Static PPU reference scanning found the most relevant nametable/text-output candidates around:
