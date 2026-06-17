@@ -50,6 +50,7 @@ KEY_PYTHON = [
     "scripts/record_visual_review.py",
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
+    "scripts/summarize_bank1_watch_reads.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_capture_cards_readable.py",

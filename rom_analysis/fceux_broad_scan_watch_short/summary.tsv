@@ -1,0 +1,9 @@
+frame	reason	registered	hits	detail
+0	lua_start	24	0	callback_mode=true;target_source=kunio_broad_scan_candidate_targets.lua;targets=7
+0	periodic	24	0	running
+0	periodic	24	0	running
+300	periodic	24	0	running
+600	periodic	24	249	running
+900	periodic	24	759	running
+1200	periodic	24	3171	running
+1327	hit_limit	24	5000	out=kunio_fceux_lua_output

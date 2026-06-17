@@ -9,6 +9,8 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "rom_analysis" / "fceux_bank1_watch"
@@ -97,6 +99,23 @@ def record_matches_expected(hit: ReadHit) -> bool:
     return expected in hit.record_snapshot
 
 
+def infer_romaji_from_label(label: str) -> str:
+    normalized = label.lower()
+    for romaji in (
+        "Heishichi",
+        "Kajiya",
+        "Katana",
+        "Tatsuichi",
+        "Tatsuji",
+        "Chikara",
+        "Raifu",
+        "Hashi",
+    ):
+        if romaji.lower() in normalized:
+            return romaji
+    return ""
+
+
 def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
     by_label: dict[str, list[ReadHit]] = defaultdict(list)
     for hit in hits:
@@ -111,6 +130,7 @@ def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
         evidence_hit = next((hit for hit in label_hits if context_matches_expected(hit)), first)
         record_evidence_hit = next((hit for hit in label_hits if record_matches_expected(hit)), first)
         active_matches = sum(1 for hit in label_hits if record_matches_expected(hit))
+        readable = readable_for_romaji(infer_romaji_from_label(label))
         # byte_diff: most common non-empty diff pattern (= means match, X>Y means mismatch)
         diffs = Counter(h.byte_diff for h in label_hits if h.byte_diff)
         top_diff = diffs.most_common(1)[0][0] if diffs else ""
@@ -119,6 +139,9 @@ def summarize_hits(hits: list[ReadHit]) -> list[dict[str, object]]:
             {
                 "label": label,
                 "category": first.category,
+                "source_display": readable.get("source_display", ""),
+                "korean_display": readable.get("korean_display", ""),
+                "screen_hint": readable.get("screen_hint", ""),
                 "rom_hit": first.rom_hit,
                 "record_cpu_range": first.record_cpu_range,
                 "hits": len(label_hits),
@@ -197,6 +220,21 @@ def write_markdown(
             )
     else:
         lines.append("| _none_ |  |  |  | 0 |  |  |  | 0 |  |  |")
+
+    lines.extend(
+        [
+            "",
+            "## Readable Labels",
+            "",
+            "| label | expected text | Korean | screen hint |",
+            "| --- | --- | --- | --- |",
+        ]
+    )
+    for row in rows:
+        lines.append(
+            f"| `{row['label']}` | {row.get('source_display') or '-'} | "
+            f"{row.get('korean_display') or '-'} | {row.get('screen_hint') or '-'} |"
+        )
 
     lines.extend(
         [
