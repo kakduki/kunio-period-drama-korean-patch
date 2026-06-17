@@ -211,33 +211,52 @@ def lua_string(value: str) -> str:
 
 
 def write_targets(contexts: list[Context]) -> None:
+    existing_by_label: dict[str, dict[str, object]] = {}
+    if OUT_TARGETS.exists():
+        try:
+            existing = json.loads(OUT_TARGETS.read_text(encoding="utf-8"))
+            existing_by_label = {
+                str(target.get("label")): target
+                for target in existing.get("targets", [])
+                if target.get("label")
+            }
+        except json.JSONDecodeError:
+            existing_by_label = {}
+
     targets = []
     for ctx in sorted(contexts, key=lambda c: hit_sort_key(c.hit)):
         hit = ctx.hit
-        targets.append(
-            {
-                "label": target_label(ctx),
-                "category": hit.entry.category,
-                "source": hit.entry.source,
-                "korean": hit.entry.korean,
-                "rom_hit": f"0x{hit.rom_offset:05X}",
-                "prg_hit": f"0x{hit.prg_offset:05X}",
-                "record_rom_range": [
-                    f"0x{ctx.record_rom_start:05X}",
-                    f"0x{ctx.record_rom_end:05X}",
-                ],
-                "record_cpu_range": [
-                    f"0x{ctx.cpu_addr:04X}",
-                    f"0x{ctx.cpu_addr + (ctx.record_end - ctx.record_start):04X}",
-                ],
-                "mode": hit.mode,
-                "base": f"0x{hit.base:02X}",
-                "expected_bytes": fmt_bytes(hit.encoded),
-                "decoded_record": ctx.decoded_record,
-                "confidence": confidence_label(ctx),
-                "pointer_refs": [f"0x{ref:05X}" for ref in ctx.pointer_refs],
-            }
-        )
+        label = target_label(ctx)
+        generated = {
+            "label": label,
+            "category": hit.entry.category,
+            "source": hit.entry.source,
+            "korean": hit.entry.korean,
+            "rom_hit": f"0x{hit.rom_offset:05X}",
+            "prg_hit": f"0x{hit.prg_offset:05X}",
+            "record_rom_range": [
+                f"0x{ctx.record_rom_start:05X}",
+                f"0x{ctx.record_rom_end:05X}",
+            ],
+            "record_cpu_range": [
+                f"0x{ctx.cpu_addr:04X}",
+                f"0x{ctx.cpu_addr + (ctx.record_end - ctx.record_start):04X}",
+            ],
+            "mode": hit.mode,
+            "base": f"0x{hit.base:02X}",
+            "expected_bytes": fmt_bytes(hit.encoded),
+            "decoded_record": ctx.decoded_record,
+            "confidence": confidence_label(ctx),
+        }
+        old = existing_by_label.get(label, {})
+        if old.get("confidence") == "high" and old.get("confidence_evidence"):
+            generated["confidence"] = "high"
+            generated["confidence_evidence"] = old["confidence_evidence"]
+        generated["pointer_refs"] = [f"0x{ref:05X}" for ref in ctx.pointer_refs]
+        for key, value in old.items():
+            if key not in generated:
+                generated[key] = value
+        targets.append(generated)
 
     payload = {
         "source": "rom_analysis/bank1_candidate_contexts.md",
