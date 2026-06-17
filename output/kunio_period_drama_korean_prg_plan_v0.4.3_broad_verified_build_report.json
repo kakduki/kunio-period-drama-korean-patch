@@ -1,0 +1,61 @@
+{
+  "verdict": "no candidate built; manual CPU-read and visual-context evidence is incomplete",
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "v042_rom": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+  "proof_packet": "rom_analysis\\v042_manual_proof_packet.json",
+  "summary": "rom_analysis\\manual_screen_dump_broad_scan\\summary.json",
+  "visual_review": "rom_analysis\\manual_screen_dump_broad_scan\\visual_review.json",
+  "visual_review_template_created": false,
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "v042_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+  "summary_status": "no_manual_broad_scan_dump_records",
+  "approved_visual_reviews": 0,
+  "active_summary_matches": 0,
+  "applied_count": 0,
+  "skipped_count": 7,
+  "applied": [],
+  "skipped": [
+    {
+      "rom_offset": "0x0440C",
+      "source": "かじや",
+      "korean": "대장간",
+      "reason": "visual_context_confirmed is not true"
+    },
+    {
+      "rom_offset": "0x048F4",
+      "source": "たつじ",
+      "korean": "타츠지",
+      "reason": "visual_context_confirmed is not true"
+    },
+    {
+      "rom_offset": "0x052A5",
+      "source": "たつじ",
+      "korean": "타츠지",
+      "reason": "visual_context_confirmed is not true"
+    },
+    {
+      "rom_offset": "0x05BE5",
+      "source": "たつじ",
+      "korean": "타츠지",
+      "reason": "visual_context_confirmed is not true"
+    },
+    {
+      "rom_offset": "0x06294",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "reason": "visual_context_confirmed is not true"
+    },
+    {
+      "rom_offset": "0x0631B",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "reason": "visual_context_confirmed is not true"
+    },
+    {
+      "rom_offset": "0x06359",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "reason": "visual_context_confirmed is not true"
+    }
+  ]
+}

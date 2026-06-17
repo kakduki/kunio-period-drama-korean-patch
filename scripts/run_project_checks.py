@@ -21,6 +21,7 @@ KEY_PYTHON = [
     "scripts/build_next_glyph_expansion_candidate.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/build_v042_font_expanded_candidate.py",
+    "scripts/build_v043_from_broad_scan_proof.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/compare_v04_broad_candidates.py",
@@ -78,6 +79,8 @@ REGEN_COMMANDS = [
     ["scripts/generate_patch_decision_matrix.py"],
     ["scripts/generate_v042_text_promotion_readiness.py"],
     ["scripts/generate_v042_manual_proof_packet.py"],
+    ["scripts/analyze_broad_scan_manual_dump.py"],
+    ["scripts/build_v043_from_broad_scan_proof.py"],
     ["scripts/generate_manual_capture_cards.py"],
     ["scripts/generate_manual_capture_status.py"],
 ]

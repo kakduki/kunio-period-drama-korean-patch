@@ -11,6 +11,8 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `manual_capture_status.md`: generated status of manual dump evidence
 - `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates
 - `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence
+- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate
+- `v043_broad_verified_build_report.json`: current v0.4.3 gate result
 - `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan
 - `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion
 - `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2

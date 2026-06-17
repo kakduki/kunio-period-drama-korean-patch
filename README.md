@@ -75,6 +75,7 @@ python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_scr
 
 broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio_manual_broad_scan_dump.lua`를 사용합니다.
 요약 결과는 `rom_analysis/manual_screen_dump_broad_scan/summary.md`와 `summary.json`에 저장됩니다.
+화면 맥락까지 맞는 후보는 `rom_analysis/manual_screen_dump_broad_scan/visual_review.json`에서 `visual_context_confirmed`를 `true`로 바꾼 뒤 `python scripts/build_v043_from_broad_scan_proof.py`로 v0.4.3 후보를 만들 수 있습니다.
 
 ## 현재 최우선 확인 항목
 
@@ -89,6 +90,7 @@ broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio
 
 - `scripts/verify_primary_patch.py`: 현재 primary IPS가 기준 ROM에 정상 적용되는지 확인
 - `scripts/apply_primary_patch.py`: 현재 primary IPS를 개인 보유 ROM에 적용
+- `scripts/build_v043_from_broad_scan_proof.py`: CPU read와 화면 맥락이 둘 다 확인된 broad-scan 후보만 v0.4.3으로 승격
 - `scripts/run_project_checks.py`: Python, Lua, IPS, manifest 핵심 체크
 - `scripts/generate_patch_decision_matrix.py`: 다음 수동 검증 결정표 생성
 - `scripts/package_primary_release.py`: ROM 없는 테스트 IPS 번들 생성
