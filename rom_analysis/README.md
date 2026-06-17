@@ -37,6 +37,7 @@
 - `manual_capture_queue.md` / `manual_capture_queue.json`: prioritized list of screens/targets to capture manually before promoting more PRG text patches
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `manual_screen_dump_v04/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v04_screen_dump.lua`
+- `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4 as the primary manual-test ROM and padding builds as non-release experiments
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness
