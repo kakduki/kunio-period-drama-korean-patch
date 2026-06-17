@@ -5,6 +5,8 @@ This is the short visual-review queue for text rows already changed by the prima
 ## Summary
 
 - Rows to visually verify: **10**
+- Visual confirmations: **0**
+- Pending visual checks: **10**
 - Open patched ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Run watcher once: `lua/kunio_manual_v042_capture_watch.lua`
 - Press `D` only on a screen that visibly matches one of the rows below.
@@ -15,7 +17,7 @@ This is the short visual-review queue for text rows already changed by the prima
 
 ## Priority Rows
 
-| priority | ROM | romaji | human hint | source | Korean | evidence | capture status | screen hint |
+| priority | ROM | romaji | human hint | source | Korean | evidence | review status | screen hint |
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | `0x07227` | Katana | weapon/item label | かたな | 카타나 | `runtime-confirmed` | `not_in_manual_capture_cards` | look for a katana/weapon item label |
 | 20 | `0x0569D` | Hashi | stage/location label | はし | 다리 | `encoding-exact` | `not_in_manual_capture_cards` | look for a bridge/stage/location label |
@@ -36,6 +38,7 @@ lua/kunio_manual_v042_capture_watch.lua
 
 ```powershell
 python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md
+python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context "katana/weapon item label visible"
 python scripts/generate_manual_capture_status.py
 python scripts/generate_primary_visual_checklist.py
 ```

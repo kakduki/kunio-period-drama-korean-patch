@@ -11,6 +11,7 @@ from rom_utils import REPO_ROOT
 
 PRIMARY_CONTENTS_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
 MANUAL_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
+PRIMARY_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_review.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.md"
 
@@ -54,6 +55,17 @@ def status_by_rom() -> dict[str, dict[str, object]]:
     return result
 
 
+def visual_review_by_rom() -> dict[str, dict[str, object]]:
+    if not PRIMARY_REVIEW_JSON.exists():
+        return {}
+    data = load_json(PRIMARY_REVIEW_JSON)
+    result = {}
+    for row in data.get("rows", []):
+        if isinstance(row, dict):
+            result[normalize_rom(row.get("rom_hit"))] = row
+    return result
+
+
 def screen_hint(row: dict[str, object]) -> str:
     romaji = str(row.get("romaji", ""))
     if romaji == "Katana":
@@ -72,12 +84,17 @@ def screen_hint(row: dict[str, object]) -> str:
 def make_payload() -> dict[str, object]:
     contents = load_json(PRIMARY_CONTENTS_JSON)
     statuses = status_by_rom()
+    reviews = visual_review_by_rom()
     rows = []
     for row in contents["applied_rows"]:
         rom_hit = normalize_rom(row["rom_hit"])
         evidence = str(row.get("evidence_level", ""))
         manual = statuses.get(rom_hit, {})
+        review = reviews.get(rom_hit, {})
+        visual_confirmed = bool(review.get("visual_context_confirmed", False))
         priority = PRIORITY_BY_EVIDENCE.get(evidence, 90)
+        capture_status = manual.get("status", "not_in_manual_capture_cards")
+        review_status = "visual_confirmed" if visual_confirmed else str(capture_status)
         rows.append(
             {
                 "priority": priority,
@@ -91,7 +108,11 @@ def make_payload() -> dict[str, object]:
                 "evidence_level": evidence,
                 "manual_status": row.get("manual_status", ""),
                 "screen_hint": screen_hint(row),
-                "capture_status": manual.get("status", "not_in_manual_capture_cards"),
+                "capture_status": capture_status,
+                "visual_context_confirmed": visual_confirmed,
+                "screen_context": review.get("screen_context", ""),
+                "reviewer_note": review.get("reviewer_note", ""),
+                "review_status": review_status,
                 "record_file_count": manual.get("record_file_count", 0),
                 "matches": len(manual.get("matches", [])) if isinstance(manual.get("matches", []), list) else 0,
                 "rom_to_open": PRIMARY_ROM,
@@ -102,13 +123,18 @@ def make_payload() -> dict[str, object]:
 
     rows.sort(key=lambda row: (int(row["priority"]), str(row["rom_hit"])))
     counts: dict[str, int] = {}
+    visual_confirmed_count = 0
     for row in rows:
-        counts[str(row["capture_status"])] = counts.get(str(row["capture_status"]), 0) + 1
+        counts[str(row["review_status"])] = counts.get(str(row["review_status"]), 0) + 1
+        if row["visual_context_confirmed"]:
+            visual_confirmed_count += 1
 
     return {
         "source": str(PRIMARY_CONTENTS_JSON.relative_to(REPO_ROOT)),
         "summary": {
             "row_count": len(rows),
+            "visual_confirmed_count": visual_confirmed_count,
+            "visual_pending_count": len(rows) - visual_confirmed_count,
             "primary_rom": PRIMARY_ROM,
             "watcher_lua": WATCHER_LUA,
             "status_counts": counts,
@@ -128,6 +154,8 @@ def write_markdown(payload: dict[str, object]) -> None:
         "## Summary",
         "",
         f"- Rows to visually verify: **{summary['row_count']}**",
+        f"- Visual confirmations: **{summary['visual_confirmed_count']}**",
+        f"- Pending visual checks: **{summary['visual_pending_count']}**",
         f"- Open patched ROM: `{summary['primary_rom']}`",
         f"- Run watcher once: `{summary['watcher_lua']}`",
         "- Press `D` only on a screen that visibly matches one of the rows below.",
@@ -142,7 +170,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Priority Rows",
         "",
-        "| priority | ROM | romaji | human hint | source | Korean | evidence | capture status | screen hint |",
+        "| priority | ROM | romaji | human hint | source | Korean | evidence | review status | screen hint |",
         "| ---: | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in payload["rows"]:
@@ -150,7 +178,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         korean = row["korean_display"] or "-"
         lines.append(
             f"| {row['priority']} | `{row['rom_hit']}` | {row['romaji']} | {row['meaning'] or '-'} | {source} | {korean} | "
-            f"`{row['evidence_level']}` | `{row['capture_status']}` | {row['screen_hint']} |"
+            f"`{row['evidence_level']}` | `{row['review_status']}` | {row['screen_hint']} |"
         )
 
     lines += [
@@ -163,6 +191,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "```powershell",
         SUMMARY_COMMAND,
+        "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"katana/weapon item label visible\"",
         "python scripts/generate_manual_capture_status.py",
         "python scripts/generate_primary_visual_checklist.py",
         "```",

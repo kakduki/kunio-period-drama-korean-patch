@@ -11,6 +11,7 @@ from rom_utils import REPO_ROOT
 
 MANIFEST_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 REFERENCE_PLAN_JSON = REPO_ROOT / "rom_analysis" / "reference_capture_plan.json"
+PRIMARY_VISUAL_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 PROOF_STATUS_JSON = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
 ROUTE_TARGETS_JSON = REPO_ROOT / "rom_analysis" / "route_fceux_targets.json"
 ROUTE_PROOF_STATUS_JSON = REPO_ROOT / "rom_analysis" / "route_proof_status.json"
@@ -32,6 +33,7 @@ def rel(path: Path) -> str:
 def make_payload() -> dict[str, object]:
     manifest = load_json(MANIFEST_JSON)
     reference = load_json(REFERENCE_PLAN_JSON)
+    primary_visual = load_json(PRIMARY_VISUAL_JSON)
     proof = load_json(PROOF_STATUS_JSON)
     route_targets = load_json(ROUTE_TARGETS_JSON)
     route_status = load_json(ROUTE_PROOF_STATUS_JSON)
@@ -44,6 +46,7 @@ def make_payload() -> dict[str, object]:
         "source": {
             "manifest": rel(MANIFEST_JSON),
             "reference_capture_plan": rel(REFERENCE_PLAN_JSON),
+            "primary_visual_checklist": rel(PRIMARY_VISUAL_JSON),
             "v043_proof_status": rel(PROOF_STATUS_JSON),
             "route_fceux_targets": rel(ROUTE_TARGETS_JSON),
             "route_proof_status": rel(ROUTE_PROOF_STATUS_JSON),
@@ -53,10 +56,12 @@ def make_payload() -> dict[str, object]:
             "base_md5": summary["base_md5"],
             "primary_ips": summary["primary_ips"],
             "expected_patched_md5": summary["primary_candidate_md5"],
+            "primary_visual_pending": primary_visual["summary"]["visual_pending_count"],
             "priority_manual_checks": len(priority_rows),
             "proof_status_counts": proof["summary"]["status_counts"],
             "route_status_counts": route_status["summary"]["status_counts"],
         },
+        "primary_visual_rows": primary_visual["rows"],
         "route_watchers": route_targets["routes"],
         "priority_manual_checks": priority_rows,
     }
@@ -88,9 +93,36 @@ def write_markdown(payload: dict[str, object]) -> None:
         "python apply_ips_standalone.py C:\\path\\to\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
         "```",
         "",
-        "## 2. Manual Screens To Check First",
+        "## 2. Primary Screens To Check First",
         "",
-        "Do not keep blind autoplay running on the title/first screen. Use these targets as concrete manual destinations.",
+        "Do not keep blind autoplay running on the title/first screen. First verify the rows already changed by the primary IPS.",
+        "",
+        f"- Pending primary visual checks: **{summary['primary_visual_pending']}**",
+        "- Open patched ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`",
+        "- Run watcher: `lua/kunio_manual_v042_capture_watch.lua`",
+        "- Press `D` only on a visible matching text/menu/status screen.",
+        "",
+        "| # | ROM | romaji | human hint | Korean | evidence | screen hint |",
+        "| ---: | --- | --- | --- | --- | --- | --- |",
+    ]
+    for index, row in enumerate(payload["primary_visual_rows"][:7], start=1):
+        lines.append(
+            f"| {index} | `{row['rom_hit']}` | {row['romaji']} | {row.get('meaning') or '-'} | "
+            f"{row.get('korean_display') or '-'} | `{row['evidence_level']}` | {row['screen_hint']} |"
+        )
+
+    lines += [
+        "",
+        "After a matched primary screen:",
+        "",
+        "```powershell",
+        "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"katana/weapon item label visible\"",
+        "python scripts/refresh_after_manual_capture.py --phase primary",
+        "```",
+        "",
+        "## 3. Broad Screens For Future v0.4.3 Rows",
+        "",
+        "Use these only after primary visual review, or when you are already on the matching base-ROM route.",
         "",
         "| # | ROM | expected text | Korean | CPU guess | proof status | screen hint |",
         "| ---: | --- | --- | --- | --- | --- | --- |",
@@ -103,7 +135,7 @@ def write_markdown(payload: dict[str, object]) -> None:
 
     lines += [
         "",
-        "## 3. Route Watchers First",
+        "## 4. Route Watchers",
         "",
         "Prefer these route wrappers over the all-target broad watcher. They show the active route and screen hint in the FCEUX overlay.",
         "",
@@ -127,7 +159,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "If the visible FCEUX screen is still the title/opening screen, stop with `Q`; do not wait.",
         "",
-        "## 4. Capture Evidence",
+        "## 5. Capture Evidence",
         "",
         "For broad v0.4.3 candidates, open the base Japanese ROM, manually reach the target screen, then run:",
         "",
@@ -149,7 +181,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "python scripts/generate_manual_dump_inventory.py",
         "```",
         "",
-        "## 5. Record Visual Review",
+        "## 6. Record v0.4.3 Visual Review",
         "",
         "Only after the visible screen matches the intended row:",
         "",

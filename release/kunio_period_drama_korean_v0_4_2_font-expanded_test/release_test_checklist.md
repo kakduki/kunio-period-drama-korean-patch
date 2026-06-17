@@ -21,9 +21,35 @@ Bundle-only command:
 python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes
 ```
 
-## 2. Manual Screens To Check First
+## 2. Primary Screens To Check First
 
-Do not keep blind autoplay running on the title/first screen. Use these targets as concrete manual destinations.
+Do not keep blind autoplay running on the title/first screen. First verify the rows already changed by the primary IPS.
+
+- Pending primary visual checks: **10**
+- Open patched ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
+- Run watcher: `lua/kunio_manual_v042_capture_watch.lua`
+- Press `D` only on a visible matching text/menu/status screen.
+
+| # | ROM | romaji | human hint | Korean | evidence | screen hint |
+| ---: | --- | --- | --- | --- | --- | --- |
+| 1 | `0x07227` | Katana | weapon/item label | 카타나 | `runtime-confirmed` | look for a katana/weapon item label |
+| 2 | `0x0569D` | Hashi | stage/location label | 다리 | `encoding-exact` | look for a bridge/stage/location label |
+| 3 | `0x0561A` | Hashi | stage/location label | 다리 | `static-candidate+pointer` | look for a bridge/stage/location label |
+| 4 | `0x05643` | Heishichi | name/dialogue label | 헤이시치 | `static-candidate+pointer` | look for a visible Heishichi name/dialogue context |
+| 5 | `0x057D4` | Hashi | stage/location label | 다리 | `static-candidate+pointer` | look for a bridge/stage/location label |
+| 6 | `0x0736A` | Raifu | UI life label | 라이프 | `static-candidate+pointer` | look for a life/status UI label |
+| 7 | `0x0739D` | Raifu | UI life label | 라이프 | `static-candidate+pointer` | look for a life/status UI label |
+
+After a matched primary screen:
+
+```powershell
+python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context "katana/weapon item label visible"
+python scripts/refresh_after_manual_capture.py --phase primary
+```
+
+## 3. Broad Screens For Future v0.4.3 Rows
+
+Use these only after primary visual review, or when you are already on the matching base-ROM route.
 
 | # | ROM | expected text | Korean | CPU guess | proof status | screen hint |
 | ---: | --- | --- | --- | --- | --- | --- |
@@ -35,7 +61,7 @@ Do not keep blind autoplay running on the title/first screen. Use these targets 
 | 6 | `0x05BE5` | たつじ | 타츠지 | `$9BD5` | `needs_manual_capture` | look for a visible Tatsuji boss/name context |
 | 7 | `0x0440C` | かじや | 대장간 | `$83FC` | `needs_manual_capture` | look for a blacksmith/shop or blacksmith-stage label |
 
-## 3. Route Watchers First
+## 4. Route Watchers
 
 Prefer these route wrappers over the all-target broad watcher. They show the active route and screen hint in the FCEUX overlay.
 
@@ -53,7 +79,7 @@ lua/kunio_manual_route_heishichi_capture_watch.lua
 
 If the visible FCEUX screen is still the title/opening screen, stop with `Q`; do not wait.
 
-## 4. Capture Evidence
+## 5. Capture Evidence
 
 For broad v0.4.3 candidates, open the base Japanese ROM, manually reach the target screen, then run:
 
@@ -75,7 +101,7 @@ python scripts/generate_v043_proof_status.py
 python scripts/generate_manual_dump_inventory.py
 ```
 
-## 5. Record Visual Review
+## 6. Record v0.4.3 Visual Review
 
 Only after the visible screen matches the intended row:
 

@@ -75,6 +75,7 @@ FONT_EXPANSION_MAX_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_dram
 FONT_EXPANSION_MAX_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
 VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_visual_review.py"
+PRIMARY_VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_primary_visual_review.py"
 CAPTURE_REFRESHER = REPO_ROOT / "scripts" / "refresh_after_manual_capture.py"
 NEXT_RUN_PREPARER = REPO_ROOT / "scripts" / "prepare_next_manual_run.py"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
@@ -151,7 +152,8 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report",
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md`: largest currently buildable font-only expansion candidate report",
         "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
-        "- `record_visual_review.py`: helper to mark visual review rows after a manual screen check",
+        "- `record_primary_visual_review.py`: helper to mark primary v0.4.2 visual review rows after a manual screen check",
+        "- `record_visual_review.py`: helper to mark v0.4.3 broad-scan visual review rows after a manual screen check",
         "- `refresh_after_manual_capture.py`: one-command report refresh after manual FCEUX capture",
         "- `prepare_next_manual_run.py`: prints the next focused manual FCEUX setup",
         "- `SHA256SUMS.txt`: checksums for bundle files",
@@ -318,6 +320,7 @@ def package() -> dict[str, object]:
         (FONT_EXPANSION_MAX_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md"),
         (FONT_EXPANSION_MAX_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
+        (PRIMARY_VISUAL_REVIEW_RECORDER, "record_primary_visual_review.py"),
         (VISUAL_REVIEW_RECORDER, "record_visual_review.py"),
         (CAPTURE_REFRESHER, "refresh_after_manual_capture.py"),
         (NEXT_RUN_PREPARER, "prepare_next_manual_run.py"),

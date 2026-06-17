@@ -18,8 +18,12 @@ def main() -> int:
     errors = []
     if payload["summary"]["priority_manual_checks"] != 7:
         errors.append(f"expected 7 priority manual checks, got {payload['summary']['priority_manual_checks']}")
+    if payload["summary"]["primary_visual_pending"] != 10:
+        errors.append(f"expected 10 primary visual checks, got {payload['summary']['primary_visual_pending']}")
     if payload["summary"]["route_status_counts"] != {"no_dump_records": 3}:
         errors.append(f"unexpected route status counts: {payload['summary']['route_status_counts']}")
+    if len(payload.get("primary_visual_rows", [])) != 10:
+        errors.append("expected ten primary visual rows in checklist payload")
     if len(payload.get("route_watchers", [])) != 3:
         errors.append("expected three route watchers in checklist payload")
     if not rows or rows[0].get("source_display") != "へいしち":
@@ -28,10 +32,12 @@ def main() -> int:
     for expected in [
         "Release Test Checklist",
         "python scripts/apply_primary_patch.py",
+        "Primary Screens To Check First",
+        "python scripts/record_primary_visual_review.py 0x07227 --confirm",
         "lua/kunio_manual_broad_scan_dump.lua",
         "lua/kunio_manual_broad_scan_capture_watch.lua",
         "lua/kunio_manual_route_heishichi_capture_watch.lua",
-        "Route Watchers First",
+        "Route Watchers",
         "If the visible FCEUX screen is still the title/opening screen",
         "python scripts/record_visual_review.py",
         "0x0440C",

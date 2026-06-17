@@ -56,6 +56,7 @@ KEY_PYTHON = [
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
     "scripts/prepare_next_manual_run.py",
+    "scripts/record_primary_visual_review.py",
     "scripts/record_visual_review.py",
     "scripts/readable_labels.py",
     "scripts/refresh_after_manual_capture.py",
@@ -73,6 +74,7 @@ KEY_PYTHON = [
     "scripts/test_patch_progress_dashboard_discoverability.py",
     "scripts/test_prepare_next_manual_run.py",
     "scripts/test_primary_visual_checklist.py",
+    "scripts/test_record_primary_visual_review.py",
     "scripts/test_manual_capture_cards_readable.py",
     "scripts/test_run_fceux_budget.py",
     "scripts/test_reference_capture_plan.py",
@@ -221,6 +223,7 @@ def main() -> int:
     run("patch progress dashboard discoverability", ["scripts/test_patch_progress_dashboard_discoverability.py"])
     run("next manual run helper", ["scripts/test_prepare_next_manual_run.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
+    run("primary visual review recorder", ["scripts/test_record_primary_visual_review.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("manual capture refresh helper", ["scripts/test_refresh_after_manual_capture.py"])

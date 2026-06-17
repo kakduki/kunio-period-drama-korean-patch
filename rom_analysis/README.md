@@ -39,6 +39,7 @@
 - `manual_capture_status.md` / `manual_capture_status.json`: generated evidence status for each manual capture card after screen dumps are added
 - `manual_dump_inventory.md` / `manual_dump_inventory.json`: generated inventory of manual dump folders, target-record TSVs, `.gd` screenshots, and summaries
 - `patch_progress_dashboard.md` / `patch_progress_dashboard.json`: one-page current patch status, release blockers, and next FCEUX manual action
+- `primary_visual_review.json`: optional structured review file created by `../scripts/record_primary_visual_review.py` when a primary v0.4.2 row is visibly confirmed
 - `manual_proof_routes.md` / `manual_proof_routes.json`: groups the current seven broad-scan screen-proof candidates into three likely manual capture contexts
 - `route_fceux_targets.md` / `route_fceux_targets.json`: lists route-specific FCEUX target tables and watcher wrappers for those manual proof route groups
 - `release_test_checklist.md` / `release_test_checklist.json`: short apply/capture/review checklist for the current ROM-free IPS bundle
