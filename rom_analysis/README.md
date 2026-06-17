@@ -42,8 +42,9 @@
 - `v04_broad_candidate_conflicts.md` / `v04_broad_candidate_conflicts.json`: overlap analysis between v0.4 applied PRG edits and the 7 broad-scan promotion candidates
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `manual_screen_dump_v04/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v04_screen_dump.lua`
+- `manual_screen_dump_v041/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v041_screen_dump.lua`
 - `manual_screen_dump_broad_scan/`: destination for one-shot broad-scan candidate dumps from `lua/kunio_manual_broad_scan_dump.lua`; summarize with `scripts/analyze_broad_scan_manual_dump.py`
-- `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4 as the primary manual-test ROM and padding builds as non-release experiments
+- `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.1 conflict-safe as the primary manual-test ROM and padding builds as non-release experiments
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness
@@ -54,6 +55,7 @@
 - `bank1_offset_inventory.md` / `bank1_offset_inventory.json`: category-oriented Bank 1 offset inventory that merges static translation candidates, watch-range supplemental hits, and FCEUX read-watch evidence
 - `bank1_offset_status.md` / `bank1_offset_status.json`: category-level coverage and patch-readiness summary for current Bank 1 offsets
 - `v04_equal_length_fceux_targets.md` / `v04_equal_length_fceux_targets.json`: FCEUX read-watch targets for the v0.4 equal-length static experiment, expecting patched PRG bytes instead of original bytes
+- `v041_conflict_safe_fceux_targets.md` / `v041_conflict_safe_fceux_targets.json`: FCEUX read-watch targets for the current v0.4.1 conflict-safe candidate, expecting patched PRG bytes instead of original bytes
 - `fceux_v04_equal_length_watch/summary.tsv` / `bank1_reads.tsv`: v0.4 patched-byte read-watch run output
 - `fceux_v04_equal_length_watch_summary.md`: summary of the v0.4 patched-byte read-watch run
 - `fceux_v04_equal_length_watch_long_summary.md`: long v0.4 patched-byte read-watch summary; raw repeated-hit TSV is local-only/ignored

@@ -13,6 +13,9 @@ INVENTORY = ROOT / "rom_analysis" / "bank1_offset_inventory.json"
 OUT_LUA = ROOT / "lua" / "kunio_v04_equal_length_targets.lua"
 OUT_MD = ROOT / "rom_analysis" / "v04_equal_length_fceux_targets.md"
 OUT_JSON = ROOT / "rom_analysis" / "v04_equal_length_fceux_targets.json"
+TARGET_TITLE = "v0.4 Equal-Length FCEUX Targets"
+TARGET_DESCRIPTION = "These targets watch for patched PRG bytes from the v0.4 equal-length static experiment."
+RUN_COMMAND = "python scripts/run_fceux_lua_analysis.py --rom output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.nes --lua-script lua/kunio_bank1_watch.lua --target-lua lua/kunio_v04_equal_length_targets.lua --frames 10800 --timeout 240 --final-output rom_analysis/fceux_v04_equal_length_watch --clean-output --no-dump-hex --no-dump-bin"
 
 
 def parse_hex_int(value: str) -> int:
@@ -105,9 +108,9 @@ def write_lua(payload: dict[str, object]) -> None:
 
 def write_markdown(payload: dict[str, object]) -> None:
     lines = [
-        "# v0.4 Equal-Length FCEUX Targets",
+        f"# {TARGET_TITLE}",
         "",
-        "These targets watch for patched PRG bytes from the v0.4 equal-length static experiment.",
+        TARGET_DESCRIPTION,
         "",
         f"- Source report: `{payload['source_report']}`",
         f"- Patched MD5: `{payload['patched_md5']}`",
@@ -117,7 +120,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "Run with:",
         "",
         "```powershell",
-        "python scripts/run_fceux_lua_analysis.py --rom output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.nes --lua-script lua/kunio_bank1_watch.lua --target-lua lua/kunio_v04_equal_length_targets.lua --frames 10800 --timeout 240 --final-output rom_analysis/fceux_v04_equal_length_watch --clean-output --no-dump-hex --no-dump-bin",
+        RUN_COMMAND,
         "```",
         "",
         "## Targets",

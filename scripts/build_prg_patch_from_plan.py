@@ -55,6 +55,7 @@ def build_prg_patch(
     *,
     include_evidence: set[str],
     include_risks: set[str],
+    exclude_labels: set[str],
     out_stem: str,
 ) -> dict[str, object]:
     original = original_rom_path.read_bytes()
@@ -69,6 +70,16 @@ def build_prg_patch(
         label = str(target.get("label"))
         evidence = str(target.get("evidence_level", ""))
         risk = str(padding_risks.get(label, {}).get("risk", "unknown"))
+        if label in exclude_labels:
+            skipped.append({
+                "label": label,
+                "rom_hit": target.get("rom_hit"),
+                "source": target.get("source"),
+                "korean": target.get("korean"),
+                "risk": risk,
+                "reason": "excluded by label",
+            })
+            continue
         if evidence not in include_evidence:
             skipped.append({
                 "label": label,
@@ -184,6 +195,7 @@ def build_prg_patch(
         "ips_path": str(ips_path),
         "include_evidence": sorted(include_evidence),
         "include_risks": sorted(include_risks),
+        "exclude_labels": sorted(exclude_labels),
         "applied_count": len(applied),
         "skipped_count": len(skipped),
         "changed_bytes_total": len(changed_offsets),
@@ -218,6 +230,11 @@ def main() -> int:
         default="safe-equal-length",
         help="Comma-separated patch-risk labels to patch.",
     )
+    parser.add_argument(
+        "--exclude-labels",
+        default="",
+        help="Comma-separated target labels to leave unpatched even if otherwise selected.",
+    )
     args = parser.parse_args()
 
     rom_arg = args.rom_option or args.rom
@@ -228,6 +245,7 @@ def main() -> int:
     out_dir = Path(args.out_dir).expanduser().resolve()
     include_evidence = {part.strip() for part in args.include_evidence.split(",") if part.strip()}
     include_risks = {part.strip() for part in args.include_risks.split(",") if part.strip()}
+    exclude_labels = {part.strip() for part in args.exclude_labels.split(",") if part.strip()}
 
     report = build_prg_patch(
         original_rom,
@@ -237,6 +255,7 @@ def main() -> int:
         out_dir,
         include_evidence=include_evidence,
         include_risks=include_risks,
+        exclude_labels=exclude_labels,
         out_stem=args.out_stem,
     )
     print(f"patched ROM: {report['patched_rom_path']}")
