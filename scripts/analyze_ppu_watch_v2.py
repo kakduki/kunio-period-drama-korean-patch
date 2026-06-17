@@ -12,7 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 
@@ -38,17 +38,26 @@ def load_decode(path: Path) -> dict[int, str]:
     return decoded
 
 
+def parse_bytes(text: str) -> list[int]:
+    return [int(byte, 16) for byte in text.split() if byte]
+
+
 def load_targets(path: Path) -> list[tuple[str, list[int]]]:
     if not path.exists():
         return []
     data = json.loads(path.read_text(encoding="utf-8"))
     targets: list[tuple[str, list[int]]] = []
     for target in data.get("targets", []):
-        expected = target.get("expected_bytes", "")
+        expected = (
+            target.get("expected_bytes")
+            or target.get("expected_patched_bytes")
+            or target.get("patched_bytes")
+            or ""
+        )
         if expected:
             targets.append((
                 target.get("label", "?"),
-                [int(byte, 16) for byte in expected.split()],
+                parse_bytes(expected),
             ))
     return targets
 
@@ -108,13 +117,18 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-dir", default=str(DEFAULT_INPUT))
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT))
+    parser.add_argument("--targets", default=str(TARGETS_PATH), help="JSON target file; supports bank1_watch_targets or v04 target JSON.")
     args = parser.parse_args()
 
     input_dir = Path(args.input_dir).expanduser().resolve()
     output = Path(args.output).expanduser().resolve()
+    targets_path = Path(args.targets).expanduser()
+    if not targets_path.is_absolute():
+        targets_path = ROOT / targets_path
+    targets_path = targets_path.resolve()
 
     decoded = load_decode(TILEMAP_PATH)
-    targets = load_targets(TARGETS_PATH)
+    targets = load_targets(targets_path)
     frames, phases = load_frames(input_dir)
 
     phase_streams: dict[int, list[int]] = defaultdict(list)
@@ -127,6 +141,7 @@ def main() -> int:
 
     matches: list[tuple[int, str, list[int]]] = []
     seen: set[tuple[int, str, tuple[int, ...]]] = set()
+    sequence_counts = Counter(tuple(expected) for _, expected in targets)
     for phase, stream in phase_streams.items():
         for label, expected in targets:
             key = (phase, label, tuple(expected))
@@ -144,9 +159,11 @@ def main() -> int:
         "# PPU Write Watch Analysis v2",
         "",
         f"Input: `{input_dir.relative_to(ROOT) if input_dir.is_relative_to(ROOT) else input_dir}`",
+        f"Targets: `{targets_path.relative_to(ROOT) if targets_path.is_relative_to(ROOT) else targets_path}`",
         "",
         f"- Frames captured: **{len(frames)}**",
         f"- Targets loaded: **{len(targets)}**",
+        f"- Unique target byte sequences: **{len(sequence_counts)}**",
         f"- Decode glyphs: **{len(decoded)}**",
         "",
         "## Matched Targets",
@@ -160,6 +177,29 @@ def main() -> int:
     else:
         lines.append("_No expected byte sequences found in the reconstructed streams._")
     lines += ["", f"**Matched: {len(matches)} / {len(targets)}**", ""]
+
+    duplicate_matches = [
+        (phase, label, expected)
+        for phase, label, expected in matches
+        if sequence_counts[tuple(expected)] > 1
+    ]
+    if duplicate_matches:
+        lines += [
+            "## Ambiguity Notes",
+            "",
+            "- Some matched targets share the same byte sequence. A PPU stream match proves that byte sequence was written, but does not by itself distinguish which ROM offset produced it.",
+            "",
+            "| byte sequence | matched labels |",
+            "| --- | --- |",
+        ]
+        by_sequence: dict[tuple[int, ...], list[str]] = defaultdict(list)
+        for _, label, expected in duplicate_matches:
+            by_sequence[tuple(expected)].append(label)
+        for sequence, labels in sorted(by_sequence.items()):
+            bytes_hex = " ".join(f"{byte:02X}" for byte in sequence)
+            label_text = ", ".join(f"`{label}`" for label in sorted(labels))
+            lines.append(f"| `{bytes_hex}` | {label_text} |")
+        lines.append("")
 
     if best_frame is not None:
         lines += [

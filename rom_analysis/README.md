@@ -34,6 +34,8 @@
 - `fceux_v04_equal_length_watch/summary.tsv` / `bank1_reads.tsv`: v0.4 patched-byte read-watch run output
 - `fceux_v04_equal_length_watch_summary.md`: summary of the v0.4 patched-byte read-watch run
 - `fceux_v04_equal_length_watch_long_summary.md`: long v0.4 patched-byte read-watch summary; raw repeated-hit TSV is local-only/ignored
+- `fceux_v04_ppu_watch/summary.tsv` / `ppu_writes.tsv`: v0.4 patched-byte PPU write-watch run output
+- `fceux_v04_ppu_watch/analysis_v2_v04_targets.md`: corrected v0.4 PPU write analysis against patched-byte targets, including duplicate-byte ambiguity notes
 - `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
@@ -68,6 +70,7 @@
 - A 3,600-frame FCEUX read-watch run against the v0.4 ROM confirmed patched bytes for `ROM+0x07227` (`カタナ` -> `카타나`): the watched CPU record `$B216-$B21A` contained `85 88 89 8A 00`, with 5/5 active expected matches for patched bytes `88 89 8A`. The other 12 v0.4 targets were not reached by this autoplay route and remain screen-specific follow-up targets.
 - A longer v0.4 watch run reached frame `6747` and hit the limit at 50,000 reads. It still confirmed only `ROM+0x07227`; `ROM+0x0736A` (`ライフ` -> `라이프`) was read 49,995 times, but the active record contained unrelated bank/context bytes such as `A2 7A 29 10 F0 1C` / `2A 00 6C 2E 00 BC`, not patched bytes `96 8E 97`. Treat `ライフ` as a screen/bank-context follow-up, not confirmed.
 - `prg_padding_options.md` confirms direct equal-length replacements are safe candidates for the current `カタナ` -> `카타나` records, while `ちから` -> `힘` remains `needs-padding-rule` because it leaves non-fill tail bytes `88 AA`. Do not apply shortened replacements until FCEUX confirms the renderer's padding/terminator behavior for that record.
+- A v0.4 PPU write-watch run captured 19,926 nametable writes across the same 88 useful frames as the original PPU run. The corrected v2 analysis found patched byte sequence `8B 8C` during phase 2, matching five watch-range targets at `ROM+0x0561A`, `0x0569D`, `0x056DA`, `0x0571C`, and `0x057D4`. This proves the patched tile sequence reached the PPU stream, but it does not distinguish the exact source ROM offset because all five targets share the same two-byte sequence.
 - `font/chr_bank_06_8x16.png` also contains visible numerals/UI-like tiles, but it is more mixed with sprite/background data.
 - Static PPU reference scanning found the most relevant nametable/text-output candidates around:
   - `$2006 PPUADDR`: `ROM+0x1D7FB` through `ROM+0x1D806`, bank 7, CPU approx `$97EB-$97F6`

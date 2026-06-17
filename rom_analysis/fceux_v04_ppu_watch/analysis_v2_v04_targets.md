@@ -1,24 +1,24 @@
 # PPU Write Watch Analysis v2
 
-Input: `rom_analysis\fceux_ppu_watch`
-Targets: `rom_analysis\bank1_watch_targets.json`
+Input: `rom_analysis\fceux_v04_ppu_watch`
+Targets: `rom_analysis\v04_equal_length_fceux_targets.json`
 
 - Frames captured: **88**
-- Targets loaded: **36**
-- Unique target byte sequences: **15**
+- Targets loaded: **13**
+- Unique target byte sequences: **5**
 - Decode glyphs: **82**
 
 ## Matched Targets
 
 | phase | label | expected_bytes |
 | ---: | --- | --- |
-| 2 | `rom_06605_candidate_82` | `93 88 AA` |
-| 2 | `rom_066fb_candidate_82` | `93 88 AA` |
-| 2 | `rom_06845_candidate_82` | `93 88 AA` |
-| 2 | `rom_06b4a_candidate_82` | `93 88 AA` |
-| 2 | `rom_071a4_candidate_82` | `93 88 AA` |
+| 2 | `v04_watch_rom_0561a_스테이지_7c` | `8B 8C` |
+| 2 | `v04_watch_rom_0569d_스테이지_7a` | `8B 8C` |
+| 2 | `v04_watch_rom_056da_스테이지_80` | `8B 8C` |
+| 2 | `v04_watch_rom_0571c_스테이지_78` | `8B 8C` |
+| 2 | `v04_watch_rom_057d4_스테이지_8c` | `8B 8C` |
 
-**Matched: 5 / 36**
+**Matched: 5 / 13**
 
 ## Ambiguity Notes
 
@@ -26,7 +26,7 @@ Targets: `rom_analysis\bank1_watch_targets.json`
 
 | byte sequence | matched labels |
 | --- | --- |
-| `93 88 AA` | `rom_06605_candidate_82`, `rom_066fb_candidate_82`, `rom_06845_candidate_82`, `rom_06b4a_candidate_82`, `rom_071a4_candidate_82` |
+| `8B 8C` | `v04_watch_rom_0561a_스테이지_7c`, `v04_watch_rom_0569d_스테이지_7a`, `v04_watch_rom_056da_스테이지_80`, `v04_watch_rom_0571c_스테이지_78`, `v04_watch_rom_057d4_스테이지_8c` |
 
 ## Representative Screen: Frame 437
 
