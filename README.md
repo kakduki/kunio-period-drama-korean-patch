@@ -46,6 +46,7 @@ python scripts/run_project_checks.py --regen
 - `rom_analysis/manual_capture_cards.md`: FCEUX 앞에서 바로 따라 할 짧은 캡처 카드
 - `rom_analysis/manual_capture_status.md`: 수동 덤프가 생긴 뒤 카드별 증거 상태표
 - `rom_analysis/translation_glyph_coverage.md`: 전체 번역 데이터 기준 글리프 커버리지
+- `rom_analysis/next_glyph_expansion_plan.md`: 다음 한글 글리프 확장 우선순위
 - `rom_analysis/patch_candidate_manifest.md`: 현재 ROM/IPS 후보 목록
 - `rom_analysis/manual_capture_workflow.md`: FCEUX 수동 캡처 절차
 - `rom_analysis/v04_broad_candidate_conflicts.md`: v0.4와 broad-scan 충돌 목록

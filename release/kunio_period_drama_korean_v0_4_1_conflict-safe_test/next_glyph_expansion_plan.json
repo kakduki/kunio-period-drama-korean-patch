@@ -1,0 +1,3241 @@
+{
+  "source": "rom_analysis\\translation_glyph_coverage.json",
+  "summary": {
+    "current_patch_glyphs": 18,
+    "available_extra_slots_in_current_bank_range": 163,
+    "ranked_missing_glyphs": 202,
+    "recommended_first_batch_size": 32,
+    "rule": "Rank glyphs by translation-row impact only; ROM offset safety is still a separate gate."
+  },
+  "ranked_missing_glyphs": [
+    {
+      "glyph": "마",
+      "rows_needing_it": 14
+    },
+    {
+      "glyph": "하",
+      "rows_needing_it": 11
+    },
+    {
+      "glyph": "구",
+      "rows_needing_it": 11
+    },
+    {
+      "glyph": "기",
+      "rows_needing_it": 11
+    },
+    {
+      "glyph": "의",
+      "rows_needing_it": 9
+    },
+    {
+      "glyph": "로",
+      "rows_needing_it": 9
+    },
+    {
+      "glyph": "스",
+      "rows_needing_it": 8
+    },
+    {
+      "glyph": "강",
+      "rows_needing_it": 7
+    },
+    {
+      "glyph": "지",
+      "rows_needing_it": 6
+    },
+    {
+      "glyph": "인",
+      "rows_needing_it": 6
+    },
+    {
+      "glyph": "가",
+      "rows_needing_it": 6
+    },
+    {
+      "glyph": "에",
+      "rows_needing_it": 6
+    },
+    {
+      "glyph": "니",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "쿠",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "쇠",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "철",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "옷",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "고",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "간",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "술",
+      "rows_needing_it": 5
+    },
+    {
+      "glyph": "방",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "어",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "둥",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "몽",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "파",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "슬",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "도",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "야",
+      "rows_needing_it": 4
+    },
+    {
+      "glyph": "대",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "크",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "게",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "호",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "사",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "검",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "갑",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "패",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "배",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "신",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "진",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "을",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "산",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "동",
+      "rows_needing_it": 3
+    },
+    {
+      "glyph": "군",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "전",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "합",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "노",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "재",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "버",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "임",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "작",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "밀",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "번",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "요",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "험",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "루",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "레",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "벨",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "경",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "먹",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "곤",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "은",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "한",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "안",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "회",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "수",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "펀",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "킥",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "때",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "류",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "트",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "드",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "뢰",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "자",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "박",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "변",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "베",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "케",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "키",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "와",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "료",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "익",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "혔",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "끝",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "딩",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "엔",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "서",
+      "rows_needing_it": 2
+    },
+    {
+      "glyph": "셜",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "운",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "페",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "극",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "오",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "원",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "집",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "테",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "팬",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "튼",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "력",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "를",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "세",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "입",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "모",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "결",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "움",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "직",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "소",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "품",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "체",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "쌍",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "절",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "톤",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "좋",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "굉",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "독",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "해",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "밥",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "주",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "투",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "달",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "과",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "효",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "피",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "봉",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "부",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "적",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "금",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "황",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "빨",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "란",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "설",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "께",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "끼",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "뽑",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "제",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "물",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "보",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "윙",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "밟",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "택",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "퍼",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "각",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "선",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "풍",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "슛",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "워",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "릴",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "헬",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "폭",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "빰",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "뱅",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "빅",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "긴",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "킨",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "메",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "몬",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "두",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "목",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "조",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "토",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "막",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "흑",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "쥬",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "아",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "길",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "숲",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "굴",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "위",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "옥",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "누",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "정",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "성",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "밭",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "등",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "묘",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "겼",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "졌",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "줘",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "려",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "걸",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "져",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "되",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "었",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "랐",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "올",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "몸",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "태",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "축",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "네",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "무",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "코",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "겨",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "숨",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "살",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "필",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "너",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "받",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "음",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "뜨",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "러",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "면",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "쓰",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "용",
+      "rows_needing_it": 1
+    },
+    {
+      "glyph": "벌",
+      "rows_needing_it": 1
+    }
+  ],
+  "next_slots": [
+    {
+      "slot_index": 18,
+      "glyph": "마",
+      "tile": "0x113",
+      "prg_plus_0x7a_byte": "0x99",
+      "rows_needing_it": 14
+    },
+    {
+      "slot_index": 19,
+      "glyph": "하",
+      "tile": "0x114",
+      "prg_plus_0x7a_byte": "0x9A",
+      "rows_needing_it": 11
+    },
+    {
+      "slot_index": 20,
+      "glyph": "구",
+      "tile": "0x115",
+      "prg_plus_0x7a_byte": "0x9B",
+      "rows_needing_it": 11
+    },
+    {
+      "slot_index": 21,
+      "glyph": "기",
+      "tile": "0x116",
+      "prg_plus_0x7a_byte": "0x9C",
+      "rows_needing_it": 11
+    },
+    {
+      "slot_index": 22,
+      "glyph": "의",
+      "tile": "0x117",
+      "prg_plus_0x7a_byte": "0x9D",
+      "rows_needing_it": 9
+    },
+    {
+      "slot_index": 23,
+      "glyph": "로",
+      "tile": "0x118",
+      "prg_plus_0x7a_byte": "0x9E",
+      "rows_needing_it": 9
+    },
+    {
+      "slot_index": 24,
+      "glyph": "스",
+      "tile": "0x119",
+      "prg_plus_0x7a_byte": "0x9F",
+      "rows_needing_it": 8
+    },
+    {
+      "slot_index": 25,
+      "glyph": "강",
+      "tile": "0x11A",
+      "prg_plus_0x7a_byte": "0xA0",
+      "rows_needing_it": 7
+    },
+    {
+      "slot_index": 26,
+      "glyph": "지",
+      "tile": "0x11B",
+      "prg_plus_0x7a_byte": "0xA1",
+      "rows_needing_it": 6
+    },
+    {
+      "slot_index": 27,
+      "glyph": "인",
+      "tile": "0x11C",
+      "prg_plus_0x7a_byte": "0xA2",
+      "rows_needing_it": 6
+    },
+    {
+      "slot_index": 28,
+      "glyph": "가",
+      "tile": "0x11D",
+      "prg_plus_0x7a_byte": "0xA3",
+      "rows_needing_it": 6
+    },
+    {
+      "slot_index": 29,
+      "glyph": "에",
+      "tile": "0x11E",
+      "prg_plus_0x7a_byte": "0xA4",
+      "rows_needing_it": 6
+    },
+    {
+      "slot_index": 30,
+      "glyph": "니",
+      "tile": "0x11F",
+      "prg_plus_0x7a_byte": "0xA5",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 31,
+      "glyph": "쿠",
+      "tile": "0x120",
+      "prg_plus_0x7a_byte": "0xA6",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 32,
+      "glyph": "쇠",
+      "tile": "0x121",
+      "prg_plus_0x7a_byte": "0xA7",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 33,
+      "glyph": "철",
+      "tile": "0x122",
+      "prg_plus_0x7a_byte": "0xA8",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 34,
+      "glyph": "옷",
+      "tile": "0x123",
+      "prg_plus_0x7a_byte": "0xA9",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 35,
+      "glyph": "고",
+      "tile": "0x124",
+      "prg_plus_0x7a_byte": "0xAA",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 36,
+      "glyph": "간",
+      "tile": "0x125",
+      "prg_plus_0x7a_byte": "0xAB",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 37,
+      "glyph": "술",
+      "tile": "0x126",
+      "prg_plus_0x7a_byte": "0xAC",
+      "rows_needing_it": 5
+    },
+    {
+      "slot_index": 38,
+      "glyph": "방",
+      "tile": "0x127",
+      "prg_plus_0x7a_byte": "0xAD",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 39,
+      "glyph": "어",
+      "tile": "0x128",
+      "prg_plus_0x7a_byte": "0xAE",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 40,
+      "glyph": "둥",
+      "tile": "0x129",
+      "prg_plus_0x7a_byte": "0xAF",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 41,
+      "glyph": "몽",
+      "tile": "0x12A",
+      "prg_plus_0x7a_byte": "0xB0",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 42,
+      "glyph": "파",
+      "tile": "0x12B",
+      "prg_plus_0x7a_byte": "0xB1",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 43,
+      "glyph": "슬",
+      "tile": "0x12C",
+      "prg_plus_0x7a_byte": "0xB2",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 44,
+      "glyph": "도",
+      "tile": "0x12D",
+      "prg_plus_0x7a_byte": "0xB3",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 45,
+      "glyph": "야",
+      "tile": "0x12E",
+      "prg_plus_0x7a_byte": "0xB4",
+      "rows_needing_it": 4
+    },
+    {
+      "slot_index": 46,
+      "glyph": "대",
+      "tile": "0x12F",
+      "prg_plus_0x7a_byte": "0xB5",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 47,
+      "glyph": "크",
+      "tile": "0x130",
+      "prg_plus_0x7a_byte": "0xB6",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 48,
+      "glyph": "게",
+      "tile": "0x131",
+      "prg_plus_0x7a_byte": "0xB7",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 49,
+      "glyph": "호",
+      "tile": "0x132",
+      "prg_plus_0x7a_byte": "0xB8",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 50,
+      "glyph": "사",
+      "tile": "0x133",
+      "prg_plus_0x7a_byte": "0xB9",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 51,
+      "glyph": "검",
+      "tile": "0x134",
+      "prg_plus_0x7a_byte": "0xBA",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 52,
+      "glyph": "갑",
+      "tile": "0x135",
+      "prg_plus_0x7a_byte": "0xBB",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 53,
+      "glyph": "패",
+      "tile": "0x136",
+      "prg_plus_0x7a_byte": "0xBC",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 54,
+      "glyph": "배",
+      "tile": "0x137",
+      "prg_plus_0x7a_byte": "0xBD",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 55,
+      "glyph": "신",
+      "tile": "0x138",
+      "prg_plus_0x7a_byte": "0xBE",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 56,
+      "glyph": "진",
+      "tile": "0x139",
+      "prg_plus_0x7a_byte": "0xBF",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 57,
+      "glyph": "을",
+      "tile": "0x13A",
+      "prg_plus_0x7a_byte": "0xC0",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 58,
+      "glyph": "산",
+      "tile": "0x13B",
+      "prg_plus_0x7a_byte": "0xC1",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 59,
+      "glyph": "동",
+      "tile": "0x13C",
+      "prg_plus_0x7a_byte": "0xC2",
+      "rows_needing_it": 3
+    },
+    {
+      "slot_index": 60,
+      "glyph": "군",
+      "tile": "0x13D",
+      "prg_plus_0x7a_byte": "0xC3",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 61,
+      "glyph": "전",
+      "tile": "0x13E",
+      "prg_plus_0x7a_byte": "0xC4",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 62,
+      "glyph": "합",
+      "tile": "0x13F",
+      "prg_plus_0x7a_byte": "0xC5",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 63,
+      "glyph": "노",
+      "tile": "0x140",
+      "prg_plus_0x7a_byte": "0xC6",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 64,
+      "glyph": "재",
+      "tile": "0x141",
+      "prg_plus_0x7a_byte": "0xC7",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 65,
+      "glyph": "버",
+      "tile": "0x142",
+      "prg_plus_0x7a_byte": "0xC8",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 66,
+      "glyph": "임",
+      "tile": "0x143",
+      "prg_plus_0x7a_byte": "0xC9",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 67,
+      "glyph": "작",
+      "tile": "0x144",
+      "prg_plus_0x7a_byte": "0xCA",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 68,
+      "glyph": "밀",
+      "tile": "0x145",
+      "prg_plus_0x7a_byte": "0xCB",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 69,
+      "glyph": "번",
+      "tile": "0x146",
+      "prg_plus_0x7a_byte": "0xCC",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 70,
+      "glyph": "요",
+      "tile": "0x147",
+      "prg_plus_0x7a_byte": "0xCD",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 71,
+      "glyph": "험",
+      "tile": "0x148",
+      "prg_plus_0x7a_byte": "0xCE",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 72,
+      "glyph": "루",
+      "tile": "0x149",
+      "prg_plus_0x7a_byte": "0xCF",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 73,
+      "glyph": "레",
+      "tile": "0x14A",
+      "prg_plus_0x7a_byte": "0xD0",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 74,
+      "glyph": "벨",
+      "tile": "0x14B",
+      "prg_plus_0x7a_byte": "0xD1",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 75,
+      "glyph": "경",
+      "tile": "0x14C",
+      "prg_plus_0x7a_byte": "0xD2",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 76,
+      "glyph": "먹",
+      "tile": "0x14D",
+      "prg_plus_0x7a_byte": "0xD3",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 77,
+      "glyph": "곤",
+      "tile": "0x14E",
+      "prg_plus_0x7a_byte": "0xD4",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 78,
+      "glyph": "은",
+      "tile": "0x14F",
+      "prg_plus_0x7a_byte": "0xD5",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 79,
+      "glyph": "한",
+      "tile": "0x150",
+      "prg_plus_0x7a_byte": "0xD6",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 80,
+      "glyph": "안",
+      "tile": "0x151",
+      "prg_plus_0x7a_byte": "0xD7",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 81,
+      "glyph": "회",
+      "tile": "0x152",
+      "prg_plus_0x7a_byte": "0xD8",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 82,
+      "glyph": "수",
+      "tile": "0x153",
+      "prg_plus_0x7a_byte": "0xD9",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 83,
+      "glyph": "펀",
+      "tile": "0x154",
+      "prg_plus_0x7a_byte": "0xDA",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 84,
+      "glyph": "킥",
+      "tile": "0x155",
+      "prg_plus_0x7a_byte": "0xDB",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 85,
+      "glyph": "때",
+      "tile": "0x156",
+      "prg_plus_0x7a_byte": "0xDC",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 86,
+      "glyph": "류",
+      "tile": "0x157",
+      "prg_plus_0x7a_byte": "0xDD",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 87,
+      "glyph": "트",
+      "tile": "0x158",
+      "prg_plus_0x7a_byte": "0xDE",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 88,
+      "glyph": "드",
+      "tile": "0x159",
+      "prg_plus_0x7a_byte": "0xDF",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 89,
+      "glyph": "뢰",
+      "tile": "0x15A",
+      "prg_plus_0x7a_byte": "0xE0",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 90,
+      "glyph": "자",
+      "tile": "0x15B",
+      "prg_plus_0x7a_byte": "0xE1",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 91,
+      "glyph": "박",
+      "tile": "0x15C",
+      "prg_plus_0x7a_byte": "0xE2",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 92,
+      "glyph": "변",
+      "tile": "0x15D",
+      "prg_plus_0x7a_byte": "0xE3",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 93,
+      "glyph": "베",
+      "tile": "0x15E",
+      "prg_plus_0x7a_byte": "0xE4",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 94,
+      "glyph": "케",
+      "tile": "0x15F",
+      "prg_plus_0x7a_byte": "0xE5",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 95,
+      "glyph": "키",
+      "tile": "0x160",
+      "prg_plus_0x7a_byte": "0xE6",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 96,
+      "glyph": "와",
+      "tile": "0x161",
+      "prg_plus_0x7a_byte": "0xE7",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 97,
+      "glyph": "료",
+      "tile": "0x162",
+      "prg_plus_0x7a_byte": "0xE8",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 98,
+      "glyph": "익",
+      "tile": "0x163",
+      "prg_plus_0x7a_byte": "0xE9",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 99,
+      "glyph": "혔",
+      "tile": "0x164",
+      "prg_plus_0x7a_byte": "0xEA",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 100,
+      "glyph": "끝",
+      "tile": "0x165",
+      "prg_plus_0x7a_byte": "0xEB",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 101,
+      "glyph": "딩",
+      "tile": "0x166",
+      "prg_plus_0x7a_byte": "0xEC",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 102,
+      "glyph": "엔",
+      "tile": "0x167",
+      "prg_plus_0x7a_byte": "0xED",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 103,
+      "glyph": "서",
+      "tile": "0x168",
+      "prg_plus_0x7a_byte": "0xEE",
+      "rows_needing_it": 2
+    },
+    {
+      "slot_index": 104,
+      "glyph": "셜",
+      "tile": "0x169",
+      "prg_plus_0x7a_byte": "0xEF",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 105,
+      "glyph": "운",
+      "tile": "0x16A",
+      "prg_plus_0x7a_byte": "0xF0",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 106,
+      "glyph": "페",
+      "tile": "0x16B",
+      "prg_plus_0x7a_byte": "0xF1",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 107,
+      "glyph": "극",
+      "tile": "0x16C",
+      "prg_plus_0x7a_byte": "0xF2",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 108,
+      "glyph": "오",
+      "tile": "0x16D",
+      "prg_plus_0x7a_byte": "0xF3",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 109,
+      "glyph": "원",
+      "tile": "0x16E",
+      "prg_plus_0x7a_byte": "0xF4",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 110,
+      "glyph": "집",
+      "tile": "0x16F",
+      "prg_plus_0x7a_byte": "0xF5",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 111,
+      "glyph": "테",
+      "tile": "0x170",
+      "prg_plus_0x7a_byte": "0xF6",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 112,
+      "glyph": "팬",
+      "tile": "0x171",
+      "prg_plus_0x7a_byte": "0xF7",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 113,
+      "glyph": "튼",
+      "tile": "0x172",
+      "prg_plus_0x7a_byte": "0xF8",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 114,
+      "glyph": "력",
+      "tile": "0x173",
+      "prg_plus_0x7a_byte": "0xF9",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 115,
+      "glyph": "를",
+      "tile": "0x174",
+      "prg_plus_0x7a_byte": "0xFA",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 116,
+      "glyph": "세",
+      "tile": "0x175",
+      "prg_plus_0x7a_byte": "0xFB",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 117,
+      "glyph": "입",
+      "tile": "0x176",
+      "prg_plus_0x7a_byte": "0xFC",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 118,
+      "glyph": "모",
+      "tile": "0x177",
+      "prg_plus_0x7a_byte": "0xFD",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 119,
+      "glyph": "결",
+      "tile": "0x178",
+      "prg_plus_0x7a_byte": "0xFE",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 120,
+      "glyph": "움",
+      "tile": "0x179",
+      "prg_plus_0x7a_byte": "0xFF",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 121,
+      "glyph": "직",
+      "tile": "0x17A",
+      "prg_plus_0x7a_byte": "0x00",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 122,
+      "glyph": "소",
+      "tile": "0x17B",
+      "prg_plus_0x7a_byte": "0x01",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 123,
+      "glyph": "품",
+      "tile": "0x17C",
+      "prg_plus_0x7a_byte": "0x02",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 124,
+      "glyph": "체",
+      "tile": "0x17D",
+      "prg_plus_0x7a_byte": "0x03",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 125,
+      "glyph": "쌍",
+      "tile": "0x17E",
+      "prg_plus_0x7a_byte": "0x04",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 126,
+      "glyph": "절",
+      "tile": "0x17F",
+      "prg_plus_0x7a_byte": "0x05",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 127,
+      "glyph": "톤",
+      "tile": "0x180",
+      "prg_plus_0x7a_byte": "0x06",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 128,
+      "glyph": "좋",
+      "tile": "0x181",
+      "prg_plus_0x7a_byte": "0x07",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 129,
+      "glyph": "굉",
+      "tile": "0x182",
+      "prg_plus_0x7a_byte": "0x08",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 130,
+      "glyph": "독",
+      "tile": "0x183",
+      "prg_plus_0x7a_byte": "0x09",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 131,
+      "glyph": "해",
+      "tile": "0x184",
+      "prg_plus_0x7a_byte": "0x0A",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 132,
+      "glyph": "밥",
+      "tile": "0x185",
+      "prg_plus_0x7a_byte": "0x0B",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 133,
+      "glyph": "주",
+      "tile": "0x186",
+      "prg_plus_0x7a_byte": "0x0C",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 134,
+      "glyph": "투",
+      "tile": "0x187",
+      "prg_plus_0x7a_byte": "0x0D",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 135,
+      "glyph": "달",
+      "tile": "0x188",
+      "prg_plus_0x7a_byte": "0x0E",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 136,
+      "glyph": "과",
+      "tile": "0x189",
+      "prg_plus_0x7a_byte": "0x0F",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 137,
+      "glyph": "효",
+      "tile": "0x18A",
+      "prg_plus_0x7a_byte": "0x10",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 138,
+      "glyph": "피",
+      "tile": "0x18B",
+      "prg_plus_0x7a_byte": "0x11",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 139,
+      "glyph": "봉",
+      "tile": "0x18C",
+      "prg_plus_0x7a_byte": "0x12",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 140,
+      "glyph": "부",
+      "tile": "0x18D",
+      "prg_plus_0x7a_byte": "0x13",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 141,
+      "glyph": "적",
+      "tile": "0x18E",
+      "prg_plus_0x7a_byte": "0x14",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 142,
+      "glyph": "금",
+      "tile": "0x18F",
+      "prg_plus_0x7a_byte": "0x15",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 143,
+      "glyph": "황",
+      "tile": "0x190",
+      "prg_plus_0x7a_byte": "0x16",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 144,
+      "glyph": "빨",
+      "tile": "0x191",
+      "prg_plus_0x7a_byte": "0x17",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 145,
+      "glyph": "란",
+      "tile": "0x192",
+      "prg_plus_0x7a_byte": "0x18",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 146,
+      "glyph": "설",
+      "tile": "0x193",
+      "prg_plus_0x7a_byte": "0x19",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 147,
+      "glyph": "께",
+      "tile": "0x194",
+      "prg_plus_0x7a_byte": "0x1A",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 148,
+      "glyph": "끼",
+      "tile": "0x195",
+      "prg_plus_0x7a_byte": "0x1B",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 149,
+      "glyph": "뽑",
+      "tile": "0x196",
+      "prg_plus_0x7a_byte": "0x1C",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 150,
+      "glyph": "제",
+      "tile": "0x197",
+      "prg_plus_0x7a_byte": "0x1D",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 151,
+      "glyph": "물",
+      "tile": "0x198",
+      "prg_plus_0x7a_byte": "0x1E",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 152,
+      "glyph": "보",
+      "tile": "0x199",
+      "prg_plus_0x7a_byte": "0x1F",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 153,
+      "glyph": "윙",
+      "tile": "0x19A",
+      "prg_plus_0x7a_byte": "0x20",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 154,
+      "glyph": "밟",
+      "tile": "0x19B",
+      "prg_plus_0x7a_byte": "0x21",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 155,
+      "glyph": "택",
+      "tile": "0x19C",
+      "prg_plus_0x7a_byte": "0x22",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 156,
+      "glyph": "퍼",
+      "tile": "0x19D",
+      "prg_plus_0x7a_byte": "0x23",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 157,
+      "glyph": "각",
+      "tile": "0x19E",
+      "prg_plus_0x7a_byte": "0x24",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 158,
+      "glyph": "선",
+      "tile": "0x19F",
+      "prg_plus_0x7a_byte": "0x25",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 159,
+      "glyph": "풍",
+      "tile": "0x1A0",
+      "prg_plus_0x7a_byte": "0x26",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 160,
+      "glyph": "슛",
+      "tile": "0x1A1",
+      "prg_plus_0x7a_byte": "0x27",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 161,
+      "glyph": "워",
+      "tile": "0x1A2",
+      "prg_plus_0x7a_byte": "0x28",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 162,
+      "glyph": "릴",
+      "tile": "0x1A3",
+      "prg_plus_0x7a_byte": "0x29",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 163,
+      "glyph": "헬",
+      "tile": "0x1A4",
+      "prg_plus_0x7a_byte": "0x2A",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 164,
+      "glyph": "폭",
+      "tile": "0x1A5",
+      "prg_plus_0x7a_byte": "0x2B",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 165,
+      "glyph": "빰",
+      "tile": "0x1A6",
+      "prg_plus_0x7a_byte": "0x2C",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 166,
+      "glyph": "뱅",
+      "tile": "0x1A7",
+      "prg_plus_0x7a_byte": "0x2D",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 167,
+      "glyph": "빅",
+      "tile": "0x1A8",
+      "prg_plus_0x7a_byte": "0x2E",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 168,
+      "glyph": "긴",
+      "tile": "0x1A9",
+      "prg_plus_0x7a_byte": "0x2F",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 169,
+      "glyph": "킨",
+      "tile": "0x1AA",
+      "prg_plus_0x7a_byte": "0x30",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 170,
+      "glyph": "메",
+      "tile": "0x1AB",
+      "prg_plus_0x7a_byte": "0x31",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 171,
+      "glyph": "몬",
+      "tile": "0x1AC",
+      "prg_plus_0x7a_byte": "0x32",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 172,
+      "glyph": "두",
+      "tile": "0x1AD",
+      "prg_plus_0x7a_byte": "0x33",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 173,
+      "glyph": "목",
+      "tile": "0x1AE",
+      "prg_plus_0x7a_byte": "0x34",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 174,
+      "glyph": "조",
+      "tile": "0x1AF",
+      "prg_plus_0x7a_byte": "0x35",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 175,
+      "glyph": "토",
+      "tile": "0x1B0",
+      "prg_plus_0x7a_byte": "0x36",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 176,
+      "glyph": "막",
+      "tile": "0x1B1",
+      "prg_plus_0x7a_byte": "0x37",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 177,
+      "glyph": "흑",
+      "tile": "0x1B2",
+      "prg_plus_0x7a_byte": "0x38",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 178,
+      "glyph": "쥬",
+      "tile": "0x1B3",
+      "prg_plus_0x7a_byte": "0x39",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 179,
+      "glyph": "아",
+      "tile": "0x1B4",
+      "prg_plus_0x7a_byte": "0x3A",
+      "rows_needing_it": 1
+    },
+    {
+      "slot_index": 180,
+      "glyph": "길",
+      "tile": "0x1B5",
+      "prg_plus_0x7a_byte": "0x3B",
+      "rows_needing_it": 1
+    }
+  ],
+  "batch_simulations": [
+    {
+      "requested_extra_glyphs": 16,
+      "extra_glyphs_used": 16,
+      "total_patch_glyphs": 34,
+      "rows_ready_total": 17,
+      "rows_newly_ready": 7,
+      "added_glyphs": [
+        "마",
+        "하",
+        "구",
+        "기",
+        "의",
+        "로",
+        "스",
+        "강",
+        "지",
+        "인",
+        "가",
+        "에",
+        "니",
+        "쿠",
+        "쇠",
+        "철"
+      ],
+      "example_newly_ready_rows": [
+        {
+          "source": "きのくすり",
+          "korean": "기의 약",
+          "category": "회복",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "はがねのやり",
+          "korean": "강철 창",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "かわら",
+          "korean": "강가",
+          "category": "스테이지",
+          "section": "8. 스테이지",
+          "length_delta": -1
+        },
+        {
+          "source": "たつじ",
+          "korean": "타츠지",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": 0
+        },
+        {
+          "source": "どうのやり",
+          "korean": "구리 창",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "てつのやり",
+          "korean": "쇠 창",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "どすすぺしゃる",
+          "korean": "강타 S",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -3
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 32,
+      "extra_glyphs_used": 32,
+      "total_patch_glyphs": 50,
+      "rows_ready_total": 25,
+      "rows_newly_ready": 15,
+      "added_glyphs": [
+        "마",
+        "하",
+        "구",
+        "기",
+        "의",
+        "로",
+        "스",
+        "강",
+        "지",
+        "인",
+        "가",
+        "에",
+        "니",
+        "쿠",
+        "쇠",
+        "철",
+        "옷",
+        "고",
+        "간",
+        "술",
+        "방",
+        "어",
+        "둥",
+        "몽",
+        "파",
+        "슬",
+        "도",
+        "야",
+        "대",
+        "크",
+        "게",
+        "호"
+      ],
+      "example_newly_ready_rows": [
+        {
+          "source": "はがねのこんぼう",
+          "korean": "강철 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "やまたのじゅつ",
+          "korean": "야마타의 술",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "どうのこんぼう",
+          "korean": "구리 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "てつのこんぼう",
+          "korean": "쇠 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "やごろう",
+          "korean": "야고로",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": -1
+        },
+        {
+          "source": "かじや",
+          "korean": "대장간",
+          "category": "스테이지",
+          "section": "8. 스테이지",
+          "length_delta": 0
+        },
+        {
+          "source": "きのくすり",
+          "korean": "기의 약",
+          "category": "회복",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "こんぼう",
+          "korean": "몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "はがねのやり",
+          "korean": "강철 창",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "かわら",
+          "korean": "강가",
+          "category": "스테이지",
+          "section": "8. 스테이지",
+          "length_delta": -1
+        },
+        {
+          "source": "ぼうぎょ",
+          "korean": "방어",
+          "category": "능력치",
+          "section": "3. 스테이터스 / UI",
+          "length_delta": -2
+        },
+        {
+          "source": "たつじ",
+          "korean": "타츠지",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": 0
+        },
+        {
+          "source": "どうのやり",
+          "korean": "구리 창",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "てつのやり",
+          "korean": "쇠 창",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "どすすぺしゃる",
+          "korean": "강타 S",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -3
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 64,
+      "extra_glyphs_used": 64,
+      "total_patch_glyphs": 82,
+      "rows_ready_total": 50,
+      "rows_newly_ready": 40,
+      "added_glyphs": [
+        "마",
+        "하",
+        "구",
+        "기",
+        "의",
+        "로",
+        "스",
+        "강",
+        "지",
+        "인",
+        "가",
+        "에",
+        "니",
+        "쿠",
+        "쇠",
+        "철",
+        "옷",
+        "고",
+        "간",
+        "술",
+        "방",
+        "어",
+        "둥",
+        "몽",
+        "파",
+        "슬",
+        "도",
+        "야",
+        "대",
+        "크",
+        "게",
+        "호",
+        "사",
+        "검",
+        "갑",
+        "패",
+        "배",
+        "신",
+        "진",
+        "을",
+        "산",
+        "동",
+        "군",
+        "전",
+        "합",
+        "노",
+        "재",
+        "버",
+        "임",
+        "작",
+        "밀",
+        "번",
+        "요",
+        "험",
+        "루",
+        "레",
+        "벨",
+        "경",
+        "먹",
+        "곤",
+        "은",
+        "한",
+        "안",
+        "회"
+      ],
+      "example_newly_ready_rows": [
+        {
+          "source": "はがねのこんぼう",
+          "korean": "강철 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "やまたのじゅつ",
+          "korean": "야마타의 술",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "くにまさ",
+          "korean": "쿠니마사",
+          "category": "캐릭터명",
+          "section": "3. 스테이터스 / UI",
+          "length_delta": 0
+        },
+        {
+          "source": "はがねのたいぼう",
+          "korean": "강철 방패",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのよろい",
+          "korean": "강철 갑옷",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "やきいも",
+          "korean": "군고구마",
+          "category": "회복",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "どうのこんぼう",
+          "korean": "구리 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "てつのこんぼう",
+          "korean": "쇠 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "どうのたいぼう",
+          "korean": "구리 방패",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "どうのよろい",
+          "korean": "구리 갑옷",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "はじまりのまち",
+          "korean": "시작 마을",
+          "category": "스테이지",
+          "section": "8. 스테이지",
+          "length_delta": -2
+        },
+        {
+          "source": "ゲームスタート",
+          "korean": "게임 시작",
+          "category": "메뉴",
+          "section": "2. 메뉴",
+          "length_delta": -2
+        },
+        {
+          "source": "パスワード",
+          "korean": "비밀번호",
+          "category": "메뉴",
+          "section": "2. 메뉴",
+          "length_delta": -1
+        },
+        {
+          "source": "ぎんのたま",
+          "korean": "은 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "ごんさく",
+          "korean": "곤사쿠",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": -1
+        },
+        {
+          "source": "じんろく",
+          "korean": "진로쿠",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": -1
+        },
+        {
+          "source": "てつのたいぼう",
+          "korean": "쇠 방패",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -3
+        },
+        {
+          "source": "てつのよろい",
+          "korean": "쇠 갑옷",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "はがねのカタナ",
+          "korean": "강철 검",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -3
+        },
+        {
+          "source": "やごろう",
+          "korean": "야고로",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": -1
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 96,
+      "extra_glyphs_used": 96,
+      "total_patch_glyphs": 114,
+      "rows_ready_total": 74,
+      "rows_newly_ready": 64,
+      "added_glyphs": [
+        "마",
+        "하",
+        "구",
+        "기",
+        "의",
+        "로",
+        "스",
+        "강",
+        "지",
+        "인",
+        "가",
+        "에",
+        "니",
+        "쿠",
+        "쇠",
+        "철",
+        "옷",
+        "고",
+        "간",
+        "술",
+        "방",
+        "어",
+        "둥",
+        "몽",
+        "파",
+        "슬",
+        "도",
+        "야",
+        "대",
+        "크",
+        "게",
+        "호",
+        "사",
+        "검",
+        "갑",
+        "패",
+        "배",
+        "신",
+        "진",
+        "을",
+        "산",
+        "동",
+        "군",
+        "전",
+        "합",
+        "노",
+        "재",
+        "버",
+        "임",
+        "작",
+        "밀",
+        "번",
+        "요",
+        "험",
+        "루",
+        "레",
+        "벨",
+        "경",
+        "먹",
+        "곤",
+        "은",
+        "한",
+        "안",
+        "회",
+        "수",
+        "펀",
+        "킥",
+        "때",
+        "류",
+        "트",
+        "드",
+        "뢰",
+        "자",
+        "박",
+        "변",
+        "베",
+        "케",
+        "키",
+        "와",
+        "료",
+        "익",
+        "혔",
+        "끝",
+        "딩",
+        "엔",
+        "서",
+        "셜",
+        "운",
+        "페",
+        "극",
+        "오",
+        "원",
+        "집",
+        "테",
+        "팬",
+        "튼"
+      ],
+      "example_newly_ready_rows": [
+        {
+          "source": "くにおくんの時代劇だよ全員集合！",
+          "korean": "쿠니오군의 시대극이다 전원집합!",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": 1
+        },
+        {
+          "source": "変身の術で、やごろうに変身",
+          "korean": "변신술로 야고로 변신",
+          "category": "이벤트",
+          "section": "12. 기타",
+          "length_delta": -2
+        },
+        {
+          "source": "1991 TECHNOS JAPAN",
+          "korean": "1991 테크노스 재팬",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": -6
+        },
+        {
+          "source": "やごろうと再会",
+          "korean": "야고로와 재회",
+          "category": "이벤트",
+          "section": "12. 기타",
+          "length_delta": 0
+        },
+        {
+          "source": "わざをおぼえた！",
+          "korean": "기술을 익혔다!",
+          "category": "대사",
+          "section": "9. 이벤트 대사",
+          "length_delta": 0
+        },
+        {
+          "source": "ダウンタウンスペシャル",
+          "korean": "다운타운 스페셜",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのこんぼう",
+          "korean": "강철 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "まっはたたき",
+          "korean": "마하 때리기",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": 0
+        },
+        {
+          "source": "やまたのじゅつ",
+          "korean": "야마타의 술",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "くにまさ",
+          "korean": "쿠니마사",
+          "category": "캐릭터명",
+          "section": "3. 스테이터스 / UI",
+          "length_delta": 0
+        },
+        {
+          "source": "にんげんぎょらい",
+          "korean": "인간 어뢰",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのたいぼう",
+          "korean": "강철 방패",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのよろい",
+          "korean": "강철 갑옷",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "やきいも",
+          "korean": "군고구마",
+          "category": "회복",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "ろくべえ",
+          "korean": "로쿠베에",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": 0
+        },
+        {
+          "source": "どうのこんぼう",
+          "korean": "구리 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "てつのこんぼう",
+          "korean": "쇠 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "どうのたいぼう",
+          "korean": "구리 방패",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "どうのよろい",
+          "korean": "구리 갑옷",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -1
+        },
+        {
+          "source": "はじまりのまち",
+          "korean": "시작 마을",
+          "category": "스테이지",
+          "section": "8. 스테이지",
+          "length_delta": -2
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 128,
+      "extra_glyphs_used": 128,
+      "total_patch_glyphs": 146,
+      "rows_ready_total": 94,
+      "rows_newly_ready": 84,
+      "added_glyphs": [
+        "마",
+        "하",
+        "구",
+        "기",
+        "의",
+        "로",
+        "스",
+        "강",
+        "지",
+        "인",
+        "가",
+        "에",
+        "니",
+        "쿠",
+        "쇠",
+        "철",
+        "옷",
+        "고",
+        "간",
+        "술",
+        "방",
+        "어",
+        "둥",
+        "몽",
+        "파",
+        "슬",
+        "도",
+        "야",
+        "대",
+        "크",
+        "게",
+        "호",
+        "사",
+        "검",
+        "갑",
+        "패",
+        "배",
+        "신",
+        "진",
+        "을",
+        "산",
+        "동",
+        "군",
+        "전",
+        "합",
+        "노",
+        "재",
+        "버",
+        "임",
+        "작",
+        "밀",
+        "번",
+        "요",
+        "험",
+        "루",
+        "레",
+        "벨",
+        "경",
+        "먹",
+        "곤",
+        "은",
+        "한",
+        "안",
+        "회",
+        "수",
+        "펀",
+        "킥",
+        "때",
+        "류",
+        "트",
+        "드",
+        "뢰",
+        "자",
+        "박",
+        "변",
+        "베",
+        "케",
+        "키",
+        "와",
+        "료",
+        "익",
+        "혔",
+        "끝",
+        "딩",
+        "엔",
+        "서",
+        "셜",
+        "운",
+        "페",
+        "극",
+        "오",
+        "원",
+        "집",
+        "테",
+        "팬",
+        "튼",
+        "력",
+        "를",
+        "세",
+        "입",
+        "모",
+        "결",
+        "움",
+        "직",
+        "소",
+        "품",
+        "체",
+        "쌍",
+        "절",
+        "톤",
+        "좋",
+        "굉",
+        "독",
+        "해",
+        "밥",
+        "주",
+        "투",
+        "달",
+        "과",
+        "효",
+        "피",
+        "봉",
+        "부",
+        "적",
+        "금",
+        "황",
+        "빨",
+        "란"
+      ],
+      "example_newly_ready_rows": [
+        {
+          "source": "くにおくんの時代劇だよ全員集合！",
+          "korean": "쿠니오군의 시대극이다 전원집합!",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": 1
+        },
+        {
+          "source": "パスワードを入力してください",
+          "korean": "비밀번호를 입력하세요",
+          "category": "메뉴",
+          "section": "2. 메뉴",
+          "length_delta": -3
+        },
+        {
+          "source": "変身の術で、やごろうに変身",
+          "korean": "변신술로 야고로 변신",
+          "category": "이벤트",
+          "section": "12. 기타",
+          "length_delta": -2
+        },
+        {
+          "source": "1991 TECHNOS JAPAN",
+          "korean": "1991 테크노스 재팬",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": -6
+        },
+        {
+          "source": "やごろうと再会",
+          "korean": "야고로와 재회",
+          "category": "이벤트",
+          "section": "12. 기타",
+          "length_delta": 0
+        },
+        {
+          "source": "わざをおぼえた！",
+          "korean": "기술을 익혔다!",
+          "category": "대사",
+          "section": "9. 이벤트 대사",
+          "length_delta": 0
+        },
+        {
+          "source": "たつじんめがね",
+          "korean": "달인의 안경",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "ふういんのふだ",
+          "korean": "봉인의 부적",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "ダウンタウンスペシャル",
+          "korean": "다운타운 스페셜",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのこんぼう",
+          "korean": "강철 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "まっはたたき",
+          "korean": "마하 때리기",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": 0
+        },
+        {
+          "source": "やまたのじゅつ",
+          "korean": "야마타의 술",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "あおいたま",
+          "korean": "파란 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "あかいたま",
+          "korean": "빨간 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "きんのたま",
+          "korean": "황금 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "くにまさ",
+          "korean": "쿠니마사",
+          "category": "캐릭터명",
+          "section": "3. 스테이터스 / UI",
+          "length_delta": 0
+        },
+        {
+          "source": "にんげんぎょらい",
+          "korean": "인간 어뢰",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのたいぼう",
+          "korean": "강철 방패",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -3
+        },
+        {
+          "source": "はがねのよろい",
+          "korean": "강철 갑옷",
+          "category": "방어구",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "みかわしのたび",
+          "korean": "회피의 옷",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -2
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 160,
+      "extra_glyphs_used": 160,
+      "total_patch_glyphs": 178,
+      "rows_ready_total": 115,
+      "rows_newly_ready": 105,
+      "added_glyphs": [
+        "마",
+        "하",
+        "구",
+        "기",
+        "의",
+        "로",
+        "스",
+        "강",
+        "지",
+        "인",
+        "가",
+        "에",
+        "니",
+        "쿠",
+        "쇠",
+        "철",
+        "옷",
+        "고",
+        "간",
+        "술",
+        "방",
+        "어",
+        "둥",
+        "몽",
+        "파",
+        "슬",
+        "도",
+        "야",
+        "대",
+        "크",
+        "게",
+        "호",
+        "사",
+        "검",
+        "갑",
+        "패",
+        "배",
+        "신",
+        "진",
+        "을",
+        "산",
+        "동",
+        "군",
+        "전",
+        "합",
+        "노",
+        "재",
+        "버",
+        "임",
+        "작",
+        "밀",
+        "번",
+        "요",
+        "험",
+        "루",
+        "레",
+        "벨",
+        "경",
+        "먹",
+        "곤",
+        "은",
+        "한",
+        "안",
+        "회",
+        "수",
+        "펀",
+        "킥",
+        "때",
+        "류",
+        "트",
+        "드",
+        "뢰",
+        "자",
+        "박",
+        "변",
+        "베",
+        "케",
+        "키",
+        "와",
+        "료",
+        "익",
+        "혔",
+        "끝",
+        "딩",
+        "엔",
+        "서",
+        "셜",
+        "운",
+        "페",
+        "극",
+        "오",
+        "원",
+        "집",
+        "테",
+        "팬",
+        "튼",
+        "력",
+        "를",
+        "세",
+        "입",
+        "모",
+        "결",
+        "움",
+        "직",
+        "소",
+        "품",
+        "체",
+        "쌍",
+        "절",
+        "톤",
+        "좋",
+        "굉",
+        "독",
+        "해",
+        "밥",
+        "주",
+        "투",
+        "달",
+        "과",
+        "효",
+        "피",
+        "봉",
+        "부",
+        "적",
+        "금",
+        "황",
+        "빨",
+        "란",
+        "설",
+        "께",
+        "끼",
+        "뽑",
+        "제",
+        "물",
+        "보",
+        "윙",
+        "밟",
+        "택",
+        "퍼",
+        "각",
+        "선",
+        "풍",
+        "슛",
+        "워",
+        "릴",
+        "헬",
+        "폭",
+        "빰",
+        "뱅",
+        "빅",
+        "긴",
+        "킨",
+        "메",
+        "몬",
+        "두",
+        "목",
+        "조",
+        "토",
+        "막",
+        "흑"
+      ],
+      "example_newly_ready_rows": [
+        {
+          "source": "くにおくんの時代劇だよ全員集合！",
+          "korean": "쿠니오군의 시대극이다 전원집합!",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": 1
+        },
+        {
+          "source": "パスワードを入力してください",
+          "korean": "비밀번호를 입력하세요",
+          "category": "메뉴",
+          "section": "2. 메뉴",
+          "length_delta": -3
+        },
+        {
+          "source": "変身の術で、やごろうに変身",
+          "korean": "변신술로 야고로 변신",
+          "category": "이벤트",
+          "section": "12. 기타",
+          "length_delta": -2
+        },
+        {
+          "source": "1991 TECHNOS JAPAN",
+          "korean": "1991 테크노스 재팬",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": -6
+        },
+        {
+          "source": "やごろうと再会",
+          "korean": "야고로와 재회",
+          "category": "이벤트",
+          "section": "12. 기타",
+          "length_delta": 0
+        },
+        {
+          "source": "なぞのみせ",
+          "korean": "수수께끼 가게",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 2
+        },
+        {
+          "source": "わざをおぼえた！",
+          "korean": "기술을 익혔다!",
+          "category": "대사",
+          "section": "9. 이벤트 대사",
+          "length_delta": 0
+        },
+        {
+          "source": "たつじんめがね",
+          "korean": "달인의 안경",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "でんせつのどうぐ",
+          "korean": "전설의 도구",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -2
+        },
+        {
+          "source": "にとろあたっく",
+          "korean": "니트로 어택",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "ふういんのふだ",
+          "korean": "봉인의 부적",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": -1
+        },
+        {
+          "source": "ダウンタウンスペシャル",
+          "korean": "다운타운 스페셜",
+          "category": "타이틀",
+          "section": "1. 타이틀 / 메뉴",
+          "length_delta": -3
+        },
+        {
+          "source": "とらぞうおやぶん",
+          "korean": "토라조 두목",
+          "category": "보스",
+          "section": "7. 보스 / 적",
+          "length_delta": -2
+        },
+        {
+          "source": "はいぱーがーど",
+          "korean": "하이퍼 가드",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "はがねのこんぼう",
+          "korean": "강철 몽둥이",
+          "category": "무기",
+          "section": "4. 무기 / 장비",
+          "length_delta": -2
+        },
+        {
+          "source": "まっはたたき",
+          "korean": "마하 때리기",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": 0
+        },
+        {
+          "source": "やまたのじゅつ",
+          "korean": "야마타의 술",
+          "category": "기술",
+          "section": "6. 필살기 / 기술",
+          "length_delta": -1
+        },
+        {
+          "source": "あおいたま",
+          "korean": "파란 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "あかいたま",
+          "korean": "빨간 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        },
+        {
+          "source": "きんのたま",
+          "korean": "황금 구슬",
+          "category": "특수",
+          "section": "5. 회복 / 보조 아이템",
+          "length_delta": 0
+        }
+      ]
+    }
+  ]
+}
