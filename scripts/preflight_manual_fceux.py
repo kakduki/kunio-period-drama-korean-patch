@@ -88,7 +88,8 @@ def main() -> int:
     print(
         "  python scripts/run_fceux_lua_analysis.py "
         f"--rom {rel(target_rom)} --lua-script {rel(watcher)} "
-        "--timeout 600 --final-output rom_analysis/fceux_manual_launch --clean-output --no-dump-hex --no-dump-bin"
+        "--timeout 600 --stop-after-manual-dump "
+        "--final-output rom_analysis/fceux_manual_launch --clean-output --no-dump-hex --no-dump-bin"
     )
 
     for warning in warnings:

@@ -105,6 +105,13 @@ def mirror_staged_manual_outputs(staged_analysis_root: Path, destination_root: P
     return mirrored
 
 
+def latest_manual_dump_record(staged_analysis_root: Path) -> Path | None:
+    if not staged_analysis_root.exists():
+        return None
+    matches = sorted(staged_analysis_root.glob("manual_screen_dump*/manual_frame_*_target_records.tsv"))
+    return matches[-1] if matches else None
+
+
 def summary_final_reason(summary: Path) -> str | None:
     if not summary.exists():
         return None
@@ -266,6 +273,7 @@ def launch(args: argparse.Namespace) -> int:
     deadline = time.monotonic() + args.timeout
     completed = False
     summary = ascii_output / "summary.tsv"
+    staged_analysis_root = fceux_workdir / "rom_analysis"
 
     try:
         while proc.poll() is None and time.monotonic() < deadline:
@@ -274,6 +282,13 @@ def launch(args: argparse.Namespace) -> int:
                 completed = True
                 print(f"Lua script reported {final_reason}; stopping FCEUX.")
                 print_manual_capture_hint(final_reason)
+                proc.terminate()
+                break
+            manual_record = latest_manual_dump_record(staged_analysis_root) if args.stop_after_manual_dump else None
+            if manual_record:
+                completed = True
+                print(f"Manual dump record detected: {manual_record}")
+                print("Stopping FCEUX after manual dump.")
                 proc.terminate()
                 break
             time.sleep(1)
@@ -291,7 +306,7 @@ def launch(args: argparse.Namespace) -> int:
 
     copytree_contents(ascii_output, final_output)
     print("Copied Lua output into:", final_output)
-    mirrored = mirror_staged_manual_outputs(fceux_workdir / "rom_analysis")
+    mirrored = mirror_staged_manual_outputs(staged_analysis_root)
     for destination in mirrored:
         print("Copied manual dump output into:", destination)
     if completed:
@@ -316,6 +331,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--stagnation-samples", type=int, default=4, help="Consecutive unchanged-screen samples required before supported Lua scripts stop early.")
     parser.add_argument("--final-output", default=str(ROOT / "rom_analysis" / "fceux_lua"), help="Directory where Lua output is mirrored after FCEUX exits.")
     parser.add_argument("--clean-output", action="store_true", help="Delete the final output directory before copying new results.")
+    parser.add_argument("--stop-after-manual-dump", action="store_true", help="Stop FCEUX once a manual_screen_dump* target-record TSV appears.")
     parser.add_argument("--dump-hex", action=argparse.BooleanOptionalAction, default=True, help="Write text hex dumps at snapshot frames.")
     parser.add_argument("--dump-bin", action=argparse.BooleanOptionalAction, default=True, help="Write raw binary dumps at snapshot frames.")
     return parser.parse_args(argv)
