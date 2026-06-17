@@ -30,6 +30,7 @@
 - `bank1_watch_targets.json`: generated Bank 1 read-watch target list derived from `bank1_candidate_contexts.md`; the Lua copy is `lua/kunio_bank1_targets.lua`
 - `bank1_offset_inventory.md` / `bank1_offset_inventory.json`: category-oriented Bank 1 offset inventory that merges static translation candidates, watch-range supplemental hits, and FCEUX read-watch evidence
 - `bank1_offset_status.md` / `bank1_offset_status.json`: category-level coverage and patch-readiness summary for current Bank 1 offsets
+- `v04_equal_length_fceux_targets.md` / `v04_equal_length_fceux_targets.json`: FCEUX read-watch targets for the v0.4 equal-length static experiment, expecting patched PRG bytes instead of original bytes
 - `fceux_lua/summary.tsv`: frame-indexed summary from the FCEUX Lua automation, generated locally after running `scripts/run_fceux_lua_analysis.py`
 - `fceux_lua/events.tsv`: `$2006/$2007` write events from the FCEUX Lua automation when the emulator build supports Lua write callbacks
 - `fceux_lua_event_summary.md`: grouped summary of runtime `$2006/$2007` writes, highlighting nametable/text-rendering candidates
@@ -105,6 +106,12 @@ To watch the current Bank 1 item/status/UI candidate records for CPU reads:
 
 ```powershell
 python scripts/run_fceux_lua_analysis.py --lua-script lua/kunio_bank1_watch.lua --frames 10800 --timeout 240 --final-output rom_analysis/fceux_bank1_watch --no-dump-hex --no-dump-bin
+```
+
+To verify the v0.4 equal-length static experiment against patched PRG bytes:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py --rom output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.nes --lua-script lua/kunio_bank1_watch.lua --target-lua lua/kunio_v04_equal_length_targets.lua --frames 10800 --timeout 240 --final-output rom_analysis/fceux_v04_equal_length_watch --clean-output --no-dump-hex --no-dump-bin
 ```
 
 If the Lua overlay does not appear in FCEUX, load `lua/kunio_auto_dump.lua`

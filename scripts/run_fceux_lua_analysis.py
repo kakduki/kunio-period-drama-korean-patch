@@ -60,6 +60,18 @@ def find_lua_script(explicit: str | None) -> Path:
     return lua_script
 
 
+def resolve_optional_path(explicit: str | None) -> Path | None:
+    if not explicit:
+        return None
+    path = Path(explicit).expanduser()
+    if not path.is_absolute():
+        path = ROOT / path
+    path = path.resolve()
+    if not path.exists():
+        raise FileNotFoundError(f"File not found: {path}")
+    return path
+
+
 def copytree_contents(src: Path, dst: Path) -> None:
     dst.mkdir(parents=True, exist_ok=True)
     if not src.exists():
@@ -143,6 +155,7 @@ def launch(args: argparse.Namespace) -> int:
     ascii_rom = fceux_workdir / "rom.nes"
     ascii_lua = fceux_workdir / lua_script.name
     ascii_output = fceux_workdir / "kunio_fceux_lua_output"
+    target_lua = resolve_optional_path(args.target_lua)
 
     ascii_output.mkdir(parents=True, exist_ok=True)
     if args.clean_output and final_output.exists():
@@ -153,6 +166,8 @@ def launch(args: argparse.Namespace) -> int:
     lua_targets = lua_script.parent / "kunio_bank1_targets.lua"
     if lua_targets.exists():
         shutil.copy2(lua_targets, fceux_workdir / lua_targets.name)
+    if target_lua:
+        shutil.copy2(target_lua, fceux_workdir / target_lua.name)
 
     update_cfg(exe, ascii_lua.name, ascii_output.name)
 
@@ -164,6 +179,8 @@ def launch(args: argparse.Namespace) -> int:
     env["KUNIO_DUMP_HEX"] = "1" if args.dump_hex else "0"
     env["KUNIO_DUMP_BIN"] = "1" if args.dump_bin else "0"
     env["KUNIO_HIT_LIMIT"] = str(args.hit_limit)
+    if target_lua:
+        env["KUNIO_TARGETS_LUA"] = target_lua.name
 
     cmd = [str(exe), "--loadlua", ascii_lua.name, "--sound", "0", ascii_rom.name]
     print("Launching:", " ".join(cmd))
@@ -208,6 +225,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--rom", help="Path to the .nes ROM. Defaults to first rom/*.nes.")
     parser.add_argument("--fceux", help="Path to qfceux.exe or fceux64.exe.")
     parser.add_argument("--lua-script", default=str(DEFAULT_LUA_SCRIPT), help="Lua script to stage and run inside FCEUX.")
+    parser.add_argument("--target-lua", help="Optional Lua target table copied beside the Lua script and exposed as KUNIO_TARGETS_LUA.")
     parser.add_argument("--frames", type=int, default=7200, help="Frames to run in Lua.")
     parser.add_argument("--timeout", type=int, default=180, help="Seconds before stopping FCEUX.")
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")

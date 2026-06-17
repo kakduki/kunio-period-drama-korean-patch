@@ -35,11 +35,12 @@ local fallback_targets = {
 
 local targets = fallback_targets
 local target_source = "fallback"
+local target_lua = os.getenv("KUNIO_TARGETS_LUA") or "kunio_bank1_targets.lua"
 
-local ok_targets, generated_targets = pcall(function() return dofile("kunio_bank1_targets.lua") end)
+local ok_targets, generated_targets = pcall(function() return dofile(target_lua) end)
 if ok_targets and type(generated_targets) == "table" and #generated_targets > 0 then
 	targets = generated_targets
-	target_source = "generated"
+	target_source = target_lua
 end
 
 local function mkdir(path)
