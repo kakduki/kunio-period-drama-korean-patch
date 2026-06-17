@@ -20,6 +20,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings
 - `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries
 - `translation_scan_capture_queue.md`: focused broad-scan capture queue with readable text labels
+- `reference_capture_plan.md`: transcript/reference-guided manual screen priorities
 - `broad_scan_patchability.md`: length-safe broad-scan candidates with v0.4.2 planned bytes
 - `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan
 - `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion

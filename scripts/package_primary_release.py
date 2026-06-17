@@ -26,6 +26,8 @@ TRANSLATION_PATTERN_SCAN_JSON = REPO_ROOT / "rom_analysis" / "translation_patter
 TRANSLATION_PATTERN_SCAN_MD = REPO_ROOT / "rom_analysis" / "translation_pattern_scan.md"
 TRANSLATION_SCAN_QUEUE_JSON = REPO_ROOT / "rom_analysis" / "translation_scan_capture_queue.json"
 TRANSLATION_SCAN_QUEUE_MD = REPO_ROOT / "rom_analysis" / "translation_scan_capture_queue.md"
+REFERENCE_CAPTURE_PLAN_JSON = REPO_ROOT / "rom_analysis" / "reference_capture_plan.json"
+REFERENCE_CAPTURE_PLAN_MD = REPO_ROOT / "rom_analysis" / "reference_capture_plan.md"
 BROAD_SCAN_PATCHABILITY_JSON = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.json"
 BROAD_SCAN_PATCHABILITY_MD = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
@@ -92,6 +94,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings",
         "- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries",
         "- `translation_scan_capture_queue.md`: focused broad-scan capture queue with readable text labels",
+        "- `reference_capture_plan.md`: transcript/reference-guided manual screen priorities",
         "- `broad_scan_patchability.md`: length-safe broad-scan candidates with v0.4.2 planned bytes",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
@@ -189,6 +192,8 @@ def package() -> dict[str, object]:
         (TRANSLATION_PATTERN_SCAN_JSON, "translation_pattern_scan.json"),
         (TRANSLATION_SCAN_QUEUE_MD, "translation_scan_capture_queue.md"),
         (TRANSLATION_SCAN_QUEUE_JSON, "translation_scan_capture_queue.json"),
+        (REFERENCE_CAPTURE_PLAN_MD, "reference_capture_plan.md"),
+        (REFERENCE_CAPTURE_PLAN_JSON, "reference_capture_plan.json"),
         (BROAD_SCAN_PATCHABILITY_MD, "broad_scan_patchability.md"),
         (BROAD_SCAN_PATCHABILITY_JSON, "broad_scan_patchability.json"),
         (NEXT_GLYPH_EXPANSION_MD, "next_glyph_expansion_plan.md"),
