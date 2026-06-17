@@ -7,6 +7,7 @@ import argparse
 import json
 import subprocess
 import sys
+from pathlib import Path
 
 from rom_utils import REPO_ROOT
 
@@ -20,8 +21,10 @@ PRIMARY_COMMANDS = [
         "rom_analysis/manual_screen_dump_v042/summary.md",
     ],
     ["scripts/generate_manual_capture_status.py"],
+    ["scripts/generate_manual_dump_inventory.py"],
     ["scripts/generate_primary_visual_checklist.py"],
     ["scripts/generate_next_manual_run.py"],
+    ["scripts/generate_patch_progress_dashboard.py"],
 ]
 
 BROAD_COMMANDS = [
@@ -29,7 +32,9 @@ BROAD_COMMANDS = [
     ["scripts/generate_route_proof_status.py"],
     ["scripts/generate_v043_proof_status.py"],
     ["scripts/build_v043_from_broad_scan_proof.py"],
+    ["scripts/generate_manual_dump_inventory.py"],
     ["scripts/generate_next_manual_run.py"],
+    ["scripts/generate_patch_progress_dashboard.py"],
 ]
 
 
@@ -40,6 +45,18 @@ def run(args: list[str]) -> None:
     command = [sys.executable, *args]
     print(" ".join(command))
     subprocess.run(command, cwd=REPO_ROOT, check=True)
+
+
+def command_has_manual_records(args: list[str]) -> bool:
+    if not args or args[0] != "scripts/analyze_manual_screen_dump.py":
+        return True
+    input_dir = REPO_ROOT / "rom_analysis" / "manual_screen_dump"
+    if "--input-dir" in args:
+        index = args.index("--input-dir") + 1
+        input_dir = Path(args[index])
+        if not input_dir.is_absolute():
+            input_dir = REPO_ROOT / input_dir
+    return any(input_dir.glob("manual_frame_*_target_records.tsv"))
 
 
 def print_next_queue_summary(path=NEXT_MANUAL_RUN_JSON) -> None:
@@ -83,6 +100,9 @@ def main() -> int:
         commands.extend(BROAD_COMMANDS)
 
     for command in commands:
+        if not command_has_manual_records(command):
+            print(f"SKIP no manual target records yet: {' '.join(command)}")
+            continue
         run(command)
     print_next_queue_summary()
     print(f"OK: refreshed manual capture reports for phase={args.phase}")
