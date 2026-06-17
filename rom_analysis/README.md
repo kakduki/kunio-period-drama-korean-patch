@@ -21,6 +21,7 @@
 - `chr_bank07_tile_map.json` / `chr_bank07_tile_map.md`: structured CHR bank 07 glyph map with tile indexes, ROM offsets, candidate `+0x7A` PRG bytes, and tile hashes
 - `chr_bank07_patch_inventory.md` / `chr_bank07_patch_inventory.json`: current v0.1 Bank7 patch slot inventory, mapping original CHR tiles to patched glyph slots from `font/char_map.json`
 - `korean_slot_allocation_plan.md` / `korean_slot_allocation_plan.json`: compact Korean glyph-to-CHR-slot plan for the current Bank 1 offset inventory, including planned `+0x7A` PRG bytes
+- `prg_padding_options.md` / `prg_padding_options.json`: compares planned Korean PRG bytes against original candidate byte spans and classifies equal-length vs padding-risk replacements
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis
@@ -58,6 +59,7 @@
 - The compact Korean slot plan for the current Bank 1 inventory needs 18 Hangul syllables (`힘`, `카`, `타`, `나`, `다`, `리`, `헤`, `이`, `시`, `치`, `창`, `약`, `장`, `비`, `돈`, `라`, `프`, `츠`) out of 181 available Bank7 patch slots. This plan is not applied to the ROM yet; it defines the next explicit character allocation needed before PRG text bytes are rewritten.
 - `scripts/build_patch_from_plan.py` applies that compact plan to CHR Bank 07 only and writes `output/kunio_period_drama_korean_plan_v0.2.nes`. The planned build changes 18 glyph slots / 252 bytes, all within `ROM+0x2F020-0x2F13E`, and writes a build report at `output/kunio_period_drama_korean_plan_v0.2_build_report.json`. It still does not rewrite PRG text bytes.
 - `scripts/build_prg_patch_from_plan.py` builds the first conservative PRG+CHR experiment, `output/kunio_period_drama_korean_prg_plan_v0.3.nes`. It starts from the planned Bank7 font ROM and patches only equal-length `runtime-confirmed` PRG targets. The current run applies `ROM+0x07227` (`カタナ` -> `카타나`, `8A 94 99` -> `88 89 8A`) and deliberately skips `ROM+0x071A4` (`ちから` -> `힘`) because it would shrink 3 bytes to 1 byte and needs confirmed padding/control rules.
+- `prg_padding_options.md` confirms direct equal-length replacements are safe candidates for the current `カタナ` -> `카타나` records, while `ちから` -> `힘` remains `needs-padding-rule` because it leaves non-fill tail bytes `88 AA`. Do not apply shortened replacements until FCEUX confirms the renderer's padding/terminator behavior for that record.
 - `font/chr_bank_06_8x16.png` also contains visible numerals/UI-like tiles, but it is more mixed with sprite/background data.
 - Static PPU reference scanning found the most relevant nametable/text-output candidates around:
   - `$2006 PPUADDR`: `ROM+0x1D7FB` through `ROM+0x1D806`, bank 7, CPU approx `$97EB-$97F6`
