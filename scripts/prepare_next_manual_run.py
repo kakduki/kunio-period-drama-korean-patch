@@ -51,6 +51,14 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
     watcher = rel_to_abs(str(action["watcher_lua"]))
     after_capture = [str(command) for command in action.get("after_capture", [])]
     record_visual_review = str(action.get("record_visual_review", ""))
+    confirm_command = ""
+    if action.get("phase") == "primary_v042_visual_review":
+        confirm_command = (
+            "python scripts/confirm_next_primary_visual.py --confirm-visible "
+            f"--screen-context \"{action['screen_hint']} visible\""
+        )
+    elif record_visual_review:
+        confirm_command = record_visual_review
     lines = [
         "Next manual FCEUX capture",
         "",
@@ -76,13 +84,13 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
         "",
         "If the visible screen matches the target, record visual review:",
     ]
-    if record_visual_review:
-        lines.append(f"- {record_visual_review}")
+    if confirm_command:
+        lines.append(f"- {confirm_command}")
     else:
         lines.append("- No visual-review command recorded for this action.")
     lines += [
         "",
-        "After capture:",
+        "After capture if you ran FCEUX/Lua directly instead of the launcher:",
     ]
     lines.extend(f"- {command}" for command in after_capture)
     if powershell:
@@ -92,9 +100,8 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
             f"Set-Location -LiteralPath '{ROOT}'",
             "python scripts/run_next_manual_fceux.py",
         ]
-        if record_visual_review:
-            lines.append(record_visual_review)
-        lines.extend(after_capture)
+        if confirm_command:
+            lines.append(confirm_command)
     return "\n".join(lines) + "\n"
 
 

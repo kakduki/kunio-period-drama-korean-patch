@@ -27,14 +27,17 @@ def main() -> int:
         "python scripts/run_next_manual_fceux.py",
         "does not autoplay through the game",
         "Waiting on the title/opening screen will not create useful patch evidence",
+        "After capture if you ran FCEUX/Lua directly instead of the launcher",
         "python scripts/refresh_after_manual_capture.py --phase primary",
-        "python scripts/record_primary_visual_review.py 0x07227 --confirm",
+        "python scripts/confirm_next_primary_visual.py --confirm-visible",
         "If the visible screen matches the target",
         "Press D to save the dump",
     ]
     missing = [phrase for phrase in required if phrase not in out]
     if missing:
         raise SystemExit(f"prepare_next_manual_run output missing: {', '.join(missing)}")
+    if "python scripts/record_primary_visual_review.py 0x07227 --confirm" in out:
+        raise SystemExit("prepare_next_manual_run should prefer confirm_next_primary_visual for the current primary row")
     print("OK: next manual run helper prints the focused FCEUX capture setup")
     return 0
 
