@@ -1,0 +1,327 @@
+{
+  "plan": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\korean_slot_allocation_plan.json",
+  "font_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_plan_v0.2.nes",
+  "original_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "original_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "patched_md5": "df28465ab0910743f7914ba1e5c63c16",
+  "patched_rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_plan_v0.3.nes",
+  "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_plan_v0.3.ips",
+  "include_evidence": [
+    "runtime-confirmed"
+  ],
+  "applied_count": 1,
+  "skipped_count": 42,
+  "changed_bytes_total": 255,
+  "changed_rom_range": [
+    "0x07227",
+    "0x2F13E"
+  ],
+  "ips_records": 36,
+  "applied": [
+    {
+      "label": "rom_07227_candidate_84",
+      "rom_hit": "0x07227",
+      "source": "カタナ",
+      "korean": "카타나",
+      "old_bytes": "8A 94 99",
+      "new_bytes": "88 89 8A",
+      "evidence_level": "runtime-confirmed"
+    }
+  ],
+  "skipped": [
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "korean": "힘",
+      "reason": "length mismatch planned=1 original=3"
+    },
+    {
+      "label": "watch_rom_0569d_스테이지_7a",
+      "rom_hit": "0x0569D",
+      "source": "はし",
+      "korean": "다리",
+      "reason": "evidence level 'encoding-exact' not selected"
+    },
+    {
+      "label": "watch_rom_0561a_스테이지_7c",
+      "rom_hit": "0x0561A",
+      "source": "はし",
+      "korean": "다리",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "watch_rom_05643_보스_80",
+      "rom_hit": "0x05643",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05644_candidate_7c",
+      "rom_hit": "0x05644",
+      "source": "カタナ",
+      "korean": "카타나",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "watch_rom_057d4_스테이지_8c",
+      "rom_hit": "0x057D4",
+      "source": "はし",
+      "korean": "다리",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05aa3_candidate_77",
+      "rom_hit": "0x05AA3",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05aa5_candidate_77",
+      "rom_hit": "0x05AA5",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05bba_candidate_7a",
+      "rom_hit": "0x05BBA",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05bdf_candidate_7a",
+      "rom_hit": "0x05BDF",
+      "source": "くすり",
+      "korean": "약",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05c09_candidate_7a",
+      "rom_hit": "0x05C09",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_05c69_candidate_7a",
+      "rom_hit": "0x05C69",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_0602e_candidate_8d",
+      "rom_hit": "0x0602E",
+      "source": "そうび",
+      "korean": "장비",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06295_candidate_7c",
+      "rom_hit": "0x06295",
+      "source": "カタナ",
+      "korean": "카타나",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_0631c_candidate_7c",
+      "rom_hit": "0x0631C",
+      "source": "カタナ",
+      "korean": "카타나",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_066fb_candidate_82",
+      "rom_hit": "0x066FB",
+      "source": "ちから",
+      "korean": "힘",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06839_candidate_7e",
+      "rom_hit": "0x06839",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06845_candidate_82",
+      "rom_hit": "0x06845",
+      "source": "ちから",
+      "korean": "힘",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_068c3_candidate_71",
+      "rom_hit": "0x068C3",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_0691e_candidate_80",
+      "rom_hit": "0x0691E",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_069c5_candidate_79",
+      "rom_hit": "0x069C5",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06bc6_candidate_7b",
+      "rom_hit": "0x06BC6",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06bdf_candidate_8d",
+      "rom_hit": "0x06BDF",
+      "source": "そうび",
+      "korean": "장비",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06d1b_candidate_80",
+      "rom_hit": "0x06D1B",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06de3_candidate_80",
+      "rom_hit": "0x06DE3",
+      "source": "おかね",
+      "korean": "돈",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_06fa1_candidate_8d",
+      "rom_hit": "0x06FA1",
+      "source": "そうび",
+      "korean": "장비",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_0736a_candidate_93",
+      "rom_hit": "0x0736A",
+      "source": "ライフ",
+      "korean": "라이프",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "rom_0739d_candidate_93",
+      "rom_hit": "0x0739D",
+      "source": "ライフ",
+      "korean": "라이프",
+      "reason": "evidence level 'static-candidate+pointer' not selected"
+    },
+    {
+      "label": "watch_rom_0562f_보스_80",
+      "rom_hit": "0x0562F",
+      "source": "たついち",
+      "korean": "타츠이치",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "watch_rom_056da_스테이지_80",
+      "rom_hit": "0x056DA",
+      "source": "はし",
+      "korean": "다리",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "watch_rom_0571c_스테이지_78",
+      "rom_hit": "0x0571C",
+      "source": "はし",
+      "korean": "다리",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_058fb_candidate_79",
+      "rom_hit": "0x058FB",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06001_candidate_7e",
+      "rom_hit": "0x06001",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_0635a_candidate_7c",
+      "rom_hit": "0x0635A",
+      "source": "カタナ",
+      "korean": "카타나",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06479_candidate_7f",
+      "rom_hit": "0x06479",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_065b0_candidate_80",
+      "rom_hit": "0x065B0",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06605_candidate_82",
+      "rom_hit": "0x06605",
+      "source": "ちから",
+      "korean": "힘",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06a3d_candidate_79",
+      "rom_hit": "0x06A3D",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06a66_candidate_79",
+      "rom_hit": "0x06A66",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06b4a_candidate_82",
+      "rom_hit": "0x06B4A",
+      "source": "ちから",
+      "korean": "힘",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_06fde_candidate_80",
+      "rom_hit": "0x06FDE",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    },
+    {
+      "label": "rom_0704f_candidate_7a",
+      "rom_hit": "0x0704F",
+      "source": "やり",
+      "korean": "창",
+      "reason": "evidence level 'static-candidate' not selected"
+    }
+  ]
+}
