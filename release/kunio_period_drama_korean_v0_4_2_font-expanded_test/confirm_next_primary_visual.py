@@ -4,11 +4,25 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 
 from preflight_manual_fceux import load_next_manual_context
 from rom_utils import REPO_ROOT
+
+
+PRIMARY_VISUAL_CHECKLIST = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
+
+
+def manual_record_count(target: object) -> int:
+    if not PRIMARY_VISUAL_CHECKLIST.exists():
+        return 0
+    payload = json.loads(PRIMARY_VISUAL_CHECKLIST.read_text(encoding="utf-8"))
+    for row in payload.get("rows", []):
+        if isinstance(row, dict) and row.get("rom_hit") == target:
+            return int(row.get("record_file_count", 0) or 0)
+    return 0
 
 
 def build_commands(action: dict[str, object], screen_context: str) -> list[list[str]]:
@@ -50,6 +64,11 @@ def main() -> int:
     screen_context = args.screen_context or f"{action['screen_hint']} visible"
     commands = build_commands(action, screen_context)
     print(f"Confirming primary visual review: {action['target']} / {action['group']}")
+    record_count = manual_record_count(action["target"])
+    if record_count == 0:
+        print("WARNING: no manual dump record is currently indexed for this target. Press D in FCEUX before confirming when possible.")
+    else:
+        print(f"Manual dump records indexed for this target: {record_count}")
     for command in commands:
         print(" ".join([sys.executable, *command]))
 

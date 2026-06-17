@@ -29,6 +29,7 @@ def main() -> int:
     out = result.stdout
     required = [
         "Confirming primary visual review: 0x07227 / Katana",
+        "WARNING: no manual dump record is currently indexed",
         "record_primary_visual_review.py 0x07227 --confirm",
         "refresh_after_manual_capture.py --phase primary",
     ]
