@@ -1,0 +1,1196 @@
+{
+  "source": {
+    "block_map": "rom_analysis\\bank1_text_block_map.json",
+    "inventory": "rom_analysis\\bank1_offset_inventory.json",
+    "v04_targets": "rom_analysis\\v04_equal_length_fceux_targets.json",
+    "v04_build_report": "output\\kunio_period_drama_korean_prg_plan_v0.4_equal_length_static_build_report.json",
+    "v04_ppu_analysis": "rom_analysis\\fceux_v04_ppu_watch\\analysis_v2_v04_targets.md"
+  },
+  "summary": {
+    "block_count": 73,
+    "blocks_with_targets": 7,
+    "blocks_without_targets": 66,
+    "blocks_with_runtime_active_match": 0,
+    "blocks_with_v04_ppu_patched_sequence": 5,
+    "role_counts": {
+      "event/dialogue-related": 6,
+      "mixed: event/dialogue-related + items/equipment": 1,
+      "unidentified": 66
+    }
+  },
+  "blocks": [
+    {
+      "index": 1,
+      "rom_range": [
+        "0x05610",
+        "0x0561F"
+      ],
+      "prg_start": "0x05600",
+      "length": 15,
+      "bytes": "96 87 96 8C 96 91 96 96 96 9B 96 88 96 9F 8B",
+      "identification": "event/dialogue-related",
+      "identification_evidence": "static-candidate+pointer+ppu-sequence",
+      "target_count": 1,
+      "targets": [
+        {
+          "label": "watch_rom_0561a_스테이지_7c",
+          "rom_hit": "0x0561A",
+          "category_group": "event/dialogue-related",
+          "category": "스테이지",
+          "source": "はし",
+          "korean": "다리",
+          "expected_bytes": "96 88",
+          "evidence_level": "static-candidate+pointer",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "8B 8C",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": true,
+          "ppu_note": "ambiguous shared sequence"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rom_range": [
+        "0x05620",
+        "0x05629"
+      ],
+      "prg_start": "0x05610",
+      "length": 9,
+      "bytes": "A8 87 0A AB 83 1C AE 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 3,
+      "rom_range": [
+        "0x0562A",
+        "0x05633"
+      ],
+      "prg_start": "0x0561A",
+      "length": 9,
+      "bytes": "0C B6 83 87 91 90 92 82 91",
+      "identification": "event/dialogue-related",
+      "identification_evidence": "static-candidate",
+      "target_count": 1,
+      "targets": [
+        {
+          "label": "watch_rom_0562f_보스_80",
+          "rom_hit": "0x0562F",
+          "category_group": "event/dialogue-related",
+          "category": "보스",
+          "source": "たついち",
+          "korean": "타츠이치",
+          "expected_bytes": "90 92 82 91",
+          "evidence_level": "static-candidate",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "89 98 8E 90",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": false,
+          "ppu_note": ""
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "rom_range": [
+        "0x05634",
+        "0x05637"
+      ],
+      "prg_start": "0x05624",
+      "length": 3,
+      "bytes": "90 92 0C",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 5,
+      "rom_range": [
+        "0x05639",
+        "0x0563D"
+      ],
+      "prg_start": "0x05629",
+      "length": 4,
+      "bytes": "A4 0A AB 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 6,
+      "rom_range": [
+        "0x0563E",
+        "0x05642"
+      ],
+      "prg_start": "0x0562E",
+      "length": 4,
+      "bytes": "0C AE AB 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 7,
+      "rom_range": [
+        "0x05643",
+        "0x05647"
+      ],
+      "prg_start": "0x05633",
+      "length": 4,
+      "bytes": "9D 82 8C 91",
+      "identification": "mixed: event/dialogue-related + items/equipment",
+      "identification_evidence": "static-candidate+pointer",
+      "target_count": 2,
+      "targets": [
+        {
+          "label": "watch_rom_05643_보스_80",
+          "rom_hit": "0x05643",
+          "category_group": "event/dialogue-related",
+          "category": "보스",
+          "source": "へいしち",
+          "korean": "헤이시치",
+          "expected_bytes": "9D 82 8C 91",
+          "evidence_level": "static-candidate+pointer",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "8D 8E 8F 90",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": false,
+          "ppu_note": ""
+        },
+        {
+          "label": "rom_05644_candidate_7c",
+          "rom_hit": "0x05644",
+          "category_group": "items/equipment",
+          "category": "무기",
+          "source": "カタナ",
+          "korean": "카타나",
+          "expected_bytes": "82 8C 91",
+          "evidence_level": "static-candidate+pointer",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": false,
+          "v04_patched_bytes": "",
+          "v04_patch_status": "skipped",
+          "v04_skip_reason": "overlaps already-applied target watch_rom_05643_보스_80 at 0x05643",
+          "ppu_patched_sequence_seen": false,
+          "ppu_note": ""
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "rom_range": [
+        "0x05648",
+        "0x0564C"
+      ],
+      "prg_start": "0x05638",
+      "length": 4,
+      "bytes": "87 AE 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 9,
+      "rom_range": [
+        "0x0564D",
+        "0x05651"
+      ],
+      "prg_start": "0x0563D",
+      "length": 4,
+      "bytes": "90 A2 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 10,
+      "rom_range": [
+        "0x05652",
+        "0x05656"
+      ],
+      "prg_start": "0x05642",
+      "length": 4,
+      "bytes": "0A AE 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 11,
+      "rom_range": [
+        "0x05657",
+        "0x0565B"
+      ],
+      "prg_start": "0x05647",
+      "length": 4,
+      "bytes": "07 AE 5A 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 12,
+      "rom_range": [
+        "0x0565C",
+        "0x05660"
+      ],
+      "prg_start": "0x0564C",
+      "length": 4,
+      "bytes": "82 91 1D 82",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 13,
+      "rom_range": [
+        "0x05661",
+        "0x05665"
+      ],
+      "prg_start": "0x05651",
+      "length": 4,
+      "bytes": "AB 88 1D 82",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 14,
+      "rom_range": [
+        "0x05666",
+        "0x0566A"
+      ],
+      "prg_start": "0x05656",
+      "length": 4,
+      "bytes": "92 A9 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 15,
+      "rom_range": [
+        "0x0566B",
+        "0x05674"
+      ],
+      "prg_start": "0x0565B",
+      "length": 9,
+      "bytes": "81 8B 0C AB 83 A6 99 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 16,
+      "rom_range": [
+        "0x05675",
+        "0x05679"
+      ],
+      "prg_start": "0x05665",
+      "length": 4,
+      "bytes": "94 A7 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 17,
+      "rom_range": [
+        "0x0567A",
+        "0x0568C"
+      ],
+      "prg_start": "0x0566A",
+      "length": 18,
+      "bytes": "9A AE 8C AB 83 96 0B 84 A3 AE 9D 82 A9 9F AE 95 AE 1A",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 18,
+      "rom_range": [
+        "0x0568D",
+        "0x05691"
+      ],
+      "prg_start": "0x0567D",
+      "length": 4,
+      "bytes": "85 1B 95 90",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 19,
+      "rom_range": [
+        "0x05692",
+        "0x05696"
+      ],
+      "prg_start": "0x05682",
+      "length": 4,
+      "bytes": "9F 92 A3 94",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 20,
+      "rom_range": [
+        "0x05697",
+        "0x0569A"
+      ],
+      "prg_start": "0x05687",
+      "length": 3,
+      "bytes": "85 8A 94",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 21,
+      "rom_range": [
+        "0x0569C",
+        "0x0569F"
+      ],
+      "prg_start": "0x0568C",
+      "length": 3,
+      "bytes": "85 A0 92",
+      "identification": "event/dialogue-related",
+      "identification_evidence": "encoding-exact+ppu-sequence",
+      "target_count": 1,
+      "targets": [
+        {
+          "label": "watch_rom_0569d_스테이지_7a",
+          "rom_hit": "0x0569D",
+          "category_group": "event/dialogue-related",
+          "category": "스테이지",
+          "source": "はし",
+          "korean": "다리",
+          "expected_bytes": "A0 92",
+          "evidence_level": "encoding-exact",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "8B 8C",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": true,
+          "ppu_note": "ambiguous shared sequence"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "rom_range": [
+        "0x056A1",
+        "0x056A4"
+      ],
+      "prg_start": "0x05691",
+      "length": 3,
+      "bytes": "85 A3 AE",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 23,
+      "rom_range": [
+        "0x056A6",
+        "0x056AF"
+      ],
+      "prg_start": "0x05696",
+      "length": 9,
+      "bytes": "A7 85 91 B2 AE 8B AE 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 24,
+      "rom_range": [
+        "0x056B0",
+        "0x056C5"
+      ],
+      "prg_start": "0x056A0",
+      "length": 21,
+      "bytes": "05 7B 19 7B 0F 7B 14 7B 0A 7B AC 96 A5 87 0C AB 83 82 94 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 25,
+      "rom_range": [
+        "0x056C6",
+        "0x056CA"
+      ],
+      "prg_start": "0x056B6",
+      "length": 4,
+      "bytes": "9F 8B 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 26,
+      "rom_range": [
+        "0x056CB",
+        "0x056CF"
+      ],
+      "prg_start": "0x056BB",
+      "length": 4,
+      "bytes": "90 A3 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 27,
+      "rom_range": [
+        "0x056D0",
+        "0x056D4"
+      ],
+      "prg_start": "0x056C0",
+      "length": 4,
+      "bytes": "8B 82 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 28,
+      "rom_range": [
+        "0x056D5",
+        "0x056DE"
+      ],
+      "prg_start": "0x056C5",
+      "length": 9,
+      "bytes": "9A 07 99 8D 89 9A 8C 0F 83",
+      "identification": "event/dialogue-related",
+      "identification_evidence": "static-candidate+ppu-sequence",
+      "target_count": 1,
+      "targets": [
+        {
+          "label": "watch_rom_056da_스테이지_80",
+          "rom_hit": "0x056DA",
+          "category_group": "event/dialogue-related",
+          "category": "스테이지",
+          "source": "はし",
+          "korean": "다리",
+          "expected_bytes": "9A 8C",
+          "evidence_level": "static-candidate",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "8B 8C",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": true,
+          "ppu_note": "ambiguous shared sequence"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "rom_range": [
+        "0x056DF",
+        "0x056E2"
+      ],
+      "prg_start": "0x056CF",
+      "length": 3,
+      "bytes": "8A 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 30,
+      "rom_range": [
+        "0x056E4",
+        "0x056E8"
+      ],
+      "prg_start": "0x056D4",
+      "length": 4,
+      "bytes": "9A AE 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 31,
+      "rom_range": [
+        "0x056E9",
+        "0x056F2"
+      ],
+      "prg_start": "0x056D9",
+      "length": 9,
+      "bytes": "8A 83 84 A3 AE 9B A7 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 32,
+      "rom_range": [
+        "0x056F3",
+        "0x056F7"
+      ],
+      "prg_start": "0x056E3",
+      "length": 4,
+      "bytes": "9B 13 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 33,
+      "rom_range": [
+        "0x056F8",
+        "0x056FC"
+      ],
+      "prg_start": "0x056E8",
+      "length": 4,
+      "bytes": "81 8C 1D 84",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 34,
+      "rom_range": [
+        "0x056FD",
+        "0x05701"
+      ],
+      "prg_start": "0x056ED",
+      "length": 4,
+      "bytes": "1D AE 8C 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 35,
+      "rom_range": [
+        "0x05702",
+        "0x0570B"
+      ],
+      "prg_start": "0x056F2",
+      "length": 9,
+      "bytes": "8B 82 90 AB 83 A3 84 A3 AE",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 36,
+      "rom_range": [
+        "0x0570C",
+        "0x05715"
+      ],
+      "prg_start": "0x056FC",
+      "length": 9,
+      "bytes": "A1 A7 0A AB 83 8B 10 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 37,
+      "rom_range": [
+        "0x05716",
+        "0x05724"
+      ],
+      "prg_start": "0x05706",
+      "length": 14,
+      "bytes": "8E 87 0A AB 83 A6 92 84 A3 AE 94 A3 9F 92",
+      "identification": "event/dialogue-related",
+      "identification_evidence": "static-candidate+ppu-sequence",
+      "target_count": 1,
+      "targets": [
+        {
+          "label": "watch_rom_0571c_스테이지_78",
+          "rom_hit": "0x0571C",
+          "category_group": "event/dialogue-related",
+          "category": "스테이지",
+          "source": "はし",
+          "korean": "다리",
+          "expected_bytes": "92 84",
+          "evidence_level": "static-candidate",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "8B 8C",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": true,
+          "ppu_note": "ambiguous shared sequence"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "rom_range": [
+        "0x05725",
+        "0x05729"
+      ],
+      "prg_start": "0x05715",
+      "length": 4,
+      "bytes": "88 9F 9A 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 39,
+      "rom_range": [
+        "0x0572A",
+        "0x05738"
+      ],
+      "prg_start": "0x0571A",
+      "length": 14,
+      "bytes": "AC 90 0A AB 83 83 A7 84 A3 AE 94 A2 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 40,
+      "rom_range": [
+        "0x05739",
+        "0x0573D"
+      ],
+      "prg_start": "0x05729",
+      "length": 4,
+      "bytes": "85 99 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 41,
+      "rom_range": [
+        "0x0573E",
+        "0x05742"
+      ],
+      "prg_start": "0x0572E",
+      "length": 4,
+      "bytes": "A4 90 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 42,
+      "rom_range": [
+        "0x05743",
+        "0x05747"
+      ],
+      "prg_start": "0x05733",
+      "length": 4,
+      "bytes": "82 8F AB 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 43,
+      "rom_range": [
+        "0x05748",
+        "0x0574B"
+      ],
+      "prg_start": "0x05738",
+      "length": 3,
+      "bytes": "A8 9D 82",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 44,
+      "rom_range": [
+        "0x0574D",
+        "0x05751"
+      ],
+      "prg_start": "0x0573D",
+      "length": 4,
+      "bytes": "91 84 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 45,
+      "rom_range": [
+        "0x05752",
+        "0x05756"
+      ],
+      "prg_start": "0x05742",
+      "length": 4,
+      "bytes": "8D A0 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 46,
+      "rom_range": [
+        "0x05757",
+        "0x05760"
+      ],
+      "prg_start": "0x05747",
+      "length": 9,
+      "bytes": "8C AE 99 8D 89 A1 98 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 47,
+      "rom_range": [
+        "0x05761",
+        "0x05765"
+      ],
+      "prg_start": "0x05751",
+      "length": 4,
+      "bytes": "09 AE 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 48,
+      "rom_range": [
+        "0x05766",
+        "0x0576A"
+      ],
+      "prg_start": "0x05756",
+      "length": 4,
+      "bytes": "85 82 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 49,
+      "rom_range": [
+        "0x0576B",
+        "0x0576F"
+      ],
+      "prg_start": "0x0575B",
+      "length": 4,
+      "bytes": "9D A3 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 50,
+      "rom_range": [
+        "0x05770",
+        "0x05774"
+      ],
+      "prg_start": "0x05760",
+      "length": 4,
+      "bytes": "A6 90 AB 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 51,
+      "rom_range": [
+        "0x05775",
+        "0x0577E"
+      ],
+      "prg_start": "0x05765",
+      "length": 9,
+      "bytes": "86 A2 0A AB 83 90 87 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 52,
+      "rom_range": [
+        "0x0577F",
+        "0x05783"
+      ],
+      "prg_start": "0x0576F",
+      "length": 4,
+      "bytes": "9B 8B 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 53,
+      "rom_range": [
+        "0x05784",
+        "0x05787"
+      ],
+      "prg_start": "0x05774",
+      "length": 3,
+      "bytes": "8B 9D 82",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 54,
+      "rom_range": [
+        "0x05789",
+        "0x0578C"
+      ],
+      "prg_start": "0x05779",
+      "length": 3,
+      "bytes": "87 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 55,
+      "rom_range": [
+        "0x0578E",
+        "0x05792"
+      ],
+      "prg_start": "0x0577E",
+      "length": 4,
+      "bytes": "99 A8 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 56,
+      "rom_range": [
+        "0x05793",
+        "0x05797"
+      ],
+      "prg_start": "0x05783",
+      "length": 4,
+      "bytes": "8A 83 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 57,
+      "rom_range": [
+        "0x05798",
+        "0x0579C"
+      ],
+      "prg_start": "0x05788",
+      "length": 4,
+      "bytes": "8D 84 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 58,
+      "rom_range": [
+        "0x0579D",
+        "0x057A6"
+      ],
+      "prg_start": "0x0578D",
+      "length": 9,
+      "bytes": "90 89 0C AB 83 83 A2 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 59,
+      "rom_range": [
+        "0x057A7",
+        "0x057AB"
+      ],
+      "prg_start": "0x05797",
+      "length": 4,
+      "bytes": "1E 1C 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 60,
+      "rom_range": [
+        "0x057AC",
+        "0x057BA"
+      ],
+      "prg_start": "0x0579C",
+      "length": 14,
+      "bytes": "A5 83 84 A3 AE A6 8C 0A AB 83 99 A8 9D 82",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 61,
+      "rom_range": [
+        "0x057BB",
+        "0x057C4"
+      ],
+      "prg_start": "0x057AB",
+      "length": 9,
+      "bytes": "9A 91 0A AB 83 9B 13 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 62,
+      "rom_range": [
+        "0x057C5",
+        "0x057C9"
+      ],
+      "prg_start": "0x057B5",
+      "length": 4,
+      "bytes": "88 A0 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 63,
+      "rom_range": [
+        "0x057CA",
+        "0x057CE"
+      ],
+      "prg_start": "0x057BA",
+      "length": 4,
+      "bytes": "90 AB 1D 84",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 64,
+      "rom_range": [
+        "0x057CF",
+        "0x057D3"
+      ],
+      "prg_start": "0x057BF",
+      "length": 4,
+      "bytes": "83 A7 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 65,
+      "rom_range": [
+        "0x057D4",
+        "0x057D8"
+      ],
+      "prg_start": "0x057C4",
+      "length": 4,
+      "bytes": "A6 98 8D 89",
+      "identification": "event/dialogue-related",
+      "identification_evidence": "static-candidate+pointer+ppu-sequence",
+      "target_count": 1,
+      "targets": [
+        {
+          "label": "watch_rom_057d4_스테이지_8c",
+          "rom_hit": "0x057D4",
+          "category_group": "event/dialogue-related",
+          "category": "스테이지",
+          "source": "はし",
+          "korean": "다리",
+          "expected_bytes": "A6 98",
+          "evidence_level": "static-candidate+pointer",
+          "runtime_hits": 0,
+          "runtime_active_expected_matches": 0,
+          "v04_target": true,
+          "v04_patched_bytes": "8B 8C",
+          "v04_patch_status": "applied",
+          "v04_skip_reason": "",
+          "ppu_patched_sequence_seen": true,
+          "ppu_note": "ambiguous shared sequence"
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "rom_range": [
+        "0x057D9",
+        "0x057DD"
+      ],
+      "prg_start": "0x057C9",
+      "length": 4,
+      "bytes": "A6 8C 9F 92",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 67,
+      "rom_range": [
+        "0x057DE",
+        "0x057E2"
+      ],
+      "prg_start": "0x057CE",
+      "length": 4,
+      "bytes": "93 A9 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 68,
+      "rom_range": [
+        "0x057E3",
+        "0x057E7"
+      ],
+      "prg_start": "0x057D3",
+      "length": 4,
+      "bytes": "8D A4 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 69,
+      "rom_range": [
+        "0x057E8",
+        "0x057F6"
+      ],
+      "prg_start": "0x057D8",
+      "length": 14,
+      "bytes": "A3 A8 99 8D 89 82 8C 0A AB 83 8B 88 1D 84",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 70,
+      "rom_range": [
+        "0x057F7",
+        "0x05800"
+      ],
+      "prg_start": "0x057E7",
+      "length": 9,
+      "bytes": "83 A7 0C AB 83 8C 1A 8B 88",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 71,
+      "rom_range": [
+        "0x05801",
+        "0x05805"
+      ],
+      "prg_start": "0x057F1",
+      "length": 4,
+      "bytes": "8A 8D 87 91",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 72,
+      "rom_range": [
+        "0x05806",
+        "0x0580A"
+      ],
+      "prg_start": "0x057F6",
+      "length": 4,
+      "bytes": "8C AB 8D 89",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    },
+    {
+      "index": 73,
+      "rom_range": [
+        "0x0580B",
+        "0x05810"
+      ],
+      "prg_start": "0x057FB",
+      "length": 5,
+      "bytes": "0C B6 AE 0F 83",
+      "identification": "unidentified",
+      "identification_evidence": "no translation-data target in this block yet",
+      "target_count": 0,
+      "targets": []
+    }
+  ]
+}
