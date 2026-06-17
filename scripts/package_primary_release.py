@@ -44,6 +44,7 @@ PRIMARY_PATCH_CONTENTS_MD = REPO_ROOT / "rom_analysis" / "primary_patch_contents
 FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"
 FONT_EXPANSION_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
+VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_visual_review.py"
 RELEASE_ROOT = REPO_ROOT / "release"
 
 
@@ -89,6 +90,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report",
         "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
+        "- `record_visual_review.py`: helper to mark visual review rows after a manual screen check",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -195,6 +197,7 @@ def package() -> dict[str, object]:
         (FONT_EXPANSION_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"),
         (FONT_EXPANSION_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
+        (VISUAL_REVIEW_RECORDER, "record_visual_review.py"),
     ]:
         dst = bundle_dir / name
         safe_copy(src, dst)

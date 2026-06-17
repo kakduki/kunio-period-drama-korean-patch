@@ -43,6 +43,7 @@ KEY_PYTHON = [
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
+    "scripts/record_visual_review.py",
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
     "scripts/test_run_fceux_budget.py",

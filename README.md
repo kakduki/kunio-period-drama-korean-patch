@@ -80,7 +80,13 @@ python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_scr
 
 broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio_manual_broad_scan_dump.lua`를 사용합니다.
 요약 결과는 `rom_analysis/manual_screen_dump_broad_scan/summary.md`와 `summary.json`에 저장됩니다.
-화면 맥락까지 맞는 후보는 `rom_analysis/manual_screen_dump_broad_scan/visual_review.json`에서 `visual_context_confirmed`를 `true`로 바꾼 뒤 `python scripts/build_v043_from_broad_scan_proof.py`로 v0.4.3 후보를 만들 수 있습니다.
+화면 맥락까지 맞는 후보는 아래처럼 기록한 뒤 `python scripts/build_v043_from_broad_scan_proof.py`로 v0.4.3 후보를 만들 수 있습니다.
+
+```powershell
+python scripts/record_visual_review.py 0x0440C --confirm --screen-context "blacksmith label visible"
+```
+
+이 도구는 `visual_context_confirmed`를 갱신하면서 CPU read 증거가 아직 없으면 경고합니다.
 
 ## 현재 최우선 확인 항목
 
