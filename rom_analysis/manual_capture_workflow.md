@@ -50,8 +50,20 @@ python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_scr
 ## Broad v0.5 Candidate Read-Watch
 
 For future v0.5 candidates from `rom_analysis/broad_scan_patchability.md`,
-use the base ROM first and manually reach the related screen. Then run a short
-read-watch against original bytes:
+use the base ROM first and manually reach the related screen. Then run the
+manual wrapper:
+
+```text
+lua/kunio_manual_broad_scan_dump.lua
+```
+
+Summarize the latest broad-scan dump:
+
+```powershell
+python scripts/analyze_broad_scan_manual_dump.py
+```
+
+For a short read-watch run instead of a one-shot dump, use:
 
 ```powershell
 python scripts/run_fceux_lua_analysis.py --lua-script lua/kunio_bank1_watch.lua --target-lua lua/kunio_broad_scan_candidate_targets.lua --frames 900 --timeout 60 --final-output rom_analysis/fceux_broad_scan_candidates --clean-output --no-dump-hex --no-dump-bin
