@@ -20,6 +20,7 @@
 - `font_mapping_notes.md`: preliminary visual CHR bank 07 tile mapping
 - `chr_bank07_tile_map.json` / `chr_bank07_tile_map.md`: structured CHR bank 07 glyph map with tile indexes, ROM offsets, candidate `+0x7A` PRG bytes, and tile hashes
 - `chr_bank07_patch_inventory.md` / `chr_bank07_patch_inventory.json`: current v0.1 Bank7 patch slot inventory, mapping original CHR tiles to patched glyph slots from `font/char_map.json`
+- `korean_slot_allocation_plan.md` / `korean_slot_allocation_plan.json`: compact Korean glyph-to-CHR-slot plan for the current Bank 1 offset inventory, including planned `+0x7A` PRG bytes
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis
@@ -54,6 +55,7 @@
 - CHR ROM starts at `ROM+0x20010`; the 8KB rendered CHR bank 07 used by the current font analysis covers `ROM+0x2E010-0x3000F`. The structured map records `あ=tile 0x101/ROM+0x2F020`, `ま=tile 0x120/ROM+0x2F210`, `ん=tile 0x12F/ROM+0x2F300`, digits `0x1C0-0x1C9`, and Latin capitals `0x1E1-0x1FA`.
 - The current v0.1 patch inventory writes 181 8x8 slots, `tile 0x101-0x1B5` (`ROM+0x2F020-0x2FB6F`). All 181 slots changed in the generated patched ROM, with 2,433 changed bytes. Reference digit tiles `0x1C0-0x1C9` and uppercase Latin tiles `0x1E1-0x1FA` have `0` changed bytes, so the current Bank7 font patch does not overwrite those reference ranges.
 - The current slot assignment is mechanical `char_map.json` order, so `tile 0x101` maps from original `あ` to patched `!`, then punctuation/digits/Latin before Hangul syllables. This is useful for reproducibility, but final text patching still needs an explicit character-to-PRG-byte allocation plan before translating strings.
+- The compact Korean slot plan for the current Bank 1 inventory needs 18 Hangul syllables (`힘`, `카`, `타`, `나`, `다`, `리`, `헤`, `이`, `시`, `치`, `창`, `약`, `장`, `비`, `돈`, `라`, `프`, `츠`) out of 181 available Bank7 patch slots. This plan is not applied to the ROM yet; it defines the next explicit character allocation needed before PRG text bytes are rewritten.
 - `font/chr_bank_06_8x16.png` also contains visible numerals/UI-like tiles, but it is more mixed with sprite/background data.
 - Static PPU reference scanning found the most relevant nametable/text-output candidates around:
   - `$2006 PPUADDR`: `ROM+0x1D7FB` through `ROM+0x1D806`, bank 7, CPU approx `$97EB-$97F6`

@@ -1,0 +1,1026 @@
+{
+  "source": "rom_analysis\\bank1_offset_inventory.json",
+  "patch_tile_range": [
+    "0x101",
+    "0x1B5"
+  ],
+  "available_slots": 181,
+  "required_glyph_count": 18,
+  "slots": [
+    {
+      "slot_index": 0,
+      "glyph": "힘",
+      "tile": "0x101",
+      "rom_offset": "0x2F020",
+      "prg_plus_0x7a_byte": "0x87",
+      "used_by_labels": [
+        "rom_071a4_candidate_82",
+        "rom_066fb_candidate_82",
+        "rom_06845_candidate_82",
+        "rom_06605_candidate_82",
+        "rom_06b4a_candidate_82"
+      ],
+      "currently_at_char_map_index": 264,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 1,
+      "glyph": "카",
+      "tile": "0x102",
+      "rom_offset": "0x2F030",
+      "prg_plus_0x7a_byte": "0x88",
+      "used_by_labels": [
+        "rom_07227_candidate_84",
+        "rom_05644_candidate_7c",
+        "rom_06295_candidate_7c",
+        "rom_0631c_candidate_7c",
+        "rom_0635a_candidate_7c"
+      ],
+      "currently_at_char_map_index": null,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 2,
+      "glyph": "타",
+      "tile": "0x103",
+      "rom_offset": "0x2F040",
+      "prg_plus_0x7a_byte": "0x89",
+      "used_by_labels": [
+        "rom_07227_candidate_84",
+        "rom_05644_candidate_7c",
+        "rom_06295_candidate_7c",
+        "rom_0631c_candidate_7c",
+        "watch_rom_0562f_보스_80",
+        "rom_0635a_candidate_7c"
+      ],
+      "currently_at_char_map_index": 235,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 3,
+      "glyph": "나",
+      "tile": "0x104",
+      "rom_offset": "0x2F050",
+      "prg_plus_0x7a_byte": "0x8A",
+      "used_by_labels": [
+        "rom_07227_candidate_84",
+        "rom_05644_candidate_7c",
+        "rom_06295_candidate_7c",
+        "rom_0631c_candidate_7c",
+        "rom_0635a_candidate_7c"
+      ],
+      "currently_at_char_map_index": null,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 4,
+      "glyph": "다",
+      "tile": "0x105",
+      "rom_offset": "0x2F060",
+      "prg_plus_0x7a_byte": "0x8B",
+      "used_by_labels": [
+        "watch_rom_0569d_스테이지_7a",
+        "watch_rom_0561a_스테이지_7c",
+        "watch_rom_057d4_스테이지_8c",
+        "watch_rom_056da_스테이지_80",
+        "watch_rom_0571c_스테이지_78"
+      ],
+      "currently_at_char_map_index": 101,
+      "currently_at_tile": "0x166"
+    },
+    {
+      "slot_index": 5,
+      "glyph": "리",
+      "tile": "0x106",
+      "rom_offset": "0x2F070",
+      "prg_plus_0x7a_byte": "0x8C",
+      "used_by_labels": [
+        "watch_rom_0569d_스테이지_7a",
+        "watch_rom_0561a_스테이지_7c",
+        "watch_rom_057d4_스테이지_8c",
+        "watch_rom_056da_스테이지_80",
+        "watch_rom_0571c_스테이지_78"
+      ],
+      "currently_at_char_map_index": 127,
+      "currently_at_tile": "0x180"
+    },
+    {
+      "slot_index": 6,
+      "glyph": "헤",
+      "tile": "0x107",
+      "rom_offset": "0x2F080",
+      "prg_plus_0x7a_byte": "0x8D",
+      "used_by_labels": [
+        "watch_rom_05643_보스_80"
+      ],
+      "currently_at_char_map_index": 256,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 7,
+      "glyph": "이",
+      "tile": "0x108",
+      "rom_offset": "0x2F090",
+      "prg_plus_0x7a_byte": "0x8E",
+      "used_by_labels": [
+        "watch_rom_05643_보스_80",
+        "rom_0736a_candidate_93",
+        "rom_0739d_candidate_93",
+        "watch_rom_0562f_보스_80"
+      ],
+      "currently_at_char_map_index": 201,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 8,
+      "glyph": "시",
+      "tile": "0x109",
+      "rom_offset": "0x2F0A0",
+      "prg_plus_0x7a_byte": "0x8F",
+      "used_by_labels": [
+        "watch_rom_05643_보스_80"
+      ],
+      "currently_at_char_map_index": 180,
+      "currently_at_tile": "0x1B5"
+    },
+    {
+      "slot_index": 9,
+      "glyph": "치",
+      "tile": "0x10A",
+      "rom_offset": "0x2F0B0",
+      "prg_plus_0x7a_byte": "0x90",
+      "used_by_labels": [
+        "watch_rom_05643_보스_80",
+        "watch_rom_0562f_보스_80"
+      ],
+      "currently_at_char_map_index": 228,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 10,
+      "glyph": "창",
+      "tile": "0x10B",
+      "rom_offset": "0x2F0C0",
+      "prg_plus_0x7a_byte": "0x91",
+      "used_by_labels": [
+        "rom_05aa3_candidate_77",
+        "rom_05aa5_candidate_77",
+        "rom_05bba_candidate_7a",
+        "rom_05c09_candidate_7a",
+        "rom_05c69_candidate_7a",
+        "rom_06839_candidate_7e",
+        "rom_068c3_candidate_71",
+        "rom_0691e_candidate_80",
+        "rom_069c5_candidate_79",
+        "rom_06bc6_candidate_7b",
+        "rom_06d1b_candidate_80",
+        "rom_058fb_candidate_79",
+        "rom_06001_candidate_7e",
+        "rom_06479_candidate_7f",
+        "rom_065b0_candidate_80",
+        "rom_06a3d_candidate_79",
+        "rom_06a66_candidate_79",
+        "rom_06fde_candidate_80",
+        "rom_0704f_candidate_7a"
+      ],
+      "currently_at_char_map_index": 222,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 11,
+      "glyph": "약",
+      "tile": "0x10C",
+      "rom_offset": "0x2F0D0",
+      "prg_plus_0x7a_byte": "0x92",
+      "used_by_labels": [
+        "rom_05bdf_candidate_7a"
+      ],
+      "currently_at_char_map_index": 185,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 12,
+      "glyph": "장",
+      "tile": "0x10D",
+      "rom_offset": "0x2F0E0",
+      "prg_plus_0x7a_byte": "0x93",
+      "used_by_labels": [
+        "rom_0602e_candidate_8d",
+        "rom_06bdf_candidate_8d",
+        "rom_06fa1_candidate_8d"
+      ],
+      "currently_at_char_map_index": 209,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 13,
+      "glyph": "비",
+      "tile": "0x10E",
+      "rom_offset": "0x2F0F0",
+      "prg_plus_0x7a_byte": "0x94",
+      "used_by_labels": [
+        "rom_0602e_candidate_8d",
+        "rom_06bdf_candidate_8d",
+        "rom_06fa1_candidate_8d"
+      ],
+      "currently_at_char_map_index": 158,
+      "currently_at_tile": "0x19F"
+    },
+    {
+      "slot_index": 14,
+      "glyph": "돈",
+      "tile": "0x10F",
+      "rom_offset": "0x2F100",
+      "prg_plus_0x7a_byte": "0x95",
+      "used_by_labels": [
+        "rom_06de3_candidate_80"
+      ],
+      "currently_at_char_map_index": 106,
+      "currently_at_tile": "0x16B"
+    },
+    {
+      "slot_index": 15,
+      "glyph": "라",
+      "tile": "0x110",
+      "rom_offset": "0x2F110",
+      "prg_plus_0x7a_byte": "0x96",
+      "used_by_labels": [
+        "rom_0736a_candidate_93",
+        "rom_0739d_candidate_93"
+      ],
+      "currently_at_char_map_index": 115,
+      "currently_at_tile": "0x174"
+    },
+    {
+      "slot_index": 16,
+      "glyph": "프",
+      "tile": "0x111",
+      "rom_offset": "0x2F120",
+      "prg_plus_0x7a_byte": "0x97",
+      "used_by_labels": [
+        "rom_0736a_candidate_93",
+        "rom_0739d_candidate_93"
+      ],
+      "currently_at_char_map_index": 249,
+      "currently_at_tile": null
+    },
+    {
+      "slot_index": 17,
+      "glyph": "츠",
+      "tile": "0x112",
+      "rom_offset": "0x2F130",
+      "prg_plus_0x7a_byte": "0x98",
+      "used_by_labels": [
+        "watch_rom_0562f_보스_80"
+      ],
+      "currently_at_char_map_index": 227,
+      "currently_at_tile": null
+    }
+  ],
+  "targets": [
+    {
+      "label": "rom_071a4_candidate_82",
+      "evidence_level": "runtime-confirmed",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "korean": "힘",
+      "required_glyphs": [
+        "힘"
+      ],
+      "planned_prg_bytes": [
+        "0x87"
+      ],
+      "original_expected_bytes": "93 88 AA"
+    },
+    {
+      "label": "rom_07227_candidate_84",
+      "evidence_level": "runtime-confirmed",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x07227",
+      "source": "カタナ",
+      "korean": "카타나",
+      "required_glyphs": [
+        "카",
+        "타",
+        "나"
+      ],
+      "planned_prg_bytes": [
+        "0x88",
+        "0x89",
+        "0x8A"
+      ],
+      "original_expected_bytes": "8A 94 99"
+    },
+    {
+      "label": "watch_rom_0569d_스테이지_7a",
+      "evidence_level": "encoding-exact",
+      "category_group": "event/dialogue-related",
+      "category": "스테이지",
+      "rom_hit": "0x0569D",
+      "source": "はし",
+      "korean": "다리",
+      "required_glyphs": [
+        "다",
+        "리"
+      ],
+      "planned_prg_bytes": [
+        "0x8B",
+        "0x8C"
+      ],
+      "original_expected_bytes": "A0 92"
+    },
+    {
+      "label": "watch_rom_0561a_스테이지_7c",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "event/dialogue-related",
+      "category": "스테이지",
+      "rom_hit": "0x0561A",
+      "source": "はし",
+      "korean": "다리",
+      "required_glyphs": [
+        "다",
+        "리"
+      ],
+      "planned_prg_bytes": [
+        "0x8B",
+        "0x8C"
+      ],
+      "original_expected_bytes": "96 88"
+    },
+    {
+      "label": "watch_rom_05643_보스_80",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "event/dialogue-related",
+      "category": "보스",
+      "rom_hit": "0x05643",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "required_glyphs": [
+        "헤",
+        "이",
+        "시",
+        "치"
+      ],
+      "planned_prg_bytes": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "original_expected_bytes": "9D 82 8C 91"
+    },
+    {
+      "label": "rom_05644_candidate_7c",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x05644",
+      "source": "カタナ",
+      "korean": "카타나",
+      "required_glyphs": [
+        "카",
+        "타",
+        "나"
+      ],
+      "planned_prg_bytes": [
+        "0x88",
+        "0x89",
+        "0x8A"
+      ],
+      "original_expected_bytes": "82 8C 91"
+    },
+    {
+      "label": "watch_rom_057d4_스테이지_8c",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "event/dialogue-related",
+      "category": "스테이지",
+      "rom_hit": "0x057D4",
+      "source": "はし",
+      "korean": "다리",
+      "required_glyphs": [
+        "다",
+        "리"
+      ],
+      "planned_prg_bytes": [
+        "0x8B",
+        "0x8C"
+      ],
+      "original_expected_bytes": "A6 98"
+    },
+    {
+      "label": "rom_05aa3_candidate_77",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x05AA3",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9C A0"
+    },
+    {
+      "label": "rom_05aa5_candidate_77",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x05AA5",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9C A0"
+    },
+    {
+      "label": "rom_05bba_candidate_7a",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x05BBA",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9F A3"
+    },
+    {
+      "label": "rom_05bdf_candidate_7a",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "회복",
+      "rom_hit": "0x05BDF",
+      "source": "くすり",
+      "korean": "약",
+      "required_glyphs": [
+        "약"
+      ],
+      "planned_prg_bytes": [
+        "0x92"
+      ],
+      "original_expected_bytes": "82 87 A3"
+    },
+    {
+      "label": "rom_05c09_candidate_7a",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x05C09",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9F A3"
+    },
+    {
+      "label": "rom_05c69_candidate_7a",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x05C69",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9F A3"
+    },
+    {
+      "label": "rom_0602e_candidate_8d",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "UI",
+      "rom_hit": "0x0602E",
+      "source": "そうび",
+      "korean": "장비",
+      "required_glyphs": [
+        "장",
+        "비"
+      ],
+      "planned_prg_bytes": [
+        "0x93",
+        "0x94"
+      ],
+      "original_expected_bytes": "9C 90 A8"
+    },
+    {
+      "label": "rom_06295_candidate_7c",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06295",
+      "source": "カタナ",
+      "korean": "카타나",
+      "required_glyphs": [
+        "카",
+        "타",
+        "나"
+      ],
+      "planned_prg_bytes": [
+        "0x88",
+        "0x89",
+        "0x8A"
+      ],
+      "original_expected_bytes": "82 8C 91"
+    },
+    {
+      "label": "rom_0631c_candidate_7c",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x0631C",
+      "source": "カタナ",
+      "korean": "카타나",
+      "required_glyphs": [
+        "카",
+        "타",
+        "나"
+      ],
+      "planned_prg_bytes": [
+        "0x88",
+        "0x89",
+        "0x8A"
+      ],
+      "original_expected_bytes": "82 8C 91"
+    },
+    {
+      "label": "rom_066fb_candidate_82",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "rom_hit": "0x066FB",
+      "source": "ちから",
+      "korean": "힘",
+      "required_glyphs": [
+        "힘"
+      ],
+      "planned_prg_bytes": [
+        "0x87"
+      ],
+      "original_expected_bytes": "93 88 AA"
+    },
+    {
+      "label": "rom_06839_candidate_7e",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06839",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A3 A7"
+    },
+    {
+      "label": "rom_06845_candidate_82",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "rom_hit": "0x06845",
+      "source": "ちから",
+      "korean": "힘",
+      "required_glyphs": [
+        "힘"
+      ],
+      "planned_prg_bytes": [
+        "0x87"
+      ],
+      "original_expected_bytes": "93 88 AA"
+    },
+    {
+      "label": "rom_068c3_candidate_71",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x068C3",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "96 9A"
+    },
+    {
+      "label": "rom_0691e_candidate_80",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x0691E",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A5 A9"
+    },
+    {
+      "label": "rom_069c5_candidate_79",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x069C5",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9E A2"
+    },
+    {
+      "label": "rom_06bc6_candidate_7b",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06BC6",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A0 A4"
+    },
+    {
+      "label": "rom_06bdf_candidate_8d",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "UI",
+      "rom_hit": "0x06BDF",
+      "source": "そうび",
+      "korean": "장비",
+      "required_glyphs": [
+        "장",
+        "비"
+      ],
+      "planned_prg_bytes": [
+        "0x93",
+        "0x94"
+      ],
+      "original_expected_bytes": "9C 90 A8"
+    },
+    {
+      "label": "rom_06d1b_candidate_80",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06D1B",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A5 A9"
+    },
+    {
+      "label": "rom_06de3_candidate_80",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "UI",
+      "rom_hit": "0x06DE3",
+      "source": "おかね",
+      "korean": "돈",
+      "required_glyphs": [
+        "돈"
+      ],
+      "planned_prg_bytes": [
+        "0x95"
+      ],
+      "original_expected_bytes": "85 86 98"
+    },
+    {
+      "label": "rom_06fa1_candidate_8d",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "UI",
+      "rom_hit": "0x06FA1",
+      "source": "そうび",
+      "korean": "장비",
+      "required_glyphs": [
+        "장",
+        "비"
+      ],
+      "planned_prg_bytes": [
+        "0x93",
+        "0x94"
+      ],
+      "original_expected_bytes": "9C 90 A8"
+    },
+    {
+      "label": "rom_0736a_candidate_93",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "UI",
+      "rom_hit": "0x0736A",
+      "source": "ライフ",
+      "korean": "라이프",
+      "required_glyphs": [
+        "라",
+        "이",
+        "프"
+      ],
+      "planned_prg_bytes": [
+        "0x96",
+        "0x8E",
+        "0x97"
+      ],
+      "original_expected_bytes": "BB 95 AF"
+    },
+    {
+      "label": "rom_0739d_candidate_93",
+      "evidence_level": "static-candidate+pointer",
+      "category_group": "UI/status",
+      "category": "UI",
+      "rom_hit": "0x0739D",
+      "source": "ライフ",
+      "korean": "라이프",
+      "required_glyphs": [
+        "라",
+        "이",
+        "프"
+      ],
+      "planned_prg_bytes": [
+        "0x96",
+        "0x8E",
+        "0x97"
+      ],
+      "original_expected_bytes": "BB 95 AF"
+    },
+    {
+      "label": "watch_rom_0562f_보스_80",
+      "evidence_level": "static-candidate",
+      "category_group": "event/dialogue-related",
+      "category": "보스",
+      "rom_hit": "0x0562F",
+      "source": "たついち",
+      "korean": "타츠이치",
+      "required_glyphs": [
+        "타",
+        "츠",
+        "이",
+        "치"
+      ],
+      "planned_prg_bytes": [
+        "0x89",
+        "0x98",
+        "0x8E",
+        "0x90"
+      ],
+      "original_expected_bytes": "90 92 82 91"
+    },
+    {
+      "label": "watch_rom_056da_스테이지_80",
+      "evidence_level": "static-candidate",
+      "category_group": "event/dialogue-related",
+      "category": "스테이지",
+      "rom_hit": "0x056DA",
+      "source": "はし",
+      "korean": "다리",
+      "required_glyphs": [
+        "다",
+        "리"
+      ],
+      "planned_prg_bytes": [
+        "0x8B",
+        "0x8C"
+      ],
+      "original_expected_bytes": "9A 8C"
+    },
+    {
+      "label": "watch_rom_0571c_스테이지_78",
+      "evidence_level": "static-candidate",
+      "category_group": "event/dialogue-related",
+      "category": "스테이지",
+      "rom_hit": "0x0571C",
+      "source": "はし",
+      "korean": "다리",
+      "required_glyphs": [
+        "다",
+        "리"
+      ],
+      "planned_prg_bytes": [
+        "0x8B",
+        "0x8C"
+      ],
+      "original_expected_bytes": "92 84"
+    },
+    {
+      "label": "rom_058fb_candidate_79",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x058FB",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9E A2"
+    },
+    {
+      "label": "rom_06001_candidate_7e",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06001",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A3 A7"
+    },
+    {
+      "label": "rom_0635a_candidate_7c",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x0635A",
+      "source": "カタナ",
+      "korean": "카타나",
+      "required_glyphs": [
+        "카",
+        "타",
+        "나"
+      ],
+      "planned_prg_bytes": [
+        "0x88",
+        "0x89",
+        "0x8A"
+      ],
+      "original_expected_bytes": "82 8C 91"
+    },
+    {
+      "label": "rom_06479_candidate_7f",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06479",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A4 A8"
+    },
+    {
+      "label": "rom_065b0_candidate_80",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x065B0",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A5 A9"
+    },
+    {
+      "label": "rom_06605_candidate_82",
+      "evidence_level": "static-candidate",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "rom_hit": "0x06605",
+      "source": "ちから",
+      "korean": "힘",
+      "required_glyphs": [
+        "힘"
+      ],
+      "planned_prg_bytes": [
+        "0x87"
+      ],
+      "original_expected_bytes": "93 88 AA"
+    },
+    {
+      "label": "rom_06a3d_candidate_79",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06A3D",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9E A2"
+    },
+    {
+      "label": "rom_06a66_candidate_79",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06A66",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9E A2"
+    },
+    {
+      "label": "rom_06b4a_candidate_82",
+      "evidence_level": "static-candidate",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "rom_hit": "0x06B4A",
+      "source": "ちから",
+      "korean": "힘",
+      "required_glyphs": [
+        "힘"
+      ],
+      "planned_prg_bytes": [
+        "0x87"
+      ],
+      "original_expected_bytes": "93 88 AA"
+    },
+    {
+      "label": "rom_06fde_candidate_80",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x06FDE",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "A5 A9"
+    },
+    {
+      "label": "rom_0704f_candidate_7a",
+      "evidence_level": "static-candidate",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "rom_hit": "0x0704F",
+      "source": "やり",
+      "korean": "창",
+      "required_glyphs": [
+        "창"
+      ],
+      "planned_prg_bytes": [
+        "0x91"
+      ],
+      "original_expected_bytes": "9F A3"
+    }
+  ]
+}
