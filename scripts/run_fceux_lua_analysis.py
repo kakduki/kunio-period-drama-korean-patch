@@ -157,6 +157,8 @@ def launch(args: argparse.Namespace) -> int:
     ascii_output = fceux_workdir / "kunio_fceux_lua_output"
     target_lua = resolve_optional_path(args.target_lua)
 
+    if ascii_output.exists():
+        shutil.rmtree(ascii_output)
     ascii_output.mkdir(parents=True, exist_ok=True)
     if args.clean_output and final_output.exists():
         shutil.rmtree(final_output)

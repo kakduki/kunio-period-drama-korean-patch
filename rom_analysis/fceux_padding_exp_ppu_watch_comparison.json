@@ -1,0 +1,70 @@
+{
+  "source": "rom_analysis\\prg_padding_fceux_targets.json",
+  "summary": {
+    "strategy_count": 5,
+    "all_have_exact_vram_match": false,
+    "screen_verdict": "not-visual-confirmed"
+  },
+  "results": [
+    {
+      "strategy": "pad_00",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_00_ppu_watch",
+      "expected_bytes": "87 00 00",
+      "ppu_writes": 32160,
+      "frames_captured": 148,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "exact_vram_matches": 0,
+      "match_locations": [],
+      "screen_verdict": "not-visual-confirmed"
+    },
+    {
+      "strategy": "pad_7a",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_7a_ppu_watch",
+      "expected_bytes": "87 7A 7A",
+      "ppu_writes": 32160,
+      "frames_captured": 148,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "exact_vram_matches": 0,
+      "match_locations": [],
+      "screen_verdict": "not-visual-confirmed"
+    },
+    {
+      "strategy": "pad_ff",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_ff_ppu_watch",
+      "expected_bytes": "87 FF FF",
+      "ppu_writes": 32096,
+      "frames_captured": 147,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "exact_vram_matches": 0,
+      "match_locations": [],
+      "screen_verdict": "not-visual-confirmed"
+    },
+    {
+      "strategy": "pad_f8f9",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_f8f9_ppu_watch",
+      "expected_bytes": "87 F8 F9",
+      "ppu_writes": 31982,
+      "frames_captured": 121,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "exact_vram_matches": 0,
+      "match_locations": [],
+      "screen_verdict": "not-visual-confirmed"
+    },
+    {
+      "strategy": "preserve_tail",
+      "input_dir": "rom_analysis\\fceux_padding_exp_preserve_tail_ppu_watch",
+      "expected_bytes": "87 88 AA",
+      "ppu_writes": 32160,
+      "frames_captured": 148,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "exact_vram_matches": 0,
+      "match_locations": [],
+      "screen_verdict": "not-visual-confirmed"
+    }
+  ]
+}

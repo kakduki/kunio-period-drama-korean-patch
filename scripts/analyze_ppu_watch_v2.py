@@ -22,7 +22,7 @@ DEFAULT_OUTPUT = ROOT / "rom_analysis" / "fceux_ppu_watch" / "analysis_v2.md"
 TILEMAP_PATH = ROOT / "rom_analysis" / "chr_bank07_tile_map.json"
 TARGETS_PATH = ROOT / "rom_analysis" / "bank1_watch_targets.json"
 
-FILL_TILES = {0x00, 0x7A}
+DEFAULT_FILL_TILES = {0x00, 0x7A}
 
 
 def load_decode(path: Path) -> dict[int, str]:
@@ -47,7 +47,14 @@ def load_targets(path: Path) -> list[tuple[str, list[int]]]:
         return []
     data = json.loads(path.read_text(encoding="utf-8"))
     targets: list[tuple[str, list[int]]] = []
-    for target in data.get("targets", []):
+    target_rows = list(data.get("targets", []))
+    for strategy, rows in data.get("targets_by_strategy", {}).items():
+        for row in rows:
+            target = dict(row)
+            target.setdefault("strategy", strategy)
+            target_rows.append(target)
+
+    for target in target_rows:
         expected = (
             target.get("expected_bytes")
             or target.get("expected_patched_bytes")
@@ -55,8 +62,12 @@ def load_targets(path: Path) -> list[tuple[str, list[int]]]:
             or ""
         )
         if expected:
+            strategy = target.get("strategy")
+            label = target.get("label", "?")
+            if strategy and not str(label).startswith(f"{strategy}:"):
+                label = f"{strategy}:{label}"
             targets.append((
-                target.get("label", "?"),
+                label,
                 parse_bytes(expected),
             ))
     return targets
@@ -83,11 +94,17 @@ def load_frames(input_dir: Path) -> tuple[dict[int, dict[int, int]], dict[int, i
     return frames, phases
 
 
-def runs_from_nametable(nametable: dict[int, int]) -> list[list[int]]:
+def parse_fill_tiles(text: str) -> set[int]:
+    if not text.strip():
+        return set()
+    return {int(byte.strip(), 16) for byte in text.split(",") if byte.strip()}
+
+
+def runs_from_nametable(nametable: dict[int, int], fill_tiles: set[int]) -> list[list[int]]:
     runs: list[list[int]] = []
     run: list[int] = []
     for addr in sorted(nametable):
-        if nametable[addr] in FILL_TILES:
+        if nametable[addr] in fill_tiles:
             if run:
                 runs.append(run)
                 run = []
@@ -118,6 +135,16 @@ def main() -> int:
     parser.add_argument("--input-dir", default=str(DEFAULT_INPUT))
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT))
     parser.add_argument("--targets", default=str(TARGETS_PATH), help="JSON target file; supports bank1_watch_targets or v04 target JSON.")
+    parser.add_argument(
+        "--fill-tiles",
+        default="00,7A",
+        help="Comma-separated byte values to strip from reconstructed streams. Use an empty string with --no-strip-fill.",
+    )
+    parser.add_argument(
+        "--no-strip-fill",
+        action="store_true",
+        help="Do not strip fill/padding bytes before matching. Useful for padding strategy experiments.",
+    )
     args = parser.parse_args()
 
     input_dir = Path(args.input_dir).expanduser().resolve()
@@ -130,13 +157,14 @@ def main() -> int:
     decoded = load_decode(TILEMAP_PATH)
     targets = load_targets(targets_path)
     frames, phases = load_frames(input_dir)
+    fill_tiles = set() if args.no_strip_fill else parse_fill_tiles(args.fill_tiles)
 
     phase_streams: dict[int, list[int]] = defaultdict(list)
     for frame in sorted(frames):
         phase = phases.get(frame, 0)
         for addr in sorted(frames[frame]):
             byte = frames[frame][addr]
-            if byte not in FILL_TILES:
+            if byte not in fill_tiles:
                 phase_streams[phase].append(byte)
 
     matches: list[tuple[int, str, list[int]]] = []
@@ -151,7 +179,7 @@ def main() -> int:
 
     best_frame = max(
         frames,
-        key=lambda frame: sum(1 for byte in frames[frame].values() if byte not in FILL_TILES),
+        key=lambda frame: sum(1 for byte in frames[frame].values() if byte not in fill_tiles),
         default=None,
     )
 
@@ -165,6 +193,7 @@ def main() -> int:
         f"- Targets loaded: **{len(targets)}**",
         f"- Unique target byte sequences: **{len(sequence_counts)}**",
         f"- Decode glyphs: **{len(decoded)}**",
+        f"- Fill tiles stripped: **{', '.join(f'0x{byte:02X}' for byte in sorted(fill_tiles)) if fill_tiles else 'none'}**",
         "",
         "## Matched Targets",
         "",
@@ -209,7 +238,7 @@ def main() -> int:
             "| --- | ---: | --- |",
         ]
         nametable = frames[best_frame]
-        for run in runs_from_nametable(nametable):
+        for run in runs_from_nametable(nametable, fill_tiles):
             text = "".join(decoded.get(nametable[addr], f"<{nametable[addr]:02X}>") for addr in run)
             lines.append(f"| `${run[0]:04X}` | {len(run)} | {text} |")
 
