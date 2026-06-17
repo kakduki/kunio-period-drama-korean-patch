@@ -38,6 +38,8 @@ NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_p
 NEXT_GLYPH_EXPANSION_MD = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.md"
 FONT_EXPANSION_READINESS_JSON = REPO_ROOT / "rom_analysis" / "font_expansion_readiness.json"
 FONT_EXPANSION_READINESS_MD = REPO_ROOT / "rom_analysis" / "font_expansion_readiness.md"
+BATCH46_TEXT_READINESS_JSON = REPO_ROOT / "rom_analysis" / "batch46_text_readiness.json"
+BATCH46_TEXT_READINESS_MD = REPO_ROOT / "rom_analysis" / "batch46_text_readiness.md"
 V042_TEXT_PROMOTION_JSON = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.json"
 V042_TEXT_PROMOTION_MD = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.md"
 V042_MANUAL_PROOF_JSON = REPO_ROOT / "rom_analysis" / "v042_manual_proof_packet.json"
@@ -116,6 +118,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
         "- `font_expansion_readiness.md`: current font asset gate for planned glyph batches",
+        "- `batch46_text_readiness.md`: broad-scan text gate after the largest currently buildable font expansion",
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report",
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md`: largest currently buildable font-only expansion candidate report",
@@ -234,6 +237,8 @@ def package() -> dict[str, object]:
         (NEXT_GLYPH_EXPANSION_JSON, "next_glyph_expansion_plan.json"),
         (FONT_EXPANSION_READINESS_MD, "font_expansion_readiness.md"),
         (FONT_EXPANSION_READINESS_JSON, "font_expansion_readiness.json"),
+        (BATCH46_TEXT_READINESS_MD, "batch46_text_readiness.md"),
+        (BATCH46_TEXT_READINESS_JSON, "batch46_text_readiness.json"),
         (V042_TEXT_PROMOTION_MD, "v042_text_promotion_readiness.md"),
         (V042_TEXT_PROMOTION_JSON, "v042_text_promotion_readiness.json"),
         (V042_MANUAL_PROOF_MD, "v042_manual_proof_packet.md"),

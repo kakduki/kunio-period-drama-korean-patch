@@ -28,6 +28,7 @@ KEY_PYTHON = [
     "scripts/compare_v04_broad_candidates.py",
     "scripts/generate_broad_scan_fceux_targets.py",
     "scripts/generate_broad_scan_patchability.py",
+    "scripts/generate_batch46_text_readiness.py",
     "scripts/generate_manual_capture_cards.py",
     "scripts/generate_manual_capture_status.py",
     "scripts/generate_manual_dump_inventory.py",
@@ -54,6 +55,7 @@ KEY_PYTHON = [
     "scripts/summarize_bank1_watch_reads.py",
     "scripts/test_analyze_manual_screen_dump.py",
     "scripts/test_broad_patchability_v042_bytes.py",
+    "scripts/test_batch46_text_readiness.py",
     "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -107,6 +109,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_broad_scan_fceux_targets.py"],
     ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
     ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "46"],
+    ["scripts/generate_batch46_text_readiness.py"],
     ["scripts/build_v042_font_expanded_candidate.py"],
     ["scripts/build_broad_preview_candidate.py"],
     ["scripts/generate_patch_candidate_manifest.py"],
@@ -185,6 +188,7 @@ def main() -> int:
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
+    run("batch46 text readiness", ["scripts/test_batch46_text_readiness.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
     run("v0.4.3 proof status", ["scripts/test_v043_proof_status.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])

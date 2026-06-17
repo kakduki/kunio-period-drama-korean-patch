@@ -1,0 +1,1941 @@
+{
+  "source": {
+    "broad_patchability": "rom_analysis\\broad_scan_patchability.json",
+    "base_slot_plan": "rom_analysis\\korean_slot_allocation_plan.json",
+    "expansion_plan": "rom_analysis\\next_glyph_expansion_plan.json",
+    "batch46_report": "rom_analysis\\kunio_period_drama_korean_font_expansion_v0.5_batch46_report.json"
+  },
+  "summary": {
+    "queued_hits": 60,
+    "batch46_added_glyphs": 46,
+    "v042_font_ready": 27,
+    "batch46_font_ready": 27,
+    "newly_font_ready_after_batch46": 0,
+    "screen_proof_candidates_after_batch46": 7,
+    "new_screen_proof_candidates_after_batch46": 0,
+    "rule": "Batch46 expands font coverage only; text promotion still requires manual CPU-read and visual-context proof."
+  },
+  "newly_font_ready": [],
+  "screen_proof_candidates": [
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x06294",
+      "bank16": 1,
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "source_byte_len": 4,
+      "korean_glyph_len": 4,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x06359",
+      "bank16": 1,
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "source_byte_len": 4,
+      "korean_glyph_len": 4,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x0631B",
+      "bank16": 1,
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "source_byte_len": 4,
+      "korean_glyph_len": 4,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x052A5",
+      "bank16": 1,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x0440C",
+      "bank16": 1,
+      "source": "かじや",
+      "romaji": "Kajiya",
+      "korean": "대장간",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0xB5",
+        "0x93",
+        "0xAB"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x05BE5",
+      "bank16": 1,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x048F4",
+      "bank16": 1,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    }
+  ],
+  "classified_queue": [
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x06294",
+      "bank16": 1,
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "source_byte_len": 4,
+      "korean_glyph_len": 4,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x06359",
+      "bank16": 1,
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "source_byte_len": 4,
+      "korean_glyph_len": 4,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x0631B",
+      "bank16": 1,
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "source_byte_len": 4,
+      "korean_glyph_len": 4,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x06499",
+      "bank16": 1,
+      "source": "賭場でお金稼ぎ",
+      "romaji": "TOBA de okane kasegi",
+      "korean": "도박장에서 돈벌이",
+      "screen_hint": "look for the 이벤트 text screen (도박장에서 돈벌이)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 8,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "박",
+        "서",
+        "벌"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xB3",
+        "0x93",
+        "0xA4",
+        "0x95",
+        "0x8E"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=8"
+      ]
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x07450",
+      "bank16": 1,
+      "source": "賭場でお金稼ぎ",
+      "romaji": "TOBA de okane kasegi",
+      "korean": "도박장에서 돈벌이",
+      "screen_hint": "look for the 이벤트 text screen (도박장에서 돈벌이)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 8,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "박",
+        "서",
+        "벌"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xB3",
+        "0x93",
+        "0xA4",
+        "0x95",
+        "0x8E"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=8"
+      ]
+    },
+    {
+      "priority": 10,
+      "confidence": "high",
+      "rom_offset": "0x0560E",
+      "bank16": 1,
+      "source": "はかば",
+      "romaji": "Hakaba",
+      "korean": "묘지",
+      "screen_hint": "look for the 스테이지 text screen (묘지)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "묘"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=2"
+      ]
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x052A5",
+      "bank16": 1,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x0637B",
+      "bank16": 1,
+      "source": "はやし",
+      "romaji": "Hayashi",
+      "korean": "숲",
+      "screen_hint": "look for the 스테이지 text screen (숲)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "숲"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=1"
+      ]
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x0440C",
+      "bank16": 1,
+      "source": "かじや",
+      "romaji": "Kajiya",
+      "korean": "대장간",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0xB5",
+        "0x93",
+        "0xAB"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x07587",
+      "bank16": 1,
+      "source": "チェーン",
+      "romaji": "Cheen",
+      "korean": "체인",
+      "screen_hint": "look for the 무기 text screen (체인)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "체"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA2"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=2"
+      ]
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x0589C",
+      "bank16": 1,
+      "source": "賭場でお金稼ぎ",
+      "romaji": "TOBA de okane kasegi",
+      "korean": "도박장에서 돈벌이",
+      "screen_hint": "look for the 이벤트 text screen (도박장에서 돈벌이)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 8,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "박",
+        "서",
+        "벌"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xB3",
+        "0x93",
+        "0xA4",
+        "0x95",
+        "0x8E"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=8"
+      ]
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x05BE5",
+      "bank16": 1,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x060BD",
+      "bank16": 1,
+      "source": "とざん",
+      "romaji": "Tozan",
+      "korean": "등산",
+      "screen_hint": "look for the 스테이지 text screen (등산)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "등"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xC1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=2"
+      ]
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x04242",
+      "bank16": 1,
+      "source": "まけた…",
+      "romaji": "Maketa...",
+      "korean": "졌다…",
+      "screen_hint": "look for the 대사 text screen (패배 시)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "졌"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0x8B"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=2"
+      ]
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x048F4",
+      "bank16": 1,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": true,
+      "blockers_after_batch46": []
+    },
+    {
+      "priority": 15,
+      "confidence": "medium",
+      "rom_offset": "0x05F67",
+      "bank16": 1,
+      "source": "はかば",
+      "romaji": "Hakaba",
+      "korean": "묘지",
+      "screen_hint": "look for the 스테이지 text screen (묘지)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "묘"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "length mismatch source_bytes=3 korean_glyphs=2"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x0F3D1",
+      "bank16": 3,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x095B9",
+      "bank16": 2,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x17D61",
+      "bank16": 5,
+      "source": "ちから",
+      "romaji": "Chikara",
+      "korean": "힘",
+      "screen_hint": "look for a strength/status stat label",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x87"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x17D69",
+      "bank16": 5,
+      "source": "ちから",
+      "romaji": "Chikara",
+      "korean": "힘",
+      "screen_hint": "look for a strength/status stat label",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x87"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x17D81",
+      "bank16": 5,
+      "source": "ちから",
+      "romaji": "Chikara",
+      "korean": "힘",
+      "screen_hint": "look for a strength/status stat label",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x87"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x1CB80",
+      "bank16": 7,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x0EE3D",
+      "bank16": 3,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x10921",
+      "bank16": 4,
+      "source": "おわり",
+      "romaji": "Owari",
+      "korean": "끝",
+      "screen_hint": "look for the 엔딩 text screen (끝)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "끝"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x11332",
+      "bank16": 4,
+      "source": "たべる",
+      "romaji": "Taberu",
+      "korean": "먹다",
+      "screen_hint": "look for the UI text screen (먹다 (아이템 사용))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "먹"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0x8B"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x17D18",
+      "bank16": 5,
+      "source": "うごき",
+      "romaji": "Ugoki",
+      "korean": "움직임",
+      "screen_hint": "look for the 능력치 text screen (움직임/속도 (능력치))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "움",
+        "직",
+        "임"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x02999",
+      "bank16": 0,
+      "source": "おわり",
+      "romaji": "Owari",
+      "korean": "끝",
+      "screen_hint": "look for the 엔딩 text screen (끝)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "끝"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x09830",
+      "bank16": 2,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x0CEAD",
+      "bank16": 3,
+      "source": "すてる",
+      "romaji": "Suteru",
+      "korean": "버리다",
+      "screen_hint": "look for the UI text screen (버리다 (아이템 폐기))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "버"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0x8C",
+        "0x8B"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x1281B",
+      "bank16": 4,
+      "source": "レベル",
+      "romaji": "Reberu",
+      "korean": "레벨",
+      "screen_hint": "look for the UI text screen (Level)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "레",
+        "벨"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x1F0B1",
+      "bank16": 7,
+      "source": "おわり",
+      "romaji": "Owari",
+      "korean": "끝",
+      "screen_hint": "look for the 엔딩 text screen (끝)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "끝"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x1FA3C",
+      "bank16": 7,
+      "source": "たべる",
+      "romaji": "Taberu",
+      "korean": "먹다",
+      "screen_hint": "look for the UI text screen (먹다 (아이템 사용))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "먹"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0x8B"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x02D68",
+      "bank16": 0,
+      "source": "うごき",
+      "romaji": "Ugoki",
+      "korean": "움직임",
+      "screen_hint": "look for the 능력치 text screen (움직임/속도 (능력치))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "움",
+        "직",
+        "임"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x0966F",
+      "bank16": 2,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x10561",
+      "bank16": 4,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x10D75",
+      "bank16": 4,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x10FD5",
+      "bank16": 4,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x11340",
+      "bank16": 4,
+      "source": "たべる",
+      "romaji": "Taberu",
+      "korean": "먹다",
+      "screen_hint": "look for the UI text screen (먹다 (아이템 사용))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "먹"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0x8B"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 25,
+      "confidence": "medium",
+      "rom_offset": "0x1ADBD",
+      "bank16": 6,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "capture priority is not high enough for promotion"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x131F0",
+      "bank16": 4,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x0A255",
+      "bank16": 2,
+      "source": "まけた…",
+      "romaji": "Maketa...",
+      "korean": "졌다…",
+      "screen_hint": "look for the 대사 text screen (패배 시)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "졌"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0x8B"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x12F21",
+      "bank16": 4,
+      "source": "はたけ",
+      "romaji": "Hatake",
+      "korean": "밭",
+      "screen_hint": "look for the 스테이지 text screen (밭)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "밭"
+      ],
+      "planned_prg_bytes_after_batch46": [],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1317F",
+      "bank16": 4,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1319D",
+      "bank16": 4,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1318D",
+      "bank16": 4,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1BB7E",
+      "bank16": 6,
+      "source": "くすり",
+      "romaji": "Kusuri",
+      "korean": "약",
+      "screen_hint": "look for the 회복 text screen (약 (기본 회복))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x92"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x0D080",
+      "bank16": 3,
+      "source": "はかば",
+      "romaji": "Hakaba",
+      "korean": "묘지",
+      "screen_hint": "look for the 스테이지 text screen (묘지)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "묘"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x16F72",
+      "bank16": 5,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x131D8",
+      "bank16": 4,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x10E68",
+      "bank16": 4,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x0D339",
+      "bank16": 3,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x0D588",
+      "bank16": 3,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x0E9FA",
+      "bank16": 3,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x0F0E2",
+      "bank16": 3,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1019C",
+      "bank16": 4,
+      "source": "はかば",
+      "romaji": "Hakaba",
+      "korean": "묘지",
+      "screen_hint": "look for the 스테이지 text screen (묘지)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "묘"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1CA00",
+      "bank16": 7,
+      "source": "おかね",
+      "romaji": "Okane",
+      "korean": "돈",
+      "screen_hint": "look for the UI text screen (돈/소지금)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 1,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x95"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=1",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x119E9",
+      "bank16": 4,
+      "source": "はかば",
+      "romaji": "Hakaba",
+      "korean": "묘지",
+      "screen_hint": "look for the 스테이지 text screen (묘지)",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "묘"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x18926",
+      "bank16": 6,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1A63B",
+      "bank16": 6,
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "korean": "지옥",
+      "screen_hint": "look for the 스테이지 text screen (지옥 (스테이지))",
+      "source_byte_len": 3,
+      "korean_glyph_len": 2,
+      "length_equal": false,
+      "contains_control_like_bytes": false,
+      "font_ready_after_v042": false,
+      "font_ready_after_batch46": false,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [
+        "옥"
+      ],
+      "planned_prg_bytes_after_batch46": [
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "missing glyphs after batch46",
+        "not Bank 1",
+        "length mismatch source_bytes=3 korean_glyphs=2",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    },
+    {
+      "priority": 60,
+      "confidence": "low",
+      "rom_offset": "0x1A6AC",
+      "bank16": 6,
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "source_byte_len": 3,
+      "korean_glyph_len": 3,
+      "length_equal": true,
+      "contains_control_like_bytes": true,
+      "font_ready_after_v042": true,
+      "font_ready_after_batch46": true,
+      "newly_font_ready_after_batch46": false,
+      "missing_glyphs_after_batch46": [],
+      "planned_prg_bytes_after_batch46": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "promotable_after_batch46_screen_proof": false,
+      "blockers_after_batch46": [
+        "not Bank 1",
+        "source bytes contain control-like values",
+        "capture priority is not high enough for promotion",
+        "confidence is not high/medium"
+      ]
+    }
+  ]
+}
