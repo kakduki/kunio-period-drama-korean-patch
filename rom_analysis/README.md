@@ -163,6 +163,10 @@ menu/status transfer windows for CPU/PPU evidence, but it is not a reliable
 full gameplay bot. The FCEUX window may appear to sit on the opening/title
 screen after Lua completion because the script pauses the emulator at the end;
 use the generated TSV/MD artifacts as the authoritative result of the run.
+Untargeted autoplay runs are capped by `scripts/run_fceux_lua_analysis.py` to
+avoid spending time on the opening/title screen. Use `--target-lua` for a
+specific watch list, or pass `--allow-long-autoplay` only when a route is worth
+testing deliberately.
 If the visible emulator is still on the opening/title/first menu screen, do not
 keep extending the autoplay run. Manually reach the target text screen and use
 `lua/kunio_manual_screen_dump.lua` instead.

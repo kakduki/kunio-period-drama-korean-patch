@@ -36,6 +36,7 @@ python scripts/run_project_checks.py --regen
 ## 중요한 작업 원칙
 
 - FCEUX 자동 진행이 `stagnant_screen`을 기록하거나 첫 화면/초기 메뉴만 반복하면 즉시 중단합니다.
+- `scripts/run_fceux_lua_analysis.py`는 타깃 없는 기본 autoplay를 자동으로 짧게 제한합니다. 길게 돌릴 때는 `--target-lua`로 감시 대상을 주거나 `--allow-long-autoplay`를 명시합니다.
 - 유튜브 영상은 대사 흐름과 전사 참고용입니다. 실제 패치 승격은 ROM 오프셋, 바이트 매핑, 런타임 메모리, 화면 증거가 필요합니다.
 - `needs-padding-rule` 항목은 화면에서 패딩/종료 규칙이 확인되기 전까지 최종 후보에 넣지 않습니다.
 - v0.4/broad-scan 충돌 항목은 수동 화면 증거가 나오기 전까지 어느 쪽도 확정하지 않습니다.

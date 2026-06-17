@@ -41,6 +41,8 @@ KEY_PYTHON = [
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
+    "scripts/run_fceux_lua_analysis.py",
+    "scripts/test_run_fceux_budget.py",
     "scripts/verify_primary_patch.py",
 ]
 
@@ -141,6 +143,7 @@ def main() -> int:
             run("regenerate " + command[0], command)
     run("lua script balance", ["scripts/check_lua_script_balance.py", *LUA_SCRIPTS])
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
+    run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
     check_manifest()
     print("\nAll project checks passed.")

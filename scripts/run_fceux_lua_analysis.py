@@ -23,6 +23,8 @@ DEFAULT_QFCEUX = ROOT / "tools" / "fceux-2.6.6-win64-QtSDL" / "bin" / "qfceux.ex
 DEFAULT_FCEUX = ROOT / "tools" / "fceux-2.6.6-win64" / "fceux64.exe"
 DEFAULT_LUA_SCRIPT = ROOT / "lua" / "kunio_auto_dump.lua"
 STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
+BLIND_AUTOPLAY_FRAME_CAP = 1800
+BLIND_AUTOPLAY_TIMEOUT_CAP = 90
 
 
 def find_rom() -> Path:
@@ -96,6 +98,44 @@ def summary_final_reason(summary: Path) -> str | None:
     return None
 
 
+def is_blind_autoplay(args: argparse.Namespace, lua_script: Path) -> bool:
+    if args.target_lua:
+        return False
+    return lua_script.name in {"kunio_auto_dump.lua", "kunio_autoplay_watch.lua"}
+
+
+def apply_blind_autoplay_budget(args: argparse.Namespace, lua_script: Path) -> None:
+    if args.allow_long_autoplay or not is_blind_autoplay(args, lua_script):
+        return
+    if args.frames > BLIND_AUTOPLAY_FRAME_CAP:
+        print(
+            "Blind autoplay frame budget applied: "
+            f"{args.frames} -> {BLIND_AUTOPLAY_FRAME_CAP}. "
+            "Use --allow-long-autoplay only when a specific route is worth testing."
+        )
+        args.frames = BLIND_AUTOPLAY_FRAME_CAP
+    if args.timeout > BLIND_AUTOPLAY_TIMEOUT_CAP:
+        print(
+            "Blind autoplay timeout budget applied: "
+            f"{args.timeout}s -> {BLIND_AUTOPLAY_TIMEOUT_CAP}s."
+        )
+        args.timeout = BLIND_AUTOPLAY_TIMEOUT_CAP
+
+
+def print_manual_capture_hint(reason: str) -> None:
+    if reason == "stagnant_screen":
+        print(
+            "Stagnant screen detected. Stop extending this autoplay run; "
+            "open the target screen manually and run lua/kunio_manual_screen_dump.lua "
+            "or lua/kunio_manual_broad_scan_dump.lua."
+        )
+    elif reason == "timeout":
+        print(
+            "No Lua completion marker was seen before timeout. If the emulator is still "
+            "on the opening/title screen, switch to manual capture instead of increasing frames."
+        )
+
+
 def stage_fceux(exe: Path) -> Path:
     """Copy FCEUX beside ASCII-only runtime files.
 
@@ -159,6 +199,7 @@ def launch(args: argparse.Namespace) -> int:
     rom = Path(args.rom).expanduser().resolve() if args.rom else find_rom()
     source_exe = find_fceux(args.fceux)
     lua_script = find_lua_script(args.lua_script)
+    apply_blind_autoplay_budget(args, lua_script)
     final_output = Path(args.final_output).expanduser().resolve()
     exe = stage_fceux(source_exe)
     fceux_workdir = exe.parent
@@ -215,6 +256,7 @@ def launch(args: argparse.Namespace) -> int:
             if final_reason:
                 completed = True
                 print(f"Lua script reported {final_reason}; stopping FCEUX.")
+                print_manual_capture_hint(final_reason)
                 proc.terminate()
                 break
             time.sleep(1)
@@ -222,6 +264,7 @@ def launch(args: argparse.Namespace) -> int:
         if proc.poll() is None:
             if not completed:
                 print(f"Timeout reached ({args.timeout}s); stopping FCEUX.")
+                print_manual_capture_hint("timeout")
             proc.terminate()
             try:
                 proc.wait(timeout=5)
@@ -244,6 +287,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--target-lua", help="Optional Lua target table copied beside the Lua script and exposed as KUNIO_TARGETS_LUA.")
     parser.add_argument("--frames", type=int, default=7200, help="Frames to run in Lua.")
     parser.add_argument("--timeout", type=int, default=180, help="Seconds before stopping FCEUX.")
+    parser.add_argument("--allow-long-autoplay", action="store_true", help="Disable the short safety budget for untargeted autoplay runs.")
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")
     parser.add_argument("--ppu-burst-threshold", type=int, default=24, help="PPUDATA/PPUADDR writes per frame that trigger a dump.")
     parser.add_argument("--hit-limit", type=int, default=50000, help="Maximum read hits for watcher Lua scripts that support KUNIO_HIT_LIMIT.")
