@@ -33,6 +33,8 @@
 - `fceux_padding_exp_watch_comparison.md` / `fceux_padding_exp_watch_comparison.json`: cross-strategy comparison for `ROM+0x071A4` padding experiment read-watch results
 - `fceux_padding_exp_*_ppu_watch/summary.tsv` / `ppu_writes.tsv` / `analysis_v2_no_strip.md`: PPU write-watch outputs for the five padding experiment ROMs, captured with fill stripping disabled for padding-byte checks
 - `fceux_padding_exp_ppu_watch_comparison.md` / `fceux_padding_exp_ppu_watch_comparison.json`: strict same-frame, consecutive-VRAM comparison for the padding experiment PPU runs
+- `manual_capture_workflow.md`: recommended workflow for manually reaching a real dialogue/menu screen in FCEUX, then running a one-shot Lua dump instead of blind autoplay
+- `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness
@@ -130,6 +132,9 @@ menu/status transfer windows for CPU/PPU evidence, but it is not a reliable
 full gameplay bot. The FCEUX window may appear to sit on the opening/title
 screen after Lua completion because the script pauses the emulator at the end;
 use the generated TSV/MD artifacts as the authoritative result of the run.
+If the visible emulator is still on the opening/title/first menu screen, do not
+keep extending the autoplay run. Manually reach the target text screen and use
+`lua/kunio_manual_screen_dump.lua` instead.
 
 Run:
 
