@@ -6,12 +6,21 @@ import sys
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
-def find_rom_path() -> Path:
-    if len(sys.argv) > 1:
-        rom_path = Path(sys.argv[1]).expanduser()
+def find_rom_path(candidate: str | Path | None = None) -> Path:
+    if candidate is not None:
+        rom_path = Path(candidate).expanduser()
         if rom_path.exists():
             return rom_path
         raise FileNotFoundError(f"ROM not found: {rom_path}")
+
+    for arg in sys.argv[1:]:
+        if arg.startswith("-"):
+            continue
+        rom_path = Path(arg).expanduser()
+        if rom_path.suffix.lower() == ".nes" or rom_path.exists():
+            if rom_path.exists():
+                return rom_path
+            raise FileNotFoundError(f"ROM not found: {rom_path}")
 
     rom_dir = REPO_ROOT / "rom"
     roms = sorted(rom_dir.glob("*.nes"))
