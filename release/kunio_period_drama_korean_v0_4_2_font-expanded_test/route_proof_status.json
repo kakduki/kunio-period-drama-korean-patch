@@ -1,0 +1,122 @@
+{
+  "source": "rom_analysis\\route_fceux_targets.json",
+  "manual_dump_summary": "rom_analysis\\manual_screen_dump_broad_scan\\summary.json",
+  "summary": {
+    "route_count": 3,
+    "target_count": 7,
+    "matched_target_count": 0,
+    "visual_confirmed_target_count": 0,
+    "status_counts": {
+      "no_dump_records": 3
+    },
+    "broad_dump_status": "no_manual_broad_scan_dump_records",
+    "rule": "Route proof needs a CPU-read byte match plus matching visible screen context; blind autoplay is not useful here."
+  },
+  "routes": [
+    {
+      "route": 1,
+      "group": "Kajiya",
+      "watch_lua": "lua/kunio_manual_route_kajiya_capture_watch.lua",
+      "target_lua": "lua/kunio_route_kajiya_targets.lua",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+      "target_count": 1,
+      "matched_target_count": 0,
+      "visual_confirmed_target_count": 0,
+      "status": "no_dump_records",
+      "next_step": "Do not keep blind autoplay running; manually reach this route's screen and press D in its route watcher.",
+      "targets": [
+        {
+          "label": "broad_0440c_kajiya",
+          "rom_offset": "0x0440C",
+          "cpu_start": "0x840C",
+          "cpu_stop": "0x840E",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        }
+      ]
+    },
+    {
+      "route": 2,
+      "group": "Tatsuji",
+      "watch_lua": "lua/kunio_manual_route_tatsuji_capture_watch.lua",
+      "target_lua": "lua/kunio_route_tatsuji_targets.lua",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "target_count": 3,
+      "matched_target_count": 0,
+      "visual_confirmed_target_count": 0,
+      "status": "no_dump_records",
+      "next_step": "Do not keep blind autoplay running; manually reach this route's screen and press D in its route watcher.",
+      "targets": [
+        {
+          "label": "broad_048f4_tatsuji",
+          "rom_offset": "0x048F4",
+          "cpu_start": "0x88F4",
+          "cpu_stop": "0x88F6",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        },
+        {
+          "label": "broad_052a5_tatsuji",
+          "rom_offset": "0x052A5",
+          "cpu_start": "0x92A5",
+          "cpu_stop": "0x92A7",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        },
+        {
+          "label": "broad_05be5_tatsuji",
+          "rom_offset": "0x05BE5",
+          "cpu_start": "0x9BE5",
+          "cpu_stop": "0x9BE7",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        }
+      ]
+    },
+    {
+      "route": 3,
+      "group": "Heishichi",
+      "watch_lua": "lua/kunio_manual_route_heishichi_capture_watch.lua",
+      "target_lua": "lua/kunio_route_heishichi_targets.lua",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "target_count": 3,
+      "matched_target_count": 0,
+      "visual_confirmed_target_count": 0,
+      "status": "no_dump_records",
+      "next_step": "Do not keep blind autoplay running; manually reach this route's screen and press D in its route watcher.",
+      "targets": [
+        {
+          "label": "broad_06294_heishichi",
+          "rom_offset": "0x06294",
+          "cpu_start": "0xA294",
+          "cpu_stop": "0xA297",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        },
+        {
+          "label": "broad_0631b_heishichi",
+          "rom_offset": "0x0631B",
+          "cpu_start": "0xA31B",
+          "cpu_stop": "0xA31E",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        },
+        {
+          "label": "broad_06359_heishichi",
+          "rom_offset": "0x06359",
+          "cpu_start": "0xA359",
+          "cpu_stop": "0xA35C",
+          "match_count": 0,
+          "visual_verdict": "",
+          "matches": []
+        }
+      ]
+    }
+  ]
+}

@@ -36,6 +36,8 @@ RELEASE_TEST_CHECKLIST_JSON = REPO_ROOT / "rom_analysis" / "release_test_checkli
 RELEASE_TEST_CHECKLIST_MD = REPO_ROOT / "rom_analysis" / "release_test_checklist.md"
 ROUTE_FCEUX_TARGETS_JSON = REPO_ROOT / "rom_analysis" / "route_fceux_targets.json"
 ROUTE_FCEUX_TARGETS_MD = REPO_ROOT / "rom_analysis" / "route_fceux_targets.md"
+ROUTE_PROOF_STATUS_JSON = REPO_ROOT / "rom_analysis" / "route_proof_status.json"
+ROUTE_PROOF_STATUS_MD = REPO_ROOT / "rom_analysis" / "route_proof_status.md"
 BROAD_SCAN_PATCHABILITY_JSON = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.json"
 BROAD_SCAN_PATCHABILITY_MD = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
@@ -113,6 +115,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
         "- `manual_proof_routes.md`: three grouped manual routes for the current seven screen-proof candidates",
         "- `route_fceux_targets.md`: route-specific FCEUX watcher files for those three manual routes",
+        "- `route_proof_status.md`: current proof status for the three route-specific watchers",
         "- `release_test_checklist.md`: short apply/capture/review checklist for this bundle",
         "- `lua/`: FCEUX manual capture scripts and target tables for v0.4.2 and broad-scan proof",
         "- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates",
@@ -237,6 +240,8 @@ def package() -> dict[str, object]:
         (MANUAL_PROOF_ROUTES_JSON, "manual_proof_routes.json"),
         (ROUTE_FCEUX_TARGETS_MD, "route_fceux_targets.md"),
         (ROUTE_FCEUX_TARGETS_JSON, "route_fceux_targets.json"),
+        (ROUTE_PROOF_STATUS_MD, "route_proof_status.md"),
+        (ROUTE_PROOF_STATUS_JSON, "route_proof_status.json"),
         (RELEASE_TEST_CHECKLIST_MD, "release_test_checklist.md"),
         (RELEASE_TEST_CHECKLIST_JSON, "release_test_checklist.json"),
         (TRANSLATION_GLYPH_COVERAGE_MD, "translation_glyph_coverage.md"),

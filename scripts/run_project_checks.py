@@ -41,6 +41,7 @@ KEY_PYTHON = [
     "scripts/generate_reference_capture_plan.py",
     "scripts/generate_release_test_checklist.py",
     "scripts/generate_route_fceux_targets.py",
+    "scripts/generate_route_proof_status.py",
     "scripts/generate_translation_pattern_scan.py",
     "scripts/generate_translation_readable_reference.py",
     "scripts/generate_translation_glyph_coverage.py",
@@ -66,6 +67,7 @@ KEY_PYTHON = [
     "scripts/test_reference_capture_plan.py",
     "scripts/test_release_test_checklist.py",
     "scripts/test_route_fceux_targets.py",
+    "scripts/test_route_proof_status.py",
     "scripts/test_translation_capture_queue_readable.py",
     "scripts/test_v043_proof_gate.py",
     "scripts/test_v043_proof_status.py",
@@ -129,6 +131,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_v042_manual_proof_packet.py"],
     ["scripts/generate_manual_proof_routes.py"],
     ["scripts/generate_route_fceux_targets.py"],
+    ["scripts/generate_route_proof_status.py"],
     ["scripts/analyze_broad_scan_manual_dump.py"],
     ["scripts/build_v043_from_broad_scan_proof.py"],
     ["scripts/generate_v043_proof_status.py"],
@@ -200,6 +203,7 @@ def main() -> int:
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
     run("route FCEUX targets", ["scripts/test_route_fceux_targets.py"])
+    run("route proof status", ["scripts/test_route_proof_status.py"])
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
     run("batch46 text readiness", ["scripts/test_batch46_text_readiness.py"])
