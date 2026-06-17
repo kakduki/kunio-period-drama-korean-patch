@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PATCHABILITY = ROOT / "rom_analysis" / "broad_scan_patchability.json"
 SLOT_PLAN = ROOT / "rom_analysis" / "korean_slot_allocation_plan.json"
 EXPANSION_PLAN = ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
+READABLE_REFERENCE = ROOT / "text_data" / "translation_readable_reference.json"
 V042_EXTRA_GLYPHS = 32
 OUT_LUA = ROOT / "lua" / "kunio_broad_scan_candidate_targets.lua"
 OUT_JSON = ROOT / "rom_analysis" / "broad_scan_fceux_targets.json"
@@ -60,6 +61,26 @@ def load_v042_prg_bytes() -> dict[str, str]:
     return slots
 
 
+def load_readable_by_romaji() -> dict[str, dict[str, object]]:
+    payload = json.loads(READABLE_REFERENCE.read_text(encoding="utf-8"))
+    out: dict[str, dict[str, object]] = {}
+    for row in payload.get("translation_data_joined", []):
+        romaji = str(row.get("romaji", "")).strip()
+        if romaji and romaji not in out:
+            out[romaji] = row
+    return out
+
+
+def readable_text(row: dict[str, object], reference: dict[str, dict[str, object]]) -> dict[str, object]:
+    ref = reference.get(str(row.get("romaji", "")).strip(), {})
+    return {
+        "source": ref.get("source") or row.get("source", ""),
+        "korean": ref.get("korean") or row.get("korean", ""),
+        "category": ref.get("category") or row.get("category", ""),
+        "reference_context": ref.get("transcription_context") or ref.get("section") or "",
+    }
+
+
 def planned_bytes(
     row: dict[str, object],
     extension_by_glyph: dict[str, str],
@@ -79,6 +100,7 @@ def planned_bytes(
 
 def build_payload() -> dict[str, object]:
     data = json.loads(PATCHABILITY.read_text(encoding="utf-8"))
+    readable_by_romaji = load_readable_by_romaji()
     extension_by_glyph = {
         str(slot["glyph"]): str(slot["planned_prg_byte"])
         for slot in data.get("glyph_extension_if_promoted", [])
@@ -87,14 +109,16 @@ def build_payload() -> dict[str, object]:
 
     targets = []
     for row in data.get("promotion_candidates", []):
+        readable = readable_text(row, readable_by_romaji)
         start = parse_cpu_guess(str(row["cpu_address_guess"]))
         expected_len = len(parse_hex_bytes(str(row["bytes"])))
         target = {
             "label": normalize_label(row),
-            "source": row.get("source", ""),
+            "source": readable["source"],
             "romaji": row.get("romaji", ""),
-            "korean": row.get("korean", ""),
-            "category": row.get("category", ""),
+            "korean": readable["korean"],
+            "category": readable["category"],
+            "reference_context": readable["reference_context"],
             "confidence": row.get("confidence", ""),
             "rom_offset": row.get("rom_offset", ""),
             "bank16": row.get("bank16", ""),
@@ -111,6 +135,7 @@ def build_payload() -> dict[str, object]:
     targets.sort(key=lambda row: (int(str(row["rom_offset"]), 16), str(row["label"])))
     return {
         "source": str(PATCHABILITY.relative_to(ROOT)),
+        "readable_reference": str(READABLE_REFERENCE.relative_to(ROOT)),
         "target_count": len(targets),
         "purpose": "manual read-watch proof for v0.4.2 font-ready promotion candidates; watches original bytes only",
         "preview_rule": f"future patch preview uses v0.4.2 font bytes: base compact slots plus first {V042_EXTRA_GLYPHS} planned extra glyphs",
@@ -153,6 +178,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "They are for manual screen proof before promoting any new text into the v0.4.2 line.",
         "",
         f"- Source: `{payload['source']}`",
+        f"- Readable reference: `{payload['readable_reference']}`",
         f"- Targets: **{payload['target_count']}**",
         f"- Preview rule: {payload['preview_rule']}",
         "",
@@ -164,14 +190,15 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Targets",
         "",
-        "| ROM | CPU range | confidence | source | korean | original bytes | future patch preview | new glyphs |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| ROM | CPU range | confidence | romaji | source | korean | context | original bytes | future patch preview | new glyphs |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for target in payload["targets"]:
         new_glyphs = "".join(target.get("new_glyphs", [])) or "-"
         lines.append(
             f"| `{target['rom_offset']}` | `${target['start']:04X}-${target['stop']:04X}` | "
-            f"{target['confidence']} | {target['source']} | {target['korean']} | "
+            f"{target['confidence']} | {target['romaji']} | {target['source']} | {target['korean']} | "
+            f"{target.get('reference_context', '') or '-'} | "
             f"`{target['expected_original_bytes']}` | `{target['future_patch_bytes_preview']}` | {new_glyphs} |"
         )
 
