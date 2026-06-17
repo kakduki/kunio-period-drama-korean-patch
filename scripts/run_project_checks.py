@@ -32,6 +32,7 @@ KEY_PYTHON = [
     "scripts/generate_manual_capture_cards.py",
     "scripts/generate_manual_capture_status.py",
     "scripts/generate_manual_dump_inventory.py",
+    "scripts/generate_manual_proof_routes.py",
     "scripts/generate_next_glyph_expansion_plan.py",
     "scripts/generate_font_expansion_readiness.py",
     "scripts/generate_patch_candidate_manifest.py",
@@ -58,6 +59,7 @@ KEY_PYTHON = [
     "scripts/test_batch46_text_readiness.py",
     "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
+    "scripts/test_manual_proof_routes.py",
     "scripts/test_manual_capture_cards_readable.py",
     "scripts/test_run_fceux_budget.py",
     "scripts/test_reference_capture_plan.py",
@@ -117,6 +119,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_primary_patch_contents.py"],
     ["scripts/generate_v042_text_promotion_readiness.py"],
     ["scripts/generate_v042_manual_proof_packet.py"],
+    ["scripts/generate_manual_proof_routes.py"],
     ["scripts/analyze_broad_scan_manual_dump.py"],
     ["scripts/build_v043_from_broad_scan_proof.py"],
     ["scripts/generate_v043_proof_status.py"],
@@ -183,6 +186,7 @@ def main() -> int:
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
+    run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])

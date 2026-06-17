@@ -1,0 +1,260 @@
+{
+  "source": "rom_analysis\\batch46_text_readiness.json",
+  "summary": {
+    "candidate_count": 7,
+    "route_count": 3,
+    "groups": [
+      "Kajiya",
+      "Tatsuji",
+      "Heishichi"
+    ],
+    "rule": "Use one manually reached screen/context per route group when possible; do not extend blind autoplay."
+  },
+  "routes": [
+    {
+      "route": 1,
+      "group": "Kajiya",
+      "candidate_count": 1,
+      "rom_offsets": [
+        "0x0440C"
+      ],
+      "planned_prg_byte_sets": [
+        "0xB5 0x93 0xAB"
+      ],
+      "confidence_levels": [
+        "medium"
+      ],
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+      "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "decision_rule": "Promote only rows with both CPU-read matches and matching visible screen context.",
+      "candidates": [
+        {
+          "priority": 15,
+          "confidence": "medium",
+          "rom_offset": "0x0440C",
+          "bank16": 1,
+          "source": "かじや",
+          "romaji": "Kajiya",
+          "korean": "대장간",
+          "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+          "source_byte_len": 3,
+          "korean_glyph_len": 3,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0xB5",
+            "0x93",
+            "0xAB"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        }
+      ]
+    },
+    {
+      "route": 2,
+      "group": "Tatsuji",
+      "candidate_count": 3,
+      "rom_offsets": [
+        "0x048F4",
+        "0x052A5",
+        "0x05BE5"
+      ],
+      "planned_prg_byte_sets": [
+        "0x89 0x98 0xA1"
+      ],
+      "confidence_levels": [
+        "medium"
+      ],
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "decision_rule": "Promote only rows with both CPU-read matches and matching visible screen context.",
+      "candidates": [
+        {
+          "priority": 15,
+          "confidence": "medium",
+          "rom_offset": "0x048F4",
+          "bank16": 1,
+          "source": "たつじ",
+          "romaji": "Tatsuji",
+          "korean": "타츠지",
+          "screen_hint": "look for a visible Tatsuji boss/name context",
+          "source_byte_len": 3,
+          "korean_glyph_len": 3,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0x89",
+            "0x98",
+            "0xA1"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        },
+        {
+          "priority": 15,
+          "confidence": "medium",
+          "rom_offset": "0x052A5",
+          "bank16": 1,
+          "source": "たつじ",
+          "romaji": "Tatsuji",
+          "korean": "타츠지",
+          "screen_hint": "look for a visible Tatsuji boss/name context",
+          "source_byte_len": 3,
+          "korean_glyph_len": 3,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0x89",
+            "0x98",
+            "0xA1"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        },
+        {
+          "priority": 15,
+          "confidence": "medium",
+          "rom_offset": "0x05BE5",
+          "bank16": 1,
+          "source": "たつじ",
+          "romaji": "Tatsuji",
+          "korean": "타츠지",
+          "screen_hint": "look for a visible Tatsuji boss/name context",
+          "source_byte_len": 3,
+          "korean_glyph_len": 3,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0x89",
+            "0x98",
+            "0xA1"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        }
+      ]
+    },
+    {
+      "route": 3,
+      "group": "Heishichi",
+      "candidate_count": 3,
+      "rom_offsets": [
+        "0x06294",
+        "0x0631B",
+        "0x06359"
+      ],
+      "planned_prg_byte_sets": [
+        "0x8D 0x8E 0x8F 0x90"
+      ],
+      "confidence_levels": [
+        "high"
+      ],
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "decision_rule": "Promote only rows with both CPU-read matches and matching visible screen context.",
+      "candidates": [
+        {
+          "priority": 10,
+          "confidence": "high",
+          "rom_offset": "0x06294",
+          "bank16": 1,
+          "source": "へいしち",
+          "romaji": "Heishichi",
+          "korean": "헤이시치",
+          "screen_hint": "look for a visible Heishichi name/dialogue context",
+          "source_byte_len": 4,
+          "korean_glyph_len": 4,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0x8D",
+            "0x8E",
+            "0x8F",
+            "0x90"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        },
+        {
+          "priority": 10,
+          "confidence": "high",
+          "rom_offset": "0x0631B",
+          "bank16": 1,
+          "source": "へいしち",
+          "romaji": "Heishichi",
+          "korean": "헤이시치",
+          "screen_hint": "look for a visible Heishichi name/dialogue context",
+          "source_byte_len": 4,
+          "korean_glyph_len": 4,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0x8D",
+            "0x8E",
+            "0x8F",
+            "0x90"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        },
+        {
+          "priority": 10,
+          "confidence": "high",
+          "rom_offset": "0x06359",
+          "bank16": 1,
+          "source": "へいしち",
+          "romaji": "Heishichi",
+          "korean": "헤이시치",
+          "screen_hint": "look for a visible Heishichi name/dialogue context",
+          "source_byte_len": 4,
+          "korean_glyph_len": 4,
+          "length_equal": true,
+          "contains_control_like_bytes": false,
+          "font_ready_after_v042": true,
+          "font_ready_after_batch46": true,
+          "newly_font_ready_after_batch46": false,
+          "missing_glyphs_after_batch46": [],
+          "planned_prg_bytes_after_batch46": [
+            "0x8D",
+            "0x8E",
+            "0x8F",
+            "0x90"
+          ],
+          "promotable_after_batch46_screen_proof": true,
+          "blockers_after_batch46": []
+        }
+      ]
+    }
+  ]
+}
