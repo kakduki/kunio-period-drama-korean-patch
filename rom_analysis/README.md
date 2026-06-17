@@ -183,6 +183,8 @@ The repository includes `lua/kunio_auto_dump.lua` and
 `scripts/run_fceux_lua_analysis.py` to reduce manual GUI work. The launcher
 stages FCEUX in an ASCII-only `%TEMP%` path, opens the ROM, runs the Lua script,
 and mirrors generated dumps into `rom_analysis/fceux_lua/`.
+It also mirrors staged `manual_screen_dump*` folders back into this
+`rom_analysis/` directory, so manual watcher dumps are not stranded in `%TEMP%`.
 
 Current Lua input automation is intentionally limited: it can reach repeatable
 menu/status transfer windows for CPU/PPU evidence, but it is not a reliable

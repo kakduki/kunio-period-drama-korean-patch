@@ -88,6 +88,23 @@ def copytree_contents(src: Path, dst: Path) -> None:
             shutil.copy2(item, target)
 
 
+def mirror_staged_manual_outputs(staged_analysis_root: Path, destination_root: Path | None = None) -> list[Path]:
+    """Mirror manual dump folders written beside staged FCEUX back to the repo."""
+
+    destination_root = destination_root or (ROOT / "rom_analysis")
+    if not staged_analysis_root.exists():
+        return []
+
+    mirrored: list[Path] = []
+    for item in sorted(staged_analysis_root.iterdir()):
+        if not item.is_dir() or not item.name.startswith("manual_screen_dump"):
+            continue
+        destination = destination_root / item.name
+        copytree_contents(item, destination)
+        mirrored.append(destination)
+    return mirrored
+
+
 def summary_final_reason(summary: Path) -> str | None:
     if not summary.exists():
         return None
@@ -274,6 +291,9 @@ def launch(args: argparse.Namespace) -> int:
 
     copytree_contents(ascii_output, final_output)
     print("Copied Lua output into:", final_output)
+    mirrored = mirror_staged_manual_outputs(fceux_workdir / "rom_analysis")
+    for destination in mirrored:
+        print("Copied manual dump output into:", destination)
     if completed:
         return 0
     return proc.returncode or 0
