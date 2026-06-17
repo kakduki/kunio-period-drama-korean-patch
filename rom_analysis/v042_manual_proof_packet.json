@@ -7,6 +7,7 @@
     "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
     "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
     "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+    "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
     "rule": "Stop blind autoplay when the screen is stagnant; manually reach the target screen and run one dump."
   },
   "tasks": [
@@ -23,6 +24,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     },
     {
@@ -38,6 +40,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     },
     {
@@ -53,6 +56,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     },
     {
@@ -68,6 +72,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     },
     {
@@ -83,6 +88,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     },
     {
@@ -98,6 +104,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     },
     {
@@ -113,6 +120,7 @@
       "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
       "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
       "summary_command": "python scripts/analyze_broad_scan_manual_dump.py",
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
       "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted."
     }
   ]

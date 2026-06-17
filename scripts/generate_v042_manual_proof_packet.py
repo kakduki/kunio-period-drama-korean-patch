@@ -15,6 +15,7 @@ OUT_MD = ROOT / "rom_analysis" / "v042_manual_proof_packet.md"
 BASE_ROM = "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
 CAPTURE_LUA = "lua/kunio_manual_broad_scan_dump.lua"
 SUMMARY_COMMAND = "python scripts/analyze_broad_scan_manual_dump.py"
+SUMMARY_JSON = "rom_analysis/manual_screen_dump_broad_scan/summary.json"
 
 
 KIND_RANK = {
@@ -60,6 +61,7 @@ def build_packet() -> dict[str, object]:
             "rom_to_open": BASE_ROM,
             "capture_lua": CAPTURE_LUA,
             "summary_command": SUMMARY_COMMAND,
+            "summary_json": SUMMARY_JSON,
             "decision_rule": "A read hit plus matching screen context is required before this offset can be promoted.",
         }
         tasks.append(task)
@@ -77,6 +79,7 @@ def build_packet() -> dict[str, object]:
             "rom_to_open": BASE_ROM,
             "capture_lua": CAPTURE_LUA,
             "summary_command": SUMMARY_COMMAND,
+            "summary_json": SUMMARY_JSON,
             "rule": "Stop blind autoplay when the screen is stagnant; manually reach the target screen and run one dump.",
         },
         "tasks": tasks,
@@ -97,6 +100,7 @@ def write_markdown(packet: dict[str, object]) -> None:
         f"- Open ROM: `{summary['rom_to_open']}`",
         f"- Run Lua at the target screen: `{summary['capture_lua']}`",
         f"- Summarize: `{summary['summary_command']}`",
+        f"- Machine-readable result: `{summary['summary_json']}`",
         "",
         "## Workflow",
         "",
@@ -105,7 +109,8 @@ def write_markdown(packet: dict[str, object]) -> None:
         "3. Pause on the screen with text visible.",
         f"4. Run `{summary['capture_lua']}` from the FCEUX Lua menu.",
         f"5. Run `{summary['summary_command']}` from the repository root.",
-        "6. Promote only rows with both a CPU read hit and matching visible screen context.",
+        f"6. Review `{summary['summary_json']}` and the screenshot/visible screen together.",
+        "7. Promote only rows with both a CPU read hit and matching visible screen context.",
         "",
         "## Tasks",
         "",

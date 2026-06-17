@@ -9,6 +9,7 @@ Use this instead of extending blind FCEUX autoplay when the emulator keeps repea
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua at the target screen: `lua/kunio_manual_broad_scan_dump.lua`
 - Summarize: `python scripts/analyze_broad_scan_manual_dump.py`
+- Machine-readable result: `rom_analysis/manual_screen_dump_broad_scan/summary.json`
 
 ## Workflow
 
@@ -17,7 +18,8 @@ Use this instead of extending blind FCEUX autoplay when the emulator keeps repea
 3. Pause on the screen with text visible.
 4. Run `lua/kunio_manual_broad_scan_dump.lua` from the FCEUX Lua menu.
 5. Run `python scripts/analyze_broad_scan_manual_dump.py` from the repository root.
-6. Promote only rows with both a CPU read hit and matching visible screen context.
+6. Review `rom_analysis/manual_screen_dump_broad_scan/summary.json` and the screenshot/visible screen together.
+7. Promote only rows with both a CPU read hit and matching visible screen context.
 
 ## Tasks
 

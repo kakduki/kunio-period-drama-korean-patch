@@ -1,0 +1,9 @@
+{
+  "input_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+  "records": null,
+  "status": "no_manual_broad_scan_dump_records",
+  "targets_checked": 0,
+  "active_original_byte_matches": 0,
+  "screen_context_required": true,
+  "promotable_after_visual_review": []
+}

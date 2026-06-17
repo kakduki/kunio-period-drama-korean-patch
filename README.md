@@ -74,6 +74,7 @@ python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_scr
 ```
 
 broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio_manual_broad_scan_dump.lua`를 사용합니다.
+요약 결과는 `rom_analysis/manual_screen_dump_broad_scan/summary.md`와 `summary.json`에 저장됩니다.
 
 ## 현재 최우선 확인 항목
 

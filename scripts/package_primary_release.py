@@ -28,6 +28,8 @@ V042_TEXT_PROMOTION_JSON = REPO_ROOT / "rom_analysis" / "v042_text_promotion_rea
 V042_TEXT_PROMOTION_MD = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.md"
 V042_MANUAL_PROOF_JSON = REPO_ROOT / "rom_analysis" / "v042_manual_proof_packet.json"
 V042_MANUAL_PROOF_MD = REPO_ROOT / "rom_analysis" / "v042_manual_proof_packet.md"
+BROAD_SCAN_MANUAL_SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "summary.json"
+BROAD_SCAN_MANUAL_SUMMARY_MD = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "summary.md"
 FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"
 FONT_EXPANSION_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
@@ -63,6 +65,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `manual_capture_status.md`: generated status of manual dump evidence",
         "- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates",
+        "- `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
@@ -151,6 +154,8 @@ def package() -> dict[str, object]:
         (V042_TEXT_PROMOTION_JSON, "v042_text_promotion_readiness.json"),
         (V042_MANUAL_PROOF_MD, "v042_manual_proof_packet.md"),
         (V042_MANUAL_PROOF_JSON, "v042_manual_proof_packet.json"),
+        (BROAD_SCAN_MANUAL_SUMMARY_MD, "broad_scan_manual_summary.md"),
+        (BROAD_SCAN_MANUAL_SUMMARY_JSON, "broad_scan_manual_summary.json"),
         (FONT_EXPANSION_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"),
         (FONT_EXPANSION_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
