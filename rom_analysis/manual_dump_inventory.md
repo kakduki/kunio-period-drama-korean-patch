@@ -8,14 +8,15 @@ This inventory shows whether the manual FCEUX dump folders contain record files,
 - Total target-record files: **0**
 - Total screenshot files: **0**
 - Active matches in latest records: **0**
+- Active matches in summaries: **0**
 
-| folder | status | record files | screenshots | latest active matches | latest records | latest screenshot | summary |
-| --- | --- | ---: | ---: | ---: | --- | --- | --- |
-| `base` | `no_dump_records` | 0 | 0 | 0 | `-` | `-` | `-` |
-| `v04` | `no_dump_records` | 0 | 0 | 0 | `-` | `-` | `-` |
-| `v041` | `no_dump_records` | 0 | 0 | 0 | `-` | `-` | `-` |
-| `v042` | `no_dump_records` | 0 | 0 | 0 | `-` | `-` | `-` |
-| `broad_scan` | `no_dump_records` | 0 | 0 | 0 | `-` | `-` | `rom_analysis/manual_screen_dump_broad_scan/summary.md` |
+| folder | status | record files | screenshots | latest active matches | summary frame | summary matches | latest records | latest screenshot | summary |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- | --- |
+| `base` | `no_dump_records` | 0 | 0 | 0 | - | 0 | `-` | `-` | `-` |
+| `v04` | `no_dump_records` | 0 | 0 | 0 | - | 0 | `-` | `-` | `-` |
+| `v041` | `no_dump_records` | 0 | 0 | 0 | - | 0 | `-` | `-` | `-` |
+| `v042` | `no_dump_records` | 0 | 0 | 0 | - | 0 | `-` | `-` | `-` |
+| `broad_scan` | `no_dump_records` | 0 | 0 | 0 | - | 0 | `-` | `-` | `rom_analysis/manual_screen_dump_broad_scan/summary.md` |
 
 ## Rule
 

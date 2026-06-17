@@ -21,11 +21,17 @@ def main() -> int:
         errors.append("checked-in manual dump inventory should not contain record files")
     if payload["summary"]["total_screenshot_files"] != 0:
         errors.append("checked-in manual dump inventory should not contain screenshot files")
+    if payload["summary"]["total_summary_active_matches"] != 0:
+        errors.append("checked-in manual dump inventory should not contain summary active matches")
     if set(payload["summary"]["status_counts"]) != {"no_dump_records"}:
         errors.append(f"unexpected status counts: {payload['summary']['status_counts']}")
+    for row in payload["dump_dirs"]:
+        for key in ["summary_frame", "summary_targets_checked", "summary_active_matches", "summary_latest_screenshot"]:
+            if key not in row:
+                errors.append(f"{key!r} missing from {row.get('label')}")
 
     markdown = INVENTORY_MD.read_text(encoding="utf-8")
-    for expected in ["Manual Dump Inventory", "reference_capture_plan.md", "record_visual_review.py"]:
+    for expected in ["Manual Dump Inventory", "Active matches in summaries", "reference_capture_plan.md", "record_visual_review.py"]:
         if expected not in markdown:
             errors.append(f"{expected!r} missing from markdown")
 
