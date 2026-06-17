@@ -24,15 +24,15 @@ Use this instead of extending blind FCEUX autoplay when the emulator keeps repea
 
 ## Tasks
 
-| # | kind | confidence | ROM | romaji | expected visible text | Korean | screen hint | original | planned v0.4.2 bytes | decision |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | non_overlapping_needs_manual_screen | medium | `0x0440C` | Kajiya | かじや | 대장간 | look for a blacksmith/shop or blacksmith-stage label | `CA D0 E9` | `B5 93 AB` | read hit + screen context |
-| 2 | non_overlapping_needs_manual_screen | medium | `0x048F4` | Tatsuji | たつじ | 타츠지 | look for a visible Tatsuji boss/name context | `07 09 03` | `89 98 A1` | read hit + screen context |
-| 3 | non_overlapping_needs_manual_screen | medium | `0x052A5` | Tatsuji | たつじ | 타츠지 | look for a visible Tatsuji boss/name context | `82 84 7E` | `89 98 A1` | read hit + screen context |
-| 4 | non_overlapping_needs_manual_screen | medium | `0x05BE5` | Tatsuji | たつじ | 타츠지 | look for a visible Tatsuji boss/name context | `97 99 93` | `89 98 A1` | read hit + screen context |
-| 5 | conflict_alternative_needs_manual_screen | high | `0x06294` | Heishichi | へいしち | 헤이시치 | look for a visible Heishichi name/dialogue context | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
-| 6 | conflict_alternative_needs_manual_screen | high | `0x0631B` | Heishichi | へいしち | 헤이시치 | look for a visible Heishichi name/dialogue context | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
-| 7 | conflict_alternative_needs_manual_screen | high | `0x06359` | Heishichi | へいしち | 헤이시치 | look for a visible Heishichi name/dialogue context | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
+| # | kind | confidence | ROM | romaji | human hint | expected visible text | Korean | screen hint | original | planned v0.4.2 bytes | decision |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | non_overlapping_needs_manual_screen | medium | `0x0440C` | Kajiya | blacksmith/stage label | かじや | 대장간 | look for a blacksmith/shop or blacksmith-stage label | `CA D0 E9` | `B5 93 AB` | read hit + screen context |
+| 2 | non_overlapping_needs_manual_screen | medium | `0x048F4` | Tatsuji | boss/name label | たつじ | 타츠지 | look for a visible Tatsuji boss/name context | `07 09 03` | `89 98 A1` | read hit + screen context |
+| 3 | non_overlapping_needs_manual_screen | medium | `0x052A5` | Tatsuji | boss/name label | たつじ | 타츠지 | look for a visible Tatsuji boss/name context | `82 84 7E` | `89 98 A1` | read hit + screen context |
+| 4 | non_overlapping_needs_manual_screen | medium | `0x05BE5` | Tatsuji | boss/name label | たつじ | 타츠지 | look for a visible Tatsuji boss/name context | `97 99 93` | `89 98 A1` | read hit + screen context |
+| 5 | conflict_alternative_needs_manual_screen | high | `0x06294` | Heishichi | name/dialogue label | へいしち | 헤이시치 | look for a visible Heishichi name/dialogue context | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
+| 6 | conflict_alternative_needs_manual_screen | high | `0x0631B` | Heishichi | name/dialogue label | へいしち | 헤이시치 | look for a visible Heishichi name/dialogue context | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
+| 7 | conflict_alternative_needs_manual_screen | high | `0x06359` | Heishichi | name/dialogue label | へいしち | 헤이시치 | look for a visible Heishichi name/dialogue context | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
 
 ## Notes
 

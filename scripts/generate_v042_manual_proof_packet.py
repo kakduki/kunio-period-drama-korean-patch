@@ -132,13 +132,13 @@ def write_markdown(packet: dict[str, object]) -> None:
         "",
         "## Tasks",
         "",
-        "| # | kind | confidence | ROM | romaji | expected visible text | Korean | screen hint | original | planned v0.4.2 bytes | decision |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| # | kind | confidence | ROM | romaji | human hint | expected visible text | Korean | screen hint | original | planned v0.4.2 bytes | decision |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for task in packet["tasks"]:
         lines.append(
             f"| {task['task']} | {task['kind']} | {task['confidence']} | `{task['rom_offset']}` | "
-            f"{task['romaji'] or '-'} | {task['source_display'] or task['source']} | "
+            f"{task['romaji'] or '-'} | {task['meaning'] or '-'} | {task['source_display'] or task['source']} | "
             f"{task['korean_display'] or task['korean']} | {task['screen_hint'] or '-'} | `{task['original_bytes']}` | "
             f"`{task['planned_prg_bytes']}` | read hit + screen context |"
         )

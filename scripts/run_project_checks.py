@@ -79,6 +79,7 @@ KEY_PYTHON = [
     "scripts/test_route_proof_status.py",
     "scripts/test_translation_capture_queue_readable.py",
     "scripts/test_v043_proof_gate.py",
+    "scripts/test_v042_manual_proof_packet.py",
     "scripts/test_v043_proof_status.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
@@ -224,6 +225,7 @@ def main() -> int:
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
     run("batch46 text readiness", ["scripts/test_batch46_text_readiness.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
+    run("v0.4.2 manual proof packet", ["scripts/test_v042_manual_proof_packet.py"])
     run("v0.4.3 proof status", ["scripts/test_v043_proof_status.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
     run("broad preview IPS verification", ["scripts/verify_broad_preview_patch.py"])

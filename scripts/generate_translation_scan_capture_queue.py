@@ -61,6 +61,7 @@ def readable_context(row: dict[str, object], reference_by_romaji: dict[str, dict
     return {
         "source_display": source_display,
         "korean_display": korean_display,
+        "meaning": str(local.get("meaning") or reference.get("category") or row.get("group") or ""),
         "screen_hint": screen_hint,
         "reference_section": str(reference.get("section", "")),
         "reference_note": str(reference.get("transcription_note") or reference.get("note") or ""),
@@ -147,12 +148,12 @@ def main() -> int:
         "",
         "## Queue",
         "",
-        "| priority | confidence | expected text | Korean | romaji | group | ROM | bank | CPU guess | screen hint | reason |",
-        "| ---: | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- |",
+        "| priority | confidence | human hint | expected text | Korean | romaji | group | ROM | bank | CPU guess | screen hint | reason |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- |",
     ]
     for row in focused:
         lines.append(
-            f"| {row['priority']} | {row['confidence']} | {row['source_display']} | {row['korean_display']} | "
+            f"| {row['priority']} | {row['confidence']} | {row['meaning'] or '-'} | {row['source_display']} | {row['korean_display']} | "
             f"{row['romaji']} | {row['group']} | `{row['rom_offset']}` | {row['bank16']} | "
             f"`{row['cpu_address_guess']}` | {row['screen_hint']} | {row['reason']} |"
         )

@@ -18,7 +18,7 @@ def main() -> int:
     errors = []
     if not rows:
         errors.append("queue is empty")
-    for key in ["source_display", "korean_display", "screen_hint"]:
+    for key in ["source_display", "korean_display", "meaning", "screen_hint"]:
         missing = [row["rom_offset"] for row in rows if not row.get(key)]
         if missing:
             errors.append(f"{key} missing for {missing[:5]}")
@@ -30,6 +30,9 @@ def main() -> int:
         errors.append("Tatsuji rows are not using readable display labels")
 
     markdown = QUEUE_MD.read_text(encoding="utf-8")
+    for expected in ["human hint", "boss/name label"]:
+        if expected not in markdown:
+            errors.append(f"{expected!r} missing from markdown queue")
     for expected in ["expected text", "screen hint", "타츠지"]:
         if expected not in markdown:
             errors.append(f"{expected!r} missing from markdown queue")
