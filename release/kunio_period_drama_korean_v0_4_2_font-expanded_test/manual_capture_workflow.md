@@ -23,6 +23,18 @@ reached screen is higher-value evidence.
 python scripts/analyze_manual_screen_dump.py
 ```
 
+## If FCEUX Stays On The First Screen
+
+The Lua watcher does not start the game, press buttons, or advance dialogue. If
+the first/title screen is repeating, stop the watcher with `Q` and confirm normal
+manual control first:
+
+1. In FCEUX, check `Config > Input` and confirm a controller is mapped.
+2. Use the mapped `Start` button to leave the title screen.
+3. Move manually until the relevant text/menu/status screen is visible.
+4. Start the watcher only after normal play control works.
+5. Press `D` only on a useful text/menu/status screen.
+
 ## Capture Watcher
 
 For longer manual play, run this once instead of reopening Lua for every screen:
