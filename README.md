@@ -50,6 +50,7 @@ python scripts/run_project_checks.py --regen
 - `rom_analysis/next_glyph_expansion_plan.md`: 다음 한글 글리프 확장 우선순위
 - `rom_analysis/v042_text_promotion_readiness.md`: v0.4.2 폰트 기준 다음 텍스트 후보 준비도
 - `rom_analysis/v042_manual_proof_packet.md`: 첫 화면 루프 대신 확인할 7개 base-ROM 수동 검증 과제
+- `rom_analysis/primary_patch_contents.md`: 현재 primary IPS가 바꾸는 텍스트 10개, 바이트, 증거 상태
 - `rom_analysis/kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: 로컬 v0.5 글리프 확장 실험 빌드 리포트
 - `rom_analysis/patch_candidate_manifest.md`: 현재 ROM/IPS 후보 목록
 - `rom_analysis/manual_capture_workflow.md`: FCEUX 수동 캡처 절차

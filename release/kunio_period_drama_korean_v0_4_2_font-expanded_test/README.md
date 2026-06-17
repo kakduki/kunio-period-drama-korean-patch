@@ -6,6 +6,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 
 - `kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`: primary IPS patch
 - `patch_candidate_manifest.md`: candidate status and verification notes
+- `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `manual_capture_status.md`: generated status of manual dump evidence

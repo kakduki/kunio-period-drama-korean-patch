@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "primary_candidate": "v0.4.2 font-expanded",
+    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "primary_candidate_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+    "build_report": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded_build_report.json",
+    "applied_count": 10,
+    "runtime_confirmed_count": 1,
+    "ppu_or_encoding_evidence_count": 1,
+    "static_candidate_count": 8,
+    "changed_bytes_total": 700,
+    "ips_records": 113,
+    "manual_verification_required": true
+  },
+  "applied_rows": [
+    {
+      "index": 1,
+      "rom_hit": "0x07227",
+      "label": "rom_07227_candidate_84",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "meaning": "weapon/item label",
+      "old_bytes": "8A 94 99",
+      "new_bytes": "88 89 8A",
+      "evidence_level": "runtime-confirmed",
+      "risk": "safe-equal-length",
+      "manual_status": "runtime read confirmed; still needs visual screen review",
+      "category_group": "items/equipment",
+      "record_rom_range": [
+        "0x07226",
+        "0x0722A"
+      ],
+      "record_cpu_range": [
+        "$B216",
+        "$B21A"
+      ]
+    },
+    {
+      "index": 2,
+      "rom_hit": "0x0569D",
+      "label": "watch_rom_0569d_스테이지_7a",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "meaning": "stage/location label",
+      "old_bytes": "A0 92",
+      "new_bytes": "8B 8C",
+      "evidence_level": "encoding-exact",
+      "risk": "safe-equal-length",
+      "manual_status": "PPU/text-sequence evidence; needs visual screen review",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x0569C",
+        "0x0569F"
+      ],
+      "record_cpu_range": [
+        "$968C",
+        "$968F"
+      ]
+    },
+    {
+      "index": 3,
+      "rom_hit": "0x0561A",
+      "label": "watch_rom_0561a_스테이지_7c",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "meaning": "stage/location label",
+      "old_bytes": "96 88",
+      "new_bytes": "8B 8C",
+      "evidence_level": "static-candidate+pointer",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x055CE",
+        "0x0561F"
+      ],
+      "record_cpu_range": [
+        "$95BE",
+        "$960F"
+      ]
+    },
+    {
+      "index": 4,
+      "rom_hit": "0x05643",
+      "label": "watch_rom_05643_보스_80",
+      "romaji": "Heishichi",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "meaning": "name/dialogue label",
+      "old_bytes": "9D 82 8C 91",
+      "new_bytes": "8D 8E 8F 90",
+      "evidence_level": "static-candidate+pointer",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x05643",
+        "0x05647"
+      ],
+      "record_cpu_range": [
+        "$9633",
+        "$9637"
+      ]
+    },
+    {
+      "index": 5,
+      "rom_hit": "0x057D4",
+      "label": "watch_rom_057d4_스테이지_8c",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "meaning": "stage/location label",
+      "old_bytes": "A6 98",
+      "new_bytes": "8B 8C",
+      "evidence_level": "static-candidate+pointer",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x057D4",
+        "0x057D8"
+      ],
+      "record_cpu_range": [
+        "$97C4",
+        "$97C8"
+      ]
+    },
+    {
+      "index": 6,
+      "rom_hit": "0x0736A",
+      "label": "rom_0736a_candidate_93",
+      "romaji": "Raifu",
+      "source_display": "ライフ",
+      "korean_display": "라이프",
+      "meaning": "UI life label",
+      "old_bytes": "BB 95 AF",
+      "new_bytes": "96 8E 97",
+      "evidence_level": "static-candidate+pointer",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "UI/status",
+      "record_rom_range": [
+        "0x07369",
+        "0x0736E"
+      ],
+      "record_cpu_range": [
+        "$B359",
+        "$B35E"
+      ]
+    },
+    {
+      "index": 7,
+      "rom_hit": "0x0739D",
+      "label": "rom_0739d_candidate_93",
+      "romaji": "Raifu",
+      "source_display": "ライフ",
+      "korean_display": "라이프",
+      "meaning": "UI life label",
+      "old_bytes": "BB 95 AF",
+      "new_bytes": "96 8E 97",
+      "evidence_level": "static-candidate+pointer",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "UI/status",
+      "record_rom_range": [
+        "0x0739C",
+        "0x073A1"
+      ],
+      "record_cpu_range": [
+        "$B38C",
+        "$B391"
+      ]
+    },
+    {
+      "index": 8,
+      "rom_hit": "0x0562F",
+      "label": "watch_rom_0562f_보스_80",
+      "romaji": "Tatsuichi",
+      "source_display": "たついち",
+      "korean_display": "타츠이치",
+      "meaning": "name/dialogue label",
+      "old_bytes": "90 92 82 91",
+      "new_bytes": "89 98 8E 90",
+      "evidence_level": "static-candidate",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x0562A",
+        "0x05633"
+      ],
+      "record_cpu_range": [
+        "$961A",
+        "$9623"
+      ]
+    },
+    {
+      "index": 9,
+      "rom_hit": "0x056DA",
+      "label": "watch_rom_056da_스테이지_80",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "meaning": "stage/location label",
+      "old_bytes": "9A 8C",
+      "new_bytes": "8B 8C",
+      "evidence_level": "static-candidate",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x056D5",
+        "0x056DE"
+      ],
+      "record_cpu_range": [
+        "$96C5",
+        "$96CE"
+      ]
+    },
+    {
+      "index": 10,
+      "rom_hit": "0x0571C",
+      "label": "watch_rom_0571c_스테이지_78",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "meaning": "stage/location label",
+      "old_bytes": "92 84",
+      "new_bytes": "8B 8C",
+      "evidence_level": "static-candidate",
+      "risk": "safe-equal-length",
+      "manual_status": "static candidate; needs manual screen proof",
+      "category_group": "event/dialogue-related",
+      "record_rom_range": [
+        "0x05716",
+        "0x05724"
+      ],
+      "record_cpu_range": [
+        "$9706",
+        "$9714"
+      ]
+    }
+  ],
+  "warnings": [
+    "This is a manual-test patch report, not final release approval.",
+    "Rows marked static candidate still need direct FCEUX screen proof.",
+    "v0.4 broad-scan conflicts and shortened padding-risk rows are intentionally excluded.",
+    "YouTube footage can help scene order/transcription, but exact ROM offsets still require ROM/runtime evidence."
+  ]
+}

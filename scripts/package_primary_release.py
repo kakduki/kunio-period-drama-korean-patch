@@ -36,6 +36,8 @@ BROAD_SCAN_MANUAL_SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dum
 BROAD_SCAN_MANUAL_SUMMARY_MD = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "summary.md"
 BROAD_SCAN_VISUAL_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "visual_review.json"
 V043_BROAD_VERIFIED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.json"
+PRIMARY_PATCH_CONTENTS_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
+PRIMARY_PATCH_CONTENTS_MD = REPO_ROOT / "rom_analysis" / "primary_patch_contents.md"
 FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"
 FONT_EXPANSION_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
@@ -67,6 +69,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "",
         f"- `{ips_name}`: primary IPS patch",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
+        "- `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `manual_capture_status.md`: generated status of manual dump evidence",
@@ -150,6 +153,8 @@ def package() -> dict[str, object]:
         (ips_path, ips_path.name),
         (MANIFEST_MD, "patch_candidate_manifest.md"),
         (MANIFEST_JSON, "patch_candidate_manifest.json"),
+        (PRIMARY_PATCH_CONTENTS_MD, "primary_patch_contents.md"),
+        (PRIMARY_PATCH_CONTENTS_JSON, "primary_patch_contents.json"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
