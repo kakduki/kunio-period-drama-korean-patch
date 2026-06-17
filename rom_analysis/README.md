@@ -47,6 +47,7 @@
 - `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.1 conflict-safe as the primary manual-test ROM and padding builds as non-release experiments
 - `../scripts/verify_primary_patch.py`: verifies that the current primary IPS applies to the expected base ROM and produces the manifest MD5
 - `../scripts/run_project_checks.py`: runs the core consistency checks for Python scripts, generated Lua targets, primary IPS verification, and manifest invariants; use `--regen` to rebuild the current generated candidate artifacts first
+- `../scripts/package_primary_release.py`: creates a ROM-free test bundle for the current primary IPS at `../release/kunio_period_drama_korean_v0_4_1_conflict-safe_test/` and `../release/kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip`
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness

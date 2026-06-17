@@ -26,6 +26,7 @@ KEY_PYTHON = [
     "scripts/generate_translation_scan_capture_queue.py",
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
+    "scripts/package_primary_release.py",
     "scripts/verify_primary_patch.py",
 ]
 

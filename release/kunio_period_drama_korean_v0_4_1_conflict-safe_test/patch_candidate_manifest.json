@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "primary_candidate": "v0.4.1 conflict-safe",
+    "primary_candidate_md5": "2b9f569fa175c719333064b8d73bc273",
+    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips",
+    "primary_ips_exists": true,
+    "primary_ips_apply_md5": "2b9f569fa175c719333064b8d73bc273",
+    "primary_ips_apply_matches_rom": true,
+    "candidate_count": 4,
+    "padding_experiment_count": 5,
+    "bank1_targets": 43,
+    "runtime_confirmed_targets": 2,
+    "manual_capture_queue": "rom_analysis\\manual_capture_queue.json",
+    "manual_capture_queued_targets": 27,
+    "v04_broad_conflicts": "rom_analysis\\v04_broad_candidate_conflicts.json",
+    "v04_broad_conflict_count": 3,
+    "v04_broad_high_conflict_count": 3,
+    "completion_status": "incomplete; needs manual FCEUX screen verification and more text offsets"
+  },
+  "candidates": [
+    {
+      "name": "v0.2 font-only",
+      "role": "font/glyph experiment",
+      "verdict": "not playable text patch by itself",
+      "report": "output\\kunio_period_drama_korean_plan_v0.2_build_report.json",
+      "rom_path": "output\\kunio_period_drama_korean_plan_v0.2.nes",
+      "rom_exists": true,
+      "rom_md5": "416ad32dfc438c8b51a4d0a20028fe81",
+      "reported_md5": "416ad32dfc438c8b51a4d0a20028fe81",
+      "md5_matches_report": true,
+      "applied_count": "",
+      "skipped_count": "",
+      "changed_bytes_total": ""
+    },
+    {
+      "name": "v0.3 runtime-confirmed equal-length",
+      "role": "conservative PRG+CHR experiment",
+      "verdict": "superseded by v0.4 for current testing",
+      "report": "output\\kunio_period_drama_korean_prg_plan_v0.3_build_report.json",
+      "rom_path": "output\\kunio_period_drama_korean_prg_plan_v0.3.nes",
+      "rom_exists": true,
+      "rom_md5": "df28465ab0910743f7914ba1e5c63c16",
+      "reported_md5": "df28465ab0910743f7914ba1e5c63c16",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_plan_v0.3.ips",
+      "ips_exists": true,
+      "applied_count": 1,
+      "skipped_count": 42,
+      "changed_bytes_total": 255,
+      "include_evidence": [
+        "runtime-confirmed"
+      ],
+      "include_risks": [
+        "safe-equal-length"
+      ]
+    },
+    {
+      "name": "v0.4 equal-length static",
+      "role": "older broad equal-length test candidate",
+      "verdict": "superseded by v0.4.1 because of broad-scan conflicts",
+      "report": "output\\kunio_period_drama_korean_prg_plan_v0.4_equal_length_static_build_report.json",
+      "rom_path": "output\\kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.nes",
+      "rom_exists": true,
+      "rom_md5": "e50d9c974d9968170f932a7ed51fe52e",
+      "reported_md5": "e50d9c974d9968170f932a7ed51fe52e",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips",
+      "ips_exists": true,
+      "applied_count": 13,
+      "skipped_count": 30,
+      "changed_bytes_total": 287,
+      "include_evidence": [
+        "encoding-exact",
+        "runtime-confirmed",
+        "static-candidate",
+        "static-candidate+pointer"
+      ],
+      "include_risks": [
+        "safe-equal-length"
+      ]
+    },
+    {
+      "name": "v0.4.1 conflict-safe",
+      "role": "current primary manual-test candidate",
+      "verdict": "test in FCEUX, not final release; excludes v0.4/broad overlaps",
+      "report": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe_build_report.json",
+      "rom_path": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes",
+      "rom_exists": true,
+      "rom_md5": "2b9f569fa175c719333064b8d73bc273",
+      "reported_md5": "2b9f569fa175c719333064b8d73bc273",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips",
+      "ips_exists": true,
+      "applied_count": 10,
+      "skipped_count": 33,
+      "changed_bytes_total": 278,
+      "include_evidence": [
+        "encoding-exact",
+        "runtime-confirmed",
+        "static-candidate",
+        "static-candidate+pointer"
+      ],
+      "include_risks": [
+        "safe-equal-length"
+      ]
+    }
+  ],
+  "padding_experiments": [
+    {
+      "strategy": "pad_00",
+      "role": "FCEUX-only padding experiment",
+      "verdict": "not final patch candidate",
+      "rom_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_00.nes",
+      "rom_exists": true,
+      "rom_md5": "cdb124b2434a39d9ad3e28f84b651ed1",
+      "reported_md5": "cdb124b2434a39d9ad3e28f84b651ed1",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_00.ips",
+      "ips_exists": true,
+      "expected_bytes": "87 00 00"
+    },
+    {
+      "strategy": "pad_7a",
+      "role": "FCEUX-only padding experiment",
+      "verdict": "not final patch candidate",
+      "rom_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_7a.nes",
+      "rom_exists": true,
+      "rom_md5": "4fa3714a8e9a867889ac96d5ca7cbf79",
+      "reported_md5": "4fa3714a8e9a867889ac96d5ca7cbf79",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_7a.ips",
+      "ips_exists": true,
+      "expected_bytes": "87 7A 7A"
+    },
+    {
+      "strategy": "pad_ff",
+      "role": "FCEUX-only padding experiment",
+      "verdict": "not final patch candidate",
+      "rom_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_ff.nes",
+      "rom_exists": true,
+      "rom_md5": "7cc172c71358c69052869095cd9f252b",
+      "reported_md5": "7cc172c71358c69052869095cd9f252b",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_ff.ips",
+      "ips_exists": true,
+      "expected_bytes": "87 FF FF"
+    },
+    {
+      "strategy": "pad_f8f9",
+      "role": "FCEUX-only padding experiment",
+      "verdict": "not final patch candidate",
+      "rom_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_f8f9.nes",
+      "rom_exists": true,
+      "rom_md5": "2e5f270289b79ff5bd5fca46dd0caee2",
+      "reported_md5": "2e5f270289b79ff5bd5fca46dd0caee2",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_f8f9.ips",
+      "ips_exists": true,
+      "expected_bytes": "87 F8 F9"
+    },
+    {
+      "strategy": "preserve_tail",
+      "role": "FCEUX-only padding experiment",
+      "verdict": "not final patch candidate",
+      "rom_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_preserve_tail.nes",
+      "rom_exists": true,
+      "rom_md5": "ee7504d0f245ad31779eadea45ad0796",
+      "reported_md5": "ee7504d0f245ad31779eadea45ad0796",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_preserve_tail.ips",
+      "ips_exists": true,
+      "expected_bytes": "87 88 AA"
+    }
+  ],
+  "do_not_confuse": [
+    "v0.4.1 is the current primary test ROM, not a final release.",
+    "v0.4 has overlapping high-confidence broad-scan candidates and is superseded for primary testing.",
+    "padding experiment ROMs are only for validating shortened replacements.",
+    "YouTube transcription helps identify text, but ROM offsets and runtime evidence still decide patchability."
+  ]
+}

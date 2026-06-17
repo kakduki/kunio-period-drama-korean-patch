@@ -325,6 +325,14 @@ def main() -> int:
         "python scripts/run_project_checks.py",
         "python scripts/run_project_checks.py --regen",
         "```",
+        "",
+        "## Package Test IPS",
+        "",
+        "Create a ROM-free test bundle for the current primary IPS:",
+        "",
+        "```powershell",
+        "python scripts/package_primary_release.py",
+        "```",
     ]
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

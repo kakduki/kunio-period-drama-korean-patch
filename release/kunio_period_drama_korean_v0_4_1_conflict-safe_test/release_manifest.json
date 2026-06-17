@@ -1,0 +1,17 @@
+{
+  "bundle_dir": "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test",
+  "zip_path": "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip",
+  "zip_size": 5368,
+  "zip_md5": "69719baf25010be7ad45b47aea86d2f5",
+  "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips",
+  "primary_candidate": "v0.4.1 conflict-safe",
+  "primary_candidate_md5": "2b9f569fa175c719333064b8d73bc273",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "files": [
+    "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test\\README.md",
+    "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test\\SHA256SUMS.txt",
+    "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips",
+    "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test\\patch_candidate_manifest.json",
+    "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test\\patch_candidate_manifest.md"
+  ]
+}
