@@ -12,7 +12,7 @@
 ## Generated files
 
 - `extract_text_output.txt`: heuristic text/pointer scan
-- `../text_data/translation_readable_reference.md` / `../text_data/translation_readable_reference.json`: readable transcription-to-translation join table with romaji/context hints; currently joins 120 of 144 `translation_data.txt` entries
+- `../text_data/translation_readable_reference.md` / `../text_data/translation_readable_reference.json`: readable transcription-to-translation join table with romaji/context hints; currently covers 144 of 144 `translation_data.txt` entries, including 24 auto-romaji fallback technique names
 - `find_text_output.txt`: PRG text-like byte-region scan
 - `analyze_rom_output.txt`: ASCII/SJIS scan and basic PRG summary
 - `analyze_chr_output.txt`: CHR dump and fixed-bank dump

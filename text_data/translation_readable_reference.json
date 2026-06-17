@@ -6,8 +6,9 @@
   "summary": {
     "transcription_entries": 183,
     "translation_entries": 144,
-    "translation_entries_with_romaji": 120,
-    "translation_entries_missing_romaji": 24
+    "translation_entries_with_romaji": 144,
+    "translation_entries_auto_romaji": 24,
+    "translation_entries_missing_romaji": 0
   },
   "reference": [
     {
@@ -1934,6 +1935,270 @@
       "subsection": "4.4 특수 아이템"
     },
     {
+      "source": "まっはぱんち",
+      "korean": "마하 펀치",
+      "category": "기술",
+      "note": "",
+      "romaji": "Mahhapanchi",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "まっはきっく",
+      "korean": "마하 킥",
+      "category": "기술",
+      "note": "",
+      "romaji": "Mahhakikku",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "まっはたたき",
+      "korean": "마하 때리기",
+      "category": "기술",
+      "note": "",
+      "romaji": "Mahhatataki",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "まっはすいんぐ",
+      "korean": "마하 스윙",
+      "category": "기술",
+      "note": "",
+      "romaji": "Mahhasuingu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "まっはふみふみ",
+      "korean": "마하 밟기",
+      "category": "기술",
+      "note": "",
+      "romaji": "Mahhafumifumi",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "すくりゅう",
+      "korean": "스크류",
+      "category": "기술",
+      "note": "",
+      "romaji": "Sukuryuu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "にとろあたっく",
+      "korean": "니트로 어택",
+      "category": "기술",
+      "note": "",
+      "romaji": "Nitoroatakku",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "はいぱーがーど",
+      "korean": "하이퍼 가드",
+      "category": "기술",
+      "note": "",
+      "romaji": "Haipagado",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "せんぷうきゃく",
+      "korean": "선풍각",
+      "category": "기술",
+      "note": "",
+      "romaji": "Senpuukyaku",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "わーぷしゅーと",
+      "korean": "워프 슛",
+      "category": "기술",
+      "note": "",
+      "romaji": "Wapushuto",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "にんげんどりる",
+      "korean": "인간 드릴",
+      "category": "기술",
+      "note": "",
+      "romaji": "Ningendoriru",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "にんげんへり",
+      "korean": "인간 헬기",
+      "category": "기술",
+      "note": "",
+      "romaji": "Ningenheri",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "にんげんぎょらい",
+      "korean": "인간 어뢰",
+      "category": "기술",
+      "note": "",
+      "romaji": "Ningengyorai",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "じぶんぎょらい",
+      "korean": "자폭 어뢰",
+      "category": "기술",
+      "note": "",
+      "romaji": "Jibungyorai",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "まっはぱんちII",
+      "korean": "마하 펀치 2",
+      "category": "기술",
+      "note": "",
+      "romaji": "MahhapanchiII",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "まっはきっくII",
+      "korean": "마하 킥 2",
+      "category": "기술",
+      "note": "",
+      "romaji": "MahhakikkuII",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "すくりゅうII",
+      "korean": "스크류 2",
+      "category": "기술",
+      "note": "",
+      "romaji": "SukuryuuII",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "はりてすぺしゃる",
+      "korean": "빰 때리기 S",
+      "category": "기술",
+      "note": "",
+      "romaji": "Haritesupesharu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "どすすぺしゃる",
+      "korean": "강타 S",
+      "category": "기술",
+      "note": "",
+      "romaji": "Dosusupesharu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "ずつきすぺしゃる",
+      "korean": "박치기 S",
+      "category": "기술",
+      "note": "",
+      "romaji": "Zutsukisupesharu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "あんますぺしゃる",
+      "korean": "안마 S",
+      "category": "기술",
+      "note": "",
+      "romaji": "Anmasupesharu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "びっぐばんぐ",
+      "korean": "빅뱅",
+      "category": "기술",
+      "note": "",
+      "romaji": "Biggubangu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "へんしんわざ",
+      "korean": "변신술",
+      "category": "기술",
+      "note": "",
+      "romaji": "Henshinwaza",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
+      "source": "やまたのじゅつ",
+      "korean": "야마타의 술",
+      "category": "기술",
+      "note": "",
+      "romaji": "Yamatanojutsu",
+      "transcription_note": "auto-romaji fallback from translation_data source",
+      "section": "translation_data fallback",
+      "subsection": "기술",
+      "romaji_source": "auto-kana"
+    },
+    {
       "source": "ぎんぱち",
       "korean": "긴파치",
       "category": "보스",
@@ -2494,150 +2759,5 @@
       "subsection": ""
     }
   ],
-  "translation_data_missing": [
-    {
-      "source": "まっはぱんち",
-      "korean": "마하 펀치",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "まっはきっく",
-      "korean": "마하 킥",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "まっはたたき",
-      "korean": "마하 때리기",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "まっはすいんぐ",
-      "korean": "마하 스윙",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "まっはふみふみ",
-      "korean": "마하 밟기",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "すくりゅう",
-      "korean": "스크류",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "にとろあたっく",
-      "korean": "니트로 어택",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "はいぱーがーど",
-      "korean": "하이퍼 가드",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "せんぷうきゃく",
-      "korean": "선풍각",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "わーぷしゅーと",
-      "korean": "워프 슛",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "にんげんどりる",
-      "korean": "인간 드릴",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "にんげんへり",
-      "korean": "인간 헬기",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "にんげんぎょらい",
-      "korean": "인간 어뢰",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "じぶんぎょらい",
-      "korean": "자폭 어뢰",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "まっはぱんちII",
-      "korean": "마하 펀치 2",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "まっはきっくII",
-      "korean": "마하 킥 2",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "すくりゅうII",
-      "korean": "스크류 2",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "はりてすぺしゃる",
-      "korean": "빰 때리기 S",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "どすすぺしゃる",
-      "korean": "강타 S",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "ずつきすぺしゃる",
-      "korean": "박치기 S",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "あんますぺしゃる",
-      "korean": "안마 S",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "びっぐばんぐ",
-      "korean": "빅뱅",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "へんしんわざ",
-      "korean": "변신술",
-      "category": "기술",
-      "note": ""
-    },
-    {
-      "source": "やまたのじゅつ",
-      "korean": "야마타의 술",
-      "category": "기술",
-      "note": ""
-    }
-  ]
+  "translation_data_missing": []
 }

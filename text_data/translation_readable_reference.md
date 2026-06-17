@@ -3,7 +3,8 @@
 - Transcription source: `text_data\쿠니오_시대극_게임_일본어_텍스트_전사.md`
 - Translation data source: `text_data\translation_data.txt`
 - Transcription entries: **183**
-- Translation entries with romaji: **120 / 144**
+- Translation entries with romaji: **144 / 144**
+- Auto-romaji fallback entries: **24**
 
 ## Translation Data Join
 
@@ -73,6 +74,30 @@
 | なぞのみせ | Nazo no mise | 수수께끼 가게 | 특수 | 4.4 특수 아이템 |
 | ふくびき | Fukubiki | 제비뽑기 | 특수 | 4.4 특수 아이템 |
 | たからのちず | Takara no chizu | 보물 지도 | 특수 | 4.4 특수 아이템 |
+| まっはぱんち | Mahhapanchi | 마하 펀치 | 기술 | 기술 |
+| まっはきっく | Mahhakikku | 마하 킥 | 기술 | 기술 |
+| まっはたたき | Mahhatataki | 마하 때리기 | 기술 | 기술 |
+| まっはすいんぐ | Mahhasuingu | 마하 스윙 | 기술 | 기술 |
+| まっはふみふみ | Mahhafumifumi | 마하 밟기 | 기술 | 기술 |
+| すくりゅう | Sukuryuu | 스크류 | 기술 | 기술 |
+| にとろあたっく | Nitoroatakku | 니트로 어택 | 기술 | 기술 |
+| はいぱーがーど | Haipagado | 하이퍼 가드 | 기술 | 기술 |
+| せんぷうきゃく | Senpuukyaku | 선풍각 | 기술 | 기술 |
+| わーぷしゅーと | Wapushuto | 워프 슛 | 기술 | 기술 |
+| にんげんどりる | Ningendoriru | 인간 드릴 | 기술 | 기술 |
+| にんげんへり | Ningenheri | 인간 헬기 | 기술 | 기술 |
+| にんげんぎょらい | Ningengyorai | 인간 어뢰 | 기술 | 기술 |
+| じぶんぎょらい | Jibungyorai | 자폭 어뢰 | 기술 | 기술 |
+| まっはぱんちII | MahhapanchiII | 마하 펀치 2 | 기술 | 기술 |
+| まっはきっくII | MahhakikkuII | 마하 킥 2 | 기술 | 기술 |
+| すくりゅうII | SukuryuuII | 스크류 2 | 기술 | 기술 |
+| はりてすぺしゃる | Haritesupesharu | 빰 때리기 S | 기술 | 기술 |
+| どすすぺしゃる | Dosusupesharu | 강타 S | 기술 | 기술 |
+| ずつきすぺしゃる | Zutsukisupesharu | 박치기 S | 기술 | 기술 |
+| あんますぺしゃる | Anmasupesharu | 안마 S | 기술 | 기술 |
+| びっぐばんぐ | Biggubangu | 빅뱅 | 기술 | 기술 |
+| へんしんわざ | Henshinwaza | 변신술 | 기술 | 기술 |
+| やまたのじゅつ | Yamatanojutsu | 야마타의 술 | 기술 | 기술 |
 | ぎんぱち | Ginpachi | 긴파치 | 보스 | 6.1 스테이지 보스 |
 | いちべえ | Ichibee | 이치베에 | 보스 | 6.1 스테이지 보스 |
 | ろくべえ | Rokubee | 로쿠베에 | 보스 | 6.1 스테이지 보스 |
@@ -129,32 +154,3 @@
 | 倒して許すと仲間に | Taoshite yurusu to nakama ni | 쓰러뜨리고 용서하면 동료로 | 이벤트 | 8. 이벤트 / 스토리 대사 |
 | 賭場でお金稼ぎ | TOBA de okane kasegi | 도박장에서 돈벌이 | 이벤트 | 8. 이벤트 / 스토리 대사 |
 | 真エンディング | Shin Endingu | 진 엔딩 | 이벤트 | 8. 이벤트 / 스토리 대사 |
-
-## Missing Romaji
-
-| Japanese | Korean | category |
-| --- | --- | --- |
-| まっはぱんち | 마하 펀치 | 기술 |
-| まっはきっく | 마하 킥 | 기술 |
-| まっはたたき | 마하 때리기 | 기술 |
-| まっはすいんぐ | 마하 스윙 | 기술 |
-| まっはふみふみ | 마하 밟기 | 기술 |
-| すくりゅう | 스크류 | 기술 |
-| にとろあたっく | 니트로 어택 | 기술 |
-| はいぱーがーど | 하이퍼 가드 | 기술 |
-| せんぷうきゃく | 선풍각 | 기술 |
-| わーぷしゅーと | 워프 슛 | 기술 |
-| にんげんどりる | 인간 드릴 | 기술 |
-| にんげんへり | 인간 헬기 | 기술 |
-| にんげんぎょらい | 인간 어뢰 | 기술 |
-| じぶんぎょらい | 자폭 어뢰 | 기술 |
-| まっはぱんちII | 마하 펀치 2 | 기술 |
-| まっはきっくII | 마하 킥 2 | 기술 |
-| すくりゅうII | 스크류 2 | 기술 |
-| はりてすぺしゃる | 빰 때리기 S | 기술 |
-| どすすぺしゃる | 강타 S | 기술 |
-| ずつきすぺしゃる | 박치기 S | 기술 |
-| あんますぺしゃる | 안마 S | 기술 |
-| びっぐばんぐ | 빅뱅 | 기술 |
-| へんしんわざ | 변신술 | 기술 |
-| やまたのじゅつ | 야마타의 술 | 기술 |
