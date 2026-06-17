@@ -39,6 +39,8 @@ BROAD_SCAN_MANUAL_SUMMARY_MD = REPO_ROOT / "rom_analysis" / "manual_screen_dump_
 BROAD_SCAN_VISUAL_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "visual_review.json"
 V043_BROAD_VERIFIED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.json"
 V043_BROAD_VERIFIED_REPORT_MD = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.md"
+V043_PROOF_STATUS_JSON = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
+V043_PROOF_STATUS_MD = REPO_ROOT / "rom_analysis" / "v043_proof_status.md"
 BROAD_PREVIEW_IPS = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips"
 BROAD_PREVIEW_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.json"
 BROAD_PREVIEW_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md"
@@ -85,6 +87,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate",
         "- `v043_broad_verified_build_report.json`: current v0.4.3 gate result",
         "- `v043_broad_verified_build_report.md`: readable current v0.4.3 gate result",
+        "- `v043_proof_status.md`: row-by-row CPU-read and visual-review gate status",
         "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips`: optional manual-screen-test IPS, not a primary patch",
         "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings",
         "- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries",
@@ -199,6 +202,8 @@ def package() -> dict[str, object]:
         (BROAD_SCAN_VISUAL_REVIEW_JSON, "broad_scan_visual_review.json"),
         (V043_BROAD_VERIFIED_REPORT, "v043_broad_verified_build_report.json"),
         (V043_BROAD_VERIFIED_REPORT_MD, "v043_broad_verified_build_report.md"),
+        (V043_PROOF_STATUS_MD, "v043_proof_status.md"),
+        (V043_PROOF_STATUS_JSON, "v043_proof_status.json"),
         (BROAD_PREVIEW_IPS, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips"),
         (BROAD_PREVIEW_REPORT_MD, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md"),
         (BROAD_PREVIEW_REPORT_JSON, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.json"),

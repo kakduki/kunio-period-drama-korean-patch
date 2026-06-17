@@ -40,6 +40,7 @@ KEY_PYTHON = [
     "scripts/generate_translation_scan_capture_queue.py",
     "scripts/generate_v042_text_promotion_readiness.py",
     "scripts/generate_v042_manual_proof_packet.py",
+    "scripts/generate_v043_proof_status.py",
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
@@ -50,6 +51,7 @@ KEY_PYTHON = [
     "scripts/test_run_fceux_budget.py",
     "scripts/test_translation_capture_queue_readable.py",
     "scripts/test_v043_proof_gate.py",
+    "scripts/test_v043_proof_status.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
 ]
@@ -98,6 +100,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_v042_manual_proof_packet.py"],
     ["scripts/analyze_broad_scan_manual_dump.py"],
     ["scripts/build_v043_from_broad_scan_proof.py"],
+    ["scripts/generate_v043_proof_status.py"],
     ["scripts/generate_manual_capture_cards.py"],
     ["scripts/generate_manual_capture_status.py"],
 ]
@@ -158,6 +161,7 @@ def main() -> int:
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
+    run("v0.4.3 proof status", ["scripts/test_v043_proof_status.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
     run("broad preview IPS verification", ["scripts/verify_broad_preview_patch.py"])
     check_manifest()

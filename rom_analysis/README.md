@@ -58,6 +58,7 @@
 - `manual_screen_dump_broad_scan/visual_review.json`: explicit human visual-context gate used by `../scripts/build_v043_from_broad_scan_proof.py`; leave rows false until the visible screen matches
 - `../scripts/record_visual_review.py`: helper for updating `manual_screen_dump_broad_scan/visual_review.json` without hand-editing JSON; warns when visual proof is recorded before CPU-read evidence exists
 - `../output/kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.json`: current v0.4.3 gate report; no ROM/IPS is produced until CPU-read and visual-context evidence both pass
+- `v043_proof_status.md` / `v043_proof_status.json`: row-by-row join of the proof packet, CPU-read summary, visual review file, and v0.4.3 build report
 - `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.2 font-expanded as the primary manual-test ROM and padding builds as non-release experiments
 - `patch_decision_matrix.md` / `patch_decision_matrix.json`: ranked next-decision table for applied rows, skipped rows, broad-scan conflicts, padding blockers, and manual capture priorities
 - `../scripts/verify_primary_patch.py`: verifies that the current primary IPS applies to the expected base ROM and produces the manifest MD5
