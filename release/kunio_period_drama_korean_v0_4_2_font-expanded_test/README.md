@@ -78,6 +78,8 @@ python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuu
 
 ## FCEUX Manual Capture
 
+Start with `next_manual_run.md`; it names the single recommended ROM, Lua watcher, target, and screen hint.
+
 Copy or run the scripts from this bundle's `lua/` folder in FCEUX:
 
 ```text
@@ -86,6 +88,19 @@ lua/kunio_manual_broad_scan_capture_watch.lua
 ```
 
 Press `D` on each manually reached target screen to save a dump; press `Q` to stop the watcher.
+If the FCEUX window is still on the title/opening screen, stop instead of waiting.
+
+After a v0.4.2 primary-patch capture in the repository, refresh the reports with:
+
+```powershell
+python scripts/refresh_after_manual_capture.py --phase primary
+```
+
+After a base-ROM broad/route proof capture, refresh with:
+
+```powershell
+python scripts/refresh_after_manual_capture.py --phase broad
+```
 
 ## Verify In Repository
 
