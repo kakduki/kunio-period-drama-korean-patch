@@ -86,6 +86,7 @@ python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuu
 
 Before opening FCEUX from the repository, run `python scripts/preflight_manual_fceux.py`.
 To open the current next action directly from the repository, run `python scripts/run_next_manual_fceux.py`.
+When that launcher detects a new dump, it runs the matching after-capture refresh automatically.
 After the visible patched-ROM screen matches the target, run `python scripts/confirm_next_primary_visual.py --confirm-visible`.
 Start with `next_manual_run.md`; it names the single recommended ROM, Lua watcher, target, and screen hint.
 From the repository root, `python scripts/prepare_next_manual_run.py --powershell` prints the same focused setup.
@@ -101,13 +102,13 @@ lua/kunio_manual_broad_scan_capture_watch.lua
 Press `D` on each manually reached target screen to save a dump; press `Q` to stop the watcher.
 If the FCEUX window is still on the title/opening screen, stop instead of waiting.
 
-After a v0.4.2 primary-patch capture in the repository, refresh the reports with:
+If you ran FCEUX/Lua directly instead of `run_next_manual_fceux.py`, refresh a v0.4.2 primary-patch capture with:
 
 ```powershell
 python scripts/refresh_after_manual_capture.py --phase primary
 ```
 
-After a base-ROM broad/route proof capture, refresh with:
+If you ran FCEUX/Lua directly for a base-ROM broad/route proof capture, refresh with:
 
 ```powershell
 python scripts/refresh_after_manual_capture.py --phase broad

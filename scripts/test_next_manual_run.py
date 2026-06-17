@@ -31,6 +31,8 @@ def main() -> int:
     assert "Next Manual Run" in md
     assert "Recommended Next Action" in md
     assert "0x07227" in md
+    assert "a new dump triggers the after-capture refresh automatically" in md
+    assert "if you ran FCEUX/Lua directly instead of the launcher" in md
     assert "refresh_after_manual_capture.py --phase primary" in md
     assert "record_primary_visual_review.py 0x07227 --confirm" in md
     assert "kunio_manual_route_heishichi_capture_watch.lua" in md

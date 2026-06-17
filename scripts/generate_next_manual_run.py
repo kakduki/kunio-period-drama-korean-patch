@@ -127,7 +127,8 @@ def write_markdown(payload: dict[str, object]) -> None:
             f"- Screen hint: {next_action['screen_hint']}",
             f"- Why: {next_action['why']}",
             "- If the visible screen is still the title/opening screen, stop with `Q` and manually change screens.",
-            "- If the visible screen matches the target, record the visual review before refreshing reports.",
+            "- If you launch with `python scripts/run_next_manual_fceux.py`, a new dump triggers the after-capture refresh automatically.",
+            "- If the visible screen matches the target, record the visual review after the dump has been refreshed.",
             "",
             "Record matching visual review:",
             "",
@@ -135,7 +136,7 @@ def write_markdown(payload: dict[str, object]) -> None:
             next_action["record_visual_review"],
             "```",
             "",
-            "After capture:",
+            "After capture if you ran FCEUX/Lua directly instead of the launcher:",
             "",
             "```powershell",
         ]
