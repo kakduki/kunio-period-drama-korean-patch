@@ -34,6 +34,7 @@
 - `fceux_padding_exp_*_ppu_watch/summary.tsv` / `ppu_writes.tsv` / `analysis_v2_no_strip.md`: PPU write-watch outputs for the five padding experiment ROMs, captured with fill stripping disabled for padding-byte checks
 - `fceux_padding_exp_ppu_watch_comparison.md` / `fceux_padding_exp_ppu_watch_comparison.json`: strict same-frame, consecutive-VRAM comparison for the padding experiment PPU runs
 - `manual_capture_workflow.md`: recommended workflow for manually reaching a real dialogue/menu screen in FCEUX, then running a one-shot Lua dump instead of blind autoplay
+- `manual_capture_queue.md` / `manual_capture_queue.json`: prioritized list of screens/targets to capture manually before promoting more PRG text patches
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
