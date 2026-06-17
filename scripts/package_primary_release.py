@@ -86,7 +86,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips`: optional manual-screen-test IPS, not a primary patch",
         "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings",
         "- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries",
-        "- `translation_scan_capture_queue.md`: focused manual capture queue from the broad scan",
+        "- `translation_scan_capture_queue.md`: focused broad-scan capture queue with readable text labels",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",

@@ -47,6 +47,7 @@ KEY_PYTHON = [
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
     "scripts/test_run_fceux_budget.py",
+    "scripts/test_translation_capture_queue_readable.py",
     "scripts/test_v043_proof_gate.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
@@ -152,6 +153,7 @@ def main() -> int:
     run("lua script balance", ["scripts/check_lua_script_balance.py", *LUA_SCRIPTS])
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
+    run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
     run("broad preview IPS verification", ["scripts/verify_broad_preview_patch.py"])

@@ -6,9 +6,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCAN_JSON = ROOT / "rom_analysis" / "translation_pattern_scan.json"
+READABLE_REFERENCE_JSON = ROOT / "text_data" / "translation_readable_reference.json"
 OUT_JSON = ROOT / "rom_analysis" / "translation_scan_capture_queue.json"
 OUT_MD = ROOT / "rom_analysis" / "translation_scan_capture_queue.md"
 
@@ -22,6 +25,46 @@ def parse_hex_bytes(raw: str) -> list[int]:
 def cpu_address(row: dict[str, object]) -> str:
     prg = int(str(row["prg_offset"]), 16)
     return f"${0x8000 + (prg % 0x4000):04X}"
+
+
+def load_reference_by_romaji() -> dict[str, dict[str, object]]:
+    reference = json.loads(READABLE_REFERENCE_JSON.read_text(encoding="utf-8"))
+    joined = reference.get("translation_data_joined", [])
+    by_romaji: dict[str, dict[str, object]] = {}
+    for row in joined:
+        romaji = str(row.get("romaji", ""))
+        if romaji and romaji not in by_romaji:
+            by_romaji[romaji] = row
+    return by_romaji
+
+
+def generic_screen_hint(row: dict[str, object], reference: dict[str, object]) -> str:
+    group = str(row.get("group", ""))
+    category = str(reference.get("category") or row.get("category") or "")
+    note = str(reference.get("transcription_note") or reference.get("note") or "")
+    if category:
+        return f"look for the {category} text screen ({note})" if note else f"look for the {category} text screen"
+    if group == "ui/status":
+        return "look for the matching status/menu label"
+    if group == "event/dialogue":
+        return "look for the matching dialogue/name context"
+    return "look for the exact visible text context before dumping"
+
+
+def readable_context(row: dict[str, object], reference_by_romaji: dict[str, dict[str, object]]) -> dict[str, str]:
+    romaji = str(row.get("romaji", ""))
+    local = readable_for_romaji(romaji)
+    reference = reference_by_romaji.get(romaji, {})
+    source_display = str(local.get("source_display") or reference.get("source") or row.get("source") or "")
+    korean_display = str(local.get("korean_display") or reference.get("korean") or row.get("korean") or "")
+    screen_hint = str(local.get("screen_hint") or generic_screen_hint(row, reference))
+    return {
+        "source_display": source_display,
+        "korean_display": korean_display,
+        "screen_hint": screen_hint,
+        "reference_section": str(reference.get("section", "")),
+        "reference_note": str(reference.get("transcription_note") or reference.get("note") or ""),
+    }
 
 
 def priority_for(row: dict[str, object]) -> tuple[int, str, str]:
@@ -42,8 +85,9 @@ def priority_for(row: dict[str, object]) -> tuple[int, str, str]:
     return (60, "broad scan hit; defer unless the exact screen is reached", "low")
 
 
-def compact(row: dict[str, object]) -> dict[str, object]:
+def compact(row: dict[str, object], reference_by_romaji: dict[str, dict[str, object]]) -> dict[str, object]:
     priority, reason, confidence = priority_for(row)
+    readable = readable_context(row, reference_by_romaji)
     return {
         "priority": priority,
         "confidence": confidence,
@@ -51,6 +95,7 @@ def compact(row: dict[str, object]) -> dict[str, object]:
         "source": row["source"],
         "romaji": row.get("romaji", ""),
         "korean": row.get("korean", ""),
+        **readable,
         "category": row.get("category", ""),
         "group": row.get("group", ""),
         "rom_offset": row["rom_offset"],
@@ -66,7 +111,8 @@ def compact(row: dict[str, object]) -> dict[str, object]:
 
 def main() -> int:
     scan = json.loads(SCAN_JSON.read_text(encoding="utf-8"))
-    rows = [compact(row) for row in scan["top_new_hits"]]
+    reference_by_romaji = load_reference_by_romaji()
+    rows = [compact(row, reference_by_romaji) for row in scan["top_new_hits"]]
     rows.sort(key=lambda row: (row["priority"], -int(row["score"]), str(row["rom_offset"])))
     focused = rows[:60]
 
@@ -101,14 +147,14 @@ def main() -> int:
         "",
         "## Queue",
         "",
-        "| priority | confidence | source | korean | group | ROM | bank | CPU guess | add | bytes | reason |",
-        "| ---: | --- | --- | --- | --- | --- | ---: | --- | --- | --- | --- |",
+        "| priority | confidence | expected text | Korean | romaji | group | ROM | bank | CPU guess | screen hint | reason |",
+        "| ---: | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- |",
     ]
     for row in focused:
         lines.append(
-            f"| {row['priority']} | {row['confidence']} | {row['source']} | {row['korean']} | "
-            f"{row['group']} | `{row['rom_offset']}` | {row['bank16']} | `{row['cpu_address_guess']}` | "
-            f"`{row['add']}` | `{row['bytes']}` | {row['reason']} |"
+            f"| {row['priority']} | {row['confidence']} | {row['source_display']} | {row['korean_display']} | "
+            f"{row['romaji']} | {row['group']} | `{row['rom_offset']}` | {row['bank16']} | "
+            f"`{row['cpu_address_guess']}` | {row['screen_hint']} | {row['reason']} |"
         )
 
     lines += [
@@ -116,6 +162,7 @@ def main() -> int:
         "## Notes",
         "",
         "- CPU address is a best-effort 16KB bank-window guess for debugger watching.",
+        "- `expected text` and `Korean` are display labels joined from `translation_readable_reference.json` when possible.",
         "- Low-confidence rows often contain control-like bytes and should not be patched from static evidence.",
         "- This queue supplements `manual_capture_queue.md`; it does not replace the v0.4 verification queue.",
     ]
