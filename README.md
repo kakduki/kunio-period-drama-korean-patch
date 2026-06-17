@@ -11,6 +11,7 @@
 - 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`
 - 테스트 번들: `release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip`
 - 패치 적용 후 예상 MD5: `ea11dc002a1a7b07682ce00a754b1a61`
+- 선택 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips` (수동 화면 비교용, primary 아님)
 
 아직 최종 패치가 아닙니다. 현재 후보는 안전한 equal-length PRG 텍스트 일부와 CHR 글리프만 적용한 수동 검증용 빌드입니다.
 
@@ -51,6 +52,7 @@ python scripts/run_project_checks.py --regen
 - `rom_analysis/v042_text_promotion_readiness.md`: v0.4.2 폰트 기준 다음 텍스트 후보 준비도
 - `rom_analysis/v042_manual_proof_packet.md`: 첫 화면 루프 대신 확인할 7개 base-ROM 수동 검증 과제
 - `rom_analysis/primary_patch_contents.md`: 현재 primary IPS가 바꾸는 텍스트 10개, 바이트, 증거 상태
+- `rom_analysis/kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: 화면 테스트용 broad preview IPS 내용과 경고
 - `rom_analysis/kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: 로컬 v0.5 글리프 확장 실험 빌드 리포트
 - `rom_analysis/patch_candidate_manifest.md`: 현재 ROM/IPS 후보 목록
 - `rom_analysis/manual_capture_workflow.md`: FCEUX 수동 캡처 절차

@@ -36,6 +36,9 @@ BROAD_SCAN_MANUAL_SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dum
 BROAD_SCAN_MANUAL_SUMMARY_MD = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "summary.md"
 BROAD_SCAN_VISUAL_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "visual_review.json"
 V043_BROAD_VERIFIED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.json"
+BROAD_PREVIEW_IPS = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips"
+BROAD_PREVIEW_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.json"
+BROAD_PREVIEW_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md"
 PRIMARY_PATCH_CONTENTS_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
 PRIMARY_PATCH_CONTENTS_MD = REPO_ROOT / "rom_analysis" / "primary_patch_contents.md"
 FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"
@@ -77,6 +80,8 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence",
         "- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate",
         "- `v043_broad_verified_build_report.json`: current v0.4.3 gate result",
+        "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips`: optional manual-screen-test IPS, not a primary patch",
+        "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings",
         "- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries",
         "- `translation_scan_capture_queue.md`: focused manual capture queue from the broad scan",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
@@ -177,6 +182,9 @@ def package() -> dict[str, object]:
         (BROAD_SCAN_MANUAL_SUMMARY_JSON, "broad_scan_manual_summary.json"),
         (BROAD_SCAN_VISUAL_REVIEW_JSON, "broad_scan_visual_review.json"),
         (V043_BROAD_VERIFIED_REPORT, "v043_broad_verified_build_report.json"),
+        (BROAD_PREVIEW_IPS, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips"),
+        (BROAD_PREVIEW_REPORT_MD, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md"),
+        (BROAD_PREVIEW_REPORT_JSON, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.json"),
         (FONT_EXPANSION_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"),
         (FONT_EXPANSION_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
