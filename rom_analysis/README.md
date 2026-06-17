@@ -38,6 +38,7 @@
 - `manual_capture_cards.md` / `manual_capture_cards.json`: short FCEUX task cards generated from the decision matrix; use these at the emulator window
 - `manual_capture_status.md` / `manual_capture_status.json`: generated evidence status for each manual capture card after screen dumps are added
 - `translation_pattern_scan.md` / `translation_pattern_scan.json`: broad ROM scan against the full readable translation reference, excluding already-known Bank 1 targets where possible
+- `translation_glyph_coverage.md` / `translation_glyph_coverage.json`: compares the full translation data glyph set with the current compact patch glyph plan
 - `translation_scan_capture_queue.md` / `translation_scan_capture_queue.json`: supplemental manual capture queue for new high/medium confidence hits from the broad translation scan
 - `broad_scan_patchability.md` / `broad_scan_patchability.json`: filters the broad-scan queue down to length-safe future v0.5 candidates and lists any additional glyph slots needed if screen proof confirms them
 - `broad_scan_fceux_targets.md` / `broad_scan_fceux_targets.json`: FCEUX read-watch targets for the 7 broad-scan promotion candidates; Lua target file is `../lua/kunio_broad_scan_candidate_targets.lua`

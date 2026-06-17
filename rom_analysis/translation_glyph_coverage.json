@@ -1,0 +1,4090 @@
+{
+  "source": "text_data\\translation_data.txt",
+  "summary": {
+    "translation_rows": 144,
+    "unique_hangul_total": 220,
+    "patch_plan_glyphs": 18,
+    "unique_hangul_in_patch_plan": 18,
+    "unique_hangul_missing_from_patch_plan": 202,
+    "unique_hangul_in_char_map": 179,
+    "unique_hangul_missing_from_char_map": 41,
+    "rows_ready_for_current_patch_plan": 10,
+    "rows_ready_for_char_map": 120
+  },
+  "top_translation_hangul": [
+    [
+      "이",
+      14
+    ],
+    [
+      "마",
+      14
+    ],
+    [
+      "다",
+      13
+    ],
+    [
+      "하",
+      11
+    ],
+    [
+      "구",
+      11
+    ],
+    [
+      "기",
+      11
+    ],
+    [
+      "치",
+      10
+    ],
+    [
+      "리",
+      10
+    ],
+    [
+      "로",
+      10
+    ],
+    [
+      "의",
+      9
+    ],
+    [
+      "스",
+      8
+    ],
+    [
+      "타",
+      7
+    ],
+    [
+      "시",
+      7
+    ],
+    [
+      "강",
+      7
+    ],
+    [
+      "가",
+      7
+    ],
+    [
+      "츠",
+      6
+    ],
+    [
+      "지",
+      6
+    ],
+    [
+      "인",
+      6
+    ],
+    [
+      "약",
+      6
+    ],
+    [
+      "에",
+      6
+    ],
+    [
+      "쿠",
+      5
+    ],
+    [
+      "니",
+      5
+    ],
+    [
+      "쇠",
+      5
+    ],
+    [
+      "철",
+      5
+    ],
+    [
+      "옷",
+      5
+    ],
+    [
+      "고",
+      5
+    ],
+    [
+      "간",
+      5
+    ],
+    [
+      "술",
+      5
+    ],
+    [
+      "비",
+      4
+    ],
+    [
+      "방",
+      4
+    ],
+    [
+      "어",
+      4
+    ],
+    [
+      "장",
+      4
+    ],
+    [
+      "몽",
+      4
+    ],
+    [
+      "둥",
+      4
+    ],
+    [
+      "창",
+      4
+    ],
+    [
+      "파",
+      4
+    ],
+    [
+      "슬",
+      4
+    ],
+    [
+      "도",
+      4
+    ],
+    [
+      "신",
+      4
+    ],
+    [
+      "야",
+      4
+    ]
+  ],
+  "top_missing_from_patch_plan": [
+    [
+      "마",
+      14
+    ],
+    [
+      "하",
+      11
+    ],
+    [
+      "구",
+      11
+    ],
+    [
+      "기",
+      11
+    ],
+    [
+      "의",
+      9
+    ],
+    [
+      "로",
+      9
+    ],
+    [
+      "스",
+      8
+    ],
+    [
+      "강",
+      7
+    ],
+    [
+      "지",
+      6
+    ],
+    [
+      "인",
+      6
+    ],
+    [
+      "가",
+      6
+    ],
+    [
+      "에",
+      6
+    ],
+    [
+      "니",
+      5
+    ],
+    [
+      "쿠",
+      5
+    ],
+    [
+      "쇠",
+      5
+    ],
+    [
+      "철",
+      5
+    ],
+    [
+      "옷",
+      5
+    ],
+    [
+      "고",
+      5
+    ],
+    [
+      "간",
+      5
+    ],
+    [
+      "술",
+      5
+    ],
+    [
+      "방",
+      4
+    ],
+    [
+      "어",
+      4
+    ],
+    [
+      "둥",
+      4
+    ],
+    [
+      "몽",
+      4
+    ],
+    [
+      "파",
+      4
+    ],
+    [
+      "슬",
+      4
+    ],
+    [
+      "도",
+      4
+    ],
+    [
+      "야",
+      4
+    ],
+    [
+      "대",
+      3
+    ],
+    [
+      "크",
+      3
+    ],
+    [
+      "게",
+      3
+    ],
+    [
+      "호",
+      3
+    ],
+    [
+      "사",
+      3
+    ],
+    [
+      "검",
+      3
+    ],
+    [
+      "갑",
+      3
+    ],
+    [
+      "패",
+      3
+    ],
+    [
+      "배",
+      3
+    ],
+    [
+      "신",
+      3
+    ],
+    [
+      "진",
+      3
+    ],
+    [
+      "을",
+      3
+    ]
+  ],
+  "top_missing_from_char_map": [
+    [
+      "재",
+      2
+    ],
+    [
+      "서",
+      2
+    ],
+    [
+      "운",
+      1
+    ],
+    [
+      "극",
+      1
+    ],
+    [
+      "오",
+      1
+    ],
+    [
+      "원",
+      1
+    ],
+    [
+      "집",
+      1
+    ],
+    [
+      "테",
+      1
+    ],
+    [
+      "팬",
+      1
+    ],
+    [
+      "튼",
+      1
+    ],
+    [
+      "를",
+      1
+    ],
+    [
+      "세",
+      1
+    ],
+    [
+      "움",
+      1
+    ],
+    [
+      "직",
+      1
+    ],
+    [
+      "나",
+      1
+    ],
+    [
+      "카",
+      1
+    ],
+    [
+      "쌍",
+      1
+    ],
+    [
+      "절",
+      1
+    ],
+    [
+      "톤",
+      1
+    ],
+    [
+      "밟",
+      1
+    ],
+    [
+      "폭",
+      1
+    ],
+    [
+      "빰",
+      1
+    ],
+    [
+      "긴",
+      1
+    ],
+    [
+      "킨",
+      1
+    ],
+    [
+      "겼",
+      1
+    ],
+    [
+      "졌",
+      1
+    ],
+    [
+      "랐",
+      1
+    ],
+    [
+      "올",
+      1
+    ],
+    [
+      "네",
+      1
+    ],
+    [
+      "무",
+      1
+    ],
+    [
+      "코",
+      1
+    ],
+    [
+      "살",
+      1
+    ],
+    [
+      "필",
+      1
+    ],
+    [
+      "너",
+      1
+    ],
+    [
+      "받",
+      1
+    ],
+    [
+      "음",
+      1
+    ],
+    [
+      "뜨",
+      1
+    ],
+    [
+      "러",
+      1
+    ],
+    [
+      "면",
+      1
+    ],
+    [
+      "쓰",
+      1
+    ]
+  ],
+  "rows": [
+    {
+      "source": "ダウンタウンスペシャル",
+      "korean": "다운타운 스페셜",
+      "category": "타이틀",
+      "note": "",
+      "section": "1. 타이틀 / 메뉴",
+      "hangul_count": 7,
+      "unique_hangul": [
+        "다",
+        "셜",
+        "스",
+        "운",
+        "타",
+        "페"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "셜",
+        "스",
+        "운",
+        "페"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "운"
+      ],
+      "korean_length": 8,
+      "source_length": 11,
+      "length_delta": -3
+    },
+    {
+      "source": "くにおくんの時代劇だよ全員集合！",
+      "korean": "쿠니오군의 시대극이다 전원집합!",
+      "category": "타이틀",
+      "note": "",
+      "section": "1. 타이틀 / 메뉴",
+      "hangul_count": 14,
+      "unique_hangul": [
+        "군",
+        "극",
+        "니",
+        "다",
+        "대",
+        "시",
+        "오",
+        "원",
+        "의",
+        "이",
+        "전",
+        "집",
+        "쿠",
+        "합"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "군",
+        "극",
+        "니",
+        "대",
+        "오",
+        "원",
+        "의",
+        "전",
+        "집",
+        "쿠",
+        "합"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "극",
+        "오",
+        "원",
+        "집"
+      ],
+      "korean_length": 17,
+      "source_length": 16,
+      "length_delta": 1
+    },
+    {
+      "source": "1991 TECHNOS JAPAN",
+      "korean": "1991 테크노스 재팬",
+      "category": "타이틀",
+      "note": "",
+      "section": "1. 타이틀 / 메뉴",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "노",
+        "스",
+        "재",
+        "크",
+        "테",
+        "팬"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "노",
+        "스",
+        "재",
+        "크",
+        "테",
+        "팬"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "재",
+        "테",
+        "팬"
+      ],
+      "korean_length": 12,
+      "source_length": 18,
+      "length_delta": -6
+    },
+    {
+      "source": "プッシュ スタート ボタン",
+      "korean": "START 버튼",
+      "category": "타이틀",
+      "note": "",
+      "section": "1. 타이틀 / 메뉴",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "버",
+        "튼"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "버",
+        "튼"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "튼"
+      ],
+      "korean_length": 8,
+      "source_length": 13,
+      "length_delta": -5
+    },
+    {
+      "source": "ゲームスタート",
+      "korean": "게임 시작",
+      "category": "메뉴",
+      "note": "",
+      "section": "2. 메뉴",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "게",
+        "시",
+        "임",
+        "작"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "게",
+        "임",
+        "작"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "パスワード",
+      "korean": "비밀번호",
+      "category": "메뉴",
+      "note": "",
+      "section": "2. 메뉴",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "밀",
+        "번",
+        "비",
+        "호"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "밀",
+        "번",
+        "호"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "パスワードを入力してください",
+      "korean": "비밀번호를 입력하세요",
+      "category": "메뉴",
+      "note": "",
+      "section": "2. 메뉴",
+      "hangul_count": 10,
+      "unique_hangul": [
+        "력",
+        "를",
+        "밀",
+        "번",
+        "비",
+        "세",
+        "요",
+        "입",
+        "하",
+        "호"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "력",
+        "를",
+        "밀",
+        "번",
+        "세",
+        "요",
+        "입",
+        "하",
+        "호"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "를",
+        "세"
+      ],
+      "korean_length": 11,
+      "source_length": 14,
+      "length_delta": -3
+    },
+    {
+      "source": "ぼうけん",
+      "korean": "모험",
+      "category": "모드",
+      "note": "",
+      "section": "2. 메뉴",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "모",
+        "험"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "모",
+        "험"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "たいけつ",
+      "korean": "대결",
+      "category": "모드",
+      "note": "",
+      "section": "2. 메뉴",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "결",
+        "대"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "결",
+        "대"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "くにまさ",
+      "korean": "쿠니마사",
+      "category": "캐릭터명",
+      "note": "기본 이름(쿠니오)",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "니",
+        "마",
+        "사",
+        "쿠"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "니",
+        "마",
+        "사",
+        "쿠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "つるまつ",
+      "korean": "츠루마츠",
+      "category": "캐릭터명",
+      "note": "파트너",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "루",
+        "마",
+        "츠"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "루",
+        "마"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "ライフ",
+      "korean": "라이프",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "라",
+        "이",
+        "프"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 3,
+      "length_delta": 0
+    },
+    {
+      "source": "ちから",
+      "korean": "힘",
+      "category": "능력치",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "힘"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "うごき",
+      "korean": "움직임",
+      "category": "능력치",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "움",
+        "임",
+        "직"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "움",
+        "임",
+        "직"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "움",
+        "직"
+      ],
+      "korean_length": 3,
+      "source_length": 3,
+      "length_delta": 0
+    },
+    {
+      "source": "ぼうぎょ",
+      "korean": "방어",
+      "category": "능력치",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "방",
+        "어"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "방",
+        "어"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "レベル",
+      "korean": "레벨",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "레",
+        "벨"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "레",
+        "벨"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "けいけんち",
+      "korean": "경험치",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "경",
+        "치",
+        "험"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "경",
+        "험"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "おかね",
+      "korean": "돈",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "돈"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "もちもの",
+      "korean": "소지품",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "소",
+        "지",
+        "품"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "소",
+        "지",
+        "품"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "そうび",
+      "korean": "장비",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "비",
+        "장"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "たべる",
+      "korean": "먹다",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "다",
+        "먹"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "먹"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "すてる",
+      "korean": "버리다",
+      "category": "UI",
+      "note": "",
+      "section": "3. 스테이터스 / UI",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "다",
+        "리",
+        "버"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "버"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 3,
+      "length_delta": 0
+    },
+    {
+      "source": "こんぼう",
+      "korean": "몽둥이",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "둥",
+        "몽",
+        "이"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "둥",
+        "몽"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "どうのこんぼう",
+      "korean": "구리 몽둥이",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "구",
+        "둥",
+        "리",
+        "몽",
+        "이"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구",
+        "둥",
+        "몽"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 7,
+      "length_delta": -1
+    },
+    {
+      "source": "てつのこんぼう",
+      "korean": "쇠 몽둥이",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "둥",
+        "몽",
+        "쇠",
+        "이"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "둥",
+        "몽",
+        "쇠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "はがねのこんぼう",
+      "korean": "강철 몽둥이",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "강",
+        "둥",
+        "몽",
+        "이",
+        "철"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "강",
+        "둥",
+        "몽",
+        "철"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 8,
+      "length_delta": -2
+    },
+    {
+      "source": "カタナ",
+      "korean": "카타나",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "나",
+        "카",
+        "타"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "나",
+        "카"
+      ],
+      "korean_length": 3,
+      "source_length": 3,
+      "length_delta": 0
+    },
+    {
+      "source": "どうのカタナ",
+      "korean": "구리 검",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "검",
+        "구",
+        "리"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "검",
+        "구"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 6,
+      "length_delta": -2
+    },
+    {
+      "source": "てつのカタナ",
+      "korean": "쇠 검",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "검",
+        "쇠"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "검",
+        "쇠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 6,
+      "length_delta": -3
+    },
+    {
+      "source": "はがねのカタナ",
+      "korean": "강철 검",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "강",
+        "검",
+        "철"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "강",
+        "검",
+        "철"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 7,
+      "length_delta": -3
+    },
+    {
+      "source": "やり",
+      "korean": "창",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "창"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 2,
+      "length_delta": -1
+    },
+    {
+      "source": "どうのやり",
+      "korean": "구리 창",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "구",
+        "리",
+        "창"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "てつのやり",
+      "korean": "쇠 창",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "쇠",
+        "창"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "쇠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "はがねのやり",
+      "korean": "강철 창",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "강",
+        "창",
+        "철"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "강",
+        "철"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 6,
+      "length_delta": -2
+    },
+    {
+      "source": "チェーン",
+      "korean": "체인",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "인",
+        "체"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "인",
+        "체"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "ヌンチャク",
+      "korean": "쌍절곤",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "곤",
+        "쌍",
+        "절"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "곤",
+        "쌍",
+        "절"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "쌍",
+        "절"
+      ],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "トンファー",
+      "korean": "톤파",
+      "category": "무기",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "톤",
+        "파"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "톤",
+        "파"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "톤"
+      ],
+      "korean_length": 2,
+      "source_length": 5,
+      "length_delta": -3
+    },
+    {
+      "source": "どうのよろい",
+      "korean": "구리 갑옷",
+      "category": "방어구",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "갑",
+        "구",
+        "리",
+        "옷"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "갑",
+        "구",
+        "옷"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 6,
+      "length_delta": -1
+    },
+    {
+      "source": "てつのよろい",
+      "korean": "쇠 갑옷",
+      "category": "방어구",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "갑",
+        "쇠",
+        "옷"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "갑",
+        "쇠",
+        "옷"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 6,
+      "length_delta": -2
+    },
+    {
+      "source": "はがねのよろい",
+      "korean": "강철 갑옷",
+      "category": "방어구",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "갑",
+        "강",
+        "옷",
+        "철"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "갑",
+        "강",
+        "옷",
+        "철"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "どうのたいぼう",
+      "korean": "구리 방패",
+      "category": "방어구",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "구",
+        "리",
+        "방",
+        "패"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구",
+        "방",
+        "패"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "てつのたいぼう",
+      "korean": "쇠 방패",
+      "category": "방어구",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "방",
+        "쇠",
+        "패"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "방",
+        "쇠",
+        "패"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 7,
+      "length_delta": -3
+    },
+    {
+      "source": "はがねのたいぼう",
+      "korean": "강철 방패",
+      "category": "방어구",
+      "note": "",
+      "section": "4. 무기 / 장비",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "강",
+        "방",
+        "철",
+        "패"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "강",
+        "방",
+        "철",
+        "패"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 8,
+      "length_delta": -3
+    },
+    {
+      "source": "くすり",
+      "korean": "약",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "약"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "いいくすり",
+      "korean": "좋은 약",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "약",
+        "은",
+        "좋"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "은",
+        "좋"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "すごいくすり",
+      "korean": "굉장한 약",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "굉",
+        "약",
+        "장",
+        "한"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "굉",
+        "한"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 6,
+      "length_delta": -1
+    },
+    {
+      "source": "きのくすり",
+      "korean": "기의 약",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "기",
+        "약",
+        "의"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "의"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "どくけしくすり",
+      "korean": "해독약",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "독",
+        "약",
+        "해"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "독",
+        "해"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 7,
+      "length_delta": -4
+    },
+    {
+      "source": "やきいも",
+      "korean": "군고구마",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "고",
+        "구",
+        "군",
+        "마"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "고",
+        "구",
+        "군",
+        "마"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "おにぎり",
+      "korean": "주먹밥",
+      "category": "회복",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "먹",
+        "밥",
+        "주"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "먹",
+        "밥",
+        "주"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "すけすけのたび",
+      "korean": "투시의 옷",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "시",
+        "옷",
+        "의",
+        "투"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "옷",
+        "의",
+        "투"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "たつじんめがね",
+      "korean": "달인의 안경",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "경",
+        "달",
+        "안",
+        "의",
+        "인"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "경",
+        "달",
+        "안",
+        "의",
+        "인"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 7,
+      "length_delta": -1
+    },
+    {
+      "source": "こうかが2ばい",
+      "korean": "효과 2배",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "과",
+        "배",
+        "효"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "과",
+        "배",
+        "효"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "UPが2ばい",
+      "korean": "UP 2배",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "배"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "배"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 6,
+      "length_delta": -1
+    },
+    {
+      "source": "みかわしのたび",
+      "korean": "회피의 옷",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "옷",
+        "의",
+        "피",
+        "회"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "옷",
+        "의",
+        "피",
+        "회"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "ふういんのふだ",
+      "korean": "봉인의 부적",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "봉",
+        "부",
+        "의",
+        "인",
+        "적"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "봉",
+        "부",
+        "의",
+        "인",
+        "적"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 7,
+      "length_delta": -1
+    },
+    {
+      "source": "きんのたま",
+      "korean": "황금 구슬",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "구",
+        "금",
+        "슬",
+        "황"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구",
+        "금",
+        "슬",
+        "황"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 5,
+      "length_delta": 0
+    },
+    {
+      "source": "ぎんのたま",
+      "korean": "은 구슬",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "구",
+        "슬",
+        "은"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구",
+        "슬",
+        "은"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "あかいたま",
+      "korean": "빨간 구슬",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "간",
+        "구",
+        "빨",
+        "슬"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "간",
+        "구",
+        "빨",
+        "슬"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 5,
+      "length_delta": 0
+    },
+    {
+      "source": "あおいたま",
+      "korean": "파란 구슬",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "구",
+        "란",
+        "슬",
+        "파"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구",
+        "란",
+        "슬",
+        "파"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 5,
+      "length_delta": 0
+    },
+    {
+      "source": "でんせつのどうぐ",
+      "korean": "전설의 도구",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "구",
+        "도",
+        "설",
+        "의",
+        "전"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "구",
+        "도",
+        "설",
+        "의",
+        "전"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 8,
+      "length_delta": -2
+    },
+    {
+      "source": "なぞのみせ",
+      "korean": "수수께끼 가게",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "가",
+        "게",
+        "께",
+        "끼",
+        "수"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "가",
+        "게",
+        "께",
+        "끼",
+        "수"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 7,
+      "source_length": 5,
+      "length_delta": 2
+    },
+    {
+      "source": "ふくびき",
+      "korean": "제비뽑기",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "기",
+        "비",
+        "뽑",
+        "제"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "뽑",
+        "제"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "たからのちず",
+      "korean": "보물 지도",
+      "category": "특수",
+      "note": "",
+      "section": "5. 회복 / 보조 아이템",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "도",
+        "물",
+        "보",
+        "지"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "도",
+        "물",
+        "보",
+        "지"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 6,
+      "length_delta": -1
+    },
+    {
+      "source": "まっはぱんち",
+      "korean": "마하 펀치",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "마",
+        "치",
+        "펀",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "펀",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 6,
+      "length_delta": -1
+    },
+    {
+      "source": "まっはきっく",
+      "korean": "마하 킥",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "마",
+        "킥",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "킥",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 6,
+      "length_delta": -2
+    },
+    {
+      "source": "まっはたたき",
+      "korean": "마하 때리기",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "기",
+        "때",
+        "리",
+        "마",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "때",
+        "마",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 6,
+      "length_delta": 0
+    },
+    {
+      "source": "まっはすいんぐ",
+      "korean": "마하 스윙",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "마",
+        "스",
+        "윙",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "스",
+        "윙",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "まっはふみふみ",
+      "korean": "마하 밟기",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "기",
+        "마",
+        "밟",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "마",
+        "밟",
+        "하"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "밟"
+      ],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "すくりゅう",
+      "korean": "스크류",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "류",
+        "스",
+        "크"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "류",
+        "스",
+        "크"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "にとろあたっく",
+      "korean": "니트로 어택",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "니",
+        "로",
+        "어",
+        "택",
+        "트"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "니",
+        "로",
+        "어",
+        "택",
+        "트"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 7,
+      "length_delta": -1
+    },
+    {
+      "source": "はいぱーがーど",
+      "korean": "하이퍼 가드",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "가",
+        "드",
+        "이",
+        "퍼",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "가",
+        "드",
+        "퍼",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 7,
+      "length_delta": -1
+    },
+    {
+      "source": "せんぷうきゃく",
+      "korean": "선풍각",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "각",
+        "선",
+        "풍"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "각",
+        "선",
+        "풍"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 7,
+      "length_delta": -4
+    },
+    {
+      "source": "わーぷしゅーと",
+      "korean": "워프 슛",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "슛",
+        "워",
+        "프"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "슛",
+        "워"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 7,
+      "length_delta": -3
+    },
+    {
+      "source": "にんげんどりる",
+      "korean": "인간 드릴",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "간",
+        "드",
+        "릴",
+        "인"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "간",
+        "드",
+        "릴",
+        "인"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "にんげんへり",
+      "korean": "인간 헬기",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "간",
+        "기",
+        "인",
+        "헬"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "간",
+        "기",
+        "인",
+        "헬"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 6,
+      "length_delta": -1
+    },
+    {
+      "source": "にんげんぎょらい",
+      "korean": "인간 어뢰",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "간",
+        "뢰",
+        "어",
+        "인"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "간",
+        "뢰",
+        "어",
+        "인"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 8,
+      "length_delta": -3
+    },
+    {
+      "source": "じぶんぎょらい",
+      "korean": "자폭 어뢰",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "뢰",
+        "어",
+        "자",
+        "폭"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "뢰",
+        "어",
+        "자",
+        "폭"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "폭"
+      ],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "まっはぱんちII",
+      "korean": "마하 펀치 2",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "마",
+        "치",
+        "펀",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "펀",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 7,
+      "source_length": 8,
+      "length_delta": -1
+    },
+    {
+      "source": "まっはきっくII",
+      "korean": "마하 킥 2",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "마",
+        "킥",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "킥",
+        "하"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 8,
+      "length_delta": -2
+    },
+    {
+      "source": "すくりゅうII",
+      "korean": "스크류 2",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "류",
+        "스",
+        "크"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "류",
+        "스",
+        "크"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "はりてすぺしゃる",
+      "korean": "빰 때리기 S",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "기",
+        "때",
+        "리",
+        "빰"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "때",
+        "빰"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "빰"
+      ],
+      "korean_length": 7,
+      "source_length": 8,
+      "length_delta": -1
+    },
+    {
+      "source": "どすすぺしゃる",
+      "korean": "강타 S",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "강",
+        "타"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "강"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 7,
+      "length_delta": -3
+    },
+    {
+      "source": "ずつきすぺしゃる",
+      "korean": "박치기 S",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "기",
+        "박",
+        "치"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "박"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 8,
+      "length_delta": -3
+    },
+    {
+      "source": "あんますぺしゃる",
+      "korean": "안마 S",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "마",
+        "안"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "안"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 8,
+      "length_delta": -4
+    },
+    {
+      "source": "びっぐばんぐ",
+      "korean": "빅뱅",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "뱅",
+        "빅"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "뱅",
+        "빅"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 6,
+      "length_delta": -4
+    },
+    {
+      "source": "へんしんわざ",
+      "korean": "변신술",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "변",
+        "술",
+        "신"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "변",
+        "술",
+        "신"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 6,
+      "length_delta": -3
+    },
+    {
+      "source": "やまたのじゅつ",
+      "korean": "야마타의 술",
+      "category": "기술",
+      "note": "",
+      "section": "6. 필살기 / 기술",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "마",
+        "술",
+        "야",
+        "의",
+        "타"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "술",
+        "야",
+        "의"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 7,
+      "length_delta": -1
+    },
+    {
+      "source": "ぎんぱち",
+      "korean": "긴파치",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "긴",
+        "치",
+        "파"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "긴",
+        "파"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "긴"
+      ],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "いちべえ",
+      "korean": "이치베에",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "베",
+        "에",
+        "이",
+        "치"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "베",
+        "에"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "ろくべえ",
+      "korean": "로쿠베에",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "로",
+        "베",
+        "에",
+        "쿠"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "로",
+        "베",
+        "에",
+        "쿠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "きんすけ",
+      "korean": "킨스케",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "스",
+        "케",
+        "킨"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "스",
+        "케",
+        "킨"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "킨"
+      ],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "ためきち",
+      "korean": "타메키치",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "메",
+        "치",
+        "키",
+        "타"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "메",
+        "키"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "ごんさく",
+      "korean": "곤사쿠",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "곤",
+        "사",
+        "쿠"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "곤",
+        "사",
+        "쿠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "시",
+        "이",
+        "치",
+        "헤"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "じんろく",
+      "korean": "진로쿠",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "로",
+        "진",
+        "쿠"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "로",
+        "진",
+        "쿠"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "はんしろう",
+      "korean": "한시로",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "로",
+        "시",
+        "한"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "로",
+        "한"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "やごろう",
+      "korean": "야고로",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "고",
+        "로",
+        "야"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "고",
+        "로",
+        "야"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "にざえもん",
+      "korean": "니자에몬",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "니",
+        "몬",
+        "에",
+        "자"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "니",
+        "몬",
+        "에",
+        "자"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "たついち",
+      "korean": "타츠이치",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "이",
+        "츠",
+        "치",
+        "타"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 4,
+      "length_delta": 0
+    },
+    {
+      "source": "たつじ",
+      "korean": "타츠지",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "지",
+        "츠",
+        "타"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "지"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 3,
+      "length_delta": 0
+    },
+    {
+      "source": "とらぞうおやぶん",
+      "korean": "토라조 두목",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "두",
+        "라",
+        "목",
+        "조",
+        "토"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "두",
+        "목",
+        "조",
+        "토"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 8,
+      "length_delta": -2
+    },
+    {
+      "source": "くろまく",
+      "korean": "흑막",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "막",
+        "흑"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "막",
+        "흑"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "じゅうきち",
+      "korean": "쥬키치",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "쥬",
+        "치",
+        "키"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "쥬",
+        "키"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "あさじろう",
+      "korean": "아사지로",
+      "category": "보스",
+      "note": "",
+      "section": "7. 보스 / 적",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "로",
+        "사",
+        "아",
+        "지"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "로",
+        "사",
+        "아",
+        "지"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "はじまりのまち",
+      "korean": "시작 마을",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 4,
+      "unique_hangul": [
+        "마",
+        "시",
+        "을",
+        "작"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "마",
+        "을",
+        "작"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 5,
+      "source_length": 7,
+      "length_delta": -2
+    },
+    {
+      "source": "やまみち",
+      "korean": "산길",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "길",
+        "산"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "길",
+        "산"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "はやし",
+      "korean": "숲",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "숲"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "숲"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "かわら",
+      "korean": "강가",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "가",
+        "강"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "가",
+        "강"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "どうくつ",
+      "korean": "동굴",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "굴",
+        "동"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "굴",
+        "동"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "やまのうえ",
+      "korean": "산 위",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "산",
+        "위"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "산",
+        "위"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 5,
+      "length_delta": -2
+    },
+    {
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "다",
+        "리"
+      ],
+      "planned_patch_ready": true,
+      "missing_from_patch_plan": [],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 2,
+      "length_delta": 0
+    },
+    {
+      "source": "じごく",
+      "korean": "지옥",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "옥",
+        "지"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "옥",
+        "지"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "ろうてい",
+      "korean": "누정",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "누",
+        "정"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "누",
+        "정"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "おしろ",
+      "korean": "성",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "성"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "성"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "はたけ",
+      "korean": "밭",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "밭"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "밭"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "とざん",
+      "korean": "등산",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "등",
+        "산"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "등",
+        "산"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "かじや",
+      "korean": "대장간",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "간",
+        "대",
+        "장"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "간",
+        "대"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 3,
+      "length_delta": 0
+    },
+    {
+      "source": "はかば",
+      "korean": "묘지",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "묘",
+        "지"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "묘",
+        "지"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 3,
+      "length_delta": -1
+    },
+    {
+      "source": "みずうみ",
+      "korean": "호수",
+      "category": "스테이지",
+      "note": "",
+      "section": "8. 스테이지",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "수",
+        "호"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "수",
+        "호"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 4,
+      "length_delta": -2
+    },
+    {
+      "source": "やったー！",
+      "korean": "이겼다!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "겼",
+        "다",
+        "이"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "겼"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "겼"
+      ],
+      "korean_length": 4,
+      "source_length": 5,
+      "length_delta": -1
+    },
+    {
+      "source": "まけた…",
+      "korean": "졌다…",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "다",
+        "졌"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "졌"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "졌"
+      ],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "たすけてくれ！",
+      "korean": "도와줘!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "도",
+        "와",
+        "줘"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "도",
+        "와",
+        "줘"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 7,
+      "length_delta": -3
+    },
+    {
+      "source": "まってくれ！",
+      "korean": "기다려!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "기",
+        "다",
+        "려"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "려"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 6,
+      "length_delta": -2
+    },
+    {
+      "source": "これをもっていけ",
+      "korean": "이걸 가져가라",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "가",
+        "걸",
+        "라",
+        "이",
+        "져"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "가",
+        "걸",
+        "져"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 7,
+      "source_length": 8,
+      "length_delta": -1
+    },
+    {
+      "source": "なかまになった！",
+      "korean": "동료가 되었다!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "가",
+        "다",
+        "동",
+        "되",
+        "료",
+        "었"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "가",
+        "동",
+        "되",
+        "료",
+        "었"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 8,
+      "source_length": 8,
+      "length_delta": 0
+    },
+    {
+      "source": "レベルがあがった！",
+      "korean": "레벨이 올랐다!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "다",
+        "랐",
+        "레",
+        "벨",
+        "올",
+        "이"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "랐",
+        "레",
+        "벨",
+        "올"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "랐",
+        "올"
+      ],
+      "korean_length": 8,
+      "source_length": 9,
+      "length_delta": -1
+    },
+    {
+      "source": "わざをおぼえた！",
+      "korean": "기술을 익혔다!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "기",
+        "다",
+        "술",
+        "을",
+        "익",
+        "혔"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "술",
+        "을",
+        "익",
+        "혔"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 8,
+      "source_length": 8,
+      "length_delta": 0
+    },
+    {
+      "source": "みにつけた！",
+      "korean": "몸에 익혔다!",
+      "category": "대사",
+      "note": "",
+      "section": "9. 이벤트 대사",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "다",
+        "몸",
+        "에",
+        "익",
+        "혔"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "몸",
+        "에",
+        "익",
+        "혔"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 7,
+      "source_length": 6,
+      "length_delta": 1
+    },
+    {
+      "source": "おわり",
+      "korean": "끝",
+      "category": "엔딩",
+      "note": "",
+      "section": "10. 엔딩",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "끝"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "끝"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 3,
+      "length_delta": -2
+    },
+    {
+      "source": "おしまい",
+      "korean": "끝",
+      "category": "엔딩",
+      "note": "",
+      "section": "10. 엔딩",
+      "hangul_count": 1,
+      "unique_hangul": [
+        "끝"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "끝"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 1,
+      "source_length": 4,
+      "length_delta": -3
+    },
+    {
+      "source": "エンディング",
+      "korean": "엔딩",
+      "category": "엔딩",
+      "note": "",
+      "section": "10. 엔딩",
+      "hangul_count": 2,
+      "unique_hangul": [
+        "딩",
+        "엔"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "딩",
+        "엔"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 2,
+      "source_length": 6,
+      "length_delta": -4
+    },
+    {
+      "source": "スタッフ",
+      "korean": "스태프",
+      "category": "엔딩",
+      "note": "",
+      "section": "10. 엔딩",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "스",
+        "태",
+        "프"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "스",
+        "태"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 3,
+      "source_length": 4,
+      "length_delta": -1
+    },
+    {
+      "source": "おめでとう！",
+      "korean": "축하합니다!",
+      "category": "엔딩",
+      "note": "",
+      "section": "10. 엔딩",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "니",
+        "다",
+        "축",
+        "하",
+        "합"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "니",
+        "축",
+        "하",
+        "합"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 6,
+      "length_delta": 0
+    },
+    {
+      "source": "こがねむし",
+      "korean": "코가네무시",
+      "category": "특수",
+      "note": "최강 이름",
+      "section": "11. 특수",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "가",
+        "네",
+        "무",
+        "시",
+        "코"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "가",
+        "네",
+        "무",
+        "코"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "네",
+        "무",
+        "코"
+      ],
+      "korean_length": 5,
+      "source_length": 5,
+      "length_delta": 0
+    },
+    {
+      "source": "裏技",
+      "korean": "숨겨진 기술",
+      "category": "특수",
+      "note": "",
+      "section": "11. 특수",
+      "hangul_count": 5,
+      "unique_hangul": [
+        "겨",
+        "기",
+        "술",
+        "숨",
+        "진"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "겨",
+        "기",
+        "술",
+        "숨",
+        "진"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 6,
+      "source_length": 2,
+      "length_delta": 4
+    },
+    {
+      "source": "必殺技MAX",
+      "korean": "필살기 MAX",
+      "category": "특수",
+      "note": "",
+      "section": "11. 특수",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "기",
+        "살",
+        "필"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "기",
+        "살",
+        "필"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "살",
+        "필"
+      ],
+      "korean_length": 7,
+      "source_length": 6,
+      "length_delta": 1
+    },
+    {
+      "source": "相棒つるまつの裏切り",
+      "korean": "파트너 츠루마츠의 배신",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 10,
+      "unique_hangul": [
+        "너",
+        "루",
+        "마",
+        "배",
+        "신",
+        "의",
+        "츠",
+        "트",
+        "파"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "너",
+        "루",
+        "마",
+        "배",
+        "신",
+        "의",
+        "트",
+        "파"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "너"
+      ],
+      "korean_length": 12,
+      "source_length": 10,
+      "length_delta": 2
+    },
+    {
+      "source": "やごろうと再会",
+      "korean": "야고로와 재회",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 6,
+      "unique_hangul": [
+        "고",
+        "로",
+        "야",
+        "와",
+        "재",
+        "회"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "고",
+        "로",
+        "야",
+        "와",
+        "재",
+        "회"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "재"
+      ],
+      "korean_length": 7,
+      "source_length": 7,
+      "length_delta": 0
+    },
+    {
+      "source": "変身の術で、やごろうに変身",
+      "korean": "변신술로 야고로 변신",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 9,
+      "unique_hangul": [
+        "고",
+        "로",
+        "변",
+        "술",
+        "신",
+        "야"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "고",
+        "로",
+        "변",
+        "술",
+        "신",
+        "야"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 11,
+      "source_length": 13,
+      "length_delta": -2
+    },
+    {
+      "source": "よのすけから薬をもらい",
+      "korean": "요노스케에게 약을 받음",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 10,
+      "unique_hangul": [
+        "게",
+        "노",
+        "받",
+        "스",
+        "약",
+        "에",
+        "요",
+        "을",
+        "음",
+        "케"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "게",
+        "노",
+        "받",
+        "스",
+        "에",
+        "요",
+        "을",
+        "음",
+        "케"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "받",
+        "음"
+      ],
+      "korean_length": 12,
+      "source_length": 11,
+      "length_delta": 1
+    },
+    {
+      "source": "倒して許すと仲間に",
+      "korean": "쓰러뜨리고 용서하면 동료로",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 12,
+      "unique_hangul": [
+        "고",
+        "동",
+        "뜨",
+        "러",
+        "로",
+        "료",
+        "리",
+        "면",
+        "서",
+        "쓰",
+        "용",
+        "하"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "고",
+        "동",
+        "뜨",
+        "러",
+        "로",
+        "료",
+        "면",
+        "서",
+        "쓰",
+        "용",
+        "하"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "뜨",
+        "러",
+        "면",
+        "서",
+        "쓰",
+        "용"
+      ],
+      "korean_length": 14,
+      "source_length": 9,
+      "length_delta": 5
+    },
+    {
+      "source": "賭場でお金稼ぎ",
+      "korean": "도박장에서 돈벌이",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 8,
+      "unique_hangul": [
+        "도",
+        "돈",
+        "박",
+        "벌",
+        "서",
+        "에",
+        "이",
+        "장"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "도",
+        "박",
+        "벌",
+        "서",
+        "에"
+      ],
+      "char_map_ready": false,
+      "missing_from_char_map": [
+        "서"
+      ],
+      "korean_length": 9,
+      "source_length": 7,
+      "length_delta": 2
+    },
+    {
+      "source": "真エンディング",
+      "korean": "진 엔딩",
+      "category": "이벤트",
+      "note": "",
+      "section": "12. 기타",
+      "hangul_count": 3,
+      "unique_hangul": [
+        "딩",
+        "엔",
+        "진"
+      ],
+      "planned_patch_ready": false,
+      "missing_from_patch_plan": [
+        "딩",
+        "엔",
+        "진"
+      ],
+      "char_map_ready": true,
+      "missing_from_char_map": [],
+      "korean_length": 4,
+      "source_length": 7,
+      "length_delta": -3
+    }
+  ]
+}
