@@ -1,0 +1,135 @@
+{
+  "source": "rom_analysis\\broad_scan_patchability.json",
+  "target_count": 7,
+  "purpose": "manual read-watch proof for future v0.5 candidates; watches original bytes only",
+  "targets": [
+    {
+      "label": "broad_0440c_kajiya",
+      "source": "かじや",
+      "romaji": "Kajiya",
+      "korean": "대장간",
+      "category": "스테이지",
+      "confidence": "medium",
+      "rom_offset": "0x0440C",
+      "bank16": 1,
+      "start": 33788,
+      "stop": 33790,
+      "expected_original_bytes": "CA D0 E9",
+      "old_bytes": "CA D0 E9",
+      "future_patch_bytes_preview": "0x9A 0x93 0x9B",
+      "new_glyphs": [
+        "대",
+        "간"
+      ],
+      "reason": "Bank 1 text-like hit with uncommon shift; capture before patching"
+    },
+    {
+      "label": "broad_048f4_tatsuji",
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "category": "보스",
+      "confidence": "medium",
+      "rom_offset": "0x048F4",
+      "bank16": 1,
+      "start": 35044,
+      "stop": 35046,
+      "expected_original_bytes": "07 09 03",
+      "old_bytes": "07 09 03",
+      "future_patch_bytes_preview": "0x89 0x98 0x99",
+      "new_glyphs": [
+        "지"
+      ],
+      "reason": "Bank 1 text-like hit with uncommon shift; capture before patching"
+    },
+    {
+      "label": "broad_052a5_tatsuji",
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "category": "보스",
+      "confidence": "medium",
+      "rom_offset": "0x052A5",
+      "bank16": 1,
+      "start": 37525,
+      "stop": 37527,
+      "expected_original_bytes": "82 84 7E",
+      "old_bytes": "82 84 7E",
+      "future_patch_bytes_preview": "0x89 0x98 0x99",
+      "new_glyphs": [
+        "지"
+      ],
+      "reason": "Bank 1 text-like hit with uncommon shift; capture before patching"
+    },
+    {
+      "label": "broad_05be5_tatsuji",
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "category": "보스",
+      "confidence": "medium",
+      "rom_offset": "0x05BE5",
+      "bank16": 1,
+      "start": 39893,
+      "stop": 39895,
+      "expected_original_bytes": "97 99 93",
+      "old_bytes": "97 99 93",
+      "future_patch_bytes_preview": "0x89 0x98 0x99",
+      "new_glyphs": [
+        "지"
+      ],
+      "reason": "Bank 1 text-like hit with uncommon shift; capture before patching"
+    },
+    {
+      "label": "broad_06294_heishichi",
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "category": "보스",
+      "confidence": "high",
+      "rom_offset": "0x06294",
+      "bank16": 1,
+      "start": 41604,
+      "stop": 41607,
+      "expected_original_bytes": "9D 82 8C 91",
+      "old_bytes": "9D 82 8C 91",
+      "future_patch_bytes_preview": "0x8D 0x8E 0x8F 0x90",
+      "new_glyphs": [],
+      "reason": "strong Bank 1 text-like hit; capture the related screen"
+    },
+    {
+      "label": "broad_0631b_heishichi",
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "category": "보스",
+      "confidence": "high",
+      "rom_offset": "0x0631B",
+      "bank16": 1,
+      "start": 41739,
+      "stop": 41742,
+      "expected_original_bytes": "9D 82 8C 91",
+      "old_bytes": "9D 82 8C 91",
+      "future_patch_bytes_preview": "0x8D 0x8E 0x8F 0x90",
+      "new_glyphs": [],
+      "reason": "strong Bank 1 text-like hit; capture the related screen"
+    },
+    {
+      "label": "broad_06359_heishichi",
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "korean": "헤이시치",
+      "category": "보스",
+      "confidence": "high",
+      "rom_offset": "0x06359",
+      "bank16": 1,
+      "start": 41801,
+      "stop": 41804,
+      "expected_original_bytes": "9D 82 8C 91",
+      "old_bytes": "9D 82 8C 91",
+      "future_patch_bytes_preview": "0x8D 0x8E 0x8F 0x90",
+      "new_glyphs": [],
+      "reason": "strong Bank 1 text-like hit; capture the related screen"
+    }
+  ]
+}

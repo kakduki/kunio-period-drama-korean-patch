@@ -47,6 +47,19 @@ Summarize the latest v0.4 dump:
 python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v04 --output rom_analysis/manual_screen_dump_v04/summary.md
 ```
 
+## Broad v0.5 Candidate Read-Watch
+
+For future v0.5 candidates from `rom_analysis/broad_scan_patchability.md`,
+use the base ROM first and manually reach the related screen. Then run a short
+read-watch against original bytes:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py --lua-script lua/kunio_bank1_watch.lua --target-lua lua/kunio_broad_scan_candidate_targets.lua --frames 900 --timeout 60 --final-output rom_analysis/fceux_broad_scan_candidates --clean-output --no-dump-hex --no-dump-bin
+```
+
+Only promote a broad candidate after the read hit and the visible screen both
+match the intended label/dialogue. These targets do not create a v0.5 ROM.
+
 ## Output
 
 Each capture writes files named like:
