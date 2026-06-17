@@ -1,0 +1,388 @@
+{
+  "source": {
+    "expansion_plan": "rom_analysis\\next_glyph_expansion_plan.json",
+    "char_map": "font\\char_map.json",
+    "font_bin": "font\\korean_font_8x16.bin"
+  },
+  "summary": {
+    "char_map_entries": 265,
+    "font_bin_bytes": 8480,
+    "expected_font_bin_bytes": 8480,
+    "font_bin_matches_char_map": true,
+    "planned_extra_slots": 163,
+    "max_prefix_buildable_extra_glyphs": 46,
+    "rule": "Buildability here only means glyph bitmap data exists; text promotion still needs ROM/runtime/screen proof."
+  },
+  "batches": [
+    {
+      "requested_extra_glyphs": 16,
+      "total_patch_glyphs": 34,
+      "rows_ready_total": 17,
+      "rows_newly_ready": 7,
+      "buildable_with_current_font_assets": true,
+      "missing_glyph_count": 0,
+      "first_missing_glyph": "",
+      "first_missing_slot": "",
+      "missing_glyphs": []
+    },
+    {
+      "requested_extra_glyphs": 32,
+      "total_patch_glyphs": 50,
+      "rows_ready_total": 25,
+      "rows_newly_ready": 15,
+      "buildable_with_current_font_assets": true,
+      "missing_glyph_count": 0,
+      "first_missing_glyph": "",
+      "first_missing_slot": "",
+      "missing_glyphs": []
+    },
+    {
+      "requested_extra_glyphs": 64,
+      "total_patch_glyphs": 82,
+      "rows_ready_total": 50,
+      "rows_newly_ready": 40,
+      "buildable_with_current_font_assets": false,
+      "missing_glyph_count": 1,
+      "first_missing_glyph": "재",
+      "first_missing_slot": "0x141",
+      "missing_glyphs": [
+        {
+          "glyph": "재",
+          "tile": "0x141",
+          "prg_plus_0x7a_byte": "0xC7",
+          "rows_needing_it": 2
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 96,
+      "total_patch_glyphs": 114,
+      "rows_ready_total": 74,
+      "rows_newly_ready": 64,
+      "buildable_with_current_font_assets": false,
+      "missing_glyph_count": 10,
+      "first_missing_glyph": "재",
+      "first_missing_slot": "0x141",
+      "missing_glyphs": [
+        {
+          "glyph": "재",
+          "tile": "0x141",
+          "prg_plus_0x7a_byte": "0xC7",
+          "rows_needing_it": 2
+        },
+        {
+          "glyph": "서",
+          "tile": "0x168",
+          "prg_plus_0x7a_byte": "0xEE",
+          "rows_needing_it": 2
+        },
+        {
+          "glyph": "운",
+          "tile": "0x16A",
+          "prg_plus_0x7a_byte": "0xF0",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "극",
+          "tile": "0x16C",
+          "prg_plus_0x7a_byte": "0xF2",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "오",
+          "tile": "0x16D",
+          "prg_plus_0x7a_byte": "0xF3",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "원",
+          "tile": "0x16E",
+          "prg_plus_0x7a_byte": "0xF4",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "집",
+          "tile": "0x16F",
+          "prg_plus_0x7a_byte": "0xF5",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "테",
+          "tile": "0x170",
+          "prg_plus_0x7a_byte": "0xF6",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "팬",
+          "tile": "0x171",
+          "prg_plus_0x7a_byte": "0xF7",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "튼",
+          "tile": "0x172",
+          "prg_plus_0x7a_byte": "0xF8",
+          "rows_needing_it": 1
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 128,
+      "total_patch_glyphs": 146,
+      "rows_ready_total": 94,
+      "rows_newly_ready": 84,
+      "buildable_with_current_font_assets": false,
+      "missing_glyph_count": 17,
+      "first_missing_glyph": "재",
+      "first_missing_slot": "0x141",
+      "missing_glyphs": [
+        {
+          "glyph": "재",
+          "tile": "0x141",
+          "prg_plus_0x7a_byte": "0xC7",
+          "rows_needing_it": 2
+        },
+        {
+          "glyph": "서",
+          "tile": "0x168",
+          "prg_plus_0x7a_byte": "0xEE",
+          "rows_needing_it": 2
+        },
+        {
+          "glyph": "운",
+          "tile": "0x16A",
+          "prg_plus_0x7a_byte": "0xF0",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "극",
+          "tile": "0x16C",
+          "prg_plus_0x7a_byte": "0xF2",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "오",
+          "tile": "0x16D",
+          "prg_plus_0x7a_byte": "0xF3",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "원",
+          "tile": "0x16E",
+          "prg_plus_0x7a_byte": "0xF4",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "집",
+          "tile": "0x16F",
+          "prg_plus_0x7a_byte": "0xF5",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "테",
+          "tile": "0x170",
+          "prg_plus_0x7a_byte": "0xF6",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "팬",
+          "tile": "0x171",
+          "prg_plus_0x7a_byte": "0xF7",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "튼",
+          "tile": "0x172",
+          "prg_plus_0x7a_byte": "0xF8",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "를",
+          "tile": "0x174",
+          "prg_plus_0x7a_byte": "0xFA",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "세",
+          "tile": "0x175",
+          "prg_plus_0x7a_byte": "0xFB",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "움",
+          "tile": "0x179",
+          "prg_plus_0x7a_byte": "0xFF",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "직",
+          "tile": "0x17A",
+          "prg_plus_0x7a_byte": "0x00",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "쌍",
+          "tile": "0x17E",
+          "prg_plus_0x7a_byte": "0x04",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "절",
+          "tile": "0x17F",
+          "prg_plus_0x7a_byte": "0x05",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "톤",
+          "tile": "0x180",
+          "prg_plus_0x7a_byte": "0x06",
+          "rows_needing_it": 1
+        }
+      ]
+    },
+    {
+      "requested_extra_glyphs": 160,
+      "total_patch_glyphs": 178,
+      "rows_ready_total": 115,
+      "rows_newly_ready": 105,
+      "buildable_with_current_font_assets": false,
+      "missing_glyph_count": 22,
+      "first_missing_glyph": "재",
+      "first_missing_slot": "0x141",
+      "missing_glyphs": [
+        {
+          "glyph": "재",
+          "tile": "0x141",
+          "prg_plus_0x7a_byte": "0xC7",
+          "rows_needing_it": 2
+        },
+        {
+          "glyph": "서",
+          "tile": "0x168",
+          "prg_plus_0x7a_byte": "0xEE",
+          "rows_needing_it": 2
+        },
+        {
+          "glyph": "운",
+          "tile": "0x16A",
+          "prg_plus_0x7a_byte": "0xF0",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "극",
+          "tile": "0x16C",
+          "prg_plus_0x7a_byte": "0xF2",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "오",
+          "tile": "0x16D",
+          "prg_plus_0x7a_byte": "0xF3",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "원",
+          "tile": "0x16E",
+          "prg_plus_0x7a_byte": "0xF4",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "집",
+          "tile": "0x16F",
+          "prg_plus_0x7a_byte": "0xF5",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "테",
+          "tile": "0x170",
+          "prg_plus_0x7a_byte": "0xF6",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "팬",
+          "tile": "0x171",
+          "prg_plus_0x7a_byte": "0xF7",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "튼",
+          "tile": "0x172",
+          "prg_plus_0x7a_byte": "0xF8",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "를",
+          "tile": "0x174",
+          "prg_plus_0x7a_byte": "0xFA",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "세",
+          "tile": "0x175",
+          "prg_plus_0x7a_byte": "0xFB",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "움",
+          "tile": "0x179",
+          "prg_plus_0x7a_byte": "0xFF",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "직",
+          "tile": "0x17A",
+          "prg_plus_0x7a_byte": "0x00",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "쌍",
+          "tile": "0x17E",
+          "prg_plus_0x7a_byte": "0x04",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "절",
+          "tile": "0x17F",
+          "prg_plus_0x7a_byte": "0x05",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "톤",
+          "tile": "0x180",
+          "prg_plus_0x7a_byte": "0x06",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "밟",
+          "tile": "0x19B",
+          "prg_plus_0x7a_byte": "0x21",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "폭",
+          "tile": "0x1A5",
+          "prg_plus_0x7a_byte": "0x2B",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "빰",
+          "tile": "0x1A6",
+          "prg_plus_0x7a_byte": "0x2C",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "긴",
+          "tile": "0x1A9",
+          "prg_plus_0x7a_byte": "0x2F",
+          "rows_needing_it": 1
+        },
+        {
+          "glyph": "킨",
+          "tile": "0x1AA",
+          "prg_plus_0x7a_byte": "0x30",
+          "rows_needing_it": 1
+        }
+      ]
+    }
+  ]
+}

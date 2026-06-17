@@ -32,6 +32,7 @@ KEY_PYTHON = [
     "scripts/generate_manual_capture_status.py",
     "scripts/generate_manual_dump_inventory.py",
     "scripts/generate_next_glyph_expansion_plan.py",
+    "scripts/generate_font_expansion_readiness.py",
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
     "scripts/generate_primary_patch_contents.py",
@@ -53,6 +54,7 @@ KEY_PYTHON = [
     "scripts/summarize_bank1_watch_reads.py",
     "scripts/test_analyze_manual_screen_dump.py",
     "scripts/test_broad_patchability_v042_bytes.py",
+    "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_capture_cards_readable.py",
     "scripts/test_run_fceux_budget.py",
@@ -100,6 +102,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_translation_scan_capture_queue.py"],
     ["scripts/generate_translation_glyph_coverage.py"],
     ["scripts/generate_next_glyph_expansion_plan.py"],
+    ["scripts/generate_font_expansion_readiness.py"],
     ["scripts/generate_broad_scan_patchability.py"],
     ["scripts/generate_broad_scan_fceux_targets.py"],
     ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
@@ -175,6 +178,7 @@ def main() -> int:
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
+    run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])

@@ -27,6 +27,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `broad_scan_patchability.md`: length-safe broad-scan candidates with v0.4.2 planned bytes
 - `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan
 - `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion
+- `font_expansion_readiness.md`: current font asset gate for planned glyph batches
 - `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2
 - `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report
 - `apply_ips_standalone.py`: standalone IPS applier for this bundle
