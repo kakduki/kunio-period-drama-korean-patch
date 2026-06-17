@@ -50,6 +50,76 @@ def rel(path: Path) -> str:
         return str(path)
 
 
+def readable_fields(romaji: object) -> dict[str, str]:
+    readable = readable_for_romaji(romaji)
+    return {
+        "source_display": readable.get("source_display", ""),
+        "korean_display": readable.get("korean_display", ""),
+        "screen_hint": readable.get("screen_hint", ""),
+    }
+
+
+def write_markdown_report(path: Path, report: dict[str, object]) -> None:
+    lines = [
+        "# v0.4.3 Broad Verified Gate Report",
+        "",
+        f"- Verdict: **{report['verdict']}**",
+        f"- Summary status: `{report.get('summary_status', '')}`",
+        f"- Active CPU-read matches: **{report.get('active_summary_matches', 0)}**",
+        f"- Approved visual reviews: **{report.get('approved_visual_reviews', 0)}**",
+        f"- Applied rows: **{report.get('applied_count', 0)}**",
+        f"- Skipped rows: **{report.get('skipped_count', 0)}**",
+        f"- Proof packet: `{report.get('proof_packet', '')}`",
+        f"- Broad summary: `{report.get('summary', '')}`",
+        f"- Visual review: `{report.get('visual_review', '')}`",
+        "",
+        "## Applied Rows",
+        "",
+    ]
+    if report.get("applied"):
+        lines += [
+            "| ROM | expected text | Korean | old bytes | new bytes | screen context |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+        for row in report["applied"]:
+            readable = readable_fields(row.get("romaji", ""))
+            source = readable["source_display"] or row.get("source", "")
+            korean = readable["korean_display"] or row.get("korean", "")
+            lines.append(
+                f"| `{row.get('rom_offset', '')}` | {source} | {korean} | "
+                f"`{row.get('old_bytes', '')}` | `{row.get('new_bytes', '')}` | "
+                f"{row.get('screen_context', '') or '-'} |"
+            )
+    else:
+        lines.append("_No v0.4.3 rows are approved yet._")
+
+    lines += [
+        "",
+        "## Skipped Rows",
+        "",
+        "| ROM | expected text | Korean | screen hint | reason |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for row in report.get("skipped", []):
+        readable = readable_fields(row.get("romaji", ""))
+        source = readable["source_display"] or row.get("source", "")
+        korean = readable["korean_display"] or row.get("korean", "")
+        hint = readable["screen_hint"] or "-"
+        lines.append(
+            f"| `{row.get('rom_offset', '')}` | {source} | {korean} | {hint} | {row.get('reason', '')} |"
+        )
+
+    lines += [
+        "",
+        "## Gate Rule",
+        "",
+        "- A row needs both `active_original_byte_match=true` in the broad-scan summary and `visual_context_confirmed=true` in the visual review file.",
+        "- Preview IPS results do not bypass this gate; they only help compare real screens.",
+        "- If this report says no candidate was built, keep using v0.4.2 as the primary patch.",
+    ]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def write_review_template(path: Path, proof_packet: dict[str, object]) -> bool:
     rows_by_rom: dict[str, dict[str, object]] = {}
     if path.exists():
@@ -145,22 +215,26 @@ def build_candidate(
         review_row = approved.get(rom_offset)
         match_row = matches.get(rom_offset)
         if review_row is None:
+            readable = readable_fields(task.get("romaji", ""))
             skipped.append({
                 "rom_offset": rom_offset,
                 "romaji": task.get("romaji", ""),
                 "category": task.get("category", ""),
                 "source": task.get("source", ""),
                 "korean": task.get("korean", ""),
+                **readable,
                 "reason": "visual_context_confirmed is not true",
             })
             continue
         if match_row is None:
+            readable = readable_fields(task.get("romaji", ""))
             skipped.append({
                 "rom_offset": rom_offset,
                 "romaji": task.get("romaji", ""),
                 "category": task.get("category", ""),
                 "source": task.get("source", ""),
                 "korean": task.get("korean", ""),
+                **readable,
                 "reason": "no active CPU read match in broad-scan summary",
             })
             continue
@@ -171,20 +245,22 @@ def build_candidate(
         base_current = base[offset:offset + len(original)]
         v042_current = bytes(patched[offset:offset + len(original)])
         if not original or not planned:
-            skipped.append({"rom_offset": rom_offset, "reason": "missing original or planned bytes"})
+            skipped.append({"rom_offset": rom_offset, **readable_fields(task.get("romaji", "")), "reason": "missing original or planned bytes"})
             continue
         if len(original) != len(planned):
-            skipped.append({"rom_offset": rom_offset, "reason": "planned bytes are not equal length"})
+            skipped.append({"rom_offset": rom_offset, **readable_fields(task.get("romaji", "")), "reason": "planned bytes are not equal length"})
             continue
         if base_current != original:
             skipped.append({
                 "rom_offset": rom_offset,
+                **readable_fields(task.get("romaji", "")),
                 "reason": f"base bytes {base_current.hex(' ').upper()} do not match expected {original.hex(' ').upper()}",
             })
             continue
         if v042_current != original:
             skipped.append({
                 "rom_offset": rom_offset,
+                **readable_fields(task.get("romaji", "")),
                 "reason": f"v0.4.2 bytes {v042_current.hex(' ').upper()} are not still original {original.hex(' ').upper()}",
             })
             continue
@@ -199,6 +275,7 @@ def build_candidate(
             "category": task.get("category", ""),
             "source": task.get("source", ""),
             "korean": task.get("korean", ""),
+            **readable_fields(task.get("romaji", "")),
             "old_bytes": original.hex(" ").upper(),
             "new_bytes": planned.hex(" ").upper(),
             "screen_context": review_row.get("screen_context", ""),
@@ -242,6 +319,9 @@ def build_candidate(
             }
         )
 
+    report_md_path = out_dir / f"{out_stem}_build_report.md"
+    write_markdown_report(report_md_path, report)
+    report["report_md"] = rel(report_md_path)
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return report
 

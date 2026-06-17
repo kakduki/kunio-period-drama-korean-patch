@@ -14,6 +14,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence
 - `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate
 - `v043_broad_verified_build_report.json`: current v0.4.3 gate result
+- `v043_broad_verified_build_report.md`: readable current v0.4.3 gate result
 - `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips`: optional manual-screen-test IPS, not a primary patch
 - `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings
 - `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries

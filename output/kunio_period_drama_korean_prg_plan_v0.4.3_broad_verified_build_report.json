@@ -21,6 +21,9 @@
       "category": "스테이지",
       "source": "かじや",
       "korean": "대장간",
+      "source_display": "かじや",
+      "korean_display": "대장간",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
       "reason": "visual_context_confirmed is not true"
     },
     {
@@ -29,6 +32,9 @@
       "category": "보스",
       "source": "たつじ",
       "korean": "타츠지",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
       "reason": "visual_context_confirmed is not true"
     },
     {
@@ -37,6 +43,9 @@
       "category": "보스",
       "source": "たつじ",
       "korean": "타츠지",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
       "reason": "visual_context_confirmed is not true"
     },
     {
@@ -45,6 +54,9 @@
       "category": "보스",
       "source": "たつじ",
       "korean": "타츠지",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
       "reason": "visual_context_confirmed is not true"
     },
     {
@@ -53,6 +65,9 @@
       "category": "보스",
       "source": "へいしち",
       "korean": "헤이시치",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
       "reason": "visual_context_confirmed is not true"
     },
     {
@@ -61,6 +76,9 @@
       "category": "보스",
       "source": "へいしち",
       "korean": "헤이시치",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
       "reason": "visual_context_confirmed is not true"
     },
     {
@@ -69,7 +87,11 @@
       "category": "보스",
       "source": "へいしち",
       "korean": "헤이시치",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
       "reason": "visual_context_confirmed is not true"
     }
-  ]
+  ],
+  "report_md": "output\\kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.md"
 }
