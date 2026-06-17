@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 
+import generate_next_manual_run as next_manual
 from rom_utils import REPO_ROOT
 
 
@@ -33,6 +34,37 @@ def main() -> int:
     assert "refresh_after_manual_capture.py --phase primary" in md
     assert "record_primary_visual_review.py 0x07227 --confirm" in md
     assert "kunio_manual_route_heishichi_capture_watch.lua" in md
+
+    simulated_primary = {
+        "rows": [
+            {
+                "priority": 10,
+                "rom_hit": "0x07227",
+                "romaji": "Katana",
+                "screen_hint": "look for a katana/weapon item label",
+                "visual_context_confirmed": True,
+                "matches": 0,
+                "capture_status": "not_in_manual_capture_cards",
+                "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+                "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+            },
+            {
+                "priority": 20,
+                "rom_hit": "0x0569D",
+                "romaji": "Hashi",
+                "screen_hint": "look for a bridge/stage/location label",
+                "visual_context_confirmed": False,
+                "matches": 0,
+                "capture_status": "not_in_manual_capture_cards",
+                "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+                "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+            },
+        ]
+    }
+    simulated_actions = next_manual.primary_actions(simulated_primary)
+    assert len(simulated_actions) == 1
+    assert simulated_actions[0]["target"] == "0x0569D"
+    assert "0x0569D --confirm" in simulated_actions[0]["record_visual_review"]
 
     print("OK: next manual run report combines primary visual and route proof queues.")
     return 0
