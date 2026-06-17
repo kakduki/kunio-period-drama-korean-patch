@@ -6,6 +6,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 
 - `kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips`: primary IPS patch
 - `patch_candidate_manifest.md`: candidate status and verification notes
+- `patch_decision_matrix.md`: next manual verification priorities
 - `SHA256SUMS.txt`: checksums for bundle files
 
 ## Required Base ROM

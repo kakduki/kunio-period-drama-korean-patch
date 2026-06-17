@@ -14,6 +14,8 @@ from rom_utils import REPO_ROOT
 
 MANIFEST_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 MANIFEST_MD = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.md"
+DECISION_MATRIX_JSON = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.json"
+DECISION_MATRIX_MD = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.md"
 RELEASE_ROOT = REPO_ROOT / "release"
 
 
@@ -42,6 +44,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "",
         f"- `{ips_name}`: primary IPS patch",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
+        "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -95,6 +98,8 @@ def package() -> dict[str, object]:
         (ips_path, ips_path.name),
         (MANIFEST_MD, "patch_candidate_manifest.md"),
         (MANIFEST_JSON, "patch_candidate_manifest.json"),
+        (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
+        (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
     ]:
         dst = bundle_dir / name
         safe_copy(src, dst)
