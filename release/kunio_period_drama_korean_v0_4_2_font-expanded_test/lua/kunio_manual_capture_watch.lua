@@ -22,6 +22,8 @@ KUNIO_MANUAL_DUMP_DEFINE_ONLY = nil
 local last_dump_frame = -999
 local last_message = "Manual capture watcher ready"
 local last_message_frame = 0
+local watcher_title = KUNIO_WATCHER_TITLE or "Kunio manual capture watch"
+local watcher_hint = KUNIO_WATCHER_HINT or ""
 
 local function key_pressed(keys, ...)
     for _, name in ipairs({...}) do
@@ -57,11 +59,14 @@ while true do
         end
     end
 
-    gui.text(2, 8, "Kunio manual capture watch")
+    gui.text(2, 8, watcher_title)
     gui.text(2, 17, "D=dump current screen  Q=stop")
     gui.text(2, 26, manual.output_dir or "")
+    if watcher_hint ~= "" then
+        gui.text(2, 35, watcher_hint)
+    end
     if frame - last_message_frame < 180 then
-        gui.text(2, 35, last_message)
+        gui.text(2, watcher_hint ~= "" and 44 or 35, last_message)
     end
 
     if stop_now then

@@ -34,11 +34,15 @@ def main() -> int:
         assert target_lua.exists()
         assert watcher_lua.exists()
         assert "return {" in target_lua.read_text(encoding="utf-8")
-        assert "KUNIO_TARGETS_LUA" in watcher_lua.read_text(encoding="utf-8")
+        watcher_text = watcher_lua.read_text(encoding="utf-8")
+        assert "KUNIO_TARGETS_LUA" in watcher_text
+        assert "KUNIO_WATCHER_TITLE" in watcher_text
+        assert "KUNIO_WATCHER_HINT" in watcher_text
 
     md = MD_PATH.read_text(encoding="utf-8")
     assert "Route FCEUX Targets" in md
     assert "kunio_manual_route_kajiya_capture_watch.lua" in md
+    assert "if you only see the title/opening screen" in md
 
     print("OK: route-specific FCEUX targets are generated.")
     return 0

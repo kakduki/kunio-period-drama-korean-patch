@@ -135,6 +135,8 @@ def write_route_lua(route: dict[str, object], original_by_offset: dict[str, str]
 def write_watcher(route: dict[str, object]) -> None:
     path = REPO_ROOT / route["watcher_lua"]
     target_name = Path(route["target_lua"]).name
+    target_count = int(route["target_count"])
+    hint = str(route["targets"][0]["screen_hint"]) if route["targets"] else ""
     lines = [
         f"-- Auto-generated route watcher for {route['group']}.",
         "local function script_dir()",
@@ -151,6 +153,8 @@ def write_watcher(route: dict[str, object]) -> None:
         "",
         f'KUNIO_TARGETS_LUA = LUA_DIR .. "/{target_name}"',
         'KUNIO_MANUAL_DUMP_OUTPUT = ROOT_DIR .. "/rom_analysis/manual_screen_dump_broad_scan"',
+        f'KUNIO_WATCHER_TITLE = "Kunio route {route["route"]}: {route["group"]} ({target_count} targets)"',
+        f"KUNIO_WATCHER_HINT = {lua_quote(hint)}",
         "",
         'dofile(LUA_DIR .. "/kunio_manual_capture_watch.lua")',
     ]
@@ -183,6 +187,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "- Run these watchers on the base Japanese ROM.",
         "- Press `D` only after manually reaching the matching route screen.",
+        "- The watcher overlay names the active route; if you only see the title/opening screen, switch screens instead of waiting.",
         "- Use `python scripts/analyze_broad_scan_manual_dump.py` after capture.",
         "- A route hit is still not patch approval unless the visible screen context matches.",
     ]

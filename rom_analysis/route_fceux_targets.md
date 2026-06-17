@@ -17,5 +17,6 @@ These route-specific target tables and watcher wrappers narrow the manual broad-
 
 - Run these watchers on the base Japanese ROM.
 - Press `D` only after manually reaching the matching route screen.
+- The watcher overlay names the active route; if you only see the title/opening screen, switch screens instead of waiting.
 - Use `python scripts/analyze_broad_scan_manual_dump.py` after capture.
 - A route hit is still not patch approval unless the visible screen context matches.
