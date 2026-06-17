@@ -25,6 +25,7 @@ KEY_PYTHON = [
     "scripts/generate_broad_scan_fceux_targets.py",
     "scripts/generate_broad_scan_patchability.py",
     "scripts/generate_manual_capture_cards.py",
+    "scripts/generate_manual_capture_status.py",
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
     "scripts/generate_translation_pattern_scan.py",
@@ -64,6 +65,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_patch_candidate_manifest.py"],
     ["scripts/generate_patch_decision_matrix.py"],
     ["scripts/generate_manual_capture_cards.py"],
+    ["scripts/generate_manual_capture_status.py"],
 ]
 
 

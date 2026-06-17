@@ -1,0 +1,168 @@
+{
+  "source": "rom_analysis\\manual_capture_cards.json",
+  "summary": {
+    "card_count": 12,
+    "status_counts": {
+      "no_dump_records": 12
+    },
+    "rule": "A byte match from a manual dump is evidence, but final promotion still needs visual screen context."
+  },
+  "cards": [
+    {
+      "task": 1,
+      "priority": 10,
+      "kind": "conflict_needs_manual_screen",
+      "label": "rom_06295_candidate_7c",
+      "rom_hit": "0x06295",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 2,
+      "priority": 10,
+      "kind": "conflict_needs_manual_screen",
+      "label": "rom_0631c_candidate_7c",
+      "rom_hit": "0x0631C",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 3,
+      "priority": 10,
+      "kind": "conflict_needs_manual_screen",
+      "label": "rom_0635a_candidate_7c",
+      "rom_hit": "0x0635A",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 4,
+      "priority": 10,
+      "kind": "local_overlap_needs_manual_screen",
+      "label": "rom_05644_candidate_7c",
+      "rom_hit": "0x05644",
+      "capture_dir": "rom_analysis\\manual_screen_dump_v041",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 5,
+      "priority": 30,
+      "kind": "runtime_padding_rule_blocker",
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "capture_dir": "rom_analysis\\manual_screen_dump",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 6,
+      "priority": 35,
+      "kind": "broad_non_overlapping",
+      "label": "broad_0x0440C",
+      "rom_hit": "0x0440C",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 7,
+      "priority": 35,
+      "kind": "broad_non_overlapping",
+      "label": "broad_0x048F4",
+      "rom_hit": "0x048F4",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 8,
+      "priority": 35,
+      "kind": "broad_non_overlapping",
+      "label": "broad_0x052A5",
+      "rom_hit": "0x052A5",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 9,
+      "priority": 35,
+      "kind": "broad_non_overlapping",
+      "label": "broad_0x05BE5",
+      "rom_hit": "0x05BE5",
+      "capture_dir": "rom_analysis\\manual_screen_dump_broad_scan",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 10,
+      "priority": 45,
+      "kind": "wrong_context_or_padding_candidate",
+      "label": "rom_05bba_candidate_7a",
+      "rom_hit": "0x05BBA",
+      "capture_dir": "rom_analysis\\manual_screen_dump_v041",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 11,
+      "priority": 45,
+      "kind": "wrong_context_or_padding_candidate",
+      "label": "rom_06001_candidate_7e",
+      "rom_hit": "0x06001",
+      "capture_dir": "rom_analysis\\manual_screen_dump_v041",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    },
+    {
+      "task": 12,
+      "priority": 45,
+      "kind": "wrong_context_or_padding_candidate",
+      "label": "rom_0602e_candidate_8d",
+      "rom_hit": "0x0602E",
+      "capture_dir": "rom_analysis\\manual_screen_dump_v041",
+      "record_file_count": 0,
+      "records_checked": 0,
+      "status": "no_dump_records",
+      "matches": [],
+      "next_step": "Manually reach the screen in FCEUX and run the card's Lua script."
+    }
+  ]
+}

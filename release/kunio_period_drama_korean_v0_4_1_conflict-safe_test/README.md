@@ -8,6 +8,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
+- `manual_capture_status.md`: generated status of manual dump evidence
 - `apply_ips_standalone.py`: standalone IPS applier for this bundle
 - `SHA256SUMS.txt`: checksums for bundle files
 
