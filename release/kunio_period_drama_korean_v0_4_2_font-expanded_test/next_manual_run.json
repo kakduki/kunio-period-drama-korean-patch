@@ -1,0 +1,225 @@
+{
+  "source": {
+    "primary_visual_checklist": "rom_analysis\\primary_visual_checklist.json",
+    "route_proof_status": "rom_analysis\\route_proof_status.json"
+  },
+  "summary": {
+    "action_count": 13,
+    "primary_visual_pending": 10,
+    "route_proof_pending": 3,
+    "recommended_phase": "primary_v042_visual_review",
+    "rule": "Verify already-applied primary rows first; then gather base-ROM route proof for new text candidates."
+  },
+  "next_action": {
+    "phase": "primary_v042_visual_review",
+    "priority": 10,
+    "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+    "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+    "target": "0x07227",
+    "group": "Katana",
+    "screen_hint": "look for a katana/weapon item label",
+    "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+    "after_capture": [
+      "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+      "python scripts/generate_manual_capture_status.py",
+      "python scripts/generate_primary_visual_checklist.py"
+    ]
+  },
+  "actions": [
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 10,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x07227",
+      "group": "Katana",
+      "screen_hint": "look for a katana/weapon item label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 20,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x0569D",
+      "group": "Hashi",
+      "screen_hint": "look for a bridge/stage/location label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 30,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x0561A",
+      "group": "Hashi",
+      "screen_hint": "look for a bridge/stage/location label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 30,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x05643",
+      "group": "Heishichi",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 30,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x057D4",
+      "group": "Hashi",
+      "screen_hint": "look for a bridge/stage/location label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 30,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x0736A",
+      "group": "Raifu",
+      "screen_hint": "look for a life/status UI label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 30,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x0739D",
+      "group": "Raifu",
+      "screen_hint": "look for a life/status UI label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 40,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x0562F",
+      "group": "Tatsuichi",
+      "screen_hint": "look for a visible Tatsuichi name/dialogue context",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 40,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x056DA",
+      "group": "Hashi",
+      "screen_hint": "look for a bridge/stage/location label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "primary_v042_visual_review",
+      "priority": 40,
+      "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+      "target": "0x0571C",
+      "group": "Hashi",
+      "screen_hint": "look for a bridge/stage/location label",
+      "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "after_capture": [
+        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
+        "python scripts/generate_manual_capture_status.py",
+        "python scripts/generate_primary_visual_checklist.py"
+      ]
+    },
+    {
+      "phase": "v043_candidate_proof",
+      "priority": 101,
+      "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "watcher_lua": "lua/kunio_manual_route_kajiya_capture_watch.lua",
+      "target": "0x0440C",
+      "group": "Kajiya",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+      "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+      "after_capture": [
+        "python scripts/analyze_broad_scan_manual_dump.py",
+        "python scripts/generate_route_proof_status.py",
+        "python scripts/generate_v043_proof_status.py"
+      ]
+    },
+    {
+      "phase": "v043_candidate_proof",
+      "priority": 102,
+      "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "watcher_lua": "lua/kunio_manual_route_tatsuji_capture_watch.lua",
+      "target": "0x048F4, 0x052A5, 0x05BE5",
+      "group": "Tatsuji",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+      "after_capture": [
+        "python scripts/analyze_broad_scan_manual_dump.py",
+        "python scripts/generate_route_proof_status.py",
+        "python scripts/generate_v043_proof_status.py"
+      ]
+    },
+    {
+      "phase": "v043_candidate_proof",
+      "priority": 103,
+      "rom_to_open": "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "watcher_lua": "lua/kunio_manual_route_heishichi_capture_watch.lua",
+      "target": "0x06294, 0x0631B, 0x06359",
+      "group": "Heishichi",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+      "after_capture": [
+        "python scripts/analyze_broad_scan_manual_dump.py",
+        "python scripts/generate_route_proof_status.py",
+        "python scripts/generate_v043_proof_status.py"
+      ]
+    }
+  ]
+}

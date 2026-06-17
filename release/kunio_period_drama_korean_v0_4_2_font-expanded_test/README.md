@@ -10,6 +10,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
+- `next_manual_run.md`: single recommended next FCEUX action queue
 - `manual_capture_status.md`: generated status of manual dump evidence
 - `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records
 - `manual_capture_workflow.md`: short manual FCEUX workflow with route watcher guidance

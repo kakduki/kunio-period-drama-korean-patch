@@ -43,6 +43,8 @@ BROAD_SCAN_PATCHABILITY_JSON = REPO_ROOT / "rom_analysis" / "broad_scan_patchabi
 BROAD_SCAN_PATCHABILITY_MD = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
 NEXT_GLYPH_EXPANSION_MD = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.md"
+NEXT_MANUAL_RUN_JSON = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
+NEXT_MANUAL_RUN_MD = REPO_ROOT / "rom_analysis" / "next_manual_run.md"
 FONT_EXPANSION_READINESS_JSON = REPO_ROOT / "rom_analysis" / "font_expansion_readiness.json"
 FONT_EXPANSION_READINESS_MD = REPO_ROOT / "rom_analysis" / "font_expansion_readiness.md"
 BATCH46_TEXT_READINESS_JSON = REPO_ROOT / "rom_analysis" / "batch46_text_readiness.json"
@@ -115,6 +117,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
+        "- `next_manual_run.md`: single recommended next FCEUX action queue",
         "- `manual_capture_status.md`: generated status of manual dump evidence",
         "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
         "- `manual_capture_workflow.md`: short manual FCEUX workflow with route watcher guidance",
@@ -264,6 +267,8 @@ def package() -> dict[str, object]:
         (BROAD_SCAN_PATCHABILITY_JSON, "broad_scan_patchability.json"),
         (NEXT_GLYPH_EXPANSION_MD, "next_glyph_expansion_plan.md"),
         (NEXT_GLYPH_EXPANSION_JSON, "next_glyph_expansion_plan.json"),
+        (NEXT_MANUAL_RUN_MD, "next_manual_run.md"),
+        (NEXT_MANUAL_RUN_JSON, "next_manual_run.json"),
         (FONT_EXPANSION_READINESS_MD, "font_expansion_readiness.md"),
         (FONT_EXPANSION_READINESS_JSON, "font_expansion_readiness.json"),
         (BATCH46_TEXT_READINESS_MD, "batch46_text_readiness.md"),

@@ -34,6 +34,7 @@ KEY_PYTHON = [
     "scripts/generate_manual_dump_inventory.py",
     "scripts/generate_manual_proof_routes.py",
     "scripts/generate_next_glyph_expansion_plan.py",
+    "scripts/generate_next_manual_run.py",
     "scripts/generate_font_expansion_readiness.py",
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
@@ -63,6 +64,7 @@ KEY_PYTHON = [
     "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_proof_routes.py",
+    "scripts/test_next_manual_run.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_manual_capture_cards_readable.py",
     "scripts/test_run_fceux_budget.py",
@@ -143,6 +145,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_manual_capture_cards.py"],
     ["scripts/generate_manual_capture_status.py"],
     ["scripts/generate_manual_dump_inventory.py"],
+    ["scripts/generate_next_manual_run.py"],
 ]
 
 
@@ -202,6 +205,7 @@ def main() -> int:
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
+    run("next manual run", ["scripts/test_next_manual_run.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
