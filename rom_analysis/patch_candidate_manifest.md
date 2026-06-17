@@ -37,6 +37,14 @@ These are not release candidates. They exist only to test shortened replacement 
 
 ## Current Rule
 
-- Test `output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.nes` first.
-- Use `lua/kunio_manual_v04_screen_dump.lua` on manually reached screens.
+- Test `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes` first.
+- Use `lua/kunio_manual_v041_screen_dump.lua` on manually reached screens.
 - Do not treat padding experiment ROMs as patch releases.
+
+## Verify Primary IPS
+
+Run this before testing or sharing the current primary patch:
+
+```powershell
+python scripts/verify_primary_patch.py
+```
