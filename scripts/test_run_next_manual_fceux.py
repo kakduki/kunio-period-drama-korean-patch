@@ -6,6 +6,7 @@ from __future__ import annotations
 import subprocess
 import sys
 
+import run_next_manual_fceux as runner
 from rom_utils import REPO_ROOT
 
 
@@ -29,6 +30,16 @@ def main() -> int:
     missing = [phrase for phrase in required if phrase not in out]
     if missing:
         raise SystemExit(f"next manual FCEUX wrapper output missing: {', '.join(missing)}")
+    primary = runner.after_capture_commands(
+        {"after_capture": ["python scripts/refresh_after_manual_capture.py --phase primary"]}
+    )
+    broad = runner.after_capture_commands(
+        {"after_capture": ["python scripts/refresh_after_manual_capture.py --phase broad"]}
+    )
+    if primary != [["scripts/refresh_after_manual_capture.py", "--phase", "primary"]]:
+        raise SystemExit("primary after_capture command was not parsed")
+    if broad != [["scripts/refresh_after_manual_capture.py", "--phase", "broad"]]:
+        raise SystemExit("broad after_capture command was not parsed")
     print("OK: next manual FCEUX launcher wrapper prints the current action.")
     return 0
 

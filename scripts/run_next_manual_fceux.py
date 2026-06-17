@@ -23,6 +23,18 @@ def manual_dump_records() -> set[str]:
     }
 
 
+def after_capture_commands(action: dict[str, object]) -> list[list[str]]:
+    commands = []
+    for raw in action.get("after_capture", []):
+        if raw == "python scripts/refresh_after_manual_capture.py --phase primary":
+            commands.append(["scripts/refresh_after_manual_capture.py", "--phase", "primary"])
+        elif raw == "python scripts/refresh_after_manual_capture.py --phase broad":
+            commands.append(["scripts/refresh_after_manual_capture.py", "--phase", "broad"])
+        else:
+            print(f"WARNING: unsupported after_capture command skipped: {raw}")
+    return commands
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--timeout", type=int, default=DEFAULT_MANUAL_TIMEOUT)
@@ -62,6 +74,10 @@ def main() -> int:
         print("New manual dump record(s):")
         for record in new_records:
             print(f"- {record}")
+        for after_command in after_capture_commands(action):
+            print("Running after-capture refresh:")
+            print(" ".join([sys.executable, *after_command]))
+            subprocess.run([sys.executable, *after_command], cwd=REPO_ROOT, check=True)
     else:
         print(
             "No new manual dump record was created. If FCEUX stayed on the title/opening screen, "
