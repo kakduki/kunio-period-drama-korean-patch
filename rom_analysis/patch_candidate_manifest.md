@@ -48,3 +48,10 @@ Run this before testing or sharing the current primary patch:
 ```powershell
 python scripts/verify_primary_patch.py
 ```
+
+For the full local consistency suite:
+
+```powershell
+python scripts/run_project_checks.py
+python scripts/run_project_checks.py --regen
+```

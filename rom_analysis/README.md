@@ -46,6 +46,7 @@
 - `manual_screen_dump_broad_scan/`: destination for one-shot broad-scan candidate dumps from `lua/kunio_manual_broad_scan_dump.lua`; summarize with `scripts/analyze_broad_scan_manual_dump.py`
 - `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.1 conflict-safe as the primary manual-test ROM and padding builds as non-release experiments
 - `../scripts/verify_primary_patch.py`: verifies that the current primary IPS applies to the expected base ROM and produces the manifest MD5
+- `../scripts/run_project_checks.py`: runs the core consistency checks for Python scripts, generated Lua targets, primary IPS verification, and manifest invariants; use `--regen` to rebuild the current generated candidate artifacts first
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness
