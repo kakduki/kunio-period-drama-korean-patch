@@ -1,0 +1,1672 @@
+{
+  "source": {
+    "padding_options": "rom_analysis\\prg_padding_options.json",
+    "inventory": "rom_analysis\\bank1_offset_inventory.json"
+  },
+  "summary": {
+    "needs_padding_rule_count": 29,
+    "runtime_confirmed_padding_blockers": 1,
+    "strategy_count": 5
+  },
+  "strategies": {
+    "pad_00": "00",
+    "pad_7a": "7A",
+    "pad_ff": "FF",
+    "pad_f8f9": "F8 F9",
+    "preserve_tail": "original-tail"
+  },
+  "experiments": [
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "힘",
+      "evidence_level": "runtime-confirmed",
+      "runtime_hits": 1797,
+      "runtime_active_expected_matches": 11,
+      "original_bytes": "93 88 AA",
+      "planned_bytes": "87",
+      "tail_bytes": "88 AA",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "87 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "87 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "87 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "87 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "87 88 AA",
+          "pad_bytes": "88 AA",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_05aa3_candidate_77",
+      "rom_hit": "0x05AA3",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9C A0",
+      "planned_bytes": "91",
+      "tail_bytes": "A0",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A0",
+          "pad_bytes": "A0",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_05aa5_candidate_77",
+      "rom_hit": "0x05AA5",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9C A0",
+      "planned_bytes": "91",
+      "tail_bytes": "A0",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A0",
+          "pad_bytes": "A0",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_05bba_candidate_7a",
+      "rom_hit": "0x05BBA",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 710,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9F A3",
+      "planned_bytes": "91",
+      "tail_bytes": "A3",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A3",
+          "pad_bytes": "A3",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_05bdf_candidate_7a",
+      "rom_hit": "0x05BDF",
+      "category_group": "items/equipment",
+      "category": "회복",
+      "source": "くすり",
+      "source_romaji": "Kusuri",
+      "source_context": "4.3 회복/보조 아이템",
+      "korean": "약",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "82 87 A3",
+      "planned_bytes": "92",
+      "tail_bytes": "87 A3",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "92 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "92 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "92 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "92 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "92 87 A3",
+          "pad_bytes": "87 A3",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_05c09_candidate_7a",
+      "rom_hit": "0x05C09",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9F A3",
+      "planned_bytes": "91",
+      "tail_bytes": "A3",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A3",
+          "pad_bytes": "A3",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_05c69_candidate_7a",
+      "rom_hit": "0x05C69",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9F A3",
+      "planned_bytes": "91",
+      "tail_bytes": "A3",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A3",
+          "pad_bytes": "A3",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_0602e_candidate_8d",
+      "rom_hit": "0x0602E",
+      "category_group": "UI/status",
+      "category": "UI",
+      "source": "そうび",
+      "source_romaji": "Soubi",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "장비",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 54,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9C 90 A8",
+      "planned_bytes": "93 94",
+      "tail_bytes": "A8",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "93 94 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "93 94 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "93 94 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "93 94 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "93 94 A8",
+          "pad_bytes": "A8",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_066fb_candidate_82",
+      "rom_hit": "0x066FB",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "힘",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 546,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "93 88 AA",
+      "planned_bytes": "87",
+      "tail_bytes": "88 AA",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "87 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "87 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "87 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "87 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "87 88 AA",
+          "pad_bytes": "88 AA",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06839_candidate_7e",
+      "rom_hit": "0x06839",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A3 A7",
+      "planned_bytes": "91",
+      "tail_bytes": "A7",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A7",
+          "pad_bytes": "A7",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06845_candidate_82",
+      "rom_hit": "0x06845",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "힘",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "93 88 AA",
+      "planned_bytes": "87",
+      "tail_bytes": "88 AA",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "87 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "87 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "87 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "87 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "87 88 AA",
+          "pad_bytes": "88 AA",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_068c3_candidate_71",
+      "rom_hit": "0x068C3",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "96 9A",
+      "planned_bytes": "91",
+      "tail_bytes": "9A",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 9A",
+          "pad_bytes": "9A",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_0691e_candidate_80",
+      "rom_hit": "0x0691E",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A5 A9",
+      "planned_bytes": "91",
+      "tail_bytes": "A9",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A9",
+          "pad_bytes": "A9",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_069c5_candidate_79",
+      "rom_hit": "0x069C5",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 16,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9E A2",
+      "planned_bytes": "91",
+      "tail_bytes": "A2",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A2",
+          "pad_bytes": "A2",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06bc6_candidate_7b",
+      "rom_hit": "0x06BC6",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 160,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A0 A4",
+      "planned_bytes": "91",
+      "tail_bytes": "A4",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A4",
+          "pad_bytes": "A4",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06bdf_candidate_8d",
+      "rom_hit": "0x06BDF",
+      "category_group": "UI/status",
+      "category": "UI",
+      "source": "そうび",
+      "source_romaji": "Soubi",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "장비",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 72,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9C 90 A8",
+      "planned_bytes": "93 94",
+      "tail_bytes": "A8",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "93 94 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "93 94 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "93 94 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "93 94 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "93 94 A8",
+          "pad_bytes": "A8",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06d1b_candidate_80",
+      "rom_hit": "0x06D1B",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A5 A9",
+      "planned_bytes": "91",
+      "tail_bytes": "A9",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A9",
+          "pad_bytes": "A9",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06de3_candidate_80",
+      "rom_hit": "0x06DE3",
+      "category_group": "UI/status",
+      "category": "UI",
+      "source": "おかね",
+      "source_romaji": "Okane",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "돈",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 4264,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "85 86 98",
+      "planned_bytes": "95",
+      "tail_bytes": "86 98",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "95 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "95 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "95 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "95 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "95 86 98",
+          "pad_bytes": "86 98",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06fa1_candidate_8d",
+      "rom_hit": "0x06FA1",
+      "category_group": "UI/status",
+      "category": "UI",
+      "source": "そうび",
+      "source_romaji": "Soubi",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "장비",
+      "evidence_level": "static-candidate+pointer",
+      "runtime_hits": 1117,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9C 90 A8",
+      "planned_bytes": "93 94",
+      "tail_bytes": "A8",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "93 94 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "93 94 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "93 94 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "93 94 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "93 94 A8",
+          "pad_bytes": "A8",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_058fb_candidate_79",
+      "rom_hit": "0x058FB",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9E A2",
+      "planned_bytes": "91",
+      "tail_bytes": "A2",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A2",
+          "pad_bytes": "A2",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06001_candidate_7e",
+      "rom_hit": "0x06001",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 35,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A3 A7",
+      "planned_bytes": "91",
+      "tail_bytes": "A7",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A7",
+          "pad_bytes": "A7",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06479_candidate_7f",
+      "rom_hit": "0x06479",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 3,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A4 A8",
+      "planned_bytes": "91",
+      "tail_bytes": "A8",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A8",
+          "pad_bytes": "A8",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_065b0_candidate_80",
+      "rom_hit": "0x065B0",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A5 A9",
+      "planned_bytes": "91",
+      "tail_bytes": "A9",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A9",
+          "pad_bytes": "A9",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06605_candidate_82",
+      "rom_hit": "0x06605",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "힘",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "93 88 AA",
+      "planned_bytes": "87",
+      "tail_bytes": "88 AA",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "87 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "87 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "87 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "87 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "87 88 AA",
+          "pad_bytes": "88 AA",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06a3d_candidate_79",
+      "rom_hit": "0x06A3D",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 40,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9E A2",
+      "planned_bytes": "91",
+      "tail_bytes": "A2",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A2",
+          "pad_bytes": "A2",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06a66_candidate_79",
+      "rom_hit": "0x06A66",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 64,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9E A2",
+      "planned_bytes": "91",
+      "tail_bytes": "A2",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A2",
+          "pad_bytes": "A2",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06b4a_candidate_82",
+      "rom_hit": "0x06B4A",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "힘",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 1708,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "93 88 AA",
+      "planned_bytes": "87",
+      "tail_bytes": "88 AA",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "87 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "87 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "87 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "87 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "87 88 AA",
+          "pad_bytes": "88 AA",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_06fde_candidate_80",
+      "rom_hit": "0x06FDE",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "A5 A9",
+      "planned_bytes": "91",
+      "tail_bytes": "A9",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A9",
+          "pad_bytes": "A9",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    },
+    {
+      "label": "rom_0704f_candidate_7a",
+      "rom_hit": "0x0704F",
+      "category_group": "items/equipment",
+      "category": "무기",
+      "source": "やり",
+      "source_romaji": "Yari",
+      "source_context": "4.1 무기류",
+      "korean": "창",
+      "evidence_level": "static-candidate",
+      "runtime_hits": 0,
+      "runtime_active_expected_matches": 0,
+      "original_bytes": "9F A3",
+      "planned_bytes": "91",
+      "tail_bytes": "A3",
+      "tail_len": 1,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "91 00",
+          "pad_bytes": "00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "91 7A",
+          "pad_bytes": "7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "91 FF",
+          "pad_bytes": "FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "91 F8",
+          "pad_bytes": "F8",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "91 A3",
+          "pad_bytes": "A3",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    }
+  ],
+  "runtime_confirmed_first_targets": [
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "category_group": "UI/status",
+      "category": "능력치",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "source_context": "3. 스테이터스 / UI 텍스트",
+      "korean": "힘",
+      "evidence_level": "runtime-confirmed",
+      "runtime_hits": 1797,
+      "runtime_active_expected_matches": 11,
+      "original_bytes": "93 88 AA",
+      "planned_bytes": "87",
+      "tail_bytes": "88 AA",
+      "tail_len": 2,
+      "reason": "remaining original bytes decode as non-fill candidate text/control bytes",
+      "strategies": [
+        {
+          "strategy": "pad_00",
+          "patched_bytes": "87 00 00",
+          "pad_bytes": "00 00",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_7a",
+          "patched_bytes": "87 7A 7A",
+          "pad_bytes": "7A 7A",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_ff",
+          "patched_bytes": "87 FF FF",
+          "pad_bytes": "FF FF",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "pad_f8f9",
+          "patched_bytes": "87 F8 F9",
+          "pad_bytes": "F8 F9",
+          "changes_original_tail": true,
+          "note": "control/fill hypothesis"
+        },
+        {
+          "strategy": "preserve_tail",
+          "patched_bytes": "87 88 AA",
+          "pad_bytes": "88 AA",
+          "changes_original_tail": false,
+          "note": "baseline: only first glyph byte changes"
+        }
+      ]
+    }
+  ]
+}
