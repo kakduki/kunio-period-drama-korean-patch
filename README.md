@@ -1,80 +1,94 @@
-# 쿠니오군의 시대극이다 전원집합! 한글패치 프로젝트
+# 쿠니오 시대극 한국어 패치 프로젝트
 
-## 개요
-다운타운 스페셜 くにおくんの時代劇だよ全員集合! (1991, 테크노스재팬)의 한글 패치 제작
+`Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`의 일본어 텍스트를 한국어로 바꾸기 위한 분석/패치 저장소입니다.
 
-## 장비
-- 호스트: macOS 12.7 Monterey (분석/스크립트 제작)
-- 디버거: Windows PC (FCEUX 디버거)
-- AI: Codex CLI (Windows), Hermes Agent (macOS)
+이 저장소에는 ROM 파일을 포함하지 않습니다. 각자 보유한 정품 기반 일본판 ROM을 `rom/` 폴더에 넣고 분석/패치 스크립트를 실행합니다.
 
-## 디렉토리 구조
-```
-kunio_korean_patch/
-├── scripts/          # Python 분석 도구
-│   ├── analyze_rom.py        # 기본 ROM 구조 분석
-│   ├── analyze_chr.py        # CHR ROM 분석
-│   ├── analyze_chr_font.py   # CHR 폰트 추출
-│   ├── extract_text.py       # 텍스트 추출
-│   ├── find_text.py          # 텍스트 영역 검색
-│   └── disasm_6502.py        # 6502 디스어셈블러
-├── text_data/
-│   └── 쿠니오_시대극_게임_일본어_텍스트_전사.md  # 150개 항목 텍스트
-├── font/             # CHR 폰트 이미지
-├── rom_analysis/     # 분석 결과 (TODO)
-└── output/           # 최종 패치 (TODO)
+## 현재 상태
+
+- 기준 ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- 현재 1차 테스트 후보: `v0.4.1 conflict-safe`
+- 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips`
+- 테스트 번들: `release/kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip`
+- 패치 적용 후 예상 MD5: `2b9f569fa175c719333064b8d73bc273`
+
+아직 최종 패치가 아닙니다. 현재 후보는 안전한 equal-length PRG 텍스트 일부와 CHR 글리프만 적용한 수동 검증용 빌드입니다.
+
+## 빠른 검증
+
+```powershell
+python scripts/verify_primary_patch.py
+python scripts/run_project_checks.py
 ```
 
-## ROM 정보
-- 파일: Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes
-- 크기: 262,160 bytes (NES 2.0)
-- PRG: 131,072 bytes (8 x 16KB banks, Mapper 4 / MMC3)
-- CHR: 131,072 bytes (16 x 8KB banks)
-- MD5: 0d406a85285b4de8468f0dab6aad5fe5
+생성물을 다시 만들면서 확인하려면:
 
-## 텍스트 분석 현황
-### 완료
-- 게임 텍스트 150+ 항목 전사 (일본어 원문 + 한글 번역 준비)
-- CHR 16개 뱅크 폰트 이미지 추출
-- 6502 디스어셈블러 제작
-
-### 필요한 분석 (Windows FCEUX 디버거 필요)
-1. 텍스트 포인터 테이블 위치 확인
-2. 게임 내부 문자 인코딩 테이블 (CHR 타일 번호 ↔ 문자 코드)
-3. 텍스트 압축 알고리즘 파악
-4. 각 텍스트 블록의 ROM 오프셋
-
-## 작업 플로우
-```
-macOS (여기)                Windows (Codex)
-    │                            │
-    ├─ 스크립트/데이터 GitHub push ─→ pull + FCEUX 디버거
-    │                            ├─ 텍스트 포인터 분석
-    │                            ├─ CHR 폰트 매핑 확인
-    │                            └─ 결과 push ─┐
-    │                                            │
-    ←────── GitHub pull ────────────────────────┘
-    ├─ 번역 데이터 준비
-    ├─ 8x16 한글 폰트 제작
-    └─ IPS 패치 생성
+```powershell
+python scripts/run_project_checks.py --regen
 ```
 
-## 윈도우 Codex CLI 사용법
-```bash
-# 1. 저장소 클론
-git clone <repo-url> kunio_korean_patch
-cd kunio_korean_patch
+## 중요한 작업 원칙
 
-# 2. Python 스크립트 실행
-python scripts/extract_text.py
+- FCEUX 자동 진행이 `stagnant_screen`을 기록하거나 첫 화면/초기 메뉴만 반복하면 즉시 중단합니다.
+- 유튜브 영상은 대사 흐름과 전사 참고용입니다. 실제 패치 승격은 ROM 오프셋, 바이트 매핑, 런타임 메모리, 화면 증거가 필요합니다.
+- `needs-padding-rule` 항목은 화면에서 패딩/종료 규칙이 확인되기 전까지 최종 후보에 넣지 않습니다.
+- v0.4/broad-scan 충돌 항목은 수동 화면 증거가 나오기 전까지 어느 쪽도 확정하지 않습니다.
 
-# 3. FCEUX 디버거로 분석
-# FCEUX 실행 → ROM 열기 → Debug > Trace Logger
-# 게임 플레이 중 텍스트 나오는 순간 메모리 덤프
-# 결과를 rom_analysis/ 에 저장
+## 다음에 볼 파일
+
+- `rom_analysis/patch_decision_matrix.md`: 다음 수동 검증 우선순위
+- `rom_analysis/patch_candidate_manifest.md`: 현재 ROM/IPS 후보 목록
+- `rom_analysis/manual_capture_workflow.md`: FCEUX 수동 캡처 절차
+- `rom_analysis/v04_broad_candidate_conflicts.md`: v0.4와 broad-scan 충돌 목록
+- `rom_analysis/prg_padding_options.md`: 짧아지는 번역의 패딩 위험 목록
+
+## 수동 FCEUX 검증 흐름
+
+현재 테스트 후보를 확인할 때:
+
+```text
+output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes
 ```
 
-## 참고 링크
-- YouTube 필살기 정리: https://www.youtube.com/watch?v=VID
-- YouTube 풀플레이 (2h): https://www.youtube.com/watch?v=VID
-- CHR 뱅크 이미지: font/*.png
+1. FCEUX에서 위 ROM을 엽니다.
+2. `rom_analysis/patch_decision_matrix.md`의 상위 항목에 해당하는 화면까지 직접 진행합니다.
+3. 해당 화면에서 일시정지합니다.
+4. FCEUX Lua 메뉴에서 `lua/kunio_manual_v041_screen_dump.lua`를 실행합니다.
+5. 덤프를 요약합니다.
+
+```powershell
+python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md
+```
+
+broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio_manual_broad_scan_dump.lua`를 사용합니다.
+
+## 현재 최우선 확인 항목
+
+`rom_analysis/patch_decision_matrix.md` 기준:
+
+1. `0x06295`, `0x0631C`, `0x0635A`: v0.4와 broad-scan 해석이 충돌하는 항목
+2. `0x05644`: 이미 적용된 근처 항목과 겹치는 local overlap
+3. `0x071A4`: 런타임 확인은 됐지만 짧아지는 번역이라 패딩 규칙 검증 필요
+4. `0x0440C`, `0x048F4`, `0x052A5`, `0x05BE5`: broad-scan 비충돌 후보
+
+## 주요 스크립트
+
+- `scripts/verify_primary_patch.py`: 현재 primary IPS가 기준 ROM에 정상 적용되는지 확인
+- `scripts/run_project_checks.py`: Python, Lua, IPS, manifest 핵심 체크
+- `scripts/generate_patch_decision_matrix.py`: 다음 수동 검증 결정표 생성
+- `scripts/package_primary_release.py`: ROM 없는 테스트 IPS 번들 생성
+- `scripts/run_fceux_lua_analysis.py`: FCEUX Lua 자동 분석 실행기
+- `scripts/analyze_manual_screen_dump.py`: 수동 화면 덤프 요약
+
+## 저장소 구조
+
+```text
+font/          한국어 글리프와 CHR 관련 자료
+lua/           FCEUX Lua 자동화 및 수동 덤프 스크립트
+output/        로컬 테스트 ROM/IPS 산출물
+release/       ROM 없는 테스트 배포 번들
+rom/           개인 보유 ROM 위치, git 제외
+rom_analysis/  분석 결과와 검증 큐
+scripts/       Python 분석/빌드/검증 도구
+text_data/     전사/번역 참고 자료
+```
