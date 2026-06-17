@@ -10,6 +10,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `manual_capture_status.md`: generated status of manual dump evidence
+- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records
 - `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates
 - `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence
 - `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate

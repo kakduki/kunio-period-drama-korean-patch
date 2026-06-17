@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "dump_dirs": 5,
+    "total_record_files": 0,
+    "total_screenshot_files": 0,
+    "total_latest_active_matches": 0,
+    "status_counts": {
+      "no_dump_records": 5
+    },
+    "rule": "A screenshot file is visual evidence to review, but patch promotion still requires explicit visual_review confirmation."
+  },
+  "dump_dirs": [
+    {
+      "label": "base",
+      "path": "rom_analysis/manual_screen_dump",
+      "exists": true,
+      "record_file_count": 0,
+      "screenshot_file_count": 0,
+      "meta_file_count": 0,
+      "latest_records": "",
+      "latest_screenshot": "",
+      "latest_meta": "",
+      "latest_record_rows": 0,
+      "latest_record_active_matches": 0,
+      "summary_json": "",
+      "summary_md": "",
+      "status": "no_dump_records"
+    },
+    {
+      "label": "v04",
+      "path": "rom_analysis/manual_screen_dump_v04",
+      "exists": true,
+      "record_file_count": 0,
+      "screenshot_file_count": 0,
+      "meta_file_count": 0,
+      "latest_records": "",
+      "latest_screenshot": "",
+      "latest_meta": "",
+      "latest_record_rows": 0,
+      "latest_record_active_matches": 0,
+      "summary_json": "",
+      "summary_md": "",
+      "status": "no_dump_records"
+    },
+    {
+      "label": "v041",
+      "path": "rom_analysis/manual_screen_dump_v041",
+      "exists": true,
+      "record_file_count": 0,
+      "screenshot_file_count": 0,
+      "meta_file_count": 0,
+      "latest_records": "",
+      "latest_screenshot": "",
+      "latest_meta": "",
+      "latest_record_rows": 0,
+      "latest_record_active_matches": 0,
+      "summary_json": "",
+      "summary_md": "",
+      "status": "no_dump_records"
+    },
+    {
+      "label": "v042",
+      "path": "rom_analysis/manual_screen_dump_v042",
+      "exists": false,
+      "record_file_count": 0,
+      "screenshot_file_count": 0,
+      "meta_file_count": 0,
+      "latest_records": "",
+      "latest_screenshot": "",
+      "latest_meta": "",
+      "latest_record_rows": 0,
+      "latest_record_active_matches": 0,
+      "summary_json": "",
+      "summary_md": "",
+      "status": "no_dump_records"
+    },
+    {
+      "label": "broad_scan",
+      "path": "rom_analysis/manual_screen_dump_broad_scan",
+      "exists": true,
+      "record_file_count": 0,
+      "screenshot_file_count": 0,
+      "meta_file_count": 0,
+      "latest_records": "",
+      "latest_screenshot": "",
+      "latest_meta": "",
+      "latest_record_rows": 0,
+      "latest_record_active_matches": 0,
+      "summary_json": "rom_analysis/manual_screen_dump_broad_scan/summary.json",
+      "summary_md": "rom_analysis/manual_screen_dump_broad_scan/summary.md",
+      "status": "no_dump_records"
+    }
+  ]
+}

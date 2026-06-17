@@ -30,6 +30,7 @@ KEY_PYTHON = [
     "scripts/generate_broad_scan_patchability.py",
     "scripts/generate_manual_capture_cards.py",
     "scripts/generate_manual_capture_status.py",
+    "scripts/generate_manual_dump_inventory.py",
     "scripts/generate_next_glyph_expansion_plan.py",
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
@@ -49,6 +50,7 @@ KEY_PYTHON = [
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
     "scripts/test_broad_patchability_v042_bytes.py",
+    "scripts/test_manual_dump_inventory.py",
     "scripts/test_run_fceux_budget.py",
     "scripts/test_reference_capture_plan.py",
     "scripts/test_translation_capture_queue_readable.py",
@@ -106,6 +108,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_reference_capture_plan.py"],
     ["scripts/generate_manual_capture_cards.py"],
     ["scripts/generate_manual_capture_status.py"],
+    ["scripts/generate_manual_dump_inventory.py"],
 ]
 
 
@@ -161,6 +164,7 @@ def main() -> int:
     run("lua script balance", ["scripts/check_lua_script_balance.py", *LUA_SCRIPTS])
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
+    run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])

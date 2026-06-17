@@ -20,6 +20,8 @@ MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.j
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
 MANUAL_CAPTURE_STATUS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_status.md"
+MANUAL_DUMP_INVENTORY_JSON = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json"
+MANUAL_DUMP_INVENTORY_MD = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.md"
 TRANSLATION_GLYPH_COVERAGE_JSON = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.json"
 TRANSLATION_GLYPH_COVERAGE_MD = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.md"
 TRANSLATION_PATTERN_SCAN_JSON = REPO_ROOT / "rom_analysis" / "translation_pattern_scan.json"
@@ -84,6 +86,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `manual_capture_status.md`: generated status of manual dump evidence",
+        "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
         "- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates",
         "- `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence",
         "- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate",
@@ -186,6 +189,8 @@ def package() -> dict[str, object]:
         (MANUAL_CAPTURE_CARDS_JSON, "manual_capture_cards.json"),
         (MANUAL_CAPTURE_STATUS_MD, "manual_capture_status.md"),
         (MANUAL_CAPTURE_STATUS_JSON, "manual_capture_status.json"),
+        (MANUAL_DUMP_INVENTORY_MD, "manual_dump_inventory.md"),
+        (MANUAL_DUMP_INVENTORY_JSON, "manual_dump_inventory.json"),
         (TRANSLATION_GLYPH_COVERAGE_MD, "translation_glyph_coverage.md"),
         (TRANSLATION_GLYPH_COVERAGE_JSON, "translation_glyph_coverage.json"),
         (TRANSLATION_PATTERN_SCAN_MD, "translation_pattern_scan.md"),

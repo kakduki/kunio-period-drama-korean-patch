@@ -37,6 +37,7 @@
 - `manual_capture_queue.md` / `manual_capture_queue.json`: prioritized list of screens/targets to capture manually before promoting more PRG text patches
 - `manual_capture_cards.md` / `manual_capture_cards.json`: short FCEUX task cards generated from the decision matrix; use these at the emulator window
 - `manual_capture_status.md` / `manual_capture_status.json`: generated evidence status for each manual capture card after screen dumps are added
+- `manual_dump_inventory.md` / `manual_dump_inventory.json`: generated inventory of manual dump folders, target-record TSVs, `.gd` screenshots, and summaries
 - `translation_pattern_scan.md` / `translation_pattern_scan.json`: broad ROM scan against the full readable translation reference, excluding already-known Bank 1 targets where possible
 - `translation_glyph_coverage.md` / `translation_glyph_coverage.json`: compares the full translation data glyph set with the current compact patch glyph plan
 - `next_glyph_expansion_plan.md` / `next_glyph_expansion_plan.json`: ranks the next Hangul glyphs to add and simulates rows unlocked by batch size
