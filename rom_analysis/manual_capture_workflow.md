@@ -23,6 +23,30 @@ reached screen is higher-value evidence.
 python scripts/analyze_manual_screen_dump.py
 ```
 
+## Patched v0.4 Verification
+
+For the current equal-length patch experiment, open this ROM instead:
+
+```text
+output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.nes
+```
+
+Then manually reach a screen from `rom_analysis/manual_capture_queue.md` and run:
+
+```text
+lua/kunio_manual_v04_screen_dump.lua
+```
+
+This wrapper uses `lua/kunio_v04_equal_length_targets.lua`, so
+`active_expected_match=true` means the patched Korean byte sequence is mapped in
+CPU memory on that manually reached screen.
+
+Summarize the latest v0.4 dump:
+
+```powershell
+python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v04 --output rom_analysis/manual_screen_dump_v04/summary.md
+```
+
 ## Output
 
 Each capture writes files named like:

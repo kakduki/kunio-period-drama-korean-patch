@@ -21,8 +21,12 @@ end
 
 local LUA_DIR = script_dir()
 local ROOT_DIR = string.match(LUA_DIR, "^(.*)[/\\]lua$") or "."
-local OUT_DIR = os.getenv("KUNIO_MANUAL_DUMP_OUTPUT") or (ROOT_DIR .. "/rom_analysis/manual_screen_dump")
-local TARGETS_LUA = os.getenv("KUNIO_TARGETS_LUA") or (LUA_DIR .. "/kunio_bank1_targets.lua")
+local OUT_DIR = rawget(_G, "KUNIO_MANUAL_DUMP_OUTPUT")
+    or os.getenv("KUNIO_MANUAL_DUMP_OUTPUT")
+    or (ROOT_DIR .. "/rom_analysis/manual_screen_dump")
+local TARGETS_LUA = rawget(_G, "KUNIO_TARGETS_LUA")
+    or os.getenv("KUNIO_TARGETS_LUA")
+    or (LUA_DIR .. "/kunio_bank1_targets.lua")
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
