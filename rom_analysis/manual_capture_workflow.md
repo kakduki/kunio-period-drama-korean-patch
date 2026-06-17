@@ -23,6 +23,20 @@ reached screen is higher-value evidence.
 python scripts/analyze_manual_screen_dump.py
 ```
 
+## Capture Watcher
+
+For longer manual play, run this once instead of reopening Lua for every screen:
+
+```text
+lua/kunio_manual_capture_watch.lua
+```
+
+While the watcher is running:
+
+- Press `D` on a useful text/menu/status screen to save a dump.
+- Press `Q` to stop the watcher.
+- The watcher does not autoplay or advance dialogue for you.
+
 ## Patched v0.4.2 Verification
 
 For the current font-expanded patch experiment, open this ROM instead:
@@ -35,6 +49,12 @@ Then manually reach a screen from `rom_analysis/manual_capture_queue.md` and run
 
 ```text
 lua/kunio_manual_v042_screen_dump.lua
+```
+
+For multiple v0.4.2 screens in one play session, run:
+
+```text
+lua/kunio_manual_v042_capture_watch.lua
 ```
 
 This wrapper reuses `lua/kunio_v041_conflict_safe_targets.lua`, so
@@ -55,6 +75,12 @@ manual wrapper:
 
 ```text
 lua/kunio_manual_broad_scan_dump.lua
+```
+
+For multiple broad-scan screens in one play session, run:
+
+```text
+lua/kunio_manual_broad_scan_capture_watch.lua
 ```
 
 Summarize the latest broad-scan dump:

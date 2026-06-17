@@ -12,6 +12,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `manual_capture_status.md`: generated status of manual dump evidence
 - `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records
 - `release_test_checklist.md`: short apply/capture/review checklist for this bundle
+- `lua/`: FCEUX manual capture scripts and target tables for v0.4.2 and broad-scan proof
 - `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates
 - `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence
 - `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate
@@ -64,6 +65,17 @@ To apply the optional unverified broad preview IPS for manual screen comparison:
 ```powershell
 python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes --ips kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips
 ```
+
+## FCEUX Manual Capture
+
+Copy or run the scripts from this bundle's `lua/` folder in FCEUX:
+
+```text
+lua/kunio_manual_v042_capture_watch.lua
+lua/kunio_manual_broad_scan_capture_watch.lua
+```
+
+Press `D` on each manually reached target screen to save a dump; press `Q` to stop the watcher.
 
 ## Verify In Repository
 

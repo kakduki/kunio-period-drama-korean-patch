@@ -25,6 +25,7 @@ def main() -> int:
         "Release Test Checklist",
         "python scripts/apply_primary_patch.py",
         "lua/kunio_manual_broad_scan_dump.lua",
+        "lua/kunio_manual_broad_scan_capture_watch.lua",
         "python scripts/record_visual_review.py",
         "0x0440C",
     ]:

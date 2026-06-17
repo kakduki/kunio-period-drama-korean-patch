@@ -56,6 +56,12 @@ FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_ko
 FONT_EXPANSION_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
 VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_visual_review.py"
+LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
+LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
+LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
+LUA_MANUAL_BROAD_SCAN_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_broad_scan_capture_watch.lua"
+LUA_V041_TARGETS = REPO_ROOT / "lua" / "kunio_v041_conflict_safe_targets.lua"
+LUA_BROAD_TARGETS = REPO_ROOT / "lua" / "kunio_broad_scan_candidate_targets.lua"
 RELEASE_ROOT = REPO_ROOT / "release"
 
 
@@ -90,6 +96,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_capture_status.md`: generated status of manual dump evidence",
         "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
         "- `release_test_checklist.md`: short apply/capture/review checklist for this bundle",
+        "- `lua/`: FCEUX manual capture scripts and target tables for v0.4.2 and broad-scan proof",
         "- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates",
         "- `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence",
         "- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate",
@@ -142,6 +149,17 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "```powershell",
         "python apply_ips_standalone.py C:\\path\\to\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes --ips kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips",
         "```",
+        "",
+        "## FCEUX Manual Capture",
+        "",
+        "Copy or run the scripts from this bundle's `lua/` folder in FCEUX:",
+        "",
+        "```text",
+        "lua/kunio_manual_v042_capture_watch.lua",
+        "lua/kunio_manual_broad_scan_capture_watch.lua",
+        "```",
+        "",
+        "Press `D` on each manually reached target screen to save a dump; press `Q` to stop the watcher.",
         "",
         "## Verify In Repository",
         "",
@@ -226,6 +244,12 @@ def package() -> dict[str, object]:
         (FONT_EXPANSION_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
         (VISUAL_REVIEW_RECORDER, "record_visual_review.py"),
+        (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
+        (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
+        (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),
+        (LUA_MANUAL_BROAD_SCAN_CAPTURE_WATCH, "lua/kunio_manual_broad_scan_capture_watch.lua"),
+        (LUA_V041_TARGETS, "lua/kunio_v041_conflict_safe_targets.lua"),
+        (LUA_BROAD_TARGETS, "lua/kunio_broad_scan_candidate_targets.lua"),
     ]:
         dst = bundle_dir / name
         safe_copy(src, dst)
@@ -236,17 +260,20 @@ def package() -> dict[str, object]:
     copied_files.append(readme_path)
 
     checksums_path = bundle_dir / "SHA256SUMS.txt"
-    checksum_lines = [f"{sha256(path)}  {path.name}" for path in sorted(copied_files, key=lambda p: p.name)]
+    checksum_lines = [
+        f"{sha256(path)}  {path.relative_to(bundle_dir).as_posix()}"
+        for path in sorted(copied_files, key=lambda p: p.relative_to(bundle_dir).as_posix())
+    ]
     checksums_path.write_text("\n".join(checksum_lines) + "\n", encoding="utf-8")
     copied_files.append(checksums_path)
 
     if zip_path.exists():
         zip_path.unlink()
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-        for path in sorted(bundle_dir.iterdir(), key=lambda p: p.name):
+        for path in sorted((p for p in bundle_dir.rglob("*") if p.is_file()), key=lambda p: p.relative_to(bundle_dir).as_posix()):
             if path.suffix.lower() in {".nes"}:
                 raise ValueError(f"Refusing to zip ROM file: {path}")
-            archive.write(path, arcname=f"{bundle_dir.name}/{path.name}")
+            archive.write(path, arcname=f"{bundle_dir.name}/{path.relative_to(bundle_dir).as_posix()}")
 
     report = {
         "bundle_dir": str(bundle_dir.relative_to(REPO_ROOT)),

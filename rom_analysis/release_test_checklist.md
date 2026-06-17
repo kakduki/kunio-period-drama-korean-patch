@@ -43,6 +43,12 @@ For broad v0.4.3 candidates, open the base Japanese ROM, manually reach the targ
 lua/kunio_manual_broad_scan_dump.lua
 ```
 
+For several manually reached candidate screens in one session, run the watcher once and press `D` on each target screen:
+
+```text
+lua/kunio_manual_broad_scan_capture_watch.lua
+```
+
 Then summarize and refresh the status reports:
 
 ```powershell
