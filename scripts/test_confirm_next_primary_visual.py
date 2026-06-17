@@ -29,6 +29,7 @@ def main() -> int:
     out = result.stdout
     required = [
         "Confirming primary visual review: 0x07227 / Katana",
+        "Command order: refresh manual dumps, record the visible-screen review, then refresh the queue.",
         "WARNING: no manual dump record is currently indexed",
         "record_primary_visual_review.py 0x07227 --confirm",
         "refresh_after_manual_capture.py --phase primary",
@@ -36,6 +37,8 @@ def main() -> int:
     missing = [phrase for phrase in required if phrase not in out]
     if missing:
         raise SystemExit(f"confirm-next output missing: {', '.join(missing)}")
+    if out.count("refresh_after_manual_capture.py --phase primary") != 2:
+        raise SystemExit("confirm-next should refresh before and after recording visual review")
     print("OK: confirm-next primary visual helper is guarded and targets the next row.")
     return 0
 

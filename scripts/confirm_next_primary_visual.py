@@ -27,6 +27,7 @@ def manual_record_count(target: object) -> int:
 
 def build_commands(action: dict[str, object], screen_context: str) -> list[list[str]]:
     return [
+        ["scripts/refresh_after_manual_capture.py", "--phase", "primary"],
         [
             "scripts/record_primary_visual_review.py",
             str(action["target"]),
@@ -64,18 +65,25 @@ def main() -> int:
     screen_context = args.screen_context or f"{action['screen_hint']} visible"
     commands = build_commands(action, screen_context)
     print(f"Confirming primary visual review: {action['target']} / {action['group']}")
+    print("Command order: refresh manual dumps, record the visible-screen review, then refresh the queue.")
+    for command in commands:
+        print(" ".join([sys.executable, *command]))
+
+    if args.dry_run:
+        record_count = manual_record_count(action["target"])
+        if record_count == 0:
+            print("WARNING: no manual dump record is currently indexed for this target. Press D in FCEUX before confirming when possible.")
+        else:
+            print(f"Manual dump records indexed for this target: {record_count}")
+        return 0
+
+    subprocess.run([sys.executable, *commands[0]], cwd=REPO_ROOT, check=True)
     record_count = manual_record_count(action["target"])
     if record_count == 0:
         print("WARNING: no manual dump record is currently indexed for this target. Press D in FCEUX before confirming when possible.")
     else:
         print(f"Manual dump records indexed for this target: {record_count}")
-    for command in commands:
-        print(" ".join([sys.executable, *command]))
-
-    if args.dry_run:
-        return 0
-
-    for command in commands:
+    for command in commands[1:]:
         subprocess.run([sys.executable, *command], cwd=REPO_ROOT, check=True)
     return 0
 
