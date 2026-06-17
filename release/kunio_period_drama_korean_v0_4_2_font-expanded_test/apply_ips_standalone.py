@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Standalone IPS applier for the v0.4.1 test release bundle."""
+"""Standalone IPS applier for the v0.4.2 test release bundle."""
 
 from __future__ import annotations
 
@@ -9,8 +9,8 @@ from pathlib import Path
 
 
 EXPECTED_BASE_MD5 = "0d406a85285b4de8468f0dab6aad5fe5"
-EXPECTED_PATCHED_MD5 = "2b9f569fa175c719333064b8d73bc273"
-DEFAULT_IPS = "kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips"
+EXPECTED_PATCHED_MD5 = "ea11dc002a1a7b07682ce00a754b1a61"
+DEFAULT_IPS = "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips"
 
 
 def md5_bytes(data: bytes) -> str:
@@ -66,8 +66,8 @@ def apply_ips(base: bytes, ips_path: Path) -> bytes:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("base_rom", help="Path to your legally obtained Japanese base .nes ROM.")
-    parser.add_argument("--ips", default=DEFAULT_IPS, help="IPS patch path. Defaults to the bundled v0.4.1 IPS.")
-    parser.add_argument("--output", default="kunio_period_drama_korean_v0.4.1_test_applied.nes")
+    parser.add_argument("--ips", default=DEFAULT_IPS, help="IPS patch path. Defaults to the bundled v0.4.2 IPS.")
+    parser.add_argument("--output", default="kunio_period_drama_korean_v0.4.2_test_applied.nes")
     parser.add_argument("--force", action="store_true", help="Overwrite output file if it already exists.")
     args = parser.parse_args()
 

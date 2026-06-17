@@ -47,7 +47,7 @@ def safe_copy(src: Path, dst: Path) -> None:
 
 def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) -> None:
     lines = [
-        "# Kunio Period Drama Korean Patch v0.4.1 Test",
+        f"# Kunio Period Drama Korean Patch {summary['primary_candidate']} Test",
         "",
         "This is an incomplete manual-test IPS bundle, not a final release.",
         "",
@@ -80,7 +80,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "From the repository root, after putting your base ROM in `rom/`:",
         "",
         "```powershell",
-        "python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes",
+        "python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.2_test_applied.nes",
         "```",
         "",
         "## Apply From This Bundle Only",
@@ -103,7 +103,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "## Current Limitations",
         "",
         "- Still needs manual FCEUX screen verification.",
-        "- v0.4 broad-scan conflicts are intentionally excluded from this v0.4.1 candidate.",
+        "- v0.4 broad-scan conflicts are intentionally excluded from this candidate.",
         "- Padding/shortened replacements are not included.",
     ]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")

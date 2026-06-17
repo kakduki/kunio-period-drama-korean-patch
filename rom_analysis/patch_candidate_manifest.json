@@ -2,13 +2,13 @@
   "summary": {
     "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
     "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
-    "primary_candidate": "v0.4.1 conflict-safe",
-    "primary_candidate_md5": "2b9f569fa175c719333064b8d73bc273",
-    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips",
+    "primary_candidate": "v0.4.2 font-expanded",
+    "primary_candidate_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
     "primary_ips_exists": true,
-    "primary_ips_apply_md5": "2b9f569fa175c719333064b8d73bc273",
+    "primary_ips_apply_md5": "ea11dc002a1a7b07682ce00a754b1a61",
     "primary_ips_apply_matches_rom": true,
-    "candidate_count": 4,
+    "candidate_count": 5,
     "padding_experiment_count": 5,
     "bank1_targets": 43,
     "runtime_confirmed_targets": 2,
@@ -83,8 +83,8 @@
     },
     {
       "name": "v0.4.1 conflict-safe",
-      "role": "current primary manual-test candidate",
-      "verdict": "test in FCEUX, not final release; excludes v0.4/broad overlaps",
+      "role": "previous primary manual-test candidate",
+      "verdict": "superseded by v0.4.2 font-expanded; excludes v0.4/broad overlaps",
       "report": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe_build_report.json",
       "rom_path": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes",
       "rom_exists": true,
@@ -96,6 +96,31 @@
       "applied_count": 10,
       "skipped_count": 33,
       "changed_bytes_total": 278,
+      "include_evidence": [
+        "encoding-exact",
+        "runtime-confirmed",
+        "static-candidate",
+        "static-candidate+pointer"
+      ],
+      "include_risks": [
+        "safe-equal-length"
+      ]
+    },
+    {
+      "name": "v0.4.2 font-expanded",
+      "role": "current primary manual-test candidate",
+      "verdict": "test in FCEUX, not final release; v0.4.1 PRG edits plus first 32 extra glyphs",
+      "report": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded_build_report.json",
+      "rom_path": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+      "rom_exists": true,
+      "rom_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+      "reported_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+      "md5_matches_report": true,
+      "ips_path": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
+      "ips_exists": true,
+      "applied_count": 10,
+      "skipped_count": 33,
+      "changed_bytes_total": 700,
       "include_evidence": [
         "encoding-exact",
         "runtime-confirmed",
@@ -175,7 +200,8 @@
     }
   ],
   "do_not_confuse": [
-    "v0.4.1 is the current primary test ROM, not a final release.",
+    "v0.4.2 is the current primary test ROM, not a final release.",
+    "v0.4.2 uses the same v0.4.1 PRG text edits, but adds the first 32 planned extra font glyphs.",
     "v0.4 has overlapping high-confidence broad-scan candidates and is superseded for primary testing.",
     "padding experiment ROMs are only for validating shortened replacements.",
     "YouTube transcription helps identify text, but ROM offsets and runtime evidence still decide patchability."

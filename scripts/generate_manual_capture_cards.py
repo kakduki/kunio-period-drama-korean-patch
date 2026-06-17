@@ -14,7 +14,7 @@ OUT_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 
 BASE_ROM_NAME = "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
-V041_ROM_NAME = "output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes"
+PRIMARY_ROM_NAME = "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes"
 
 
 def capture_mode(row: dict[str, object]) -> dict[str, str]:
@@ -34,9 +34,9 @@ def capture_mode(row: dict[str, object]) -> dict[str, str]:
             "why": "Decide which padding strategy renders cleanly before shortening this text.",
         }
     return {
-        "rom_to_open": V041_ROM_NAME,
-        "lua_script": "lua/kunio_manual_v041_screen_dump.lua",
-        "summary_command": "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md",
+        "rom_to_open": PRIMARY_ROM_NAME,
+        "lua_script": "lua/kunio_manual_v042_screen_dump.lua",
+        "summary_command": "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
         "why": "Verify the current conflict-safe candidate on the manually reached screen.",
     }
 

@@ -9,7 +9,7 @@ from pathlib import Path
 from rom_utils import REPO_ROOT
 
 
-V041_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe_build_report.json"
+PRIMARY_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded_build_report.json"
 MANUAL_QUEUE = REPO_ROOT / "rom_analysis" / "manual_capture_queue.json"
 CONFLICTS = REPO_ROOT / "rom_analysis" / "v04_broad_candidate_conflicts.json"
 BROAD_PATCHABILITY = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.json"
@@ -54,7 +54,7 @@ def classify_skip(row: dict[str, object], queue_by_label: dict[str, dict[str, ob
 
 def next_action(kind: str) -> str:
     actions = {
-        "applied": "Use v0.4.1 ROM and manually verify the visible text on its target screen.",
+        "applied": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
         "conflict_needs_manual_screen": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
         "local_overlap_needs_manual_screen": "Manually capture this exact screen; the nearby applied row may represent a different overlapping interpretation.",
         "runtime_padding_rule_blocker": "Test padding experiment ROMs visually on the same status screen before promoting a shortened replacement.",
@@ -68,7 +68,7 @@ def next_action(kind: str) -> str:
 
 
 def make_matrix() -> dict[str, object]:
-    v041 = load_json(V041_REPORT)
+    primary = load_json(PRIMARY_REPORT)
     manual = load_json(MANUAL_QUEUE)
     conflicts = load_json(CONFLICTS)
     broad = load_json(BROAD_PATCHABILITY)
@@ -77,7 +77,7 @@ def make_matrix() -> dict[str, object]:
     conflict_labels = {str(row.get("v04_label")) for row in conflicts.get("conflicts", []) if row.get("v04_label")}
 
     rows: list[dict[str, object]] = []
-    for row in v041.get("applied", []):
+    for row in primary.get("applied", []):
         label = str(row.get("label", ""))
         queued = queue_by_label.get(label, {})
         rows.append(
@@ -98,7 +98,7 @@ def make_matrix() -> dict[str, object]:
             }
         )
 
-    for row in v041.get("skipped", []):
+    for row in primary.get("skipped", []):
         label = str(row.get("label", ""))
         queued = queue_by_label.get(label, {})
         kind = classify_skip(row, queue_by_label, conflict_labels)
@@ -154,15 +154,15 @@ def make_matrix() -> dict[str, object]:
 
     return {
         "source": {
-            "v041_report": rel(V041_REPORT),
+            "primary_report": rel(PRIMARY_REPORT),
             "manual_queue": rel(MANUAL_QUEUE),
             "conflicts": rel(CONFLICTS),
             "broad_patchability": rel(BROAD_PATCHABILITY),
         },
         "summary": {
-            "current_primary": "v0.4.1 conflict-safe",
-            "applied_rows": len(v041.get("applied", [])),
-            "skipped_rows": len(v041.get("skipped", [])),
+            "current_primary": "v0.4.2 font-expanded",
+            "applied_rows": len(primary.get("applied", [])),
+            "skipped_rows": len(primary.get("skipped", [])),
             "broad_non_overlapping_rows": len(conflicts.get("non_overlapping_broad_candidates", [])),
             "high_value_next_checks": len(high_value),
             "kind_counts": counts,

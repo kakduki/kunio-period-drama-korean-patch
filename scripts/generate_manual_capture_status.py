@@ -26,6 +26,8 @@ def capture_dir_for(card: dict[str, object]) -> Path:
     lua_script = str(card.get("lua_script", ""))
     if "broad_scan" in lua_script:
         return REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan"
+    if "v042" in lua_script:
+        return REPO_ROOT / "rom_analysis" / "manual_screen_dump_v042"
     if "v041" in lua_script:
         return REPO_ROOT / "rom_analysis" / "manual_screen_dump_v041"
     if "v04" in lua_script:

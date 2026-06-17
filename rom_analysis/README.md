@@ -48,12 +48,13 @@
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `manual_screen_dump_v04/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v04_screen_dump.lua`
 - `manual_screen_dump_v041/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v041_screen_dump.lua`
+- `manual_screen_dump_v042/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v042_screen_dump.lua`
 - `manual_screen_dump_broad_scan/`: destination for one-shot broad-scan candidate dumps from `lua/kunio_manual_broad_scan_dump.lua`; summarize with `scripts/analyze_broad_scan_manual_dump.py`
-- `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.1 conflict-safe as the primary manual-test ROM and padding builds as non-release experiments
+- `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.2 font-expanded as the primary manual-test ROM and padding builds as non-release experiments
 - `patch_decision_matrix.md` / `patch_decision_matrix.json`: ranked next-decision table for applied rows, skipped rows, broad-scan conflicts, padding blockers, and manual capture priorities
 - `../scripts/verify_primary_patch.py`: verifies that the current primary IPS applies to the expected base ROM and produces the manifest MD5
 - `../scripts/run_project_checks.py`: runs the core consistency checks for Python scripts, generated Lua targets, primary IPS verification, and manifest invariants; use `--regen` to rebuild the current generated candidate artifacts first
-- `../scripts/package_primary_release.py`: creates a ROM-free test bundle for the current primary IPS at `../release/kunio_period_drama_korean_v0_4_1_conflict-safe_test/` and `../release/kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip`
+- `../scripts/package_primary_release.py`: creates a ROM-free test bundle for the current primary IPS under `../release/`
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates
 - `bank1_text_block_map.md` / `bank1_text_block_map.json`: tentative `0xFF`-delimited block map for `ROM+0x05610-0x05810` under the `CHR tile = PRG byte + 0x7A` hypothesis, including structured block metadata and watch-range patch readiness
@@ -64,7 +65,7 @@
 - `bank1_offset_inventory.md` / `bank1_offset_inventory.json`: category-oriented Bank 1 offset inventory that merges static translation candidates, watch-range supplemental hits, and FCEUX read-watch evidence
 - `bank1_offset_status.md` / `bank1_offset_status.json`: category-level coverage and patch-readiness summary for current Bank 1 offsets
 - `v04_equal_length_fceux_targets.md` / `v04_equal_length_fceux_targets.json`: FCEUX read-watch targets for the v0.4 equal-length static experiment, expecting patched PRG bytes instead of original bytes
-- `v041_conflict_safe_fceux_targets.md` / `v041_conflict_safe_fceux_targets.json`: FCEUX read-watch targets for the current v0.4.1 conflict-safe candidate, expecting patched PRG bytes instead of original bytes
+- `v041_conflict_safe_fceux_targets.md` / `v041_conflict_safe_fceux_targets.json`: FCEUX read-watch targets reused by v0.4.2 because its PRG text edits are unchanged from v0.4.1
 - `fceux_v04_equal_length_watch/summary.tsv` / `bank1_reads.tsv`: v0.4 patched-byte read-watch run output
 - `fceux_v04_equal_length_watch_summary.md`: summary of the v0.4 patched-byte read-watch run
 - `fceux_v04_equal_length_watch_long_summary.md`: long v0.4 patched-byte read-watch summary; raw repeated-hit TSV is local-only/ignored

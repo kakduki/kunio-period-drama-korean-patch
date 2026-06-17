@@ -18,13 +18,14 @@ OUT_MD = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.md"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 
 V041_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe_build_report.json"
+V042_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded_build_report.json"
 V04_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4_equal_length_static_build_report.json"
 V03_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.3_build_report.json"
 V02_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_plan_v0.2_build_report.json"
 PADDING_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_exp_build_report.json"
 STATUS = REPO_ROOT / "rom_analysis" / "bank1_offset_status.json"
 CAPTURE_QUEUE = REPO_ROOT / "rom_analysis" / "manual_capture_queue.json"
-PRIMARY_IPS = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips"
+PRIMARY_IPS = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips"
 V04_BROAD_CONFLICTS = REPO_ROOT / "rom_analysis" / "v04_broad_candidate_conflicts.json"
 
 
@@ -211,12 +212,18 @@ def main() -> int:
         report_candidate(
             "v0.4.1 conflict-safe",
             V041_REPORT,
+            "previous primary manual-test candidate",
+            "superseded by v0.4.2 font-expanded; excludes v0.4/broad overlaps",
+        ),
+        report_candidate(
+            "v0.4.2 font-expanded",
+            V042_REPORT,
             "current primary manual-test candidate",
-            "test in FCEUX, not final release; excludes v0.4/broad overlaps",
+            "test in FCEUX, not final release; v0.4.1 PRG edits plus first 32 extra glyphs",
         ),
     ]
     experiments = padding_experiments()
-    primary_candidate = next(row for row in candidates if row["name"].startswith("v0.4.1"))
+    primary_candidate = next(row for row in candidates if row["name"].startswith("v0.4.2"))
     primary_ips_applied_md5 = ""
     primary_ips_matches_rom = False
     if PRIMARY_IPS.exists() and primary_candidate["rom_exists"]:
@@ -226,7 +233,7 @@ def main() -> int:
     summary = {
         "base_rom": rel(base_rom),
         "base_md5": md5(base_rom),
-        "primary_candidate": "v0.4.1 conflict-safe",
+        "primary_candidate": "v0.4.2 font-expanded",
         "primary_candidate_md5": primary_candidate["rom_md5"],
         "primary_ips": rel(PRIMARY_IPS),
         "primary_ips_exists": PRIMARY_IPS.exists(),
@@ -249,7 +256,8 @@ def main() -> int:
         "candidates": candidates,
         "padding_experiments": experiments,
         "do_not_confuse": [
-            "v0.4.1 is the current primary test ROM, not a final release.",
+            "v0.4.2 is the current primary test ROM, not a final release.",
+            "v0.4.2 uses the same v0.4.1 PRG text edits, but adds the first 32 planned extra font glyphs.",
             "v0.4 has overlapping high-confidence broad-scan candidates and is superseded for primary testing.",
             "padding experiment ROMs are only for validating shortened replacements.",
             "YouTube transcription helps identify text, but ROM offsets and runtime evidence still decide patchability.",
@@ -307,8 +315,8 @@ def main() -> int:
         "",
         "## Current Rule",
         "",
-        "- Test `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes` first.",
-        "- Use `lua/kunio_manual_v041_screen_dump.lua` on manually reached screens.",
+        "- Test `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes` first.",
+        "- Use `lua/kunio_manual_v042_screen_dump.lua` on manually reached screens.",
         "- Do not treat padding experiment ROMs as patch releases.",
         "",
         "## Verify Primary IPS",

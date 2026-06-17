@@ -7,10 +7,10 @@
 ## 현재 상태
 
 - 기준 ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- 현재 1차 테스트 후보: `v0.4.1 conflict-safe`
-- 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips`
-- 테스트 번들: `release/kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip`
-- 패치 적용 후 예상 MD5: `2b9f569fa175c719333064b8d73bc273`
+- 현재 1차 테스트 후보: `v0.4.2 font-expanded`
+- 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`
+- 테스트 번들: `release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip`
+- 패치 적용 후 예상 MD5: `ea11dc002a1a7b07682ce00a754b1a61`
 
 아직 최종 패치가 아닙니다. 현재 후보는 안전한 equal-length PRG 텍스트 일부와 CHR 글리프만 적용한 수동 검증용 빌드입니다.
 
@@ -24,7 +24,7 @@ python scripts/run_project_checks.py
 현재 테스트 IPS를 내 ROM에 적용하려면:
 
 ```powershell
-python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes
+python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.2_test_applied.nes
 ```
 
 생성물을 다시 만들면서 확인하려면:
@@ -58,17 +58,17 @@ python scripts/run_project_checks.py --regen
 현재 테스트 후보를 확인할 때:
 
 ```text
-output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes
+output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes
 ```
 
 1. FCEUX에서 위 ROM을 엽니다.
 2. `rom_analysis/patch_decision_matrix.md`의 상위 항목에 해당하는 화면까지 직접 진행합니다.
 3. 해당 화면에서 일시정지합니다.
-4. FCEUX Lua 메뉴에서 `lua/kunio_manual_v041_screen_dump.lua`를 실행합니다.
+4. FCEUX Lua 메뉴에서 `lua/kunio_manual_v042_screen_dump.lua`를 실행합니다.
 5. 덤프를 요약합니다.
 
 ```powershell
-python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md
+python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md
 ```
 
 broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio_manual_broad_scan_dump.lua`를 사용합니다.

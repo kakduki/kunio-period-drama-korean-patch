@@ -44,9 +44,9 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 - Kind: `local_overlap_needs_manual_screen`
 - Source/Korean: カタナ -> 카타나
 - Evidence/Risk: static-candidate+pointer / safe-equal-length
-- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes`
-- Run Lua: `lua/kunio_manual_v041_screen_dump.lua`
-- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md`
+- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
+- Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
+- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md`
 - Purpose: Verify the current conflict-safe candidate on the manually reached screen.
 - Decision after capture: Manually capture this exact screen; the nearby applied row may represent a different overlapping interpretation.
 
@@ -110,9 +110,9 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 - Kind: `wrong_context_or_padding_candidate`
 - Source/Korean: やり -> 창
 - Evidence/Risk: static-candidate+pointer / needs-padding-rule
-- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes`
-- Run Lua: `lua/kunio_manual_v041_screen_dump.lua`
-- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md`
+- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
+- Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
+- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md`
 - Purpose: Verify the current conflict-safe candidate on the manually reached screen.
 - Decision after capture: Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.
 
@@ -121,9 +121,9 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 - Kind: `wrong_context_or_padding_candidate`
 - Source/Korean: やり -> 창
 - Evidence/Risk: static-candidate / needs-padding-rule
-- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes`
-- Run Lua: `lua/kunio_manual_v041_screen_dump.lua`
-- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md`
+- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
+- Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
+- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md`
 - Purpose: Verify the current conflict-safe candidate on the manually reached screen.
 - Decision after capture: Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.
 
@@ -132,8 +132,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 - Kind: `wrong_context_or_padding_candidate`
 - Source/Korean: そうび -> 장비
 - Evidence/Risk: static-candidate+pointer / needs-padding-rule
-- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes`
-- Run Lua: `lua/kunio_manual_v041_screen_dump.lua`
-- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md`
+- Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
+- Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
+- Summarize: `python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md`
 - Purpose: Verify the current conflict-safe candidate on the manually reached screen.
 - Decision after capture: Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.

@@ -13,7 +13,7 @@ from verify_primary_patch import apply_ips
 
 
 MANIFEST = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
-DEFAULT_OUTPUT = REPO_ROOT / "output" / "kunio_period_drama_korean_v0.4.1_test_applied.nes"
+DEFAULT_OUTPUT = REPO_ROOT / "output" / "kunio_period_drama_korean_v0.4.2_test_applied.nes"
 
 
 def md5_bytes(data: bytes) -> str:

@@ -1,12 +1,12 @@
 {
   "source": {
-    "v041_report": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe_build_report.json",
+    "primary_report": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded_build_report.json",
     "manual_queue": "rom_analysis\\manual_capture_queue.json",
     "conflicts": "rom_analysis\\v04_broad_candidate_conflicts.json",
     "broad_patchability": "rom_analysis\\broad_scan_patchability.json"
   },
   "summary": {
-    "current_primary": "v0.4.1 conflict-safe",
+    "current_primary": "v0.4.2 font-expanded",
     "applied_rows": 10,
     "skipped_rows": 33,
     "broad_non_overlapping_rows": 4,
@@ -107,7 +107,7 @@
       "old_bytes": "BB 95 AF",
       "new_bytes": "96 8E 97",
       "capture_reason": "safe equal-length UI/status candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "rom_0739d_candidate_93",
@@ -122,7 +122,7 @@
       "old_bytes": "BB 95 AF",
       "new_bytes": "96 8E 97",
       "capture_reason": "safe equal-length UI/status candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_0561a_스테이지_7c",
@@ -137,7 +137,7 @@
       "old_bytes": "96 88",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_0562f_보스_80",
@@ -152,7 +152,7 @@
       "old_bytes": "90 92 82 91",
       "new_bytes": "89 98 8E 90",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_05643_보스_80",
@@ -167,7 +167,7 @@
       "old_bytes": "9D 82 8C 91",
       "new_bytes": "8D 8E 8F 90",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_0569d_스테이지_7a",
@@ -182,7 +182,7 @@
       "old_bytes": "A0 92",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_056da_스테이지_80",
@@ -197,7 +197,7 @@
       "old_bytes": "9A 8C",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_0571c_스테이지_78",
@@ -212,7 +212,7 @@
       "old_bytes": "92 84",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "watch_rom_057d4_스테이지_8c",
@@ -227,7 +227,7 @@
       "old_bytes": "A6 98",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "rom_07227_candidate_84",
@@ -242,7 +242,7 @@
       "old_bytes": "8A 94 99",
       "new_bytes": "88 89 8A",
       "capture_reason": "applied candidate still needs visual proof",
-      "next_action": "Use v0.4.1 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
     },
     {
       "label": "rom_071a4_candidate_82",

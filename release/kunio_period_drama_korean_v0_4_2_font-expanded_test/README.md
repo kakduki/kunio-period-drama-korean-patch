@@ -1,10 +1,10 @@
-# Kunio Period Drama Korean Patch v0.4.1 Test
+# Kunio Period Drama Korean Patch v0.4.2 font-expanded Test
 
 This is an incomplete manual-test IPS bundle, not a final release.
 
 ## Files
 
-- `kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips`: primary IPS patch
+- `kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`: primary IPS patch
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
@@ -23,15 +23,15 @@ This is an incomplete manual-test IPS bundle, not a final release.
 
 ## Expected Result
 
-- Primary candidate: **v0.4.1 conflict-safe**
-- Expected patched MD5: `2b9f569fa175c719333064b8d73bc273`
+- Primary candidate: **v0.4.2 font-expanded**
+- Expected patched MD5: `ea11dc002a1a7b07682ce00a754b1a61`
 
 ## Apply In Repository
 
 From the repository root, after putting your base ROM in `rom/`:
 
 ```powershell
-python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes
+python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.2_test_applied.nes
 ```
 
 ## Apply From This Bundle Only
@@ -54,5 +54,5 @@ python scripts/run_project_checks.py
 ## Current Limitations
 
 - Still needs manual FCEUX screen verification.
-- v0.4 broad-scan conflicts are intentionally excluded from this v0.4.1 candidate.
+- v0.4 broad-scan conflicts are intentionally excluded from this candidate.
 - Padding/shortened replacements are not included.

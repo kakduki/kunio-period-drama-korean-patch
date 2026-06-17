@@ -20,6 +20,7 @@ KEY_PYTHON = [
     "scripts/build_prg_patch_from_plan.py",
     "scripts/build_next_glyph_expansion_candidate.py",
     "scripts/build_v041_conflict_safe_candidate.py",
+    "scripts/build_v042_font_expanded_candidate.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/compare_v04_broad_candidates.py",
@@ -58,6 +59,7 @@ LUA_SCRIPTS = [
     "lua/kunio_manual_screen_dump.lua",
     "lua/kunio_manual_v04_screen_dump.lua",
     "lua/kunio_manual_v041_screen_dump.lua",
+    "lua/kunio_manual_v042_screen_dump.lua",
     "lua/kunio_ppu_watch.lua",
 ]
 
@@ -65,13 +67,14 @@ REGEN_COMMANDS = [
     ["scripts/compare_v04_broad_candidates.py"],
     ["scripts/build_v041_conflict_safe_candidate.py"],
     ["scripts/generate_v041_fceux_targets.py"],
+    ["scripts/generate_translation_glyph_coverage.py"],
+    ["scripts/generate_next_glyph_expansion_plan.py"],
+    ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
+    ["scripts/build_v042_font_expanded_candidate.py"],
     ["scripts/generate_patch_candidate_manifest.py"],
     ["scripts/generate_patch_decision_matrix.py"],
     ["scripts/generate_manual_capture_cards.py"],
     ["scripts/generate_manual_capture_status.py"],
-    ["scripts/generate_translation_glyph_coverage.py"],
-    ["scripts/generate_next_glyph_expansion_plan.py"],
-    ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
 ]
 
 
@@ -92,8 +95,8 @@ def check_manifest() -> None:
     manifest = json.loads((REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json").read_text(encoding="utf-8"))
     summary = manifest["summary"]
     expected = {
-        "primary_candidate": "v0.4.1 conflict-safe",
-        "primary_candidate_md5": "2b9f569fa175c719333064b8d73bc273",
+        "primary_candidate": "v0.4.2 font-expanded",
+        "primary_candidate_md5": "ea11dc002a1a7b07682ce00a754b1a61",
         "primary_ips_apply_matches_rom": True,
         "v04_broad_conflict_count": 3,
         "v04_broad_high_conflict_count": 3,

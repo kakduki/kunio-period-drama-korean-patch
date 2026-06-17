@@ -4,7 +4,7 @@ This file ranks the remaining Korean patch decisions after the current primary c
 
 ## Summary
 
-- Current primary: **v0.4.1 conflict-safe**
+- Current primary: **v0.4.2 font-expanded**
 - Applied in primary: **10**
 - Skipped from primary: **33**
 - Non-overlapping broad candidates: **4**

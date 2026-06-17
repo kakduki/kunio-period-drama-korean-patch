@@ -23,28 +23,28 @@ reached screen is higher-value evidence.
 python scripts/analyze_manual_screen_dump.py
 ```
 
-## Patched v0.4.1 Verification
+## Patched v0.4.2 Verification
 
-For the current conflict-safe patch experiment, open this ROM instead:
+For the current font-expanded patch experiment, open this ROM instead:
 
 ```text
-output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.nes
+output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes
 ```
 
 Then manually reach a screen from `rom_analysis/manual_capture_queue.md` and run:
 
 ```text
-lua/kunio_manual_v041_screen_dump.lua
+lua/kunio_manual_v042_screen_dump.lua
 ```
 
-This wrapper uses `lua/kunio_v041_conflict_safe_targets.lua`, so
+This wrapper reuses `lua/kunio_v041_conflict_safe_targets.lua`, so
 `active_expected_match=true` means the patched Korean byte sequence is mapped in
 CPU memory on that manually reached screen.
 
-Summarize the latest v0.4.1 dump:
+Summarize the latest v0.4.2 dump:
 
 ```powershell
-python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v041 --output rom_analysis/manual_screen_dump_v041/summary.md
+python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md
 ```
 
 ## Broad v0.5 Candidate Read-Watch
