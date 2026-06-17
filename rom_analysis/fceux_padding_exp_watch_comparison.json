@@ -1,0 +1,80 @@
+{
+  "source": "rom_analysis\\prg_padding_fceux_targets.json",
+  "summary": {
+    "strategy_count": 5,
+    "all_have_active_matches": true,
+    "screen_verdict": "not-checked"
+  },
+  "results": [
+    {
+      "strategy": "pad_00",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_00_watch",
+      "expected_bytes": "87 00 00",
+      "hits": 11,
+      "active_expected_matches": 11,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "registered": "11",
+      "record_snapshots": [
+        "9F B4 87 00 00 A6 83 CA F8 F9 00"
+      ],
+      "screen_verdict": "not-checked"
+    },
+    {
+      "strategy": "pad_7a",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_7a_watch",
+      "expected_bytes": "87 7A 7A",
+      "hits": 11,
+      "active_expected_matches": 11,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "registered": "11",
+      "record_snapshots": [
+        "9F B4 87 7A 7A A6 83 CA F8 F9 00"
+      ],
+      "screen_verdict": "not-checked"
+    },
+    {
+      "strategy": "pad_ff",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_ff_watch",
+      "expected_bytes": "87 FF FF",
+      "hits": 4,
+      "active_expected_matches": 4,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "registered": "11",
+      "record_snapshots": [
+        "9F B4 87 FF FF A6 83 CA F8 F9 00"
+      ],
+      "screen_verdict": "not-checked"
+    },
+    {
+      "strategy": "pad_f8f9",
+      "input_dir": "rom_analysis\\fceux_padding_exp_pad_f8f9_watch",
+      "expected_bytes": "87 F8 F9",
+      "hits": 9,
+      "active_expected_matches": 9,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "registered": "11",
+      "record_snapshots": [
+        "9F B4 87 F8 F9 A6 83 CA F8 F9 00"
+      ],
+      "screen_verdict": "not-checked"
+    },
+    {
+      "strategy": "preserve_tail",
+      "input_dir": "rom_analysis\\fceux_padding_exp_preserve_tail_watch",
+      "expected_bytes": "87 88 AA",
+      "hits": 11,
+      "active_expected_matches": 11,
+      "final_frame": "3600",
+      "final_reason": "lua_done",
+      "registered": "11",
+      "record_snapshots": [
+        "9F B4 87 88 AA A6 83 CA F8 F9 00"
+      ],
+      "screen_verdict": "not-checked"
+    }
+  ]
+}

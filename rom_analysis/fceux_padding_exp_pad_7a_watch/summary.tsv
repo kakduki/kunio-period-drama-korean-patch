@@ -1,0 +1,16 @@
+frame	reason	registered	hits	detail
+0	lua_start	11	0	callback_mode=true;target_source=kunio_padding_exp_pad_7a_targets.lua;targets=1
+0	periodic	11	0	running
+0	periodic	11	0	running
+300	periodic	11	0	running
+600	periodic	11	11	running
+900	periodic	11	11	running
+1200	periodic	11	11	running
+1500	periodic	11	11	running
+1800	periodic	11	11	running
+2100	periodic	11	11	running
+2400	periodic	11	11	running
+2700	periodic	11	11	running
+3000	periodic	11	11	running
+3300	periodic	11	11	running
+3600	lua_done	11	11	out=kunio_fceux_lua_output
