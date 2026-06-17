@@ -17,42 +17,56 @@
   "skipped": [
     {
       "rom_offset": "0x0440C",
+      "romaji": "Kajiya",
+      "category": "스테이지",
       "source": "かじや",
       "korean": "대장간",
       "reason": "visual_context_confirmed is not true"
     },
     {
       "rom_offset": "0x048F4",
+      "romaji": "Tatsuji",
+      "category": "보스",
       "source": "たつじ",
       "korean": "타츠지",
       "reason": "visual_context_confirmed is not true"
     },
     {
       "rom_offset": "0x052A5",
+      "romaji": "Tatsuji",
+      "category": "보스",
       "source": "たつじ",
       "korean": "타츠지",
       "reason": "visual_context_confirmed is not true"
     },
     {
       "rom_offset": "0x05BE5",
+      "romaji": "Tatsuji",
+      "category": "보스",
       "source": "たつじ",
       "korean": "타츠지",
       "reason": "visual_context_confirmed is not true"
     },
     {
       "rom_offset": "0x06294",
+      "romaji": "Heishichi",
+      "category": "보스",
       "source": "へいしち",
       "korean": "헤이시치",
       "reason": "visual_context_confirmed is not true"
     },
     {
       "rom_offset": "0x0631B",
+      "romaji": "Heishichi",
+      "category": "보스",
       "source": "へいしち",
       "korean": "헤이시치",
       "reason": "visual_context_confirmed is not true"
     },
     {
       "rom_offset": "0x06359",
+      "romaji": "Heishichi",
+      "category": "보스",
       "source": "へいしち",
       "korean": "헤이시치",
       "reason": "visual_context_confirmed is not true"

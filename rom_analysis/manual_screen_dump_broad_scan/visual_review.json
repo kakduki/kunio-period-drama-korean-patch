@@ -9,7 +9,10 @@
       "korean": "대장간",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_0440c_kajiya",
+      "romaji": "Kajiya",
+      "category": "스테이지"
     },
     {
       "task": 2,
@@ -18,7 +21,10 @@
       "korean": "타츠지",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_048f4_tatsuji",
+      "romaji": "Tatsuji",
+      "category": "보스"
     },
     {
       "task": 3,
@@ -27,7 +33,10 @@
       "korean": "타츠지",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_052a5_tatsuji",
+      "romaji": "Tatsuji",
+      "category": "보스"
     },
     {
       "task": 4,
@@ -36,7 +45,10 @@
       "korean": "타츠지",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_05be5_tatsuji",
+      "romaji": "Tatsuji",
+      "category": "보스"
     },
     {
       "task": 5,
@@ -45,7 +57,10 @@
       "korean": "헤이시치",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_06294_heishichi",
+      "romaji": "Heishichi",
+      "category": "보스"
     },
     {
       "task": 6,
@@ -54,7 +69,10 @@
       "korean": "헤이시치",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_0631b_heishichi",
+      "romaji": "Heishichi",
+      "category": "보스"
     },
     {
       "task": 7,
@@ -63,7 +81,10 @@
       "korean": "헤이시치",
       "visual_context_confirmed": false,
       "screen_context": "",
-      "reviewer_note": ""
+      "reviewer_note": "",
+      "label": "broad_06359_heishichi",
+      "romaji": "Heishichi",
+      "category": "보스"
     }
   ]
 }

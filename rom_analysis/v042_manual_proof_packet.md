@@ -10,6 +10,7 @@ Use this instead of extending blind FCEUX autoplay when the emulator keeps repea
 - Run Lua at the target screen: `lua/kunio_manual_broad_scan_dump.lua`
 - Summarize: `python scripts/analyze_broad_scan_manual_dump.py`
 - Machine-readable result: `rom_analysis/manual_screen_dump_broad_scan/summary.json`
+- Human hints: use `romaji` first when Japanese/Korean text appears garbled in the console.
 
 ## Workflow
 
@@ -23,15 +24,15 @@ Use this instead of extending blind FCEUX autoplay when the emulator keeps repea
 
 ## Tasks
 
-| # | kind | confidence | ROM | source | korean | original | planned v0.4.2 bytes | decision |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | non_overlapping_needs_manual_screen | medium | `0x0440C` | かじや | 대장간 | `CA D0 E9` | `B5 93 AB` | read hit + screen context |
-| 2 | non_overlapping_needs_manual_screen | medium | `0x048F4` | たつじ | 타츠지 | `07 09 03` | `89 98 A1` | read hit + screen context |
-| 3 | non_overlapping_needs_manual_screen | medium | `0x052A5` | たつじ | 타츠지 | `82 84 7E` | `89 98 A1` | read hit + screen context |
-| 4 | non_overlapping_needs_manual_screen | medium | `0x05BE5` | たつじ | 타츠지 | `97 99 93` | `89 98 A1` | read hit + screen context |
-| 5 | conflict_alternative_needs_manual_screen | high | `0x06294` | へいしち | 헤이시치 | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
-| 6 | conflict_alternative_needs_manual_screen | high | `0x0631B` | へいしち | 헤이시치 | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
-| 7 | conflict_alternative_needs_manual_screen | high | `0x06359` | へいしち | 헤이시치 | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
+| # | kind | confidence | ROM | romaji | source | korean | original | planned v0.4.2 bytes | decision |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | non_overlapping_needs_manual_screen | medium | `0x0440C` | Kajiya | かじや | 대장간 | `CA D0 E9` | `B5 93 AB` | read hit + screen context |
+| 2 | non_overlapping_needs_manual_screen | medium | `0x048F4` | Tatsuji | たつじ | 타츠지 | `07 09 03` | `89 98 A1` | read hit + screen context |
+| 3 | non_overlapping_needs_manual_screen | medium | `0x052A5` | Tatsuji | たつじ | 타츠지 | `82 84 7E` | `89 98 A1` | read hit + screen context |
+| 4 | non_overlapping_needs_manual_screen | medium | `0x05BE5` | Tatsuji | たつじ | 타츠지 | `97 99 93` | `89 98 A1` | read hit + screen context |
+| 5 | conflict_alternative_needs_manual_screen | high | `0x06294` | Heishichi | へいしち | 헤이시치 | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
+| 6 | conflict_alternative_needs_manual_screen | high | `0x0631B` | Heishichi | へいしち | 헤이시치 | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
+| 7 | conflict_alternative_needs_manual_screen | high | `0x06359` | Heishichi | へいしち | 헤이시치 | `9D 82 8C 91` | `8D 8E 8F 90` | read hit + screen context |
 
 ## Notes
 

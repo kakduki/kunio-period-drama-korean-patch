@@ -50,21 +50,31 @@ def rel(path: Path) -> str:
 
 
 def write_review_template(path: Path, proof_packet: dict[str, object]) -> bool:
+    rows_by_rom: dict[str, dict[str, object]] = {}
     if path.exists():
-        return False
+        current = load_json(path)
+        for row in current.get("rows", []):
+            if isinstance(row, dict) and row.get("rom_offset"):
+                rows_by_rom[normalize_rom(row.get("rom_offset"))] = dict(row)
+
     rows = []
     for task in proof_packet.get("tasks", []):
-        rows.append(
-            {
-                "task": task.get("task"),
-                "rom_offset": task.get("rom_offset"),
-                "source": task.get("source", ""),
-                "korean": task.get("korean", ""),
-                "visual_context_confirmed": False,
-                "screen_context": "",
-                "reviewer_note": "",
-            }
-        )
+        rom = normalize_rom(task.get("rom_offset"))
+        row = rows_by_rom.get(rom, {})
+        row.update({
+            "task": task.get("task"),
+            "rom_offset": task.get("rom_offset"),
+            "label": task.get("label", ""),
+            "romaji": task.get("romaji", ""),
+            "category": task.get("category", ""),
+            "source": task.get("source", ""),
+            "korean": task.get("korean", ""),
+        })
+        row.setdefault("visual_context_confirmed", False)
+        row.setdefault("screen_context", "")
+        row.setdefault("reviewer_note", "")
+        rows.append(row)
+
     payload = {
         "purpose": "Set visual_context_confirmed=true only after the FCEUX screenshot/visible screen matches this row.",
         "source_proof_packet": str(DEFAULT_PROOF_PACKET.relative_to(REPO_ROOT)),
@@ -72,7 +82,7 @@ def write_review_template(path: Path, proof_packet: dict[str, object]) -> bool:
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return True
+    return not bool(rows_by_rom)
 
 
 def approved_reviews(review: dict[str, object]) -> dict[str, dict[str, object]]:
@@ -132,6 +142,8 @@ def build_candidate(
         if review_row is None:
             skipped.append({
                 "rom_offset": rom_offset,
+                "romaji": task.get("romaji", ""),
+                "category": task.get("category", ""),
                 "source": task.get("source", ""),
                 "korean": task.get("korean", ""),
                 "reason": "visual_context_confirmed is not true",
@@ -140,6 +152,8 @@ def build_candidate(
         if match_row is None:
             skipped.append({
                 "rom_offset": rom_offset,
+                "romaji": task.get("romaji", ""),
+                "category": task.get("category", ""),
                 "source": task.get("source", ""),
                 "korean": task.get("korean", ""),
                 "reason": "no active CPU read match in broad-scan summary",
@@ -176,6 +190,8 @@ def build_candidate(
             "task": task.get("task"),
             "kind": task.get("kind", ""),
             "confidence": task.get("confidence", ""),
+            "romaji": task.get("romaji", ""),
+            "category": task.get("category", ""),
             "source": task.get("source", ""),
             "korean": task.get("korean", ""),
             "old_bytes": original.hex(" ").upper(),

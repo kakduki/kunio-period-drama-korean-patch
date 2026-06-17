@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 READINESS = ROOT / "rom_analysis" / "v042_text_promotion_readiness.json"
+BROAD_TARGETS = ROOT / "rom_analysis" / "broad_scan_fceux_targets.json"
 OUT_JSON = ROOT / "rom_analysis" / "v042_manual_proof_packet.json"
 OUT_MD = ROOT / "rom_analysis" / "v042_manual_proof_packet.md"
 
@@ -43,15 +44,25 @@ def sort_key(row: dict[str, object]) -> tuple[int, int, int]:
     )
 
 
+def load_target_hints() -> dict[str, dict[str, object]]:
+    payload = json.loads(BROAD_TARGETS.read_text(encoding="utf-8"))
+    return {str(row["rom_offset"]).upper(): row for row in payload.get("targets", [])}
+
+
 def build_packet() -> dict[str, object]:
     readiness = json.loads(READINESS.read_text(encoding="utf-8"))
+    target_hints = load_target_hints()
     candidates = sorted(readiness.get("candidates", []), key=sort_key)
     tasks = []
     for number, row in enumerate(candidates, start=1):
+        hints = target_hints.get(str(row.get("rom_offset", "")).upper(), {})
         task = {
             "task": number,
             "kind": row.get("kind", ""),
             "confidence": row.get("confidence", ""),
+            "label": hints.get("label", ""),
+            "romaji": hints.get("romaji", ""),
+            "category": hints.get("category", ""),
             "source": row.get("source", ""),
             "korean": row.get("korean", ""),
             "rom_offset": row.get("rom_offset", ""),
@@ -101,6 +112,7 @@ def write_markdown(packet: dict[str, object]) -> None:
         f"- Run Lua at the target screen: `{summary['capture_lua']}`",
         f"- Summarize: `{summary['summary_command']}`",
         f"- Machine-readable result: `{summary['summary_json']}`",
+        "- Human hints: use `romaji` first when Japanese/Korean text appears garbled in the console.",
         "",
         "## Workflow",
         "",
@@ -114,13 +126,13 @@ def write_markdown(packet: dict[str, object]) -> None:
         "",
         "## Tasks",
         "",
-        "| # | kind | confidence | ROM | source | korean | original | planned v0.4.2 bytes | decision |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| # | kind | confidence | ROM | romaji | source | korean | original | planned v0.4.2 bytes | decision |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for task in packet["tasks"]:
         lines.append(
             f"| {task['task']} | {task['kind']} | {task['confidence']} | `{task['rom_offset']}` | "
-            f"{task['source']} | {task['korean']} | `{task['original_bytes']}` | "
+            f"{task['romaji'] or '-'} | {task['source']} | {task['korean']} | `{task['original_bytes']}` | "
             f"`{task['planned_prg_bytes']}` | read hit + screen context |"
         )
     lines += [
