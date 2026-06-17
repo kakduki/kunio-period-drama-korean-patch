@@ -11,6 +11,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `manual_capture_status.md`: generated status of manual dump evidence
 - `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records
+- `manual_capture_workflow.md`: short manual FCEUX workflow with route watcher guidance
 - `manual_proof_routes.md`: three grouped manual routes for the current seven screen-proof candidates
 - `route_fceux_targets.md`: route-specific FCEUX watcher files for those three manual routes
 - `route_proof_status.md`: current proof status for the three route-specific watchers

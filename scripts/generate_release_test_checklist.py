@@ -12,6 +12,8 @@ from rom_utils import REPO_ROOT
 MANIFEST_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 REFERENCE_PLAN_JSON = REPO_ROOT / "rom_analysis" / "reference_capture_plan.json"
 PROOF_STATUS_JSON = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
+ROUTE_TARGETS_JSON = REPO_ROOT / "rom_analysis" / "route_fceux_targets.json"
+ROUTE_PROOF_STATUS_JSON = REPO_ROOT / "rom_analysis" / "route_proof_status.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "release_test_checklist.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "release_test_checklist.md"
 
@@ -31,6 +33,8 @@ def make_payload() -> dict[str, object]:
     manifest = load_json(MANIFEST_JSON)
     reference = load_json(REFERENCE_PLAN_JSON)
     proof = load_json(PROOF_STATUS_JSON)
+    route_targets = load_json(ROUTE_TARGETS_JSON)
+    route_status = load_json(ROUTE_PROOF_STATUS_JSON)
     summary = manifest["summary"]
     priority_rows = [
         row for row in reference["focused_capture_plan"]
@@ -41,6 +45,8 @@ def make_payload() -> dict[str, object]:
             "manifest": rel(MANIFEST_JSON),
             "reference_capture_plan": rel(REFERENCE_PLAN_JSON),
             "v043_proof_status": rel(PROOF_STATUS_JSON),
+            "route_fceux_targets": rel(ROUTE_TARGETS_JSON),
+            "route_proof_status": rel(ROUTE_PROOF_STATUS_JSON),
         },
         "summary": {
             "primary_candidate": summary["primary_candidate"],
@@ -49,7 +55,9 @@ def make_payload() -> dict[str, object]:
             "expected_patched_md5": summary["primary_candidate_md5"],
             "priority_manual_checks": len(priority_rows),
             "proof_status_counts": proof["summary"]["status_counts"],
+            "route_status_counts": route_status["summary"]["status_counts"],
         },
+        "route_watchers": route_targets["routes"],
         "priority_manual_checks": priority_rows,
     }
 
@@ -95,7 +103,31 @@ def write_markdown(payload: dict[str, object]) -> None:
 
     lines += [
         "",
-        "## 3. Capture Evidence",
+        "## 3. Route Watchers First",
+        "",
+        "Prefer these route wrappers over the all-target broad watcher. They show the active route and screen hint in the FCEUX overlay.",
+        "",
+        "| route | group | watcher | targets | screen hint |",
+        "| ---: | --- | --- | ---: | --- |",
+    ]
+    for route in payload["route_watchers"]:
+        first_target = route["targets"][0] if route["targets"] else {}
+        lines.append(
+            f"| {route['route']} | {route['group']} | `{route['watcher_lua']}` | "
+            f"{route['target_count']} | {first_target.get('screen_hint', '')} |"
+        )
+
+    lines += [
+        "",
+        "Recommended next run:",
+        "",
+        "```text",
+        "lua/kunio_manual_route_heishichi_capture_watch.lua",
+        "```",
+        "",
+        "If the visible FCEUX screen is still the title/opening screen, stop with `Q`; do not wait.",
+        "",
+        "## 4. Capture Evidence",
         "",
         "For broad v0.4.3 candidates, open the base Japanese ROM, manually reach the target screen, then run:",
         "",
@@ -103,7 +135,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "lua/kunio_manual_broad_scan_dump.lua",
         "```",
         "",
-        "For several manually reached candidate screens in one session, run the watcher once and press `D` on each target screen:",
+        "For several manually reached candidate screens in one session, run the matching route watcher once and press `D` on each target screen. Use the all-target watcher only if the route is unclear:",
         "",
         "```text",
         "lua/kunio_manual_broad_scan_capture_watch.lua",
@@ -117,7 +149,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "python scripts/generate_manual_dump_inventory.py",
         "```",
         "",
-        "## 4. Record Visual Review",
+        "## 5. Record Visual Review",
         "",
         "Only after the visible screen matches the intended row:",
         "",

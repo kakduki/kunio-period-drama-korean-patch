@@ -2,7 +2,9 @@
   "source": {
     "manifest": "rom_analysis/patch_candidate_manifest.json",
     "reference_capture_plan": "rom_analysis/reference_capture_plan.json",
-    "v043_proof_status": "rom_analysis/v043_proof_status.json"
+    "v043_proof_status": "rom_analysis/v043_proof_status.json",
+    "route_fceux_targets": "rom_analysis/route_fceux_targets.json",
+    "route_proof_status": "rom_analysis/route_proof_status.json"
   },
   "summary": {
     "primary_candidate": "v0.4.2 font-expanded",
@@ -12,8 +14,151 @@
     "priority_manual_checks": 7,
     "proof_status_counts": {
       "needs_manual_capture": 7
+    },
+    "route_status_counts": {
+      "no_dump_records": 3
     }
   },
+  "route_watchers": [
+    {
+      "route": 1,
+      "group": "Kajiya",
+      "target_lua": "lua/kunio_route_kajiya_targets.lua",
+      "watcher_lua": "lua/kunio_manual_route_kajiya_capture_watch.lua",
+      "target_count": 1,
+      "rom_offsets": [
+        "0x0440C"
+      ],
+      "targets": [
+        {
+          "label": "broad_0440c_kajiya",
+          "route": 1,
+          "group": "Kajiya",
+          "romaji": "Kajiya",
+          "rom_offset": "0x0440C",
+          "start": 33804,
+          "stop": 33806,
+          "expected_original_bytes": "CA D0 E9",
+          "old_bytes": "CA D0 E9",
+          "future_patch_bytes_preview": "B5 93 AB",
+          "confidence": "medium",
+          "screen_hint": "look for a blacksmith/shop or blacksmith-stage label"
+        }
+      ]
+    },
+    {
+      "route": 2,
+      "group": "Tatsuji",
+      "target_lua": "lua/kunio_route_tatsuji_targets.lua",
+      "watcher_lua": "lua/kunio_manual_route_tatsuji_capture_watch.lua",
+      "target_count": 3,
+      "rom_offsets": [
+        "0x048F4",
+        "0x052A5",
+        "0x05BE5"
+      ],
+      "targets": [
+        {
+          "label": "broad_048f4_tatsuji",
+          "route": 2,
+          "group": "Tatsuji",
+          "romaji": "Tatsuji",
+          "rom_offset": "0x048F4",
+          "start": 35060,
+          "stop": 35062,
+          "expected_original_bytes": "07 09 03",
+          "old_bytes": "07 09 03",
+          "future_patch_bytes_preview": "89 98 A1",
+          "confidence": "medium",
+          "screen_hint": "look for a visible Tatsuji boss/name context"
+        },
+        {
+          "label": "broad_052a5_tatsuji",
+          "route": 2,
+          "group": "Tatsuji",
+          "romaji": "Tatsuji",
+          "rom_offset": "0x052A5",
+          "start": 37541,
+          "stop": 37543,
+          "expected_original_bytes": "82 84 7E",
+          "old_bytes": "82 84 7E",
+          "future_patch_bytes_preview": "89 98 A1",
+          "confidence": "medium",
+          "screen_hint": "look for a visible Tatsuji boss/name context"
+        },
+        {
+          "label": "broad_05be5_tatsuji",
+          "route": 2,
+          "group": "Tatsuji",
+          "romaji": "Tatsuji",
+          "rom_offset": "0x05BE5",
+          "start": 39909,
+          "stop": 39911,
+          "expected_original_bytes": "97 99 93",
+          "old_bytes": "97 99 93",
+          "future_patch_bytes_preview": "89 98 A1",
+          "confidence": "medium",
+          "screen_hint": "look for a visible Tatsuji boss/name context"
+        }
+      ]
+    },
+    {
+      "route": 3,
+      "group": "Heishichi",
+      "target_lua": "lua/kunio_route_heishichi_targets.lua",
+      "watcher_lua": "lua/kunio_manual_route_heishichi_capture_watch.lua",
+      "target_count": 3,
+      "rom_offsets": [
+        "0x06294",
+        "0x0631B",
+        "0x06359"
+      ],
+      "targets": [
+        {
+          "label": "broad_06294_heishichi",
+          "route": 3,
+          "group": "Heishichi",
+          "romaji": "Heishichi",
+          "rom_offset": "0x06294",
+          "start": 41620,
+          "stop": 41623,
+          "expected_original_bytes": "9D 82 8C 91",
+          "old_bytes": "9D 82 8C 91",
+          "future_patch_bytes_preview": "8D 8E 8F 90",
+          "confidence": "high",
+          "screen_hint": "look for a visible Heishichi name/dialogue context"
+        },
+        {
+          "label": "broad_0631b_heishichi",
+          "route": 3,
+          "group": "Heishichi",
+          "romaji": "Heishichi",
+          "rom_offset": "0x0631B",
+          "start": 41755,
+          "stop": 41758,
+          "expected_original_bytes": "9D 82 8C 91",
+          "old_bytes": "9D 82 8C 91",
+          "future_patch_bytes_preview": "8D 8E 8F 90",
+          "confidence": "high",
+          "screen_hint": "look for a visible Heishichi name/dialogue context"
+        },
+        {
+          "label": "broad_06359_heishichi",
+          "route": 3,
+          "group": "Heishichi",
+          "romaji": "Heishichi",
+          "rom_offset": "0x06359",
+          "start": 41817,
+          "stop": 41820,
+          "expected_original_bytes": "9D 82 8C 91",
+          "old_bytes": "9D 82 8C 91",
+          "future_patch_bytes_preview": "8D 8E 8F 90",
+          "confidence": "high",
+          "screen_hint": "look for a visible Heishichi name/dialogue context"
+        }
+      ]
+    }
+  ],
   "priority_manual_checks": [
     {
       "rank_score": 1380,

@@ -35,7 +35,25 @@ Do not keep blind autoplay running on the title/first screen. Use these targets 
 | 6 | `0x05BE5` | たつじ | 타츠지 | `$9BD5` | `needs_manual_capture` | look for a visible Tatsuji boss/name context |
 | 7 | `0x0440C` | かじや | 대장간 | `$83FC` | `needs_manual_capture` | look for a blacksmith/shop or blacksmith-stage label |
 
-## 3. Capture Evidence
+## 3. Route Watchers First
+
+Prefer these route wrappers over the all-target broad watcher. They show the active route and screen hint in the FCEUX overlay.
+
+| route | group | watcher | targets | screen hint |
+| ---: | --- | --- | ---: | --- |
+| 1 | Kajiya | `lua/kunio_manual_route_kajiya_capture_watch.lua` | 1 | look for a blacksmith/shop or blacksmith-stage label |
+| 2 | Tatsuji | `lua/kunio_manual_route_tatsuji_capture_watch.lua` | 3 | look for a visible Tatsuji boss/name context |
+| 3 | Heishichi | `lua/kunio_manual_route_heishichi_capture_watch.lua` | 3 | look for a visible Heishichi name/dialogue context |
+
+Recommended next run:
+
+```text
+lua/kunio_manual_route_heishichi_capture_watch.lua
+```
+
+If the visible FCEUX screen is still the title/opening screen, stop with `Q`; do not wait.
+
+## 4. Capture Evidence
 
 For broad v0.4.3 candidates, open the base Japanese ROM, manually reach the target screen, then run:
 
@@ -43,7 +61,7 @@ For broad v0.4.3 candidates, open the base Japanese ROM, manually reach the targ
 lua/kunio_manual_broad_scan_dump.lua
 ```
 
-For several manually reached candidate screens in one session, run the watcher once and press `D` on each target screen:
+For several manually reached candidate screens in one session, run the matching route watcher once and press `D` on each target screen. Use the all-target watcher only if the route is unclear:
 
 ```text
 lua/kunio_manual_broad_scan_capture_watch.lua
@@ -57,7 +75,7 @@ python scripts/generate_v043_proof_status.py
 python scripts/generate_manual_dump_inventory.py
 ```
 
-## 4. Record Visual Review
+## 5. Record Visual Review
 
 Only after the visible screen matches the intended row:
 

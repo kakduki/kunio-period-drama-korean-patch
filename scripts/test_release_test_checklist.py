@@ -18,6 +18,10 @@ def main() -> int:
     errors = []
     if payload["summary"]["priority_manual_checks"] != 7:
         errors.append(f"expected 7 priority manual checks, got {payload['summary']['priority_manual_checks']}")
+    if payload["summary"]["route_status_counts"] != {"no_dump_records": 3}:
+        errors.append(f"unexpected route status counts: {payload['summary']['route_status_counts']}")
+    if len(payload.get("route_watchers", [])) != 3:
+        errors.append("expected three route watchers in checklist payload")
     if not rows or rows[0].get("source_display") != "へいしち":
         errors.append("expected Heishichi to be the first manual proof target")
     markdown = CHECKLIST_MD.read_text(encoding="utf-8")
@@ -26,6 +30,9 @@ def main() -> int:
         "python scripts/apply_primary_patch.py",
         "lua/kunio_manual_broad_scan_dump.lua",
         "lua/kunio_manual_broad_scan_capture_watch.lua",
+        "lua/kunio_manual_route_heishichi_capture_watch.lua",
+        "Route Watchers First",
+        "If the visible FCEUX screen is still the title/opening screen",
         "python scripts/record_visual_review.py",
         "0x0440C",
     ]:

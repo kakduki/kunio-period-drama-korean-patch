@@ -22,6 +22,7 @@ MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status
 MANUAL_CAPTURE_STATUS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_status.md"
 MANUAL_DUMP_INVENTORY_JSON = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json"
 MANUAL_DUMP_INVENTORY_MD = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.md"
+MANUAL_CAPTURE_WORKFLOW_MD = REPO_ROOT / "rom_analysis" / "manual_capture_workflow.md"
 MANUAL_PROOF_ROUTES_JSON = REPO_ROOT / "rom_analysis" / "manual_proof_routes.json"
 MANUAL_PROOF_ROUTES_MD = REPO_ROOT / "rom_analysis" / "manual_proof_routes.md"
 TRANSLATION_GLYPH_COVERAGE_JSON = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.json"
@@ -113,6 +114,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `manual_capture_status.md`: generated status of manual dump evidence",
         "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
+        "- `manual_capture_workflow.md`: short manual FCEUX workflow with route watcher guidance",
         "- `manual_proof_routes.md`: three grouped manual routes for the current seven screen-proof candidates",
         "- `route_fceux_targets.md`: route-specific FCEUX watcher files for those three manual routes",
         "- `route_proof_status.md`: current proof status for the three route-specific watchers",
@@ -236,6 +238,7 @@ def package() -> dict[str, object]:
         (MANUAL_CAPTURE_STATUS_JSON, "manual_capture_status.json"),
         (MANUAL_DUMP_INVENTORY_MD, "manual_dump_inventory.md"),
         (MANUAL_DUMP_INVENTORY_JSON, "manual_dump_inventory.json"),
+        (MANUAL_CAPTURE_WORKFLOW_MD, "manual_capture_workflow.md"),
         (MANUAL_PROOF_ROUTES_MD, "manual_proof_routes.md"),
         (MANUAL_PROOF_ROUTES_JSON, "manual_proof_routes.json"),
         (ROUTE_FCEUX_TARGETS_MD, "route_fceux_targets.md"),
