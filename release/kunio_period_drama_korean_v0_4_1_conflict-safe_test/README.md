@@ -11,6 +11,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `manual_capture_status.md`: generated status of manual dump evidence
 - `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan
 - `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion
+- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report
 - `apply_ips_standalone.py`: standalone IPS applier for this bundle
 - `SHA256SUMS.txt`: checksums for bundle files
 

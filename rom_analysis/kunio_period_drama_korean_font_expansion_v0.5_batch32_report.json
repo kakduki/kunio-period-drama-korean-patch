@@ -1,0 +1,690 @@
+{
+  "candidate": "v0.5 font-expansion batch 32",
+  "source_slot_plan": "rom_analysis\\korean_slot_allocation_plan.json",
+  "source_expansion_plan": "rom_analysis\\next_glyph_expansion_plan.json",
+  "source_font_bin": "font\\korean_font_8x16.bin",
+  "source_char_map": "font\\char_map.json",
+  "source_base_font_rom": "output\\kunio_period_drama_korean_plan_v0.2.nes",
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "base_font_rom_md5": "416ad32dfc438c8b51a4d0a20028fe81",
+  "patched_md5": "af14a5b03d3b6b8631a1bed90cf4295e",
+  "patched_rom_path": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+  "ips_path": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.ips",
+  "report_md": "rom_analysis\\kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md",
+  "chr_bank7_range": [
+    "0x2E010",
+    "0x3000F"
+  ],
+  "glyphs_written": 50,
+  "base_glyph_count": 18,
+  "added_glyph_count": 32,
+  "changed_bytes": 674,
+  "added_glyph_changed_bytes": 422,
+  "escaped_chr_bank7_bytes": 0,
+  "ips_records": 103,
+  "coverage_simulation": {
+    "requested_extra_glyphs": 32,
+    "extra_glyphs_used": 32,
+    "total_patch_glyphs": 50,
+    "rows_ready_total": 25,
+    "rows_newly_ready": 15,
+    "added_glyphs": [
+      "마",
+      "하",
+      "구",
+      "기",
+      "의",
+      "로",
+      "스",
+      "강",
+      "지",
+      "인",
+      "가",
+      "에",
+      "니",
+      "쿠",
+      "쇠",
+      "철",
+      "옷",
+      "고",
+      "간",
+      "술",
+      "방",
+      "어",
+      "둥",
+      "몽",
+      "파",
+      "슬",
+      "도",
+      "야",
+      "대",
+      "크",
+      "게",
+      "호"
+    ],
+    "example_newly_ready_rows": [
+      {
+        "source": "はがねのこんぼう",
+        "korean": "강철 몽둥이",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -2
+      },
+      {
+        "source": "やまたのじゅつ",
+        "korean": "야마타의 술",
+        "category": "기술",
+        "section": "6. 필살기 / 기술",
+        "length_delta": -1
+      },
+      {
+        "source": "どうのこんぼう",
+        "korean": "구리 몽둥이",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -1
+      },
+      {
+        "source": "てつのこんぼう",
+        "korean": "쇠 몽둥이",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -2
+      },
+      {
+        "source": "やごろう",
+        "korean": "야고로",
+        "category": "보스",
+        "section": "7. 보스 / 적",
+        "length_delta": -1
+      },
+      {
+        "source": "かじや",
+        "korean": "대장간",
+        "category": "스테이지",
+        "section": "8. 스테이지",
+        "length_delta": 0
+      },
+      {
+        "source": "きのくすり",
+        "korean": "기의 약",
+        "category": "회복",
+        "section": "5. 회복 / 보조 아이템",
+        "length_delta": -1
+      },
+      {
+        "source": "こんぼう",
+        "korean": "몽둥이",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -1
+      },
+      {
+        "source": "はがねのやり",
+        "korean": "강철 창",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -2
+      },
+      {
+        "source": "かわら",
+        "korean": "강가",
+        "category": "스테이지",
+        "section": "8. 스테이지",
+        "length_delta": -1
+      },
+      {
+        "source": "ぼうぎょ",
+        "korean": "방어",
+        "category": "능력치",
+        "section": "3. 스테이터스 / UI",
+        "length_delta": -2
+      },
+      {
+        "source": "たつじ",
+        "korean": "타츠지",
+        "category": "보스",
+        "section": "7. 보스 / 적",
+        "length_delta": 0
+      },
+      {
+        "source": "どうのやり",
+        "korean": "구리 창",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -1
+      },
+      {
+        "source": "てつのやり",
+        "korean": "쇠 창",
+        "category": "무기",
+        "section": "4. 무기 / 장비",
+        "length_delta": -2
+      },
+      {
+        "source": "どすすぺしゃる",
+        "korean": "강타 S",
+        "category": "기술",
+        "section": "6. 필살기 / 기술",
+        "length_delta": -3
+      }
+    ]
+  },
+  "added_slots": [
+    {
+      "glyph": "마",
+      "tile": "0x113",
+      "rom_offset": "0x2F140",
+      "prg_plus_0x7a_byte": "0x99",
+      "rows_needing_it": 14,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "하",
+      "tile": "0x114",
+      "rom_offset": "0x2F150",
+      "prg_plus_0x7a_byte": "0x9A",
+      "rows_needing_it": 11,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "구",
+      "tile": "0x115",
+      "rom_offset": "0x2F160",
+      "prg_plus_0x7a_byte": "0x9B",
+      "rows_needing_it": 11,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "기",
+      "tile": "0x116",
+      "rom_offset": "0x2F170",
+      "prg_plus_0x7a_byte": "0x9C",
+      "rows_needing_it": 11,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "의",
+      "tile": "0x117",
+      "rom_offset": "0x2F180",
+      "prg_plus_0x7a_byte": "0x9D",
+      "rows_needing_it": 9,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "로",
+      "tile": "0x118",
+      "rom_offset": "0x2F190",
+      "prg_plus_0x7a_byte": "0x9E",
+      "rows_needing_it": 9,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "스",
+      "tile": "0x119",
+      "rom_offset": "0x2F1A0",
+      "prg_plus_0x7a_byte": "0x9F",
+      "rows_needing_it": 8,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "강",
+      "tile": "0x11A",
+      "rom_offset": "0x2F1B0",
+      "prg_plus_0x7a_byte": "0xA0",
+      "rows_needing_it": 7,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "지",
+      "tile": "0x11B",
+      "rom_offset": "0x2F1C0",
+      "prg_plus_0x7a_byte": "0xA1",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "인",
+      "tile": "0x11C",
+      "rom_offset": "0x2F1D0",
+      "prg_plus_0x7a_byte": "0xA2",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "가",
+      "tile": "0x11D",
+      "rom_offset": "0x2F1E0",
+      "prg_plus_0x7a_byte": "0xA3",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "에",
+      "tile": "0x11E",
+      "rom_offset": "0x2F1F0",
+      "prg_plus_0x7a_byte": "0xA4",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "니",
+      "tile": "0x11F",
+      "rom_offset": "0x2F200",
+      "prg_plus_0x7a_byte": "0xA5",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "쿠",
+      "tile": "0x120",
+      "rom_offset": "0x2F210",
+      "prg_plus_0x7a_byte": "0xA6",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "쇠",
+      "tile": "0x121",
+      "rom_offset": "0x2F220",
+      "prg_plus_0x7a_byte": "0xA7",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "철",
+      "tile": "0x122",
+      "rom_offset": "0x2F230",
+      "prg_plus_0x7a_byte": "0xA8",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "옷",
+      "tile": "0x123",
+      "rom_offset": "0x2F240",
+      "prg_plus_0x7a_byte": "0xA9",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "고",
+      "tile": "0x124",
+      "rom_offset": "0x2F250",
+      "prg_plus_0x7a_byte": "0xAA",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "간",
+      "tile": "0x125",
+      "rom_offset": "0x2F260",
+      "prg_plus_0x7a_byte": "0xAB",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "술",
+      "tile": "0x126",
+      "rom_offset": "0x2F270",
+      "prg_plus_0x7a_byte": "0xAC",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "방",
+      "tile": "0x127",
+      "rom_offset": "0x2F280",
+      "prg_plus_0x7a_byte": "0xAD",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "어",
+      "tile": "0x128",
+      "rom_offset": "0x2F290",
+      "prg_plus_0x7a_byte": "0xAE",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "둥",
+      "tile": "0x129",
+      "rom_offset": "0x2F2A0",
+      "prg_plus_0x7a_byte": "0xAF",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "몽",
+      "tile": "0x12A",
+      "rom_offset": "0x2F2B0",
+      "prg_plus_0x7a_byte": "0xB0",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "파",
+      "tile": "0x12B",
+      "rom_offset": "0x2F2C0",
+      "prg_plus_0x7a_byte": "0xB1",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "슬",
+      "tile": "0x12C",
+      "rom_offset": "0x2F2D0",
+      "prg_plus_0x7a_byte": "0xB2",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "도",
+      "tile": "0x12D",
+      "rom_offset": "0x2F2E0",
+      "prg_plus_0x7a_byte": "0xB3",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "야",
+      "tile": "0x12E",
+      "rom_offset": "0x2F2F0",
+      "prg_plus_0x7a_byte": "0xB4",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "대",
+      "tile": "0x12F",
+      "rom_offset": "0x2F300",
+      "prg_plus_0x7a_byte": "0xB5",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "크",
+      "tile": "0x130",
+      "rom_offset": "0x2F310",
+      "prg_plus_0x7a_byte": "0xB6",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "게",
+      "tile": "0x131",
+      "rom_offset": "0x2F320",
+      "prg_plus_0x7a_byte": "0xB7",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "호",
+      "tile": "0x132",
+      "rom_offset": "0x2F330",
+      "prg_plus_0x7a_byte": "0xB8",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    }
+  ],
+  "all_slots": [
+    {
+      "glyph": "마",
+      "tile": "0x113",
+      "rom_offset": "0x2F140",
+      "prg_plus_0x7a_byte": "0x99",
+      "rows_needing_it": 14,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "하",
+      "tile": "0x114",
+      "rom_offset": "0x2F150",
+      "prg_plus_0x7a_byte": "0x9A",
+      "rows_needing_it": 11,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "구",
+      "tile": "0x115",
+      "rom_offset": "0x2F160",
+      "prg_plus_0x7a_byte": "0x9B",
+      "rows_needing_it": 11,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "기",
+      "tile": "0x116",
+      "rom_offset": "0x2F170",
+      "prg_plus_0x7a_byte": "0x9C",
+      "rows_needing_it": 11,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "의",
+      "tile": "0x117",
+      "rom_offset": "0x2F180",
+      "prg_plus_0x7a_byte": "0x9D",
+      "rows_needing_it": 9,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "로",
+      "tile": "0x118",
+      "rom_offset": "0x2F190",
+      "prg_plus_0x7a_byte": "0x9E",
+      "rows_needing_it": 9,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "스",
+      "tile": "0x119",
+      "rom_offset": "0x2F1A0",
+      "prg_plus_0x7a_byte": "0x9F",
+      "rows_needing_it": 8,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "강",
+      "tile": "0x11A",
+      "rom_offset": "0x2F1B0",
+      "prg_plus_0x7a_byte": "0xA0",
+      "rows_needing_it": 7,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "지",
+      "tile": "0x11B",
+      "rom_offset": "0x2F1C0",
+      "prg_plus_0x7a_byte": "0xA1",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "인",
+      "tile": "0x11C",
+      "rom_offset": "0x2F1D0",
+      "prg_plus_0x7a_byte": "0xA2",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "가",
+      "tile": "0x11D",
+      "rom_offset": "0x2F1E0",
+      "prg_plus_0x7a_byte": "0xA3",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "에",
+      "tile": "0x11E",
+      "rom_offset": "0x2F1F0",
+      "prg_plus_0x7a_byte": "0xA4",
+      "rows_needing_it": 6,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "니",
+      "tile": "0x11F",
+      "rom_offset": "0x2F200",
+      "prg_plus_0x7a_byte": "0xA5",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "쿠",
+      "tile": "0x120",
+      "rom_offset": "0x2F210",
+      "prg_plus_0x7a_byte": "0xA6",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "쇠",
+      "tile": "0x121",
+      "rom_offset": "0x2F220",
+      "prg_plus_0x7a_byte": "0xA7",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "철",
+      "tile": "0x122",
+      "rom_offset": "0x2F230",
+      "prg_plus_0x7a_byte": "0xA8",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "옷",
+      "tile": "0x123",
+      "rom_offset": "0x2F240",
+      "prg_plus_0x7a_byte": "0xA9",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "고",
+      "tile": "0x124",
+      "rom_offset": "0x2F250",
+      "prg_plus_0x7a_byte": "0xAA",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "간",
+      "tile": "0x125",
+      "rom_offset": "0x2F260",
+      "prg_plus_0x7a_byte": "0xAB",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "술",
+      "tile": "0x126",
+      "rom_offset": "0x2F270",
+      "prg_plus_0x7a_byte": "0xAC",
+      "rows_needing_it": 5,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "방",
+      "tile": "0x127",
+      "rom_offset": "0x2F280",
+      "prg_plus_0x7a_byte": "0xAD",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "어",
+      "tile": "0x128",
+      "rom_offset": "0x2F290",
+      "prg_plus_0x7a_byte": "0xAE",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "둥",
+      "tile": "0x129",
+      "rom_offset": "0x2F2A0",
+      "prg_plus_0x7a_byte": "0xAF",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "몽",
+      "tile": "0x12A",
+      "rom_offset": "0x2F2B0",
+      "prg_plus_0x7a_byte": "0xB0",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "파",
+      "tile": "0x12B",
+      "rom_offset": "0x2F2C0",
+      "prg_plus_0x7a_byte": "0xB1",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "슬",
+      "tile": "0x12C",
+      "rom_offset": "0x2F2D0",
+      "prg_plus_0x7a_byte": "0xB2",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "도",
+      "tile": "0x12D",
+      "rom_offset": "0x2F2E0",
+      "prg_plus_0x7a_byte": "0xB3",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "야",
+      "tile": "0x12E",
+      "rom_offset": "0x2F2F0",
+      "prg_plus_0x7a_byte": "0xB4",
+      "rows_needing_it": 4,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "대",
+      "tile": "0x12F",
+      "rom_offset": "0x2F300",
+      "prg_plus_0x7a_byte": "0xB5",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "크",
+      "tile": "0x130",
+      "rom_offset": "0x2F310",
+      "prg_plus_0x7a_byte": "0xB6",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "게",
+      "tile": "0x131",
+      "rom_offset": "0x2F320",
+      "prg_plus_0x7a_byte": "0xB7",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    },
+    {
+      "glyph": "호",
+      "tile": "0x132",
+      "rom_offset": "0x2F330",
+      "prg_plus_0x7a_byte": "0xB8",
+      "rows_needing_it": 3,
+      "is_added_glyph": true
+    }
+  ]
+}

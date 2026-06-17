@@ -18,6 +18,7 @@ KEY_PYTHON = [
     "scripts/apply_primary_patch.py",
     "scripts/apply_ips_standalone.py",
     "scripts/build_prg_patch_from_plan.py",
+    "scripts/build_next_glyph_expansion_candidate.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
@@ -70,6 +71,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_manual_capture_status.py"],
     ["scripts/generate_translation_glyph_coverage.py"],
     ["scripts/generate_next_glyph_expansion_plan.py"],
+    ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
 ]
 
 

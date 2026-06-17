@@ -1,5 +1,6 @@
 rom/*.nes
 rom/*.zip
+output/*.nes
 output/*.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips

@@ -40,6 +40,7 @@
 - `translation_pattern_scan.md` / `translation_pattern_scan.json`: broad ROM scan against the full readable translation reference, excluding already-known Bank 1 targets where possible
 - `translation_glyph_coverage.md` / `translation_glyph_coverage.json`: compares the full translation data glyph set with the current compact patch glyph plan
 - `next_glyph_expansion_plan.md` / `next_glyph_expansion_plan.json`: ranks the next Hangul glyphs to add and simulates rows unlocked by batch size
+- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md` / `.json`: local font-only expansion build report for the first 32 planned glyphs
 - `translation_scan_capture_queue.md` / `translation_scan_capture_queue.json`: supplemental manual capture queue for new high/medium confidence hits from the broad translation scan
 - `broad_scan_patchability.md` / `broad_scan_patchability.json`: filters the broad-scan queue down to length-safe future v0.5 candidates and lists any additional glyph slots needed if screen proof confirms them
 - `broad_scan_fceux_targets.md` / `broad_scan_fceux_targets.json`: FCEUX read-watch targets for the 7 broad-scan promotion candidates; Lua target file is `../lua/kunio_broad_scan_candidate_targets.lua`
