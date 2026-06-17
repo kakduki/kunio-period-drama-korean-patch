@@ -34,6 +34,8 @@ REFERENCE_CAPTURE_PLAN_JSON = REPO_ROOT / "rom_analysis" / "reference_capture_pl
 REFERENCE_CAPTURE_PLAN_MD = REPO_ROOT / "rom_analysis" / "reference_capture_plan.md"
 RELEASE_TEST_CHECKLIST_JSON = REPO_ROOT / "rom_analysis" / "release_test_checklist.json"
 RELEASE_TEST_CHECKLIST_MD = REPO_ROOT / "rom_analysis" / "release_test_checklist.md"
+ROUTE_FCEUX_TARGETS_JSON = REPO_ROOT / "rom_analysis" / "route_fceux_targets.json"
+ROUTE_FCEUX_TARGETS_MD = REPO_ROOT / "rom_analysis" / "route_fceux_targets.md"
 BROAD_SCAN_PATCHABILITY_JSON = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.json"
 BROAD_SCAN_PATCHABILITY_MD = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
@@ -68,8 +70,14 @@ LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
 LUA_MANUAL_BROAD_SCAN_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_broad_scan_capture_watch.lua"
+LUA_MANUAL_ROUTE_KAJIYA_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_route_kajiya_capture_watch.lua"
+LUA_MANUAL_ROUTE_TATSUJI_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_route_tatsuji_capture_watch.lua"
+LUA_MANUAL_ROUTE_HEISHICHI_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_route_heishichi_capture_watch.lua"
 LUA_V041_TARGETS = REPO_ROOT / "lua" / "kunio_v041_conflict_safe_targets.lua"
 LUA_BROAD_TARGETS = REPO_ROOT / "lua" / "kunio_broad_scan_candidate_targets.lua"
+LUA_ROUTE_KAJIYA_TARGETS = REPO_ROOT / "lua" / "kunio_route_kajiya_targets.lua"
+LUA_ROUTE_TATSUJI_TARGETS = REPO_ROOT / "lua" / "kunio_route_tatsuji_targets.lua"
+LUA_ROUTE_HEISHICHI_TARGETS = REPO_ROOT / "lua" / "kunio_route_heishichi_targets.lua"
 RELEASE_ROOT = REPO_ROOT / "release"
 
 
@@ -104,6 +112,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_capture_status.md`: generated status of manual dump evidence",
         "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
         "- `manual_proof_routes.md`: three grouped manual routes for the current seven screen-proof candidates",
+        "- `route_fceux_targets.md`: route-specific FCEUX watcher files for those three manual routes",
         "- `release_test_checklist.md`: short apply/capture/review checklist for this bundle",
         "- `lua/`: FCEUX manual capture scripts and target tables for v0.4.2 and broad-scan proof",
         "- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates",
@@ -226,6 +235,8 @@ def package() -> dict[str, object]:
         (MANUAL_DUMP_INVENTORY_JSON, "manual_dump_inventory.json"),
         (MANUAL_PROOF_ROUTES_MD, "manual_proof_routes.md"),
         (MANUAL_PROOF_ROUTES_JSON, "manual_proof_routes.json"),
+        (ROUTE_FCEUX_TARGETS_MD, "route_fceux_targets.md"),
+        (ROUTE_FCEUX_TARGETS_JSON, "route_fceux_targets.json"),
         (RELEASE_TEST_CHECKLIST_MD, "release_test_checklist.md"),
         (RELEASE_TEST_CHECKLIST_JSON, "release_test_checklist.json"),
         (TRANSLATION_GLYPH_COVERAGE_MD, "translation_glyph_coverage.md"),
@@ -268,8 +279,14 @@ def package() -> dict[str, object]:
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),
         (LUA_MANUAL_BROAD_SCAN_CAPTURE_WATCH, "lua/kunio_manual_broad_scan_capture_watch.lua"),
+        (LUA_MANUAL_ROUTE_KAJIYA_CAPTURE_WATCH, "lua/kunio_manual_route_kajiya_capture_watch.lua"),
+        (LUA_MANUAL_ROUTE_TATSUJI_CAPTURE_WATCH, "lua/kunio_manual_route_tatsuji_capture_watch.lua"),
+        (LUA_MANUAL_ROUTE_HEISHICHI_CAPTURE_WATCH, "lua/kunio_manual_route_heishichi_capture_watch.lua"),
         (LUA_V041_TARGETS, "lua/kunio_v041_conflict_safe_targets.lua"),
         (LUA_BROAD_TARGETS, "lua/kunio_broad_scan_candidate_targets.lua"),
+        (LUA_ROUTE_KAJIYA_TARGETS, "lua/kunio_route_kajiya_targets.lua"),
+        (LUA_ROUTE_TATSUJI_TARGETS, "lua/kunio_route_tatsuji_targets.lua"),
+        (LUA_ROUTE_HEISHICHI_TARGETS, "lua/kunio_route_heishichi_targets.lua"),
     ]:
         dst = bundle_dir / name
         safe_copy(src, dst)

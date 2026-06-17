@@ -1,0 +1,148 @@
+{
+  "source": "rom_analysis\\manual_proof_routes.json",
+  "summary": {
+    "route_count": 3,
+    "target_count": 7,
+    "rule": "Route-specific watchers reduce manual dump noise; run on the base Japanese ROM."
+  },
+  "routes": [
+    {
+      "route": 1,
+      "group": "Kajiya",
+      "target_lua": "lua/kunio_route_kajiya_targets.lua",
+      "watcher_lua": "lua/kunio_manual_route_kajiya_capture_watch.lua",
+      "target_count": 1,
+      "rom_offsets": [
+        "0x0440C"
+      ],
+      "targets": [
+        {
+          "label": "route_kajiya_0440c",
+          "route": 1,
+          "group": "Kajiya",
+          "romaji": "Kajiya",
+          "rom_offset": "0x0440C",
+          "start": 33804,
+          "stop": 33806,
+          "expected_original_bytes": "CA D0 E9",
+          "old_bytes": "CA D0 E9",
+          "future_patch_bytes_preview": "B5 93 AB",
+          "confidence": "medium",
+          "screen_hint": "look for a blacksmith/shop or blacksmith-stage label"
+        }
+      ]
+    },
+    {
+      "route": 2,
+      "group": "Tatsuji",
+      "target_lua": "lua/kunio_route_tatsuji_targets.lua",
+      "watcher_lua": "lua/kunio_manual_route_tatsuji_capture_watch.lua",
+      "target_count": 3,
+      "rom_offsets": [
+        "0x048F4",
+        "0x052A5",
+        "0x05BE5"
+      ],
+      "targets": [
+        {
+          "label": "route_tatsuji_048f4",
+          "route": 2,
+          "group": "Tatsuji",
+          "romaji": "Tatsuji",
+          "rom_offset": "0x048F4",
+          "start": 35060,
+          "stop": 35062,
+          "expected_original_bytes": "07 09 03",
+          "old_bytes": "07 09 03",
+          "future_patch_bytes_preview": "89 98 A1",
+          "confidence": "medium",
+          "screen_hint": "look for a visible Tatsuji boss/name context"
+        },
+        {
+          "label": "route_tatsuji_052a5",
+          "route": 2,
+          "group": "Tatsuji",
+          "romaji": "Tatsuji",
+          "rom_offset": "0x052A5",
+          "start": 37541,
+          "stop": 37543,
+          "expected_original_bytes": "82 84 7E",
+          "old_bytes": "82 84 7E",
+          "future_patch_bytes_preview": "89 98 A1",
+          "confidence": "medium",
+          "screen_hint": "look for a visible Tatsuji boss/name context"
+        },
+        {
+          "label": "route_tatsuji_05be5",
+          "route": 2,
+          "group": "Tatsuji",
+          "romaji": "Tatsuji",
+          "rom_offset": "0x05BE5",
+          "start": 39909,
+          "stop": 39911,
+          "expected_original_bytes": "97 99 93",
+          "old_bytes": "97 99 93",
+          "future_patch_bytes_preview": "89 98 A1",
+          "confidence": "medium",
+          "screen_hint": "look for a visible Tatsuji boss/name context"
+        }
+      ]
+    },
+    {
+      "route": 3,
+      "group": "Heishichi",
+      "target_lua": "lua/kunio_route_heishichi_targets.lua",
+      "watcher_lua": "lua/kunio_manual_route_heishichi_capture_watch.lua",
+      "target_count": 3,
+      "rom_offsets": [
+        "0x06294",
+        "0x0631B",
+        "0x06359"
+      ],
+      "targets": [
+        {
+          "label": "route_heishichi_06294",
+          "route": 3,
+          "group": "Heishichi",
+          "romaji": "Heishichi",
+          "rom_offset": "0x06294",
+          "start": 41620,
+          "stop": 41623,
+          "expected_original_bytes": "9D 82 8C 91",
+          "old_bytes": "9D 82 8C 91",
+          "future_patch_bytes_preview": "8D 8E 8F 90",
+          "confidence": "high",
+          "screen_hint": "look for a visible Heishichi name/dialogue context"
+        },
+        {
+          "label": "route_heishichi_0631b",
+          "route": 3,
+          "group": "Heishichi",
+          "romaji": "Heishichi",
+          "rom_offset": "0x0631B",
+          "start": 41755,
+          "stop": 41758,
+          "expected_original_bytes": "9D 82 8C 91",
+          "old_bytes": "9D 82 8C 91",
+          "future_patch_bytes_preview": "8D 8E 8F 90",
+          "confidence": "high",
+          "screen_hint": "look for a visible Heishichi name/dialogue context"
+        },
+        {
+          "label": "route_heishichi_06359",
+          "route": 3,
+          "group": "Heishichi",
+          "romaji": "Heishichi",
+          "rom_offset": "0x06359",
+          "start": 41817,
+          "stop": 41820,
+          "expected_original_bytes": "9D 82 8C 91",
+          "old_bytes": "9D 82 8C 91",
+          "future_patch_bytes_preview": "8D 8E 8F 90",
+          "confidence": "high",
+          "screen_hint": "look for a visible Heishichi name/dialogue context"
+        }
+      ]
+    }
+  ]
+}

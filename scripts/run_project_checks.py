@@ -40,6 +40,7 @@ KEY_PYTHON = [
     "scripts/generate_primary_patch_contents.py",
     "scripts/generate_reference_capture_plan.py",
     "scripts/generate_release_test_checklist.py",
+    "scripts/generate_route_fceux_targets.py",
     "scripts/generate_translation_pattern_scan.py",
     "scripts/generate_translation_readable_reference.py",
     "scripts/generate_translation_glyph_coverage.py",
@@ -64,6 +65,7 @@ KEY_PYTHON = [
     "scripts/test_run_fceux_budget.py",
     "scripts/test_reference_capture_plan.py",
     "scripts/test_release_test_checklist.py",
+    "scripts/test_route_fceux_targets.py",
     "scripts/test_translation_capture_queue_readable.py",
     "scripts/test_v043_proof_gate.py",
     "scripts/test_v043_proof_status.py",
@@ -75,6 +77,9 @@ LUA_TARGETS = [
     "lua/kunio_v041_conflict_safe_targets.lua",
     "lua/kunio_v04_equal_length_targets.lua",
     "lua/kunio_broad_scan_candidate_targets.lua",
+    "lua/kunio_route_heishichi_targets.lua",
+    "lua/kunio_route_kajiya_targets.lua",
+    "lua/kunio_route_tatsuji_targets.lua",
     "lua/kunio_padding_exp_pad_00_targets.lua",
     "lua/kunio_padding_exp_pad_7a_targets.lua",
     "lua/kunio_padding_exp_pad_ff_targets.lua",
@@ -89,6 +94,9 @@ LUA_SCRIPTS = [
     "lua/kunio_manual_broad_scan_dump.lua",
     "lua/kunio_manual_broad_scan_capture_watch.lua",
     "lua/kunio_manual_capture_watch.lua",
+    "lua/kunio_manual_route_heishichi_capture_watch.lua",
+    "lua/kunio_manual_route_kajiya_capture_watch.lua",
+    "lua/kunio_manual_route_tatsuji_capture_watch.lua",
     "lua/kunio_manual_screen_dump.lua",
     "lua/kunio_manual_v042_capture_watch.lua",
     "lua/kunio_manual_v04_screen_dump.lua",
@@ -120,6 +128,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_v042_text_promotion_readiness.py"],
     ["scripts/generate_v042_manual_proof_packet.py"],
     ["scripts/generate_manual_proof_routes.py"],
+    ["scripts/generate_route_fceux_targets.py"],
     ["scripts/analyze_broad_scan_manual_dump.py"],
     ["scripts/build_v043_from_broad_scan_proof.py"],
     ["scripts/generate_v043_proof_status.py"],
@@ -190,6 +199,7 @@ def main() -> int:
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
+    run("route FCEUX targets", ["scripts/test_route_fceux_targets.py"])
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
     run("batch46 text readiness", ["scripts/test_batch46_text_readiness.py"])

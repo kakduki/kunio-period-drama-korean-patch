@@ -12,6 +12,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `manual_capture_status.md`: generated status of manual dump evidence
 - `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records
 - `manual_proof_routes.md`: three grouped manual routes for the current seven screen-proof candidates
+- `route_fceux_targets.md`: route-specific FCEUX watcher files for those three manual routes
 - `release_test_checklist.md`: short apply/capture/review checklist for this bundle
 - `lua/`: FCEUX manual capture scripts and target tables for v0.4.2 and broad-scan proof
 - `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates
