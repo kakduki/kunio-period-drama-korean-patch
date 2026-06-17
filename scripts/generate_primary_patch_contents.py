@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
 from rom_utils import REPO_ROOT
 
 
@@ -14,35 +15,6 @@ MANIFEST = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 INVENTORY = REPO_ROOT / "rom_analysis" / "bank1_offset_inventory.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "primary_patch_contents.md"
-
-
-READABLE_OVERRIDES = {
-    "Katana": {
-        "source_display": "かたな",
-        "korean_display": "카타나",
-        "meaning": "weapon/item label",
-    },
-    "Hashi": {
-        "source_display": "はし",
-        "korean_display": "다리",
-        "meaning": "stage/location label",
-    },
-    "Heishichi": {
-        "source_display": "へいしち",
-        "korean_display": "헤이시치",
-        "meaning": "name/dialogue label",
-    },
-    "Raifu": {
-        "source_display": "ライフ",
-        "korean_display": "라이프",
-        "meaning": "UI life label",
-    },
-    "Tatsuichi": {
-        "source_display": "たついち",
-        "korean_display": "타츠이치",
-        "meaning": "name/dialogue label",
-    },
-}
 
 
 def load_json(path: Path) -> dict[str, object]:
@@ -87,7 +59,7 @@ def build_rows() -> tuple[list[dict[str, object]], dict[str, object]]:
                 romaji = "Katana"
             elif "0736" in rom_hit or "0739" in rom_hit:
                 romaji = "Raifu"
-        display = READABLE_OVERRIDES.get(romaji, {})
+        display = readable_for_romaji(romaji)
         evidence = str(row.get("evidence_level", ""))
         rows.append(
             {

@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 
 from build_patch import make_records, write_ips
+from readable_labels import readable_for_romaji
 from rom_utils import REPO_ROOT, find_rom_path
 
 
@@ -66,6 +67,10 @@ def write_review_template(path: Path, proof_packet: dict[str, object]) -> bool:
             "rom_offset": task.get("rom_offset"),
             "label": task.get("label", ""),
             "romaji": task.get("romaji", ""),
+            "source_display": readable_for_romaji(task.get("romaji", "")).get("source_display", ""),
+            "korean_display": readable_for_romaji(task.get("romaji", "")).get("korean_display", ""),
+            "meaning": readable_for_romaji(task.get("romaji", "")).get("meaning", ""),
+            "screen_hint": readable_for_romaji(task.get("romaji", "")).get("screen_hint", ""),
             "category": task.get("category", ""),
             "source": task.get("source", ""),
             "korean": task.get("korean", ""),

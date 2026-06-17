@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
 from rom_utils import REPO_ROOT
 
 
@@ -15,6 +16,28 @@ OUT_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 
 BASE_ROM_NAME = "rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
 PRIMARY_ROM_NAME = "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes"
+
+
+def infer_romaji(row: dict[str, object]) -> str:
+    label = str(row.get("label", "")).lower()
+    rom_hit = str(row.get("rom_hit", "")).upper()
+    if "heishichi" in label or rom_hit in {"0X06294", "0X0631B", "0X06359"}:
+        return "Heishichi"
+    if "kajiya" in label or rom_hit == "0X0440C":
+        return "Kajiya"
+    if "tatsuji" in label or rom_hit in {"0X048F4", "0X052A5", "0X05BE5"}:
+        return "Tatsuji"
+    if "0736" in rom_hit or "0739" in rom_hit:
+        return "Raifu"
+    if "0562F" in rom_hit:
+        return "Tatsuichi"
+    if "05643" in rom_hit:
+        return "Heishichi"
+    if "056" in rom_hit:
+        return "Hashi"
+    if "katana" in label or "07227" in rom_hit or "06295" in rom_hit or "0631C" in rom_hit or "0635A" in rom_hit:
+        return "Katana"
+    return ""
 
 
 def capture_mode(row: dict[str, object]) -> dict[str, str]:
@@ -47,6 +70,8 @@ def make_cards(limit: int = 12) -> dict[str, object]:
     cards = []
     for index, row in enumerate(rows, start=1):
         mode = capture_mode(row)
+        romaji = infer_romaji(row)
+        readable = readable_for_romaji(romaji)
         cards.append(
             {
                 "task": index,
@@ -54,6 +79,10 @@ def make_cards(limit: int = 12) -> dict[str, object]:
                 "kind": row.get("kind", ""),
                 "label": row.get("label", ""),
                 "rom_hit": row.get("rom_hit", ""),
+                "romaji": romaji,
+                "source_display": readable.get("source_display", ""),
+                "korean_display": readable.get("korean_display", ""),
+                "screen_hint": readable.get("screen_hint", ""),
                 "source": row.get("source", ""),
                 "korean": row.get("korean", ""),
                 "evidence_risk": f"{row.get('evidence_level', '')} / {row.get('risk', '')}",
@@ -91,7 +120,8 @@ def write_markdown(payload: dict[str, object]) -> None:
             f"## Task {card['task']}: `{card['rom_hit']}`",
             "",
             f"- Kind: `{card['kind']}`",
-            f"- Source/Korean: {card['source']} -> {card['korean']}",
+            f"- Expected text: {card['source_display'] or card['source']} -> {card['korean_display'] or card['korean']}",
+            f"- Screen hint: {card['screen_hint'] or 'match the visible text/menu/status context'}",
             f"- Evidence/Risk: {card['evidence_risk']}",
             f"- Open ROM: `{card['rom_to_open']}`",
             f"- Run Lua: `{card['lua_script']}`",

@@ -9,7 +9,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 1: `0x06295`
 
 - Kind: `conflict_needs_manual_screen`
-- Source/Korean: カタナ -> 카타나
+- Expected text: かたな -> 카타나
+- Screen hint: look for a katana/weapon item label
 - Evidence/Risk: static-candidate+pointer / safe-equal-length
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -20,7 +21,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 2: `0x0631C`
 
 - Kind: `conflict_needs_manual_screen`
-- Source/Korean: カタナ -> 카타나
+- Expected text: かたな -> 카타나
+- Screen hint: look for a katana/weapon item label
 - Evidence/Risk: static-candidate+pointer / safe-equal-length
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -31,7 +33,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 3: `0x0635A`
 
 - Kind: `conflict_needs_manual_screen`
-- Source/Korean: カタナ -> 카타나
+- Expected text: かたな -> 카타나
+- Screen hint: look for a katana/weapon item label
 - Evidence/Risk: static-candidate / safe-equal-length
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -42,7 +45,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 4: `0x05644`
 
 - Kind: `local_overlap_needs_manual_screen`
-- Source/Korean: カタナ -> 카타나
+- Expected text: はし -> 다리
+- Screen hint: look for a bridge/stage/location label
 - Evidence/Risk: static-candidate+pointer / safe-equal-length
 - Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
@@ -53,7 +57,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 5: `0x071A4`
 
 - Kind: `runtime_padding_rule_blocker`
-- Source/Korean: ちから -> 힘
+- Expected text: ちから -> 힘
+- Screen hint: match the visible text/menu/status context
 - Evidence/Risk: runtime-confirmed / needs-padding-rule
 - Open ROM: `output/kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_00.nes first, then compare other padding experiment ROMs`
 - Run Lua: `lua/kunio_manual_screen_dump.lua`
@@ -64,7 +69,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 6: `0x0440C`
 
 - Kind: `broad_non_overlapping`
-- Source/Korean: かじや -> 대장간
+- Expected text: かじや -> 대장간
+- Screen hint: look for a blacksmith/shop or blacksmith-stage label
 - Evidence/Risk: medium / safe-equal-length after screen proof
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -75,7 +81,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 7: `0x048F4`
 
 - Kind: `broad_non_overlapping`
-- Source/Korean: たつじ -> 타츠지
+- Expected text: たつじ -> 타츠지
+- Screen hint: look for a visible Tatsuji boss/name context
 - Evidence/Risk: medium / safe-equal-length after screen proof
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -86,7 +93,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 8: `0x052A5`
 
 - Kind: `broad_non_overlapping`
-- Source/Korean: たつじ -> 타츠지
+- Expected text: たつじ -> 타츠지
+- Screen hint: look for a visible Tatsuji boss/name context
 - Evidence/Risk: medium / safe-equal-length after screen proof
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -97,7 +105,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 9: `0x05BE5`
 
 - Kind: `broad_non_overlapping`
-- Source/Korean: たつじ -> 타츠지
+- Expected text: たつじ -> 타츠지
+- Screen hint: look for a visible Tatsuji boss/name context
 - Evidence/Risk: medium / safe-equal-length after screen proof
 - Open ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Run Lua: `lua/kunio_manual_broad_scan_dump.lua`
@@ -108,7 +117,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 10: `0x05BBA`
 
 - Kind: `wrong_context_or_padding_candidate`
-- Source/Korean: やり -> 창
+- Expected text: やり -> 창
+- Screen hint: match the visible text/menu/status context
 - Evidence/Risk: static-candidate+pointer / needs-padding-rule
 - Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
@@ -119,7 +129,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 11: `0x06001`
 
 - Kind: `wrong_context_or_padding_candidate`
-- Source/Korean: やり -> 창
+- Expected text: やり -> 창
+- Screen hint: match the visible text/menu/status context
 - Evidence/Risk: static-candidate / needs-padding-rule
 - Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Run Lua: `lua/kunio_manual_v042_screen_dump.lua`
@@ -130,7 +141,8 @@ Use these short cards at the FCEUX window. They are intentionally smaller than t
 ## Task 12: `0x0602E`
 
 - Kind: `wrong_context_or_padding_candidate`
-- Source/Korean: そうび -> 장비
+- Expected text: そうび -> 장비
+- Screen hint: match the visible text/menu/status context
 - Evidence/Risk: static-candidate+pointer / needs-padding-rule
 - Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Run Lua: `lua/kunio_manual_v042_screen_dump.lua`

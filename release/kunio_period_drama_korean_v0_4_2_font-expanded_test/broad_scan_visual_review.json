@@ -12,7 +12,11 @@
       "reviewer_note": "",
       "label": "broad_0440c_kajiya",
       "romaji": "Kajiya",
-      "category": "스테이지"
+      "category": "스테이지",
+      "source_display": "かじや",
+      "korean_display": "대장간",
+      "meaning": "blacksmith/stage label",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label"
     },
     {
       "task": 2,
@@ -24,7 +28,11 @@
       "reviewer_note": "",
       "label": "broad_048f4_tatsuji",
       "romaji": "Tatsuji",
-      "category": "보스"
+      "category": "보스",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "meaning": "boss/name label",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "task": 3,
@@ -36,7 +44,11 @@
       "reviewer_note": "",
       "label": "broad_052a5_tatsuji",
       "romaji": "Tatsuji",
-      "category": "보스"
+      "category": "보스",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "meaning": "boss/name label",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "task": 4,
@@ -48,7 +60,11 @@
       "reviewer_note": "",
       "label": "broad_05be5_tatsuji",
       "romaji": "Tatsuji",
-      "category": "보스"
+      "category": "보스",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "meaning": "boss/name label",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "task": 5,
@@ -60,7 +76,11 @@
       "reviewer_note": "",
       "label": "broad_06294_heishichi",
       "romaji": "Heishichi",
-      "category": "보스"
+      "category": "보스",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "meaning": "name/dialogue label",
+      "screen_hint": "look for a visible Heishichi name/dialogue context"
     },
     {
       "task": 6,
@@ -72,7 +92,11 @@
       "reviewer_note": "",
       "label": "broad_0631b_heishichi",
       "romaji": "Heishichi",
-      "category": "보스"
+      "category": "보스",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "meaning": "name/dialogue label",
+      "screen_hint": "look for a visible Heishichi name/dialogue context"
     },
     {
       "task": 7,
@@ -84,7 +108,11 @@
       "reviewer_note": "",
       "label": "broad_06359_heishichi",
       "romaji": "Heishichi",
-      "category": "보스"
+      "category": "보스",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "meaning": "name/dialogue label",
+      "screen_hint": "look for a visible Heishichi name/dialogue context"
     }
   ]
 }

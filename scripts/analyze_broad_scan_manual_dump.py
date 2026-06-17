@@ -8,6 +8,8 @@ import csv
 import json
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "rom_analysis" / "manual_screen_dump_broad_scan"
@@ -120,12 +122,14 @@ def main() -> int:
         rom_hit = normalize_rom_hit(row.get("rom_hit", ""))
         patch_row = patchability.get(rom_hit.upper(), {})
         proof_task = proof_tasks.get(rom_hit.upper(), {})
+        readable = readable_for_romaji(target.get("romaji") or proof_task.get("romaji", ""))
         promotable_matches.append(
             {
                 "record": row,
                 "target": target,
                 "patchability": patch_row,
                 "proof_task": proof_task,
+                "readable": readable,
                 "status": "needs_visual_screen_context",
             }
         )
@@ -147,6 +151,9 @@ def main() -> int:
                 "rom_offset": normalize_rom_hit(item["record"].get("rom_hit", "")),
                 "source": item["target"].get("source", ""),
                 "korean": item["target"].get("korean", ""),
+                "source_display": item["readable"].get("source_display", ""),
+                "korean_display": item["readable"].get("korean_display", ""),
+                "screen_hint": item["readable"].get("screen_hint", ""),
                 "expected_original_bytes": item["record"].get("expected_bytes", ""),
                 "planned_prg_bytes": item["target"].get("future_patch_bytes_preview", ""),
                 "cpu_range": item["record"].get("cpu_range", ""),
@@ -172,19 +179,20 @@ def main() -> int:
     ]
     if promotable_matches:
         lines += [
-            "| label | confidence | ROM | source | korean | expected bytes | future patch preview | new glyphs | decision |",
-            "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+            "| label | confidence | ROM | expected visible text | Korean | screen hint | expected bytes | future patch preview | new glyphs | decision |",
+            "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
         ]
         for item in promotable_matches:
             record = item["record"]
             target = item["target"]
             patch_row = item["patchability"]
+            readable = item["readable"]
             new_glyphs = "".join(patch_row.get("new_glyphs", [])) or "-"
             decision = "visual-screen-context-needed"
             lines.append(
                 f"| `{record.get('label', '')}` | {target.get('confidence', '')} | "
-                f"`{record.get('rom_hit', '')}` | {target.get('source', '')} | "
-                f"{target.get('korean', '')} | `{record.get('expected_bytes', '')}` | "
+                f"`{record.get('rom_hit', '')}` | {readable.get('source_display') or target.get('source', '')} | "
+                f"{readable.get('korean_display') or target.get('korean', '')} | {readable.get('screen_hint', '-')} | `{record.get('expected_bytes', '')}` | "
                 f"`{target.get('future_patch_bytes_preview', '')}` | {new_glyphs} | {decision} |"
             )
     else:

@@ -6,6 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
+
 
 ROOT = Path(__file__).resolve().parents[1]
 READINESS = ROOT / "rom_analysis" / "v042_text_promotion_readiness.json"
@@ -62,6 +64,10 @@ def build_packet() -> dict[str, object]:
             "confidence": row.get("confidence", ""),
             "label": hints.get("label", ""),
             "romaji": hints.get("romaji", ""),
+            "source_display": readable_for_romaji(hints.get("romaji", "")).get("source_display", ""),
+            "korean_display": readable_for_romaji(hints.get("romaji", "")).get("korean_display", ""),
+            "meaning": readable_for_romaji(hints.get("romaji", "")).get("meaning", ""),
+            "screen_hint": readable_for_romaji(hints.get("romaji", "")).get("screen_hint", ""),
             "category": hints.get("category", ""),
             "source": row.get("source", ""),
             "korean": row.get("korean", ""),
@@ -126,13 +132,14 @@ def write_markdown(packet: dict[str, object]) -> None:
         "",
         "## Tasks",
         "",
-        "| # | kind | confidence | ROM | romaji | source | korean | original | planned v0.4.2 bytes | decision |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| # | kind | confidence | ROM | romaji | expected visible text | Korean | screen hint | original | planned v0.4.2 bytes | decision |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for task in packet["tasks"]:
         lines.append(
             f"| {task['task']} | {task['kind']} | {task['confidence']} | `{task['rom_offset']}` | "
-            f"{task['romaji'] or '-'} | {task['source']} | {task['korean']} | `{task['original_bytes']}` | "
+            f"{task['romaji'] or '-'} | {task['source_display'] or task['source']} | "
+            f"{task['korean_display'] or task['korean']} | {task['screen_hint'] or '-'} | `{task['original_bytes']}` | "
             f"`{task['planned_prg_bytes']}` | read hit + screen context |"
         )
     lines += [
