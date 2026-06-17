@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from readable_labels import readable_for_romaji
 from rom_utils import REPO_ROOT
 
 
@@ -67,6 +68,43 @@ def next_action(kind: str) -> str:
     return actions.get(kind, "Review manually before patching.")
 
 
+def infer_romaji(row: dict[str, object]) -> str:
+    label = str(row.get("label", "")).lower()
+    rom_hit = str(row.get("rom_hit", "")).upper()
+    if row.get("romaji"):
+        return str(row.get("romaji"))
+    if "heishichi" in label or rom_hit in {"0X06294", "0X0631B", "0X06359"} or "05643" in rom_hit:
+        return "Heishichi"
+    if "kajiya" in label or rom_hit == "0X0440C":
+        return "Kajiya"
+    if "tatsuji" in label or rom_hit in {"0X048F4", "0X052A5", "0X05BE5"}:
+        return "Tatsuji"
+    if "0736" in rom_hit or "0739" in rom_hit:
+        return "Raifu"
+    if "071A4" in rom_hit:
+        return "Chikara"
+    if "0562F" in rom_hit:
+        return "Tatsuichi"
+    if "056" in rom_hit:
+        return "Hashi"
+    if "yari" in label or rom_hit in {"0X05BBA", "0X06001"}:
+        return "Yari"
+    if "katana" in label or "07227" in rom_hit or "06295" in rom_hit or "0631C" in rom_hit or "0635A" in rom_hit:
+        return "Katana"
+    return ""
+
+
+def add_readable(row: dict[str, object]) -> dict[str, object]:
+    romaji = infer_romaji(row)
+    readable = readable_for_romaji(romaji)
+    out = dict(row)
+    out["romaji"] = romaji
+    out["source_display"] = readable.get("source_display", "")
+    out["korean_display"] = readable.get("korean_display", "")
+    out["screen_hint"] = readable.get("screen_hint", "")
+    return out
+
+
 def make_matrix() -> dict[str, object]:
     primary = load_json(PRIMARY_REPORT)
     manual = load_json(MANUAL_QUEUE)
@@ -81,7 +119,7 @@ def make_matrix() -> dict[str, object]:
         label = str(row.get("label", ""))
         queued = queue_by_label.get(label, {})
         rows.append(
-            {
+            add_readable({
                 "label": label,
                 "status": "applied",
                 "priority": int(queued.get("capture_priority", 25) or 25),
@@ -95,7 +133,7 @@ def make_matrix() -> dict[str, object]:
                 "new_bytes": row.get("new_bytes", ""),
                 "capture_reason": queued.get("capture_reason", "applied candidate still needs visual proof"),
                 "next_action": next_action("applied"),
-            }
+            })
         )
 
     for row in primary.get("skipped", []):
@@ -103,7 +141,7 @@ def make_matrix() -> dict[str, object]:
         queued = queue_by_label.get(label, {})
         kind = classify_skip(row, queue_by_label, conflict_labels)
         rows.append(
-            {
+            add_readable({
                 "label": label,
                 "status": "skipped",
                 "priority": int(queued.get("capture_priority", 80) or 80),
@@ -120,12 +158,12 @@ def make_matrix() -> dict[str, object]:
                 "runtime_hits": queued.get("runtime_hits", 0),
                 "runtime_active_expected_matches": queued.get("runtime_active_expected_matches", 0),
                 "next_action": next_action(kind),
-            }
+            })
         )
 
     for row in conflicts.get("non_overlapping_broad_candidates", []):
         rows.append(
-            {
+            add_readable({
                 "label": f"broad_{row.get('rom_hit', '')}",
                 "status": "broad_candidate",
                 "priority": 35 if row.get("confidence") == "medium" else 25,
@@ -140,7 +178,7 @@ def make_matrix() -> dict[str, object]:
                 "new_glyphs": row.get("new_glyphs", []),
                 "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
                 "next_action": next_action("broad_non_overlapping"),
-            }
+            })
         )
 
     counts: dict[str, int] = {}
@@ -206,13 +244,15 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Highest-Value Next Checks",
         "",
-        "| priority | kind | ROM hit | source | Korean | evidence/risk | next action |",
-        "| ---: | --- | --- | --- | --- | --- | --- |",
+        "| priority | kind | ROM hit | expected text | Korean | screen hint | evidence/risk | next action |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in high_value:
+        source = row.get("source_display") or row.get("source", "")
+        korean = row.get("korean_display") or row.get("korean", "")
         lines.append(
             f"| {row.get('priority', '')} | `{row.get('kind', '')}` | `{row.get('rom_hit', '')}` | "
-            f"{row.get('source', '')} | {row.get('korean', '')} | "
+            f"{source} | {korean} | {row.get('screen_hint') or '-'} | "
             f"{row.get('evidence_level', '')} / {row.get('risk', '')} | {row.get('next_action', '')} |"
         )
 
@@ -220,16 +260,18 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Full Matrix",
         "",
-        "| priority | status | kind | ROM hit | label | bytes | reason |",
-        "| ---: | --- | --- | --- | --- | --- | --- |",
+        "| priority | status | kind | ROM hit | expected text | label | bytes | reason |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         bytes_desc = row.get("old_bytes", "")
         if row.get("new_bytes"):
             bytes_desc = f"{bytes_desc} -> {row.get('new_bytes')}"
+        source = row.get("source_display") or row.get("source", "")
+        korean = row.get("korean_display") or row.get("korean", "")
         lines.append(
             f"| {row.get('priority', '')} | {row.get('status', '')} | `{row.get('kind', '')}` | "
-            f"`{row.get('rom_hit', '')}` | `{row.get('label', '')}` | `{bytes_desc}` | "
+            f"`{row.get('rom_hit', '')}` | {source} -> {korean} | `{row.get('label', '')}` | `{bytes_desc}` | "
             f"{row.get('capture_reason') or row.get('skip_reason', '')} |"
         )
 

@@ -38,7 +38,11 @@
       "skip_reason": "excluded by label",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation."
+      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_0631c_candidate_7c",
@@ -56,7 +60,11 @@
       "skip_reason": "excluded by label",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation."
+      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_0635a_candidate_7c",
@@ -74,7 +82,11 @@
       "skip_reason": "excluded by label",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation."
+      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_05644_candidate_7c",
@@ -92,7 +104,11 @@
       "skip_reason": "overlaps already-applied target watch_rom_05643_보스_80 at 0x05643",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Manually capture this exact screen; the nearby applied row may represent a different overlapping interpretation."
+      "next_action": "Manually capture this exact screen; the nearby applied row may represent a different overlapping interpretation.",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "screen_hint": "look for a bridge/stage/location label"
     },
     {
       "label": "rom_0736a_candidate_93",
@@ -107,7 +123,11 @@
       "old_bytes": "BB 95 AF",
       "new_bytes": "96 8E 97",
       "capture_reason": "safe equal-length UI/status candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Raifu",
+      "source_display": "ライフ",
+      "korean_display": "라이프",
+      "screen_hint": "look for a life/status UI label"
     },
     {
       "label": "rom_0739d_candidate_93",
@@ -122,7 +142,11 @@
       "old_bytes": "BB 95 AF",
       "new_bytes": "96 8E 97",
       "capture_reason": "safe equal-length UI/status candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Raifu",
+      "source_display": "ライフ",
+      "korean_display": "라이프",
+      "screen_hint": "look for a life/status UI label"
     },
     {
       "label": "watch_rom_0561a_스테이지_7c",
@@ -137,7 +161,11 @@
       "old_bytes": "96 88",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "screen_hint": "look for a bridge/stage/location label"
     },
     {
       "label": "watch_rom_0562f_보스_80",
@@ -152,7 +180,11 @@
       "old_bytes": "90 92 82 91",
       "new_bytes": "89 98 8E 90",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Tatsuichi",
+      "source_display": "たついち",
+      "korean_display": "타츠이치",
+      "screen_hint": "look for a visible Tatsuichi name/dialogue context"
     },
     {
       "label": "watch_rom_05643_보스_80",
@@ -167,7 +199,11 @@
       "old_bytes": "9D 82 8C 91",
       "new_bytes": "8D 8E 8F 90",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Heishichi",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "screen_hint": "look for a visible Heishichi name/dialogue context"
     },
     {
       "label": "watch_rom_0569d_스테이지_7a",
@@ -182,7 +218,11 @@
       "old_bytes": "A0 92",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "screen_hint": "look for a bridge/stage/location label"
     },
     {
       "label": "watch_rom_056da_스테이지_80",
@@ -197,7 +237,11 @@
       "old_bytes": "9A 8C",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "screen_hint": "look for a bridge/stage/location label"
     },
     {
       "label": "watch_rom_0571c_스테이지_78",
@@ -212,7 +256,11 @@
       "old_bytes": "92 84",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "watch_rom_057d4_스테이지_8c",
@@ -227,7 +275,11 @@
       "old_bytes": "A6 98",
       "new_bytes": "8B 8C",
       "capture_reason": "safe equal-length event/dialogue candidate; needs screen proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_07227_candidate_84",
@@ -242,7 +294,11 @@
       "old_bytes": "8A 94 99",
       "new_bytes": "88 89 8A",
       "capture_reason": "applied candidate still needs visual proof",
-      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen."
+      "next_action": "Use v0.4.2 ROM and manually verify the visible text on its target screen.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_071a4_candidate_82",
@@ -260,7 +316,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 1797,
       "runtime_active_expected_matches": 11,
-      "next_action": "Test padding experiment ROMs visually on the same status screen before promoting a shortened replacement."
+      "next_action": "Test padding experiment ROMs visually on the same status screen before promoting a shortened replacement.",
+      "romaji": "Chikara",
+      "source_display": "ちから",
+      "korean_display": "힘",
+      "screen_hint": "look for a strength/status stat label"
     },
     {
       "label": "broad_0x0440C",
@@ -279,7 +339,10 @@
         "간"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "かじや",
+      "korean_display": "대장간",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label"
     },
     {
       "label": "broad_0x048F4",
@@ -297,7 +360,10 @@
         "지"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "label": "broad_0x052A5",
@@ -315,7 +381,10 @@
         "지"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "label": "broad_0x05BE5",
@@ -333,7 +402,10 @@
         "지"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "label": "rom_05bba_candidate_7a",
@@ -351,7 +423,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 710,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "Yari",
+      "source_display": "やり",
+      "korean_display": "창",
+      "screen_hint": "look for a spear/weapon item label"
     },
     {
       "label": "rom_06001_candidate_7e",
@@ -369,7 +445,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 35,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "Yari",
+      "source_display": "やり",
+      "korean_display": "창",
+      "screen_hint": "look for a spear/weapon item label"
     },
     {
       "label": "rom_0602e_candidate_8d",
@@ -387,7 +467,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 54,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06479_candidate_7f",
@@ -405,7 +489,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 3,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_066fb_candidate_82",
@@ -423,7 +511,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 546,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_069c5_candidate_79",
@@ -441,7 +533,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 16,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06a3d_candidate_79",
@@ -459,7 +555,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 40,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06a66_candidate_79",
@@ -477,7 +577,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 64,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06b4a_candidate_82",
@@ -495,7 +599,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 1708,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06bc6_candidate_7b",
@@ -513,7 +621,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 160,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06bdf_candidate_8d",
@@ -531,7 +643,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 72,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06de3_candidate_80",
@@ -549,7 +665,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 4264,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06fa1_candidate_8d",
@@ -567,7 +687,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 1117,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_058fb_candidate_79",
@@ -585,7 +709,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_05aa3_candidate_77",
@@ -603,7 +731,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_05aa5_candidate_77",
@@ -621,7 +753,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_05bdf_candidate_7a",
@@ -639,7 +775,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_05c09_candidate_7a",
@@ -657,7 +797,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_05c69_candidate_7a",
@@ -675,7 +819,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_065b0_candidate_80",
@@ -693,7 +841,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06605_candidate_82",
@@ -711,7 +863,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06839_candidate_7e",
@@ -729,7 +885,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06845_candidate_82",
@@ -747,7 +907,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_068c3_candidate_71",
@@ -765,7 +929,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_0691e_candidate_80",
@@ -783,7 +951,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06d1b_candidate_80",
@@ -801,7 +973,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06fde_candidate_80",
@@ -819,7 +995,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_0704f_candidate_7a",
@@ -837,7 +1017,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Do not patch until a padding/terminator rule is proven visually."
+      "next_action": "Do not patch until a padding/terminator rule is proven visually.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     }
   ],
   "high_value_next_checks": [
@@ -857,7 +1041,11 @@
       "skip_reason": "excluded by label",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation."
+      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_0631c_candidate_7c",
@@ -875,7 +1063,11 @@
       "skip_reason": "excluded by label",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation."
+      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_0635a_candidate_7c",
@@ -893,7 +1085,11 @@
       "skip_reason": "excluded by label",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation."
+      "next_action": "Use base ROM broad-scan dump first, then decide whether to keep v0.4.1 exclusion or replace with broad interpretation.",
+      "romaji": "Katana",
+      "source_display": "かたな",
+      "korean_display": "카타나",
+      "screen_hint": "look for a katana/weapon item label"
     },
     {
       "label": "rom_05644_candidate_7c",
@@ -911,7 +1107,11 @@
       "skip_reason": "overlaps already-applied target watch_rom_05643_보스_80 at 0x05643",
       "runtime_hits": 0,
       "runtime_active_expected_matches": 0,
-      "next_action": "Manually capture this exact screen; the nearby applied row may represent a different overlapping interpretation."
+      "next_action": "Manually capture this exact screen; the nearby applied row may represent a different overlapping interpretation.",
+      "romaji": "Hashi",
+      "source_display": "はし",
+      "korean_display": "다리",
+      "screen_hint": "look for a bridge/stage/location label"
     },
     {
       "label": "rom_071a4_candidate_82",
@@ -929,7 +1129,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 1797,
       "runtime_active_expected_matches": 11,
-      "next_action": "Test padding experiment ROMs visually on the same status screen before promoting a shortened replacement."
+      "next_action": "Test padding experiment ROMs visually on the same status screen before promoting a shortened replacement.",
+      "romaji": "Chikara",
+      "source_display": "ちから",
+      "korean_display": "힘",
+      "screen_hint": "look for a strength/status stat label"
     },
     {
       "label": "broad_0x0440C",
@@ -948,7 +1152,10 @@
         "간"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "かじや",
+      "korean_display": "대장간",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label"
     },
     {
       "label": "broad_0x048F4",
@@ -966,7 +1173,10 @@
         "지"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "label": "broad_0x052A5",
@@ -984,7 +1194,10 @@
         "지"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "label": "broad_0x05BE5",
@@ -1002,7 +1215,10 @@
         "지"
       ],
       "capture_reason": "non-overlapping broad-scan candidate; not in v0.4.1 yet",
-      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment."
+      "next_action": "Capture on base ROM; if confirmed, extend glyph plan and build a separate v0.5 experiment.",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "screen_hint": "look for a visible Tatsuji boss/name context"
     },
     {
       "label": "rom_05bba_candidate_7a",
@@ -1020,7 +1236,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 710,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "Yari",
+      "source_display": "やり",
+      "korean_display": "창",
+      "screen_hint": "look for a spear/weapon item label"
     },
     {
       "label": "rom_06001_candidate_7e",
@@ -1038,7 +1258,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 35,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "Yari",
+      "source_display": "やり",
+      "korean_display": "창",
+      "screen_hint": "look for a spear/weapon item label"
     },
     {
       "label": "rom_0602e_candidate_8d",
@@ -1056,7 +1280,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 54,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06479_candidate_7f",
@@ -1074,7 +1302,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 3,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_066fb_candidate_82",
@@ -1092,7 +1324,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 546,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_069c5_candidate_79",
@@ -1110,7 +1346,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 16,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06a3d_candidate_79",
@@ -1128,7 +1368,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 40,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06a66_candidate_79",
@@ -1146,7 +1390,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 64,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06b4a_candidate_82",
@@ -1164,7 +1412,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 1708,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06bc6_candidate_7b",
@@ -1182,7 +1434,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 160,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     },
     {
       "label": "rom_06bdf_candidate_8d",
@@ -1200,7 +1456,11 @@
       "skip_reason": "patch risk 'needs-padding-rule' not selected",
       "runtime_hits": 72,
       "runtime_active_expected_matches": 0,
-      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context."
+      "next_action": "Capture the exact screen manually; previous autoplay read hits used the wrong active bank/context.",
+      "romaji": "",
+      "source_display": "",
+      "korean_display": "",
+      "screen_hint": ""
     }
   ],
   "rule": [

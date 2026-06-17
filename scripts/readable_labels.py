@@ -10,6 +10,12 @@ READABLE_BY_ROMAJI = {
         "meaning": "stage/location label",
         "screen_hint": "look for a bridge/stage/location label",
     },
+    "Chikara": {
+        "source_display": "ちから",
+        "korean_display": "힘",
+        "meaning": "status stat label",
+        "screen_hint": "look for a strength/status stat label",
+    },
     "Heishichi": {
         "source_display": "へいしち",
         "korean_display": "헤이시치",
@@ -27,6 +33,12 @@ READABLE_BY_ROMAJI = {
         "korean_display": "카타나",
         "meaning": "weapon/item label",
         "screen_hint": "look for a katana/weapon item label",
+    },
+    "Yari": {
+        "source_display": "やり",
+        "korean_display": "창",
+        "meaning": "weapon/item label",
+        "screen_hint": "look for a spear/weapon item label",
     },
     "Raifu": {
         "source_display": "ライフ",
