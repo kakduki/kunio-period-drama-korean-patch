@@ -36,6 +36,10 @@ def primary_actions(primary: dict[str, object]) -> list[dict[str, object]]:
                 "group": row["romaji"],
                 "screen_hint": row["screen_hint"],
                 "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+                "record_visual_review": (
+                    f"python scripts/record_primary_visual_review.py {row['rom_hit']} "
+                    f"--confirm --screen-context \"{row['screen_hint']} visible\""
+                ),
                 "after_capture": [
                     "python scripts/refresh_after_manual_capture.py --phase primary",
                 ],
@@ -60,6 +64,10 @@ def route_actions(route_status: dict[str, object]) -> list[dict[str, object]]:
                 "group": route["group"],
                 "screen_hint": route["screen_hint"],
                 "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+                "record_visual_review": (
+                    "python scripts/record_visual_review.py <rom_offset> --confirm "
+                    "--screen-context \"visible matching screen context\""
+                ),
                 "after_capture": [
                     "python scripts/refresh_after_manual_capture.py --phase broad",
                 ],
@@ -119,6 +127,13 @@ def write_markdown(payload: dict[str, object]) -> None:
             f"- Screen hint: {next_action['screen_hint']}",
             f"- Why: {next_action['why']}",
             "- If the visible screen is still the title/opening screen, stop with `Q` and manually change screens.",
+            "- If the visible screen matches the target, record the visual review before refreshing reports.",
+            "",
+            "Record matching visual review:",
+            "",
+            "```powershell",
+            next_action["record_visual_review"],
+            "```",
             "",
             "After capture:",
             "",

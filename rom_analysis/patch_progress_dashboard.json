@@ -38,6 +38,7 @@
     "group": "Katana",
     "screen_hint": "look for a katana/weapon item label",
     "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+    "record_visual_review": "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"look for a katana/weapon item label visible\"",
     "after_capture": [
       "python scripts/refresh_after_manual_capture.py --phase primary"
     ]

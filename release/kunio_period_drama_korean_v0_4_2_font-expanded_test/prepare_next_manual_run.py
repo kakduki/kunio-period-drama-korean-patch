@@ -50,6 +50,7 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
     rom = rel_to_abs(str(action["rom_to_open"]))
     watcher = rel_to_abs(str(action["watcher_lua"]))
     after_capture = [str(command) for command in action.get("after_capture", [])]
+    record_visual_review = str(action.get("record_visual_review", ""))
     lines = [
         "Next manual FCEUX capture",
         "",
@@ -66,6 +67,14 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
         "- Press Q to stop the watcher.",
         "- If the screen is still title/opening, stop and fix manual controls first.",
         "",
+        "If the visible screen matches the target, record visual review:",
+    ]
+    if record_visual_review:
+        lines.append(f"- {record_visual_review}")
+    else:
+        lines.append("- No visual-review command recorded for this action.")
+    lines += [
+        "",
         "After capture:",
     ]
     lines.extend(f"- {command}" for command in after_capture)
@@ -75,6 +84,8 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
             "PowerShell from repository root:",
             f"Set-Location -LiteralPath '{ROOT}'",
         ]
+        if record_visual_review:
+            lines.append(record_visual_review)
         lines.extend(after_capture)
     return "\n".join(lines) + "\n"
 

@@ -25,6 +25,8 @@ def main() -> int:
         "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
         "lua\\kunio_manual_v042_capture_watch.lua",
         "python scripts/refresh_after_manual_capture.py --phase primary",
+        "python scripts/record_primary_visual_review.py 0x07227 --confirm",
+        "If the visible screen matches the target",
         "Press D to save the dump",
     ]
     missing = [phrase for phrase in required if phrase not in out]

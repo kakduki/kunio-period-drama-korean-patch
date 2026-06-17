@@ -19,6 +19,7 @@
     "group": "Katana",
     "screen_hint": "look for a katana/weapon item label",
     "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+    "record_visual_review": "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"look for a katana/weapon item label visible\"",
     "after_capture": [
       "python scripts/refresh_after_manual_capture.py --phase primary"
     ]
@@ -33,6 +34,7 @@
       "group": "Katana",
       "screen_hint": "look for a katana/weapon item label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"look for a katana/weapon item label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -46,6 +48,7 @@
       "group": "Hashi",
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x0569D --confirm --screen-context \"look for a bridge/stage/location label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -59,6 +62,7 @@
       "group": "Hashi",
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x0561A --confirm --screen-context \"look for a bridge/stage/location label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -72,6 +76,7 @@
       "group": "Heishichi",
       "screen_hint": "look for a visible Heishichi name/dialogue context",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x05643 --confirm --screen-context \"look for a visible Heishichi name/dialogue context visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -85,6 +90,7 @@
       "group": "Hashi",
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x057D4 --confirm --screen-context \"look for a bridge/stage/location label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -98,6 +104,7 @@
       "group": "Raifu",
       "screen_hint": "look for a life/status UI label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x0736A --confirm --screen-context \"look for a life/status UI label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -111,6 +118,7 @@
       "group": "Raifu",
       "screen_hint": "look for a life/status UI label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x0739D --confirm --screen-context \"look for a life/status UI label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -124,6 +132,7 @@
       "group": "Tatsuichi",
       "screen_hint": "look for a visible Tatsuichi name/dialogue context",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x0562F --confirm --screen-context \"look for a visible Tatsuichi name/dialogue context visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -137,6 +146,7 @@
       "group": "Hashi",
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x056DA --confirm --screen-context \"look for a bridge/stage/location label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -150,6 +160,7 @@
       "group": "Hashi",
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+      "record_visual_review": "python scripts/record_primary_visual_review.py 0x0571C --confirm --screen-context \"look for a bridge/stage/location label visible\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
@@ -163,6 +174,7 @@
       "group": "Kajiya",
       "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
       "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+      "record_visual_review": "python scripts/record_visual_review.py <rom_offset> --confirm --screen-context \"visible matching screen context\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase broad"
       ]
@@ -176,6 +188,7 @@
       "group": "Tatsuji",
       "screen_hint": "look for a visible Tatsuji boss/name context",
       "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+      "record_visual_review": "python scripts/record_visual_review.py <rom_offset> --confirm --screen-context \"visible matching screen context\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase broad"
       ]
@@ -189,6 +202,7 @@
       "group": "Heishichi",
       "screen_hint": "look for a visible Heishichi name/dialogue context",
       "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
+      "record_visual_review": "python scripts/record_visual_review.py <rom_offset> --confirm --screen-context \"visible matching screen context\"",
       "after_capture": [
         "python scripts/refresh_after_manual_capture.py --phase broad"
       ]

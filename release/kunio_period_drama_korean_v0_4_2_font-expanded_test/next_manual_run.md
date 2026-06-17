@@ -19,6 +19,13 @@ This is the shortest current FCEUX action queue. It combines primary-patch visua
 - Screen hint: look for a katana/weapon item label
 - Why: This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.
 - If the visible screen is still the title/opening screen, stop with `Q` and manually change screens.
+- If the visible screen matches the target, record the visual review before refreshing reports.
+
+Record matching visual review:
+
+```powershell
+python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context "look for a katana/weapon item label visible"
+```
 
 After capture:
 
