@@ -3,7 +3,19 @@
 
 from __future__ import annotations
 
+import io
+from contextlib import redirect_stdout
+
 import refresh_after_manual_capture as refresh
+
+
+def check_next_queue_summary() -> None:
+    buffer = io.StringIO()
+    with redirect_stdout(buffer):
+        refresh.print_next_queue_summary()
+    out = buffer.getvalue()
+    assert "next_manual_queue=actions=13 primary=10 routes=3" in out
+    assert "next_manual_action=phase=primary_v042_visual_review target=0x07227 group=Katana" in out
 
 
 def main() -> int:
@@ -16,8 +28,9 @@ def main() -> int:
     assert any("generate_route_proof_status.py" in command for command in broad)
     assert primary[-1] == "scripts/generate_next_manual_run.py"
     assert broad[-1] == "scripts/generate_next_manual_run.py"
+    check_next_queue_summary()
 
-    print("OK: manual capture refresh helper lists primary and broad refresh commands.")
+    print("OK: manual capture refresh helper lists commands and prints the next queue summary.")
     return 0
 
 

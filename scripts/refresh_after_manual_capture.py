@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 
@@ -32,10 +33,37 @@ BROAD_COMMANDS = [
 ]
 
 
+NEXT_MANUAL_RUN_JSON = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
+
+
 def run(args: list[str]) -> None:
     command = [sys.executable, *args]
     print(" ".join(command))
     subprocess.run(command, cwd=REPO_ROOT, check=True)
+
+
+def print_next_queue_summary(path=NEXT_MANUAL_RUN_JSON) -> None:
+    if not path.exists():
+        print(f"next_manual_run_missing={path}")
+        return
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    summary = payload.get("summary", {})
+    next_action = payload.get("next_action")
+    print(
+        "next_manual_queue="
+        f"actions={summary.get('action_count', 0)} "
+        f"primary={summary.get('primary_visual_pending', 0)} "
+        f"routes={summary.get('route_proof_pending', 0)}"
+    )
+    if isinstance(next_action, dict):
+        print(
+            "next_manual_action="
+            f"phase={next_action.get('phase')} "
+            f"target={next_action.get('target')} "
+            f"group={next_action.get('group')}"
+        )
+    else:
+        print("next_manual_action=none")
 
 
 def main() -> int:
@@ -56,6 +84,7 @@ def main() -> int:
 
     for command in commands:
         run(command)
+    print_next_queue_summary()
     print(f"OK: refreshed manual capture reports for phase={args.phase}")
     return 0
 
