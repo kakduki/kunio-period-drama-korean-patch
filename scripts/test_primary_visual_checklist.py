@@ -22,11 +22,14 @@ def main() -> int:
     assert summary["watcher_lua"] == "lua/kunio_manual_v042_capture_watch.lua"
     assert rows[0]["rom_hit"] == "0x07227"
     assert rows[0]["evidence_level"] == "runtime-confirmed"
+    assert rows[0]["meaning"] == "weapon/item label"
     assert any(row["romaji"] == "Heishichi" for row in rows)
     assert summary["status_counts"].get("not_in_manual_capture_cards", 0) >= 1
 
     md = MD_PATH.read_text(encoding="utf-8")
     assert "Primary Visual Checklist" in md
+    assert "human hint" in md
+    assert "weapon/item label" in md
     assert "lua/kunio_manual_v042_capture_watch.lua" in md
     assert "0x07227" in md
 

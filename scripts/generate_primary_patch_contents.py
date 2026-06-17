@@ -131,17 +131,19 @@ def write_outputs(rows: list[dict[str, object]], summary: dict[str, object]) -> 
         "",
         "## Applied Text Rows",
         "",
-        "| # | ROM offset | romaji | source | Korean | old bytes | new bytes | evidence | manual status |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| # | ROM offset | romaji | human hint | source | Korean | old bytes | new bytes | evidence | manual status |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         source = row["source_display"] or "-"
         korean = row["korean_display"] or "-"
+        display_row = dict(row)
+        display_row["meaning"] = row["meaning"] or "-"
+        display_row["source"] = source
+        display_row["korean"] = korean
         lines.append(
-            "| {index} | `{rom_hit}` | {romaji} | {source} | {korean} | `{old_bytes}` | `{new_bytes}` | {evidence_level} | {manual_status} |".format(
-                **row,
-                source=source,
-                korean=korean,
+            "| {index} | `{rom_hit}` | {romaji} | {meaning} | {source} | {korean} | `{old_bytes}` | `{new_bytes}` | {evidence_level} | {manual_status} |".format(
+                **display_row,
             )
         )
 

@@ -83,6 +83,7 @@ def make_payload() -> dict[str, object]:
                 "priority": priority,
                 "rom_hit": rom_hit,
                 "romaji": row.get("romaji", ""),
+                "meaning": row.get("meaning", ""),
                 "source_display": row.get("source_display", ""),
                 "korean_display": row.get("korean_display", ""),
                 "old_bytes": row.get("old_bytes", ""),
@@ -141,14 +142,14 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Priority Rows",
         "",
-        "| priority | ROM | romaji | source | Korean | evidence | capture status | screen hint |",
-        "| ---: | --- | --- | --- | --- | --- | --- | --- |",
+        "| priority | ROM | romaji | human hint | source | Korean | evidence | capture status | screen hint |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in payload["rows"]:
         source = row["source_display"] or "-"
         korean = row["korean_display"] or "-"
         lines.append(
-            f"| {row['priority']} | `{row['rom_hit']}` | {row['romaji']} | {source} | {korean} | "
+            f"| {row['priority']} | `{row['rom_hit']}` | {row['romaji']} | {row['meaning'] or '-'} | {source} | {korean} | "
             f"`{row['evidence_level']}` | `{row['capture_status']}` | {row['screen_hint']} |"
         )
 
