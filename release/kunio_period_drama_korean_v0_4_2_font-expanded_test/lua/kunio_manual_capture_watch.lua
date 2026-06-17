@@ -60,13 +60,14 @@ while true do
     end
 
     gui.text(2, 8, watcher_title)
-    gui.text(2, 17, "D=dump current screen  Q=stop")
-    gui.text(2, 26, manual.output_dir or "")
+    gui.text(2, 17, "Manual play required; this does not press Start")
+    gui.text(2, 26, "D=dump current screen  Q=stop")
+    gui.text(2, 35, manual.output_dir or "")
     if watcher_hint ~= "" then
-        gui.text(2, 35, watcher_hint)
+        gui.text(2, 44, watcher_hint)
     end
     if frame - last_message_frame < 180 then
-        gui.text(2, watcher_hint ~= "" and 44 or 35, last_message)
+        gui.text(2, watcher_hint ~= "" and 53 or 44, last_message)
     end
 
     if stop_now then

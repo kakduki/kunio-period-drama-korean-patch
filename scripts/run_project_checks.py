@@ -65,6 +65,7 @@ KEY_PYTHON = [
     "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_proof_routes.py",
+    "scripts/test_manual_capture_watcher_overlay.py",
     "scripts/test_next_manual_run.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -207,6 +208,7 @@ def main() -> int:
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
+    run("manual capture watcher overlay", ["scripts/test_manual_capture_watcher_overlay.py"])
     run("next manual run", ["scripts/test_next_manual_run.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
