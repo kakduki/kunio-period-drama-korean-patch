@@ -121,3 +121,8 @@ rom_analysis/  분석 결과와 검증 큐
 scripts/       Python 분석/빌드/검증 도구
 text_data/     전사/번역 참고 자료
 ```
+
+## Current Progress Entry Point
+
+- Start here: `rom_analysis/patch_progress_dashboard.md` shows the current patch status, release blockers, and the next FCEUX manual capture target.
+- `rom_analysis/patch_progress_dashboard.md`: current one-page status, release blockers, and next FCEUX manual action
