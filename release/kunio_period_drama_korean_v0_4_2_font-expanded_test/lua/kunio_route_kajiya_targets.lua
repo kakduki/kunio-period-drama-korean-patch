@@ -2,5 +2,5 @@
 -- Route 1: Kajiya
 -- Use on the base ROM; proof still requires visible screen context.
 return {
-  { label = "route_kajiya_0440c", category = "Kajiya", rom = 0x0440C, start = 0x840C, stop = 0x840E, bytes = "CA D0 E9", old_bytes = "CA D0 E9", source = "Kajiya", romaji = "Kajiya", korean = "Kajiya", confidence = "medium" },
+  { label = "broad_0440c_kajiya", category = "Kajiya", rom = 0x0440C, start = 0x840C, stop = 0x840E, bytes = "CA D0 E9", old_bytes = "CA D0 E9", source = "Kajiya", romaji = "Kajiya", korean = "Kajiya", confidence = "medium" },
 }

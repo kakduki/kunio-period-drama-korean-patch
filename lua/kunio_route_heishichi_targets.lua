@@ -2,7 +2,7 @@
 -- Route 3: Heishichi
 -- Use on the base ROM; proof still requires visible screen context.
 return {
-  { label = "route_heishichi_06294", category = "Heishichi", rom = 0x06294, start = 0xA294, stop = 0xA297, bytes = "9D 82 8C 91", old_bytes = "9D 82 8C 91", source = "Heishichi", romaji = "Heishichi", korean = "Heishichi", confidence = "high" },
-  { label = "route_heishichi_0631b", category = "Heishichi", rom = 0x0631B, start = 0xA31B, stop = 0xA31E, bytes = "9D 82 8C 91", old_bytes = "9D 82 8C 91", source = "Heishichi", romaji = "Heishichi", korean = "Heishichi", confidence = "high" },
-  { label = "route_heishichi_06359", category = "Heishichi", rom = 0x06359, start = 0xA359, stop = 0xA35C, bytes = "9D 82 8C 91", old_bytes = "9D 82 8C 91", source = "Heishichi", romaji = "Heishichi", korean = "Heishichi", confidence = "high" },
+  { label = "broad_06294_heishichi", category = "Heishichi", rom = 0x06294, start = 0xA294, stop = 0xA297, bytes = "9D 82 8C 91", old_bytes = "9D 82 8C 91", source = "Heishichi", romaji = "Heishichi", korean = "Heishichi", confidence = "high" },
+  { label = "broad_0631b_heishichi", category = "Heishichi", rom = 0x0631B, start = 0xA31B, stop = 0xA31E, bytes = "9D 82 8C 91", old_bytes = "9D 82 8C 91", source = "Heishichi", romaji = "Heishichi", korean = "Heishichi", confidence = "high" },
+  { label = "broad_06359_heishichi", category = "Heishichi", rom = 0x06359, start = 0xA359, stop = 0xA35C, bytes = "9D 82 8C 91", old_bytes = "9D 82 8C 91", source = "Heishichi", romaji = "Heishichi", korean = "Heishichi", confidence = "high" },
 }

@@ -2,7 +2,7 @@
 -- Route 2: Tatsuji
 -- Use on the base ROM; proof still requires visible screen context.
 return {
-  { label = "route_tatsuji_048f4", category = "Tatsuji", rom = 0x048F4, start = 0x88F4, stop = 0x88F6, bytes = "07 09 03", old_bytes = "07 09 03", source = "Tatsuji", romaji = "Tatsuji", korean = "Tatsuji", confidence = "medium" },
-  { label = "route_tatsuji_052a5", category = "Tatsuji", rom = 0x052A5, start = 0x92A5, stop = 0x92A7, bytes = "82 84 7E", old_bytes = "82 84 7E", source = "Tatsuji", romaji = "Tatsuji", korean = "Tatsuji", confidence = "medium" },
-  { label = "route_tatsuji_05be5", category = "Tatsuji", rom = 0x05BE5, start = 0x9BE5, stop = 0x9BE7, bytes = "97 99 93", old_bytes = "97 99 93", source = "Tatsuji", romaji = "Tatsuji", korean = "Tatsuji", confidence = "medium" },
+  { label = "broad_048f4_tatsuji", category = "Tatsuji", rom = 0x048F4, start = 0x88F4, stop = 0x88F6, bytes = "07 09 03", old_bytes = "07 09 03", source = "Tatsuji", romaji = "Tatsuji", korean = "Tatsuji", confidence = "medium" },
+  { label = "broad_052a5_tatsuji", category = "Tatsuji", rom = 0x052A5, start = 0x92A5, stop = 0x92A7, bytes = "82 84 7E", old_bytes = "82 84 7E", source = "Tatsuji", romaji = "Tatsuji", korean = "Tatsuji", confidence = "medium" },
+  { label = "broad_05be5_tatsuji", category = "Tatsuji", rom = 0x05BE5, start = 0x9BE5, stop = 0x9BE7, bytes = "97 99 93", old_bytes = "97 99 93", source = "Tatsuji", romaji = "Tatsuji", korean = "Tatsuji", confidence = "medium" },
 }

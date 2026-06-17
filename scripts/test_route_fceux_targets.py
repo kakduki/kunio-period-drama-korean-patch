@@ -21,6 +21,12 @@ def main() -> int:
     assert by_group["Kajiya"]["target_count"] == 1
     assert by_group["Tatsuji"]["target_count"] == 3
     assert by_group["Heishichi"]["target_count"] == 3
+    assert by_group["Kajiya"]["targets"][0]["label"] == "broad_0440c_kajiya"
+    assert {row["label"] for row in by_group["Tatsuji"]["targets"]} == {
+        "broad_048f4_tatsuji",
+        "broad_052a5_tatsuji",
+        "broad_05be5_tatsuji",
+    }
 
     for route in data["routes"]:
         target_lua = REPO_ROOT / route["target_lua"]

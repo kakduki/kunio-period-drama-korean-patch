@@ -36,10 +36,10 @@ def slug(value: str) -> str:
 def target_for(route: dict[str, object], row: dict[str, object]) -> dict[str, object]:
     start = parse_cpu_start(row)
     byte_count = int(row["source_byte_len"])
-    group_slug = slug(str(route["group"]))
     offset_slug = str(row["rom_offset"]).replace("0x", "").lower()
+    romaji_slug = slug(str(row["romaji"]))
     return {
-        "label": f"route_{group_slug}_{offset_slug}",
+        "label": f"broad_{offset_slug}_{romaji_slug}",
         "route": route["route"],
         "group": route["group"],
         "romaji": row["romaji"],

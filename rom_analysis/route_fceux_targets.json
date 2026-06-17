@@ -17,7 +17,7 @@
       ],
       "targets": [
         {
-          "label": "route_kajiya_0440c",
+          "label": "broad_0440c_kajiya",
           "route": 1,
           "group": "Kajiya",
           "romaji": "Kajiya",
@@ -45,7 +45,7 @@
       ],
       "targets": [
         {
-          "label": "route_tatsuji_048f4",
+          "label": "broad_048f4_tatsuji",
           "route": 2,
           "group": "Tatsuji",
           "romaji": "Tatsuji",
@@ -59,7 +59,7 @@
           "screen_hint": "look for a visible Tatsuji boss/name context"
         },
         {
-          "label": "route_tatsuji_052a5",
+          "label": "broad_052a5_tatsuji",
           "route": 2,
           "group": "Tatsuji",
           "romaji": "Tatsuji",
@@ -73,7 +73,7 @@
           "screen_hint": "look for a visible Tatsuji boss/name context"
         },
         {
-          "label": "route_tatsuji_05be5",
+          "label": "broad_05be5_tatsuji",
           "route": 2,
           "group": "Tatsuji",
           "romaji": "Tatsuji",
@@ -101,7 +101,7 @@
       ],
       "targets": [
         {
-          "label": "route_heishichi_06294",
+          "label": "broad_06294_heishichi",
           "route": 3,
           "group": "Heishichi",
           "romaji": "Heishichi",
@@ -115,7 +115,7 @@
           "screen_hint": "look for a visible Heishichi name/dialogue context"
         },
         {
-          "label": "route_heishichi_0631b",
+          "label": "broad_0631b_heishichi",
           "route": 3,
           "group": "Heishichi",
           "romaji": "Heishichi",
@@ -129,7 +129,7 @@
           "screen_hint": "look for a visible Heishichi name/dialogue context"
         },
         {
-          "label": "route_heishichi_06359",
+          "label": "broad_06359_heishichi",
           "route": 3,
           "group": "Heishichi",
           "romaji": "Heishichi",
