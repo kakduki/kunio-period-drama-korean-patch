@@ -1,0 +1,2643 @@
+{
+  "source": {
+    "transcription": "text_data\\쿠니오_시대극_게임_일본어_텍스트_전사.md",
+    "translation_data": "text_data\\translation_data.txt"
+  },
+  "summary": {
+    "transcription_entries": 183,
+    "translation_entries": 144,
+    "translation_entries_with_romaji": 120,
+    "translation_entries_missing_romaji": 24
+  },
+  "reference": [
+    {
+      "source": "ダウンタウンスペシャル",
+      "romaji": "Dauntaun Supesharu",
+      "note": "Downtown Special",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "くにおくんの時代劇だよ全員集合！",
+      "romaji": "Kunio-kun no Jidaigeki da yo Zenin Shuugou!",
+      "note": "게임 전체 타이틀",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "1991 TECHNOS JAPAN",
+      "romaji": "—",
+      "note": "개발사 표기",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "プッシュ スタート ボタン",
+      "romaji": "Pusshu Sutaato Botan",
+      "note": "\"Push Start Button\" (push는 영어지만 게임 내 일본어 표기)",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "ゲームスタート",
+      "romaji": "Geemu Sutaato",
+      "note": "Game Start",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "パスワード",
+      "romaji": "Pasuwaado",
+      "note": "Password (이어하기)",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "パスワードを入力してください",
+      "romaji": "Pasuwaado wo nyuuryoku shite kudasai",
+      "note": "비밀번호 입력 화면",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ぼうけん",
+      "romaji": "Bouken",
+      "note": "Adventure (모드명)",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "たいけつ",
+      "romaji": "Taiketsu",
+      "note": "대결 (VS 모드)",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "くにまさ",
+      "romaji": "Kunimasa",
+      "note": "플레이어 캐릭터 기본 이름 (쿠니오의 시대극 버전 이름)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "つるまつ",
+      "romaji": "Tsurumatsu",
+      "note": "파트너 캐릭터 이름 (츠루마츠)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ライフ",
+      "romaji": "Raifu",
+      "note": "Life (HP 바)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ちから",
+      "romaji": "Chikara",
+      "note": "힘 (능력치)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "うごき",
+      "romaji": "Ugoki",
+      "note": "움직임/속도 (능력치)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ぼうぎょ",
+      "romaji": "Bougyo",
+      "note": "방어 (능력치)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "レベル",
+      "romaji": "Reberu",
+      "note": "Level",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "けいけんち",
+      "romaji": "Keikentchi",
+      "note": "경험치",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "おかね",
+      "romaji": "Okane",
+      "note": "돈/소지금",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "もちもの",
+      "romaji": "Mochimono",
+      "note": "소지품 (인벤토리)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "そうび",
+      "romaji": "Soubi",
+      "note": "장비",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "たべる",
+      "romaji": "Taberu",
+      "note": "먹다 (아이템 사용)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "すてる",
+      "romaji": "Suteru",
+      "note": "버리다 (아이템 폐기)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "こんぼう",
+      "romaji": "Konbou",
+      "note": "몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのこんぼう",
+      "romaji": "Dou no konbou",
+      "note": "구리 몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのこんぼう",
+      "romaji": "Tetsu no konbou",
+      "note": "쇠 몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "はがねのこんぼう",
+      "romaji": "Hagane no konbou",
+      "note": "강철 몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "こんぼう",
+      "romaji": "Konbou",
+      "note": "(기본/여러 종류)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "チェーン",
+      "romaji": "Cheen",
+      "note": "체인",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "ヌンチャク",
+      "romaji": "Nunchaku",
+      "note": "쌍절곤",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "トンファー",
+      "romaji": "Tonfaa",
+      "note": "톤파",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "カタナ",
+      "romaji": "Katana",
+      "note": "카타나",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのカタナ",
+      "romaji": "Dou no katana",
+      "note": "구리 검",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのカタナ",
+      "romaji": "Tetsu no katana",
+      "note": "쇠 검",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "はがねのカタナ",
+      "romaji": "Hagane no katana",
+      "note": "강철 검",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "やり",
+      "romaji": "Yari",
+      "note": "창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのやり",
+      "romaji": "Dou no yari",
+      "note": "구리 창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのやり",
+      "romaji": "Tetsu no yari",
+      "note": "쇠 창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "はがねのやり",
+      "romaji": "Hagane no yari",
+      "note": "강철 창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのどうぐ",
+      "romaji": "Tetsu no dougu",
+      "note": "쇠 도구",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "こがねのつるはし",
+      "romaji": "Kogane no tsuruhashi",
+      "note": "금 곡괭이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのよろい",
+      "romaji": "Dou no yoroi",
+      "note": "구리 갑옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "てつのよろい",
+      "romaji": "Tetsu no yoroi",
+      "note": "쇠 갑옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "はがねのよろい",
+      "romaji": "Hagane no yoroi",
+      "note": "강철 갑옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "どうのたいぼう",
+      "romaji": "Dou no taibou",
+      "note": "구리 방패",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "てつのたいぼう",
+      "romaji": "Tetsu no taibou",
+      "note": "쇠 방패",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "はがねのたいぼう",
+      "romaji": "Hagane no taibou",
+      "note": "강철 방패",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "くすり",
+      "romaji": "Kusuri",
+      "note": "약 (기본 회복)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "いいくすり",
+      "romaji": "Ii kusuri",
+      "note": "좋은 약",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "すごいくすり",
+      "romaji": "Sugoi kusuri",
+      "note": "굉장한 약",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "きのくすり",
+      "romaji": "Ki no kusuri",
+      "note": "기의 약 (전체 회복)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "どくけしくすり",
+      "romaji": "Dokukeshi kusuri",
+      "note": "해독약",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "やきいも",
+      "romaji": "Yakiimo",
+      "note": "군고구마",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "おにぎり",
+      "romaji": "Onigiri",
+      "note": "주먹밥",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "すけすけのたび",
+      "romaji": "Sukesuke no tabi",
+      "note": "투시의 옷 (공중 부양/벽 통과)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "たつじんめがね",
+      "romaji": "Tatsujin megane",
+      "note": "달인의 안경 (쓰러뜨린 보스 기술 습득)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "こうかが2ばい",
+      "romaji": "Kouka ga 2bai",
+      "note": "효과 2배 (장비 아이템 효과 2배)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "UPが2ばい",
+      "romaji": "UP ga 2bai",
+      "note": "UP 2배 (레벨업 능력치 2배)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "みかわしのたび",
+      "romaji": "Mikawashi no tabi",
+      "note": "회피의 옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "ふういんのふだ",
+      "romaji": "Fuuin no fuda",
+      "note": "봉인의 부적",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "きんのたま",
+      "romaji": "Kin no tama",
+      "note": "황금 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "ぎんのたま",
+      "romaji": "Gin no tama",
+      "note": "은 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "あかいたま",
+      "romaji": "Akai tama",
+      "note": "빨간 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "あおいたま",
+      "romaji": "Aoi tama",
+      "note": "파란 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "でんせつのどうぐ",
+      "romaji": "Densetsu no dougu",
+      "note": "전설의 도구",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "なぞのみせ",
+      "romaji": "Nazo no mise",
+      "note": "수수께끼 가게 (비밀 상점)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.4 특수 아이템"
+    },
+    {
+      "source": "ふくびき",
+      "romaji": "Fukubiki",
+      "note": "제비뽑기 / 복권",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.4 특수 아이템"
+    },
+    {
+      "source": "たからのちず",
+      "romaji": "Takara no chizu",
+      "note": "보물 지도",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.4 특수 아이템"
+    },
+    {
+      "source": "#",
+      "romaji": "텍스트",
+      "note": "읽기",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "1",
+      "romaji": "まっはぱんち",
+      "note": "Mahha panchi",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "2",
+      "romaji": "まっはきっく",
+      "note": "Mahha kikku",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "3",
+      "romaji": "まっはたたき",
+      "note": "Mahha tataki",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "4",
+      "romaji": "まっはきうきう",
+      "note": "Mahha kiu kiu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "5",
+      "romaji": "まっはすいんぐ",
+      "note": "Mahha suingu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "6",
+      "romaji": "まっはふみふみ",
+      "note": "Mahha fumifumi",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "7",
+      "romaji": "すくりゅう",
+      "note": "Sukuryuu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "8",
+      "romaji": "にとろあたっく",
+      "note": "Nitoro atakku",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "9",
+      "romaji": "はいぱーがーど",
+      "note": "Haipaa gaado",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "10",
+      "romaji": "せんぷうきゃく",
+      "note": "Senpuu kyaku",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "11",
+      "romaji": "わーぷしゅーと",
+      "note": "Waapu shuuto",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "12",
+      "romaji": "にんげんどりる",
+      "note": "Ningen doriru",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "13",
+      "romaji": "にんげんへり",
+      "note": "Ningen heri",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "14",
+      "romaji": "にんげんぎょらい",
+      "note": "Ningen gyorai",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "15",
+      "romaji": "じぶんぎょらい",
+      "note": "Jibun gyorai",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "16",
+      "romaji": "まっはぱんちII",
+      "note": "Mahha panchi II",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "17",
+      "romaji": "まっはきっくII",
+      "note": "Mahha kikku II",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "18",
+      "romaji": "すくりゅうII",
+      "note": "Sukuryuu II",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.1 기본 필살기"
+    },
+    {
+      "source": "#",
+      "romaji": "텍스트",
+      "note": "읽기",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "19",
+      "romaji": "はりてすぺしゃる",
+      "note": "Harite supesharu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "20",
+      "romaji": "どすすぺしゃる",
+      "note": "Doso supesharu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "21",
+      "romaji": "ずつきすぺしゃる",
+      "note": "Zutsuki supesharu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "22",
+      "romaji": "あんますぺしゃる",
+      "note": "Anma supesharu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "23",
+      "romaji": "びっぐばんぐ",
+      "note": "Biggu bangu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "24",
+      "romaji": "へんしんわざ",
+      "note": "Henshin waza",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "25",
+      "romaji": "やまたのじゅつ",
+      "note": "Yamata no jutsu",
+      "section": "5. 필살기 / 기술 이름 (전체 24종)",
+      "subsection": "5.2 스페셜 기술"
+    },
+    {
+      "source": "ぎんぱち",
+      "romaji": "Ginpachi",
+      "note": "최초의 보스",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "いちべえ",
+      "romaji": "Ichibee",
+      "note": "1번째",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "ろくべえ",
+      "romaji": "Rokubee",
+      "note": "6번째 (いちべえ와 동시 등장)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "きんすけ",
+      "romaji": "Kinsuke",
+      "note": "황금색 적",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "ためきち",
+      "romaji": "Tamekichi",
+      "note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "ごんさく",
+      "romaji": "Gonsaku",
+      "note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "へいるまん",
+      "romaji": "Heiruman",
+      "note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "じんろく",
+      "romaji": "Jinroku",
+      "note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "はんしろう",
+      "romaji": "Hanshirou",
+      "note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "やごろう",
+      "romaji": "Yagorou",
+      "note": "변신술 관련 중요 캐릭터",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "にざえもん",
+      "romaji": "Nizaemon",
+      "note": "강적 (스크류2 필요)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "たついち",
+      "romaji": "Tatsuichi",
+      "note": "드래곤 형제 중 첫째",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "note": "드래곤 형제 중 둘째",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "とらぞうおやぶん",
+      "romaji": "Torazou oyabun",
+      "note": "호랑이 두목 / 최종 보스",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "くろまく",
+      "romaji": "Kuro maku",
+      "note": "흑막",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "じゅうきち",
+      "romaji": "Juukichi",
+      "note": "흑막의 부하",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "あさじろう",
+      "romaji": "Asajirou",
+      "note": "(Shorts 영상에 등장)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "つるまつ",
+      "romaji": "Tsurumatsu",
+      "note": "시작 파트너 (후에 배신)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "さんきち",
+      "romaji": "Sankichi",
+      "note": "전령 (伝令)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "りきごろう",
+      "romaji": "Rikigorou",
+      "note": "조력자 (助っ人) - 쓰러뜨리면 동료가 됨",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "よのすけ",
+      "romaji": "Yonosuke",
+      "note": "약을 줌",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "ぶんぞう",
+      "romaji": "Bunzou",
+      "note": "동료가 됨",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "へいしち",
+      "romaji": "Heishichi",
+      "note": "전령 (伝令へいしち)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "はじまりのまち",
+      "romaji": "Hajimari no machi",
+      "note": "시작의 마을",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "やまみち",
+      "romaji": "Yamamichi",
+      "note": "산길",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はやし",
+      "romaji": "Hayashi",
+      "note": "숲",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "かわら",
+      "romaji": "Kawara",
+      "note": "강가",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "どうくつ",
+      "romaji": "Doukutsu",
+      "note": "동굴",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "やまのうえ",
+      "romaji": "Yama no ue",
+      "note": "산 위",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はし",
+      "romaji": "Hashi",
+      "note": "다리",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "じごく",
+      "romaji": "Jigoku",
+      "note": "지옥 (스테이지)",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "ろうてい",
+      "romaji": "Routei",
+      "note": "누정",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "おしろ",
+      "romaji": "Oshiro",
+      "note": "성",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はたけ",
+      "romaji": "Hatake",
+      "note": "밭",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "とざん",
+      "romaji": "Tozan",
+      "note": "등산",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "かじや",
+      "romaji": "Kajiya",
+      "note": "대장간",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はかば",
+      "romaji": "Hakaba",
+      "note": "묘지",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "みずうみ",
+      "romaji": "Mizuumi",
+      "note": "호수",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "相棒つるまつの裏切り",
+      "romaji": "Aibou Tsurumatsu no uragiri",
+      "note": "파트너 츠루마츠의 배신 이벤트",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "やごろうと再会",
+      "romaji": "Yagorou to saikai",
+      "note": "야고로와 재회",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "変身の術で、やごろうに変身",
+      "romaji": "Henshin no jutsu de, Yagorou ni henshin",
+      "note": "변신술로 야고로로 변신",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "よのすけから薬をもらい",
+      "romaji": "Yonosuke kara kusuri wo morai",
+      "note": "요노스케에게 약을 받음",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "倒して許すと仲間に",
+      "romaji": "Taoshite yurusu to nakama ni",
+      "note": "쓰러뜨리고 용서하면 동료가 됨",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "たついちにトドメをささず仲間に",
+      "romaji": "Tatsuichi ni todome wo sasazu nakama ni",
+      "note": "타츠이치를 마무리하지 않고 동료로",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "賭場でお金稼ぎ",
+      "romaji": "TOBA de okane kasegi",
+      "note": "도박장에서 돈벌이",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "真エンディング",
+      "romaji": "Shin Endingu",
+      "note": "진 엔딩",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "やったー！",
+      "romaji": "Yattaa!",
+      "note": "승리 시",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "まけた…",
+      "romaji": "Maketa...",
+      "note": "패배 시",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "たすけてくれ！",
+      "romaji": "Tasukete kure!",
+      "note": "도와달라는 대사",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "まってくれ！",
+      "romaji": "Matte kure!",
+      "note": "기다려 달라",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "これをもっていけ",
+      "romaji": "Kore wo motte ike",
+      "note": "이것을 가져가라 (아이템 증정)",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "なかまになった！",
+      "romaji": "Nakama ni natta!",
+      "note": "동료가 되었다!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "レベルがあがった！",
+      "romaji": "Reberu ga agatta!",
+      "note": "레벨업!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "わざをおぼえた！",
+      "romaji": "Waza wo oboeta!",
+      "note": "기술을 익혔다!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "みにつけた！",
+      "romaji": "Mi ni tsuketa!",
+      "note": "몸에 익혔다!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "おわり",
+      "romaji": "Owari",
+      "note": "끝",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "おしまい",
+      "romaji": "Oshimai",
+      "note": "끝 (다른 표기)",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "エンディング",
+      "romaji": "Endingu",
+      "note": "엔딩",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "スタッフ",
+      "romaji": "Sutaffu",
+      "note": "스태프",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "TECHNOS JAPAN",
+      "romaji": "—",
+      "note": "개발사",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "おめでとう！",
+      "romaji": "Omedetou!",
+      "note": "축하합니다! (클리어 메시지)",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "こがねむし",
+      "romaji": "Koganemushi",
+      "note": "황금벌레 - 최강 이름 (처음부터 돈/기술 MAX)",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "裏技",
+      "romaji": "Urawaza",
+      "note": "숨겨진 기술/치트",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "なぞのみせ17選",
+      "romaji": "Nazo no mise 17-sen",
+      "note": "수수께끼 가게 17선",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "隠し要素５選",
+      "romaji": "Kakushi youso 5-sen",
+      "note": "숨겨진 요소 5선",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "必殺技MAX",
+      "romaji": "Hissatsuwaza MAX",
+      "note": "필살기 MAX",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "やっぱくにおくん好き",
+      "romaji": "Yappa Kunio-kun suki",
+      "note": "[くにおくんの時代劇だよ全員集合]",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "あさじろう戦",
+      "romaji": "Asajirou sen",
+      "note": "くにおくんの時代劇だよ全員集合！あさじろう戦",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "秘技？やまだのじゅつ！",
+      "romaji": "Higi? Yamada no jutsu!",
+      "note": "秘技？やまだのじゅつ！",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "最強の名前は「こがねむし」",
+      "romaji": "Saikyou no namae wa \"Koganemushi\"",
+      "note": "최강 이름은 \"코가네무시\"",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ボス攻略法",
+      "romaji": "Bosu kouryakuhou",
+      "note": "보스 공략법 #Shorts",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "大金持ちになってみよう",
+      "romaji": "Ooganemochi ni natte miyou",
+      "note": "대부자가 되어보자",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "旋風脚の威力！",
+      "romaji": "Senpuukyaku no iryoku!",
+      "note": "선풍각의 위력!",
+      "section": "11. Shorts 영상에서 확인된 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "카테고리",
+      "romaji": "개수",
+      "note": "비고",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "타이틀/메뉴 텍스트",
+      "romaji": "7",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "스테이터스/UI 텍스트",
+      "romaji": "14",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "무기 아이템",
+      "romaji": "20+",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "방어구",
+      "romaji": "6",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "회복/보조 아이템",
+      "romaji": "18+",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "특수 아이템",
+      "romaji": "3",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "필살기/기술",
+      "romaji": "25",
+      "note": "전 24종 + 야마타의 술",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "보스/적 캐릭터",
+      "romaji": "18",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "아군/조력자",
+      "romaji": "8",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "스테이지/지역",
+      "romaji": "15",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "이벤트/대사",
+      "romaji": "14",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "엔딩/크레딧",
+      "romaji": "5",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "숨겨진 요소",
+      "romaji": "5",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    },
+    {
+      "source": "Shorts 텍스트",
+      "romaji": "7",
+      "note": "",
+      "section": "종합 통계",
+      "subsection": ""
+    }
+  ],
+  "translation_data_joined": [
+    {
+      "source": "ダウンタウンスペシャル",
+      "korean": "다운타운 스페셜",
+      "category": "타이틀",
+      "note": "",
+      "romaji": "Dauntaun Supesharu",
+      "transcription_note": "Downtown Special",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "くにおくんの時代劇だよ全員集合！",
+      "korean": "쿠니오군의 시대극이다 전원집합!",
+      "category": "타이틀",
+      "note": "",
+      "romaji": "Kunio-kun no Jidaigeki da yo Zenin Shuugou!",
+      "transcription_note": "게임 전체 타이틀",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "1991 TECHNOS JAPAN",
+      "korean": "1991 테크노스 재팬",
+      "category": "타이틀",
+      "note": "",
+      "romaji": "—",
+      "transcription_note": "개발사 표기",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "プッシュ スタート ボタン",
+      "korean": "START 버튼",
+      "category": "타이틀",
+      "note": "",
+      "romaji": "Pusshu Sutaato Botan",
+      "transcription_note": "\"Push Start Button\" (push는 영어지만 게임 내 일본어 표기)",
+      "section": "1. 타이틀 화면",
+      "subsection": ""
+    },
+    {
+      "source": "ゲームスタート",
+      "korean": "게임 시작",
+      "category": "메뉴",
+      "note": "",
+      "romaji": "Geemu Sutaato",
+      "transcription_note": "Game Start",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "パスワード",
+      "korean": "비밀번호",
+      "category": "메뉴",
+      "note": "",
+      "romaji": "Pasuwaado",
+      "transcription_note": "Password (이어하기)",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "パスワードを入力してください",
+      "korean": "비밀번호를 입력하세요",
+      "category": "메뉴",
+      "note": "",
+      "romaji": "Pasuwaado wo nyuuryoku shite kudasai",
+      "transcription_note": "비밀번호 입력 화면",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ぼうけん",
+      "korean": "모험",
+      "category": "모드",
+      "note": "",
+      "romaji": "Bouken",
+      "transcription_note": "Adventure (모드명)",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "たいけつ",
+      "korean": "대결",
+      "category": "모드",
+      "note": "",
+      "romaji": "Taiketsu",
+      "transcription_note": "대결 (VS 모드)",
+      "section": "2. 메뉴 / 설정 화면 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "くにまさ",
+      "korean": "쿠니마사",
+      "category": "캐릭터명",
+      "note": "기본 이름(쿠니오)",
+      "romaji": "Kunimasa",
+      "transcription_note": "플레이어 캐릭터 기본 이름 (쿠니오의 시대극 버전 이름)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "つるまつ",
+      "korean": "츠루마츠",
+      "category": "캐릭터명",
+      "note": "파트너",
+      "romaji": "Tsurumatsu",
+      "transcription_note": "시작 파트너 (후에 배신)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "ライフ",
+      "korean": "라이프",
+      "category": "UI",
+      "note": "",
+      "romaji": "Raifu",
+      "transcription_note": "Life (HP 바)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ちから",
+      "korean": "힘",
+      "category": "능력치",
+      "note": "",
+      "romaji": "Chikara",
+      "transcription_note": "힘 (능력치)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "うごき",
+      "korean": "움직임",
+      "category": "능력치",
+      "note": "",
+      "romaji": "Ugoki",
+      "transcription_note": "움직임/속도 (능력치)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "ぼうぎょ",
+      "korean": "방어",
+      "category": "능력치",
+      "note": "",
+      "romaji": "Bougyo",
+      "transcription_note": "방어 (능력치)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "レベル",
+      "korean": "레벨",
+      "category": "UI",
+      "note": "",
+      "romaji": "Reberu",
+      "transcription_note": "Level",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "けいけんち",
+      "korean": "경험치",
+      "category": "UI",
+      "note": "",
+      "romaji": "Keikentchi",
+      "transcription_note": "경험치",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "おかね",
+      "korean": "돈",
+      "category": "UI",
+      "note": "",
+      "romaji": "Okane",
+      "transcription_note": "돈/소지금",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "もちもの",
+      "korean": "소지품",
+      "category": "UI",
+      "note": "",
+      "romaji": "Mochimono",
+      "transcription_note": "소지품 (인벤토리)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "そうび",
+      "korean": "장비",
+      "category": "UI",
+      "note": "",
+      "romaji": "Soubi",
+      "transcription_note": "장비",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "たべる",
+      "korean": "먹다",
+      "category": "UI",
+      "note": "",
+      "romaji": "Taberu",
+      "transcription_note": "먹다 (아이템 사용)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "すてる",
+      "korean": "버리다",
+      "category": "UI",
+      "note": "",
+      "romaji": "Suteru",
+      "transcription_note": "버리다 (아이템 폐기)",
+      "section": "3. 스테이터스 / UI 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "こんぼう",
+      "korean": "몽둥이",
+      "category": "무기",
+      "note": "",
+      "romaji": "Konbou",
+      "transcription_note": "(기본/여러 종류)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのこんぼう",
+      "korean": "구리 몽둥이",
+      "category": "무기",
+      "note": "",
+      "romaji": "Dou no konbou",
+      "transcription_note": "구리 몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのこんぼう",
+      "korean": "쇠 몽둥이",
+      "category": "무기",
+      "note": "",
+      "romaji": "Tetsu no konbou",
+      "transcription_note": "쇠 몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "はがねのこんぼう",
+      "korean": "강철 몽둥이",
+      "category": "무기",
+      "note": "",
+      "romaji": "Hagane no konbou",
+      "transcription_note": "강철 몽둥이",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "カタナ",
+      "korean": "카타나",
+      "category": "무기",
+      "note": "",
+      "romaji": "Katana",
+      "transcription_note": "카타나",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのカタナ",
+      "korean": "구리 검",
+      "category": "무기",
+      "note": "",
+      "romaji": "Dou no katana",
+      "transcription_note": "구리 검",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのカタナ",
+      "korean": "쇠 검",
+      "category": "무기",
+      "note": "",
+      "romaji": "Tetsu no katana",
+      "transcription_note": "쇠 검",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "はがねのカタナ",
+      "korean": "강철 검",
+      "category": "무기",
+      "note": "",
+      "romaji": "Hagane no katana",
+      "transcription_note": "강철 검",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "やり",
+      "korean": "창",
+      "category": "무기",
+      "note": "",
+      "romaji": "Yari",
+      "transcription_note": "창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのやり",
+      "korean": "구리 창",
+      "category": "무기",
+      "note": "",
+      "romaji": "Dou no yari",
+      "transcription_note": "구리 창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "てつのやり",
+      "korean": "쇠 창",
+      "category": "무기",
+      "note": "",
+      "romaji": "Tetsu no yari",
+      "transcription_note": "쇠 창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "はがねのやり",
+      "korean": "강철 창",
+      "category": "무기",
+      "note": "",
+      "romaji": "Hagane no yari",
+      "transcription_note": "강철 창",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "チェーン",
+      "korean": "체인",
+      "category": "무기",
+      "note": "",
+      "romaji": "Cheen",
+      "transcription_note": "체인",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "ヌンチャク",
+      "korean": "쌍절곤",
+      "category": "무기",
+      "note": "",
+      "romaji": "Nunchaku",
+      "transcription_note": "쌍절곤",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "トンファー",
+      "korean": "톤파",
+      "category": "무기",
+      "note": "",
+      "romaji": "Tonfaa",
+      "transcription_note": "톤파",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.1 무기류"
+    },
+    {
+      "source": "どうのよろい",
+      "korean": "구리 갑옷",
+      "category": "방어구",
+      "note": "",
+      "romaji": "Dou no yoroi",
+      "transcription_note": "구리 갑옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "てつのよろい",
+      "korean": "쇠 갑옷",
+      "category": "방어구",
+      "note": "",
+      "romaji": "Tetsu no yoroi",
+      "transcription_note": "쇠 갑옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "はがねのよろい",
+      "korean": "강철 갑옷",
+      "category": "방어구",
+      "note": "",
+      "romaji": "Hagane no yoroi",
+      "transcription_note": "강철 갑옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "どうのたいぼう",
+      "korean": "구리 방패",
+      "category": "방어구",
+      "note": "",
+      "romaji": "Dou no taibou",
+      "transcription_note": "구리 방패",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "てつのたいぼう",
+      "korean": "쇠 방패",
+      "category": "방어구",
+      "note": "",
+      "romaji": "Tetsu no taibou",
+      "transcription_note": "쇠 방패",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "はがねのたいぼう",
+      "korean": "강철 방패",
+      "category": "방어구",
+      "note": "",
+      "romaji": "Hagane no taibou",
+      "transcription_note": "강철 방패",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.2 방어구"
+    },
+    {
+      "source": "くすり",
+      "korean": "약",
+      "category": "회복",
+      "note": "",
+      "romaji": "Kusuri",
+      "transcription_note": "약 (기본 회복)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "いいくすり",
+      "korean": "좋은 약",
+      "category": "회복",
+      "note": "",
+      "romaji": "Ii kusuri",
+      "transcription_note": "좋은 약",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "すごいくすり",
+      "korean": "굉장한 약",
+      "category": "회복",
+      "note": "",
+      "romaji": "Sugoi kusuri",
+      "transcription_note": "굉장한 약",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "きのくすり",
+      "korean": "기의 약",
+      "category": "회복",
+      "note": "",
+      "romaji": "Ki no kusuri",
+      "transcription_note": "기의 약 (전체 회복)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "どくけしくすり",
+      "korean": "해독약",
+      "category": "회복",
+      "note": "",
+      "romaji": "Dokukeshi kusuri",
+      "transcription_note": "해독약",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "やきいも",
+      "korean": "군고구마",
+      "category": "회복",
+      "note": "",
+      "romaji": "Yakiimo",
+      "transcription_note": "군고구마",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "おにぎり",
+      "korean": "주먹밥",
+      "category": "회복",
+      "note": "",
+      "romaji": "Onigiri",
+      "transcription_note": "주먹밥",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "すけすけのたび",
+      "korean": "투시의 옷",
+      "category": "특수",
+      "note": "",
+      "romaji": "Sukesuke no tabi",
+      "transcription_note": "투시의 옷 (공중 부양/벽 통과)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "たつじんめがね",
+      "korean": "달인의 안경",
+      "category": "특수",
+      "note": "",
+      "romaji": "Tatsujin megane",
+      "transcription_note": "달인의 안경 (쓰러뜨린 보스 기술 습득)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "こうかが2ばい",
+      "korean": "효과 2배",
+      "category": "특수",
+      "note": "",
+      "romaji": "Kouka ga 2bai",
+      "transcription_note": "효과 2배 (장비 아이템 효과 2배)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "UPが2ばい",
+      "korean": "UP 2배",
+      "category": "특수",
+      "note": "",
+      "romaji": "UP ga 2bai",
+      "transcription_note": "UP 2배 (레벨업 능력치 2배)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "みかわしのたび",
+      "korean": "회피의 옷",
+      "category": "특수",
+      "note": "",
+      "romaji": "Mikawashi no tabi",
+      "transcription_note": "회피의 옷",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "ふういんのふだ",
+      "korean": "봉인의 부적",
+      "category": "특수",
+      "note": "",
+      "romaji": "Fuuin no fuda",
+      "transcription_note": "봉인의 부적",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "きんのたま",
+      "korean": "황금 구슬",
+      "category": "특수",
+      "note": "",
+      "romaji": "Kin no tama",
+      "transcription_note": "황금 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "ぎんのたま",
+      "korean": "은 구슬",
+      "category": "특수",
+      "note": "",
+      "romaji": "Gin no tama",
+      "transcription_note": "은 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "あかいたま",
+      "korean": "빨간 구슬",
+      "category": "특수",
+      "note": "",
+      "romaji": "Akai tama",
+      "transcription_note": "빨간 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "あおいたま",
+      "korean": "파란 구슬",
+      "category": "특수",
+      "note": "",
+      "romaji": "Aoi tama",
+      "transcription_note": "파란 구슬",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "でんせつのどうぐ",
+      "korean": "전설의 도구",
+      "category": "특수",
+      "note": "",
+      "romaji": "Densetsu no dougu",
+      "transcription_note": "전설의 도구",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.3 회복/보조 아이템"
+    },
+    {
+      "source": "なぞのみせ",
+      "korean": "수수께끼 가게",
+      "category": "특수",
+      "note": "",
+      "romaji": "Nazo no mise",
+      "transcription_note": "수수께끼 가게 (비밀 상점)",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.4 특수 아이템"
+    },
+    {
+      "source": "ふくびき",
+      "korean": "제비뽑기",
+      "category": "특수",
+      "note": "",
+      "romaji": "Fukubiki",
+      "transcription_note": "제비뽑기 / 복권",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.4 특수 아이템"
+    },
+    {
+      "source": "たからのちず",
+      "korean": "보물 지도",
+      "category": "특수",
+      "note": "",
+      "romaji": "Takara no chizu",
+      "transcription_note": "보물 지도",
+      "section": "4. 아이템 / 무기 이름",
+      "subsection": "4.4 특수 아이템"
+    },
+    {
+      "source": "ぎんぱち",
+      "korean": "긴파치",
+      "category": "보스",
+      "note": "",
+      "romaji": "Ginpachi",
+      "transcription_note": "최초의 보스",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "いちべえ",
+      "korean": "이치베에",
+      "category": "보스",
+      "note": "",
+      "romaji": "Ichibee",
+      "transcription_note": "1번째",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "ろくべえ",
+      "korean": "로쿠베에",
+      "category": "보스",
+      "note": "",
+      "romaji": "Rokubee",
+      "transcription_note": "6번째 (いちべえ와 동시 등장)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "きんすけ",
+      "korean": "킨스케",
+      "category": "보스",
+      "note": "",
+      "romaji": "Kinsuke",
+      "transcription_note": "황금색 적",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "ためきち",
+      "korean": "타메키치",
+      "category": "보스",
+      "note": "",
+      "romaji": "Tamekichi",
+      "transcription_note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "ごんさく",
+      "korean": "곤사쿠",
+      "category": "보스",
+      "note": "",
+      "romaji": "Gonsaku",
+      "transcription_note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "category": "보스",
+      "note": "",
+      "romaji": "Heishichi",
+      "transcription_note": "전령 (伝令へいしち)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.2 아군/조력 캐릭터"
+    },
+    {
+      "source": "じんろく",
+      "korean": "진로쿠",
+      "category": "보스",
+      "note": "",
+      "romaji": "Jinroku",
+      "transcription_note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "はんしろう",
+      "korean": "한시로",
+      "category": "보스",
+      "note": "",
+      "romaji": "Hanshirou",
+      "transcription_note": "",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "やごろう",
+      "korean": "야고로",
+      "category": "보스",
+      "note": "",
+      "romaji": "Yagorou",
+      "transcription_note": "변신술 관련 중요 캐릭터",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "にざえもん",
+      "korean": "니자에몬",
+      "category": "보스",
+      "note": "",
+      "romaji": "Nizaemon",
+      "transcription_note": "강적 (스크류2 필요)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "たついち",
+      "korean": "타츠이치",
+      "category": "보스",
+      "note": "",
+      "romaji": "Tatsuichi",
+      "transcription_note": "드래곤 형제 중 첫째",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "たつじ",
+      "korean": "타츠지",
+      "category": "보스",
+      "note": "",
+      "romaji": "Tatsuji",
+      "transcription_note": "드래곤 형제 중 둘째",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "とらぞうおやぶん",
+      "korean": "토라조 두목",
+      "category": "보스",
+      "note": "",
+      "romaji": "Torazou oyabun",
+      "transcription_note": "호랑이 두목 / 최종 보스",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "くろまく",
+      "korean": "흑막",
+      "category": "보스",
+      "note": "",
+      "romaji": "Kuro maku",
+      "transcription_note": "흑막",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "じゅうきち",
+      "korean": "쥬키치",
+      "category": "보스",
+      "note": "",
+      "romaji": "Juukichi",
+      "transcription_note": "흑막의 부하",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "あさじろう",
+      "korean": "아사지로",
+      "category": "보스",
+      "note": "",
+      "romaji": "Asajirou",
+      "transcription_note": "(Shorts 영상에 등장)",
+      "section": "6. 적 캐릭터 / 보스 이름",
+      "subsection": "6.1 스테이지 보스"
+    },
+    {
+      "source": "はじまりのまち",
+      "korean": "시작 마을",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Hajimari no machi",
+      "transcription_note": "시작의 마을",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "やまみち",
+      "korean": "산길",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Yamamichi",
+      "transcription_note": "산길",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はやし",
+      "korean": "숲",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Hayashi",
+      "transcription_note": "숲",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "かわら",
+      "korean": "강가",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Kawara",
+      "transcription_note": "강가",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "どうくつ",
+      "korean": "동굴",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Doukutsu",
+      "transcription_note": "동굴",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "やまのうえ",
+      "korean": "산 위",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Yama no ue",
+      "transcription_note": "산 위",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Hashi",
+      "transcription_note": "다리",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "じごく",
+      "korean": "지옥",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Jigoku",
+      "transcription_note": "지옥 (스테이지)",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "ろうてい",
+      "korean": "누정",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Routei",
+      "transcription_note": "누정",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "おしろ",
+      "korean": "성",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Oshiro",
+      "transcription_note": "성",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はたけ",
+      "korean": "밭",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Hatake",
+      "transcription_note": "밭",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "とざん",
+      "korean": "등산",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Tozan",
+      "transcription_note": "등산",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "かじや",
+      "korean": "대장간",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Kajiya",
+      "transcription_note": "대장간",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "はかば",
+      "korean": "묘지",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Hakaba",
+      "transcription_note": "묘지",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "みずうみ",
+      "korean": "호수",
+      "category": "스테이지",
+      "note": "",
+      "romaji": "Mizuumi",
+      "transcription_note": "호수",
+      "section": "7. 스테이지 / 지역 이름",
+      "subsection": ""
+    },
+    {
+      "source": "やったー！",
+      "korean": "이겼다!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Yattaa!",
+      "transcription_note": "승리 시",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "まけた…",
+      "korean": "졌다…",
+      "category": "대사",
+      "note": "",
+      "romaji": "Maketa...",
+      "transcription_note": "패배 시",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "たすけてくれ！",
+      "korean": "도와줘!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Tasukete kure!",
+      "transcription_note": "도와달라는 대사",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "まってくれ！",
+      "korean": "기다려!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Matte kure!",
+      "transcription_note": "기다려 달라",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "これをもっていけ",
+      "korean": "이걸 가져가라",
+      "category": "대사",
+      "note": "",
+      "romaji": "Kore wo motte ike",
+      "transcription_note": "이것을 가져가라 (아이템 증정)",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "なかまになった！",
+      "korean": "동료가 되었다!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Nakama ni natta!",
+      "transcription_note": "동료가 되었다!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "レベルがあがった！",
+      "korean": "레벨이 올랐다!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Reberu ga agatta!",
+      "transcription_note": "레벨업!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "わざをおぼえた！",
+      "korean": "기술을 익혔다!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Waza wo oboeta!",
+      "transcription_note": "기술을 익혔다!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "みにつけた！",
+      "korean": "몸에 익혔다!",
+      "category": "대사",
+      "note": "",
+      "romaji": "Mi ni tsuketa!",
+      "transcription_note": "몸에 익혔다!",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": "8.1 게임 내 메시지 (일반)"
+    },
+    {
+      "source": "おわり",
+      "korean": "끝",
+      "category": "엔딩",
+      "note": "",
+      "romaji": "Owari",
+      "transcription_note": "끝",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "おしまい",
+      "korean": "끝",
+      "category": "엔딩",
+      "note": "",
+      "romaji": "Oshimai",
+      "transcription_note": "끝 (다른 표기)",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "エンディング",
+      "korean": "엔딩",
+      "category": "엔딩",
+      "note": "",
+      "romaji": "Endingu",
+      "transcription_note": "엔딩",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "スタッフ",
+      "korean": "스태프",
+      "category": "엔딩",
+      "note": "",
+      "romaji": "Sutaffu",
+      "transcription_note": "스태프",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "おめでとう！",
+      "korean": "축하합니다!",
+      "category": "엔딩",
+      "note": "",
+      "romaji": "Omedetou!",
+      "transcription_note": "축하합니다! (클리어 메시지)",
+      "section": "9. 엔딩 / 크레딧",
+      "subsection": ""
+    },
+    {
+      "source": "こがねむし",
+      "korean": "코가네무시",
+      "category": "특수",
+      "note": "최강 이름",
+      "romaji": "Koganemushi",
+      "transcription_note": "황금벌레 - 최강 이름 (처음부터 돈/기술 MAX)",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "裏技",
+      "korean": "숨겨진 기술",
+      "category": "특수",
+      "note": "",
+      "romaji": "Urawaza",
+      "transcription_note": "숨겨진 기술/치트",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "必殺技MAX",
+      "korean": "필살기 MAX",
+      "category": "특수",
+      "note": "",
+      "romaji": "Hissatsuwaza MAX",
+      "transcription_note": "필살기 MAX",
+      "section": "10. 숨겨진 요소 /裏技 관련 텍스트",
+      "subsection": ""
+    },
+    {
+      "source": "相棒つるまつの裏切り",
+      "korean": "파트너 츠루마츠의 배신",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "Aibou Tsurumatsu no uragiri",
+      "transcription_note": "파트너 츠루마츠의 배신 이벤트",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "やごろうと再会",
+      "korean": "야고로와 재회",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "Yagorou to saikai",
+      "transcription_note": "야고로와 재회",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "変身の術で、やごろうに変身",
+      "korean": "변신술로 야고로 변신",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "Henshin no jutsu de, Yagorou ni henshin",
+      "transcription_note": "변신술로 야고로로 변신",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "よのすけから薬をもらい",
+      "korean": "요노스케에게 약을 받음",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "Yonosuke kara kusuri wo morai",
+      "transcription_note": "요노스케에게 약을 받음",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "倒して許すと仲間に",
+      "korean": "쓰러뜨리고 용서하면 동료로",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "Taoshite yurusu to nakama ni",
+      "transcription_note": "쓰러뜨리고 용서하면 동료가 됨",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "賭場でお金稼ぎ",
+      "korean": "도박장에서 돈벌이",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "TOBA de okane kasegi",
+      "transcription_note": "도박장에서 돈벌이",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    },
+    {
+      "source": "真エンディング",
+      "korean": "진 엔딩",
+      "category": "이벤트",
+      "note": "",
+      "romaji": "Shin Endingu",
+      "transcription_note": "진 엔딩",
+      "section": "8. 이벤트 / 스토리 대사",
+      "subsection": ""
+    }
+  ],
+  "translation_data_missing": [
+    {
+      "source": "まっはぱんち",
+      "korean": "마하 펀치",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "まっはきっく",
+      "korean": "마하 킥",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "まっはたたき",
+      "korean": "마하 때리기",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "まっはすいんぐ",
+      "korean": "마하 스윙",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "まっはふみふみ",
+      "korean": "마하 밟기",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "すくりゅう",
+      "korean": "스크류",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "にとろあたっく",
+      "korean": "니트로 어택",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "はいぱーがーど",
+      "korean": "하이퍼 가드",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "せんぷうきゃく",
+      "korean": "선풍각",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "わーぷしゅーと",
+      "korean": "워프 슛",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "にんげんどりる",
+      "korean": "인간 드릴",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "にんげんへり",
+      "korean": "인간 헬기",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "にんげんぎょらい",
+      "korean": "인간 어뢰",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "じぶんぎょらい",
+      "korean": "자폭 어뢰",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "まっはぱんちII",
+      "korean": "마하 펀치 2",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "まっはきっくII",
+      "korean": "마하 킥 2",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "すくりゅうII",
+      "korean": "스크류 2",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "はりてすぺしゃる",
+      "korean": "빰 때리기 S",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "どすすぺしゃる",
+      "korean": "강타 S",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "ずつきすぺしゃる",
+      "korean": "박치기 S",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "あんますぺしゃる",
+      "korean": "안마 S",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "びっぐばんぐ",
+      "korean": "빅뱅",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "へんしんわざ",
+      "korean": "변신술",
+      "category": "기술",
+      "note": ""
+    },
+    {
+      "source": "やまたのじゅつ",
+      "korean": "야마타의 술",
+      "category": "기술",
+      "note": ""
+    }
+  ]
+}

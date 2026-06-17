@@ -20,13 +20,13 @@ Role counts:
 
 | block | ROM range | bytes | identification | evidence | targets | v0.4/PPU status |
 | ---: | --- | ---: | --- | --- | --- | --- |
-| 1 | `0x05610-0x0561F` | 15 | event/dialogue-related | static-candidate+pointer+ppu-sequence | `0x0561A` event/dialogue-related `96 88` | applied, PPU ambiguous |
+| 1 | `0x05610-0x0561F` | 15 | event/dialogue-related | static-candidate+pointer+ppu-sequence | `0x0561A` event/dialogue-related はし (Hashi) `96 88` | applied, PPU ambiguous |
 | 2 | `0x05620-0x05629` | 9 | unidentified | no translation-data target in this block yet | - | - |
-| 3 | `0x0562A-0x05633` | 9 | event/dialogue-related | static-candidate | `0x0562F` event/dialogue-related `90 92 82 91` | applied |
+| 3 | `0x0562A-0x05633` | 9 | event/dialogue-related | static-candidate | `0x0562F` event/dialogue-related たついち (Tatsuichi) `90 92 82 91` | applied |
 | 4 | `0x05634-0x05637` | 3 | unidentified | no translation-data target in this block yet | - | - |
 | 5 | `0x05639-0x0563D` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 6 | `0x0563E-0x05642` | 4 | unidentified | no translation-data target in this block yet | - | - |
-| 7 | `0x05643-0x05647` | 4 | mixed: event/dialogue-related + items/equipment | static-candidate+pointer | `0x05643` event/dialogue-related `9D 82 8C 91`<br>`0x05644` items/equipment `82 8C 91` | applied<br>skipped, skip: overlaps already-applied target watch_rom_05643_보스_80 at 0x05643 |
+| 7 | `0x05643-0x05647` | 4 | mixed: event/dialogue-related + items/equipment | static-candidate+pointer | `0x05643` event/dialogue-related へいしち (Heishichi) `9D 82 8C 91`<br>`0x05644` items/equipment カタナ (Katana) `82 8C 91` | applied<br>skipped, skip: overlaps already-applied target watch_rom_05643_보스_80 at 0x05643 |
 | 8 | `0x05648-0x0564C` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 9 | `0x0564D-0x05651` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 10 | `0x05652-0x05656` | 4 | unidentified | no translation-data target in this block yet | - | - |
@@ -40,14 +40,14 @@ Role counts:
 | 18 | `0x0568D-0x05691` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 19 | `0x05692-0x05696` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 20 | `0x05697-0x0569A` | 3 | unidentified | no translation-data target in this block yet | - | - |
-| 21 | `0x0569C-0x0569F` | 3 | event/dialogue-related | encoding-exact+ppu-sequence | `0x0569D` event/dialogue-related `A0 92` | applied, PPU ambiguous |
+| 21 | `0x0569C-0x0569F` | 3 | event/dialogue-related | encoding-exact+ppu-sequence | `0x0569D` event/dialogue-related はし (Hashi) `A0 92` | applied, PPU ambiguous |
 | 22 | `0x056A1-0x056A4` | 3 | unidentified | no translation-data target in this block yet | - | - |
 | 23 | `0x056A6-0x056AF` | 9 | unidentified | no translation-data target in this block yet | - | - |
 | 24 | `0x056B0-0x056C5` | 21 | unidentified | no translation-data target in this block yet | - | - |
 | 25 | `0x056C6-0x056CA` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 26 | `0x056CB-0x056CF` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 27 | `0x056D0-0x056D4` | 4 | unidentified | no translation-data target in this block yet | - | - |
-| 28 | `0x056D5-0x056DE` | 9 | event/dialogue-related | static-candidate+ppu-sequence | `0x056DA` event/dialogue-related `9A 8C` | applied, PPU ambiguous |
+| 28 | `0x056D5-0x056DE` | 9 | event/dialogue-related | static-candidate+ppu-sequence | `0x056DA` event/dialogue-related はし (Hashi) `9A 8C` | applied, PPU ambiguous |
 | 29 | `0x056DF-0x056E2` | 3 | unidentified | no translation-data target in this block yet | - | - |
 | 30 | `0x056E4-0x056E8` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 31 | `0x056E9-0x056F2` | 9 | unidentified | no translation-data target in this block yet | - | - |
@@ -56,7 +56,7 @@ Role counts:
 | 34 | `0x056FD-0x05701` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 35 | `0x05702-0x0570B` | 9 | unidentified | no translation-data target in this block yet | - | - |
 | 36 | `0x0570C-0x05715` | 9 | unidentified | no translation-data target in this block yet | - | - |
-| 37 | `0x05716-0x05724` | 14 | event/dialogue-related | static-candidate+ppu-sequence | `0x0571C` event/dialogue-related `92 84` | applied, PPU ambiguous |
+| 37 | `0x05716-0x05724` | 14 | event/dialogue-related | static-candidate+ppu-sequence | `0x0571C` event/dialogue-related はし (Hashi) `92 84` | applied, PPU ambiguous |
 | 38 | `0x05725-0x05729` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 39 | `0x0572A-0x05738` | 14 | unidentified | no translation-data target in this block yet | - | - |
 | 40 | `0x05739-0x0573D` | 4 | unidentified | no translation-data target in this block yet | - | - |
@@ -84,7 +84,7 @@ Role counts:
 | 62 | `0x057C5-0x057C9` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 63 | `0x057CA-0x057CE` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 64 | `0x057CF-0x057D3` | 4 | unidentified | no translation-data target in this block yet | - | - |
-| 65 | `0x057D4-0x057D8` | 4 | event/dialogue-related | static-candidate+pointer+ppu-sequence | `0x057D4` event/dialogue-related `A6 98` | applied, PPU ambiguous |
+| 65 | `0x057D4-0x057D8` | 4 | event/dialogue-related | static-candidate+pointer+ppu-sequence | `0x057D4` event/dialogue-related はし (Hashi) `A6 98` | applied, PPU ambiguous |
 | 66 | `0x057D9-0x057DD` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 67 | `0x057DE-0x057E2` | 4 | unidentified | no translation-data target in this block yet | - | - |
 | 68 | `0x057E3-0x057E7` | 4 | unidentified | no translation-data target in this block yet | - | - |

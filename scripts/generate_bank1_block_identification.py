@@ -15,6 +15,7 @@ INVENTORY = ROOT / "rom_analysis" / "bank1_offset_inventory.json"
 V04_TARGETS = ROOT / "rom_analysis" / "v04_equal_length_fceux_targets.json"
 V04_BUILD_REPORT = ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4_equal_length_static_build_report.json"
 V04_PPU_ANALYSIS = ROOT / "rom_analysis" / "fceux_v04_ppu_watch" / "analysis_v2_v04_targets.md"
+READABLE_REFERENCE = ROOT / "text_data" / "translation_readable_reference.json"
 OUT_MD = ROOT / "rom_analysis" / "bank1_block_identification.md"
 OUT_JSON = ROOT / "rom_analysis" / "bank1_block_identification.json"
 
@@ -96,6 +97,16 @@ def build_v04_maps() -> tuple[dict[str, dict], dict[str, dict], set[str]]:
     return target_by_source, patch_by_source, ppu_source_labels
 
 
+def load_readable_reference() -> dict[str, dict]:
+    if not READABLE_REFERENCE.exists():
+        return {}
+    data = load_json(READABLE_REFERENCE)
+    return {
+        row["source"]: row
+        for row in data.get("translation_data_joined", [])
+    }
+
+
 def evidence_rank(text: str) -> int:
     order = {
         "runtime-confirmed": 4,
@@ -129,15 +140,19 @@ def row_from_target(
     v04_target: dict | None,
     patch: dict | None,
     ppu_source_labels: set[str],
+    readable_by_source: dict[str, dict],
 ) -> dict:
     runtime_hits = int(target.get("runtime_hits", 0) or 0)
     runtime_matches = int(target.get("runtime_active_expected_matches", 0) or 0)
+    readable = readable_by_source.get(str(target.get("source", "")), {})
     return {
         "label": source_label,
         "rom_hit": target["rom_hit"],
         "category_group": target.get("category_group", "other"),
         "category": target.get("category", ""),
         "source": target.get("source", ""),
+        "source_romaji": readable.get("romaji", ""),
+        "source_context": readable.get("subsection") or readable.get("section", ""),
         "korean": target.get("korean", ""),
         "expected_bytes": target.get("expected_bytes", ""),
         "evidence_level": target.get("evidence_level", ""),
@@ -158,6 +173,7 @@ def make_payload() -> dict:
     blocks = block_map.get("blocks", [])
     inventory_by_offset = build_inventory_by_offset(inventory)
     v04_by_source, patch_by_source, ppu_source_labels = build_v04_maps()
+    readable_by_source = load_readable_reference()
 
     identified_blocks = []
     for block in blocks:
@@ -175,6 +191,7 @@ def make_payload() -> dict:
                         v04_by_source.get(label),
                         patch_by_source.get(label),
                         ppu_source_labels,
+                        readable_by_source,
                     )
                 )
 
@@ -213,6 +230,7 @@ def make_payload() -> dict:
             "v04_targets": rel(V04_TARGETS),
             "v04_build_report": rel(V04_BUILD_REPORT),
             "v04_ppu_analysis": rel(V04_PPU_ANALYSIS),
+            "readable_reference": rel(READABLE_REFERENCE) if READABLE_REFERENCE.exists() else None,
         },
         "summary": {
             "block_count": len(identified_blocks),
@@ -261,7 +279,7 @@ def write_markdown(payload: dict) -> None:
         status_text = "-"
         if targets:
             target_text = "<br>".join(
-                f"`{row['rom_hit']}` {row['category_group']} `{row['expected_bytes']}`"
+                f"`{row['rom_hit']}` {row['category_group']} {format_source(row)} `{row['expected_bytes']}`"
                 for row in targets
             )
             status_text = "<br>".join(
@@ -311,6 +329,12 @@ def write_markdown(payload: dict) -> None:
         "",
     ]
     OUT_MD.write_text("\n".join(lines), encoding="utf-8")
+
+
+def format_source(row: dict) -> str:
+    if row.get("source_romaji"):
+        return f"{row['source']} ({row['source_romaji']})"
+    return row.get("source", "")
 
 
 def main() -> int:
