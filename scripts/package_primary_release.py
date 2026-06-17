@@ -16,6 +16,7 @@ MANIFEST_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 MANIFEST_MD = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.md"
 DECISION_MATRIX_JSON = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.json"
 DECISION_MATRIX_MD = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.md"
+STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
 RELEASE_ROOT = REPO_ROOT / "release"
 
 
@@ -45,6 +46,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         f"- `{ips_name}`: primary IPS patch",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
         "- `patch_decision_matrix.md`: next manual verification priorities",
+        "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -64,6 +66,14 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "",
         "```powershell",
         "python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes",
+        "```",
+        "",
+        "## Apply From This Bundle Only",
+        "",
+        "From inside this extracted bundle folder:",
+        "",
+        "```powershell",
+        "python apply_ips_standalone.py C:\\path\\to\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
         "```",
         "",
         "## Verify In Repository",
@@ -108,6 +118,7 @@ def package() -> dict[str, object]:
         (MANIFEST_JSON, "patch_candidate_manifest.json"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
+        (STANDALONE_APPLIER, "apply_ips_standalone.py"),
     ]:
         dst = bundle_dir / name
         safe_copy(src, dst)

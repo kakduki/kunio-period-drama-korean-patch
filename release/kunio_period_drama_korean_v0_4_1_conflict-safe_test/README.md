@@ -7,6 +7,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips`: primary IPS patch
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `patch_decision_matrix.md`: next manual verification priorities
+- `apply_ips_standalone.py`: standalone IPS applier for this bundle
 - `SHA256SUMS.txt`: checksums for bundle files
 
 ## Required Base ROM
@@ -26,6 +27,14 @@ From the repository root, after putting your base ROM in `rom/`:
 
 ```powershell
 python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes
+```
+
+## Apply From This Bundle Only
+
+From inside this extracted bundle folder:
+
+```powershell
+python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes
 ```
 
 ## Verify In Repository
