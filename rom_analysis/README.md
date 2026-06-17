@@ -35,6 +35,7 @@
 - `fceux_padding_exp_ppu_watch_comparison.md` / `fceux_padding_exp_ppu_watch_comparison.json`: strict same-frame, consecutive-VRAM comparison for the padding experiment PPU runs
 - `manual_capture_workflow.md`: recommended workflow for manually reaching a real dialogue/menu screen in FCEUX, then running a one-shot Lua dump instead of blind autoplay
 - `manual_capture_queue.md` / `manual_capture_queue.json`: prioritized list of screens/targets to capture manually before promoting more PRG text patches
+- `manual_capture_cards.md` / `manual_capture_cards.json`: short FCEUX task cards generated from the decision matrix; use these at the emulator window
 - `translation_pattern_scan.md` / `translation_pattern_scan.json`: broad ROM scan against the full readable translation reference, excluding already-known Bank 1 targets where possible
 - `translation_scan_capture_queue.md` / `translation_scan_capture_queue.json`: supplemental manual capture queue for new high/medium confidence hits from the broad translation scan
 - `broad_scan_patchability.md` / `broad_scan_patchability.json`: filters the broad-scan queue down to length-safe future v0.5 candidates and lists any additional glyph slots needed if screen proof confirms them

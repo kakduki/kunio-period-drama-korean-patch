@@ -16,6 +16,8 @@ MANIFEST_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 MANIFEST_MD = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.md"
 DECISION_MATRIX_JSON = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.json"
 DECISION_MATRIX_MD = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.md"
+MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
+MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
 RELEASE_ROOT = REPO_ROOT / "release"
 
@@ -46,6 +48,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         f"- `{ips_name}`: primary IPS patch",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
         "- `patch_decision_matrix.md`: next manual verification priorities",
+        "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
@@ -118,6 +121,8 @@ def package() -> dict[str, object]:
         (MANIFEST_JSON, "patch_candidate_manifest.json"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
+        (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
+        (MANUAL_CAPTURE_CARDS_JSON, "manual_capture_cards.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
     ]:
         dst = bundle_dir / name

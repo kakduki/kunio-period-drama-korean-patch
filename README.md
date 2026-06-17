@@ -43,6 +43,7 @@ python scripts/run_project_checks.py --regen
 ## 다음에 볼 파일
 
 - `rom_analysis/patch_decision_matrix.md`: 다음 수동 검증 우선순위
+- `rom_analysis/manual_capture_cards.md`: FCEUX 앞에서 바로 따라 할 짧은 캡처 카드
 - `rom_analysis/patch_candidate_manifest.md`: 현재 ROM/IPS 후보 목록
 - `rom_analysis/manual_capture_workflow.md`: FCEUX 수동 캡처 절차
 - `rom_analysis/v04_broad_candidate_conflicts.md`: v0.4와 broad-scan 충돌 목록
