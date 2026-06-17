@@ -56,6 +56,8 @@ PRIMARY_PATCH_CONTENTS_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_conten
 PRIMARY_PATCH_CONTENTS_MD = REPO_ROOT / "rom_analysis" / "primary_patch_contents.md"
 FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"
 FONT_EXPANSION_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"
+FONT_EXPANSION_MAX_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.json"
+FONT_EXPANSION_MAX_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
 VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_visual_review.py"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
@@ -116,6 +118,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `font_expansion_readiness.md`: current font asset gate for planned glyph batches",
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report",
+        "- `kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md`: largest currently buildable font-only expansion candidate report",
         "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
         "- `record_visual_review.py`: helper to mark visual review rows after a manual screen check",
         "- `SHA256SUMS.txt`: checksums for bundle files",
@@ -247,6 +250,8 @@ def package() -> dict[str, object]:
         (BROAD_PREVIEW_REPORT_JSON, "kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.json"),
         (FONT_EXPANSION_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"),
         (FONT_EXPANSION_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"),
+        (FONT_EXPANSION_MAX_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md"),
+        (FONT_EXPANSION_MAX_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
         (VISUAL_REVIEW_RECORDER, "record_visual_review.py"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),

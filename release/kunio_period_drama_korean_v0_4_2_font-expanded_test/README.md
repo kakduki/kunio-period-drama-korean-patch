@@ -30,6 +30,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `font_expansion_readiness.md`: current font asset gate for planned glyph batches
 - `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2
 - `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report
+- `kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md`: largest currently buildable font-only expansion candidate report
 - `apply_ips_standalone.py`: standalone IPS applier for this bundle
 - `record_visual_review.py`: helper to mark visual review rows after a manual screen check
 - `SHA256SUMS.txt`: checksums for bundle files

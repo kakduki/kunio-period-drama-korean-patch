@@ -11,6 +11,7 @@ from rom_utils import REPO_ROOT
 
 JSON_PATH = REPO_ROOT / "rom_analysis" / "font_expansion_readiness.json"
 MD_PATH = REPO_ROOT / "rom_analysis" / "font_expansion_readiness.md"
+BATCH46_REPORT = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.json"
 
 
 def main() -> int:
@@ -28,6 +29,13 @@ def main() -> int:
     assert batch64["buildable_with_current_font_assets"] is False
     assert batch64["first_missing_glyph"] == "\uc7ac"
     assert batch64["first_missing_slot"] == "0x141"
+
+    batch46 = json.loads(BATCH46_REPORT.read_text(encoding="utf-8"))
+    assert batch46["candidate"] == "v0.5 font-expansion batch 46"
+    assert batch46["added_glyph_count"] == summary["max_prefix_buildable_extra_glyphs"]
+    assert batch46["glyphs_written"] == 64
+    assert batch46["escaped_chr_bank7_bytes"] == 0
+    assert batch46["patched_md5"] == "5e10cabaff7452fe842726194f4ac843"
 
     md = MD_PATH.read_text(encoding="utf-8")
     assert "Font Expansion Readiness" in md

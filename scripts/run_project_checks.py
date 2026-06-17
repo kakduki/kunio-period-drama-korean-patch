@@ -106,6 +106,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_broad_scan_patchability.py"],
     ["scripts/generate_broad_scan_fceux_targets.py"],
     ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
+    ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "46"],
     ["scripts/build_v042_font_expanded_candidate.py"],
     ["scripts/build_broad_preview_candidate.py"],
     ["scripts/generate_patch_candidate_manifest.py"],
