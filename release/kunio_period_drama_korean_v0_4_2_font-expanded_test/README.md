@@ -5,6 +5,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 ## Files
 
 - `kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`: primary IPS patch
+- `patch_progress_dashboard.md`: one-page current status, blockers, and next action
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS
 - `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS

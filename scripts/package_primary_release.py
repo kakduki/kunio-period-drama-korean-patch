@@ -16,6 +16,8 @@ MANIFEST_JSON = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 MANIFEST_MD = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.md"
 DECISION_MATRIX_JSON = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.json"
 DECISION_MATRIX_MD = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.md"
+PROGRESS_DASHBOARD_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
+PROGRESS_DASHBOARD_MD = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -114,6 +116,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "## Files",
         "",
         f"- `{ips_name}`: primary IPS patch",
+        "- `patch_progress_dashboard.md`: one-page current status, blockers, and next action",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
         "- `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS",
         "- `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS",
@@ -259,6 +262,8 @@ def package() -> dict[str, object]:
         (PRIMARY_PATCH_CONTENTS_JSON, "primary_patch_contents.json"),
         (PRIMARY_VISUAL_CHECKLIST_MD, "primary_visual_checklist.md"),
         (PRIMARY_VISUAL_CHECKLIST_JSON, "primary_visual_checklist.json"),
+        (PROGRESS_DASHBOARD_MD, "patch_progress_dashboard.md"),
+        (PROGRESS_DASHBOARD_JSON, "patch_progress_dashboard.json"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),

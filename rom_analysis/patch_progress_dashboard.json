@@ -1,0 +1,45 @@
+{
+  "source": {
+    "primary_patch_contents": "rom_analysis/primary_patch_contents.json",
+    "next_manual_run": "rom_analysis/next_manual_run.json",
+    "primary_visual_checklist": "rom_analysis/primary_visual_checklist.json",
+    "v043_proof_status": "rom_analysis/v043_proof_status.json",
+    "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json"
+  },
+  "summary": {
+    "primary_candidate": "v0.4.2 font-expanded",
+    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
+    "primary_expected_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+    "primary_applied_rows": 10,
+    "primary_runtime_confirmed_rows": 1,
+    "primary_static_candidate_rows": 8,
+    "pending_manual_actions": 13,
+    "pending_primary_visual_checks": 10,
+    "pending_v043_route_proofs": 3,
+    "v043_rows": 7,
+    "v043_cpu_read_matches": 0,
+    "v043_visual_confirmations": 0,
+    "v043_applied_rows": 0,
+    "manual_dump_record_files": 0,
+    "release_ready": false,
+    "release_blockers": [
+      "Primary v0.4.2 rows still need visible-screen review.",
+      "v0.4.3 candidates have no base-ROM CPU-read proof yet.",
+      "v0.4.3 candidates have no visual-context confirmations yet.",
+      "No checked-in manual FCEUX dump records exist yet."
+    ]
+  },
+  "next_action": {
+    "phase": "primary_v042_visual_review",
+    "priority": 10,
+    "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+    "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+    "target": "0x07227",
+    "group": "Katana",
+    "screen_hint": "look for a katana/weapon item label",
+    "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+    "after_capture": [
+      "python scripts/refresh_after_manual_capture.py --phase primary"
+    ]
+  }
+}

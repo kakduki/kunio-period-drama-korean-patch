@@ -38,6 +38,7 @@ KEY_PYTHON = [
     "scripts/generate_font_expansion_readiness.py",
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
+    "scripts/generate_patch_progress_dashboard.py",
     "scripts/generate_primary_patch_contents.py",
     "scripts/generate_primary_visual_checklist.py",
     "scripts/generate_reference_capture_plan.py",
@@ -68,6 +69,7 @@ KEY_PYTHON = [
     "scripts/test_manual_proof_routes.py",
     "scripts/test_manual_capture_watcher_overlay.py",
     "scripts/test_next_manual_run.py",
+    "scripts/test_patch_progress_dashboard.py",
     "scripts/test_prepare_next_manual_run.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -152,6 +154,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_manual_capture_status.py"],
     ["scripts/generate_manual_dump_inventory.py"],
     ["scripts/generate_next_manual_run.py"],
+    ["scripts/generate_patch_progress_dashboard.py"],
 ]
 
 
@@ -213,6 +216,7 @@ def main() -> int:
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
     run("manual capture watcher overlay", ["scripts/test_manual_capture_watcher_overlay.py"])
     run("next manual run", ["scripts/test_next_manual_run.py"])
+    run("patch progress dashboard", ["scripts/test_patch_progress_dashboard.py"])
     run("next manual run helper", ["scripts/test_prepare_next_manual_run.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
