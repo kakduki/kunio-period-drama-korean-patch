@@ -45,6 +45,7 @@
 - `manual_screen_dump_v041/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v041_screen_dump.lua`
 - `manual_screen_dump_broad_scan/`: destination for one-shot broad-scan candidate dumps from `lua/kunio_manual_broad_scan_dump.lua`; summarize with `scripts/analyze_broad_scan_manual_dump.py`
 - `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4.1 conflict-safe as the primary manual-test ROM and padding builds as non-release experiments
+- `patch_decision_matrix.md` / `patch_decision_matrix.json`: ranked next-decision table for applied rows, skipped rows, broad-scan conflicts, padding blockers, and manual capture priorities
 - `../scripts/verify_primary_patch.py`: verifies that the current primary IPS applies to the expected base ROM and produces the manifest MD5
 - `../scripts/run_project_checks.py`: runs the core consistency checks for Python scripts, generated Lua targets, primary IPS verification, and manifest invariants; use `--regen` to rebuild the current generated candidate artifacts first
 - `../scripts/package_primary_release.py`: creates a ROM-free test bundle for the current primary IPS at `../release/kunio_period_drama_korean_v0_4_1_conflict-safe_test/` and `../release/kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip`
