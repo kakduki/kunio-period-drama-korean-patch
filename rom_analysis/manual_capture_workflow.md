@@ -113,6 +113,7 @@ Each capture writes files named like:
 The summary script writes:
 
 - `rom_analysis/manual_screen_dump/summary.md`
+- `rom_analysis/manual_screen_dump/summary.json`
 
 ## Interpretation
 
@@ -123,6 +124,9 @@ The summary script writes:
   target list does not cover it yet, so the captured RAM/screenshot should feed
   broader static matching.
 - The `.gd` file is raw FCEUX/GD screenshot data from `gui.gdscreenshot()`.
+- `summary.json` records the latest screenshot path, captured files, and active
+  matches so later status scripts can consume the capture without parsing
+  Markdown.
 
 ## Cutoff Rule
 

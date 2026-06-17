@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 from pathlib import Path
 
 
@@ -30,32 +31,40 @@ def latest_records(input_dir: Path) -> Path | None:
     return files[-1] if files else None
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input-dir", default=str(DEFAULT_INPUT))
-    parser.add_argument("--records", help="Specific *_target_records.tsv file to summarize.")
-    parser.add_argument("--output", default=str(DEFAULT_OUTPUT))
-    args = parser.parse_args()
-
-    input_dir = Path(args.input_dir).expanduser().resolve()
-    records_path = Path(args.records).expanduser().resolve() if args.records else latest_records(input_dir)
-    output = Path(args.output).expanduser().resolve()
-    if records_path is None or not records_path.exists():
-        raise FileNotFoundError(f"No manual target records found under {input_dir}")
-
-    rows = read_records(records_path)
+def make_payload(records_path: Path, rows: list[dict[str, str]], related: list[Path]) -> dict[str, object]:
     matches = [row for row in rows if row.get("active_expected_match", "").lower() == "true"]
     frame = rows[0].get("frame", "?") if rows else "?"
-    prefix = records_path.name.replace("_target_records.tsv", "")
-    related = sorted(records_path.parent.glob(prefix + "*"))
+    screenshot = next((path for path in related if path.name.endswith("_screen.gd")), None)
+    meta = next((path for path in related if path.name.endswith("_meta.txt")), None)
+    return {
+        "input_records": rel(records_path),
+        "frame": frame,
+        "targets_checked": len(rows),
+        "active_expected_matches": len(matches),
+        "latest_screenshot": rel(screenshot) if screenshot else "",
+        "latest_meta": rel(meta) if meta else "",
+        "active_matches": matches,
+        "captured_files": [
+            {
+                "path": rel(path),
+                "bytes": path.stat().st_size,
+                "kind": path.suffix.lower().lstrip(".") or "file",
+            }
+            for path in related
+        ],
+    }
 
+
+def write_markdown(output: Path, payload: dict[str, object]) -> None:
+    matches = payload["active_matches"]
     lines = [
         "# Manual Screen Dump Summary",
         "",
-        f"- Input records: `{rel(records_path)}`",
-        f"- Frame: **{frame}**",
-        f"- Targets checked: **{len(rows)}**",
-        f"- Active expected matches: **{len(matches)}**",
+        f"- Input records: `{payload['input_records']}`",
+        f"- Frame: **{payload['frame']}**",
+        f"- Targets checked: **{payload['targets_checked']}**",
+        f"- Active expected matches: **{payload['active_expected_matches']}**",
+        f"- Screenshot: `{payload['latest_screenshot'] or '-'}`",
         "",
         "## Active Matches",
         "",
@@ -78,11 +87,11 @@ def main() -> int:
         "",
         "## Captured Files",
         "",
-        "| file | bytes |",
-        "| --- | ---: |",
+        "| file | bytes | kind |",
+        "| --- | ---: | --- |",
     ]
-    for path in related:
-        lines.append(f"| `{rel(path)}` | {path.stat().st_size} |")
+    for path in payload["captured_files"]:
+        lines.append(f"| `{path['path']}` | {path['bytes']} | `{path['kind']}` |")
 
     lines += [
         "",
@@ -95,8 +104,37 @@ def main() -> int:
 
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--input-dir", default=str(DEFAULT_INPUT))
+    parser.add_argument("--records", help="Specific *_target_records.tsv file to summarize.")
+    parser.add_argument("--output", default=str(DEFAULT_OUTPUT))
+    parser.add_argument("--json-output", help="Machine-readable summary path. Defaults to output path with .json suffix.")
+    args = parser.parse_args()
+
+    input_dir = Path(args.input_dir).expanduser().resolve()
+    records_path = Path(args.records).expanduser().resolve() if args.records else latest_records(input_dir)
+    output = Path(args.output).expanduser().resolve()
+    json_output = Path(args.json_output).expanduser().resolve() if args.json_output else output.with_suffix(".json")
+    if records_path is None or not records_path.exists():
+        raise FileNotFoundError(f"No manual target records found under {input_dir}")
+
+    rows = read_records(records_path)
+    prefix = records_path.name.replace("_target_records.tsv", "")
+    related = sorted(records_path.parent.glob(prefix + "*"))
+    payload = make_payload(records_path, rows, related)
+    write_markdown(output, payload)
+    json_output.parent.mkdir(parents=True, exist_ok=True)
+    json_output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {output}")
-    print(f"records={len(rows)} matches={len(matches)} frame={frame}")
+    print(f"Wrote {json_output}")
+    print(
+        "records={targets_checked} matches={active_expected_matches} frame={frame}".format(
+            **payload
+        )
+    )
     return 0
 
 

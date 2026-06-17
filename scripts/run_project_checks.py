@@ -51,6 +51,7 @@ KEY_PYTHON = [
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
     "scripts/summarize_bank1_watch_reads.py",
+    "scripts/test_analyze_manual_screen_dump.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -173,6 +174,7 @@ def main() -> int:
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
+    run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
