@@ -1,0 +1,6 @@
+frame	label	category	rom_hit	cpu_addr	value	record_cpu_range	expected_bytes	context	active_expected_match	record_snapshot
+1975	v04_rom_07227_candidate_84	무기	ROM+0x07227	$B216	85	$B216-$B21A	88 89 8A	AF 00 85 88 89 8A 00 82	true	85 88 89 8A 00
+1977	v04_rom_07227_candidate_84	무기	ROM+0x07227	$B217	88	$B216-$B21A	88 89 8A	00 85 88 89 8A 00 82 82	true	85 88 89 8A 00
+1979	v04_rom_07227_candidate_84	무기	ROM+0x07227	$B218	89	$B216-$B21A	88 89 8A	85 88 89 8A 00 82 82 95	true	85 88 89 8A 00
+1981	v04_rom_07227_candidate_84	무기	ROM+0x07227	$B219	8A	$B216-$B21A	88 89 8A	88 89 8A 00 82 82 95 0D	true	85 88 89 8A 00
+1983	v04_rom_07227_candidate_84	무기	ROM+0x07227	$B21A	00	$B216-$B21A	88 89 8A	89 8A 00 82 82 95 0D 89	true	85 88 89 8A 00
