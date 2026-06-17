@@ -53,6 +53,8 @@
 - `broad_scan_fceux_targets.md` / `broad_scan_fceux_targets.json`: FCEUX read-watch targets for the 7 broad-scan promotion candidates; Lua target file is `../lua/kunio_broad_scan_candidate_targets.lua`
 - `fceux_broad_scan_watch_short/summary.tsv` / `bank1_reads.tsv`: short targeted broad-scan read-watch run using `lua/kunio_broad_scan_candidate_targets.lua`; it records read hits on the autoplay route but no active original-byte matches
 - `fceux_broad_scan_watch_short_summary.md`: readable summary of the short broad-scan read-watch run; use it as a stop signal for this autoplay route, not as promotion proof
+- `fceux_v042_primary_watch_short/summary.tsv` / `bank1_reads.tsv`: short targeted v0.4.2 primary read-watch run using `lua/kunio_v041_conflict_safe_targets.lua`; it records no read hits on the opening/autoplay route
+- `fceux_v042_primary_watch_short_summary.md`: readable summary of the short v0.4.2 primary watch run; use it as another stop signal for this route
 - `v04_broad_candidate_conflicts.md` / `v04_broad_candidate_conflicts.json`: overlap analysis between v0.4 applied PRG edits and the 7 broad-scan promotion candidates
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `manual_screen_dump_v04/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v04_screen_dump.lua`
@@ -159,6 +161,7 @@
 - `broad_scan_patchability.md` further filters the 60 broad-scan capture targets to 7 length-safe Bank 1 candidates that could be promoted only after screen proof. It now records the v0.4.2 planned PRG bytes for those candidates, confirming all 7 are font-ready after the current 50-glyph v0.4.2 font set. The compact-from-base glyph table is kept only as a planning view.
 - `broad_scan_fceux_targets.md` converts those 7 promotion candidates into original-byte read-watch targets. Use it only after manually reaching the relevant screen; a CPU read hit is necessary evidence, not sufficient proof by itself.
 - A short targeted broad-scan read-watch run reached `hit_limit` at frame `1327` with 5,000 reads against the 7 promotion candidates. It observed reads for `ROM+0x0440C` (`かじや`/대장간), `ROM+0x048F4` (`たつじ`/타츠지), and `ROM+0x05BE5` (`たつじ`/타츠지), but all three had `0` active original-byte matches: snapshots were `FF 18 69`, `20 F7 88`, and `03 00 00` instead of the expected candidate bytes. Treat this route as wrong bank/context for promotion; do not extend it as another blind autoplay run.
+- A short targeted v0.4.2 primary read-watch run watched all 10 primary text rows for 1,800 frames and registered `0` read hits. This confirms the opening/autoplay route is not useful for validating the current primary rows either; use manually reached target screens for primary visual proof.
 - `v04_broad_candidate_conflicts.md` shows that all three high-confidence broad `へいしち`/Heishichi candidates overlap v0.4 `カタナ`/Katana edits at `ROM+0x06295`, `0x0631C`, and `0x0635A`. Do not build v0.5 by blindly adding broad candidates on top of v0.4; manual screen proof must decide whether to keep or replace each overlapping interpretation.
 - A YouTube gameplay video can help transcribe dialogue and confirm scene order, but it does not replace ROM analysis because patching still needs exact ROM offsets, byte encodings, control codes, and active runtime banks.
 

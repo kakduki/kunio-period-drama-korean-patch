@@ -1,0 +1,10 @@
+frame	reason	registered	hits	detail
+0	lua_start	148	0	callback_mode=true;target_source=kunio_v041_conflict_safe_targets.lua;targets=10
+0	periodic	148	0	running
+0	periodic	148	0	running
+300	periodic	148	0	running
+600	periodic	148	0	running
+900	periodic	148	0	running
+1200	periodic	148	0	running
+1500	periodic	148	0	running
+1800	lua_done	148	0	out=kunio_fceux_lua_output
