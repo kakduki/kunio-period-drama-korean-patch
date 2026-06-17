@@ -22,6 +22,10 @@ MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status
 MANUAL_CAPTURE_STATUS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_status.md"
 TRANSLATION_GLYPH_COVERAGE_JSON = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.json"
 TRANSLATION_GLYPH_COVERAGE_MD = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.md"
+TRANSLATION_PATTERN_SCAN_JSON = REPO_ROOT / "rom_analysis" / "translation_pattern_scan.json"
+TRANSLATION_PATTERN_SCAN_MD = REPO_ROOT / "rom_analysis" / "translation_pattern_scan.md"
+TRANSLATION_SCAN_QUEUE_JSON = REPO_ROOT / "rom_analysis" / "translation_scan_capture_queue.json"
+TRANSLATION_SCAN_QUEUE_MD = REPO_ROOT / "rom_analysis" / "translation_scan_capture_queue.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
 NEXT_GLYPH_EXPANSION_MD = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.md"
 V042_TEXT_PROMOTION_JSON = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.json"
@@ -70,6 +74,8 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence",
         "- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate",
         "- `v043_broad_verified_build_report.json`: current v0.4.3 gate result",
+        "- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries",
+        "- `translation_scan_capture_queue.md`: focused manual capture queue from the broad scan",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
@@ -152,6 +158,10 @@ def package() -> dict[str, object]:
         (MANUAL_CAPTURE_STATUS_JSON, "manual_capture_status.json"),
         (TRANSLATION_GLYPH_COVERAGE_MD, "translation_glyph_coverage.md"),
         (TRANSLATION_GLYPH_COVERAGE_JSON, "translation_glyph_coverage.json"),
+        (TRANSLATION_PATTERN_SCAN_MD, "translation_pattern_scan.md"),
+        (TRANSLATION_PATTERN_SCAN_JSON, "translation_pattern_scan.json"),
+        (TRANSLATION_SCAN_QUEUE_MD, "translation_scan_capture_queue.md"),
+        (TRANSLATION_SCAN_QUEUE_JSON, "translation_scan_capture_queue.json"),
         (NEXT_GLYPH_EXPANSION_MD, "next_glyph_expansion_plan.md"),
         (NEXT_GLYPH_EXPANSION_JSON, "next_glyph_expansion_plan.json"),
         (V042_TEXT_PROMOTION_MD, "v042_text_promotion_readiness.md"),

@@ -13,6 +13,8 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence
 - `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate
 - `v043_broad_verified_build_report.json`: current v0.4.3 gate result
+- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries
+- `translation_scan_capture_queue.md`: focused manual capture queue from the broad scan
 - `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan
 - `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion
 - `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2

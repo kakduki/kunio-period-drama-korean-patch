@@ -72,6 +72,8 @@ REGEN_COMMANDS = [
     ["scripts/build_v041_conflict_safe_candidate.py"],
     ["scripts/generate_v041_fceux_targets.py"],
     ["scripts/generate_translation_readable_reference.py"],
+    ["scripts/generate_translation_pattern_scan.py"],
+    ["scripts/generate_translation_scan_capture_queue.py"],
     ["scripts/generate_translation_glyph_coverage.py"],
     ["scripts/generate_next_glyph_expansion_plan.py"],
     ["scripts/generate_broad_scan_fceux_targets.py"],
