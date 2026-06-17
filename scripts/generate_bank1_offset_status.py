@@ -125,8 +125,11 @@ def target_line(row: dict[str, object]) -> str:
     runtime = ""
     if row.get("runtime_hits"):
         runtime = f"; runtime hits {row.get('runtime_hits')}, active {row.get('runtime_active_expected_matches')}"
+    source = str(row.get("source"))
+    if row.get("source_romaji"):
+        source = f"{source} ({row.get('source_romaji')})"
     return (
-        f"`{row.get('rom_hit')}` {row.get('source')}->{row.get('korean')} "
+        f"`{row.get('rom_hit')}` {source}->{row.get('korean')} "
         f"({row.get('category')}, {row.get('evidence_level')}, {row.get('patch_risk')}{runtime})"
     )
 

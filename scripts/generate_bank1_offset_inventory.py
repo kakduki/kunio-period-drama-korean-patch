@@ -25,15 +25,16 @@ TARGETS_PATH = ROOT / "rom_analysis" / "bank1_watch_targets.json"
 WATCH_SUMMARY_PATH = ROOT / "rom_analysis" / "fceux_bank1_watch_test" / "bank1_reads.tsv"
 OUT_MD = ROOT / "rom_analysis" / "bank1_offset_inventory.md"
 OUT_JSON = ROOT / "rom_analysis" / "bank1_offset_inventory.json"
+READABLE_REFERENCE = ROOT / "text_data" / "translation_readable_reference.json"
 
 WATCH_ROM_START = 0x05610
 WATCH_ROM_END = 0x05810
 
 CATEGORY_GROUPS = {
-    "UI/status": {"UI", "능력치"},
-    "items/equipment": {"무기", "회복"},
-    "menu": {"메뉴"},
-    "event/dialogue-related": {"보스", "스테이지"},
+    "UI/status": {"UI", "능력치", "캐릭터명"},
+    "items/equipment": {"무기", "회복", "방어구", "특수"},
+    "menu": {"타이틀", "메뉴", "모드"},
+    "event/dialogue-related": {"대사", "이벤트", "보스", "스테이지", "엔딩", "기술"},
 }
 
 
@@ -55,6 +56,8 @@ class InventoryRow:
     label: str
     category: str
     source: str
+    source_romaji: str
+    source_context: str
     korean: str
     rom_hit: int
     prg_hit: int
@@ -114,19 +117,42 @@ def load_runtime_evidence() -> dict[str, RuntimeEvidence]:
     return dict(by_label)
 
 
+def load_readable_reference() -> dict[str, dict[str, str]]:
+    if not READABLE_REFERENCE.exists():
+        return {}
+    data = json.loads(READABLE_REFERENCE.read_text(encoding="utf-8"))
+    return {
+        str(row["source"]): row
+        for row in data.get("translation_data_joined", [])
+    }
+
+
+def readable_for(source: str, readable_by_source: dict[str, dict[str, str]]) -> tuple[str, str]:
+    readable = readable_by_source.get(source, {})
+    return (
+        str(readable.get("romaji", "")),
+        str(readable.get("subsection") or readable.get("section", "")),
+    )
+
+
 def load_rows() -> list[InventoryRow]:
     runtime_by_label = load_runtime_evidence()
+    readable_by_source = load_readable_reference()
     data = json.loads(TARGETS_PATH.read_text(encoding="utf-8"))
     rows: list[InventoryRow] = []
     for target in data.get("targets", []):
         label = str(target["label"])
+        source = str(target.get("source", ""))
+        source_romaji, source_context = readable_for(source, readable_by_source)
         record_rom = tuple(parse_hex(value) for value in target["record_rom_range"])
         record_cpu = tuple(parse_hex(value) for value in target["record_cpu_range"])
         rows.append(
             InventoryRow(
                 label=label,
                 category=str(target.get("category", "")),
-                source=str(target.get("source", "")),
+                source=source,
+                source_romaji=source_romaji,
+                source_context=source_context,
                 korean=str(target.get("korean", "")),
                 rom_hit=parse_hex(str(target["rom_hit"])),
                 prg_hit=parse_hex(str(target["prg_hit"])),
@@ -163,11 +189,14 @@ def load_rows() -> list[InventoryRow]:
         if label in labels:
             continue
         labels.add(label)
+        source_romaji, source_context = readable_for(hit.entry.source, readable_by_source)
         rows.append(
             InventoryRow(
                 label=label,
                 category=hit.entry.category,
                 source=hit.entry.source,
+                source_romaji=source_romaji,
+                source_context=source_context,
                 korean=hit.entry.korean,
                 rom_hit=hit.rom_offset,
                 prg_hit=hit.prg_offset,
@@ -236,6 +265,7 @@ def write_json(rows: list[InventoryRow]) -> None:
         "source": [
             "rom_analysis/bank1_watch_targets.json",
             "rom_analysis/bank1_text_block_map.md watch-range supplemental candidates",
+            "text_data/translation_readable_reference.json",
         ],
         "watch_range": [fmt_rom(WATCH_ROM_START), fmt_rom(WATCH_ROM_END)],
         "target_count": len(rows),
@@ -245,6 +275,8 @@ def write_json(rows: list[InventoryRow]) -> None:
                 "category_group": group_for_category(row.category),
                 "category": row.category,
                 "source": row.source,
+                "source_romaji": row.source_romaji,
+                "source_context": row.source_context,
                 "korean": row.korean,
                 "rom_hit": fmt_rom(row.rom_hit),
                 "prg_hit": fmt_rom(row.prg_hit),
@@ -278,10 +310,16 @@ def add_table(lines: list[str], rows: list[InventoryRow]) -> None:
             f"| {row.evidence_level} | `{fmt_rom(row.rom_hit)}` | "
             f"`{fmt_rom(row.record_rom_range[0])}-{fmt_rom(row.record_rom_range[1])}` | "
             f"`{fmt_cpu(row.record_cpu_range[0])}-{fmt_cpu(row.record_cpu_range[1])}` | "
-            f"{row.category} | {row.source} | {row.korean} | {row.mode}/`{row.base}` | "
+            f"{row.category} | {format_source(row)} | {row.korean} | {row.mode}/`{row.base}` | "
             f"`{row.expected_bytes}` | `{clean_record(row.decoded_record)}` | {runtime_text(row.runtime)} |"
         )
     lines.append("")
+
+
+def format_source(row: InventoryRow) -> str:
+    if row.source_romaji:
+        return f"{row.source} ({row.source_romaji})"
+    return row.source
 
 
 def write_markdown(rows: list[InventoryRow]) -> None:
