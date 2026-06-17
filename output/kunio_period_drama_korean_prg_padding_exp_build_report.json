@@ -1,0 +1,118 @@
+{
+  "plan": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\prg_padding_experiment_plan.json",
+  "font_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_plan_v0.2.nes",
+  "original_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "original_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "font_rom_md5": "416ad32dfc438c8b51a4d0a20028fe81",
+  "out_stem": "kunio_period_drama_korean_prg_padding_exp",
+  "target_count": 1,
+  "build_count": 5,
+  "builds": [
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "korean": "힘",
+      "strategy": "pad_00",
+      "original_bytes": "93 88 AA",
+      "patched_bytes": "87 00 00",
+      "pad_bytes": "00 00",
+      "changes_original_tail": true,
+      "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_00.nes",
+      "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_00.ips",
+      "patched_md5": "cdb124b2434a39d9ad3e28f84b651ed1",
+      "changed_bytes_total": 255,
+      "changed_rom_range": [
+        "0x071A4",
+        "0x2F13E"
+      ],
+      "ips_records": 36
+    },
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "korean": "힘",
+      "strategy": "pad_7a",
+      "original_bytes": "93 88 AA",
+      "patched_bytes": "87 7A 7A",
+      "pad_bytes": "7A 7A",
+      "changes_original_tail": true,
+      "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_7a.nes",
+      "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_7a.ips",
+      "patched_md5": "4fa3714a8e9a867889ac96d5ca7cbf79",
+      "changed_bytes_total": 255,
+      "changed_rom_range": [
+        "0x071A4",
+        "0x2F13E"
+      ],
+      "ips_records": 36
+    },
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "korean": "힘",
+      "strategy": "pad_ff",
+      "original_bytes": "93 88 AA",
+      "patched_bytes": "87 FF FF",
+      "pad_bytes": "FF FF",
+      "changes_original_tail": true,
+      "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_ff.nes",
+      "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_ff.ips",
+      "patched_md5": "7cc172c71358c69052869095cd9f252b",
+      "changed_bytes_total": 255,
+      "changed_rom_range": [
+        "0x071A4",
+        "0x2F13E"
+      ],
+      "ips_records": 36
+    },
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "korean": "힘",
+      "strategy": "pad_f8f9",
+      "original_bytes": "93 88 AA",
+      "patched_bytes": "87 F8 F9",
+      "pad_bytes": "F8 F9",
+      "changes_original_tail": true,
+      "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_f8f9.nes",
+      "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_pad_f8f9.ips",
+      "patched_md5": "2e5f270289b79ff5bd5fca46dd0caee2",
+      "changed_bytes_total": 255,
+      "changed_rom_range": [
+        "0x071A4",
+        "0x2F13E"
+      ],
+      "ips_records": 36
+    },
+    {
+      "label": "rom_071a4_candidate_82",
+      "rom_hit": "0x071A4",
+      "source": "ちから",
+      "source_romaji": "Chikara",
+      "korean": "힘",
+      "strategy": "preserve_tail",
+      "original_bytes": "93 88 AA",
+      "patched_bytes": "87 88 AA",
+      "pad_bytes": "88 AA",
+      "changes_original_tail": false,
+      "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_preserve_tail.nes",
+      "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_prg_padding_exp_rom_071a4_candidate_82_preserve_tail.ips",
+      "patched_md5": "ee7504d0f245ad31779eadea45ad0796",
+      "changed_bytes_total": 253,
+      "changed_rom_range": [
+        "0x071A4",
+        "0x2F13E"
+      ],
+      "ips_records": 36
+    }
+  ],
+  "warning": "These ROMs are FCEUX-only padding experiments, not final patch candidates."
+}
