@@ -62,6 +62,13 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
         f"Open ROM: {format_path(rom)}",
         f"Run Lua:  {format_path(watcher)}",
         "",
+        "Launch helper:",
+        "- python scripts/run_next_manual_fceux.py",
+        "",
+        "Important:",
+        "- This is a manual capture step; it does not autoplay through the game.",
+        "- Waiting on the title/opening screen will not create useful patch evidence.",
+        "",
         "At the target screen:",
         "- Press D to save the dump.",
         "- Press Q to stop the watcher.",
@@ -83,6 +90,7 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
             "",
             "PowerShell from repository root:",
             f"Set-Location -LiteralPath '{ROOT}'",
+            "python scripts/run_next_manual_fceux.py",
         ]
         if record_visual_review:
             lines.append(record_visual_review)
