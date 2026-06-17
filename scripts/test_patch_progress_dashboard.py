@@ -42,6 +42,7 @@ def main() -> int:
         "Patch Progress Dashboard",
         "Release Blockers",
         "python scripts/preflight_manual_fceux.py",
+        "python scripts/run_next_manual_fceux.py",
         "python scripts/prepare_next_manual_run.py --powershell",
         "0x07227",
     ]:

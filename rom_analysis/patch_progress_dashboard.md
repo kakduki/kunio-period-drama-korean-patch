@@ -47,6 +47,7 @@ Single-page status for the current Korean patch work.
 
 ```powershell
 python scripts/preflight_manual_fceux.py
+python scripts/run_next_manual_fceux.py
 python scripts/prepare_next_manual_run.py --powershell
 python scripts/refresh_after_manual_capture.py --phase primary
 python scripts/refresh_after_manual_capture.py --phase broad

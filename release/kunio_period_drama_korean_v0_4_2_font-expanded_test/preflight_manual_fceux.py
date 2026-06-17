@@ -13,6 +13,8 @@ from rom_utils import REPO_ROOT
 
 NEXT_MANUAL_RUN = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
 MANIFEST = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
+DEFAULT_MANUAL_TIMEOUT = 600
+DEFAULT_MANUAL_OUTPUT = "rom_analysis/fceux_manual_launch"
 
 
 def md5(path: Path) -> str:
@@ -37,13 +39,42 @@ def resolve_repo_path(raw: object) -> Path:
     return path.resolve()
 
 
-def main() -> int:
+def load_next_manual_context() -> dict[str, object]:
     manifest = load_json(MANIFEST)
     next_run = load_json(NEXT_MANUAL_RUN)
     action = next_run.get("next_action")
-    if not isinstance(action, dict):
-        print("OK: no pending manual FCEUX action.")
-        return 0
+    return {
+        "manifest": manifest,
+        "next_run": next_run,
+        "action": action,
+    }
+
+
+def launch_command(action: dict[str, object], *, timeout: int = DEFAULT_MANUAL_TIMEOUT) -> list[str]:
+    target_rom = resolve_repo_path(action["rom_to_open"])
+    watcher = resolve_repo_path(action["watcher_lua"])
+    return [
+        "scripts/run_fceux_lua_analysis.py",
+        "--rom",
+        rel(target_rom),
+        "--lua-script",
+        rel(watcher),
+        "--timeout",
+        str(timeout),
+        "--stop-after-manual-dump",
+        "--final-output",
+        DEFAULT_MANUAL_OUTPUT,
+        "--clean-output",
+        "--no-dump-hex",
+        "--no-dump-bin",
+    ]
+
+
+def validate_next_action(context: dict[str, object]) -> tuple[list[str], list[str]]:
+    manifest = context["manifest"]
+    action = context["action"]
+    if not isinstance(manifest, dict) or not isinstance(action, dict):
+        return [], []
 
     summary = manifest["summary"]
     errors: list[str] = []
@@ -56,9 +87,8 @@ def main() -> int:
         errors.append(f"base ROM MD5 mismatch: expected {summary['base_md5']}, got {md5(base_rom)}")
 
     try:
-        fceux = find_fceux(None)
+        find_fceux(None)
     except FileNotFoundError as exc:
-        fceux = None
         errors.append(str(exc))
 
     target_rom = resolve_repo_path(action["rom_to_open"])
@@ -71,9 +101,29 @@ def main() -> int:
     if not watcher.exists():
         errors.append(f"missing watcher Lua: {rel(watcher)}")
 
-    record_command = action.get("record_visual_review")
-    if not record_command:
+    if not action.get("record_visual_review"):
         warnings.append("next action has no record_visual_review command")
+
+    return errors, warnings
+
+
+def main() -> int:
+    context = load_next_manual_context()
+    action = context["action"]
+    if not isinstance(action, dict):
+        print("OK: no pending manual FCEUX action.")
+        return 0
+
+    errors, warnings = validate_next_action(context)
+
+    try:
+        fceux = find_fceux(None)
+    except FileNotFoundError as exc:
+        fceux = None
+        errors.append(str(exc))
+
+    target_rom = resolve_repo_path(action["rom_to_open"])
+    watcher = resolve_repo_path(action["watcher_lua"])
 
     print("Manual FCEUX preflight")
     print(f"- phase: {action['phase']}")
@@ -82,15 +132,10 @@ def main() -> int:
     print(f"- fceux: {rel(fceux) if fceux else '[missing]'}")
     print(f"- target ROM: {rel(target_rom)}")
     print(f"- watcher Lua: {rel(watcher)}")
-    if record_command:
-        print(f"- record command: {record_command}")
+    if action.get("record_visual_review"):
+        print(f"- record command: {action['record_visual_review']}")
     print("- launch helper:")
-    print(
-        "  python scripts/run_fceux_lua_analysis.py "
-        f"--rom {rel(target_rom)} --lua-script {rel(watcher)} "
-        "--timeout 600 --stop-after-manual-dump "
-        "--final-output rom_analysis/fceux_manual_launch --clean-output --no-dump-hex --no-dump-bin"
-    )
+    print("  python " + " ".join(launch_command(action)))
 
     for warning in warnings:
         print(f"WARNING: {warning}")

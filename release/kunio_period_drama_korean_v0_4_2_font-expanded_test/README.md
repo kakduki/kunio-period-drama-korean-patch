@@ -45,6 +45,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `refresh_after_manual_capture.py`: one-command report refresh after manual FCEUX capture
 - `prepare_next_manual_run.py`: prints the next focused manual FCEUX setup
 - `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator
+- `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks
 - `SHA256SUMS.txt`: checksums for bundle files
 
 ## Required Base ROM
@@ -83,6 +84,7 @@ python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuu
 ## FCEUX Manual Capture
 
 Before opening FCEUX from the repository, run `python scripts/preflight_manual_fceux.py`.
+To open the current next action directly from the repository, run `python scripts/run_next_manual_fceux.py`.
 Start with `next_manual_run.md`; it names the single recommended ROM, Lua watcher, target, and screen hint.
 From the repository root, `python scripts/prepare_next_manual_run.py --powershell` prints the same focused setup.
 From this extracted bundle folder, run `python prepare_next_manual_run.py --powershell`.
