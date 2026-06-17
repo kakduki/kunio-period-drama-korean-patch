@@ -23,8 +23,15 @@ def main() -> int:
             errors.append(f"current checked-in proof status should have no {key}=true rows")
     if set(payload["summary"]["status_counts"]) != {"needs_manual_capture"}:
         errors.append(f"unexpected status counts: {payload['summary']['status_counts']}")
+    for key in ["meaning", "screen_hint"]:
+        missing = [row["rom_offset"] for row in rows if not row.get(key)]
+        if missing:
+            errors.append(f"{key} missing for {missing[:5]}")
 
     markdown = STATUS_MD.read_text(encoding="utf-8")
+    for expected in ["human hint", "blacksmith/stage label", "boss/name label", "name/dialogue label"]:
+        if expected not in markdown:
+            errors.append(f"{expected!r} missing from markdown")
     for expected in ["v0.4.3 Proof Status", "needs_manual_capture", "かじや", "たつじ", "へいしち"]:
         if expected not in markdown:
             errors.append(f"{expected!r} missing from markdown")

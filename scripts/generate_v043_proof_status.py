@@ -92,6 +92,7 @@ def make_payload() -> dict[str, object]:
             "kind": task.get("kind", ""),
             "confidence": task.get("confidence", ""),
             "romaji": task.get("romaji", ""),
+            "meaning": readable.get("meaning") or task.get("meaning", ""),
             "source_display": readable.get("source_display") or task.get("source_display") or task.get("source", ""),
             "korean_display": readable.get("korean_display") or task.get("korean_display") or task.get("korean", ""),
             "screen_hint": readable.get("screen_hint") or task.get("screen_hint", ""),
@@ -146,14 +147,14 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Rows",
         "",
-        "| task | status | ROM | expected text | Korean | CPU read | visual | planned bytes | next action |",
-        "| ---: | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| task | status | ROM | human hint | expected text | Korean | CPU read | visual | planned bytes | next action |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in payload["rows"]:
         cpu = "yes" if row["cpu_read_match_present"] else "no"
         visual = "yes" if row["visual_context_confirmed"] else "no"
         lines.append(
-            f"| {row['task']} | `{row['status']}` | `{row['rom_offset']}` | {row['source_display']} | "
+            f"| {row['task']} | `{row['status']}` | `{row['rom_offset']}` | {row['meaning'] or '-'} | {row['source_display']} | "
             f"{row['korean_display']} | {cpu} | {visual} | `{row['planned_prg_bytes']}` | {row['next_action']} |"
         )
 
