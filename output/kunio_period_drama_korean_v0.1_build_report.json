@@ -1,0 +1,20 @@
+{
+  "rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "original_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "patched_md5": "9636f9c818acf588ab8fff87c558250f",
+  "chr_bank7_range": [
+    "0x2E010",
+    "0x3000F"
+  ],
+  "target_tile_range": [
+    "0x101",
+    "0x1B5"
+  ],
+  "glyphs_written": 181,
+  "font_tiles_changed": 181,
+  "changed_bytes": 2896,
+  "escaped_chr_bank7_bytes": 0,
+  "ips_records": 315,
+  "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_v0.1.ips",
+  "patched_rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_v0.1.nes"
+}

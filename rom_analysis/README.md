@@ -36,6 +36,8 @@
 - `fceux_bank1_watch/summary.tsv`: optional Bank 1 read-watch run summary from `lua/kunio_bank1_watch.lua`
 - `fceux_bank1_watch/bank1_reads.tsv`: optional CPU read hits for the Bank 1 candidate records, generated when the emulator build supports Lua read callbacks
 - `fceux_bank1_watch_test_summary.md`: short 900-frame validation summary for the Bank 1 read watcher
+- `fceux_ppu_watch/analysis.md`: first-pass PPU write watch analysis; useful for raw address/write frequency, but exact text matching is limited by same-frame contiguous-run grouping
+- `fceux_ppu_watch/analysis_v2.md`: corrected PPU write analysis from `scripts/analyze_ppu_watch_v2.py`; reconstructs frame nametables, strips fill/attribute writes, and currently matches 5 of 36 generated Bank 1 targets
 - `chr/chr_dump.bin`: raw CHR ROM dump, generated locally only and ignored by git
 - `chr/bank_fixed.txt`: fixed PRG-bank hex dump, generated locally only and ignored by git
 - `font/chr_bank_##_8x8.png`: CHR banks rendered as 8x8 tiles, generated locally only and ignored by git
@@ -133,6 +135,20 @@ Verified run:
   match for `93 88 AA`. `ROM+0x06FA1` was also read frequently, but all 236
   hits had `active_expected_match=false`, so treat it as an address/bank-switch
   follow-up target rather than confirmed text.
+- A PPU write watch run captured 88 useful frames and 19,926 nametable writes.
+  The original analyzer found no exact target matches because it only grouped
+  same-frame, +1-address write runs. `scripts/analyze_ppu_watch_v2.py`
+  reconstructs each frame's final nametable, filters attribute-table writes plus
+  `0x00`/`0x7A` fill tiles, and then scans address-ordered streams. That
+  recovered five identity matches for the `ちから` byte sequence `93 88 AA`:
+  `ROM+0x06605`, `0x066FB`, `0x06845`, `0x06B4A`, and `0x071A4`.
+- The first v0.1 patch builder wrote the generated font outside CHR Bank 07
+  because it treated Bank7's visually identified `0x101` tile as an 8x16 index
+  and used `tile * 32`. `scripts/build_patch.py` now uses repo-local paths and
+  writes one 16-byte 8x8 tile per Bank7 slot (`0x101-0x1B5`). The regenerated
+  patched ROM differs from the base ROM only in `ROM+0x2F020-0x2FB6E`, which is
+  inside the confirmed Bank7 range `ROM+0x2E010-0x3000F`. The build report is
+  `output/kunio_period_drama_korean_v0.1_build_report.json`.
 
 ## Next FCEUX targets
 

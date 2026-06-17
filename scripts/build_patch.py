@@ -1,170 +1,183 @@
 #!/usr/bin/env python3
+"""Build an experimental Korean font IPS/ROM patch.
+
+The verified CHR Bank 07 map uses 8x8 tile slots at 16 bytes each. Earlier
+versions treated those slots as 8x16 indexes and wrote to Bank 08+, so this
+builder keeps every generated font byte inside the Bank 07 range.
 """
-최종 IPS 패치 생성기
-- CHR Bank 07 한글 폰트 교체
-- PRG 텍스트 데이터 한글 타일 번호로 교체
-"""
-import json, os, struct, hashlib
 
-ROM_PATH = '/tmp/rom_hack/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes'
-OUT_DIR = '/tmp/kunio_korean_patch/output'
-FONT_BIN = '/tmp/kunio_korean_patch/font/korean_font_8x16.bin'
-CHR_MAP = '/tmp/kunio_korean_patch/rom_analysis/chr_bank07_tile_map.json'
-TRANS_DATA = '/tmp/kunio_korean_patch/text_data/translation_data.txt'
-os.makedirs(OUT_DIR, exist_ok=True)
+from __future__ import annotations
 
-with open(ROM_PATH, 'rb') as f:
-    rom = bytearray(f.read())
-
-# 1. CHR Bank 07 폰트 교체
-# NES CHR Bank 07: ROM offset 0x20010 (16 + 131072 + 7*8192)
-CHR_BANK7 = 16 + 131072 + 7*8192
-print(f"CHR Bank 07 ROM offset: 0x{CHR_BANK7:05X}")
-
-# 한글 폰트 바이너리 로드
-with open(FONT_BIN, 'rb') as f:
-    font_data = f.read()
-
-# 각 한글 글자 = 32바이트 (2bpp 8x16)
-# 첫 181글자를 CHR Bank 07의 히라가나 영역(0x101~0x1B5)에 교체
-# 타일 0x101 = ROM offset CHR_BANK7 + 0x101*16 (8x8 기준, 8x16은 *32)
-# 실제로 8x16 = 2개 8x8 타일: 0x101*2 = 0x202번째 8x8 타일
-
-font_changes = 0
-for i in range(0, len(font_data), 32):
-    char_bytes = font_data[i:i+32]
-    if len(char_bytes) < 32:
-        break
-    
-    # 히라가나 영역 0x101-0x1B5 (181자)에 한글 폰트 배치
-    tile_8x16_idx = 0x101 + (i // 32)
-    if tile_8x16_idx > 0x1B5:
-        break
-    
-    # NES 8x16 타일 위치 계산
-    # 8KB 뱅크 = 8192 bytes = 512개의 8x8 타일 (16 bytes each) = 256개의 8x16 타일 (32 bytes each)
-    # 타일 0x101 (8x16) = 뱅크 시작 + 0x101 * 32
-    tile_offset = CHR_BANK7 + tile_8x16_idx * 32
-    
-    if tile_offset + 32 > len(rom):
-        break
-    
-    old = bytes(rom[tile_offset:tile_offset+32])
-    if old != char_bytes:
-        rom[tile_offset:tile_offset+32] = char_bytes
-        font_changes += 1
-
-print(f"한글 폰트 교체: {font_changes}개 타일")
-
-# 2. PRG 텍스트 한글 타일 번호로 교체
-# PRG Bank 1: ROM offset 0x05610~0x05810
-# 텍스트 인코딩: PRG 바이트 값 - 0x7A = 가나 인덱스 (0x101 기준)
-# 한글 타일은 0x101-0x1B5에 배치됨
-
-# 번역 데이터 로드
-translations = {}
-with open(TRANS_DATA, 'r', encoding='utf-8') as f:
-    for line in f:
-        line = line.strip()
-        if not line or line.startswith('#') or line.startswith('='):
-            continue
-        parts = line.split('|')
-        if len(parts) >= 2:
-            jp = parts[0].strip()
-            kr = parts[1].strip()
-            translations[jp] = kr
-
-print(f"번역 데이터: {len(translations)}개 항목")
-
-# 텍스트 블록 맵(Codex가 분석한) 기반 패치
-# 실제로는 각 PRG 바이트를 새로운 CHR 타일 번호로 교체
-# 한글 글자 하나 = CHR 타일 2개(8x16) = 인덱스 0x101~
-
-# 한글 타일 맵 (글자 → 타일 번호)
-from PIL import Image, ImageDraw, ImageFont
+import argparse
+import hashlib
 import json
+import struct
+from pathlib import Path
 
-# char_map.json 로드
-with open('/tmp/kunio_korean_patch/font/char_map.json', 'r') as f:
-    char_info = json.load(f)
-    sorted_chars = char_info['sorted']
+from rom_utils import REPO_ROOT, find_rom_path
 
-korean_tile_start = 0x101
 
-# 각 한글 타일의 CHR 데이터 (32 bytes)
-korean_tile_map = {}
-for idx, ch in enumerate(sorted_chars):
-    if idx >= 181:  # 히라가나 영역 한계
-        break
-    tile_offset = CHR_BANK7 + (korean_tile_start + idx) * 32
-    korean_tile_map[ch] = bytes(rom[tile_offset:tile_offset+32])
+INES_HEADER_SIZE = 0x10
+PRG_ROM_SIZE = 0x20000
+CHR_BANK_SIZE = 0x2000
+CHR_TILE_SIZE = 0x10
+CHR_BANK = 7
+CHR_START = INES_HEADER_SIZE + PRG_ROM_SIZE
+CHR_BANK7_START = CHR_START + CHR_BANK * CHR_BANK_SIZE
+CHR_BANK7_END = CHR_BANK7_START + CHR_BANK_SIZE
+TARGET_TILE_START = 0x101
+TARGET_TILE_END = 0x1B5
 
-# 가나 타일 맵 (원본 유지)
-japanese_tile_map = {}
-for tile_idx in range(0x101, 0x130):
-    tile_offset = CHR_BANK7 + tile_idx * 32
-    japanese_tile_map[tile_idx] = bytes(rom[tile_offset:tile_offset+32])
+DEFAULT_FONT_BIN = REPO_ROOT / "font" / "korean_font_8x16.bin"
+DEFAULT_CHAR_MAP = REPO_ROOT / "font" / "char_map.json"
+DEFAULT_OUT_DIR = REPO_ROOT / "output"
 
-# PRG 텍스트 패치 (시범: 몇 개만)
-print("\nPRG 텍스트 패치 (일본어→한글 CHR 타일 번호)")
-text_patches = 0
 
-# 번역 데이터 기반 시험 패치
-test_texts = {
-    "こんぼう": 0x05610,  # 몽둥이
-    "どうのこんぼう": 0x05661,  # 구리 몽둥이  
-    "てつのこんぼう": 0x056A0,  # 쇠 몽둥이
-    "はがねのこんぼう": 0x056D5,  # 강철 몽둥이
-    "レベル": 0x056F2,  # 레벨
-}
+def md5(data: bytes) -> str:
+    return hashlib.md5(data).hexdigest()
 
-# 하지만 정확한 오프셋은 직접 변환보다는
-# translation_offset_candidates.md 참조
 
-text_offset_map_path = '/tmp/kunio_korean_patch/rom_analysis/translation_offset_candidates.md'
-if os.path.exists(text_offset_map_path):
-    print(f"\n번역 오프셋 후보 참조: {text_offset_map_path}")
+def glyph_8x16_to_8x8_tile(glyph: bytes) -> bytes:
+    """Collapse the generated 8x16 2bpp glyph into one 8x8 CHR tile.
 
-# 3. IPS 패치 생성
-patches = []
-for i in range(CHR_BANK7, CHR_BANK7 + 181*32):
-    if rom[i] != bytearray(open(ROM_PATH, 'rb').read())[i]:
-        if not patches or patches[-1][0] + len(patches[-1][1]) != i:
-            patches.append([i, bytearray()])
-        patches[-1][1].append(rom[i])
+    The source generator stores 16 plane-0 rows followed by 16 plane-1 rows.
+    Bank7 text slots are currently identified as one 8x8 background tile each,
+    so we OR adjacent vertical rows to preserve the whole glyph silhouette.
+    """
+    if len(glyph) != 32:
+        raise ValueError(f"Expected 32-byte 8x16 glyph, got {len(glyph)} bytes")
 
-with open(f'{OUT_DIR}/kunio_period_drama_korean_v0.1.ips', 'wb') as f:
-    f.write(b'PATCH')
-    for offset, data in patches:
-        if len(data) > 0xFFFF:
+    plane0 = bytearray(8)
+    plane1 = bytearray(8)
+    for row in range(8):
+        plane0[row] = glyph[row * 2] | glyph[row * 2 + 1]
+        plane1[row] = glyph[16 + row * 2] | glyph[16 + row * 2 + 1]
+    return bytes(plane0 + plane1)
+
+
+def make_records(original: bytes, patched: bytes) -> list[tuple[int, bytes]]:
+    records: list[tuple[int, bytes]] = []
+    idx = 0
+    while idx < len(patched):
+        if patched[idx] == original[idx]:
+            idx += 1
+            continue
+        start = idx
+        data = bytearray()
+        while idx < len(patched) and patched[idx] != original[idx]:
+            data.append(patched[idx])
+            idx += 1
+        records.append((start, bytes(data)))
+    return records
+
+
+def write_ips(path: Path, records: list[tuple[int, bytes]]) -> None:
+    with path.open("wb") as handle:
+        handle.write(b"PATCH")
+        for offset, data in records:
             for chunk_start in range(0, len(data), 0xFFFF):
-                chunk = data[chunk_start:chunk_start+0xFFFF]
-                f.write(struct.pack('>I', offset + chunk_start)[1:])
-                f.write(struct.pack('>H', len(chunk)))
-                f.write(bytes(chunk))
-        else:
-            f.write(struct.pack('>I', offset)[1:])
-            f.write(struct.pack('>H', len(data)))
-            f.write(bytes(data))
-    f.write(b'EOF')
+                chunk = data[chunk_start:chunk_start + 0xFFFF]
+                handle.write(struct.pack(">I", offset + chunk_start)[1:])
+                handle.write(struct.pack(">H", len(chunk)))
+                handle.write(chunk)
+        handle.write(b"EOF")
 
-ips_path = f'{OUT_DIR}/kunio_period_drama_korean_v0.1.ips'
-ips_size = os.path.getsize(ips_path)
-original_md5 = hashlib.md5(open(ROM_PATH, 'rb').read()).hexdigest()
 
-# 패치된 ROM 저장
-patched_path = f'{OUT_DIR}/kunio_period_drama_korean_v0.1.nes'
-with open(patched_path, 'wb') as f:
-    f.write(rom)
-patched_md5 = hashlib.md5(open(patched_path, 'rb').read()).hexdigest()
+def load_characters(path: Path) -> list[str]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return list(data["sorted"])
 
-print(f"\n{'='*60}")
-print(f"IPS 패치 생성 완료!")
-print(f"{'='*60}")
-print(f"  IPS 파일: {ips_path} ({ips_size} bytes)")
-print(f"  패치 ROM: {patched_path}")
-print(f"  패치 레코드: {len(patches)}개")
-print(f"  폰트 교체: {font_changes}개 타일")
-print(f"  원본 MD5: {original_md5}")
-print(f"  패치 MD5: {patched_md5}")
-print(f"\n에뮬레이터에서 패치 ROM을 열어서 테스트하세요!")
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("rom", nargs="?", help="Optional .nes path; defaults to rom/*.nes")
+    parser.add_argument("--font-bin", default=str(DEFAULT_FONT_BIN))
+    parser.add_argument("--char-map", default=str(DEFAULT_CHAR_MAP))
+    parser.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
+    args = parser.parse_args()
+
+    if args.rom:
+        rom_path = Path(args.rom).expanduser().resolve()
+        if not rom_path.exists():
+            raise FileNotFoundError(f"ROM not found: {rom_path}")
+    else:
+        rom_path = find_rom_path()
+
+    font_path = Path(args.font_bin).expanduser().resolve()
+    char_map_path = Path(args.char_map).expanduser().resolve()
+    out_dir = Path(args.out_dir).expanduser().resolve()
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    original = rom_path.read_bytes()
+    patched = bytearray(original)
+    font_data = font_path.read_bytes()
+    characters = load_characters(char_map_path)
+
+    print(f"ROM: {rom_path}")
+    print(f"CHR Bank 07 ROM range: 0x{CHR_BANK7_START:05X}-0x{CHR_BANK7_END - 1:05X}")
+    print(f"Target 8x8 tiles: 0x{TARGET_TILE_START:03X}-0x{TARGET_TILE_END:03X}")
+
+    available_slots = TARGET_TILE_END - TARGET_TILE_START + 1
+    glyph_count = min(len(font_data) // 32, len(characters), available_slots)
+    font_changes = 0
+    changed_offsets: list[int] = []
+
+    for index in range(glyph_count):
+        source = font_data[index * 32:index * 32 + 32]
+        target_tile = TARGET_TILE_START + index
+        target_offset = CHR_BANK7_START + target_tile * CHR_TILE_SIZE
+        target_end = target_offset + CHR_TILE_SIZE
+        if not CHR_BANK7_START <= target_offset < target_end <= CHR_BANK7_END:
+            raise RuntimeError(f"Tile 0x{target_tile:03X} escaped CHR Bank 07")
+
+        tile = glyph_8x16_to_8x8_tile(source)
+        if bytes(patched[target_offset:target_end]) != tile:
+            patched[target_offset:target_end] = tile
+            font_changes += 1
+            changed_offsets.extend(range(target_offset, target_end))
+
+    escaped = [
+        offset for offset in changed_offsets
+        if not CHR_BANK7_START <= offset < CHR_BANK7_END
+    ]
+    if escaped:
+        raise RuntimeError(f"{len(escaped)} changed byte(s) escaped CHR Bank 07")
+
+    records = make_records(original, bytes(patched))
+    ips_path = out_dir / "kunio_period_drama_korean_v0.1.ips"
+    patched_path = out_dir / "kunio_period_drama_korean_v0.1.nes"
+    report_path = out_dir / "kunio_period_drama_korean_v0.1_build_report.json"
+
+    write_ips(ips_path, records)
+    patched_path.write_bytes(patched)
+
+    report = {
+        "rom": str(rom_path),
+        "original_md5": md5(original),
+        "patched_md5": md5(bytes(patched)),
+        "chr_bank7_range": [f"0x{CHR_BANK7_START:05X}", f"0x{CHR_BANK7_END - 1:05X}"],
+        "target_tile_range": [f"0x{TARGET_TILE_START:03X}", f"0x{TARGET_TILE_END:03X}"],
+        "glyphs_written": glyph_count,
+        "font_tiles_changed": font_changes,
+        "changed_bytes": len(changed_offsets),
+        "escaped_chr_bank7_bytes": len(escaped),
+        "ips_records": len(records),
+        "ips_path": str(ips_path),
+        "patched_rom_path": str(patched_path),
+    }
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    print("\nIPS patch generated")
+    print(f"  IPS: {ips_path} ({ips_path.stat().st_size} bytes)")
+    print(f"  patched ROM: {patched_path}")
+    print(f"  report: {report_path}")
+    print(f"  glyphs written: {glyph_count}")
+    print(f"  changed bytes in CHR Bank7: {len(changed_offsets)}")
+    print(f"  IPS records: {len(records)}")
+    print(f"  original MD5: {report['original_md5']}")
+    print(f"  patched MD5: {report['patched_md5']}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
