@@ -77,6 +77,7 @@
 - `patch_decision_matrix.md` / `patch_decision_matrix.json`: ranked next-decision table for applied rows, skipped rows, broad-scan conflicts, padding blockers, and manual capture priorities
 - `../scripts/verify_primary_patch.py`: verifies that the current primary IPS applies to the expected base ROM and produces the manifest MD5
 - `../scripts/run_project_checks.py`: runs the core consistency checks for Python scripts, generated Lua targets, primary IPS verification, and manifest invariants; use `--regen` to rebuild the current generated candidate artifacts first
+- `../scripts/preflight_manual_fceux.py`: checks the next manual FCEUX ROM/Lua/FCEUX inputs and prints the exact launch helper before opening the emulator
 - `../scripts/package_primary_release.py`: creates a ROM-free test bundle for the current primary IPS under `../release/`
 - `kana_pattern_scan.txt`: PRG scan for kana-like byte patterns based on the CHR bank 07 tile order
 - `candidate_region_decode.txt`: tentative kana-offset decoding around the strongest PRG candidates

@@ -41,6 +41,7 @@ def main() -> int:
     for expected_text in [
         "Patch Progress Dashboard",
         "Release Blockers",
+        "python scripts/preflight_manual_fceux.py",
         "python scripts/prepare_next_manual_run.py --powershell",
         "0x07227",
     ]:

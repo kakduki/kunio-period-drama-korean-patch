@@ -138,6 +138,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "## Useful Commands",
         "",
         "```powershell",
+        "python scripts/preflight_manual_fceux.py",
         "python scripts/prepare_next_manual_run.py --powershell",
         "python scripts/refresh_after_manual_capture.py --phase primary",
         "python scripts/refresh_after_manual_capture.py --phase broad",
