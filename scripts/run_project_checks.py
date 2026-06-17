@@ -38,6 +38,7 @@ KEY_PYTHON = [
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
     "scripts/generate_primary_patch_contents.py",
+    "scripts/generate_primary_visual_checklist.py",
     "scripts/generate_reference_capture_plan.py",
     "scripts/generate_release_test_checklist.py",
     "scripts/generate_route_fceux_targets.py",
@@ -62,6 +63,7 @@ KEY_PYTHON = [
     "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_proof_routes.py",
+    "scripts/test_primary_visual_checklist.py",
     "scripts/test_manual_capture_cards_readable.py",
     "scripts/test_run_fceux_budget.py",
     "scripts/test_reference_capture_plan.py",
@@ -127,6 +129,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_patch_candidate_manifest.py"],
     ["scripts/generate_patch_decision_matrix.py"],
     ["scripts/generate_primary_patch_contents.py"],
+    ["scripts/generate_primary_visual_checklist.py"],
     ["scripts/generate_v042_text_promotion_readiness.py"],
     ["scripts/generate_v042_manual_proof_packet.py"],
     ["scripts/generate_manual_proof_routes.py"],
@@ -199,6 +202,7 @@ def main() -> int:
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
+    run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
