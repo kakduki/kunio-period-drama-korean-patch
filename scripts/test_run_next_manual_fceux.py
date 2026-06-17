@@ -20,6 +20,7 @@ def main() -> int:
     out = result.stdout
     required = [
         "Next manual FCEUX action: 0x07227 / Katana",
+        "does not autoplay through the game",
         "press D in FCEUX",
         "scripts/run_fceux_lua_analysis.py",
         "--stop-after-manual-dump",
