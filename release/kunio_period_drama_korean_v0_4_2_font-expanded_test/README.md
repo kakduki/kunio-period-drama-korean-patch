@@ -40,6 +40,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md`: largest currently buildable font-only expansion candidate report
 - `apply_ips_standalone.py`: standalone IPS applier for this bundle
 - `record_visual_review.py`: helper to mark visual review rows after a manual screen check
+- `refresh_after_manual_capture.py`: one-command report refresh after manual FCEUX capture
 - `SHA256SUMS.txt`: checksums for bundle files
 
 ## Required Base ROM

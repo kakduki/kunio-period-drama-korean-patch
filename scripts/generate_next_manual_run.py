@@ -35,9 +35,7 @@ def primary_actions(primary: dict[str, object]) -> list[dict[str, object]]:
                 "screen_hint": row["screen_hint"],
                 "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
                 "after_capture": [
-                    row["summary_command"],
-                    "python scripts/generate_manual_capture_status.py",
-                    "python scripts/generate_primary_visual_checklist.py",
+                    "python scripts/refresh_after_manual_capture.py --phase primary",
                 ],
             }
         )
@@ -61,9 +59,7 @@ def route_actions(route_status: dict[str, object]) -> list[dict[str, object]]:
                 "screen_hint": route["screen_hint"],
                 "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
                 "after_capture": [
-                    "python scripts/analyze_broad_scan_manual_dump.py",
-                    "python scripts/generate_route_proof_status.py",
-                    "python scripts/generate_v043_proof_status.py",
+                    "python scripts/refresh_after_manual_capture.py --phase broad",
                 ],
             }
         )

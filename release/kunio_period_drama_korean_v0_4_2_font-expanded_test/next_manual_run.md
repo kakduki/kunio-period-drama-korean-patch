@@ -23,9 +23,7 @@ This is the shortest current FCEUX action queue. It combines primary-patch visua
 After capture:
 
 ```powershell
-python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md
-python scripts/generate_manual_capture_status.py
-python scripts/generate_primary_visual_checklist.py
+python scripts/refresh_after_manual_capture.py --phase primary
 ```
 
 ## Full Queue

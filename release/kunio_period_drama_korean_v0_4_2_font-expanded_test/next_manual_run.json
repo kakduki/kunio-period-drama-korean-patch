@@ -20,9 +20,7 @@
     "screen_hint": "look for a katana/weapon item label",
     "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
     "after_capture": [
-      "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-      "python scripts/generate_manual_capture_status.py",
-      "python scripts/generate_primary_visual_checklist.py"
+      "python scripts/refresh_after_manual_capture.py --phase primary"
     ]
   },
   "actions": [
@@ -36,9 +34,7 @@
       "screen_hint": "look for a katana/weapon item label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -51,9 +47,7 @@
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -66,9 +60,7 @@
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -81,9 +73,7 @@
       "screen_hint": "look for a visible Heishichi name/dialogue context",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -96,9 +86,7 @@
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -111,9 +99,7 @@
       "screen_hint": "look for a life/status UI label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -126,9 +112,7 @@
       "screen_hint": "look for a life/status UI label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -141,9 +125,7 @@
       "screen_hint": "look for a visible Tatsuichi name/dialogue context",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -156,9 +138,7 @@
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -171,9 +151,7 @@
       "screen_hint": "look for a bridge/stage/location label",
       "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
       "after_capture": [
-        "python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md",
-        "python scripts/generate_manual_capture_status.py",
-        "python scripts/generate_primary_visual_checklist.py"
+        "python scripts/refresh_after_manual_capture.py --phase primary"
       ]
     },
     {
@@ -186,9 +164,7 @@
       "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
       "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
       "after_capture": [
-        "python scripts/analyze_broad_scan_manual_dump.py",
-        "python scripts/generate_route_proof_status.py",
-        "python scripts/generate_v043_proof_status.py"
+        "python scripts/refresh_after_manual_capture.py --phase broad"
       ]
     },
     {
@@ -201,9 +177,7 @@
       "screen_hint": "look for a visible Tatsuji boss/name context",
       "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
       "after_capture": [
-        "python scripts/analyze_broad_scan_manual_dump.py",
-        "python scripts/generate_route_proof_status.py",
-        "python scripts/generate_v043_proof_status.py"
+        "python scripts/refresh_after_manual_capture.py --phase broad"
       ]
     },
     {
@@ -216,9 +190,7 @@
       "screen_hint": "look for a visible Heishichi name/dialogue context",
       "why": "This route can unlock additional v0.4.3 text rows, but it needs base-ROM CPU-read and visual screen proof.",
       "after_capture": [
-        "python scripts/analyze_broad_scan_manual_dump.py",
-        "python scripts/generate_route_proof_status.py",
-        "python scripts/generate_v043_proof_status.py"
+        "python scripts/refresh_after_manual_capture.py --phase broad"
       ]
     }
   ]

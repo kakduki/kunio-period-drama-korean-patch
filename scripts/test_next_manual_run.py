@@ -23,11 +23,13 @@ def main() -> int:
     assert summary["recommended_phase"] == "primary_v042_visual_review"
     assert action["target"] == "0x07227"
     assert action["watcher_lua"] == "lua/kunio_manual_v042_capture_watch.lua"
+    assert action["after_capture"] == ["python scripts/refresh_after_manual_capture.py --phase primary"]
 
     md = MD_PATH.read_text(encoding="utf-8")
     assert "Next Manual Run" in md
     assert "Recommended Next Action" in md
     assert "0x07227" in md
+    assert "refresh_after_manual_capture.py --phase primary" in md
     assert "kunio_manual_route_heishichi_capture_watch.lua" in md
 
     print("OK: next manual run report combines primary visual and route proof queues.")

@@ -1,8 +1,8 @@
 {
   "bundle_dir": "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test",
   "zip_path": "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test.zip",
-  "zip_size": 134902,
-  "zip_md5": "dcd3196b3cf4dcad0d547495fb1b93e8",
+  "zip_size": 135784,
+  "zip_md5": "59327589c27692c0da363c14552c363d",
   "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
   "primary_candidate": "v0.4.2 font-expanded",
   "primary_candidate_md5": "ea11dc002a1a7b07682ce00a754b1a61",
@@ -64,6 +64,7 @@
     "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\record_visual_review.py",
     "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\reference_capture_plan.json",
     "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\reference_capture_plan.md",
+    "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\refresh_after_manual_capture.py",
     "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\release_test_checklist.json",
     "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\release_test_checklist.md",
     "release\\kunio_period_drama_korean_v0_4_2_font-expanded_test\\route_fceux_targets.json",

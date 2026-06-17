@@ -73,6 +73,7 @@ FONT_EXPANSION_MAX_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_dram
 FONT_EXPANSION_MAX_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
 VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_visual_review.py"
+CAPTURE_REFRESHER = REPO_ROOT / "scripts" / "refresh_after_manual_capture.py"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
@@ -147,6 +148,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch46_report.md`: largest currently buildable font-only expansion candidate report",
         "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
         "- `record_visual_review.py`: helper to mark visual review rows after a manual screen check",
+        "- `refresh_after_manual_capture.py`: one-command report refresh after manual FCEUX capture",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -293,6 +295,7 @@ def package() -> dict[str, object]:
         (FONT_EXPANSION_MAX_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch46_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
         (VISUAL_REVIEW_RECORDER, "record_visual_review.py"),
+        (CAPTURE_REFRESHER, "refresh_after_manual_capture.py"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),
