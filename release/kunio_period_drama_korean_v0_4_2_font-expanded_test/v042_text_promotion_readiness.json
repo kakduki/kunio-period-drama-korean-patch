@@ -1,0 +1,206 @@
+{
+  "source": {
+    "broad_patchability": "rom_analysis\\broad_scan_patchability.json",
+    "base_slot_plan": "rom_analysis\\korean_slot_allocation_plan.json",
+    "expansion_plan": "rom_analysis\\next_glyph_expansion_plan.json",
+    "v042_report": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded_build_report.json"
+  },
+  "summary": {
+    "promotion_candidates": 7,
+    "font_ready_after_v042": 7,
+    "missing_glyph_after_v042": 0,
+    "non_overlapping_font_ready": 4,
+    "conflict_alternatives_font_ready": 3,
+    "rule": "v0.4.2 font coverage removes the glyph blocker, but every candidate still needs manual screen proof before patching."
+  },
+  "candidates": [
+    {
+      "kind": "conflict_alternative_needs_manual_screen",
+      "confidence": "high",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "rom_offset": "0x06294",
+      "bank16": 1,
+      "original_bytes": "9D 82 8C 91",
+      "korean_glyphs": [
+        "헤",
+        "이",
+        "시",
+        "치"
+      ],
+      "planned_prg_bytes": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    },
+    {
+      "kind": "conflict_alternative_needs_manual_screen",
+      "confidence": "high",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "rom_offset": "0x06359",
+      "bank16": 1,
+      "original_bytes": "9D 82 8C 91",
+      "korean_glyphs": [
+        "헤",
+        "이",
+        "시",
+        "치"
+      ],
+      "planned_prg_bytes": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    },
+    {
+      "kind": "conflict_alternative_needs_manual_screen",
+      "confidence": "high",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "rom_offset": "0x0631B",
+      "bank16": 1,
+      "original_bytes": "9D 82 8C 91",
+      "korean_glyphs": [
+        "헤",
+        "이",
+        "시",
+        "치"
+      ],
+      "planned_prg_bytes": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    },
+    {
+      "kind": "non_overlapping_needs_manual_screen",
+      "confidence": "medium",
+      "source": "たつじ",
+      "korean": "타츠지",
+      "rom_offset": "0x052A5",
+      "bank16": 1,
+      "original_bytes": "82 84 7E",
+      "korean_glyphs": [
+        "타",
+        "츠",
+        "지"
+      ],
+      "planned_prg_bytes": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    },
+    {
+      "kind": "non_overlapping_needs_manual_screen",
+      "confidence": "medium",
+      "source": "かじや",
+      "korean": "대장간",
+      "rom_offset": "0x0440C",
+      "bank16": 1,
+      "original_bytes": "CA D0 E9",
+      "korean_glyphs": [
+        "대",
+        "장",
+        "간"
+      ],
+      "planned_prg_bytes": [
+        "0xB5",
+        "0x93",
+        "0xAB"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    },
+    {
+      "kind": "non_overlapping_needs_manual_screen",
+      "confidence": "medium",
+      "source": "たつじ",
+      "korean": "타츠지",
+      "rom_offset": "0x05BE5",
+      "bank16": 1,
+      "original_bytes": "97 99 93",
+      "korean_glyphs": [
+        "타",
+        "츠",
+        "지"
+      ],
+      "planned_prg_bytes": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    },
+    {
+      "kind": "non_overlapping_needs_manual_screen",
+      "confidence": "medium",
+      "source": "たつじ",
+      "korean": "타츠지",
+      "rom_offset": "0x048F4",
+      "bank16": 1,
+      "original_bytes": "07 09 03",
+      "korean_glyphs": [
+        "타",
+        "츠",
+        "지"
+      ],
+      "planned_prg_bytes": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "font_ready_v042": true,
+      "missing_glyphs_after_v042": [],
+      "already_applied_in_v042": false,
+      "skipped_in_v042": false,
+      "next_gate": "manual screen proof with base ROM broad-scan dump",
+      "capture_lua": "lua/kunio_manual_broad_scan_dump.lua",
+      "summary_command": "python scripts/analyze_broad_scan_manual_dump.py"
+    }
+  ]
+}

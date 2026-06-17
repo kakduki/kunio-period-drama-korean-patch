@@ -24,6 +24,8 @@ TRANSLATION_GLYPH_COVERAGE_JSON = REPO_ROOT / "rom_analysis" / "translation_glyp
 TRANSLATION_GLYPH_COVERAGE_MD = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
 NEXT_GLYPH_EXPANSION_MD = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.md"
+V042_TEXT_PROMOTION_JSON = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.json"
+V042_TEXT_PROMOTION_MD = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.md"
 FONT_EXPANSION_REPORT_JSON = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"
 FONT_EXPANSION_REPORT_MD = REPO_ROOT / "rom_analysis" / "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"
 STANDALONE_APPLIER = REPO_ROOT / "scripts" / "apply_ips_standalone.py"
@@ -60,6 +62,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_capture_status.md`: generated status of manual dump evidence",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
+        "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
         "- `kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: local font-only expansion candidate report",
         "- `apply_ips_standalone.py`: standalone IPS applier for this bundle",
         "- `SHA256SUMS.txt`: checksums for bundle files",
@@ -141,6 +144,8 @@ def package() -> dict[str, object]:
         (TRANSLATION_GLYPH_COVERAGE_JSON, "translation_glyph_coverage.json"),
         (NEXT_GLYPH_EXPANSION_MD, "next_glyph_expansion_plan.md"),
         (NEXT_GLYPH_EXPANSION_JSON, "next_glyph_expansion_plan.json"),
+        (V042_TEXT_PROMOTION_MD, "v042_text_promotion_readiness.md"),
+        (V042_TEXT_PROMOTION_JSON, "v042_text_promotion_readiness.json"),
         (FONT_EXPANSION_REPORT_MD, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md"),
         (FONT_EXPANSION_REPORT_JSON, "kunio_period_drama_korean_font_expansion_v0.5_batch32_report.json"),
         (STANDALONE_APPLIER, "apply_ips_standalone.py"),
