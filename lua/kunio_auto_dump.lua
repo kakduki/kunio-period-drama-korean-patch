@@ -10,6 +10,9 @@ local SNAPSHOT_EVERY = tonumber(os.getenv("KUNIO_SNAPSHOT_EVERY") or "300")
 local BURST_THRESHOLD = tonumber(os.getenv("KUNIO_PPU_BURST_THRESHOLD") or "24")
 local DUMP_HEX = os.getenv("KUNIO_DUMP_HEX") ~= "0"
 local DUMP_BIN = os.getenv("KUNIO_DUMP_BIN") ~= "0"
+local STAGNATION_ABORT = os.getenv("KUNIO_STAGNATION_ABORT") ~= "0"
+local STAGNATION_MIN_FRAMES = tonumber(os.getenv("KUNIO_STAGNATION_MIN_FRAMES") or "1800")
+local STAGNATION_SAMPLES = tonumber(os.getenv("KUNIO_STAGNATION_SAMPLES") or "4")
 
 local summary_path = OUT_DIR .. "/summary.tsv"
 local events_path = OUT_DIR .. "/events.tsv"
@@ -20,6 +23,9 @@ local ppu_addr = 0
 local last_dump_frame = -999999
 local dump_count = 0
 local callback_mode = false
+local last_screen_fingerprint = nil
+local same_screen_samples = 0
+local stopped_for_stagnation = false
 
 local function mkdir(path)
 	os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -45,6 +51,19 @@ local function byte_at(addr, domain)
 		return value
 	end
 	return 0
+end
+
+local function screen_fingerprint()
+	local hash = 0
+	local sum = 0
+	-- Sample the visible nametable area. This is intentionally cheap because it
+	-- runs inside FCEUX Lua and only needs to detect "still the same screen".
+	for addr = 0x2000, 0x23BF, 8 do
+		local value = byte_at(addr, "ppu")
+		hash = (hash * 131 + value + addr) % 1000000007
+		sum = (sum + value) % 65536
+	end
+	return tostring(hash) .. ":" .. tostring(sum)
 end
 
 local function dump_range(path, start_addr, length, domain)
@@ -185,7 +204,7 @@ pcall(function() emu.speedmode("turbo") end)
 
 append(summary_path, "0\tlua_start\t0\t0000\tcallback_mode=" .. tostring(callback_mode))
 
-while emu.framecount() < MAX_FRAMES do
+while emu.framecount() < MAX_FRAMES and not stopped_for_stagnation do
 	local frame = emu.framecount()
 	ppu_writes_this_frame = 0
 
@@ -200,8 +219,29 @@ while emu.framecount() < MAX_FRAMES do
 	elseif frame % SNAPSHOT_EVERY == 0 then
 		snapshot("periodic")
 	end
+
+	if STAGNATION_ABORT and frame >= STAGNATION_MIN_FRAMES and frame % SNAPSHOT_EVERY == 0 then
+		local fingerprint = screen_fingerprint()
+		if fingerprint == last_screen_fingerprint then
+			same_screen_samples = same_screen_samples + 1
+		else
+			same_screen_samples = 0
+			last_screen_fingerprint = fingerprint
+		end
+		append(summary_path, table.concat({
+			frame,
+			"screen_fingerprint",
+			ppu_writes_this_frame,
+			hex4(ppu_addr),
+			"same_samples=" .. tostring(same_screen_samples) .. ";hash=" .. fingerprint
+		}, "\t"))
+		if same_screen_samples >= STAGNATION_SAMPLES then
+			stopped_for_stagnation = true
+		end
+	end
 end
 
 snapshot("final")
-append(summary_path, tostring(emu.framecount()) .. "\tlua_done\t0\t" .. hex4(ppu_addr) .. "\t" .. tostring(dump_count) .. "_dumps")
+local final_reason = stopped_for_stagnation and "stagnant_screen" or "lua_done"
+append(summary_path, tostring(emu.framecount()) .. "\t" .. final_reason .. "\t0\t" .. hex4(ppu_addr) .. "\t" .. tostring(dump_count) .. "_dumps")
 pcall(function() FCEU.pause() end)

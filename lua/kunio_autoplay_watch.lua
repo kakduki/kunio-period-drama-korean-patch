@@ -21,6 +21,9 @@ local HIT_LIMIT  = tonumber(os.getenv("KUNIO_HIT_LIMIT")  or "50000")
 -- per-phase hit budget: phase 2 (menu) gets 30000, phase 3 (stage) gets 20000
 local PHASE2_LIMIT = tonumber(os.getenv("KUNIO_PHASE2_LIMIT") or "30000")
 local PHASE3_LIMIT = tonumber(os.getenv("KUNIO_PHASE3_LIMIT") or "20000")
+local STAGNATION_ABORT = os.getenv("KUNIO_STAGNATION_ABORT") ~= "0"
+local STAGNATION_MIN_FRAMES = tonumber(os.getenv("KUNIO_STAGNATION_MIN_FRAMES") or "1800")
+local STAGNATION_SAMPLES = tonumber(os.getenv("KUNIO_STAGNATION_SAMPLES") or "4")
 
 local summary_path = OUT_DIR .. "/summary.tsv"
 local reads_path   = OUT_DIR .. "/bank1_reads.tsv"
@@ -32,6 +35,9 @@ local current_phase    = 1   -- updated each frame in main loop; safe to read fr
 local registered_count = 0
 local callback_mode    = false
 local stopped_for_limit = false
+local stopped_for_stagnation = false
+local last_screen_fingerprint = nil
+local same_screen_samples = 0
 
 -- Load targets ----------------------------------------------------------
 local targets      = {}
@@ -71,6 +77,23 @@ local function byte_at(addr)
     local ok2, v = pcall(function() return memory.readbyte(addr) end)
     if ok2 and v ~= nil then return v end
     return 0
+end
+
+local function byte_at_domain(addr, domain)
+    local ok2, v = pcall(function() return memory.readbyte(addr, domain) end)
+    if ok2 and v ~= nil then return v end
+    return byte_at(addr)
+end
+
+local function screen_fingerprint()
+    local hash = 0
+    local sum = 0
+    for addr = 0x2000, 0x23BF, 8 do
+        local value = byte_at_domain(addr, "ppu")
+        hash = (hash * 131 + value + addr) % 1000000007
+        sum = (sum + value) % 65536
+    end
+    return tostring(hash) .. ":" .. tostring(sum)
 end
 
 local function read_context(addr)
@@ -248,7 +271,7 @@ print("registered_cpu_addrs=" .. registered_count)
 print("max_frames=" .. MAX_FRAMES)
 
 -- Main loop -------------------------------------------------------------
-while emu.framecount() < MAX_FRAMES and not stopped_for_limit do
+while emu.framecount() < MAX_FRAMES and not stopped_for_limit and not stopped_for_stagnation do
     local frame = emu.framecount()
     current_phase = get_phase(frame)
     local phase = current_phase
@@ -263,9 +286,26 @@ while emu.framecount() < MAX_FRAMES and not stopped_for_limit do
             frame, "periodic", registered_count, hit_count, "phase=" .. tostring(phase),
         }, "\t"))
     end
+
+    if STAGNATION_ABORT and frame >= STAGNATION_MIN_FRAMES and frame % 300 == 0 then
+        local fingerprint = screen_fingerprint()
+        if fingerprint == last_screen_fingerprint and hit_count == 0 then
+            same_screen_samples = same_screen_samples + 1
+        else
+            same_screen_samples = 0
+            last_screen_fingerprint = fingerprint
+        end
+        append(summary_path, table.concat({
+            frame, "screen_fingerprint", registered_count, hit_count,
+            "same_samples=" .. tostring(same_screen_samples) .. ";hash=" .. fingerprint,
+        }, "\t"))
+        if same_screen_samples >= STAGNATION_SAMPLES then
+            stopped_for_stagnation = true
+        end
+    end
 end
 
-local final_reason = stopped_for_limit and "hit_limit" or "lua_done"
+local final_reason = stopped_for_limit and "hit_limit" or (stopped_for_stagnation and "stagnant_screen" or "lua_done")
 append(summary_path, table.concat({
     emu.framecount(), final_reason, registered_count, hit_count, "out=" .. OUT_DIR,
 }, "\t"))

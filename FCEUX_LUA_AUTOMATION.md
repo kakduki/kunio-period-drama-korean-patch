@@ -24,6 +24,7 @@ Useful options:
 python scripts/run_fceux_lua_analysis.py --frames 10800 --timeout 240
 python scripts/run_fceux_lua_analysis.py --fceux C:\path\to\qfceux.exe
 python scripts/run_fceux_lua_analysis.py --rom C:\path\to\game.nes
+python scripts/run_fceux_lua_analysis.py --stagnation-min-frames 1800 --stagnation-samples 4
 ```
 
 The launcher copies the selected FCEUX directory to an ASCII-only staging path
@@ -36,6 +37,13 @@ output to:
 ```text
 rom_analysis/fceux_lua/
 ```
+
+The supported autoplay Lua scripts also sample the visible nametable. If the
+same screen repeats after the configured minimum frame count, the script writes
+`stagnant_screen` and the launcher stops FCEUX. Treat that as "the bot is stuck
+on the same opening/menu screen", not as useful gameplay coverage. Do not
+extend the same run for hours; manually reach the target screen and run the
+one-shot manual dump script instead.
 
 ## If Lua does not autoload
 
@@ -55,6 +63,13 @@ If the emulator opens without the overlay text:
 - `frame_*_sram_6000_7fff.txt`: SRAM/expanded CPU address range dump.
 - `frame_*_nametable_2000_2fff.txt`: nametable-oriented dump, using the PPU domain when supported.
 - `*.bin`: raw dumps, generated locally and ignored by git by default.
+
+Final summary reasons:
+
+- `lua_done`: the configured frame count completed.
+- `hit_limit`: a read-watch script reached its configured hit budget.
+- `stagnant_screen`: the visible nametable did not change across repeated
+  samples; stop autoplay and switch to manual capture.
 
 The important follow-up is to compare dump frames with the static candidates in
 `rom_analysis/README.md`, especially the `$2006/$2007` writer region and the

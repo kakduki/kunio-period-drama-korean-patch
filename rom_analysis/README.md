@@ -154,6 +154,9 @@ use the generated TSV/MD artifacts as the authoritative result of the run.
 If the visible emulator is still on the opening/title/first menu screen, do not
 keep extending the autoplay run. Manually reach the target text screen and use
 `lua/kunio_manual_screen_dump.lua` instead.
+Autoplay scripts also write `stagnant_screen` to `summary.tsv` when the visible
+nametable repeats after the configured minimum frame count. Treat that as an
+early abort condition and switch to manual capture.
 
 Run:
 

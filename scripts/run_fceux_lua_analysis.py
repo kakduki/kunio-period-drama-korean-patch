@@ -86,6 +86,16 @@ def copytree_contents(src: Path, dst: Path) -> None:
             shutil.copy2(item, target)
 
 
+def summary_final_reason(summary: Path) -> str | None:
+    if not summary.exists():
+        return None
+    text = summary.read_text(encoding="utf-8", errors="ignore")
+    for marker in ("lua_done", "stagnant_screen", "hit_limit"):
+        if marker in text:
+            return marker
+    return None
+
+
 def stage_fceux(exe: Path) -> Path:
     """Copy FCEUX beside ASCII-only runtime files.
 
@@ -181,6 +191,9 @@ def launch(args: argparse.Namespace) -> int:
     env["KUNIO_DUMP_HEX"] = "1" if args.dump_hex else "0"
     env["KUNIO_DUMP_BIN"] = "1" if args.dump_bin else "0"
     env["KUNIO_HIT_LIMIT"] = str(args.hit_limit)
+    env["KUNIO_STAGNATION_ABORT"] = "1" if args.stagnation_abort else "0"
+    env["KUNIO_STAGNATION_MIN_FRAMES"] = str(args.stagnation_min_frames)
+    env["KUNIO_STAGNATION_SAMPLES"] = str(args.stagnation_samples)
     if target_lua:
         env["KUNIO_TARGETS_LUA"] = target_lua.name
 
@@ -198,9 +211,10 @@ def launch(args: argparse.Namespace) -> int:
 
     try:
         while proc.poll() is None and time.monotonic() < deadline:
-            if summary.exists() and "lua_done" in summary.read_text(encoding="utf-8", errors="ignore"):
+            final_reason = summary_final_reason(summary)
+            if final_reason:
                 completed = True
-                print("Lua script reported completion; stopping FCEUX.")
+                print(f"Lua script reported {final_reason}; stopping FCEUX.")
                 proc.terminate()
                 break
             time.sleep(1)
@@ -233,6 +247,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")
     parser.add_argument("--ppu-burst-threshold", type=int, default=24, help="PPUDATA/PPUADDR writes per frame that trigger a dump.")
     parser.add_argument("--hit-limit", type=int, default=50000, help="Maximum read hits for watcher Lua scripts that support KUNIO_HIT_LIMIT.")
+    parser.add_argument("--stagnation-abort", action=argparse.BooleanOptionalAction, default=True, help="Let supported Lua scripts stop early when the nametable appears unchanged for repeated samples.")
+    parser.add_argument("--stagnation-min-frames", type=int, default=1800, help="Minimum frame before supported Lua scripts may stop for repeated unchanged-screen samples.")
+    parser.add_argument("--stagnation-samples", type=int, default=4, help="Consecutive unchanged-screen samples required before supported Lua scripts stop early.")
     parser.add_argument("--final-output", default=str(ROOT / "rom_analysis" / "fceux_lua"), help="Directory where Lua output is mirrored after FCEUX exits.")
     parser.add_argument("--clean-output", action="store_true", help="Delete the final output directory before copying new results.")
     parser.add_argument("--dump-hex", action=argparse.BooleanOptionalAction, default=True, help="Write text hex dumps at snapshot frames.")

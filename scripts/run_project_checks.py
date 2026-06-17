@@ -18,6 +18,7 @@ KEY_PYTHON = [
     "scripts/build_prg_patch_from_plan.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/check_lua_target_syntax.py",
+    "scripts/check_lua_script_balance.py",
     "scripts/compare_v04_broad_candidates.py",
     "scripts/generate_broad_scan_fceux_targets.py",
     "scripts/generate_broad_scan_patchability.py",
@@ -39,6 +40,17 @@ LUA_TARGETS = [
     "lua/kunio_padding_exp_pad_ff_targets.lua",
     "lua/kunio_padding_exp_pad_f8f9_targets.lua",
     "lua/kunio_padding_exp_preserve_tail_targets.lua",
+]
+
+LUA_SCRIPTS = [
+    "lua/kunio_auto_dump.lua",
+    "lua/kunio_autoplay_watch.lua",
+    "lua/kunio_bank1_watch.lua",
+    "lua/kunio_manual_broad_scan_dump.lua",
+    "lua/kunio_manual_screen_dump.lua",
+    "lua/kunio_manual_v04_screen_dump.lua",
+    "lua/kunio_manual_v041_screen_dump.lua",
+    "lua/kunio_ppu_watch.lua",
 ]
 
 REGEN_COMMANDS = [
@@ -98,6 +110,7 @@ def main() -> int:
     if args.regen:
         for command in REGEN_COMMANDS:
             run("regenerate " + command[0], command)
+    run("lua script balance", ["scripts/check_lua_script_balance.py", *LUA_SCRIPTS])
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
     check_manifest()
