@@ -54,6 +54,7 @@ KEY_PYTHON = [
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
+    "scripts/prepare_next_manual_run.py",
     "scripts/record_visual_review.py",
     "scripts/readable_labels.py",
     "scripts/refresh_after_manual_capture.py",
@@ -67,6 +68,7 @@ KEY_PYTHON = [
     "scripts/test_manual_proof_routes.py",
     "scripts/test_manual_capture_watcher_overlay.py",
     "scripts/test_next_manual_run.py",
+    "scripts/test_prepare_next_manual_run.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_manual_capture_cards_readable.py",
     "scripts/test_run_fceux_budget.py",
@@ -210,6 +212,7 @@ def main() -> int:
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
     run("manual capture watcher overlay", ["scripts/test_manual_capture_watcher_overlay.py"])
     run("next manual run", ["scripts/test_next_manual_run.py"])
+    run("next manual run helper", ["scripts/test_prepare_next_manual_run.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
