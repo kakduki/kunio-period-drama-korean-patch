@@ -48,6 +48,7 @@ python scripts/run_project_checks.py --regen
 - `rom_analysis/patch_decision_matrix.md`: 다음 수동 검증 우선순위
 - `rom_analysis/manual_capture_cards.md`: FCEUX 앞에서 바로 따라 할 짧은 캡처 카드
 - `rom_analysis/manual_capture_status.md`: 수동 덤프가 생긴 뒤 카드별 증거 상태표
+- `rom_analysis/release_test_checklist.md`: 현재 IPS 적용부터 수동 캡처/검토까지의 짧은 체크리스트
 - `rom_analysis/translation_glyph_coverage.md`: 전체 번역 데이터 기준 글리프 커버리지
 - `rom_analysis/next_glyph_expansion_plan.md`: 다음 한글 글리프 확장 우선순위
 - `rom_analysis/v042_text_promotion_readiness.md`: v0.4.2 폰트 기준 다음 텍스트 후보 준비도

@@ -1,0 +1,183 @@
+{
+  "source": {
+    "manifest": "rom_analysis/patch_candidate_manifest.json",
+    "reference_capture_plan": "rom_analysis/reference_capture_plan.json",
+    "v043_proof_status": "rom_analysis/v043_proof_status.json"
+  },
+  "summary": {
+    "primary_candidate": "v0.4.2 font-expanded",
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
+    "expected_patched_md5": "ea11dc002a1a7b07682ce00a754b1a61",
+    "priority_manual_checks": 7,
+    "proof_status_counts": {
+      "needs_manual_capture": 7
+    }
+  },
+  "priority_manual_checks": [
+    {
+      "rank_score": 1380,
+      "reference_order": 95,
+      "reference_section": "6. 적 캐릭터 / 보스 이름",
+      "section_number": 6,
+      "confidence": "high",
+      "rom_offset": "0x06294",
+      "bank16": 1,
+      "cpu_address_guess": "$A284",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "romaji": "Heishichi",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    },
+    {
+      "rank_score": 1380,
+      "reference_order": 95,
+      "reference_section": "6. 적 캐릭터 / 보스 이름",
+      "section_number": 6,
+      "confidence": "high",
+      "rom_offset": "0x0631B",
+      "bank16": 1,
+      "cpu_address_guess": "$A30B",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "romaji": "Heishichi",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    },
+    {
+      "rank_score": 1380,
+      "reference_order": 95,
+      "reference_section": "6. 적 캐릭터 / 보스 이름",
+      "section_number": 6,
+      "confidence": "high",
+      "rom_offset": "0x06359",
+      "bank16": 1,
+      "cpu_address_guess": "$A349",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "romaji": "Heishichi",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0x8D",
+        "0x8E",
+        "0x8F",
+        "0x90"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    },
+    {
+      "rank_score": 1320,
+      "reference_order": 101,
+      "reference_section": "6. 적 캐릭터 / 보스 이름",
+      "section_number": 6,
+      "confidence": "medium",
+      "rom_offset": "0x048F4",
+      "bank16": 1,
+      "cpu_address_guess": "$88E4",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "romaji": "Tatsuji",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    },
+    {
+      "rank_score": 1320,
+      "reference_order": 101,
+      "reference_section": "6. 적 캐릭터 / 보스 이름",
+      "section_number": 6,
+      "confidence": "medium",
+      "rom_offset": "0x052A5",
+      "bank16": 1,
+      "cpu_address_guess": "$9295",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "romaji": "Tatsuji",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    },
+    {
+      "rank_score": 1320,
+      "reference_order": 101,
+      "reference_section": "6. 적 캐릭터 / 보스 이름",
+      "section_number": 6,
+      "confidence": "medium",
+      "rom_offset": "0x05BE5",
+      "bank16": 1,
+      "cpu_address_guess": "$9BD5",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "romaji": "Tatsuji",
+      "screen_hint": "look for a visible Tatsuji boss/name context",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0x89",
+        "0x98",
+        "0xA1"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    },
+    {
+      "rank_score": 1280,
+      "reference_order": 118,
+      "reference_section": "7. 스테이지 / 지역 이름",
+      "section_number": 7,
+      "confidence": "medium",
+      "rom_offset": "0x0440C",
+      "bank16": 1,
+      "cpu_address_guess": "$83FC",
+      "source_display": "かじや",
+      "korean_display": "대장간",
+      "romaji": "Kajiya",
+      "screen_hint": "look for a blacksmith/shop or blacksmith-stage label",
+      "promotable_after_screen_proof": true,
+      "font_ready_after_v042": true,
+      "planned_prg_bytes_after_v042": [
+        "0xB5",
+        "0x93",
+        "0xAB"
+      ],
+      "proof_status": "needs_manual_capture",
+      "why": "reference order narrows screen search; ROM promotion still requires CPU-read and visual proof"
+    }
+  ]
+}
