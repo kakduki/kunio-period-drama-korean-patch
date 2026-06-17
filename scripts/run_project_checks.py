@@ -46,6 +46,7 @@ KEY_PYTHON = [
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
     "scripts/test_run_fceux_budget.py",
+    "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
 ]
 
@@ -150,6 +151,7 @@ def main() -> int:
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
+    run("broad preview IPS verification", ["scripts/verify_broad_preview_patch.py"])
     check_manifest()
     print("\nAll project checks passed.")
     return 0

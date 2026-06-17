@@ -52,6 +52,12 @@ From inside this extracted bundle folder:
 python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes
 ```
 
+To apply the optional unverified broad preview IPS for manual screen comparison:
+
+```powershell
+python apply_ips_standalone.py C:\path\to\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes --ips kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips
+```
+
 ## Verify In Repository
 
 From the repository root:
@@ -64,5 +70,6 @@ python scripts/run_project_checks.py
 ## Current Limitations
 
 - Still needs manual FCEUX screen verification.
+- The broad preview IPS is not proof-approved and is only for manual screen comparison.
 - v0.4 broad-scan conflicts are intentionally excluded from this candidate.
 - Padding/shortened replacements are not included.

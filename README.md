@@ -19,6 +19,7 @@
 
 ```powershell
 python scripts/verify_primary_patch.py
+python scripts/verify_broad_preview_patch.py
 python scripts/run_project_checks.py
 ```
 
