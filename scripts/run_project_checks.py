@@ -46,6 +46,7 @@ KEY_PYTHON = [
     "scripts/record_visual_review.py",
     "scripts/readable_labels.py",
     "scripts/run_fceux_lua_analysis.py",
+    "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_run_fceux_budget.py",
     "scripts/test_translation_capture_queue_readable.py",
     "scripts/test_v043_proof_gate.py",
@@ -85,6 +86,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_translation_scan_capture_queue.py"],
     ["scripts/generate_translation_glyph_coverage.py"],
     ["scripts/generate_next_glyph_expansion_plan.py"],
+    ["scripts/generate_broad_scan_patchability.py"],
     ["scripts/generate_broad_scan_fceux_targets.py"],
     ["scripts/build_next_glyph_expansion_candidate.py", "--batch-size", "32"],
     ["scripts/build_v042_font_expanded_candidate.py"],
@@ -154,6 +156,7 @@ def main() -> int:
     run("lua target syntax", ["scripts/check_lua_target_syntax.py", *LUA_TARGETS])
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
+    run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
     run("primary IPS verification", ["scripts/verify_primary_patch.py"])
     run("broad preview IPS verification", ["scripts/verify_broad_preview_patch.py"])

@@ -26,6 +26,8 @@ TRANSLATION_PATTERN_SCAN_JSON = REPO_ROOT / "rom_analysis" / "translation_patter
 TRANSLATION_PATTERN_SCAN_MD = REPO_ROOT / "rom_analysis" / "translation_pattern_scan.md"
 TRANSLATION_SCAN_QUEUE_JSON = REPO_ROOT / "rom_analysis" / "translation_scan_capture_queue.json"
 TRANSLATION_SCAN_QUEUE_MD = REPO_ROOT / "rom_analysis" / "translation_scan_capture_queue.md"
+BROAD_SCAN_PATCHABILITY_JSON = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.json"
+BROAD_SCAN_PATCHABILITY_MD = REPO_ROOT / "rom_analysis" / "broad_scan_patchability.md"
 NEXT_GLYPH_EXPANSION_JSON = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
 NEXT_GLYPH_EXPANSION_MD = REPO_ROOT / "rom_analysis" / "next_glyph_expansion_plan.md"
 V042_TEXT_PROMOTION_JSON = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.json"
@@ -87,6 +89,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: preview IPS contents and warnings",
         "- `translation_pattern_scan.md`: broad ROM candidate scan against all 144 translation entries",
         "- `translation_scan_capture_queue.md`: focused broad-scan capture queue with readable text labels",
+        "- `broad_scan_patchability.md`: length-safe broad-scan candidates with v0.4.2 planned bytes",
         "- `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan",
         "- `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion",
         "- `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2",
@@ -183,6 +186,8 @@ def package() -> dict[str, object]:
         (TRANSLATION_PATTERN_SCAN_JSON, "translation_pattern_scan.json"),
         (TRANSLATION_SCAN_QUEUE_MD, "translation_scan_capture_queue.md"),
         (TRANSLATION_SCAN_QUEUE_JSON, "translation_scan_capture_queue.json"),
+        (BROAD_SCAN_PATCHABILITY_MD, "broad_scan_patchability.md"),
+        (BROAD_SCAN_PATCHABILITY_JSON, "broad_scan_patchability.json"),
         (NEXT_GLYPH_EXPANSION_MD, "next_glyph_expansion_plan.md"),
         (NEXT_GLYPH_EXPANSION_JSON, "next_glyph_expansion_plan.json"),
         (V042_TEXT_PROMOTION_MD, "v042_text_promotion_readiness.md"),

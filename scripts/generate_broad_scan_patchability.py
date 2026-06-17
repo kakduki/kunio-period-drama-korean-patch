@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE_JSON = ROOT / "rom_analysis" / "translation_scan_capture_queue.json"
 SLOT_PLAN_JSON = ROOT / "rom_analysis" / "korean_slot_allocation_plan.json"
+EXPANSION_PLAN_JSON = ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
 OUT_JSON = ROOT / "rom_analysis" / "broad_scan_patchability.json"
 OUT_MD = ROOT / "rom_analysis" / "broad_scan_patchability.md"
 
@@ -36,15 +37,32 @@ def load_existing_slots() -> dict[str, dict[str, object]]:
     return {str(slot["glyph"]): slot for slot in plan.get("slots", [])}
 
 
+def load_v042_slots() -> dict[str, dict[str, object]]:
+    base = json.loads(SLOT_PLAN_JSON.read_text(encoding="utf-8"))
+    expansion = json.loads(EXPANSION_PLAN_JSON.read_text(encoding="utf-8"))
+    slots = list(base.get("slots", [])) + list(expansion.get("next_slots", [])[:32])
+    return {str(slot["glyph"]): slot for slot in slots}
+
+
+def slot_prg_byte(slot: dict[str, object]) -> str:
+    return str(slot.get("prg_plus_0x7a_byte") or slot.get("planned_prg_byte") or "")
+
+
 def planned_prg_byte_for_new_slot(slot_index: int) -> str:
     tile = PATCH_TILE_START + slot_index
     return f"0x{((tile - 0x7A) & 0xFF):02X}"
 
 
-def classify(row: dict[str, object], existing_slots: dict[str, dict[str, object]]) -> dict[str, object]:
+def classify(
+    row: dict[str, object],
+    existing_slots: dict[str, dict[str, object]],
+    v042_slots: dict[str, dict[str, object]],
+) -> dict[str, object]:
     source_bytes = parse_hex_bytes(str(row["bytes"]))
     glyphs = korean_chars(str(row["korean"]))
     new_glyphs = [glyph for glyph in glyphs if glyph not in existing_slots]
+    missing_after_v042 = [glyph for glyph in glyphs if glyph not in v042_slots]
+    planned_v042_bytes = [slot_prg_byte(v042_slots[glyph]) for glyph in glyphs if glyph in v042_slots]
     has_control = any(byte in CONTROL_LIKE for byte in source_bytes)
     length_equal = len(source_bytes) == len(glyphs)
     bank1 = int(row["bank16"]) == 1
@@ -71,6 +89,9 @@ def classify(row: dict[str, object], existing_slots: dict[str, dict[str, object]
         "korean_glyph_len": len(glyphs),
         "new_glyphs": new_glyphs,
         "existing_glyphs": [glyph for glyph in glyphs if glyph in existing_slots],
+        "missing_glyphs_after_v042": missing_after_v042,
+        "font_ready_after_v042": not missing_after_v042,
+        "planned_prg_bytes_after_v042": planned_v042_bytes,
         "contains_control_like_bytes": has_control,
         "length_equal": length_equal,
         "promotable_after_screen_proof": promotable_after_screen_proof,
@@ -110,20 +131,30 @@ def build_extended_slots(rows: list[dict[str, object]], existing_slots: dict[str
 def main() -> int:
     queue = json.loads(QUEUE_JSON.read_text(encoding="utf-8"))
     existing_slots = load_existing_slots()
-    rows = [classify(row, existing_slots) for row in queue["queue"]]
+    v042_slots = load_v042_slots()
+    rows = [classify(row, existing_slots, v042_slots) for row in queue["queue"]]
     promotion_candidates = [row for row in rows if row["promotable_after_screen_proof"]]
     glyph_extension = build_extended_slots(rows, existing_slots)
+    missing_after_v042 = sorted(
+        {glyph for row in promotion_candidates for glyph in row["missing_glyphs_after_v042"]}
+    )
 
     payload = {
         "source": {
             "queue": str(QUEUE_JSON.relative_to(ROOT)),
             "slot_plan": str(SLOT_PLAN_JSON.relative_to(ROOT)),
+            "v042_expansion_plan": str(EXPANSION_PLAN_JSON.relative_to(ROOT)),
         },
         "summary": {
             "queued_hits": len(rows),
             "promotion_candidates_after_screen_proof": len(promotion_candidates),
             "existing_required_glyphs": len(existing_slots),
             "additional_glyphs_if_promoted": len(glyph_extension),
+            "v042_required_glyphs": len(v042_slots),
+            "promotion_candidates_font_ready_after_v042": sum(
+                1 for row in promotion_candidates if row["font_ready_after_v042"]
+            ),
+            "additional_glyphs_after_v042_if_promoted": len(missing_after_v042),
             "available_slots": PATCH_TILE_END - PATCH_TILE_START + 1,
         },
         "promotion_candidates": promotion_candidates,
@@ -144,23 +175,26 @@ def main() -> int:
         f"- Promotion candidates after screen proof: **{payload['summary']['promotion_candidates_after_screen_proof']}**",
         f"- Existing required glyphs: **{payload['summary']['existing_required_glyphs']}**",
         f"- Additional glyphs if promoted: **{payload['summary']['additional_glyphs_if_promoted']}**",
+        f"- v0.4.2 glyphs available: **{payload['summary']['v042_required_glyphs']}**",
+        f"- Promotion candidates font-ready after v0.4.2: **{payload['summary']['promotion_candidates_font_ready_after_v042']}**",
+        f"- Additional glyphs still needed after v0.4.2: **{payload['summary']['additional_glyphs_after_v042_if_promoted']}**",
         f"- Available CHR patch slots: **{payload['summary']['available_slots']}**",
         "",
         "## Promotion Candidates After Screen Proof",
         "",
-        "| confidence | source | korean | ROM | bank | bytes | glyphs | new glyphs |",
-        "| --- | --- | --- | --- | ---: | --- | --- | --- |",
+        "| confidence | source | korean | ROM | bank | original bytes | v0.4.2 planned bytes | glyphs | missing after v0.4.2 |",
+        "| --- | --- | --- | --- | ---: | --- | --- | --- | --- |",
     ]
     for row in promotion_candidates:
         lines.append(
             f"| {row['confidence']} | {row['source']} | {row['korean']} | `{row['rom_offset']}` | "
-            f"{row['bank16']} | `{row['bytes']}` | {''.join(row['korean_glyphs']) or '-'} | "
-            f"{''.join(row['new_glyphs']) or '-'} |"
+            f"{row['bank16']} | `{row['bytes']}` | `{' '.join(row['planned_prg_bytes_after_v042'])}` | "
+            f"{''.join(row['korean_glyphs']) or '-'} | {''.join(row['missing_glyphs_after_v042']) or '-'} |"
         )
 
     lines += [
         "",
-        "## Additional Glyph Slots If Promoted",
+        "## Compact Base-Plan Glyph Slots If Promoted",
         "",
         "| slot | glyph | tile | planned PRG byte | used by ROM offsets |",
         "| ---: | --- | --- | --- | --- |",
@@ -193,6 +227,8 @@ def main() -> int:
         "",
         "## Rule",
         "",
+        "- v0.4.2 already includes the first 32 glyph expansion slots, so use the `v0.4.2 planned bytes` column for preview/test patches.",
+        "- The minimal `Additional Glyph Slots If Promoted` table is a compact-from-base view, not the byte map used by v0.4.2.",
         "- Do not build a v0.5 ROM from these rows until the corresponding screen dump confirms active bytes.",
         "- Length mismatches and control-like source bytes remain non-promotable from static evidence.",
     ]
