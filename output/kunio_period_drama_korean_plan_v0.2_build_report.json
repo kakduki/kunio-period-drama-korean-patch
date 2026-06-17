@@ -1,0 +1,251 @@
+{
+  "plan": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\korean_slot_allocation_plan.json",
+  "rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "original_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "patched_md5": "416ad32dfc438c8b51a4d0a20028fe81",
+  "chr_bank7_range": [
+    "0x2E010",
+    "0x3000F"
+  ],
+  "glyphs_written": 18,
+  "changed_bytes": 252,
+  "escaped_chr_bank7_bytes": 0,
+  "ips_records": 35,
+  "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_plan_v0.2.ips",
+  "patched_rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_plan_v0.2.nes",
+  "slots": [
+    {
+      "glyph": "힘",
+      "tile": "0x101",
+      "rom_offset": "0x2F020",
+      "planned_prg_byte": "0x87",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "rom_071a4_candidate_82",
+        "rom_066fb_candidate_82",
+        "rom_06845_candidate_82",
+        "rom_06605_candidate_82",
+        "rom_06b4a_candidate_82"
+      ]
+    },
+    {
+      "glyph": "카",
+      "tile": "0x102",
+      "rom_offset": "0x2F030",
+      "planned_prg_byte": "0x88",
+      "changed_bytes": 14,
+      "used_by_labels": [
+        "rom_07227_candidate_84",
+        "rom_05644_candidate_7c",
+        "rom_06295_candidate_7c",
+        "rom_0631c_candidate_7c",
+        "rom_0635a_candidate_7c"
+      ]
+    },
+    {
+      "glyph": "타",
+      "tile": "0x103",
+      "rom_offset": "0x2F040",
+      "planned_prg_byte": "0x89",
+      "changed_bytes": 14,
+      "used_by_labels": [
+        "rom_07227_candidate_84",
+        "rom_05644_candidate_7c",
+        "rom_06295_candidate_7c",
+        "rom_0631c_candidate_7c",
+        "watch_rom_0562f_보스_80",
+        "rom_0635a_candidate_7c"
+      ]
+    },
+    {
+      "glyph": "나",
+      "tile": "0x104",
+      "rom_offset": "0x2F050",
+      "planned_prg_byte": "0x8A",
+      "changed_bytes": 14,
+      "used_by_labels": [
+        "rom_07227_candidate_84",
+        "rom_05644_candidate_7c",
+        "rom_06295_candidate_7c",
+        "rom_0631c_candidate_7c",
+        "rom_0635a_candidate_7c"
+      ]
+    },
+    {
+      "glyph": "다",
+      "tile": "0x105",
+      "rom_offset": "0x2F060",
+      "planned_prg_byte": "0x8B",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "watch_rom_0569d_스테이지_7a",
+        "watch_rom_0561a_스테이지_7c",
+        "watch_rom_057d4_스테이지_8c",
+        "watch_rom_056da_스테이지_80",
+        "watch_rom_0571c_스테이지_78"
+      ]
+    },
+    {
+      "glyph": "리",
+      "tile": "0x106",
+      "rom_offset": "0x2F070",
+      "planned_prg_byte": "0x8C",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "watch_rom_0569d_스테이지_7a",
+        "watch_rom_0561a_스테이지_7c",
+        "watch_rom_057d4_스테이지_8c",
+        "watch_rom_056da_스테이지_80",
+        "watch_rom_0571c_스테이지_78"
+      ]
+    },
+    {
+      "glyph": "헤",
+      "tile": "0x107",
+      "rom_offset": "0x2F080",
+      "planned_prg_byte": "0x8D",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "watch_rom_05643_보스_80"
+      ]
+    },
+    {
+      "glyph": "이",
+      "tile": "0x108",
+      "rom_offset": "0x2F090",
+      "planned_prg_byte": "0x8E",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "watch_rom_05643_보스_80",
+        "rom_0736a_candidate_93",
+        "rom_0739d_candidate_93",
+        "watch_rom_0562f_보스_80"
+      ]
+    },
+    {
+      "glyph": "시",
+      "tile": "0x109",
+      "rom_offset": "0x2F0A0",
+      "planned_prg_byte": "0x8F",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "watch_rom_05643_보스_80"
+      ]
+    },
+    {
+      "glyph": "치",
+      "tile": "0x10A",
+      "rom_offset": "0x2F0B0",
+      "planned_prg_byte": "0x90",
+      "changed_bytes": 13,
+      "used_by_labels": [
+        "watch_rom_05643_보스_80",
+        "watch_rom_0562f_보스_80"
+      ]
+    },
+    {
+      "glyph": "창",
+      "tile": "0x10B",
+      "rom_offset": "0x2F0C0",
+      "planned_prg_byte": "0x91",
+      "changed_bytes": 14,
+      "used_by_labels": [
+        "rom_05aa3_candidate_77",
+        "rom_05aa5_candidate_77",
+        "rom_05bba_candidate_7a",
+        "rom_05c09_candidate_7a",
+        "rom_05c69_candidate_7a",
+        "rom_06839_candidate_7e",
+        "rom_068c3_candidate_71",
+        "rom_0691e_candidate_80",
+        "rom_069c5_candidate_79",
+        "rom_06bc6_candidate_7b",
+        "rom_06d1b_candidate_80",
+        "rom_058fb_candidate_79",
+        "rom_06001_candidate_7e",
+        "rom_06479_candidate_7f",
+        "rom_065b0_candidate_80",
+        "rom_06a3d_candidate_79",
+        "rom_06a66_candidate_79",
+        "rom_06fde_candidate_80",
+        "rom_0704f_candidate_7a"
+      ]
+    },
+    {
+      "glyph": "약",
+      "tile": "0x10C",
+      "rom_offset": "0x2F0D0",
+      "planned_prg_byte": "0x92",
+      "changed_bytes": 14,
+      "used_by_labels": [
+        "rom_05bdf_candidate_7a"
+      ]
+    },
+    {
+      "glyph": "장",
+      "tile": "0x10D",
+      "rom_offset": "0x2F0E0",
+      "planned_prg_byte": "0x93",
+      "changed_bytes": 14,
+      "used_by_labels": [
+        "rom_0602e_candidate_8d",
+        "rom_06bdf_candidate_8d",
+        "rom_06fa1_candidate_8d"
+      ]
+    },
+    {
+      "glyph": "비",
+      "tile": "0x10E",
+      "rom_offset": "0x2F0F0",
+      "planned_prg_byte": "0x94",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "rom_0602e_candidate_8d",
+        "rom_06bdf_candidate_8d",
+        "rom_06fa1_candidate_8d"
+      ]
+    },
+    {
+      "glyph": "돈",
+      "tile": "0x10F",
+      "rom_offset": "0x2F100",
+      "planned_prg_byte": "0x95",
+      "changed_bytes": 11,
+      "used_by_labels": [
+        "rom_06de3_candidate_80"
+      ]
+    },
+    {
+      "glyph": "라",
+      "tile": "0x110",
+      "rom_offset": "0x2F110",
+      "planned_prg_byte": "0x96",
+      "changed_bytes": 15,
+      "used_by_labels": [
+        "rom_0736a_candidate_93",
+        "rom_0739d_candidate_93"
+      ]
+    },
+    {
+      "glyph": "프",
+      "tile": "0x111",
+      "rom_offset": "0x2F120",
+      "planned_prg_byte": "0x97",
+      "changed_bytes": 12,
+      "used_by_labels": [
+        "rom_0736a_candidate_93",
+        "rom_0739d_candidate_93"
+      ]
+    },
+    {
+      "glyph": "츠",
+      "tile": "0x112",
+      "rom_offset": "0x2F130",
+      "planned_prg_byte": "0x98",
+      "changed_bytes": 12,
+      "used_by_labels": [
+        "watch_rom_0562f_보스_80"
+      ]
+    }
+  ]
+}
