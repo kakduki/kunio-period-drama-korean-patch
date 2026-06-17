@@ -24,6 +24,7 @@ PADDING_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_e
 STATUS = REPO_ROOT / "rom_analysis" / "bank1_offset_status.json"
 CAPTURE_QUEUE = REPO_ROOT / "rom_analysis" / "manual_capture_queue.json"
 PRIMARY_IPS = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips"
+V04_BROAD_CONFLICTS = REPO_ROOT / "rom_analysis" / "v04_broad_candidate_conflicts.json"
 
 
 def md5(path: Path) -> str:
@@ -190,6 +191,7 @@ def main() -> int:
     base_bytes = base_rom.read_bytes()
     status = load_json(STATUS)
     queue = load_json(CAPTURE_QUEUE)
+    conflicts = load_json(V04_BROAD_CONFLICTS) if V04_BROAD_CONFLICTS.exists() else {}
 
     candidates = [
         font_candidate(),
@@ -229,6 +231,9 @@ def main() -> int:
         "runtime_confirmed_targets": status.get("summary", {}).get("runtime_confirmed_count", ""),
         "manual_capture_queue": rel(CAPTURE_QUEUE),
         "manual_capture_queued_targets": queue.get("summary", {}).get("queued_targets", ""),
+        "v04_broad_conflicts": rel(V04_BROAD_CONFLICTS) if V04_BROAD_CONFLICTS.exists() else "",
+        "v04_broad_conflict_count": conflicts.get("summary", {}).get("overlapping_conflicts", ""),
+        "v04_broad_high_conflict_count": conflicts.get("summary", {}).get("high_confidence_conflicts", ""),
         "completion_status": "incomplete; needs manual FCEUX screen verification and more text offsets",
     }
 
@@ -238,6 +243,7 @@ def main() -> int:
         "padding_experiments": experiments,
         "do_not_confuse": [
             "v0.4 is the current primary test ROM, not a final release.",
+            "v0.4 has overlapping high-confidence broad-scan candidates that require manual screen proof.",
             "padding experiment ROMs are only for validating shortened replacements.",
             "YouTube transcription helps identify text, but ROM offsets and runtime evidence still decide patchability.",
         ],
@@ -257,6 +263,7 @@ def main() -> int:
         f"- Primary candidate MD5: `{summary['primary_candidate_md5']}`",
         f"- Primary IPS: `{summary['primary_ips']}`",
         f"- Primary IPS applies to same MD5: **{'yes' if summary['primary_ips_apply_matches_rom'] else 'no'}**",
+        f"- v0.4/broad conflicts: `{summary['v04_broad_conflicts']}` ({summary['v04_broad_conflict_count']} overlaps, {summary['v04_broad_high_conflict_count']} high-confidence)",
         f"- Completion status: **{summary['completion_status']}**",
         f"- Manual capture queue: `{summary['manual_capture_queue']}` ({summary['manual_capture_queued_targets']} targets)",
         "",

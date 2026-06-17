@@ -1,0 +1,152 @@
+{
+  "source": {
+    "v04_report": "output\\kunio_period_drama_korean_prg_plan_v0.4_equal_length_static_build_report.json",
+    "broad_patchability": "rom_analysis\\broad_scan_patchability.json"
+  },
+  "summary": {
+    "v04_applied_edits": 13,
+    "broad_promotion_candidates": 7,
+    "overlapping_conflicts": 3,
+    "high_confidence_conflicts": 3,
+    "non_overlapping_broad_candidates": 4
+  },
+  "conflicts": [
+    {
+      "broad_rom_hit": "0x06294",
+      "broad_span": [
+        "0x06294",
+        "0x06297"
+      ],
+      "broad_source": "へいしち",
+      "broad_romaji": "Heishichi",
+      "broad_korean": "헤이시치",
+      "broad_confidence": "high",
+      "broad_original_bytes": "9D 82 8C 91",
+      "v04_rom_hit": "0x06295",
+      "v04_span": [
+        "0x06295",
+        "0x06297"
+      ],
+      "v04_label": "rom_06295_candidate_7c",
+      "v04_source": "カタナ",
+      "v04_korean": "카타나",
+      "v04_old_bytes": "82 8C 91",
+      "v04_new_bytes": "88 89 8A",
+      "decision": "manual screen proof required before keeping either interpretation"
+    },
+    {
+      "broad_rom_hit": "0x06359",
+      "broad_span": [
+        "0x06359",
+        "0x0635C"
+      ],
+      "broad_source": "へいしち",
+      "broad_romaji": "Heishichi",
+      "broad_korean": "헤이시치",
+      "broad_confidence": "high",
+      "broad_original_bytes": "9D 82 8C 91",
+      "v04_rom_hit": "0x0635A",
+      "v04_span": [
+        "0x0635A",
+        "0x0635C"
+      ],
+      "v04_label": "rom_0635a_candidate_7c",
+      "v04_source": "カタナ",
+      "v04_korean": "카타나",
+      "v04_old_bytes": "82 8C 91",
+      "v04_new_bytes": "88 89 8A",
+      "decision": "manual screen proof required before keeping either interpretation"
+    },
+    {
+      "broad_rom_hit": "0x0631B",
+      "broad_span": [
+        "0x0631B",
+        "0x0631E"
+      ],
+      "broad_source": "へいしち",
+      "broad_romaji": "Heishichi",
+      "broad_korean": "헤이시치",
+      "broad_confidence": "high",
+      "broad_original_bytes": "9D 82 8C 91",
+      "v04_rom_hit": "0x0631C",
+      "v04_span": [
+        "0x0631C",
+        "0x0631E"
+      ],
+      "v04_label": "rom_0631c_candidate_7c",
+      "v04_source": "カタナ",
+      "v04_korean": "카타나",
+      "v04_old_bytes": "82 8C 91",
+      "v04_new_bytes": "88 89 8A",
+      "decision": "manual screen proof required before keeping either interpretation"
+    }
+  ],
+  "non_overlapping_broad_candidates": [
+    {
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "confidence": "medium",
+      "rom_hit": "0x052A5",
+      "span": [
+        "0x052A5",
+        "0x052A7"
+      ],
+      "original_bytes": "82 84 7E",
+      "new_glyphs": [
+        "지"
+      ]
+    },
+    {
+      "source": "かじや",
+      "romaji": "Kajiya",
+      "korean": "대장간",
+      "confidence": "medium",
+      "rom_hit": "0x0440C",
+      "span": [
+        "0x0440C",
+        "0x0440E"
+      ],
+      "original_bytes": "CA D0 E9",
+      "new_glyphs": [
+        "대",
+        "간"
+      ]
+    },
+    {
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "confidence": "medium",
+      "rom_hit": "0x05BE5",
+      "span": [
+        "0x05BE5",
+        "0x05BE7"
+      ],
+      "original_bytes": "97 99 93",
+      "new_glyphs": [
+        "지"
+      ]
+    },
+    {
+      "source": "たつじ",
+      "romaji": "Tatsuji",
+      "korean": "타츠지",
+      "confidence": "medium",
+      "rom_hit": "0x048F4",
+      "span": [
+        "0x048F4",
+        "0x048F6"
+      ],
+      "original_bytes": "07 09 03",
+      "new_glyphs": [
+        "지"
+      ]
+    }
+  ],
+  "rule": [
+    "Do not build v0.5 by simply adding broad candidates on top of v0.4.",
+    "Overlapping records indicate ambiguous static interpretation; manual screen evidence decides.",
+    "If a broad candidate is confirmed, the conflicting v0.4 edit may need to be replaced or removed."
+  ]
+}

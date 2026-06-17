@@ -14,6 +14,9 @@
     "runtime_confirmed_targets": 2,
     "manual_capture_queue": "rom_analysis\\manual_capture_queue.json",
     "manual_capture_queued_targets": 27,
+    "v04_broad_conflicts": "rom_analysis\\v04_broad_candidate_conflicts.json",
+    "v04_broad_conflict_count": 3,
+    "v04_broad_high_conflict_count": 3,
     "completion_status": "incomplete; needs manual FCEUX screen verification and more text offsets"
   },
   "candidates": [
@@ -148,6 +151,7 @@
   ],
   "do_not_confuse": [
     "v0.4 is the current primary test ROM, not a final release.",
+    "v0.4 has overlapping high-confidence broad-scan candidates that require manual screen proof.",
     "padding experiment ROMs are only for validating shortened replacements.",
     "YouTube transcription helps identify text, but ROM offsets and runtime evidence still decide patchability."
   ]

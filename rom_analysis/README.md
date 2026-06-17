@@ -39,6 +39,7 @@
 - `translation_scan_capture_queue.md` / `translation_scan_capture_queue.json`: supplemental manual capture queue for new high/medium confidence hits from the broad translation scan
 - `broad_scan_patchability.md` / `broad_scan_patchability.json`: filters the broad-scan queue down to length-safe future v0.5 candidates and lists any additional glyph slots needed if screen proof confirms them
 - `broad_scan_fceux_targets.md` / `broad_scan_fceux_targets.json`: FCEUX read-watch targets for the 7 broad-scan promotion candidates; Lua target file is `../lua/kunio_broad_scan_candidate_targets.lua`
+- `v04_broad_candidate_conflicts.md` / `v04_broad_candidate_conflicts.json`: overlap analysis between v0.4 applied PRG edits and the 7 broad-scan promotion candidates
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `manual_screen_dump_v04/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v04_screen_dump.lua`
 - `manual_screen_dump_broad_scan/`: destination for one-shot broad-scan candidate dumps from `lua/kunio_manual_broad_scan_dump.lua`; summarize with `scripts/analyze_broad_scan_manual_dump.py`
@@ -130,6 +131,7 @@
 - `translation_scan_capture_queue.md` turns those broad-scan hits into a conservative supplemental manual-capture list. It currently queues 60 hits: 6 high confidence, 33 medium confidence, and 21 low confidence. These are verification targets, not approved patch offsets.
 - `broad_scan_patchability.md` further filters the 60 broad-scan capture targets to 7 length-safe Bank 1 candidates that could be promoted only after screen proof. The three high-confidence candidates are additional `へいしち`/Heishichi records at `ROM+0x06294`, `0x0631B`, and `0x06359`; the medium candidates require three extra glyph slots (`지`, `대`, `간`) if eventually promoted.
 - `broad_scan_fceux_targets.md` converts those 7 promotion candidates into original-byte read-watch targets. Use it only after manually reaching the relevant screen; a CPU read hit is necessary evidence, not sufficient proof by itself.
+- `v04_broad_candidate_conflicts.md` shows that all three high-confidence broad `へいしち`/Heishichi candidates overlap v0.4 `カタナ`/Katana edits at `ROM+0x06295`, `0x0631C`, and `0x0635A`. Do not build v0.5 by blindly adding broad candidates on top of v0.4; manual screen proof must decide whether to keep or replace each overlapping interpretation.
 - A YouTube gameplay video can help transcribe dialogue and confirm scene order, but it does not replace ROM analysis because patching still needs exact ROM offsets, byte encodings, control codes, and active runtime banks.
 
 ## FCEUX Lua automation
