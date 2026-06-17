@@ -35,6 +35,8 @@
 - `fceux_padding_exp_ppu_watch_comparison.md` / `fceux_padding_exp_ppu_watch_comparison.json`: strict same-frame, consecutive-VRAM comparison for the padding experiment PPU runs
 - `manual_capture_workflow.md`: recommended workflow for manually reaching a real dialogue/menu screen in FCEUX, then running a one-shot Lua dump instead of blind autoplay
 - `manual_capture_queue.md` / `manual_capture_queue.json`: prioritized list of screens/targets to capture manually before promoting more PRG text patches
+- `translation_pattern_scan.md` / `translation_pattern_scan.json`: broad ROM scan against the full readable translation reference, excluding already-known Bank 1 targets where possible
+- `translation_scan_capture_queue.md` / `translation_scan_capture_queue.json`: supplemental manual capture queue for new high/medium confidence hits from the broad translation scan
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
 - `manual_screen_dump_v04/`: destination for one-shot patched-ROM screen dumps from `lua/kunio_manual_v04_screen_dump.lua`
 - `patch_candidate_manifest.md` / `patch_candidate_manifest.json`: current ROM/IPS candidate manifest; marks v0.4 as the primary manual-test ROM and padding builds as non-release experiments
@@ -121,6 +123,8 @@
 - `bank1_offset_inventory.md` currently consolidates 43 offsets: 36 breakpoint targets plus supplemental watch-range hits. Runtime-confirmed offsets are `ROM+0x071A4` (`ちから`/힘, active expected-byte match in FCEUX read-watch) and `ROM+0x07227` (`カタナ`/카타나, preserved runtime evidence). Menu-category targets and full event dialogue blocks are not runtime-confirmed yet; the inventory keeps them marked as gaps instead of promoting static matches to final offsets.
 - `bank1_offset_status.md` summarizes current category coverage: items/equipment has 25 targets with 1 runtime-confirmed and 5 equal-length candidates; UI/status has 11 targets with 1 runtime-confirmed and 2 equal-length candidates; event/dialogue-related has 7 watch-range equal-length candidates but no runtime-confirmed full dialogue block; menu/title/mode still has no Bank 1 target. Shortened replacements remain blocked on padding/terminator behavior.
 - `bank1_candidate_contexts.md` narrows those hits into breakpoint-ready records. Useful first checks are `ROM+0x05644` / CPU `$9633` for the watch-range weapon label, `ROM+0x05BDF` / `$9BCD` for recovery text, `ROM+0x06DE3` / `$ADD1` for money UI, and `ROM+0x0736A` / `$B359` plus `ROM+0x0739D` / `$B38C` for life UI.
+- `translation_pattern_scan.md` broadens the search from the full readable translation reference. After excluding already-known Bank 1 targets, it currently finds 113 new candidates and 17 high-value candidates, but still finds 0 title/menu hits. This suggests title/menu strings likely use a different encoding, compression path, or table than the current kana-offset hypothesis.
+- `translation_scan_capture_queue.md` turns those broad-scan hits into a conservative supplemental manual-capture list. It currently queues 60 hits: 6 high confidence, 33 medium confidence, and 21 low confidence. These are verification targets, not approved patch offsets.
 - A YouTube gameplay video can help transcribe dialogue and confirm scene order, but it does not replace ROM analysis because patching still needs exact ROM offsets, byte encodings, control codes, and active runtime banks.
 
 ## FCEUX Lua automation
