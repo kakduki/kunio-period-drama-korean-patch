@@ -15,6 +15,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PATCHABILITY = ROOT / "rom_analysis" / "broad_scan_patchability.json"
 SLOT_PLAN = ROOT / "rom_analysis" / "korean_slot_allocation_plan.json"
+EXPANSION_PLAN = ROOT / "rom_analysis" / "next_glyph_expansion_plan.json"
+V042_EXTRA_GLYPHS = 32
 OUT_LUA = ROOT / "lua" / "kunio_broad_scan_candidate_targets.lua"
 OUT_JSON = ROOT / "rom_analysis" / "broad_scan_fceux_targets.json"
 OUT_MD = ROOT / "rom_analysis" / "broad_scan_fceux_targets.md"
@@ -46,26 +48,30 @@ def normalize_label(row: dict[str, object]) -> str:
     return f"broad_{rom}_{clean}"
 
 
-def load_existing_prg_bytes() -> dict[str, str]:
+def load_v042_prg_bytes() -> dict[str, str]:
     plan = json.loads(SLOT_PLAN.read_text(encoding="utf-8"))
-    return {
+    expansion = json.loads(EXPANSION_PLAN.read_text(encoding="utf-8"))
+    slots = {
         str(slot["glyph"]): str(slot["prg_plus_0x7a_byte"])
         for slot in plan.get("slots", [])
     }
+    for slot in expansion.get("next_slots", [])[:V042_EXTRA_GLYPHS]:
+        slots[str(slot["glyph"])] = str(slot["prg_plus_0x7a_byte"])
+    return slots
 
 
 def planned_bytes(
     row: dict[str, object],
     extension_by_glyph: dict[str, str],
-    existing_by_glyph: dict[str, str],
+    v042_by_glyph: dict[str, str],
 ) -> str:
     values = []
     for glyph in row.get("korean_glyphs", []):
+        if glyph in v042_by_glyph:
+            values.append(v042_by_glyph[glyph])
+            continue
         if glyph in extension_by_glyph:
             values.append(extension_by_glyph[glyph])
-            continue
-        if glyph in existing_by_glyph:
-            values.append(existing_by_glyph[glyph])
             continue
         values.append("unknown")
     return " ".join(values)
@@ -77,7 +83,7 @@ def build_payload() -> dict[str, object]:
         str(slot["glyph"]): str(slot["planned_prg_byte"])
         for slot in data.get("glyph_extension_if_promoted", [])
     }
-    existing_by_glyph = load_existing_prg_bytes()
+    v042_by_glyph = load_v042_prg_bytes()
 
     targets = []
     for row in data.get("promotion_candidates", []):
@@ -96,7 +102,7 @@ def build_payload() -> dict[str, object]:
             "stop": start + expected_len - 1,
             "expected_original_bytes": row.get("bytes", ""),
             "old_bytes": row.get("bytes", ""),
-            "future_patch_bytes_preview": planned_bytes(row, extension_by_glyph, existing_by_glyph),
+            "future_patch_bytes_preview": planned_bytes(row, extension_by_glyph, v042_by_glyph),
             "new_glyphs": row.get("new_glyphs", []),
             "reason": row.get("reason", ""),
         }
@@ -106,7 +112,8 @@ def build_payload() -> dict[str, object]:
     return {
         "source": str(PATCHABILITY.relative_to(ROOT)),
         "target_count": len(targets),
-        "purpose": "manual read-watch proof for future v0.5 candidates; watches original bytes only",
+        "purpose": "manual read-watch proof for v0.4.2 font-ready promotion candidates; watches original bytes only",
+        "preview_rule": f"future patch preview uses v0.4.2 font bytes: base compact slots plus first {V042_EXTRA_GLYPHS} planned extra glyphs",
         "targets": targets,
     }
 
@@ -143,10 +150,11 @@ def write_markdown(payload: dict[str, object]) -> None:
         "# Broad Scan FCEUX Targets",
         "",
         "These targets watch original bytes for broad-scan promotion candidates.",
-        "They are for manual screen proof before any v0.5 ROM is built.",
+        "They are for manual screen proof before promoting any new text into the v0.4.2 line.",
         "",
         f"- Source: `{payload['source']}`",
         f"- Targets: **{payload['target_count']}**",
+        f"- Preview rule: {payload['preview_rule']}",
         "",
         "Run after manually reaching the related screen:",
         "",
@@ -173,7 +181,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "- A CPU read hit proves only that the record was read in that run.",
         "- Promote to a v0.5 patch candidate only when the screen context also matches the intended label/dialogue.",
-        "- Medium-confidence rows that need new glyphs require a regenerated CHR plan before patching.",
+        "- Under v0.4.2 these seven rows are font-ready, but visual/screen proof is still required before patching.",
     ]
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

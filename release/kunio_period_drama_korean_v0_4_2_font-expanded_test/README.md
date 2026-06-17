@@ -9,6 +9,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `manual_capture_status.md`: generated status of manual dump evidence
+- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates
 - `translation_glyph_coverage.md`: full translation glyph coverage against the current patch plan
 - `next_glyph_expansion_plan.md`: prioritized glyph batches for future font expansion
 - `v042_text_promotion_readiness.md`: broad-scan text candidates now font-ready under v0.4.2

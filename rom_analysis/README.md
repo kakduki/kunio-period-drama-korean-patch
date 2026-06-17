@@ -44,6 +44,7 @@
 - `translation_scan_capture_queue.md` / `translation_scan_capture_queue.json`: supplemental manual capture queue for new high/medium confidence hits from the broad translation scan
 - `broad_scan_patchability.md` / `broad_scan_patchability.json`: filters the broad-scan queue down to length-safe future v0.5 candidates and lists any additional glyph slots needed if screen proof confirms them
 - `v042_text_promotion_readiness.md` / `v042_text_promotion_readiness.json`: shows which broad-scan text candidates are now font-ready under v0.4.2 and only blocked by manual screen proof
+- `v042_manual_proof_packet.md` / `v042_manual_proof_packet.json`: seven focused base-ROM FCEUX proof tasks to avoid blind autoplay loops before promoting the next text candidates
 - `broad_scan_fceux_targets.md` / `broad_scan_fceux_targets.json`: FCEUX read-watch targets for the 7 broad-scan promotion candidates; Lua target file is `../lua/kunio_broad_scan_candidate_targets.lua`
 - `v04_broad_candidate_conflicts.md` / `v04_broad_candidate_conflicts.json`: overlap analysis between v0.4 applied PRG edits and the 7 broad-scan promotion candidates
 - `manual_screen_dump/`: destination for one-shot manual screen dumps from `lua/kunio_manual_screen_dump.lua`
