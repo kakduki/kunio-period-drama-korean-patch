@@ -16,6 +16,25 @@ from preflight_manual_fceux import (
 from rom_utils import REPO_ROOT
 
 
+def manual_dump_records() -> set[str]:
+    return {
+        str(path.relative_to(REPO_ROOT)).replace("\\", "/")
+        for path in (REPO_ROOT / "rom_analysis").glob("manual_screen_dump*/manual_frame_*_target_records.tsv")
+    }
+
+
+def after_capture_commands(action: dict[str, object]) -> list[list[str]]:
+    commands = []
+    for raw in action.get("after_capture", []):
+        if raw == "python scripts/refresh_after_manual_capture.py --phase primary":
+            commands.append(["scripts/refresh_after_manual_capture.py", "--phase", "primary"])
+        elif raw == "python scripts/refresh_after_manual_capture.py --phase broad":
+            commands.append(["scripts/refresh_after_manual_capture.py", "--phase", "broad"])
+        else:
+            print(f"WARNING: unsupported after_capture command skipped: {raw}")
+    return commands
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--timeout", type=int, default=DEFAULT_MANUAL_TIMEOUT)
@@ -39,13 +58,32 @@ def main() -> int:
     command = launch_command(action, timeout=args.timeout)
     print(f"Next manual FCEUX action: {action['target']} / {action['group']}")
     print(f"Hint: {action['screen_hint']}")
-    print("After the target screen is visible, press D in FCEUX. The launcher stops after the dump.")
+    print("This launcher does not autoplay through the game.")
+    print("Use FCEUX controls to reach the target screen, then press D in FCEUX. The launcher stops after the dump.")
     print("Launch command:")
     print(" ".join([sys.executable, *command]))
 
     if args.dry_run:
         return 0
-    return subprocess.run([sys.executable, *command], cwd=REPO_ROOT).returncode
+
+    before = manual_dump_records()
+    result = subprocess.run([sys.executable, *command], cwd=REPO_ROOT)
+    after = manual_dump_records()
+    new_records = sorted(after - before)
+    if new_records:
+        print("New manual dump record(s):")
+        for record in new_records:
+            print(f"- {record}")
+        for after_command in after_capture_commands(action):
+            print("Running after-capture refresh:")
+            print(" ".join([sys.executable, *after_command]))
+            subprocess.run([sys.executable, *after_command], cwd=REPO_ROOT, check=True)
+    else:
+        print(
+            "No new manual dump record was created. If FCEUX stayed on the title/opening screen, "
+            "this run did not add patch evidence; manually enter the target screen and press D."
+        )
+    return result.returncode
 
 
 if __name__ == "__main__":
