@@ -8,6 +8,8 @@ This manifest separates the current manual-test ROM from one-off experiments.
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
 - Primary current test candidate: **v0.4 equal-length static**
 - Primary candidate MD5: `e50d9c974d9968170f932a7ed51fe52e`
+- Primary IPS: `output\kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips`
+- Primary IPS applies to same MD5: **yes**
 - Completion status: **incomplete; needs manual FCEUX screen verification and more text offsets**
 - Manual capture queue: `rom_analysis\manual_capture_queue.json` (27 targets)
 

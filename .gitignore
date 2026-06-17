@@ -1,6 +1,7 @@
 rom/*.nes
 rom/*.zip
 output/*.ips
+!output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips
 tools/
 rom_analysis/chr/
 rom_analysis/font/

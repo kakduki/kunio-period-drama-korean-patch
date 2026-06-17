@@ -23,6 +23,7 @@ V02_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_plan_v0.2_build_r
 PADDING_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_exp_build_report.json"
 STATUS = REPO_ROOT / "rom_analysis" / "bank1_offset_status.json"
 CAPTURE_QUEUE = REPO_ROOT / "rom_analysis" / "manual_capture_queue.json"
+PRIMARY_IPS = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips"
 
 
 def md5(path: Path) -> str:
@@ -65,10 +66,60 @@ def output_path_from_report(raw: object) -> Path | None:
     return candidate if candidate.exists() else None
 
 
+def apply_ips(base: bytes, ips_path: Path) -> bytes:
+    patch = ips_path.read_bytes()
+    if not patch.startswith(b"PATCH"):
+        raise ValueError(f"Not an IPS patch: {ips_path}")
+
+    result = bytearray(base)
+    pos = 5
+    while pos < len(patch):
+        if patch[pos : pos + 3] == b"EOF":
+            pos += 3
+            if pos != len(patch):
+                raise ValueError(f"Trailing bytes after IPS EOF: {ips_path}")
+            return bytes(result)
+
+        if pos + 5 > len(patch):
+            raise ValueError(f"Truncated IPS record header: {ips_path}")
+        offset = int.from_bytes(patch[pos : pos + 3], "big")
+        pos += 3
+        size = int.from_bytes(patch[pos : pos + 2], "big")
+        pos += 2
+
+        if size == 0:
+            if pos + 3 > len(patch):
+                raise ValueError(f"Truncated IPS RLE record: {ips_path}")
+            rle_size = int.from_bytes(patch[pos : pos + 2], "big")
+            pos += 2
+            value = patch[pos]
+            pos += 1
+            end = offset + rle_size
+            if end > len(result):
+                raise ValueError(f"IPS RLE record exceeds ROM size: {ips_path}")
+            result[offset:end] = bytes([value]) * rle_size
+            continue
+
+        end_pos = pos + size
+        end = offset + size
+        if end_pos > len(patch):
+            raise ValueError(f"Truncated IPS data record: {ips_path}")
+        if end > len(result):
+            raise ValueError(f"IPS data record exceeds ROM size: {ips_path}")
+        result[offset:end] = patch[pos:end_pos]
+        pos = end_pos
+
+    raise ValueError(f"IPS patch missing EOF marker: {ips_path}")
+
+
+def md5_bytes(data: bytes) -> str:
+    return hashlib.md5(data).hexdigest()
+
+
 def report_candidate(name: str, report_path: Path, role: str, verdict: str) -> dict[str, object]:
     report = load_json(report_path)
-    rom_path = existing_path(report.get("patched_rom_path"))
-    ips_path = existing_path(report.get("ips_path"))
+    rom_path = output_path_from_report(report.get("patched_rom_path"))
+    ips_path = output_path_from_report(report.get("ips_path"))
     return {
         "name": name,
         "role": role,
@@ -136,6 +187,7 @@ def padding_experiments() -> list[dict[str, object]]:
 
 def main() -> int:
     base_rom = find_rom_path(None).resolve()
+    base_bytes = base_rom.read_bytes()
     status = load_json(STATUS)
     queue = load_json(CAPTURE_QUEUE)
 
@@ -155,11 +207,22 @@ def main() -> int:
         ),
     ]
     experiments = padding_experiments()
+    primary_candidate = next(row for row in candidates if row["name"].startswith("v0.4"))
+    primary_ips_applied_md5 = ""
+    primary_ips_matches_rom = False
+    if PRIMARY_IPS.exists() and primary_candidate["rom_exists"]:
+        primary_ips_applied_md5 = md5_bytes(apply_ips(base_bytes, PRIMARY_IPS))
+        primary_ips_matches_rom = primary_ips_applied_md5 == primary_candidate["rom_md5"]
+
     summary = {
         "base_rom": rel(base_rom),
         "base_md5": md5(base_rom),
         "primary_candidate": "v0.4 equal-length static",
-        "primary_candidate_md5": next(row["rom_md5"] for row in candidates if row["name"].startswith("v0.4")),
+        "primary_candidate_md5": primary_candidate["rom_md5"],
+        "primary_ips": rel(PRIMARY_IPS),
+        "primary_ips_exists": PRIMARY_IPS.exists(),
+        "primary_ips_apply_md5": primary_ips_applied_md5,
+        "primary_ips_apply_matches_rom": primary_ips_matches_rom,
         "candidate_count": len(candidates),
         "padding_experiment_count": len(experiments),
         "bank1_targets": status.get("summary", {}).get("target_count", ""),
@@ -192,6 +255,8 @@ def main() -> int:
         f"- Base MD5: `{summary['base_md5']}`",
         f"- Primary current test candidate: **{summary['primary_candidate']}**",
         f"- Primary candidate MD5: `{summary['primary_candidate_md5']}`",
+        f"- Primary IPS: `{summary['primary_ips']}`",
+        f"- Primary IPS applies to same MD5: **{'yes' if summary['primary_ips_apply_matches_rom'] else 'no'}**",
         f"- Completion status: **{summary['completion_status']}**",
         f"- Manual capture queue: `{summary['manual_capture_queue']}` ({summary['manual_capture_queued_targets']} targets)",
         "",
