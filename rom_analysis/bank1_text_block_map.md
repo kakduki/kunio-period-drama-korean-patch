@@ -170,17 +170,30 @@ This table keeps the original `+0x7A` decode, then adds the best shifted-low dec
 
 ## All translation-data hits inside watch range
 
-| block | ROM offset | PRG offset | mode/base | Japanese | Korean | category | bytes |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | `0x0561A` | `0x0560A` | shifted-low/`0x7C` | はし | 다리 | 스테이지 | `96 88` |
-| 3 | `0x0562F` | `0x0561F` | shifted-low/`0x80` | たついち | 타츠이치 | 보스 | `90 92 82 91` |
-| 7 | `0x05643` | `0x05633` | shifted-low/`0x80` | へいしち | 헤이시치 | 보스 | `9D 82 8C 91` |
-| 7 | `0x05644` | `0x05634` | shifted-low/`0x7C` | カタナ | 카타나 | 무기 | `82 8C 91` |
-| 21 | `0x0569D` | `0x0568D` | plus-0x7A/`0x7A` | はし | 다리 | 스테이지 | `A0 92` |
-| 21 | `0x0569D` | `0x0568D` | shifted-low/`0x86` | はし | 다리 | 스테이지 | `A0 92` |
-| 28 | `0x056DA` | `0x056CA` | shifted-low/`0x80` | はし | 다리 | 스테이지 | `9A 8C` |
-| 37 | `0x0571C` | `0x0570C` | shifted-low/`0x78` | はし | 다리 | 스테이지 | `92 84` |
-| 65 | `0x057D4` | `0x057C4` | shifted-low/`0x8C` | はし | 다리 | 스테이지 | `A6 98` |
+| block | ROM offset | PRG offset | mode/base | Japanese | Korean | category | bytes | patch risk |
+| ---: | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | `0x0561A` | `0x0560A` | shifted-low/`0x7C` | はし | 다리 | 스테이지 | `96 88` | safe-equal-length |
+| 3 | `0x0562F` | `0x0561F` | shifted-low/`0x80` | たついち | 타츠이치 | 보스 | `90 92 82 91` | safe-equal-length |
+| 7 | `0x05643` | `0x05633` | shifted-low/`0x80` | へいしち | 헤이시치 | 보스 | `9D 82 8C 91` | safe-equal-length |
+| 7 | `0x05644` | `0x05634` | shifted-low/`0x7C` | カタナ | 카타나 | 무기 | `82 8C 91` | safe-equal-length |
+| 21 | `0x0569D` | `0x0568D` | plus-0x7A/`0x7A` | はし | 다리 | 스테이지 | `A0 92` | safe-equal-length |
+| 21 | `0x0569D` | `0x0568D` | shifted-low/`0x86` | はし | 다리 | 스테이지 | `A0 92` | safe-equal-length |
+| 28 | `0x056DA` | `0x056CA` | shifted-low/`0x80` | はし | 다리 | 스테이지 | `9A 8C` | safe-equal-length |
+| 37 | `0x0571C` | `0x0570C` | shifted-low/`0x78` | はし | 다리 | 스테이지 | `92 84` | safe-equal-length |
+| 65 | `0x057D4` | `0x057C4` | shifted-low/`0x8C` | はし | 다리 | 스테이지 | `A6 98` | safe-equal-length |
+
+## Watch-range patch readiness
+
+| ROM offset | block | Japanese | Korean | category | evidence | planned bytes | note |
+| --- | ---: | --- | --- | --- | --- | --- | --- |
+| `0x0561A` | 1 | はし | 다리 | 스테이지 | static-candidate+pointer | `8B 8C` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x0562F` | 3 | たついち | 타츠이치 | 보스 | static-candidate | `89 98 8E 90` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x05643` | 7 | へいしち | 헤이시치 | 보스 | static-candidate+pointer | `8D 8E 8F 90` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x05644` | 7 | カタナ | 카타나 | 무기 | static-candidate+pointer | `88 89 8A` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x0569D` | 21 | はし | 다리 | 스테이지 | encoding-exact | `8B 8C` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x056DA` | 28 | はし | 다리 | 스테이지 | static-candidate | `8B 8C` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x0571C` | 37 | はし | 다리 | 스테이지 | static-candidate | `8B 8C` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
+| `0x057D4` | 65 | はし | 다리 | 스테이지 | static-candidate+pointer | `8B 8C` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |
 
 ## Notes
 

@@ -1,0 +1,2863 @@
+{
+  "source": {
+    "rom_range": [
+      "0x05610",
+      "0x05810"
+    ],
+    "decoder_hypothesis": "CHR tile = PRG byte + 0x7A; shifted-low candidates are retained as runtime watch targets",
+    "translation_data": "text_data\\translation_data.txt",
+    "padding_options": "rom_analysis\\prg_padding_options.json"
+  },
+  "summary": {
+    "block_count": 73,
+    "translation_hit_count": 9,
+    "exact_plus_0x7a_match_count": 1,
+    "blocks_with_translation_hits": 7,
+    "safe_equal_length_distinct_targets": 8
+  },
+  "blocks": [
+    {
+      "index": 1,
+      "rom_range": [
+        "0x05610",
+        "0x0561F"
+      ],
+      "prg_start": "0x05600",
+      "length": 15,
+      "bytes": "96 87 96 8C 96 91 96 96 96 9B 96 88 96 9F 8B",
+      "plus_0x7a_decode": "たあたかたさたたたなたいたのお",
+      "kana_count": 15,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "とおとことそとととのとかとへけ",
+          "kana_count": 15,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "なかなさなたなななはなきなほこ",
+          "kana_count": 15,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "てえてけてせてててねておてふく",
+          "kana_count": 15,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x0561A",
+          "prg_offset": "0x0560A",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x7C",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "96 88",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8B 8C",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate+pointer"
+        }
+      ],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 2,
+      "rom_range": [
+        "0x05620",
+        "0x05629"
+      ],
+      "prg_start": "0x05610",
+      "length": 9,
+      "bytes": "A8 87 0A AB 83 1C AE 0F 83",
+      "plus_0x7a_decode": "むあ.や..ら..",
+      "kana_count": 4,
+      "unknown_count": 5,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ゆお<0A>りあ<1C>ろ<0F>あ",
+          "kana_count": 6,
+          "marker_count": 3
+        },
+        {
+          "base": "0x81",
+          "decoded": "よか<0A>るい<1C>わ<0F>い",
+          "kana_count": 6,
+          "marker_count": 3
+        },
+        {
+          "base": "0x80",
+          "decoded": "らき<0A>れう<1C>を<0F>う",
+          "kana_count": 6,
+          "marker_count": 3
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 3,
+      "rom_range": [
+        "0x0562A",
+        "0x05633"
+      ],
+      "prg_start": "0x0561A",
+      "length": 9,
+      "bytes": "0C B6 83 87 91 90 92 82 91",
+      "plus_0x7a_decode": "...あさこし.さ",
+      "kana_count": 5,
+      "unknown_count": 4,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "<0C><B6>いかたそちあた",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x80",
+          "decoded": "<0C><B6>うきちたついち",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x7F",
+          "decoded": "<0C><B6>えくつちてうつ",
+          "kana_count": 7,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x0562F",
+          "prg_offset": "0x0561F",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x80",
+          "source": "たついち",
+          "korean": "타츠이치",
+          "category": "보스",
+          "encoded_bytes": "90 92 82 91",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "89 98 8E 90",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate"
+        }
+      ],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 4,
+      "rom_range": [
+        "0x05634",
+        "0x05637"
+      ],
+      "prg_start": "0x05624",
+      "length": 3,
+      "bytes": "90 92 0C",
+      "plus_0x7a_decode": "こし.",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "せた<0C>",
+          "kana_count": 2,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "そち<0C>",
+          "kana_count": 2,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "すそ<0C>",
+          "kana_count": 2,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 5,
+      "rom_range": [
+        "0x05639",
+        "0x0563D"
+      ],
+      "prg_start": "0x05629",
+      "length": 4,
+      "bytes": "A4 0A AB 83",
+      "plus_0x7a_decode": "ほ.や.",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "む<0A>りあ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "め<0A>るい",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "も<0A>れう",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 6,
+      "rom_range": [
+        "0x0563E",
+        "0x05642"
+      ],
+      "prg_start": "0x0562E",
+      "length": 4,
+      "bytes": "0C AE AB 88",
+      "plus_0x7a_decode": ".らやい",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<0C>ろりか",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "<0C>わるき",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "<0C>れらお",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 7,
+      "rom_range": [
+        "0x05643",
+        "0x05647"
+      ],
+      "prg_start": "0x05633",
+      "length": 4,
+      "bytes": "9D 82 8C 91",
+      "plus_0x7a_decode": "ぬ.かさ",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "ふあさた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "へいしち",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x7F",
+          "decoded": "ほうすつ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x05644",
+          "prg_offset": "0x05634",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x7C",
+          "source": "カタナ",
+          "korean": "카타나",
+          "category": "무기",
+          "encoded_bytes": "82 8C 91",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "88 89 8A",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate+pointer"
+        },
+        {
+          "rom_offset": "0x05643",
+          "prg_offset": "0x05633",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x80",
+          "source": "へいしち",
+          "korean": "헤이시치",
+          "category": "보스",
+          "encoded_bytes": "9D 82 8C 91",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8D 8E 8F 90",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate+pointer"
+        }
+      ],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 8,
+      "rom_range": [
+        "0x05648",
+        "0x0564C"
+      ],
+      "prg_start": "0x05638",
+      "length": 4,
+      "bytes": "87 AE 8D 89",
+      "plus_0x7a_decode": "あらきう",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "おろさき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "かわしく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "えれこか",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 9,
+      "rom_range": [
+        "0x0564D",
+        "0x05651"
+      ],
+      "prg_start": "0x0563D",
+      "length": 4,
+      "bytes": "90 A2 87 91",
+      "plus_0x7a_decode": "こふあさ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "せまおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "そみかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "たむきち",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 10,
+      "rom_range": [
+        "0x05652",
+        "0x05656"
+      ],
+      "prg_start": "0x05642",
+      "length": 4,
+      "bytes": "0A AE 8B 88",
+      "plus_0x7a_decode": ".らおい",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<0A>ろけか",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "<0A>わこき",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "<0A>れくお",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 11,
+      "rom_range": [
+        "0x05657",
+        "0x0565B"
+      ],
+      "prg_start": "0x05647",
+      "length": 4,
+      "bytes": "07 AE 5A 91",
+      "plus_0x7a_decode": ".ら<5A>さ",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<07>ろ<5A>そ",
+          "kana_count": 2,
+          "marker_count": 2
+        },
+        {
+          "base": "0x81",
+          "decoded": "<07>わ<5A>た",
+          "kana_count": 2,
+          "marker_count": 2
+        },
+        {
+          "base": "0x83",
+          "decoded": "<07>れ<5A>せ",
+          "kana_count": 2,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 12,
+      "rom_range": [
+        "0x0565C",
+        "0x05660"
+      ],
+      "prg_start": "0x0564C",
+      "length": 4,
+      "bytes": "82 91 1D 82",
+      "plus_0x7a_decode": ".さ..",
+      "kana_count": 1,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "あた<1D>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "いち<1D>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "うつ<1D>う",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 13,
+      "rom_range": [
+        "0x05661",
+        "0x05665"
+      ],
+      "prg_start": "0x05651",
+      "length": 4,
+      "bytes": "AB 88 1D 82",
+      "plus_0x7a_decode": "やい..",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "るき<1D>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "れく<1D>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "ろけ<1D>う",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 14,
+      "rom_range": [
+        "0x05666",
+        "0x0566A"
+      ],
+      "prg_start": "0x05656",
+      "length": 4,
+      "bytes": "92 A9 9F 92",
+      "plus_0x7a_decode": "しめのし",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "たよへた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "ちらほち",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "そゆふそ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 15,
+      "rom_range": [
+        "0x0566B",
+        "0x05674"
+      ],
+      "prg_start": "0x0565B",
+      "length": 9,
+      "bytes": "81 8B 0C AB 83 A6 99 8D 89",
+      "plus_0x7a_decode": ".お.や.まてきう",
+      "kana_count": 6,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x80",
+          "decoded": "あさ<0C>れうゆのすけ",
+          "kana_count": 8,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "いし<0C>ろえよはせこ",
+          "kana_count": 8,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7E",
+          "decoded": "うす<0C>わおらひそさ",
+          "kana_count": 8,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 16,
+      "rom_range": [
+        "0x05675",
+        "0x05679"
+      ],
+      "prg_start": "0x05665",
+      "length": 4,
+      "bytes": "94 A7 0F 83",
+      "plus_0x7a_decode": "せみ..",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "つや<0F>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "てゆ<0F>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "とよ<0F>う",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 17,
+      "rom_range": [
+        "0x0567A",
+        "0x0568C"
+      ],
+      "prg_start": "0x0566A",
+      "length": 18,
+      "bytes": "9A AE 8C AB 83 96 0B 84 A3 AE 9D 82 A9 9F AE 95 AE 1A",
+      "plus_0x7a_decode": "とらかや.た..へらぬ.めのらそら.",
+      "kana_count": 13,
+      "unknown_count": 5,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "のわさるいな<0B>うむわふあらほわとわ<1A>",
+          "kana_count": 16,
+          "marker_count": 2
+        },
+        {
+          "base": "0x7F",
+          "decoded": "ひんすろえぬ<0B>おもんほうるまんにん<1A>",
+          "kana_count": 16,
+          "marker_count": 2
+        },
+        {
+          "base": "0x82",
+          "decoded": "ねろこりあと<0B>いみろひ<82>よへろてろ<1A>",
+          "kana_count": 15,
+          "marker_count": 3
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 18,
+      "rom_range": [
+        "0x0568D",
+        "0x05691"
+      ],
+      "prg_start": "0x0567D",
+      "length": 4,
+      "bytes": "85 1B 95 90",
+      "plus_0x7a_decode": "..そこ",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "う<1B>てせ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "え<1B>とそ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "い<1B>つす",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 19,
+      "rom_range": [
+        "0x05692",
+        "0x05696"
+      ],
+      "prg_start": "0x05682",
+      "length": 4,
+      "bytes": "9F 92 A3 94",
+      "plus_0x7a_decode": "のしへせ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "へたみつ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "ほちむて",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "ふそまち",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 20,
+      "rom_range": [
+        "0x05697",
+        "0x0569A"
+      ],
+      "prg_start": "0x05687",
+      "length": 3,
+      "bytes": "85 8A 94",
+      "plus_0x7a_decode": ".えせ",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "うくつ",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "えけて",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "いきち",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 21,
+      "rom_range": [
+        "0x0569C",
+        "0x0569F"
+      ],
+      "prg_start": "0x0568C",
+      "length": 3,
+      "bytes": "85 A0 92",
+      "plus_0x7a_decode": ".はし",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "うほた",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "いへそ",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "おまつ",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x0569D",
+          "prg_offset": "0x0568D",
+          "bank16": 1,
+          "mode": "plus-0x7A",
+          "base": "0x7A",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "A0 92",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8B 8C",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "encoding-exact"
+        },
+        {
+          "rom_offset": "0x0569D",
+          "prg_offset": "0x0568D",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x86",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "A0 92",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8B 8C",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "encoding-exact"
+        }
+      ],
+      "exact_plus_0x7a_matches": [
+        {
+          "rom_offset": "0x0569D",
+          "prg_offset": "0x0568D",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "A0 92"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "rom_range": [
+        "0x056A1",
+        "0x056A4"
+      ],
+      "prg_start": "0x05691",
+      "length": 3,
+      "bytes": "85 A3 AE",
+      "plus_0x7a_decode": ".へら",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "うみろ",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "えむわ",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "いまれ",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 23,
+      "rom_range": [
+        "0x056A6",
+        "0x056AF"
+      ],
+      "prg_start": "0x05696",
+      "length": 9,
+      "bytes": "A7 85 91 B2 AE 8B AE 87 91",
+      "plus_0x7a_decode": "み.さろらおらあさ",
+      "kana_count": 8,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x83",
+          "decoded": "もいせんれくれえせ",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x84",
+          "decoded": "めあすをるきるうす",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x82",
+          "decoded": "やうそ<B2>ろけろおそ",
+          "kana_count": 8,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 24,
+      "rom_range": [
+        "0x056B0",
+        "0x056C5"
+      ],
+      "prg_start": "0x056A0",
+      "length": 21,
+      "bytes": "05 7B 19 7B 0F 7B 14 7B 0A 7B AC 96 A5 87 0C AB 83 82 94 87 91",
+      "plus_0x7a_decode": ".<7B>.<7B>.<7B>.<7B>.<7B>ゆた?あ.や..せあさ",
+      "kana_count": 7,
+      "unknown_count": 9,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x7A",
+          "decoded": "<05>あ<19>あ<0F>あ<14>あ<0A>あ<AC>ふれす<0C><AB>けくはすぬ",
+          "kana_count": 13,
+          "marker_count": 8
+        },
+        {
+          "base": "0x79",
+          "decoded": "<05>い<19>い<0F>い<14>い<0A>い<AC>へろせ<0C><AB>こけひせね",
+          "kana_count": 13,
+          "marker_count": 8
+        },
+        {
+          "base": "0x78",
+          "decoded": "<05>う<19>う<0F>う<14>う<0A>う<AC>ほわそ<0C><AB>さこふその",
+          "kana_count": 13,
+          "marker_count": 8
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 25,
+      "rom_range": [
+        "0x056C6",
+        "0x056CA"
+      ],
+      "prg_start": "0x056B6",
+      "length": 4,
+      "bytes": "9F 8B 87 91",
+      "plus_0x7a_decode": "のおあさ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "へけおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "ほこかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "ふくえせ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 26,
+      "rom_range": [
+        "0x056CB",
+        "0x056CF"
+      ],
+      "prg_start": "0x056BB",
+      "length": 4,
+      "bytes": "90 A3 8D 89",
+      "plus_0x7a_decode": "こへきう",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "せみさき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "そむしく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "すまこか",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 27,
+      "rom_range": [
+        "0x056D0",
+        "0x056D4"
+      ],
+      "prg_start": "0x056C0",
+      "length": 4,
+      "bytes": "8B 82 0F 83",
+      "plus_0x7a_decode": "お...",
+      "kana_count": 1,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "こあ<0F>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "さい<0F>う",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "しう<0F>え",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 28,
+      "rom_range": [
+        "0x056D5",
+        "0x056DE"
+      ],
+      "prg_start": "0x056C5",
+      "length": 9,
+      "bytes": "9A 07 99 8D 89 9A 8C 0F 83",
+      "plus_0x7a_decode": "と.てきうとか..",
+      "kana_count": 6,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ね<07>ぬさきねこ<0F>あ",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x81",
+          "decoded": "の<07>ねしくのさ<0F>い",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x80",
+          "decoded": "は<07>のすけはし<0F>う",
+          "kana_count": 7,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x056DA",
+          "prg_offset": "0x056CA",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x80",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "9A 8C",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8B 8C",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate"
+        }
+      ],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 29,
+      "rom_range": [
+        "0x056DF",
+        "0x056E2"
+      ],
+      "prg_start": "0x056CF",
+      "length": 3,
+      "bytes": "8A 8D 89",
+      "plus_0x7a_decode": "えきう",
+      "kana_count": 3,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "くさき",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "けしく",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "きこか",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 30,
+      "rom_range": [
+        "0x056E4",
+        "0x056E8"
+      ],
+      "prg_start": "0x056D4",
+      "length": 4,
+      "bytes": "9A AE 8D 89",
+      "plus_0x7a_decode": "とらきう",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ねろさき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "のわしく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "ぬれこか",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 31,
+      "rom_range": [
+        "0x056E9",
+        "0x056F2"
+      ],
+      "prg_start": "0x056D9",
+      "length": 9,
+      "bytes": "8A 83 84 A3 AE 9B A7 8B 88",
+      "plus_0x7a_decode": "え..へらなみおい",
+      "kana_count": 7,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "くあいみろのやけか",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "けいうむわはゆこき",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "こうえめをひよさく",
+          "kana_count": 9,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 32,
+      "rom_range": [
+        "0x056F3",
+        "0x056F7"
+      ],
+      "prg_start": "0x056E3",
+      "length": 4,
+      "bytes": "9B 13 87 91",
+      "plus_0x7a_decode": "な.あさ",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "の<13>おそ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "は<13>かた",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "ね<13>えせ",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 33,
+      "rom_range": [
+        "0x056F8",
+        "0x056FC"
+      ],
+      "prg_start": "0x056E8",
+      "length": 4,
+      "bytes": "81 8C 1D 84",
+      "plus_0x7a_decode": ".か..",
+      "kana_count": 1,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x80",
+          "decoded": "あし<1D>え",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "いす<1D>お",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7E",
+          "decoded": "うせ<1D>か",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 34,
+      "rom_range": [
+        "0x056FD",
+        "0x05701"
+      ],
+      "prg_start": "0x056ED",
+      "length": 4,
+      "bytes": "1D AE 8C 91",
+      "plus_0x7a_decode": ".らかさ",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<1D>ろこそ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "<1D>わさた",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "<1D>れけせ",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 35,
+      "rom_range": [
+        "0x05702",
+        "0x0570B"
+      ],
+      "prg_start": "0x056F2",
+      "length": 9,
+      "bytes": "8B 82 90 AB 83 A3 84 A3 AE",
+      "plus_0x7a_decode": "お.こや.へ.へら",
+      "kana_count": 6,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "こあそるいむうむわ",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "さいたれうめえめを",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x7F",
+          "decoded": "しうちろえもおもん",
+          "kana_count": 9,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 36,
+      "rom_range": [
+        "0x0570C",
+        "0x05715"
+      ],
+      "prg_start": "0x056FC",
+      "length": 9,
+      "bytes": "A1 A7 0A AB 83 8B 10 87 91",
+      "plus_0x7a_decode": "ひみ.や.お.あさ",
+      "kana_count": 6,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "まゆ<0A>るいこ<10>かた",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x80",
+          "decoded": "みよ<0A>れうさ<10>きち",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x7F",
+          "decoded": "むら<0A>ろえし<10>くつ",
+          "kana_count": 7,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 37,
+      "rom_range": [
+        "0x05716",
+        "0x05724"
+      ],
+      "prg_start": "0x05706",
+      "length": 14,
+      "bytes": "8E 87 0A AB 83 A6 92 84 A3 AE 94 A3 9F 92",
+      "plus_0x7a_decode": "くあ.や.まし.へらせへのし",
+      "kana_count": 11,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "しお<0A>りあもたいみろつみへた",
+          "kana_count": 13,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "すか<0A>るいやちうむわてむほち",
+          "kana_count": 13,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "そく<0A>ろえよておもんなもまて",
+          "kana_count": 13,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x0571C",
+          "prg_offset": "0x0570C",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x78",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "92 84",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8B 8C",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate"
+        }
+      ],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 38,
+      "rom_range": [
+        "0x05725",
+        "0x05729"
+      ],
+      "prg_start": "0x05715",
+      "length": 4,
+      "bytes": "88 9F 9A 91",
+      "plus_0x7a_decode": "いのとさ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "かへねそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "きほのた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "おふぬせ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 39,
+      "rom_range": [
+        "0x0572A",
+        "0x05738"
+      ],
+      "prg_start": "0x0571A",
+      "length": 14,
+      "bytes": "AC 90 0A AB 83 83 A7 84 A3 AE 94 A2 8B 88",
+      "plus_0x7a_decode": "ゆこ.や..み.へらせふおい",
+      "kana_count": 10,
+      "unknown_count": 4,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "るせ<0A>りああやいみろつまけか",
+          "kana_count": 13,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "れそ<0A>るいいゆうむわてみこき",
+          "kana_count": 13,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "ろた<0A>れううよえめをとむさく",
+          "kana_count": 13,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 40,
+      "rom_range": [
+        "0x05739",
+        "0x0573D"
+      ],
+      "prg_start": "0x05729",
+      "length": 4,
+      "bytes": "85 99 87 91",
+      "plus_0x7a_decode": ".てあさ",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "うぬおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "えねかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "いにえせ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 41,
+      "rom_range": [
+        "0x0573E",
+        "0x05742"
+      ],
+      "prg_start": "0x0572E",
+      "length": 4,
+      "bytes": "A4 90 87 91",
+      "plus_0x7a_decode": "ほこあさ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "むせおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "めそかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "みすえせ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 42,
+      "rom_range": [
+        "0x05743",
+        "0x05747"
+      ],
+      "prg_start": "0x05733",
+      "length": 4,
+      "bytes": "82 8F AB 88",
+      "plus_0x7a_decode": ".けやい",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "あせるき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "いそれく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x7F",
+          "decoded": "うたろけ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 43,
+      "rom_range": [
+        "0x05748",
+        "0x0574B"
+      ],
+      "prg_start": "0x05738",
+      "length": 3,
+      "bytes": "A8 9D 82",
+      "plus_0x7a_decode": "むぬ.",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "よふあ",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "らへい",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x7F",
+          "decoded": "りほう",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 44,
+      "rom_range": [
+        "0x0574D",
+        "0x05751"
+      ],
+      "prg_start": "0x0573D",
+      "length": 4,
+      "bytes": "91 84 0F 83",
+      "plus_0x7a_decode": "さ...",
+      "kana_count": 1,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "そい<0F>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "たう<0F>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "ちえ<0F>う",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 45,
+      "rom_range": [
+        "0x05752",
+        "0x05756"
+      ],
+      "prg_start": "0x05742",
+      "length": 4,
+      "bytes": "8D A0 8B 88",
+      "plus_0x7a_decode": "きはおい",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "さほけか",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "こへくお",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "すまさく",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 46,
+      "rom_range": [
+        "0x05757",
+        "0x05760"
+      ],
+      "prg_start": "0x05747",
+      "length": 9,
+      "bytes": "8C AE 99 8D 89 A1 98 9F 92",
+      "plus_0x7a_decode": "からてきうひつのし",
+      "kana_count": 9,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "さわねしくまぬほち",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "けれにこかほなふそ",
+          "kana_count": 9,
+          "marker_count": 0
+        },
+        {
+          "base": "0x84",
+          "decoded": "くるなけおへとひせ",
+          "kana_count": 9,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 47,
+      "rom_range": [
+        "0x05761",
+        "0x05765"
+      ],
+      "prg_start": "0x05751",
+      "length": 4,
+      "bytes": "09 AE 8D 89",
+      "plus_0x7a_decode": ".らきう",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<09>ろさき",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "<09>わしく",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "<09>れこか",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 48,
+      "rom_range": [
+        "0x05766",
+        "0x0576A"
+      ],
+      "prg_start": "0x05756",
+      "length": 4,
+      "bytes": "85 82 8B 88",
+      "plus_0x7a_decode": "..おい",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "えあこき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "おいさく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x7F",
+          "decoded": "かうしけ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 49,
+      "rom_range": [
+        "0x0576B",
+        "0x0576F"
+      ],
+      "prg_start": "0x0575B",
+      "length": 4,
+      "bytes": "9D A3 8D 89",
+      "plus_0x7a_decode": "ぬへきう",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ひみさき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "ふむしく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "はまこか",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 50,
+      "rom_range": [
+        "0x05770",
+        "0x05774"
+      ],
+      "prg_start": "0x05760",
+      "length": 4,
+      "bytes": "A6 90 AB 83",
+      "plus_0x7a_decode": "まこや.",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "もせりあ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "やそるい",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "ゆたれう",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 51,
+      "rom_range": [
+        "0x05775",
+        "0x0577E"
+      ],
+      "prg_start": "0x05765",
+      "length": 9,
+      "bytes": "86 A2 0A AB 83 90 87 0F 83",
+      "plus_0x7a_decode": ".ふ.や.こあ..",
+      "kana_count": 4,
+      "unknown_count": 5,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "えま<0A>りあせお<0F>あ",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x81",
+          "decoded": "おみ<0A>るいそか<0F>い",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x80",
+          "decoded": "かむ<0A>れうたき<0F>う",
+          "kana_count": 7,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 52,
+      "rom_range": [
+        "0x0577F",
+        "0x05783"
+      ],
+      "prg_start": "0x0576F",
+      "length": 4,
+      "bytes": "9B 8B 9F 92",
+      "plus_0x7a_decode": "なおのし",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "のけへた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "はこほち",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "ねくふそ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 53,
+      "rom_range": [
+        "0x05784",
+        "0x05787"
+      ],
+      "prg_start": "0x05774",
+      "length": 3,
+      "bytes": "8B 9D 82",
+      "plus_0x7a_decode": "おぬ.",
+      "kana_count": 2,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "こふあ",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "さへい",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x7F",
+          "decoded": "しほう",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 54,
+      "rom_range": [
+        "0x05789",
+        "0x0578C"
+      ],
+      "prg_start": "0x05779",
+      "length": 3,
+      "bytes": "87 8D 89",
+      "plus_0x7a_decode": "あきう",
+      "kana_count": 3,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "おさき",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "かしく",
+          "kana_count": 3,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "えこか",
+          "kana_count": 3,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 55,
+      "rom_range": [
+        "0x0578E",
+        "0x05792"
+      ],
+      "prg_start": "0x0577E",
+      "length": 4,
+      "bytes": "99 A8 9F 92",
+      "plus_0x7a_decode": "てむのし",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ぬゆへた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "ねよほち",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "にやふそ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 56,
+      "rom_range": [
+        "0x05793",
+        "0x05797"
+      ],
+      "prg_start": "0x05783",
+      "length": 4,
+      "bytes": "8A 83 87 91",
+      "plus_0x7a_decode": "え.あさ",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "くあおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "けいかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "こうきち",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 57,
+      "rom_range": [
+        "0x05798",
+        "0x0579C"
+      ],
+      "prg_start": "0x05788",
+      "length": 4,
+      "bytes": "8D 84 9F 92",
+      "plus_0x7a_decode": "き.のし",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "さいへた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "しうほち",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "こあふそ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 58,
+      "rom_range": [
+        "0x0579D",
+        "0x057A6"
+      ],
+      "prg_start": "0x0578D",
+      "length": 9,
+      "bytes": "90 89 0C AB 83 83 A2 9F 92",
+      "plus_0x7a_decode": "こう.や..ふのし",
+      "kana_count": 6,
+      "unknown_count": 3,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "せき<0C>りああまへた",
+          "kana_count": 8,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "そく<0C>るいいみほち",
+          "kana_count": 8,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "ちこ<0C>ろええめまて",
+          "kana_count": 8,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 59,
+      "rom_range": [
+        "0x057A7",
+        "0x057AB"
+      ],
+      "prg_start": "0x05797",
+      "length": 4,
+      "bytes": "1E 1C 9F 92",
+      "plus_0x7a_decode": "..のし",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<1E><1C>へた",
+          "kana_count": 2,
+          "marker_count": 2
+        },
+        {
+          "base": "0x81",
+          "decoded": "<1E><1C>ほち",
+          "kana_count": 2,
+          "marker_count": 2
+        },
+        {
+          "base": "0x83",
+          "decoded": "<1E><1C>ふそ",
+          "kana_count": 2,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 60,
+      "rom_range": [
+        "0x057AC",
+        "0x057BA"
+      ],
+      "prg_start": "0x0579C",
+      "length": 14,
+      "bytes": "A5 83 84 A3 AE A6 8C 0A AB 83 99 A8 9D 82",
+      "plus_0x7a_decode": "?..へらまか.や.てむぬ.",
+      "kana_count": 8,
+      "unknown_count": 6,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "もいうむわやさ<0A>るいねよふあ",
+          "kana_count": 13,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "やうえめをゆし<0A>れうのらへい",
+          "kana_count": 13,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "ゆえおもんよす<0A>ろえはりほう",
+          "kana_count": 13,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 61,
+      "rom_range": [
+        "0x057BB",
+        "0x057C4"
+      ],
+      "prg_start": "0x057AB",
+      "length": 9,
+      "bytes": "9A 91 0A AB 83 9B 13 0F 83",
+      "plus_0x7a_decode": "とさ.や.な...",
+      "kana_count": 4,
+      "unknown_count": 5,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ねそ<0A>りあの<13><0F>あ",
+          "kana_count": 6,
+          "marker_count": 3
+        },
+        {
+          "base": "0x81",
+          "decoded": "のた<0A>るいは<13><0F>い",
+          "kana_count": 6,
+          "marker_count": 3
+        },
+        {
+          "base": "0x80",
+          "decoded": "はち<0A>れうひ<13><0F>う",
+          "kana_count": 6,
+          "marker_count": 3
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 62,
+      "rom_range": [
+        "0x057C5",
+        "0x057C9"
+      ],
+      "prg_start": "0x057B5",
+      "length": 4,
+      "bytes": "88 A0 0F 83",
+      "plus_0x7a_decode": "いは..",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "かほ<0F>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "くま<0F>う",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x7F",
+          "decoded": "けみ<0F>え",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 63,
+      "rom_range": [
+        "0x057CA",
+        "0x057CE"
+      ],
+      "prg_start": "0x057BA",
+      "length": 4,
+      "bytes": "90 AB 1D 84",
+      "plus_0x7a_decode": "こや..",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "せり<1D>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "そる<1D>う",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x83",
+          "decoded": "すら<1D>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 64,
+      "rom_range": [
+        "0x057CF",
+        "0x057D3"
+      ],
+      "prg_start": "0x057BF",
+      "length": 4,
+      "bytes": "83 A7 8B 88",
+      "plus_0x7a_decode": ".みおい",
+      "kana_count": 3,
+      "unknown_count": 1,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "あやけか",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "いゆこき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x80",
+          "decoded": "うよさく",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 65,
+      "rom_range": [
+        "0x057D4",
+        "0x057D8"
+      ],
+      "prg_start": "0x057C4",
+      "length": 4,
+      "bytes": "A6 98 8D 89",
+      "plus_0x7a_decode": "まつきう",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "もにさき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "やぬしく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "めなこか",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [
+        {
+          "rom_offset": "0x057D4",
+          "prg_offset": "0x057C4",
+          "bank16": 1,
+          "mode": "shifted-low",
+          "base": "0x8C",
+          "source": "はし",
+          "korean": "다리",
+          "category": "스테이지",
+          "encoded_bytes": "A6 98",
+          "patch_risk": "safe-equal-length",
+          "planned_bytes": "8B 8C",
+          "padding_reason": "planned bytes exactly fill candidate span",
+          "evidence_level": "static-candidate+pointer"
+        }
+      ],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 66,
+      "rom_range": [
+        "0x057D9",
+        "0x057DD"
+      ],
+      "prg_start": "0x057C9",
+      "length": 4,
+      "bytes": "A6 8C 9F 92",
+      "plus_0x7a_decode": "まかのし",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "もこへた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "やさほち",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "めけふそ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 67,
+      "rom_range": [
+        "0x057DE",
+        "0x057E2"
+      ],
+      "prg_start": "0x057CE",
+      "length": 4,
+      "bytes": "93 A9 0F 83",
+      "plus_0x7a_decode": "すめ..",
+      "kana_count": 2,
+      "unknown_count": 2,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "ちよ<0F>あ",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x81",
+          "decoded": "つら<0F>い",
+          "kana_count": 3,
+          "marker_count": 1
+        },
+        {
+          "base": "0x80",
+          "decoded": "てり<0F>う",
+          "kana_count": 3,
+          "marker_count": 1
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 68,
+      "rom_range": [
+        "0x057E3",
+        "0x057E7"
+      ],
+      "prg_start": "0x057D3",
+      "length": 4,
+      "bytes": "8D A4 87 91",
+      "plus_0x7a_decode": "きほあさ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "さむおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "しめかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "こみえせ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 69,
+      "rom_range": [
+        "0x057E8",
+        "0x057F6"
+      ],
+      "prg_start": "0x057D8",
+      "length": 14,
+      "bytes": "A3 A8 99 8D 89 82 8C 0A AB 83 8B 88 1D 84",
+      "plus_0x7a_decode": "へむてきう.か.や.おい..",
+      "kana_count": 9,
+      "unknown_count": 5,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x81",
+          "decoded": "むよねしくあさ<0A>るいこき<1D>う",
+          "kana_count": 12,
+          "marker_count": 2
+        },
+        {
+          "base": "0x80",
+          "decoded": "めらのすけいし<0A>れうさく<1D>え",
+          "kana_count": 12,
+          "marker_count": 2
+        },
+        {
+          "base": "0x7F",
+          "decoded": "もりはせこうす<0A>ろえしけ<1D>お",
+          "kana_count": 12,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 70,
+      "rom_range": [
+        "0x057F7",
+        "0x05800"
+      ],
+      "prg_start": "0x057E7",
+      "length": 9,
+      "bytes": "83 A7 0C AB 83 8C 1A 8B 88",
+      "plus_0x7a_decode": ".み.や.か.おい",
+      "kana_count": 5,
+      "unknown_count": 4,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "あや<0C>りあこ<1A>けか",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x81",
+          "decoded": "いゆ<0C>るいさ<1A>こき",
+          "kana_count": 7,
+          "marker_count": 2
+        },
+        {
+          "base": "0x80",
+          "decoded": "うよ<0C>れうし<1A>さく",
+          "kana_count": 7,
+          "marker_count": 2
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 71,
+      "rom_range": [
+        "0x05801",
+        "0x05805"
+      ],
+      "prg_start": "0x057F1",
+      "length": 4,
+      "bytes": "8A 8D 87 91",
+      "plus_0x7a_decode": "えきあさ",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "くさおそ",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "けしかた",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "きこえせ",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 72,
+      "rom_range": [
+        "0x05806",
+        "0x0580A"
+      ],
+      "prg_start": "0x057F6",
+      "length": 4,
+      "bytes": "8C AB 8D 89",
+      "plus_0x7a_decode": "かやきう",
+      "kana_count": 4,
+      "unknown_count": 0,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "こりさき",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x81",
+          "decoded": "さるしく",
+          "kana_count": 4,
+          "marker_count": 0
+        },
+        {
+          "base": "0x83",
+          "decoded": "けらこか",
+          "kana_count": 4,
+          "marker_count": 0
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    },
+    {
+      "index": 73,
+      "rom_range": [
+        "0x0580B",
+        "0x05810"
+      ],
+      "prg_start": "0x057FB",
+      "length": 5,
+      "bytes": "0C B6 AE 0F 83",
+      "plus_0x7a_decode": "..ら..",
+      "kana_count": 1,
+      "unknown_count": 4,
+      "best_shifted_low_decodes": [
+        {
+          "base": "0x82",
+          "decoded": "<0C><B6>ろ<0F>あ",
+          "kana_count": 2,
+          "marker_count": 3
+        },
+        {
+          "base": "0x81",
+          "decoded": "<0C><B6>わ<0F>い",
+          "kana_count": 2,
+          "marker_count": 3
+        },
+        {
+          "base": "0x80",
+          "decoded": "<0C><B6>を<0F>う",
+          "kana_count": 2,
+          "marker_count": 3
+        }
+      ],
+      "translation_hits": [],
+      "exact_plus_0x7a_matches": []
+    }
+  ],
+  "translation_hits": [
+    {
+      "rom_offset": "0x0561A",
+      "prg_offset": "0x0560A",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x7C",
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "encoded_bytes": "96 88",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8B 8C",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate+pointer"
+    },
+    {
+      "rom_offset": "0x0562F",
+      "prg_offset": "0x0561F",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x80",
+      "source": "たついち",
+      "korean": "타츠이치",
+      "category": "보스",
+      "encoded_bytes": "90 92 82 91",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "89 98 8E 90",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate"
+    },
+    {
+      "rom_offset": "0x05643",
+      "prg_offset": "0x05633",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x80",
+      "source": "へいしち",
+      "korean": "헤이시치",
+      "category": "보스",
+      "encoded_bytes": "9D 82 8C 91",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8D 8E 8F 90",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate+pointer"
+    },
+    {
+      "rom_offset": "0x05644",
+      "prg_offset": "0x05634",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x7C",
+      "source": "カタナ",
+      "korean": "카타나",
+      "category": "무기",
+      "encoded_bytes": "82 8C 91",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "88 89 8A",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate+pointer"
+    },
+    {
+      "rom_offset": "0x0569D",
+      "prg_offset": "0x0568D",
+      "bank16": 1,
+      "mode": "plus-0x7A",
+      "base": "0x7A",
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "encoded_bytes": "A0 92",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8B 8C",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "encoding-exact"
+    },
+    {
+      "rom_offset": "0x0569D",
+      "prg_offset": "0x0568D",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x86",
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "encoded_bytes": "A0 92",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8B 8C",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "encoding-exact"
+    },
+    {
+      "rom_offset": "0x056DA",
+      "prg_offset": "0x056CA",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x80",
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "encoded_bytes": "9A 8C",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8B 8C",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate"
+    },
+    {
+      "rom_offset": "0x0571C",
+      "prg_offset": "0x0570C",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x78",
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "encoded_bytes": "92 84",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8B 8C",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate"
+    },
+    {
+      "rom_offset": "0x057D4",
+      "prg_offset": "0x057C4",
+      "bank16": 1,
+      "mode": "shifted-low",
+      "base": "0x8C",
+      "source": "はし",
+      "korean": "다리",
+      "category": "스테이지",
+      "encoded_bytes": "A6 98",
+      "patch_risk": "safe-equal-length",
+      "planned_bytes": "8B 8C",
+      "padding_reason": "planned bytes exactly fill candidate span",
+      "evidence_level": "static-candidate+pointer"
+    }
+  ]
+}

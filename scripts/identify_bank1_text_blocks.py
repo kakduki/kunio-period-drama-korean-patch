@@ -14,6 +14,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass
+import json
 from pathlib import Path
 import re
 
@@ -34,6 +35,8 @@ from rom_utils import find_rom_path
 ROOT = Path(__file__).resolve().parents[1]
 TRANSLATION_DATA = ROOT / "text_data" / "translation_data.txt"
 OUT = ROOT / "rom_analysis" / "bank1_text_block_map.md"
+OUT_JSON = ROOT / "rom_analysis" / "bank1_text_block_map.json"
+PADDING_OPTIONS = ROOT / "rom_analysis" / "prg_padding_options.json"
 
 ROM_START = 0x05610
 ROM_END = 0x05810
@@ -235,11 +238,135 @@ def format_hit(hit: Hit) -> str:
     )
 
 
+def load_padding_risks() -> dict[str, dict[str, object]]:
+    if not PADDING_OPTIONS.exists():
+        return {}
+    data = json.loads(PADDING_OPTIONS.read_text(encoding="utf-8"))
+    return {
+        str(target["rom_hit"]).upper(): target
+        for target in data.get("targets", [])
+    }
+
+
+def padding_for_hit(hit: Hit, padding_risks: dict[str, dict[str, object]]) -> dict[str, object] | None:
+    return padding_risks.get(f"0x{hit.rom_offset:05X}".upper())
+
+
+def hit_to_json(hit: Hit, padding_risks: dict[str, dict[str, object]]) -> dict[str, object]:
+    padding = padding_for_hit(hit, padding_risks)
+    row = {
+        "rom_offset": f"0x{hit.rom_offset:05X}",
+        "prg_offset": f"0x{hit.prg_offset:05X}",
+        "bank16": hit.bank16,
+        "mode": hit.mode,
+        "base": f"0x{hit.base:02X}",
+        "source": hit.entry.source,
+        "korean": hit.entry.korean,
+        "category": hit.entry.category,
+        "encoded_bytes": fmt_bytes(hit.encoded),
+    }
+    if padding:
+        row.update(
+            {
+                "patch_risk": padding.get("risk"),
+                "planned_bytes": padding.get("planned_bytes"),
+                "padding_reason": padding.get("reason"),
+                "evidence_level": padding.get("evidence_level"),
+            }
+        )
+    else:
+        row["patch_risk"] = "not-in-current-allocation-plan"
+    return row
+
+
+def write_json(
+    blocks: list[Block],
+    hits_by_block: dict[int, list[Hit]],
+    exact_matches: list[tuple[TranslationEntry, bytes, int, int]],
+    translation_hits: list[Hit],
+    padding_risks: dict[str, dict[str, object]],
+) -> None:
+    exact_by_offset = defaultdict(list)
+    for entry, encoded, rom_offset, prg_offset in exact_matches:
+        exact_by_offset[rom_offset].append(
+            {
+                "rom_offset": f"0x{rom_offset:05X}",
+                "prg_offset": f"0x{prg_offset:05X}",
+                "source": entry.source,
+                "korean": entry.korean,
+                "category": entry.category,
+                "encoded_bytes": hex_bytes(encoded),
+            }
+        )
+
+    safe_equal_keys = {
+        (hit.rom_offset, hit.entry.source, hit.entry.korean, hit.entry.category)
+        for hit in translation_hits
+        if (padding_for_hit(hit, padding_risks) or {}).get("risk") == "safe-equal-length"
+    }
+
+    payload = {
+        "source": {
+            "rom_range": [f"0x{ROM_START:05X}", f"0x{ROM_END:05X}"],
+            "decoder_hypothesis": "CHR tile = PRG byte + 0x7A; shifted-low candidates are retained as runtime watch targets",
+            "translation_data": str(TRANSLATION_DATA.relative_to(ROOT)),
+            "padding_options": str(PADDING_OPTIONS.relative_to(ROOT)) if PADDING_OPTIONS.exists() else None,
+        },
+        "summary": {
+            "block_count": len(blocks),
+            "translation_hit_count": len(translation_hits),
+            "exact_plus_0x7a_match_count": len(exact_matches),
+            "blocks_with_translation_hits": len(hits_by_block),
+            "safe_equal_length_distinct_targets": len(safe_equal_keys),
+        },
+        "blocks": [],
+        "translation_hits": [
+            hit_to_json(hit, padding_risks)
+            for hit in sorted(translation_hits, key=lambda h: (h.rom_offset, h.mode, h.base, h.entry.source))
+        ],
+    }
+
+    for block in blocks:
+        block_hits = hits_by_block.get(block.index, [])
+        best = best_shifted_decodes(block.data)
+        payload["blocks"].append(
+            {
+                "index": block.index,
+                "rom_range": [f"0x{block.rom_start:05X}", f"0x{block.rom_end:05X}"],
+                "prg_start": f"0x{block.prg_start:05X}",
+                "length": len(block.data),
+                "bytes": hex_bytes(block.data),
+                "plus_0x7a_decode": block.decoded,
+                "kana_count": block.kana_count,
+                "unknown_count": block.unknown_count,
+                "best_shifted_low_decodes": [
+                    {
+                        "base": f"0x{candidate.base:02X}",
+                        "decoded": candidate.decoded,
+                        "kana_count": candidate.kana_count,
+                        "marker_count": candidate.marker_count,
+                    }
+                    for candidate in best
+                ],
+                "translation_hits": [hit_to_json(hit, padding_risks) for hit in block_hits],
+                "exact_plus_0x7a_matches": [
+                    match
+                    for rom_offset, matches in exact_by_offset.items()
+                    if block.rom_start <= rom_offset < block.rom_end
+                    for match in matches
+                ],
+            }
+        )
+
+    OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def main() -> int:
     rom = Path(find_rom_path()).read_bytes()
     blob = rom[ROM_START:ROM_END]
     blocks = split_blocks(blob, ROM_START)
     entries = read_translation_entries()
+    padding_risks = load_padding_risks()
     translation_hits = [
         hit for hit in collect_hits(rom[PRG_HEADER:PRG_HEADER + 0x20000], read_entries())
         if WATCH_ROM_START <= hit.rom_offset < WATCH_ROM_END
@@ -258,6 +385,8 @@ def main() -> int:
         for rel in find_all(blob, encoded):
             rom_offset = ROM_START + rel
             exact_matches.append((entry, encoded, rom_offset, rom_offset - PRG_HEADER))
+
+    write_json(blocks, hits_by_block, exact_matches, translation_hits, padding_risks)
 
     lines: list[str] = []
     lines.append("# PRG bank 1 text block map")
@@ -320,14 +449,40 @@ def main() -> int:
     if not translation_hits:
         lines.append("No translation-data candidates landed inside this watch range.")
     else:
-        lines.append("| block | ROM offset | PRG offset | mode/base | Japanese | Korean | category | bytes |")
-        lines.append("| ---: | --- | --- | --- | --- | --- | --- | --- |")
+        lines.append("| block | ROM offset | PRG offset | mode/base | Japanese | Korean | category | bytes | patch risk |")
+        lines.append("| ---: | --- | --- | --- | --- | --- | --- | --- | --- |")
         for hit in sorted(translation_hits, key=lambda h: (h.rom_offset, h.mode, h.base, h.entry.source)):
             block = block_for_offset(blocks, hit.rom_offset)
+            padding = padding_for_hit(hit, padding_risks)
+            risk = padding.get("risk") if padding else "not-in-current-allocation-plan"
             lines.append(
                 f"| {block.index if block else '-'} | `0x{hit.rom_offset:05X}` | `0x{hit.prg_offset:05X}` | "
                 f"{hit.mode}/`0x{hit.base:02X}` | {hit.entry.source} | {hit.entry.korean} | "
-                f"{hit.entry.category} | `{fmt_bytes(hit.encoded)}` |"
+                f"{hit.entry.category} | `{fmt_bytes(hit.encoded)}` | {risk} |"
+            )
+
+    lines.append("")
+    lines.append("## Watch-range patch readiness")
+    lines.append("")
+    ready_hits_by_key = {}
+    for hit in translation_hits:
+        if (padding_for_hit(hit, padding_risks) or {}).get("risk") != "safe-equal-length":
+            continue
+        key = (hit.rom_offset, hit.entry.source, hit.entry.korean, hit.entry.category)
+        ready_hits_by_key.setdefault(key, hit)
+    ready_hits = list(ready_hits_by_key.values())
+    if not ready_hits:
+        lines.append("No watch-range hits are currently marked `safe-equal-length` in `prg_padding_options.json`.")
+    else:
+        lines.append("| ROM offset | block | Japanese | Korean | category | evidence | planned bytes | note |")
+        lines.append("| --- | ---: | --- | --- | --- | --- | --- | --- |")
+        for hit in sorted(ready_hits, key=lambda h: (h.rom_offset, h.entry.source)):
+            block = block_for_offset(blocks, hit.rom_offset)
+            padding = padding_for_hit(hit, padding_risks) or {}
+            lines.append(
+                f"| `0x{hit.rom_offset:05X}` | {block.index if block else '-'} | {hit.entry.source} | "
+                f"{hit.entry.korean} | {hit.entry.category} | {padding.get('evidence_level', '-')} | "
+                f"`{padding.get('planned_bytes', '-')}` | equal-length candidate; still needs runtime screen confirmation unless evidence is runtime-confirmed |"
             )
 
     lines.append("")
@@ -340,6 +495,7 @@ def main() -> int:
 
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT}")
+    print(f"Wrote {OUT_JSON}")
     print(f"blocks={len(blocks)} exact_matches={len(exact_matches)} watch_hits={len(translation_hits)}")
     return 0
 
