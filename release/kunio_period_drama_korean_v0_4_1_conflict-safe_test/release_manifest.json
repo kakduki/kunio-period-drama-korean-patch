@@ -1,8 +1,8 @@
 {
   "bundle_dir": "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test",
   "zip_path": "release\\kunio_period_drama_korean_v0_4_1_conflict-safe_test.zip",
-  "zip_size": 10963,
-  "zip_md5": "7f5c5cb03faaf0550713e530d5853c5d",
+  "zip_size": 11025,
+  "zip_md5": "f884e18b4f036c8b85c180862102a2e4",
   "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips",
   "primary_candidate": "v0.4.1 conflict-safe",
   "primary_candidate_md5": "2b9f569fa175c719333064b8d73bc273",

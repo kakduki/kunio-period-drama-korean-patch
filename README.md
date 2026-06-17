@@ -21,6 +21,12 @@ python scripts/verify_primary_patch.py
 python scripts/run_project_checks.py
 ```
 
+현재 테스트 IPS를 내 ROM에 적용하려면:
+
+```powershell
+python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes
+```
+
 생성물을 다시 만들면서 확인하려면:
 
 ```powershell
@@ -74,6 +80,7 @@ broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio
 ## 주요 스크립트
 
 - `scripts/verify_primary_patch.py`: 현재 primary IPS가 기준 ROM에 정상 적용되는지 확인
+- `scripts/apply_primary_patch.py`: 현재 primary IPS를 개인 보유 ROM에 적용
 - `scripts/run_project_checks.py`: Python, Lua, IPS, manifest 핵심 체크
 - `scripts/generate_patch_decision_matrix.py`: 다음 수동 검증 결정표 생성
 - `scripts/package_primary_release.py`: ROM 없는 테스트 IPS 번들 생성

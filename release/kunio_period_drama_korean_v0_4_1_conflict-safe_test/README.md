@@ -20,6 +20,14 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - Primary candidate: **v0.4.1 conflict-safe**
 - Expected patched MD5: `2b9f569fa175c719333064b8d73bc273`
 
+## Apply In Repository
+
+From the repository root, after putting your base ROM in `rom/`:
+
+```powershell
+python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.1_test_applied.nes
+```
+
 ## Verify In Repository
 
 From the repository root:

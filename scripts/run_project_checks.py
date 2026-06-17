@@ -15,6 +15,7 @@ from rom_utils import REPO_ROOT
 KEY_PYTHON = [
     "scripts/analyze_broad_scan_manual_dump.py",
     "scripts/analyze_manual_screen_dump.py",
+    "scripts/apply_primary_patch.py",
     "scripts/build_prg_patch_from_plan.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/check_lua_target_syntax.py",
