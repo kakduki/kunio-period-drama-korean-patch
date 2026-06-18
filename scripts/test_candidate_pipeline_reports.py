@@ -88,6 +88,8 @@ def main() -> int:
         "UNKNOWN",
         "VISUAL_PROOF_PENDING",
         "HIGH_RISK_VISUAL_PROOF_PENDING",
+        "release zip contains no ROM | PASS | none",
+        "shortened padding rule acceptance | UNKNOWN | PADDING_RULE_UNPROVEN",
         "No `.nes` files in release zip",
         "Manual visual proof for every release-included string",
     ]:

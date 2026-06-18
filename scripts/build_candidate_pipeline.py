@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import zipfile
 from pathlib import Path
 
 from build_patch import make_records, write_ips
@@ -21,6 +22,7 @@ PATCHED_REPORT = OUT_DIR / "patched_rom_report.md"
 SMOKE_LOG = OUT_DIR / "smoke_test_log.txt"
 RELEASE_GATE = OUT_DIR / "release_gate_checklist.md"
 LEGACY_SMOKE_SUMMARY = OUT_DIR / "smoke_summary.tsv"
+RELEASE_TEST_ZIP = REPO_ROOT / "release" / "kunio_period_drama_korean_v0_4_2_font-expanded_test.zip"
 COMBINED_BUILD_ID = "softgate-dev-combined"
 COMBINED_ROM = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined.nes"
 COMBINED_IPS = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined.ips"
@@ -650,6 +652,28 @@ def smoke_status_from_summary(build_id: str) -> str:
     return "FAIL"
 
 
+def release_zip_rom_gate() -> dict[str, str]:
+    if not RELEASE_TEST_ZIP.exists():
+        return {
+            "status": "UNKNOWN",
+            "failure_class": "PACKAGE_ZIP_MISSING",
+            "evidence": f"{repo_relative(RELEASE_TEST_ZIP)} has not been generated yet",
+        }
+    with zipfile.ZipFile(RELEASE_TEST_ZIP) as archive:
+        rom_files = [name for name in archive.namelist() if name.lower().endswith(".nes")]
+    if rom_files:
+        return {
+            "status": "FAIL",
+            "failure_class": "ROM_FILE_IN_RELEASE_ZIP",
+            "evidence": f"{repo_relative(RELEASE_TEST_ZIP)} contains ROM entries: {', '.join(rom_files)}",
+        }
+    return {
+        "status": "PASS",
+        "failure_class": "none",
+        "evidence": f"{repo_relative(RELEASE_TEST_ZIP)} contains no .nes entries",
+    }
+
+
 def write_release_gate_checklist(
     reports: list[dict[str, object]],
     combined_report: dict[str, object],
@@ -665,6 +689,7 @@ def write_release_gate_checklist(
     combined_build_pass = combined_report["build_status"] == "PASS"
     quarantine_builds_pass = all(report["build_status"] == "PASS" for report in quarantined_reports)
     smoke_all_pass = smoke_checked == "x"
+    zip_gate = release_zip_rom_gate()
     release_gate_rows = [
         {
             "gate": "release-included visual proof",
@@ -698,15 +723,21 @@ def write_release_gate_checklist(
         },
         {
             "gate": "release zip contains no ROM",
-            "status": "UNKNOWN",
-            "failure_class": "PACKAGE_TEST_NOT_PART_OF_CANDIDATE_BUILD",
-            "evidence": "validated separately by scripts/test_release_package_contents.py after packaging",
+            "status": zip_gate["status"],
+            "failure_class": zip_gate["failure_class"],
+            "evidence": zip_gate["evidence"],
         },
         {
             "gate": "regression boot smoke",
             "status": "PASS" if smoke_all_pass else "UNKNOWN",
             "failure_class": "none" if smoke_all_pass else "SMOKE_EVIDENCE_MISSING",
             "evidence": "smoke_summary_*.tsv files report lua_done for candidate boot tests",
+        },
+        {
+            "gate": "shortened padding rule acceptance",
+            "status": "UNKNOWN",
+            "failure_class": "PADDING_RULE_UNPROVEN",
+            "evidence": "padding experiment CPU evidence exists, but strict PPU/visual acceptance is still missing",
         },
     ]
     lines = [

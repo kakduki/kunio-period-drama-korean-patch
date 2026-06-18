@@ -12,8 +12,9 @@ Hard gates apply only to release candidates, not to soft-gated development build
 | false-positive/ambiguous bytes excluded | PASS | none | quarantined candidates are isolated and not included in softgate-dev-combined |
 | base and patched hashes documented | PASS | none | patched_rom_report.md records base MD5 and candidate MD5 values |
 | IPS applies from clean base ROM | PASS | none | candidate IPS files are generated from clean base-to-patched byte diffs |
-| release zip contains no ROM | UNKNOWN | PACKAGE_TEST_NOT_PART_OF_CANDIDATE_BUILD | validated separately by scripts/test_release_package_contents.py after packaging |
+| release zip contains no ROM | PASS | none | release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip contains no .nes entries |
 | regression boot smoke | PASS | none | smoke_summary_*.tsv files report lua_done for candidate boot tests |
+| shortened padding rule acceptance | UNKNOWN | PADDING_RULE_UNPROVEN | padding experiment CPU evidence exists, but strict PPU/visual acceptance is still missing |
 
 ## Development Soft Gate
 
