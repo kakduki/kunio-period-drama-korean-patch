@@ -1,0 +1,4 @@
+frame	reason	ppu_writes	last_ppu_addr	stem
+0	lua_start	0	0000	callback_mode=true
+900	final	2	0000	kunio_fceux_lua_output/frame_000900_011_final
+900	lua_done	0	0000	11_dumps

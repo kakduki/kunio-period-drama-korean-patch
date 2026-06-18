@@ -1,0 +1,38 @@
+{
+  "target": {
+    "label": "watch_rom_0562f_보스_80",
+    "evidence_level": "static-candidate",
+    "category_group": "event/dialogue-related",
+    "category": "보스",
+    "rom_hit": "0x0562F",
+    "source": "たついち",
+    "korean": "타츠이치",
+    "required_glyphs": [
+      "타",
+      "츠",
+      "이",
+      "치"
+    ],
+    "planned_prg_bytes": [
+      "0x89",
+      "0x98",
+      "0x8E",
+      "0x90"
+    ],
+    "original_expected_bytes": "90 92 82 91"
+  },
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "font_rom": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+  "candidate_rom": "output\\kunio_period_drama_softgate_0562f_tatsuichi.nes",
+  "candidate_ips": "output\\kunio_period_drama_softgate_0562f_tatsuichi.ips",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "8bbe0f8b3ce78f37c9c77801993b72a4",
+  "rom_offset": "0x0562F",
+  "prg_bank": 1,
+  "prg_offset": "0x0561F",
+  "old_bytes": "90 92 82 91",
+  "new_bytes": "89 98 8E 90",
+  "build_status": "PASS",
+  "failure_class": "",
+  "failure_reason": ""
+}

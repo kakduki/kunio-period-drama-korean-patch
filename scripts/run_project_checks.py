@@ -20,6 +20,7 @@ KEY_PYTHON = [
     "scripts/build_prg_patch_from_plan.py",
     "scripts/build_next_glyph_expansion_candidate.py",
     "scripts/build_broad_preview_candidate.py",
+    "scripts/build_candidate_pipeline.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/build_v042_font_expanded_candidate.py",
     "scripts/build_v043_from_broad_scan_proof.py",

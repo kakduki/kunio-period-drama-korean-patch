@@ -1,0 +1,6 @@
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0562f_tatsuichi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline_smoke/summary.tsv
