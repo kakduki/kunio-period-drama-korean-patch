@@ -1,0 +1,147 @@
+{
+  "input_records": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_target_records.tsv",
+  "frame": "883",
+  "targets_checked": 10,
+  "active_expected_matches": 10,
+  "latest_screenshot": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_screen.gd",
+  "latest_meta": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_meta.txt",
+  "active_matches": [
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_0561a_스테이지_7c",
+      "category": "스테이지",
+      "rom_hit": "ROM+0x0561A",
+      "cpu_range": "$95BE-$960F",
+      "expected_bytes": "8B 8C",
+      "active_expected_match": "true",
+      "record_snapshot": "7B 15 96 15 96 15 96 15 96 15 96 15 96 15 96 15 96 15 96 15 96 05 7B 0A 7B 0F 7B 14 7B 29 96 2E 96 33 96 19 7B 3D 96 1E 7B 47 96 4C 96 51 96 23 7B 5B 96 60 96 65 96 28 7B 6F 96 2D 7B 79 96 7D 96 82 96 87 96 8C 96 91 96 96 96 9B 8B 8C 96 9F 8B FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_0562f_보스_80",
+      "category": "보스",
+      "rom_hit": "ROM+0x0562F",
+      "cpu_range": "$961A-$9623",
+      "expected_bytes": "89 98 8E 90",
+      "active_expected_match": "true",
+      "record_snapshot": "0C B6 83 87 91 89 98 8E 90 FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_05643_보스_80",
+      "category": "보스",
+      "rom_hit": "ROM+0x05643",
+      "cpu_range": "$9633-$9637",
+      "expected_bytes": "8D 8E 8F 90",
+      "active_expected_match": "true",
+      "record_snapshot": "8D 8E 8F 90 FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_0569d_스테이지_7a",
+      "category": "스테이지",
+      "rom_hit": "ROM+0x0569D",
+      "cpu_range": "$968C-$968F",
+      "expected_bytes": "8B 8C",
+      "active_expected_match": "true",
+      "record_snapshot": "85 8B 8C FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_056da_스테이지_80",
+      "category": "스테이지",
+      "rom_hit": "ROM+0x056DA",
+      "cpu_range": "$96C5-$96CE",
+      "expected_bytes": "8B 8C",
+      "active_expected_match": "true",
+      "record_snapshot": "9A 07 99 8D 89 8B 8C 0F 83 FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_0571c_스테이지_78",
+      "category": "스테이지",
+      "rom_hit": "ROM+0x0571C",
+      "cpu_range": "$9706-$9714",
+      "expected_bytes": "8B 8C",
+      "active_expected_match": "true",
+      "record_snapshot": "8E 87 0A AB 83 A6 8B 8C A3 AE 94 A3 9F 92 FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_watch_rom_057d4_스테이지_8c",
+      "category": "스테이지",
+      "rom_hit": "ROM+0x057D4",
+      "cpu_range": "$97C4-$97C8",
+      "expected_bytes": "8B 8C",
+      "active_expected_match": "true",
+      "record_snapshot": "8B 8C 8D 89 FF"
+    },
+    {
+      "frame": "883",
+      "label": "v04_rom_07227_candidate_84",
+      "category": "무기",
+      "rom_hit": "ROM+0x07227",
+      "cpu_range": "$B216-$B21A",
+      "expected_bytes": "88 89 8A",
+      "active_expected_match": "true",
+      "record_snapshot": "85 88 89 8A 00"
+    },
+    {
+      "frame": "883",
+      "label": "v04_rom_0736a_candidate_93",
+      "category": "UI",
+      "rom_hit": "ROM+0x0736A",
+      "cpu_range": "$B359-$B35E",
+      "expected_bytes": "96 8E 97",
+      "active_expected_match": "true",
+      "record_snapshot": "F0 96 8E 97 CB 00"
+    },
+    {
+      "frame": "883",
+      "label": "v04_rom_0739d_candidate_93",
+      "category": "UI",
+      "rom_hit": "ROM+0x0739D",
+      "cpu_range": "$B38C-$B391",
+      "expected_bytes": "96 8E 97",
+      "active_expected_match": "true",
+      "record_snapshot": "F0 96 8E 97 CA 00"
+    }
+  ],
+  "captured_files": [
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_cpu_ram.bin",
+      "bytes": 2048,
+      "kind": "bin"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_cpu_ram.txt",
+      "bytes": 7040,
+      "kind": "txt"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_meta.txt",
+      "bytes": 168,
+      "kind": "txt"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_screen.gd",
+      "bytes": 245771,
+      "kind": "gd"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_sram_6000_7fff.bin",
+      "bytes": 8192,
+      "kind": "bin"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_sram_6000_7fff.txt",
+      "bytes": 28160,
+      "kind": "txt"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_target_records.tsv",
+      "bytes": 1371,
+      "kind": "tsv"
+    }
+  ]
+}

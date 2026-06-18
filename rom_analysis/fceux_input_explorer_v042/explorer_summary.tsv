@@ -1,0 +1,6 @@
+frame	route	fingerprint	dump_prefix
+121	start_a_menu	877702039:25800	kunio_fceux_lua_output/manual_frame_000122
+361	start_a_menu	972456399:45600	kunio_fceux_lua_output/manual_frame_000362
+642	start_a_menu	206542110:45120	kunio_fceux_lua_output/manual_frame_000643
+882	start_a_menu	972456399:45600	kunio_fceux_lua_output/manual_frame_000883
+900	done	972456399:45600	unique=4

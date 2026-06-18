@@ -240,9 +240,14 @@ def launch(args: argparse.Namespace) -> int:
     final_output.mkdir(parents=True, exist_ok=True)
     shutil.copy2(rom, ascii_rom)
     shutil.copy2(lua_script, ascii_lua)
-    lua_targets = lua_script.parent / "kunio_bank1_targets.lua"
-    if lua_targets.exists():
-        shutil.copy2(lua_targets, fceux_workdir / lua_targets.name)
+    for helper_name in [
+        "kunio_bank1_targets.lua",
+        "kunio_v041_conflict_safe_targets.lua",
+        "kunio_manual_screen_dump.lua",
+    ]:
+        helper_lua = lua_script.parent / helper_name
+        if helper_lua.exists():
+            shutil.copy2(helper_lua, fceux_workdir / helper_lua.name)
     if target_lua:
         shutil.copy2(target_lua, fceux_workdir / target_lua.name)
 

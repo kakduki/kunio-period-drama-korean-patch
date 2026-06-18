@@ -1,0 +1,17 @@
+frame	route	rel	buttons
+0	start_a_menu	0	
+0	start_a_menu	0	
+60	start_a_menu	60	
+120	start_a_menu	120	
+180	start_a_menu	180	
+240	start_a_menu	240	
+300	start_a_menu	300	down
+360	start_a_menu	360	A
+420	start_a_menu	420	
+480	start_a_menu	480	down
+540	start_a_menu	540	A
+600	start_a_menu	600	
+660	start_a_menu	660	
+720	start_a_menu	720	
+780	start_a_menu	780	
+840	start_a_menu	840	

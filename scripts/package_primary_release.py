@@ -55,6 +55,7 @@ V042_TEXT_PROMOTION_JSON = REPO_ROOT / "rom_analysis" / "v042_text_promotion_rea
 V042_TEXT_PROMOTION_MD = REPO_ROOT / "rom_analysis" / "v042_text_promotion_readiness.md"
 V042_MANUAL_PROOF_JSON = REPO_ROOT / "rom_analysis" / "v042_manual_proof_packet.json"
 V042_MANUAL_PROOF_MD = REPO_ROOT / "rom_analysis" / "v042_manual_proof_packet.md"
+VIDEO_ROUTE_REFERENCE_MD = REPO_ROOT / "rom_analysis" / "video_route_reference.md"
 BROAD_SCAN_MANUAL_SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "summary.json"
 BROAD_SCAN_MANUAL_SUMMARY_MD = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "summary.md"
 BROAD_SCAN_VISUAL_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "manual_screen_dump_broad_scan" / "visual_review.json"
@@ -84,6 +85,7 @@ NEXT_PRIMARY_VISUAL_CONFIRMER = REPO_ROOT / "scripts" / "confirm_next_primary_vi
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
+LUA_INPUT_EXPLORER_V042 = REPO_ROOT / "lua" / "kunio_input_explorer_v042.lua"
 LUA_MANUAL_BROAD_SCAN_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_broad_scan_capture_watch.lua"
 LUA_MANUAL_ROUTE_KAJIYA_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_route_kajiya_capture_watch.lua"
 LUA_MANUAL_ROUTE_TATSUJI_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_route_tatsuji_capture_watch.lua"
@@ -135,6 +137,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `route_proof_status.md`: current proof status for the three route-specific watchers",
         "- `release_test_checklist.md`: short apply/capture/review checklist for this bundle",
         "- `lua/`: FCEUX manual capture scripts and target tables for v0.4.2 and broad-scan proof",
+        "- `video_route_reference.md`: gameplay-video route reference for replacing blind autoplay with known paths",
         "- `v042_manual_proof_packet.md`: seven focused base-ROM proof tasks for the next text candidates",
         "- `broad_scan_manual_summary.md`: latest status of broad-scan manual dump evidence",
         "- `broad_scan_visual_review.json`: manual visual-confirmation template for the v0.4.3 gate",
@@ -315,6 +318,7 @@ def package() -> dict[str, object]:
         (V042_TEXT_PROMOTION_JSON, "v042_text_promotion_readiness.json"),
         (V042_MANUAL_PROOF_MD, "v042_manual_proof_packet.md"),
         (V042_MANUAL_PROOF_JSON, "v042_manual_proof_packet.json"),
+        (VIDEO_ROUTE_REFERENCE_MD, "video_route_reference.md"),
         (BROAD_SCAN_MANUAL_SUMMARY_MD, "broad_scan_manual_summary.md"),
         (BROAD_SCAN_MANUAL_SUMMARY_JSON, "broad_scan_manual_summary.json"),
         (BROAD_SCAN_VISUAL_REVIEW_JSON, "broad_scan_visual_review.json"),
@@ -340,6 +344,7 @@ def package() -> dict[str, object]:
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),
+        (LUA_INPUT_EXPLORER_V042, "lua/kunio_input_explorer_v042.lua"),
         (LUA_MANUAL_BROAD_SCAN_CAPTURE_WATCH, "lua/kunio_manual_broad_scan_capture_watch.lua"),
         (LUA_MANUAL_ROUTE_KAJIYA_CAPTURE_WATCH, "lua/kunio_manual_route_kajiya_capture_watch.lua"),
         (LUA_MANUAL_ROUTE_TATSUJI_CAPTURE_WATCH, "lua/kunio_manual_route_tatsuji_capture_watch.lua"),

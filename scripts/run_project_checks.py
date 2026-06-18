@@ -114,6 +114,7 @@ LUA_SCRIPTS = [
     "lua/kunio_auto_dump.lua",
     "lua/kunio_autoplay_watch.lua",
     "lua/kunio_bank1_watch.lua",
+    "lua/kunio_input_explorer_v042.lua",
     "lua/kunio_manual_broad_scan_dump.lua",
     "lua/kunio_manual_broad_scan_capture_watch.lua",
     "lua/kunio_manual_capture_watch.lua",
