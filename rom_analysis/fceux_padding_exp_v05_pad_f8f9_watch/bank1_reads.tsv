@@ -1,0 +1,10 @@
+frame	label	category	rom_hit	cpu_addr	value	record_cpu_range	expected_bytes	context	active_expected_match	record_snapshot
+358	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B192	9F	$B192-$B19C	87 F8 F9	82 00 9F B4 87 F8 F9 A6	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+360	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B193	B4	$B192-$B19C	87 F8 F9	00 9F B4 87 F8 F9 A6 83	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+362	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B194	87	$B192-$B19C	87 F8 F9	9F B4 87 F8 F9 A6 83 CA	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+364	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B195	F8	$B192-$B19C	87 F8 F9	B4 87 F8 F9 A6 83 CA F8	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+364	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B196	F9	$B192-$B19C	87 F8 F9	87 F8 F9 A6 83 CA F8 F9	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+366	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B197	A6	$B192-$B19C	87 F8 F9	F8 F9 A6 83 CA F8 F9 00	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+368	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B198	83	$B192-$B19C	87 F8 F9	F9 A6 83 CA F8 F9 00 81	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+370	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B199	CA	$B192-$B19C	87 F8 F9	A6 83 CA F8 F9 00 81 96	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00
+372	padding_pad_f8f9_rom_071a4_candidate_82	능력치	ROM+0x071A4	$B19A	F8	$B192-$B19C	87 F8 F9	83 CA F8 F9 00 81 96 87	true	9F B4 87 F8 F9 A6 83 CA F8 F9 00

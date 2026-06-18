@@ -7,15 +7,20 @@ This matrix tracks shortened PRG replacement experiments. These are not release 
 - CPU active-byte evidence: `PASS`
 - PPU exact VRAM evidence: `UNKNOWN`
 - Visual status: `UNKNOWN`
-- Baseline status: `STALE_FONT_BASE`
+- Current font MD5: `af14a5b03d3b6b8631a1bed90cf4295e`
 
-| strategy | patched bytes | build | CPU active | active matches | PPU exact | VRAM matches | baseline | decision |
-| --- | --- | --- | --- | ---: | --- | ---: | --- | --- |
-| `pad_00` | `87 00 00` | PASS | PASS | 11 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
-| `pad_7a` | `87 7A 7A` | PASS | PASS | 11 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
-| `pad_ff` | `87 FF FF` | PASS | PASS | 4 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
-| `pad_f8f9` | `87 F8 F9` | PASS | PASS | 9 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
-| `preserve_tail` | `87 88 AA` | PASS | PASS | 11 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| experiment set | strategy | patched bytes | build | CPU active | active matches | PPU exact | VRAM matches | baseline | decision |
+| --- | --- | --- | --- | --- | ---: | --- | ---: | --- | --- |
+| `legacy-v02-font-base` | `pad_00` | `87 00 00` | PASS | PASS | 11 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `legacy-v02-font-base` | `pad_7a` | `87 7A 7A` | PASS | PASS | 11 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `legacy-v02-font-base` | `pad_ff` | `87 FF FF` | PASS | PASS | 4 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `legacy-v02-font-base` | `pad_f8f9` | `87 F8 F9` | PASS | PASS | 9 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `legacy-v02-font-base` | `preserve_tail` | `87 88 AA` | PASS | PASS | 11 | UNKNOWN | 0 | STALE_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `v05-current-font-base` | `pad_00` | `87 00 00` | PASS | PASS | 11 | UNKNOWN | 0 | CURRENT_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `v05-current-font-base` | `pad_7a` | `87 7A 7A` | PASS | PASS | 11 | UNKNOWN | 0 | CURRENT_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `v05-current-font-base` | `pad_ff` | `87 FF FF` | PASS | PASS | 4 | UNKNOWN | 0 | CURRENT_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `v05-current-font-base` | `pad_f8f9` | `87 F8 F9` | PASS | PASS | 9 | UNKNOWN | 0 | CURRENT_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
+| `v05-current-font-base` | `preserve_tail` | `87 88 AA` | PASS | PASS | 11 | UNKNOWN | 0 | CURRENT_FONT_BASE | UNKNOWN_VISUAL_PADDING_RULE |
 
 ## Interpretation
 

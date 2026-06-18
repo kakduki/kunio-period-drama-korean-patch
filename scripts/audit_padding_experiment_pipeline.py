@@ -12,7 +12,20 @@ from rom_utils import REPO_ROOT
 
 
 OUT_DIR = REPO_ROOT / "rom_analysis" / "candidate_pipeline"
-BUILD_REPORT = REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_exp_build_report.json"
+BUILD_REPORTS = [
+    {
+        "experiment_set": "legacy-v02-font-base",
+        "build_report": REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_exp_build_report.json",
+        "cpu_source": "comparison",
+        "ppu_source": "comparison",
+    },
+    {
+        "experiment_set": "v05-current-font-base",
+        "build_report": REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_exp_v05_build_report.json",
+        "cpu_source": "v05-watch-dirs",
+        "ppu_source": "not-run",
+    },
+]
 CPU_COMPARISON = REPO_ROOT / "rom_analysis" / "fceux_padding_exp_watch_comparison.json"
 PPU_COMPARISON = REPO_ROOT / "rom_analysis" / "fceux_padding_exp_ppu_watch_comparison.json"
 CURRENT_FONT_ROM = REPO_ROOT / "output" / "kunio_period_drama_korean_font_expansion_v0.5_batch32.nes"
@@ -57,6 +70,32 @@ def status_from_ppu(row: dict[str, object] | None) -> str:
     return "FAIL"
 
 
+def watch_dir_for_v05(strategy: str) -> Path:
+    if strategy == "preserve_tail":
+        return REPO_ROOT / "rom_analysis" / "fceux_padding_exp_v05_preserve_tail_watch"
+    return REPO_ROOT / "rom_analysis" / f"fceux_padding_exp_v05_{strategy}_watch"
+
+
+def read_v05_cpu_row(strategy: str) -> dict[str, object] | None:
+    watch_dir = watch_dir_for_v05(strategy)
+    summary_path = watch_dir / "summary.tsv"
+    reads_path = watch_dir / "bank1_reads.tsv"
+    if not summary_path.exists() or not reads_path.exists():
+        return None
+    summary_rows = list(csv.DictReader(summary_path.open(encoding="utf-8"), delimiter="\t"))
+    read_rows = list(csv.DictReader(reads_path.open(encoding="utf-8"), delimiter="\t"))
+    active_rows = [row for row in read_rows if row.get("active_expected_match", "").lower() == "true"]
+    final_summary = summary_rows[-1] if summary_rows else {}
+    return {
+        "final_reason": final_summary.get("reason", ""),
+        "final_frame": final_summary.get("frame", ""),
+        "hits": len(read_rows),
+        "active_expected_matches": len(active_rows),
+        "record_snapshots": sorted({row.get("record_snapshot", "") for row in active_rows if row.get("record_snapshot")}),
+        "input_dir": str(watch_dir.relative_to(REPO_ROOT)),
+    }
+
+
 def final_decision(build_status: str, cpu_status: str, ppu_status: str, stale_baseline: bool) -> str:
     if build_status != "PASS":
         return "FAIL_BUILD"
@@ -71,38 +110,44 @@ def final_decision(build_status: str, cpu_status: str, ppu_status: str, stale_ba
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    build_report = load_json(BUILD_REPORT)
     cpu = load_json(CPU_COMPARISON)
     ppu = load_json(PPU_COMPARISON)
     cpu_by_strategy = {row["strategy"]: row for row in cpu.get("results", [])}
     ppu_by_strategy = {row["strategy"]: row for row in ppu.get("results", [])}
 
     current_font_md5 = md5(CURRENT_FONT_ROM) if CURRENT_FONT_ROM.exists() else ""
-    stale_baseline = bool(current_font_md5 and build_report.get("font_rom_md5") != current_font_md5)
 
     rows = []
-    for build in build_report.get("builds", []):
-        strategy = str(build["strategy"])
-        rom_path = path_by_name(str(build["rom_path"]))
-        ips_path = path_by_name(str(build["ips_path"]))
-        build_status = "PASS"
-        failure_reason = ""
-        if not rom_path.exists():
-            build_status = "FAIL"
-            failure_reason = "candidate ROM missing"
-        elif md5(rom_path) != build.get("patched_md5"):
-            build_status = "FAIL"
-            failure_reason = "candidate ROM MD5 mismatch"
-        elif not ips_path.exists():
-            build_status = "FAIL"
-            failure_reason = "candidate IPS missing"
+    report_summaries = []
+    for report_info in BUILD_REPORTS:
+        build_report = load_json(report_info["build_report"])
+        stale_baseline = bool(current_font_md5 and build_report.get("font_rom_md5") != current_font_md5)
+        set_rows = []
+        for build in build_report.get("builds", []):
+            strategy = str(build["strategy"])
+            rom_path = path_by_name(str(build["rom_path"]))
+            ips_path = path_by_name(str(build["ips_path"]))
+            build_status = "PASS"
+            failure_reason = ""
+            if not rom_path.exists():
+                build_status = "FAIL"
+                failure_reason = "candidate ROM missing"
+            elif md5(rom_path) != build.get("patched_md5"):
+                build_status = "FAIL"
+                failure_reason = "candidate ROM MD5 mismatch"
+            elif not ips_path.exists():
+                build_status = "FAIL"
+                failure_reason = "candidate IPS missing"
 
-        cpu_row = cpu_by_strategy.get(strategy)
-        ppu_row = ppu_by_strategy.get(strategy)
-        cpu_status = status_from_cpu(cpu_row)
-        ppu_status = status_from_ppu(ppu_row)
-        rows.append(
-            {
+            if report_info["cpu_source"] == "v05-watch-dirs":
+                cpu_row = read_v05_cpu_row(strategy)
+            else:
+                cpu_row = cpu_by_strategy.get(strategy)
+            ppu_row = ppu_by_strategy.get(strategy) if report_info["ppu_source"] == "comparison" else None
+            cpu_status = status_from_cpu(cpu_row)
+            ppu_status = status_from_ppu(ppu_row)
+            row = {
+                "experiment_set": report_info["experiment_set"],
                 "strategy": strategy,
                 "rom_offset": build["rom_hit"],
                 "source_japanese": "ちから",
@@ -124,11 +169,23 @@ def main() -> int:
                 "candidate_ips": str(ips_path.relative_to(REPO_ROOT)) if ips_path.is_relative_to(REPO_ROOT) else str(ips_path),
                 "failure_reason": failure_reason,
             }
+            rows.append(row)
+            set_rows.append(row)
+        report_summaries.append(
+            {
+                "experiment_set": report_info["experiment_set"],
+                "build_report": str(report_info["build_report"].relative_to(REPO_ROOT)),
+                "font_report_md5": build_report.get("font_rom_md5", ""),
+                "baseline_status": "STALE_FONT_BASE" if stale_baseline else "CURRENT_FONT_BASE",
+                "all_builds_pass": all(row["build_status"] == "PASS" for row in set_rows),
+                "all_cpu_active_pass": all(row["cpu_active_status"] == "PASS" for row in set_rows),
+                "any_ppu_exact_pass": any(row["ppu_exact_status"] == "PASS" for row in set_rows),
+            }
         )
 
     payload = {
         "source": {
-            "build_report": str(BUILD_REPORT.relative_to(REPO_ROOT)),
+            "build_reports": [str(report["build_report"].relative_to(REPO_ROOT)) for report in BUILD_REPORTS],
             "cpu_comparison": str(CPU_COMPARISON.relative_to(REPO_ROOT)),
             "ppu_comparison": str(PPU_COMPARISON.relative_to(REPO_ROOT)),
             "current_font_rom": str(CURRENT_FONT_ROM.relative_to(REPO_ROOT)),
@@ -140,8 +197,7 @@ def main() -> int:
             "all_cpu_active_pass": all(row["cpu_active_status"] == "PASS" for row in rows),
             "any_ppu_exact_pass": any(row["ppu_exact_status"] == "PASS" for row in rows),
             "visual_status": "UNKNOWN",
-            "baseline_status": "STALE_FONT_BASE" if stale_baseline else "CURRENT_FONT_BASE",
-            "font_report_md5": build_report.get("font_rom_md5", ""),
+            "experiment_sets": report_summaries,
             "current_font_md5": current_font_md5,
             "release_eligible": False,
         },
@@ -165,14 +221,14 @@ def main() -> int:
         f"- CPU active-byte evidence: `{'PASS' if payload['summary']['all_cpu_active_pass'] else 'UNKNOWN'}`",
         f"- PPU exact VRAM evidence: `{'PASS' if payload['summary']['any_ppu_exact_pass'] else 'UNKNOWN'}`",
         f"- Visual status: `{payload['summary']['visual_status']}`",
-        f"- Baseline status: `{payload['summary']['baseline_status']}`",
+        f"- Current font MD5: `{payload['summary']['current_font_md5']}`",
         "",
-        "| strategy | patched bytes | build | CPU active | active matches | PPU exact | VRAM matches | baseline | decision |",
-        "| --- | --- | --- | --- | ---: | --- | ---: | --- | --- |",
+        "| experiment set | strategy | patched bytes | build | CPU active | active matches | PPU exact | VRAM matches | baseline | decision |",
+        "| --- | --- | --- | --- | --- | ---: | --- | ---: | --- | --- |",
     ]
     for row in rows:
         lines.append(
-            f"| `{row['strategy']}` | `{row['patched_bytes']}` | {row['build_status']} | "
+            f"| `{row['experiment_set']}` | `{row['strategy']}` | `{row['patched_bytes']}` | {row['build_status']} | "
             f"{row['cpu_active_status']} | {row['cpu_active_matches']} | "
             f"{row['ppu_exact_status']} | {row['ppu_exact_vram_matches']} | "
             f"{row['baseline_status']} | {row['decision']} |"
@@ -195,7 +251,7 @@ def main() -> int:
         f"builds_pass={payload['summary']['all_builds_pass']} "
         f"cpu_pass={payload['summary']['all_cpu_active_pass']} "
         f"ppu_any={payload['summary']['any_ppu_exact_pass']} "
-        f"baseline={payload['summary']['baseline_status']}"
+        f"sets={len(payload['summary']['experiment_sets'])}"
     )
     return 0
 
