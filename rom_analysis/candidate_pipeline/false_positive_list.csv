@@ -1,6 +1,5 @@
 rom_offset,label,risk_class,reason,action
 0x0561A,v04_watch_rom_0561a_스테이지_7c,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
-0x05643,v04_watch_rom_05643_보스_80,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
 0x0569D,v04_watch_rom_0569d_스테이지_7a,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
 0x056DA,v04_watch_rom_056da_스테이지_80,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
 0x0571C,v04_watch_rom_0571c_스테이지_78,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build

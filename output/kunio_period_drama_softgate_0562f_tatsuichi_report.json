@@ -1,4 +1,11 @@
 {
+  "build_id": "softgate-0562f-tatsuichi",
+  "slug": "0562f_tatsuichi",
+  "readable": {
+    "source_japanese": "たついち",
+    "korean": "타츠이치",
+    "romaji": "Tatsuichi"
+  },
   "target": {
     "label": "watch_rom_0562f_보스_80",
     "evidence_level": "static-candidate",
