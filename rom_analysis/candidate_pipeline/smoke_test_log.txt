@@ -4,7 +4,7 @@
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_0562f_tatsuichi.nes
+candidate_rom=output/kunio_period_drama_softgate_0562f_tatsuichi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary.tsv
 
@@ -12,7 +12,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_05643_heishichi.nes
+candidate_rom=output/kunio_period_drama_softgate_05643_heishichi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-05643-heishichi.tsv
 
@@ -20,7 +20,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-05643-heishichi.t
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_0561a_hashi.nes
+candidate_rom=output/kunio_period_drama_softgate_0561a_hashi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0561a-hashi.tsv
 
@@ -28,7 +28,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0561a-hashi.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_0569d_hashi.nes
+candidate_rom=output/kunio_period_drama_softgate_0569d_hashi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0569d-hashi.tsv
 
@@ -36,7 +36,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0569d-hashi.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_056da_hashi.nes
+candidate_rom=output/kunio_period_drama_softgate_056da_hashi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-056da-hashi.tsv
 
@@ -44,7 +44,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-056da-hashi.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_0571c_hashi.nes
+candidate_rom=output/kunio_period_drama_softgate_0571c_hashi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0571c-hashi.tsv
 
@@ -52,7 +52,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0571c-hashi.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_057d4_hashi.nes
+candidate_rom=output/kunio_period_drama_softgate_057d4_hashi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-057d4-hashi.tsv
 
@@ -60,7 +60,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-057d4-hashi.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_0736a_raifu.nes
+candidate_rom=output/kunio_period_drama_softgate_0736a_raifu.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0736a-raifu.tsv
 
@@ -68,7 +68,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0736a-raifu.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_0739d_raifu.nes
+candidate_rom=output/kunio_period_drama_softgate_0739d_raifu.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0739d-raifu.tsv
 
@@ -76,7 +76,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0739d-raifu.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_dev_combined.nes
+candidate_rom=output/kunio_period_drama_softgate_dev_combined.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-dev-combined.tsv
 
@@ -84,7 +84,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-dev-combined.tsv
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_quarantine_05644_katana.nes
+candidate_rom=output/kunio_period_drama_softgate_quarantine_05644_katana.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-05644-katana.tsv
 
@@ -92,7 +92,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-05644-
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_quarantine_06295_katana.nes
+candidate_rom=output/kunio_period_drama_softgate_quarantine_06295_katana.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-06295-katana.tsv
 
@@ -100,7 +100,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-06295-
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_quarantine_0631c_katana.nes
+candidate_rom=output/kunio_period_drama_softgate_quarantine_0631c_katana.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-0631c-katana.tsv
 
@@ -108,7 +108,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-0631c-
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_quarantine_0635a_katana.nes
+candidate_rom=output/kunio_period_drama_softgate_quarantine_0635a_katana.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-0635a-katana.tsv
 
@@ -116,7 +116,7 @@ summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-0635a-
 smoke_test_status=PASS
 failure_class=none
 reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
-candidate_rom=output\kunio_period_drama_softgate_quarantine_07227_katana.nes
+candidate_rom=output/kunio_period_drama_softgate_quarantine_07227_katana.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-07227-katana.tsv
 

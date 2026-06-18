@@ -3,10 +3,10 @@
 ## Candidate `softgate-0562f-tatsuichi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_0562f_tatsuichi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_0562f_tatsuichi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_0562f_tatsuichi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_0562f_tatsuichi.ips`
 - Candidate MD5: `8bbe0f8b3ce78f37c9c77801993b72a4`
 - Source: `たついち` / Tatsuichi
 - Korean test string: `타츠이치`
@@ -25,10 +25,10 @@
 ## Candidate `softgate-05643-heishichi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_05643_heishichi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_05643_heishichi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_05643_heishichi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_05643_heishichi.ips`
 - Candidate MD5: `b5e1bfbf1df23204ff4821aa3c71f462`
 - Source: `へいしち` / Heishichi
 - Korean test string: `헤이시치`
@@ -47,10 +47,10 @@
 ## Candidate `softgate-0561a-hashi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_0561a_hashi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_0561a_hashi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_0561a_hashi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_0561a_hashi.ips`
 - Candidate MD5: `992f824025bf76ea4ab5272f760488ac`
 - Source: `はし` / Hashi
 - Korean test string: `다리`
@@ -69,10 +69,10 @@
 ## Candidate `softgate-0569d-hashi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_0569d_hashi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_0569d_hashi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_0569d_hashi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_0569d_hashi.ips`
 - Candidate MD5: `4e561acffdd8231ee02bd02e75e178bd`
 - Source: `はし` / Hashi
 - Korean test string: `다리`
@@ -91,10 +91,10 @@
 ## Candidate `softgate-056da-hashi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_056da_hashi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_056da_hashi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_056da_hashi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_056da_hashi.ips`
 - Candidate MD5: `fc23c51af65e0833c7c693a9b20ebe5a`
 - Source: `はし` / Hashi
 - Korean test string: `다리`
@@ -113,10 +113,10 @@
 ## Candidate `softgate-0571c-hashi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_0571c_hashi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_0571c_hashi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_0571c_hashi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_0571c_hashi.ips`
 - Candidate MD5: `2ab2df9debb2294bbbdaa78e071a873a`
 - Source: `はし` / Hashi
 - Korean test string: `다리`
@@ -135,10 +135,10 @@
 ## Candidate `softgate-057d4-hashi`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_057d4_hashi.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_057d4_hashi.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_057d4_hashi.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_057d4_hashi.ips`
 - Candidate MD5: `52df851d41731c9d4fce9b497f73bbee`
 - Source: `はし` / Hashi
 - Korean test string: `다리`
@@ -157,10 +157,10 @@
 ## Candidate `softgate-0736a-raifu`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_0736a_raifu.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_0736a_raifu.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_0736a_raifu.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_0736a_raifu.ips`
 - Candidate MD5: `28aea3f00214fc3caec56c7cc2e553f8`
 - Source: `ライフ` / Raifu
 - Korean test string: `라이프`
@@ -179,10 +179,10 @@
 ## Candidate `softgate-0739d-raifu`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_0739d_raifu.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_0739d_raifu.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_0739d_raifu.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_0739d_raifu.ips`
 - Candidate MD5: `ad1534d9a2c5895af372c21698fa9a93`
 - Source: `ライフ` / Raifu
 - Korean test string: `라이프`
@@ -201,10 +201,10 @@
 ## Candidate `softgate-dev-combined`
 
 - Build status: `PASS`
-- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM: `output\kunio_period_drama_softgate_dev_combined.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_dev_combined.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_dev_combined.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_dev_combined.ips`
 - Candidate MD5: `4905417f129726394941bed079c2e848`
 - Applied strings: `9`
 - Boot smoke classification: `PASS`
@@ -232,8 +232,8 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 
 - Build status: `PASS`
 - Risk class: `HIGH_RISK_OVERLAPS_SELECTED_DEV_SPAN`
-- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_05644_katana.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_05644_katana.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_quarantine_05644_katana.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_quarantine_05644_katana.ips`
 - Candidate MD5: `479c54ff09a4b6ecef6586682709f2fb`
 - Source: `カタナ` / Katana
 - Korean test string: `카타나`
@@ -249,8 +249,8 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 
 - Build status: `PASS`
 - Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
-- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_06295_katana.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_06295_katana.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_quarantine_06295_katana.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_quarantine_06295_katana.ips`
 - Candidate MD5: `41f9cd98e62e05901f20b15ae0b0836e`
 - Source: `カタナ` / Katana
 - Korean test string: `카타나`
@@ -266,8 +266,8 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 
 - Build status: `PASS`
 - Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
-- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_0631c_katana.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_0631c_katana.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_quarantine_0631c_katana.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_quarantine_0631c_katana.ips`
 - Candidate MD5: `b4870e6f6e7fff1afe1d924128424237`
 - Source: `カタナ` / Katana
 - Korean test string: `카타나`
@@ -283,8 +283,8 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 
 - Build status: `PASS`
 - Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
-- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_0635a_katana.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_0635a_katana.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_quarantine_0635a_katana.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_quarantine_0635a_katana.ips`
 - Candidate MD5: `71194a85b30ed5c06ca6f5afbb6f310b`
 - Source: `カタナ` / Katana
 - Korean test string: `카타나`
@@ -300,8 +300,8 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 
 - Build status: `PASS`
 - Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
-- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_07227_katana.nes`
-- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_07227_katana.ips`
+- Candidate ROM: `output/kunio_period_drama_softgate_quarantine_07227_katana.nes`
+- Candidate IPS: `output/kunio_period_drama_softgate_quarantine_07227_katana.ips`
 - Candidate MD5: `dfd1888d4cad7f443d168318cd7e0ae5`
 - Source: `カタナ` / Katana
 - Korean test string: `카타나`

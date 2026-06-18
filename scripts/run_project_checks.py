@@ -84,6 +84,7 @@ KEY_PYTHON = [
     "scripts/test_katana_inventory_slot_candidates.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_batch46_text_readiness.py",
+    "scripts/test_candidate_pipeline_reports.py",
     "scripts/test_confirm_next_primary_visual.py",
     "scripts/test_convert_fceux_gd_to_png.py",
     "scripts/test_font_expansion_readiness.py",
@@ -275,6 +276,7 @@ def main() -> int:
     run("route proof status", ["scripts/test_route_proof_status.py"])
     run("translation capture queue readable labels", ["scripts/test_translation_capture_queue_readable.py"])
     run("broad patchability v0.4.2 planned bytes", ["scripts/test_broad_patchability_v042_bytes.py"])
+    run("candidate pipeline reports", ["scripts/test_candidate_pipeline_reports.py"])
     run("batch46 text readiness", ["scripts/test_batch46_text_readiness.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
     run("v0.4.2 manual proof packet", ["scripts/test_v042_manual_proof_packet.py"])

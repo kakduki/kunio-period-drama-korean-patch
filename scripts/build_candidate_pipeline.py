@@ -199,6 +199,10 @@ def prg_bank(rom_offset: int) -> int:
     return (rom_offset - 0x10) // 0x4000
 
 
+def repo_relative(path: Path) -> str:
+    return path.relative_to(REPO_ROOT).as_posix()
+
+
 def candidate_by_rom_hit(rom_hit: str) -> dict[str, object] | None:
     normalized = rom_hit.upper()
     for candidate in CANDIDATES:
@@ -283,10 +287,10 @@ def build_candidate_rom(candidate: dict[str, object], target: dict[str, object])
             "romaji": candidate["romaji"],
         },
         "target": target,
-        "base_rom": str(base_path.relative_to(REPO_ROOT)),
-        "font_rom": str(FONT_ROM.relative_to(REPO_ROOT)),
-        "candidate_rom": str(output_rom_path(candidate).relative_to(REPO_ROOT)),
-        "candidate_ips": str(output_ips_path(candidate).relative_to(REPO_ROOT)),
+        "base_rom": repo_relative(base_path),
+        "font_rom": repo_relative(FONT_ROM),
+        "candidate_rom": repo_relative(output_rom_path(candidate)),
+        "candidate_ips": repo_relative(output_ips_path(candidate)),
         "base_md5": md5(base),
         "candidate_md5": md5(bytes(patched)) if status == "PASS" else "",
         "rom_offset": f"0x{rom_offset:05X}",
@@ -358,10 +362,10 @@ def build_combined_rom(reports: list[dict[str, object]]) -> dict[str, object]:
     return {
         "build_id": COMBINED_BUILD_ID,
         "scope": "combined selected soft-gate candidates",
-        "base_rom": str(base_path.relative_to(REPO_ROOT)),
-        "font_rom": str(FONT_ROM.relative_to(REPO_ROOT)),
-        "candidate_rom": str(COMBINED_ROM.relative_to(REPO_ROOT)),
-        "candidate_ips": str(COMBINED_IPS.relative_to(REPO_ROOT)),
+        "base_rom": repo_relative(base_path),
+        "font_rom": repo_relative(FONT_ROM),
+        "candidate_rom": repo_relative(COMBINED_ROM),
+        "candidate_ips": repo_relative(COMBINED_IPS),
         "base_md5": md5(base),
         "candidate_md5": md5(bytes(patched)) if status == "PASS" else "",
         "build_status": status,
@@ -761,7 +765,7 @@ def main() -> int:
     for report in quarantined_reports:
         print(f"quarantined_candidate_rom={report['candidate_rom']}")
         print(f"quarantined_candidate_ips={report['candidate_ips']}")
-    print(f"artifacts={OUT_DIR.relative_to(REPO_ROOT)}")
+    print(f"artifacts={OUT_DIR.relative_to(REPO_ROOT).as_posix()}")
     return (
         0
         if all(report["build_status"] == "PASS" for report in reports)
