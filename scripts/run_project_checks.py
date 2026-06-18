@@ -104,6 +104,7 @@ KEY_PYTHON = [
     "scripts/test_run_next_manual_fceux.py",
     "scripts/test_reference_capture_plan.py",
     "scripts/test_refresh_after_manual_capture.py",
+    "scripts/test_release_package_contents.py",
     "scripts/test_release_test_checklist.py",
     "scripts/test_route_fceux_targets.py",
     "scripts/test_route_proof_status.py",
@@ -268,6 +269,7 @@ def main() -> int:
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("manual capture refresh helper", ["scripts/test_refresh_after_manual_capture.py"])
+    run("release package contents", ["scripts/test_release_package_contents.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
     run("route FCEUX targets", ["scripts/test_route_fceux_targets.py"])
     run("route proof status", ["scripts/test_route_proof_status.py"])

@@ -514,15 +514,15 @@ def package() -> dict[str, object]:
             archive.write(path, arcname=f"{bundle_dir.name}/{path.relative_to(bundle_dir).as_posix()}")
 
     report = {
-        "bundle_dir": str(bundle_dir.relative_to(REPO_ROOT)),
-        "zip_path": str(zip_path.relative_to(REPO_ROOT)),
+        "bundle_dir": bundle_dir.relative_to(REPO_ROOT).as_posix(),
+        "zip_path": zip_path.relative_to(REPO_ROOT).as_posix(),
         "zip_size": zip_path.stat().st_size,
         "zip_md5": md5(zip_path),
-        "primary_ips": str(ips_path.relative_to(REPO_ROOT)),
+        "primary_ips": ips_path.relative_to(REPO_ROOT).as_posix(),
         "primary_candidate": summary["primary_candidate"],
         "primary_candidate_md5": summary["primary_candidate_md5"],
         "base_md5": summary["base_md5"],
-        "files": [str(path.relative_to(REPO_ROOT)) for path in sorted(copied_files, key=lambda p: p.name)],
+        "files": [path.relative_to(REPO_ROOT).as_posix() for path in sorted(copied_files, key=lambda p: p.name)],
     }
     report_path = bundle_dir / "release_manifest.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
