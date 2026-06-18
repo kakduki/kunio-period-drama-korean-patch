@@ -719,7 +719,7 @@ def write_release_gate_checklist(
             "gate": "IPS applies from clean base ROM",
             "status": "PASS" if selected_builds_pass and combined_build_pass and quarantine_builds_pass else "FAIL",
             "failure_class": "none" if selected_builds_pass and combined_build_pass and quarantine_builds_pass else "BUILD_OR_IPS_GENERATION_FAILED",
-            "evidence": "candidate IPS files are generated from clean base-to-patched byte diffs",
+            "evidence": "scripts/test_candidate_ips_apply.py applies each softgate IPS to the clean base ROM and checks candidate MD5 values",
         },
         {
             "gate": "release zip contains no ROM",
