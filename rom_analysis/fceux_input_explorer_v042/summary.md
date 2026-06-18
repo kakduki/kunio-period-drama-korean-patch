@@ -5,6 +5,7 @@
 - Targets checked: **10**
 - Active expected matches: **10**
 - Screenshot: `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_screen.gd`
+- PNG review image: `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_screen.png`
 
 ## Active Matches
 
@@ -29,6 +30,7 @@
 | `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_cpu_ram.txt` | 7040 | `txt` |
 | `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_meta.txt` | 168 | `txt` |
 | `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_screen.gd` | 245771 | `gd` |
+| `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_screen.png` | 4298 | `png` |
 | `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_sram_6000_7fff.bin` | 8192 | `bin` |
 | `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_sram_6000_7fff.txt` | 28160 | `txt` |
 | `rom_analysis\fceux_input_explorer_v042\manual_frame_000883_target_records.tsv` | 1371 | `tsv` |
@@ -38,3 +40,4 @@
 - A match here means the manually reached screen has the expected candidate bytes mapped in CPU memory at the generated watch range.
 - A non-match is still useful: it tells us this screen is not covered by the current Bank 1 target list and needs broader static matching or a new breakpoint target.
 - The `.gd` screenshot is FCEUX/GD image data from `gui.gdscreenshot()`; keep it as evidence even if it is not directly viewable in every image viewer.
+- The converted PNG confirms the auto-input route left the title/menu and reached an in-game dialogue screen. This is route evidence plus byte-match evidence, not yet a final patched-Korean visual approval.

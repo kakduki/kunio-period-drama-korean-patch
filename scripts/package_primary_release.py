@@ -82,6 +82,7 @@ NEXT_RUN_PREPARER = REPO_ROOT / "scripts" / "prepare_next_manual_run.py"
 MANUAL_FCEUX_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_manual_fceux.py"
 NEXT_MANUAL_FCEUX_RUNNER = REPO_ROOT / "scripts" / "run_next_manual_fceux.py"
 NEXT_PRIMARY_VISUAL_CONFIRMER = REPO_ROOT / "scripts" / "confirm_next_primary_visual.py"
+GD_TO_PNG_CONVERTER = REPO_ROOT / "scripts" / "convert_fceux_gd_to_png.py"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
@@ -165,6 +166,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator",
         "- `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks",
         "- `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed",
+        "- `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -341,6 +343,7 @@ def package() -> dict[str, object]:
         (MANUAL_FCEUX_PREFLIGHT, "preflight_manual_fceux.py"),
         (NEXT_MANUAL_FCEUX_RUNNER, "run_next_manual_fceux.py"),
         (NEXT_PRIMARY_VISUAL_CONFIRMER, "confirm_next_primary_visual.py"),
+        (GD_TO_PNG_CONVERTER, "convert_fceux_gd_to_png.py"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),

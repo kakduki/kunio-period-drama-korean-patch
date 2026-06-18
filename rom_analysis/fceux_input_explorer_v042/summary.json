@@ -4,6 +4,8 @@
   "targets_checked": 10,
   "active_expected_matches": 10,
   "latest_screenshot": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_screen.gd",
+  "latest_png_review_image": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_screen.png",
+  "visual_route_note": "Converted PNG confirms the auto-input route reached an in-game dialogue screen; this is not yet final patched-Korean visual approval.",
   "latest_meta": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_meta.txt",
   "active_matches": [
     {
@@ -127,6 +129,11 @@
       "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_screen.gd",
       "bytes": 245771,
       "kind": "gd"
+    },
+    {
+      "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_screen.png",
+      "bytes": 4298,
+      "kind": "png"
     },
     {
       "path": "rom_analysis\\fceux_input_explorer_v042\\manual_frame_000883_sram_6000_7fff.bin",

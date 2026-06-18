@@ -27,6 +27,7 @@ KEY_PYTHON = [
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
     "scripts/compare_v04_broad_candidates.py",
+    "scripts/convert_fceux_gd_to_png.py",
     "scripts/generate_broad_scan_fceux_targets.py",
     "scripts/generate_broad_scan_patchability.py",
     "scripts/generate_batch46_text_readiness.py",
@@ -69,6 +70,7 @@ KEY_PYTHON = [
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_batch46_text_readiness.py",
     "scripts/test_confirm_next_primary_visual.py",
+    "scripts/test_convert_fceux_gd_to_png.py",
     "scripts/test_font_expansion_readiness.py",
     "scripts/test_manual_dump_inventory.py",
     "scripts/test_manual_proof_routes.py",
@@ -222,6 +224,7 @@ def main() -> int:
     run("FCEUX autoplay budget guard", ["scripts/test_run_fceux_budget.py"])
     run("next manual FCEUX launcher", ["scripts/test_run_next_manual_fceux.py"])
     run("confirm next primary visual", ["scripts/test_confirm_next_primary_visual.py"])
+    run("FCEUX GD screenshot converter", ["scripts/test_convert_fceux_gd_to_png.py"])
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])

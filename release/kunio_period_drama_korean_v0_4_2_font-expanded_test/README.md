@@ -48,6 +48,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator
 - `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks
 - `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed
+- `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images
 - `SHA256SUMS.txt`: checksums for bundle files
 
 ## Required Base ROM
