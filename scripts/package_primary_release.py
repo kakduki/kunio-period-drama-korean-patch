@@ -31,6 +31,7 @@ KATANA_EXPLORER_HEARTBEAT_TSV = REPO_ROOT / "rom_analysis" / "katana_visual_expl
 KATANA_MENU_PNG = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "manual_frame_001906_screen.png"
 KATANA_ITEM_LIST_PNG = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "manual_frame_002385_screen.png"
 KATANA_ITEM_LIST_RECORDS = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "manual_frame_002385_target_records.tsv"
+KATANA_INVENTORY_PROBE_NOTES = REPO_ROOT / "rom_analysis" / "katana_inventory_probe_notes.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -101,6 +102,7 @@ AUTO_INPUT_REVIEW_CROPS_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input
 AUTO_INPUT_VISUAL_TRIAGE_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input_visual_triage.py"
 KATANA_EXPLORER_REPORT_GENERATOR = REPO_ROOT / "scripts" / "generate_katana_visual_explorer_report.py"
 LUA_KATANA_VISUAL_EXPLORER = REPO_ROOT / "lua" / "kunio_katana_visual_explorer_v042.lua"
+LUA_KATANA_INVENTORY_PROBE = REPO_ROOT / "lua" / "kunio_katana_inventory_probe_v042.lua"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
@@ -149,6 +151,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `auto_input_review_crops.md`: focused dialogue/overlay crops from scripted-route screenshots",
         "- `auto_input_visual_triage.md`: current decision on which auto-input evidence can and cannot be used for visual approval",
         "- `katana_visual_explorer_report.md`: focused route evidence that reaches the item list for the Katana visual target",
+        "- `katana_inventory_probe_notes.md`: failed broad-injection probe notes for the Katana item-list state",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -320,6 +323,7 @@ def package() -> dict[str, object]:
         (KATANA_MENU_PNG, "katana_visual_explorer/manual_frame_001906_screen.png"),
         (KATANA_ITEM_LIST_PNG, "katana_visual_explorer/manual_frame_002385_screen.png"),
         (KATANA_ITEM_LIST_RECORDS, "katana_visual_explorer/manual_frame_002385_target_records.tsv"),
+        (KATANA_INVENTORY_PROBE_NOTES, "katana_inventory_probe_notes.md"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
@@ -388,6 +392,7 @@ def package() -> dict[str, object]:
         (AUTO_INPUT_VISUAL_TRIAGE_GENERATOR, "generate_auto_input_visual_triage.py"),
         (KATANA_EXPLORER_REPORT_GENERATOR, "generate_katana_visual_explorer_report.py"),
         (LUA_KATANA_VISUAL_EXPLORER, "lua/kunio_katana_visual_explorer_v042.lua"),
+        (LUA_KATANA_INVENTORY_PROBE, "lua/kunio_katana_inventory_probe_v042.lua"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),
