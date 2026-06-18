@@ -25,7 +25,7 @@ Single-page status for the current Korean patch work.
 - Katana item-list route frame: **2385**
 - Katana active on item-list screen: `false`
 - Katana next step: Find or set the inventory state that makes the Katana item label appear on the reached item-list screen.
-- Katana slot next probe: Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with 0x0506.
+- Katana slot next probe: Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with 0x0508.
 
 ## v0.4.3 Gate
 

@@ -19,6 +19,7 @@ OUT_MD = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.md"
 SINGLE_SLOT_NOTES = {
     "0x0502": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md",
     "0x0503": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0503_notes.md",
+    "0x0506": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0506_notes.md",
 }
 
 

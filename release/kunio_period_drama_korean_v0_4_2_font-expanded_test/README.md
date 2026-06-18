@@ -17,6 +17,8 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `katana_inventory_slot_candidates.md`: narrowed address list for the next Katana inventory probe
 - `katana_single_slot_probe_0502_notes.md`: result of testing `$0502` alone
 - `katana_single_slot_probe_0503_notes.md`: result of testing `$0503` alone
+- `katana_single_slot_probe_0506_notes.md`: result of testing `$0506` alone
+- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `next_manual_run.md`: single recommended next FCEUX action queue

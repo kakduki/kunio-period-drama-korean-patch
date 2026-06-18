@@ -36,6 +36,8 @@ KATANA_SLOT_CANDIDATES_JSON = REPO_ROOT / "rom_analysis" / "katana_inventory_slo
 KATANA_SLOT_CANDIDATES_MD = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.md"
 KATANA_SINGLE_SLOT_0502_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md"
 KATANA_SINGLE_SLOT_0503_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0503_notes.md"
+KATANA_SINGLE_SLOT_0506_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0506_notes.md"
+TRANSLATION_FIRST_STRATEGY_MD = REPO_ROOT / "rom_analysis" / "translation_first_strategy.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -161,6 +163,8 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `katana_inventory_slot_candidates.md`: narrowed address list for the next Katana inventory probe",
         "- `katana_single_slot_probe_0502_notes.md`: result of testing `$0502` alone",
         "- `katana_single_slot_probe_0503_notes.md`: result of testing `$0503` alone",
+        "- `katana_single_slot_probe_0506_notes.md`: result of testing `$0506` alone",
+        "- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -337,6 +341,8 @@ def package() -> dict[str, object]:
         (KATANA_SLOT_CANDIDATES_JSON, "katana_inventory_slot_candidates.json"),
         (KATANA_SINGLE_SLOT_0502_NOTES, "katana_single_slot_probe_0502_notes.md"),
         (KATANA_SINGLE_SLOT_0503_NOTES, "katana_single_slot_probe_0503_notes.md"),
+        (KATANA_SINGLE_SLOT_0506_NOTES, "katana_single_slot_probe_0506_notes.md"),
+        (TRANSLATION_FIRST_STRATEGY_MD, "translation_first_strategy.md"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
