@@ -37,7 +37,8 @@ def rel(path_text: str) -> str:
 
 def find_primary_row(target: str, checklist: dict[str, object]) -> dict[str, object]:
     for row in checklist.get("rows", []):
-        if str(row.get("rom_offset", "")).lower() == target.lower():
+        row_target = str(row.get("rom_hit") or row.get("rom_offset") or "").lower()
+        if row_target == target.lower():
             return row
     return {}
 
