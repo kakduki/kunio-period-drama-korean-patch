@@ -18,6 +18,8 @@ HIGH_RISK = PIPELINE_DIR / "high_risk_candidates.csv"
 PATCHED_REPORT = PIPELINE_DIR / "patched_rom_report.md"
 PATCH_SCOPE_AUDIT_MD = PIPELINE_DIR / "patch_scope_audit.md"
 PATCH_SCOPE_AUDIT_JSON = PIPELINE_DIR / "patch_scope_audit.json"
+PADDING_PRIORITY_MD = PIPELINE_DIR / "padding_strategy_priority.md"
+PADDING_PRIORITY_JSON = PIPELINE_DIR / "padding_strategy_priority.json"
 SMOKE_LOG = PIPELINE_DIR / "smoke_test_log.txt"
 RELEASE_GATE = PIPELINE_DIR / "release_gate_checklist.md"
 RELEASE_GATE_JSON = PIPELINE_DIR / "release_gate_checklist.json"
@@ -31,6 +33,8 @@ REQUIRED_FILES = [
     PATCHED_REPORT,
     PATCH_SCOPE_AUDIT_MD,
     PATCH_SCOPE_AUDIT_JSON,
+    PADDING_PRIORITY_MD,
+    PADDING_PRIORITY_JSON,
     SMOKE_LOG,
     RELEASE_GATE,
     RELEASE_GATE_JSON,

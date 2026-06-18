@@ -14,6 +14,7 @@ RELEASE_GATE_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release
 NEXT_MANUAL_RUN_JSON = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
 HIGH_RISK_CANDIDATES = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "high_risk_candidates.csv"
 PADDING_MATRIX = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json"
+PADDING_PRIORITY = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_strategy_priority.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_action_plan.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_action_plan.md"
 
@@ -36,6 +37,7 @@ def make_payload() -> dict[str, object]:
     next_manual = load_json(NEXT_MANUAL_RUN_JSON)
     high_risk_rows = load_csv(HIGH_RISK_CANDIDATES)
     padding = load_json(PADDING_MATRIX)
+    padding_priority = load_json(PADDING_PRIORITY)
     gate_rows = gate.get("gates", [])
     open_gates = [row for row in gate_rows if row.get("status") in {"FAIL", "UNKNOWN"}]
     next_action = next_manual.get("next_action") if isinstance(next_manual.get("next_action"), dict) else {}
@@ -43,6 +45,7 @@ def make_payload() -> dict[str, object]:
         row for row in padding.get("rows", [])
         if row.get("experiment_set") == "v05-current-font-base"
     ]
+    padding_summary = padding_priority.get("summary", {})
 
     actions: list[dict[str, object]] = []
     for row in open_gates:
@@ -91,11 +94,17 @@ def make_payload() -> dict[str, object]:
                     "action": "Do not promote shortened replacements until one padding strategy has strict PPU or visual acceptance.",
                     "target": "ROM+0x071A4 Chikara -> 힘",
                     "phase": "padding_rule_acceptance",
-                    "rom_to_open": "output/kunio_period_drama_korean_prg_padding_exp_v05_<strategy>.nes",
+                    "rom_to_open": padding_summary.get(
+                        "recommended_candidate_rom",
+                        "output/kunio_period_drama_korean_prg_padding_exp_v05_<strategy>.nes",
+                    ),
                     "watcher_lua": "lua/kunio_auto_dump.lua",
                     "command": "python scripts/audit_padding_experiment_pipeline.py",
-                    "refresh": "python scripts/generate_patch_progress_dashboard.py",
-                    "evidence_needed": f"strict PPU/visual acceptance for one of {len(padding_v05)} v05 padding strategies",
+                    "refresh": "python scripts/generate_padding_strategy_priority.py; python scripts/generate_patch_progress_dashboard.py",
+                    "evidence_needed": (
+                        f"strict PPU/visual acceptance for one of {len(padding_v05)} v05 padding strategies; "
+                        f"start with {padding_summary.get('recommended_strategy', 'the recommended strategy')}"
+                    ),
                 }
             )
     actions.sort(key=lambda action: int(action["priority"]))
@@ -105,6 +114,7 @@ def make_payload() -> dict[str, object]:
             "next_manual_run": rel(NEXT_MANUAL_RUN_JSON),
             "high_risk_candidates": rel(HIGH_RISK_CANDIDATES),
             "padding_experiment_matrix": rel(PADDING_MATRIX),
+            "padding_strategy_priority": rel(PADDING_PRIORITY),
         },
         "summary": {
             "open_gate_count": len(open_gates),

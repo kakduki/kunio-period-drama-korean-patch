@@ -52,6 +52,7 @@ KEY_PYTHON = [
     "scripts/generate_patch_candidate_manifest.py",
     "scripts/generate_patch_decision_matrix.py",
     "scripts/generate_patch_progress_dashboard.py",
+    "scripts/generate_padding_strategy_priority.py",
     "scripts/generate_primary_patch_contents.py",
     "scripts/generate_primary_visual_checklist.py",
     "scripts/generate_reference_capture_plan.py",
@@ -102,6 +103,7 @@ KEY_PYTHON = [
     "scripts/test_object_state_probe_candidates.py",
     "scripts/test_object_state_pair_plan.py",
     "scripts/test_patch_progress_dashboard.py",
+    "scripts/test_padding_strategy_priority.py",
     "scripts/test_patch_progress_dashboard_discoverability.py",
     "scripts/test_prepare_next_manual_run.py",
     "scripts/test_preflight_manual_fceux.py",
@@ -206,6 +208,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_current_primary_visual_task.py"],
     ["scripts/build_candidate_pipeline.py"],
     ["scripts/audit_candidate_patch_scope.py"],
+    ["scripts/generate_padding_strategy_priority.py"],
     ["scripts/generate_release_gate_action_plan.py"],
     ["scripts/generate_patch_progress_dashboard.py"],
 ]
@@ -299,6 +302,7 @@ def main() -> int:
     run("candidate pipeline reports", ["scripts/test_candidate_pipeline_reports.py"])
     run("candidate IPS apply", ["scripts/test_candidate_ips_apply.py"])
     run("candidate patch scope audit", ["scripts/test_candidate_patch_scope.py"])
+    run("padding strategy priority", ["scripts/test_padding_strategy_priority.py"])
     run("batch46 text readiness", ["scripts/test_batch46_text_readiness.py"])
     run("v0.4.3 proof gate", ["scripts/test_v043_proof_gate.py"])
     run("v0.4.2 manual proof packet", ["scripts/test_v042_manual_proof_packet.py"])

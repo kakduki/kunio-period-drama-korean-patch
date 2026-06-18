@@ -15,6 +15,7 @@
     "candidate_combined_report": "output/kunio_period_drama_softgate_dev_combined_report.json",
     "high_risk_candidates": "rom_analysis/candidate_pipeline/high_risk_candidates.csv",
     "padding_experiment_matrix": "rom_analysis/candidate_pipeline/padding_experiment_matrix.json",
+    "padding_strategy_priority": "rom_analysis/candidate_pipeline/padding_strategy_priority.json",
     "release_gate_checklist": "rom_analysis/candidate_pipeline/release_gate_checklist.json",
     "release_gate_action_plan": "rom_analysis/candidate_pipeline/release_gate_action_plan.json"
   },
@@ -64,6 +65,8 @@
     "padding_v05_strategy_count": 5,
     "padding_v05_cpu_pass_count": 5,
     "padding_v05_ppu_pass_count": 0,
+    "padding_recommended_strategy": "preserve_tail",
+    "padding_recommended_risk_class": "LOWEST_STRUCTURAL_RISK",
     "padding_v05_decisions": [
       "UNKNOWN_VISUAL_PADDING_RULE"
     ],

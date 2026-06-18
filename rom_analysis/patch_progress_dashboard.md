@@ -44,6 +44,8 @@ Single-page status for the current Korean patch work.
 - Padding v05 strategies: **5**
 - Padding v05 CPU PASS: **5**
 - Padding v05 strict PPU PASS: **0**
+- Padding recommended strategy: `preserve_tail`
+- Padding recommended risk: `LOWEST_STRUCTURAL_RISK`
 - Padding decisions: `UNKNOWN_VISUAL_PADDING_RULE`
 
 ## Release Gate

@@ -8,6 +8,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `patch_progress_dashboard.md`: one-page current status, blockers, and next action
 - `candidate_pipeline/`: soft-gate build matrix, string candidates, smoke logs, quarantine notes, and padding experiment audits
 - `candidate_pipeline/patch_scope_audit.md`: verifies candidate ROMs only alter planned PRG spans against the font-expanded base
+- `candidate_pipeline/padding_strategy_priority.md`: ranks current-font padding strategies for the next visual/PPU check
 - `candidate_pipeline/release_gate_action_plan.md`: open release gates mapped to the next concrete evidence tasks
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS
@@ -80,6 +81,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `preflight_release_gate_action.py`: checks open release-gate evidence task inputs before running them
 - `audit_padding_experiment_pipeline.py`: validates padding experiment evidence for shortened replacements
 - `generate_patch_progress_dashboard.py`: rebuilds the dashboard after evidence changes
+- `generate_padding_strategy_priority.py`: rebuilds the current-font padding strategy priority list
 - `generate_current_primary_visual_task.py`: rebuilds the current visual-proof task card
 - `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks
 - `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed

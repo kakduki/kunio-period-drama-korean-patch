@@ -42,6 +42,7 @@ def main() -> int:
         "release-included visual proof",
         "high-risk/quarantined visual proof",
         "shortened padding rule acceptance",
+        "preserve_tail",
         "0x0569D",
         "0x07227",
         "audit_padding_experiment_pipeline.py",

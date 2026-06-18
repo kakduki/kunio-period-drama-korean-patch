@@ -48,6 +48,8 @@ def main() -> int:
         "padding_experiment_matrix.md",
         "padding_experiment_matrix.json",
         "padding_experiment_matrix.csv",
+        "padding_strategy_priority.md",
+        "padding_strategy_priority.json",
     }
     source_names = {path.name for path in source_files}
     for name in sorted(required_names - source_names):
@@ -65,6 +67,8 @@ def main() -> int:
         errors.append("release README does not mention candidate_pipeline/release_gate_action_plan.md")
     if "candidate_pipeline/patch_scope_audit.md" not in readme_text:
         errors.append("release README does not mention candidate_pipeline/patch_scope_audit.md")
+    if "candidate_pipeline/padding_strategy_priority.md" not in readme_text:
+        errors.append("release README does not mention candidate_pipeline/padding_strategy_priority.md")
     if "preflight_release_gate_action.py" not in readme_text:
         errors.append("release README does not mention preflight_release_gate_action.py")
     if not (BUNDLE_DIR / "preflight_release_gate_action.py").is_file():
@@ -72,6 +76,7 @@ def main() -> int:
     for required_bundle_file in [
         "audit_padding_experiment_pipeline.py",
         "generate_patch_progress_dashboard.py",
+        "generate_padding_strategy_priority.py",
         "generate_current_primary_visual_task.py",
         "current_primary_visual_task.md",
         "current_primary_visual_task.json",
@@ -113,6 +118,7 @@ def main() -> int:
         for required_bundle_file in [
             "audit_padding_experiment_pipeline.py",
             "generate_patch_progress_dashboard.py",
+            "generate_padding_strategy_priority.py",
             "generate_current_primary_visual_task.py",
             "current_primary_visual_task.md",
             "current_primary_visual_task.json",

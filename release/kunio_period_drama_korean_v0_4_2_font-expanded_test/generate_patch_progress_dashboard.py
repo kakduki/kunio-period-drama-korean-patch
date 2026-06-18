@@ -25,6 +25,7 @@ MANUAL_DUMP_INVENTORY = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json
 CANDIDATE_COMBINED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined_report.json"
 HIGH_RISK_CANDIDATES = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "high_risk_candidates.csv"
 PADDING_EXPERIMENT_MATRIX = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json"
+PADDING_STRATEGY_PRIORITY = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_strategy_priority.json"
 RELEASE_GATE_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_checklist.json"
 RELEASE_GATE_ACTION_PLAN = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_action_plan.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
@@ -66,6 +67,7 @@ def make_payload() -> dict[str, object]:
     candidate_combined = load_json(CANDIDATE_COMBINED_REPORT)
     high_risk_rows = load_csv(HIGH_RISK_CANDIDATES)
     padding_matrix = load_json(PADDING_EXPERIMENT_MATRIX)
+    padding_priority = load_json(PADDING_STRATEGY_PRIORITY)
     release_gate = load_json(RELEASE_GATE_JSON)
     release_gate_action_plan = load_json(RELEASE_GATE_ACTION_PLAN)
 
@@ -115,6 +117,7 @@ def make_payload() -> dict[str, object]:
             "candidate_combined_report": rel(CANDIDATE_COMBINED_REPORT),
             "high_risk_candidates": rel(HIGH_RISK_CANDIDATES),
             "padding_experiment_matrix": rel(PADDING_EXPERIMENT_MATRIX),
+            "padding_strategy_priority": rel(PADDING_STRATEGY_PRIORITY),
             "release_gate_checklist": rel(RELEASE_GATE_JSON),
             "release_gate_action_plan": rel(RELEASE_GATE_ACTION_PLAN),
         },
@@ -163,6 +166,8 @@ def make_payload() -> dict[str, object]:
             "padding_v05_strategy_count": len(padding_v05),
             "padding_v05_cpu_pass_count": padding_v05_cpu_pass,
             "padding_v05_ppu_pass_count": padding_v05_ppu_pass,
+            "padding_recommended_strategy": padding_priority.get("summary", {}).get("recommended_strategy", ""),
+            "padding_recommended_risk_class": padding_priority.get("summary", {}).get("recommended_risk_class", ""),
             "padding_v05_decisions": sorted({row.get("decision", "") for row in padding_v05 if row.get("decision")}),
             "release_gate_status_counts": release_gate.get("summary", {}).get("status_counts", {}),
             "release_gate_failures": [row.get("gate", "") for row in release_gate_failures],
@@ -226,6 +231,8 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Padding v05 strategies: **{summary['padding_v05_strategy_count']}**",
         f"- Padding v05 CPU PASS: **{summary['padding_v05_cpu_pass_count']}**",
         f"- Padding v05 strict PPU PASS: **{summary['padding_v05_ppu_pass_count']}**",
+        f"- Padding recommended strategy: `{summary['padding_recommended_strategy']}`",
+        f"- Padding recommended risk: `{summary['padding_recommended_risk_class']}`",
         f"- Padding decisions: `{', '.join(summary['padding_v05_decisions']) or 'none'}`",
         "",
         "## Release Gate",
