@@ -17,6 +17,7 @@ AUTO_INPUT_EVIDENCE = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.j
 AUTO_INPUT_TRIAGE = REPO_ROOT / "rom_analysis" / "auto_input_visual_triage.json"
 KATANA_EXPLORER = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "report.json"
 KATANA_SLOT_CANDIDATES = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.json"
+KATANA_ITEMLIST_STATE_PROBE_NOTES = REPO_ROOT / "rom_analysis" / "katana_itemlist_state_probe_v042_early_notes.md"
 V043_STATUS = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
 MANUAL_DUMP_INVENTORY = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json"
 CANDIDATE_COMBINED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined_report.json"
@@ -103,6 +104,7 @@ def make_payload() -> dict[str, object]:
             "auto_input_visual_triage": rel(AUTO_INPUT_TRIAGE),
             "katana_visual_explorer": rel(KATANA_EXPLORER),
             "katana_inventory_slot_candidates": rel(KATANA_SLOT_CANDIDATES),
+            "katana_itemlist_state_probe_notes": rel(KATANA_ITEMLIST_STATE_PROBE_NOTES),
             "v043_proof_status": rel(V043_STATUS),
             "manual_dump_inventory": rel(MANUAL_DUMP_INVENTORY),
             "candidate_combined_report": rel(CANDIDATE_COMBINED_REPORT),
@@ -131,6 +133,9 @@ def make_payload() -> dict[str, object]:
             "katana_next_step": katana["summary"].get("next_step", ""),
             "katana_slot_candidate_counts": katana_slots["summary"].get("classification_counts", {}),
             "katana_slot_next_probe": katana_slots["summary"].get("recommended_next_probe", ""),
+            "katana_itemlist_state_probe": "VISUAL_FAIL_ITEMLIST_EMPTY"
+            if KATANA_ITEMLIST_STATE_PROBE_NOTES.exists()
+            else "NOT_RUN",
             "v043_rows": v043_summary["rows"],
             "v043_cpu_read_matches": v043_summary["cpu_read_matches"],
             "v043_visual_confirmations": v043_summary["visual_reviews_confirmed"],
@@ -192,6 +197,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Katana active on item-list screen: `{summary['katana_active_match_on_item_list']}`",
         f"- Katana next step: {summary['katana_next_step']}",
         f"- Katana slot next probe: {summary['katana_slot_next_probe']}",
+        f"- Katana item-list state probe: `{summary['katana_itemlist_state_probe']}`",
         "",
         "## Candidate Pipeline",
         "",

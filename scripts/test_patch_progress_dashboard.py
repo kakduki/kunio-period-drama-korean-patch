@@ -30,6 +30,7 @@ def main() -> int:
         "release_gate_status_counts": {"PASS": 6, "FAIL": 2, "UNKNOWN": 1},
         "release_gate_action_count": 3,
         "release_gate_next_action": "release-included visual proof",
+        "katana_itemlist_state_probe": "VISUAL_FAIL_ITEMLIST_EMPTY",
     }
     for key, value in expected.items():
         if summary.get(key) != value:
@@ -64,6 +65,8 @@ def main() -> int:
         "python scripts/prepare_next_manual_run.py --powershell",
         "0x07227",
         "Auto-input byte-match rows",
+        "Katana item-list state probe",
+        "VISUAL_FAIL_ITEMLIST_EMPTY",
     ]:
         if expected_text not in markdown:
             errors.append(f"{expected_text!r} missing from dashboard markdown")
