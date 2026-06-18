@@ -13,6 +13,7 @@ PRIMARY_CONTENTS = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
 NEXT_MANUAL_RUN = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
 PRIMARY_VISUAL = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 AUTO_INPUT_EVIDENCE = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.json"
+AUTO_INPUT_TRIAGE = REPO_ROOT / "rom_analysis" / "auto_input_visual_triage.json"
 V043_STATUS = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
 MANUAL_DUMP_INVENTORY = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
@@ -32,6 +33,7 @@ def make_payload() -> dict[str, object]:
     next_run = load_json(NEXT_MANUAL_RUN)
     visual = load_json(PRIMARY_VISUAL)
     auto_input = load_json(AUTO_INPUT_EVIDENCE)
+    auto_triage = load_json(AUTO_INPUT_TRIAGE)
     v043 = load_json(V043_STATUS)
     inventory = load_json(MANUAL_DUMP_INVENTORY)
 
@@ -56,6 +58,7 @@ def make_payload() -> dict[str, object]:
             "next_manual_run": rel(NEXT_MANUAL_RUN),
             "primary_visual_checklist": rel(PRIMARY_VISUAL),
             "auto_input_evidence_report": rel(AUTO_INPUT_EVIDENCE),
+            "auto_input_visual_triage": rel(AUTO_INPUT_TRIAGE),
             "v043_proof_status": rel(V043_STATUS),
             "manual_dump_inventory": rel(MANUAL_DUMP_INVENTORY),
         },
@@ -72,6 +75,8 @@ def make_payload() -> dict[str, object]:
             "primary_auto_input_match_rows": visual["summary"].get("auto_input_match_rows", 0),
             "auto_input_latest_png": auto_input["summary"].get("latest_png_review_image", ""),
             "auto_input_matched_primary_rows": auto_input["summary"].get("matched_primary_rows", 0),
+            "auto_input_visual_approvals": auto_triage["summary"].get("visual_approval_rows", 0),
+            "auto_input_triage_decision": auto_triage["summary"].get("decision", ""),
             "v043_rows": v043_summary["rows"],
             "v043_cpu_read_matches": v043_summary["cpu_read_matches"],
             "v043_visual_confirmations": v043_summary["visual_reviews_confirmed"],
@@ -109,7 +114,9 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Checked-in manual dump record files: **{summary['manual_dump_record_files']}**",
         f"- Auto-input byte-match rows: **{summary['primary_auto_input_match_rows']}**",
         f"- Auto-input matched primary rows: **{summary['auto_input_matched_primary_rows']}**",
+        f"- Auto-input visual approvals: **{summary['auto_input_visual_approvals']}**",
         f"- Auto-input review image: `{summary['auto_input_latest_png']}`",
+        f"- Auto-input triage: {summary['auto_input_triage_decision']}",
         "",
         "## v0.4.3 Gate",
         "",

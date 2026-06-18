@@ -33,6 +33,7 @@ KEY_PYTHON = [
     "scripts/generate_batch46_text_readiness.py",
     "scripts/generate_auto_input_evidence_report.py",
     "scripts/generate_auto_input_review_crops.py",
+    "scripts/generate_auto_input_visual_triage.py",
     "scripts/generate_manual_capture_cards.py",
     "scripts/generate_manual_capture_status.py",
     "scripts/generate_manual_dump_inventory.py",
@@ -71,6 +72,7 @@ KEY_PYTHON = [
     "scripts/test_analyze_manual_screen_dump.py",
     "scripts/test_auto_input_evidence_report.py",
     "scripts/test_auto_input_review_crops.py",
+    "scripts/test_auto_input_visual_triage.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_batch46_text_readiness.py",
     "scripts/test_confirm_next_primary_visual.py",
@@ -233,6 +235,7 @@ def main() -> int:
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("auto-input evidence report", ["scripts/test_auto_input_evidence_report.py"])
     run("auto-input review crops", ["scripts/test_auto_input_review_crops.py"])
+    run("auto-input visual triage", ["scripts/test_auto_input_visual_triage.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
     run("manual capture watcher overlay", ["scripts/test_manual_capture_watcher_overlay.py"])

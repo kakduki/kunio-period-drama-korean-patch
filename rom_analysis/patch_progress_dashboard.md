@@ -19,7 +19,9 @@ Single-page status for the current Korean patch work.
 - Checked-in manual dump record files: **0**
 - Auto-input byte-match rows: **10**
 - Auto-input matched primary rows: **10**
+- Auto-input visual approvals: **0**
 - Auto-input review image: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png`
+- Auto-input triage: Do not mark any primary row visually confirmed from this auto-input capture. Use it as route/byte-load evidence and adjust the next route toward the target context.
 
 ## v0.4.3 Gate
 

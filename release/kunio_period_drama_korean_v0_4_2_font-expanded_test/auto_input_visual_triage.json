@@ -1,0 +1,89 @@
+{
+  "source": {
+    "auto_input_evidence_report": "rom_analysis\\auto_input_evidence_report.json",
+    "next_manual_run": "rom_analysis\\next_manual_run.json",
+    "review_crops": "rom_analysis\\fceux_input_explorer_v042\\review_crops.json"
+  },
+  "summary": {
+    "current_auto_route_scene": "opening_dialogue",
+    "latest_dialogue_crop": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_dialogue_box.png",
+    "byte_matched_primary_rows": 10,
+    "visual_approval_rows": 0,
+    "next_visual_target": "0x07227",
+    "next_visual_group": "Katana",
+    "next_visual_hint": "look for a katana/weapon item label",
+    "decision": "Do not mark any primary row visually confirmed from this auto-input capture. Use it as route/byte-load evidence and adjust the next route toward the target context."
+  },
+  "rows": [
+    {
+      "rom_hit": "0x0561A",
+      "romaji": "Hashi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x0562F",
+      "romaji": "Tatsuichi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x05643",
+      "romaji": "Heishichi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x0569D",
+      "romaji": "Hashi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x056DA",
+      "romaji": "Hashi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x0571C",
+      "romaji": "Hashi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x057D4",
+      "romaji": "Hashi",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x07227",
+      "romaji": "Katana",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x0736A",
+      "romaji": "Raifu",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    },
+    {
+      "rom_hit": "0x0739D",
+      "romaji": "Raifu",
+      "byte_match": true,
+      "visual_context_confirmed": false,
+      "reason": "current auto-input capture is opening dialogue evidence, not the target visual context"
+    }
+  ]
+}
