@@ -1,0 +1,555 @@
+{
+  "summary": {
+    "snapshots": 28,
+    "object_range": "0x0300-0x04FF",
+    "candidate_addresses": 68,
+    "top_candidate_count": 32,
+    "recommended_use": "Probe these before more runtime-flag writes; they are more likely to represent actors, enemies, route objects, or spawn state."
+  },
+  "top_candidates": [
+    {
+      "address": "0x04FA",
+      "role": "object_or_route_state",
+      "score": 22,
+      "unique_values": 6,
+      "adjacent_changes": 14,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "30 3C",
+        "katana_menu_route": "30 3C 42 5C 5E 68"
+      },
+      "late_values": {
+        "input_dialogue": "0x30",
+        "katana_menu_route": "0x42"
+      },
+      "slot_hint": "block=1F column=A"
+    },
+    {
+      "address": "0x04FB",
+      "role": "object_or_route_state",
+      "score": 21,
+      "unique_values": 6,
+      "adjacent_changes": 13,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "31 3D",
+        "katana_menu_route": "31 3D 47 5D 5F 69"
+      },
+      "late_values": {
+        "input_dialogue": "0x31",
+        "katana_menu_route": "0x47"
+      },
+      "slot_hint": "block=1F column=B"
+    },
+    {
+      "address": "0x04FC",
+      "role": "object_or_route_state",
+      "score": 21,
+      "unique_values": 6,
+      "adjacent_changes": 13,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "32 3E",
+        "katana_menu_route": "32 35 3E 5E 60 6A"
+      },
+      "late_values": {
+        "input_dialogue": "0x32",
+        "katana_menu_route": "0x35"
+      },
+      "slot_hint": "block=1F column=C"
+    },
+    {
+      "address": "0x04FD",
+      "role": "object_or_route_state",
+      "score": 21,
+      "unique_values": 6,
+      "adjacent_changes": 13,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "33 3F",
+        "katana_menu_route": "33 3F 40 5F 61 6B"
+      },
+      "late_values": {
+        "input_dialogue": "0x33",
+        "katana_menu_route": "0x40"
+      },
+      "slot_hint": "block=1F column=D"
+    },
+    {
+      "address": "0x04F1",
+      "role": "object_or_route_state",
+      "score": 20,
+      "unique_values": 4,
+      "adjacent_changes": 14,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "02 12",
+        "katana_menu_route": "00 01 02 12"
+      },
+      "late_values": {
+        "input_dialogue": "0x02",
+        "katana_menu_route": "0x01"
+      },
+      "slot_hint": "block=1F column=1"
+    },
+    {
+      "address": "0x04F3",
+      "role": "object_or_route_state",
+      "score": 18,
+      "unique_values": 3,
+      "adjacent_changes": 13,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "12 FF",
+        "katana_menu_route": "01 12 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0xFF",
+        "katana_menu_route": "0x01"
+      },
+      "slot_hint": "block=1F column=3"
+    },
+    {
+      "address": "0x04F4",
+      "role": "object_or_route_state",
+      "score": 18,
+      "unique_values": 3,
+      "adjacent_changes": 13,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "14 FF",
+        "katana_menu_route": "00 14 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0xFF",
+        "katana_menu_route": "0x00"
+      },
+      "slot_hint": "block=1F column=4"
+    },
+    {
+      "address": "0x04F2",
+      "role": "object_or_route_state",
+      "score": 16,
+      "unique_values": 4,
+      "adjacent_changes": 10,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "14 15",
+        "katana_menu_route": "00 13 14 15"
+      },
+      "late_values": {
+        "input_dialogue": "0x15",
+        "katana_menu_route": "0x00"
+      },
+      "slot_hint": "block=1F column=2"
+    },
+    {
+      "address": "0x031D",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 2,
+      "adjacent_changes": 3,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 40",
+        "katana_menu_route": "00 40"
+      },
+      "late_values": {
+        "input_dialogue": "0x40",
+        "katana_menu_route": "0x00"
+      },
+      "slot_hint": "block=01 column=D"
+    },
+    {
+      "address": "0x031E",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 2,
+      "adjacent_changes": 3,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 40",
+        "katana_menu_route": "00 40"
+      },
+      "late_values": {
+        "input_dialogue": "0x40",
+        "katana_menu_route": "0x00"
+      },
+      "slot_hint": "block=01 column=E"
+    },
+    {
+      "address": "0x0325",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 2,
+      "adjacent_changes": 3,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 FF",
+        "katana_menu_route": "00 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0xFF",
+        "katana_menu_route": "0x00"
+      },
+      "slot_hint": "block=02 column=5"
+    },
+    {
+      "address": "0x0326",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 2,
+      "adjacent_changes": 3,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 FF",
+        "katana_menu_route": "00 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0xFF",
+        "katana_menu_route": "0x00"
+      },
+      "slot_hint": "block=02 column=6"
+    },
+    {
+      "address": "0x039E",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 01 0B"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x0B"
+      },
+      "slot_hint": "block=09 column=E"
+    },
+    {
+      "address": "0x039F",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 01 03"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x03"
+      },
+      "slot_hint": "block=09 column=F"
+    },
+    {
+      "address": "0x03DB",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 F3 F9"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0xF3"
+      },
+      "slot_hint": "block=0D column=B"
+    },
+    {
+      "address": "0x03DF",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 57 60"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x57"
+      },
+      "slot_hint": "block=0D column=F"
+    },
+    {
+      "address": "0x03E0",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 B7 C0"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0xB7"
+      },
+      "slot_hint": "block=0E column=0"
+    },
+    {
+      "address": "0x03E1",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 07 0D"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x0D"
+      },
+      "slot_hint": "block=0E column=1"
+    },
+    {
+      "address": "0x03E6",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 64 67"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x64"
+      },
+      "slot_hint": "block=0E column=6"
+    },
+    {
+      "address": "0x03E7",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 C4 C7"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0xC4"
+      },
+      "slot_hint": "block=0E column=7"
+    },
+    {
+      "address": "0x03FA",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 18 21"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x21"
+      },
+      "slot_hint": "block=0F column=A"
+    },
+    {
+      "address": "0x03FB",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 18 21"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x21"
+      },
+      "slot_hint": "block=0F column=B"
+    },
+    {
+      "address": "0x03FC",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 18 21"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x21"
+      },
+      "slot_hint": "block=0F column=C"
+    },
+    {
+      "address": "0x0401",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 18 1C"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x1C"
+      },
+      "slot_hint": "block=10 column=1"
+    },
+    {
+      "address": "0x0402",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 18 1C"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x1C"
+      },
+      "slot_hint": "block=10 column=2"
+    },
+    {
+      "address": "0x0403",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 18 1C"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x1C"
+      },
+      "slot_hint": "block=10 column=3"
+    },
+    {
+      "address": "0x042F",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 07 12"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x12"
+      },
+      "slot_hint": "block=12 column=F"
+    },
+    {
+      "address": "0x0432",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 97 A0"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0xA0"
+      },
+      "slot_hint": "block=13 column=2"
+    },
+    {
+      "address": "0x0434",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 58 6A"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x6A"
+      },
+      "slot_hint": "block=13 column=4"
+    },
+    {
+      "address": "0x0435",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 07 12"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x12"
+      },
+      "slot_hint": "block=13 column=5"
+    },
+    {
+      "address": "0x0439",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 97 9B"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x9B"
+      },
+      "slot_hint": "block=13 column=9"
+    },
+    {
+      "address": "0x043A",
+      "role": "object_or_route_state",
+      "score": 7,
+      "unique_values": 3,
+      "adjacent_changes": 2,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 7F 80"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x80"
+      },
+      "slot_hint": "block=13 column=A"
+    }
+  ]
+}
