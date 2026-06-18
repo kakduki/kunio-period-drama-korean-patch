@@ -44,6 +44,28 @@
 - Failure class: `none`
 - Failure reason: `none`
 
+## Candidate `softgate-0569d-hashi`
+
+- Build status: `PASS`
+- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- Candidate ROM: `output\kunio_period_drama_softgate_0569d_hashi.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_0569d_hashi.ips`
+- Candidate MD5: `4e561acffdd8231ee02bd02e75e178bd`
+- Source: `はし` / Hashi
+- Korean test string: `다리`
+- ROM offset: `0x0569D`
+- PRG bank: `1`
+- PRG offset: `0x0568D`
+- Screen/context: `fceux_input_explorer_v042 frame 883 dialogue screen`
+- Old bytes: `A0 92`
+- New bytes: `8B 8C`
+- Patch classification: `PASS`
+- Boot smoke classification: `PASS`
+- Visual classification: `UNKNOWN` until the exact string is visually confirmed on a release/high-risk pass.
+- Failure class: `none`
+- Failure reason: `none`
+
 ## Candidate `softgate-0736a-raifu`
 
 - Build status: `PASS`
@@ -95,8 +117,8 @@
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
 - Candidate ROM: `output\kunio_period_drama_softgate_dev_combined.nes`
 - Candidate IPS: `output\kunio_period_drama_softgate_dev_combined.ips`
-- Candidate MD5: `b189b75366fa94c86711e53238f0e22e`
-- Applied strings: `4`
+- Candidate MD5: `abaf6d0077351ece6d3bd1ff7dddf478`
+- Applied strings: `5`
 - Boot smoke classification: `PASS`
 - Visual classification: `UNKNOWN` until release/high-risk manual visual review.
 - Failure class: `none`
@@ -106,6 +128,7 @@
 | --- | --- | --- | --- | --- | --- |
 | `0x0562F` | `たついち` | `타츠이치` | Tatsuichi | `90 92 82 91` | `89 98 8E 90` |
 | `0x05643` | `へいしち` | `헤이시치` | Heishichi | `9D 82 8C 91` | `8D 8E 8F 90` |
+| `0x0569D` | `はし` | `다리` | Hashi | `A0 92` | `8B 8C` |
 | `0x0736A` | `ライフ` | `라이프` | Raifu | `BB 95 AF` | `96 8E 97` |
 | `0x0739D` | `ライフ` | `라이프` | Raifu | `BB 95 AF` | `96 8E 97` |
 
