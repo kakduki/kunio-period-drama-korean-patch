@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import csv
 from pathlib import Path
 
 from rom_utils import REPO_ROOT
@@ -18,6 +19,9 @@ KATANA_EXPLORER = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "
 KATANA_SLOT_CANDIDATES = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.json"
 V043_STATUS = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
 MANUAL_DUMP_INVENTORY = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json"
+CANDIDATE_COMBINED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined_report.json"
+HIGH_RISK_CANDIDATES = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "high_risk_candidates.csv"
+PADDING_EXPERIMENT_MATRIX = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.md"
 
@@ -30,6 +34,13 @@ def rel(path: Path) -> str:
     return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
+def load_csv(path: Path) -> list[dict[str, str]]:
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
 def make_payload() -> dict[str, object]:
     primary = load_json(PRIMARY_CONTENTS)
     next_run = load_json(NEXT_MANUAL_RUN)
@@ -40,6 +51,9 @@ def make_payload() -> dict[str, object]:
     katana_slots = load_json(KATANA_SLOT_CANDIDATES)
     v043 = load_json(V043_STATUS)
     inventory = load_json(MANUAL_DUMP_INVENTORY)
+    candidate_combined = load_json(CANDIDATE_COMBINED_REPORT)
+    high_risk_rows = load_csv(HIGH_RISK_CANDIDATES)
+    padding_matrix = load_json(PADDING_EXPERIMENT_MATRIX)
 
     primary_summary = primary["summary"]
     next_summary = next_run["summary"]
@@ -55,6 +69,17 @@ def make_payload() -> dict[str, object]:
         blockers.append("v0.4.3 candidates have no visual-context confirmations yet.")
     if inventory["summary"].get("total_record_files", 0) == 0:
         blockers.append("No checked-in manual FCEUX dump records exist yet.")
+    if high_risk_rows:
+        blockers.append("High-risk/quarantined candidates require visual proof before dev/release merge.")
+    if not padding_matrix["summary"].get("any_ppu_exact_pass", False):
+        blockers.append("Shortened padding-rule candidates have CPU evidence but no strict PPU/visual acceptance yet.")
+
+    padding_v05 = [
+        row for row in padding_matrix.get("rows", [])
+        if row.get("experiment_set") == "v05-current-font-base"
+    ]
+    padding_v05_cpu_pass = sum(1 for row in padding_v05 if row.get("cpu_active_status") == "PASS")
+    padding_v05_ppu_pass = sum(1 for row in padding_v05 if row.get("ppu_exact_status") == "PASS")
 
     return {
         "source": {
@@ -67,6 +92,9 @@ def make_payload() -> dict[str, object]:
             "katana_inventory_slot_candidates": rel(KATANA_SLOT_CANDIDATES),
             "v043_proof_status": rel(V043_STATUS),
             "manual_dump_inventory": rel(MANUAL_DUMP_INVENTORY),
+            "candidate_combined_report": rel(CANDIDATE_COMBINED_REPORT),
+            "high_risk_candidates": rel(HIGH_RISK_CANDIDATES),
+            "padding_experiment_matrix": rel(PADDING_EXPERIMENT_MATRIX),
         },
         "summary": {
             "primary_candidate": primary_summary["primary_candidate"],
@@ -93,6 +121,18 @@ def make_payload() -> dict[str, object]:
             "v043_visual_confirmations": v043_summary["visual_reviews_confirmed"],
             "v043_applied_rows": v043_summary["applied_in_v043_build"],
             "manual_dump_record_files": inventory["summary"]["total_record_files"],
+            "softgate_dev_combined_status": candidate_combined["build_status"],
+            "softgate_dev_combined_strings": candidate_combined["applied_count"],
+            "softgate_dev_combined_md5": candidate_combined["candidate_md5"],
+            "softgate_dev_combined_rom": candidate_combined["candidate_rom"],
+            "softgate_dev_combined_ips": candidate_combined["candidate_ips"],
+            "quarantined_candidate_count": len(high_risk_rows),
+            "quarantined_build_pass_count": sum(1 for row in high_risk_rows if row.get("build_status") == "PASS"),
+            "quarantined_smoke_pass_count": sum(1 for row in high_risk_rows if row.get("boot_smoke") == "PASS"),
+            "padding_v05_strategy_count": len(padding_v05),
+            "padding_v05_cpu_pass_count": padding_v05_cpu_pass,
+            "padding_v05_ppu_pass_count": padding_v05_ppu_pass,
+            "padding_v05_decisions": sorted({row.get("decision", "") for row in padding_v05 if row.get("decision")}),
             "release_ready": False,
             "release_blockers": blockers,
         },
@@ -132,6 +172,20 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Katana active on item-list screen: `{summary['katana_active_match_on_item_list']}`",
         f"- Katana next step: {summary['katana_next_step']}",
         f"- Katana slot next probe: {summary['katana_slot_next_probe']}",
+        "",
+        "## Candidate Pipeline",
+        "",
+        f"- Softgate dev combined: **{summary['softgate_dev_combined_strings']} strings**, `{summary['softgate_dev_combined_status']}`",
+        f"- Softgate dev ROM: `{summary['softgate_dev_combined_rom']}`",
+        f"- Softgate dev IPS: `{summary['softgate_dev_combined_ips']}`",
+        f"- Softgate dev MD5: `{summary['softgate_dev_combined_md5']}`",
+        f"- Quarantined candidates: **{summary['quarantined_candidate_count']}**",
+        f"- Quarantined build PASS: **{summary['quarantined_build_pass_count']}**",
+        f"- Quarantined smoke PASS: **{summary['quarantined_smoke_pass_count']}**",
+        f"- Padding v05 strategies: **{summary['padding_v05_strategy_count']}**",
+        f"- Padding v05 CPU PASS: **{summary['padding_v05_cpu_pass_count']}**",
+        f"- Padding v05 strict PPU PASS: **{summary['padding_v05_ppu_pass_count']}**",
+        f"- Padding decisions: `{', '.join(summary['padding_v05_decisions']) or 'none'}`",
         "",
         "## v0.4.3 Gate",
         "",
