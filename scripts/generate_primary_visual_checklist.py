@@ -12,6 +12,7 @@ from rom_utils import REPO_ROOT
 PRIMARY_CONTENTS_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
 MANUAL_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
 PRIMARY_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_review.json"
+AUTO_EXPLORER_SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "summary.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.md"
 
@@ -66,6 +67,19 @@ def visual_review_by_rom() -> dict[str, dict[str, object]]:
     return result
 
 
+def auto_explorer_matches_by_rom() -> dict[str, list[dict[str, object]]]:
+    if not AUTO_EXPLORER_SUMMARY_JSON.exists():
+        return {}
+    data = load_json(AUTO_EXPLORER_SUMMARY_JSON)
+    result: dict[str, list[dict[str, object]]] = {}
+    for match in data.get("active_matches", []):
+        if not isinstance(match, dict):
+            continue
+        rom = normalize_rom(match.get("rom_hit"))
+        result.setdefault(rom, []).append(match)
+    return result
+
+
 def screen_hint(row: dict[str, object]) -> str:
     romaji = str(row.get("romaji", ""))
     if romaji == "Katana":
@@ -85,6 +99,7 @@ def make_payload() -> dict[str, object]:
     contents = load_json(PRIMARY_CONTENTS_JSON)
     statuses = status_by_rom()
     reviews = visual_review_by_rom()
+    auto_matches = auto_explorer_matches_by_rom()
     rows = []
     for row in contents["applied_rows"]:
         rom_hit = normalize_rom(row["rom_hit"])
@@ -94,7 +109,10 @@ def make_payload() -> dict[str, object]:
         visual_confirmed = bool(review.get("visual_context_confirmed", False))
         priority = PRIORITY_BY_EVIDENCE.get(evidence, 90)
         capture_status = manual.get("status", "not_in_manual_capture_cards")
+        auto_match_count = len(auto_matches.get(rom_hit, []))
         review_status = "visual_confirmed" if visual_confirmed else str(capture_status)
+        if not visual_confirmed and auto_match_count:
+            review_status = "auto_input_match_needs_visual"
         rows.append(
             {
                 "priority": priority,
@@ -115,6 +133,8 @@ def make_payload() -> dict[str, object]:
                 "review_status": review_status,
                 "record_file_count": manual.get("record_file_count", 0),
                 "matches": len(manual.get("matches", [])) if isinstance(manual.get("matches", []), list) else 0,
+                "auto_input_match_count": auto_match_count,
+                "auto_input_summary": str(AUTO_EXPLORER_SUMMARY_JSON.relative_to(REPO_ROOT)) if auto_match_count else "",
                 "rom_to_open": PRIMARY_ROM,
                 "watcher_lua": WATCHER_LUA,
                 "summary_command": SUMMARY_COMMAND,
@@ -124,10 +144,13 @@ def make_payload() -> dict[str, object]:
     rows.sort(key=lambda row: (int(row["priority"]), str(row["rom_hit"])))
     counts: dict[str, int] = {}
     visual_confirmed_count = 0
+    auto_input_match_rows = 0
     for row in rows:
         counts[str(row["review_status"])] = counts.get(str(row["review_status"]), 0) + 1
         if row["visual_context_confirmed"]:
             visual_confirmed_count += 1
+        if row["auto_input_match_count"]:
+            auto_input_match_rows += 1
 
     return {
         "source": str(PRIMARY_CONTENTS_JSON.relative_to(REPO_ROOT)),
@@ -135,6 +158,7 @@ def make_payload() -> dict[str, object]:
             "row_count": len(rows),
             "visual_confirmed_count": visual_confirmed_count,
             "visual_pending_count": len(rows) - visual_confirmed_count,
+            "auto_input_match_rows": auto_input_match_rows,
             "primary_rom": PRIMARY_ROM,
             "watcher_lua": WATCHER_LUA,
             "status_counts": counts,
@@ -156,6 +180,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Rows to visually verify: **{summary['row_count']}**",
         f"- Visual confirmations: **{summary['visual_confirmed_count']}**",
         f"- Pending visual checks: **{summary['visual_pending_count']}**",
+        f"- Auto-input byte-match rows: **{summary['auto_input_match_rows']}**",
         f"- Open patched ROM: `{summary['primary_rom']}`",
         f"- Run watcher once: `{summary['watcher_lua']}`",
         "- Press `D` only on a screen that visibly matches one of the rows below.",
@@ -170,15 +195,15 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "## Priority Rows",
         "",
-        "| priority | ROM | romaji | human hint | source | Korean | evidence | review status | screen hint |",
-        "| ---: | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| priority | ROM | romaji | human hint | source | Korean | evidence | auto matches | review status | screen hint |",
+        "| ---: | --- | --- | --- | --- | --- | --- | ---: | --- | --- |",
     ]
     for row in payload["rows"]:
         source = row["source_display"] or "-"
         korean = row["korean_display"] or "-"
         lines.append(
             f"| {row['priority']} | `{row['rom_hit']}` | {row['romaji']} | {row['meaning'] or '-'} | {source} | {korean} | "
-            f"`{row['evidence_level']}` | `{row['review_status']}` | {row['screen_hint']} |"
+            f"`{row['evidence_level']}` | {row['auto_input_match_count']} | `{row['review_status']}` | {row['screen_hint']} |"
         )
 
     lines += [

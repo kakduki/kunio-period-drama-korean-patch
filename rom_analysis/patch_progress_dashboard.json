@@ -16,6 +16,7 @@
     "pending_manual_actions": 13,
     "pending_primary_visual_checks": 10,
     "pending_v043_route_proofs": 3,
+    "primary_auto_input_match_rows": 10,
     "v043_rows": 7,
     "v043_cpu_read_matches": 0,
     "v043_visual_confirmations": 0,

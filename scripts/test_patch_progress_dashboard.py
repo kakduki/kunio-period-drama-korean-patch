@@ -23,6 +23,7 @@ def main() -> int:
         "pending_manual_actions": 13,
         "pending_primary_visual_checks": 10,
         "pending_v043_route_proofs": 3,
+        "primary_auto_input_match_rows": 10,
         "v043_rows": 7,
         "manual_dump_record_files": 0,
         "release_ready": False,
@@ -46,6 +47,7 @@ def main() -> int:
         "python scripts/confirm_next_primary_visual.py --confirm-visible",
         "python scripts/prepare_next_manual_run.py --powershell",
         "0x07227",
+        "Auto-input byte-match rows",
     ]:
         if expected_text not in markdown:
             errors.append(f"{expected_text!r} missing from dashboard markdown")

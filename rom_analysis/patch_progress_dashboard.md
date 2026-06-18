@@ -17,6 +17,7 @@ Single-page status for the current Korean patch work.
 - Pending primary visual checks: **10**
 - Pending v0.4.3 route proofs: **3**
 - Checked-in manual dump record files: **0**
+- Auto-input byte-match rows: **10**
 
 ## v0.4.3 Gate
 
