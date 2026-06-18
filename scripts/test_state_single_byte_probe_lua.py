@@ -18,6 +18,7 @@ def main() -> int:
         "only explicitly listed bytes",
         "state_single_byte_probe_summary.tsv",
         "state_single_byte_probe_watch.tsv",
+        "os.getenv(\"KUNIO_TARGETS_LUA\")",
         "kunio_broad_scan_candidate_targets.lua",
     ]
     missing = [phrase for phrase in required if phrase not in text]

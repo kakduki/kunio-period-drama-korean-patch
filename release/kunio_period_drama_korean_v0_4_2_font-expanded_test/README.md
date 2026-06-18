@@ -22,6 +22,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `katana_single_slot_probe_0506_notes.md`: result of testing `$0506` alone
 - `katana_single_slot_probe_0508_notes.md`: result of testing `$0508` alone
 - `katana_single_slot_probe_0509_notes.md`: result of testing `$0509` alone
+- `katana_runtime_state_probe_0700_itemlist_notes.md`: result of testing grouped `$0700-$071F` item-list runtime values
 - `translation_first_strategy.md`: current text-first patch plan and emulator-proof role
 - `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing
 - `object_state_probe_candidates.md`: object/enemy RAM candidates for boss-spawn cheat probing

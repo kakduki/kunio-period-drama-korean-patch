@@ -1,8 +1,8 @@
 {
   "bundle_dir": "release/kunio_period_drama_korean_v0_4_2_font-expanded_test",
   "zip_path": "release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip",
-  "zip_size": 270331,
-  "zip_md5": "bc282b4d0fd9ffbcb2cc2e66fe7197d5",
+  "zip_size": 271451,
+  "zip_md5": "43063d28639a8135ed0f417806d1af0f",
   "primary_ips": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
   "primary_candidate": "v0.4.2 font-expanded",
   "primary_candidate_md5": "ea11dc002a1a7b07682ce00a754b1a61",
@@ -46,6 +46,7 @@
     "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_inventory_probe_notes.md",
     "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_inventory_slot_candidates.json",
     "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_inventory_slot_candidates.md",
+    "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_runtime_state_probe_0700_itemlist_notes.md",
     "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_single_slot_probe_0502_notes.md",
     "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_single_slot_probe_0503_notes.md",
     "release/kunio_period_drama_korean_v0_4_2_font-expanded_test/katana_single_slot_probe_0506_notes.md",

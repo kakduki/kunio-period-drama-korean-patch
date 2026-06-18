@@ -13,7 +13,7 @@ end
 local LUA_DIR = script_dir()
 local ROOT_DIR = string.match(LUA_DIR, "^(.*)[/\\]lua$") or "."
 
-KUNIO_TARGETS_LUA = LUA_DIR .. "/kunio_broad_scan_candidate_targets.lua"
+KUNIO_TARGETS_LUA = os.getenv("KUNIO_TARGETS_LUA") or (LUA_DIR .. "/kunio_broad_scan_candidate_targets.lua")
 KUNIO_MANUAL_DUMP_OUTPUT = os.getenv("KUNIO_ANALYSIS_OUTPUT") or (ROOT_DIR .. "/rom_analysis/state_single_byte_probe")
 KUNIO_MANUAL_DUMP_DEFINE_ONLY = true
 local manual = dofile(LUA_DIR .. "/kunio_manual_screen_dump.lua")
