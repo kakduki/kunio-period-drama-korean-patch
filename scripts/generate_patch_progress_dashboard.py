@@ -14,6 +14,7 @@ NEXT_MANUAL_RUN = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
 PRIMARY_VISUAL = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 AUTO_INPUT_EVIDENCE = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.json"
 AUTO_INPUT_TRIAGE = REPO_ROOT / "rom_analysis" / "auto_input_visual_triage.json"
+KATANA_EXPLORER = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "report.json"
 V043_STATUS = REPO_ROOT / "rom_analysis" / "v043_proof_status.json"
 MANUAL_DUMP_INVENTORY = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
@@ -34,6 +35,7 @@ def make_payload() -> dict[str, object]:
     visual = load_json(PRIMARY_VISUAL)
     auto_input = load_json(AUTO_INPUT_EVIDENCE)
     auto_triage = load_json(AUTO_INPUT_TRIAGE)
+    katana = load_json(KATANA_EXPLORER)
     v043 = load_json(V043_STATUS)
     inventory = load_json(MANUAL_DUMP_INVENTORY)
 
@@ -59,6 +61,7 @@ def make_payload() -> dict[str, object]:
             "primary_visual_checklist": rel(PRIMARY_VISUAL),
             "auto_input_evidence_report": rel(AUTO_INPUT_EVIDENCE),
             "auto_input_visual_triage": rel(AUTO_INPUT_TRIAGE),
+            "katana_visual_explorer": rel(KATANA_EXPLORER),
             "v043_proof_status": rel(V043_STATUS),
             "manual_dump_inventory": rel(MANUAL_DUMP_INVENTORY),
         },
@@ -77,6 +80,9 @@ def make_payload() -> dict[str, object]:
             "auto_input_matched_primary_rows": auto_input["summary"].get("matched_primary_rows", 0),
             "auto_input_visual_approvals": auto_triage["summary"].get("visual_approval_rows", 0),
             "auto_input_triage_decision": auto_triage["summary"].get("decision", ""),
+            "katana_item_list_frame": katana["summary"].get("item_list_frame", ""),
+            "katana_active_match_on_item_list": katana["summary"].get("katana_active_match_on_item_list", ""),
+            "katana_next_step": katana["summary"].get("next_step", ""),
             "v043_rows": v043_summary["rows"],
             "v043_cpu_read_matches": v043_summary["cpu_read_matches"],
             "v043_visual_confirmations": v043_summary["visual_reviews_confirmed"],
@@ -117,6 +123,9 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Auto-input visual approvals: **{summary['auto_input_visual_approvals']}**",
         f"- Auto-input review image: `{summary['auto_input_latest_png']}`",
         f"- Auto-input triage: {summary['auto_input_triage_decision']}",
+        f"- Katana item-list route frame: **{summary['katana_item_list_frame']}**",
+        f"- Katana active on item-list screen: `{summary['katana_active_match_on_item_list']}`",
+        f"- Katana next step: {summary['katana_next_step']}",
         "",
         "## v0.4.3 Gate",
         "",

@@ -24,6 +24,13 @@ AUTO_INPUT_REVIEW_CROPS_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explore
 AUTO_INPUT_REVIEW_CROPS_MD = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "review_crops.md"
 AUTO_INPUT_VISUAL_TRIAGE_JSON = REPO_ROOT / "rom_analysis" / "auto_input_visual_triage.json"
 AUTO_INPUT_VISUAL_TRIAGE_MD = REPO_ROOT / "rom_analysis" / "auto_input_visual_triage.md"
+KATANA_EXPLORER_REPORT_JSON = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "report.json"
+KATANA_EXPLORER_REPORT_MD = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "report.md"
+KATANA_EXPLORER_SUMMARY_TSV = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "katana_explorer_summary.tsv"
+KATANA_EXPLORER_HEARTBEAT_TSV = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "katana_explorer_heartbeat.tsv"
+KATANA_MENU_PNG = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "manual_frame_001906_screen.png"
+KATANA_ITEM_LIST_PNG = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "manual_frame_002385_screen.png"
+KATANA_ITEM_LIST_RECORDS = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_v042" / "manual_frame_002385_target_records.tsv"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -92,6 +99,8 @@ GD_TO_PNG_CONVERTER = REPO_ROOT / "scripts" / "convert_fceux_gd_to_png.py"
 AUTO_INPUT_EVIDENCE_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input_evidence_report.py"
 AUTO_INPUT_REVIEW_CROPS_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input_review_crops.py"
 AUTO_INPUT_VISUAL_TRIAGE_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input_visual_triage.py"
+KATANA_EXPLORER_REPORT_GENERATOR = REPO_ROOT / "scripts" / "generate_katana_visual_explorer_report.py"
+LUA_KATANA_VISUAL_EXPLORER = REPO_ROOT / "lua" / "kunio_katana_visual_explorer_v042.lua"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
@@ -139,6 +148,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `auto_input_evidence_report.md`: scripted-route PNG and byte-match evidence for v0.4.2 rows",
         "- `auto_input_review_crops.md`: focused dialogue/overlay crops from scripted-route screenshots",
         "- `auto_input_visual_triage.md`: current decision on which auto-input evidence can and cannot be used for visual approval",
+        "- `katana_visual_explorer_report.md`: focused route evidence that reaches the item list for the Katana visual target",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -182,6 +192,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `generate_auto_input_evidence_report.py`: rebuilds the auto-input evidence summary from checked-in capture records",
         "- `generate_auto_input_review_crops.py`: rebuilds focused PNG crops from FCEUX `.gd` screenshots",
         "- `generate_auto_input_visual_triage.py`: rebuilds the byte-match versus visual-approval decision report",
+        "- `generate_katana_visual_explorer_report.py`: rebuilds the Katana route evidence summary",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -302,6 +313,13 @@ def package() -> dict[str, object]:
         (AUTO_INPUT_REVIEW_CROPS_JSON, "auto_input_review_crops.json"),
         (AUTO_INPUT_VISUAL_TRIAGE_MD, "auto_input_visual_triage.md"),
         (AUTO_INPUT_VISUAL_TRIAGE_JSON, "auto_input_visual_triage.json"),
+        (KATANA_EXPLORER_REPORT_MD, "katana_visual_explorer_report.md"),
+        (KATANA_EXPLORER_REPORT_JSON, "katana_visual_explorer_report.json"),
+        (KATANA_EXPLORER_SUMMARY_TSV, "katana_explorer_summary.tsv"),
+        (KATANA_EXPLORER_HEARTBEAT_TSV, "katana_explorer_heartbeat.tsv"),
+        (KATANA_MENU_PNG, "katana_visual_explorer/manual_frame_001906_screen.png"),
+        (KATANA_ITEM_LIST_PNG, "katana_visual_explorer/manual_frame_002385_screen.png"),
+        (KATANA_ITEM_LIST_RECORDS, "katana_visual_explorer/manual_frame_002385_target_records.tsv"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
@@ -368,6 +386,8 @@ def package() -> dict[str, object]:
         (AUTO_INPUT_EVIDENCE_GENERATOR, "generate_auto_input_evidence_report.py"),
         (AUTO_INPUT_REVIEW_CROPS_GENERATOR, "generate_auto_input_review_crops.py"),
         (AUTO_INPUT_VISUAL_TRIAGE_GENERATOR, "generate_auto_input_visual_triage.py"),
+        (KATANA_EXPLORER_REPORT_GENERATOR, "generate_katana_visual_explorer_report.py"),
+        (LUA_KATANA_VISUAL_EXPLORER, "lua/kunio_katana_visual_explorer_v042.lua"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),

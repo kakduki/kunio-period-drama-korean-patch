@@ -1,0 +1,11 @@
+frame	label	category	rom_hit	cpu_range	expected_bytes	active_expected_match	record_snapshot
+1351	v04_watch_rom_0561a_스테이지_7c	스테이지	ROM+0x0561A	$95BE-$960F	8B 8C	false	60 90 26 20 2D 8B 20 66 89 20 2C 86 20 37 8A 20 9A 8A BC 89 03 B9 62 70 49 80 99 62 70 20 6F 89 BD 16 03 18 69 0C 9D 16 03 20 41 88 A9 26 20 6E 81 90 11 BD 53 70 29 10 F0 07 A9 0C 95 50 4C 02 96 20 32 88 20 F3 85 60 90 27 B5 5E 29 23 95 5E 20 6F
+1351	v04_watch_rom_0562f_보스_80	보스	ROM+0x0562F	$961A-$9623	89 98 8E 90	false	83 C1 FE C0 04 BD DC 04 09 40
+1351	v04_watch_rom_05643_보스_80	보스	ROM+0x05643	$9633-$9637	8D 8E 8F 90	false	F9 8D A9 27 20
+1351	v04_watch_rom_0569d_스테이지_7a	스테이지	ROM+0x0569D	$968C-$968F	8B 8C	false	90 0C BD B0
+1351	v04_watch_rom_056da_스테이지_80	스테이지	ROM+0x056DA	$96C5-$96CE	8B 8C	false	7C B9 67 7C 1D EF 7A 99 67 7C
+1351	v04_watch_rom_0571c_스테이지_78	스테이지	ROM+0x0571C	$9706-$9714	8B 8C	false	BD 00 7A 0A B0 05 88 C0 01 B0 F8 BD E1 06 29
+1351	v04_watch_rom_057d4_스테이지_8c	스테이지	ROM+0x057D4	$97C4-$97C8	8B 8C	false	06 A9 00 85 1A
+1351	v04_rom_07227_candidate_84	무기	ROM+0x07227	$B216-$B21A	88 89 8A	false	60 A9 80 9D 4D
+1351	v04_rom_0736a_candidate_93	UI	ROM+0x0736A	$B359-$B35E	96 8E 97	false	2A 00 6C 2E 00 BC
+1351	v04_rom_0739d_candidate_93	UI	ROM+0x0739D	$B38C-$B391	96 8E 97	false	1D BE A9 1A 95 50

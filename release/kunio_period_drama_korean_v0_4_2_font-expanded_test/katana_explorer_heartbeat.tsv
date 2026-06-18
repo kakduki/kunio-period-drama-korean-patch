@@ -1,0 +1,52 @@
+frame	route	buttons
+0	opening	
+0	opening	
+60	opening	
+120	opening	
+180	opening	
+240	opening	
+300	opening	down
+360	opening	A
+420	opening	
+480	opening	down
+540	opening	A
+600	opening	
+660	opening	
+720	opening	
+780	opening	
+840	opening	
+900	opening	
+960	opening	
+1020	start_down_a	
+1080	start_down_a	
+1140	start_down_a	
+1200	start_down_a	
+1260	start_down_a	B
+1320	select_down_a	
+1380	select_down_a	
+1440	select_down_a	
+1500	select_down_a	
+1560	select_down_a	B
+1620	start_right_a	
+1680	start_right_a	
+1740	start_right_a	
+1800	start_right_a	
+1860	start_right_a	B
+1920	select_right_a	
+1980	select_right_a	
+2040	select_right_a	
+2100	select_right_a	
+2160	select_right_a	B
+2220	menu_left_a	
+2280	menu_left_a	
+2340	menu_left_a	
+2400	menu_left_a	
+2460	menu_left_a	left
+2520	start_up_a	
+2580	start_up_a	
+2640	start_up_a	
+2700	start_up_a	
+2760	start_up_a	B
+2820	start_down_a	
+2880	start_down_a	
+2940	start_down_a	

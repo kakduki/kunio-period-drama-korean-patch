@@ -1,0 +1,4 @@
+frame=1351
+output=kunio_fceux_lua_output
+targets=loaded:C:/Users/kakdu/AppData/Local/Temp/kunio_fceux_ascii_bin/kunio_v041_conflict_safe_targets.lua
+target_count=10

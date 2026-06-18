@@ -1,0 +1,30 @@
+{
+  "source": {
+    "lua": "lua/kunio_katana_visual_explorer_v042.lua",
+    "summary": "rom_analysis/katana_visual_explorer_v042/katana_explorer_summary.tsv"
+  },
+  "summary": {
+    "frames_recorded": 24,
+    "final_frame": "3000",
+    "item_list_frame": "2385",
+    "katana_rom_hit": "ROM+0x07227",
+    "katana_active_match_on_item_list": "false",
+    "katana_record_snapshot_on_item_list": "00 00 00 00 90",
+    "decision": "The route now reaches the item-list context automatically, but the list is empty. Do not mark Katana visually confirmed until the item is acquired or injected and the label is visible.",
+    "next_step": "Find or set the inventory state that makes the Katana item label appear on the reached item-list screen."
+  },
+  "key_frames": [
+    {
+      "frame": "1905",
+      "route": "start_right_a",
+      "role": "main menu with item/status choices visible",
+      "image": "rom_analysis/katana_visual_explorer_v042/manual_frame_001906_screen.png"
+    },
+    {
+      "frame": "2385",
+      "route": "menu_left_a",
+      "role": "item list reached; current inventory says empty",
+      "image": "rom_analysis/katana_visual_explorer_v042/manual_frame_002385_screen.png"
+    }
+  ]
+}

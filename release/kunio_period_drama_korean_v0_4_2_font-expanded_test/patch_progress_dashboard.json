@@ -5,6 +5,7 @@
     "primary_visual_checklist": "rom_analysis/primary_visual_checklist.json",
     "auto_input_evidence_report": "rom_analysis/auto_input_evidence_report.json",
     "auto_input_visual_triage": "rom_analysis/auto_input_visual_triage.json",
+    "katana_visual_explorer": "rom_analysis/katana_visual_explorer_v042/report.json",
     "v043_proof_status": "rom_analysis/v043_proof_status.json",
     "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json"
   },
@@ -23,6 +24,9 @@
     "auto_input_matched_primary_rows": 10,
     "auto_input_visual_approvals": 0,
     "auto_input_triage_decision": "Do not mark any primary row visually confirmed from this auto-input capture. Use it as route/byte-load evidence and adjust the next route toward the target context.",
+    "katana_item_list_frame": "2385",
+    "katana_active_match_on_item_list": "false",
+    "katana_next_step": "Find or set the inventory state that makes the Katana item label appear on the reached item-list screen.",
     "v043_rows": 7,
     "v043_cpu_read_matches": 0,
     "v043_visual_confirmations": 0,

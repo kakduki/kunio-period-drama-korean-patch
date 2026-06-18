@@ -22,6 +22,9 @@ Single-page status for the current Korean patch work.
 - Auto-input visual approvals: **0**
 - Auto-input review image: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png`
 - Auto-input triage: Do not mark any primary row visually confirmed from this auto-input capture. Use it as route/byte-load evidence and adjust the next route toward the target context.
+- Katana item-list route frame: **2385**
+- Katana active on item-list screen: `false`
+- Katana next step: Find or set the inventory state that makes the Katana item label appear on the reached item-list screen.
 
 ## v0.4.3 Gate
 
