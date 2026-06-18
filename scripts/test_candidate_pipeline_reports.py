@@ -16,6 +16,8 @@ STRING_CANDIDATES = PIPELINE_DIR / "string_candidates.csv"
 FALSE_POSITIVES = PIPELINE_DIR / "false_positive_list.csv"
 HIGH_RISK = PIPELINE_DIR / "high_risk_candidates.csv"
 PATCHED_REPORT = PIPELINE_DIR / "patched_rom_report.md"
+PATCH_SCOPE_AUDIT_MD = PIPELINE_DIR / "patch_scope_audit.md"
+PATCH_SCOPE_AUDIT_JSON = PIPELINE_DIR / "patch_scope_audit.json"
 SMOKE_LOG = PIPELINE_DIR / "smoke_test_log.txt"
 RELEASE_GATE = PIPELINE_DIR / "release_gate_checklist.md"
 RELEASE_GATE_JSON = PIPELINE_DIR / "release_gate_checklist.json"
@@ -27,6 +29,8 @@ REQUIRED_FILES = [
     FALSE_POSITIVES,
     HIGH_RISK,
     PATCHED_REPORT,
+    PATCH_SCOPE_AUDIT_MD,
+    PATCH_SCOPE_AUDIT_JSON,
     SMOKE_LOG,
     RELEASE_GATE,
     RELEASE_GATE_JSON,
@@ -54,6 +58,7 @@ def main() -> int:
     false_positive_rows = read_csv(FALSE_POSITIVES)
     high_risk_rows = read_csv(HIGH_RISK)
     combined = json.loads(COMBINED_REPORT.read_text(encoding="utf-8"))
+    patch_scope = json.loads(PATCH_SCOPE_AUDIT_JSON.read_text(encoding="utf-8"))
 
     if len(selected) != 9:
         errors.append(f"expected 9 selected soft-gate strings, got {len(selected)}")
@@ -67,6 +72,8 @@ def main() -> int:
         errors.append(f"expected combined applied_count 9, got {combined.get('applied_count')}")
     if combined.get("build_status") != "PASS":
         errors.append(f"expected combined build_status PASS, got {combined.get('build_status')}")
+    if patch_scope.get("summary", {}).get("all_pass") is not True:
+        errors.append("patch scope audit should be all_pass true")
 
     for field in ["base_rom", "font_rom", "candidate_rom", "candidate_ips"]:
         value = str(combined.get(field, ""))
@@ -75,7 +82,7 @@ def main() -> int:
         if not value:
             errors.append(f"combined report field {field} is empty")
 
-    for path in [BUILD_MATRIX, PATCHED_REPORT, SMOKE_LOG, RELEASE_GATE]:
+    for path in [BUILD_MATRIX, PATCHED_REPORT, PATCH_SCOPE_AUDIT_MD, SMOKE_LOG, RELEASE_GATE]:
         text = path.read_text(encoding="utf-8")
         if "\\\\" in text or "output\\" in text or "rom\\" in text:
             errors.append(f"{path.relative_to(REPO_ROOT).as_posix()} contains Windows-style report paths")
@@ -116,8 +123,10 @@ def main() -> int:
         "shortened padding rule acceptance | UNKNOWN | PADDING_RULE_UNPROVEN",
         "No `.nes` files in release zip",
         "Manual visual proof for every release-included string",
+        "Patch Scope Audit",
     ]:
-        if expected not in release_gate:
+        target_text = release_gate if expected != "Patch Scope Audit" else PATCH_SCOPE_AUDIT_MD.read_text(encoding="utf-8")
+        if expected not in target_text:
             errors.append(f"release gate checklist missing {expected!r}")
 
     if errors:

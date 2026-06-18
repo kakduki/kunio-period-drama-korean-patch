@@ -37,6 +37,8 @@ def main() -> int:
         "string_candidates.csv",
         "false_positive_list.csv",
         "patched_rom_report.md",
+        "patch_scope_audit.md",
+        "patch_scope_audit.json",
         "smoke_test_log.txt",
         "release_gate_checklist.md",
         "release_gate_checklist.json",
@@ -61,6 +63,8 @@ def main() -> int:
         errors.append("release README does not mention candidate_pipeline/")
     if "candidate_pipeline/release_gate_action_plan.md" not in readme_text:
         errors.append("release README does not mention candidate_pipeline/release_gate_action_plan.md")
+    if "candidate_pipeline/patch_scope_audit.md" not in readme_text:
+        errors.append("release README does not mention candidate_pipeline/patch_scope_audit.md")
     if "preflight_release_gate_action.py" not in readme_text:
         errors.append("release README does not mention preflight_release_gate_action.py")
     if not (BUNDLE_DIR / "preflight_release_gate_action.py").is_file():

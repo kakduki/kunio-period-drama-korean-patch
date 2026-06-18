@@ -1,0 +1,496 @@
+{
+  "source": {
+    "reports_glob": "output/kunio_period_drama_softgate_*_report.json",
+    "comparison_base": "font_rom in each report"
+  },
+  "summary": {
+    "row_count": 15,
+    "status_counts": {
+      "PASS": 15,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "all_pass": true,
+    "rule": "Each candidate ROM may differ from its font-expanded base only where planned PRG replacement bytes actually change."
+  },
+  "rows": [
+    {
+      "build_id": "softgate-0561a-hashi",
+      "report": "output/kunio_period_drama_softgate_0561a_hashi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_0561a_hashi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 2,
+      "expected_offset_count": 2,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0561A",
+          "length": 2,
+          "old_bytes": "96 88",
+          "new_bytes": "8B 8C"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0561A",
+          "end": "0x0561C",
+          "length": 2
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-0562f-tatsuichi",
+      "report": "output/kunio_period_drama_softgate_0562f_tatsuichi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_0562f_tatsuichi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 4,
+      "expected_offset_count": 4,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0562F",
+          "length": 4,
+          "old_bytes": "90 92 82 91",
+          "new_bytes": "89 98 8E 90"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0562F",
+          "end": "0x05633",
+          "length": 4
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-05643-heishichi",
+      "report": "output/kunio_period_drama_softgate_05643_heishichi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_05643_heishichi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 4,
+      "expected_offset_count": 4,
+      "expected_spans": [
+        {
+          "rom_offset": "0x05643",
+          "length": 4,
+          "old_bytes": "9D 82 8C 91",
+          "new_bytes": "8D 8E 8F 90"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x05643",
+          "end": "0x05647",
+          "length": 4
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-0569d-hashi",
+      "report": "output/kunio_period_drama_softgate_0569d_hashi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_0569d_hashi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 2,
+      "expected_offset_count": 2,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0569D",
+          "length": 2,
+          "old_bytes": "A0 92",
+          "new_bytes": "8B 8C"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0569D",
+          "end": "0x0569F",
+          "length": 2
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-056da-hashi",
+      "report": "output/kunio_period_drama_softgate_056da_hashi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_056da_hashi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 1,
+      "expected_offset_count": 1,
+      "expected_spans": [
+        {
+          "rom_offset": "0x056DA",
+          "length": 2,
+          "old_bytes": "9A 8C",
+          "new_bytes": "8B 8C"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x056DA",
+          "end": "0x056DB",
+          "length": 1
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-0571c-hashi",
+      "report": "output/kunio_period_drama_softgate_0571c_hashi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_0571c_hashi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 2,
+      "expected_offset_count": 2,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0571C",
+          "length": 2,
+          "old_bytes": "92 84",
+          "new_bytes": "8B 8C"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0571C",
+          "end": "0x0571E",
+          "length": 2
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-057d4-hashi",
+      "report": "output/kunio_period_drama_softgate_057d4_hashi_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_057d4_hashi.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 2,
+      "expected_offset_count": 2,
+      "expected_spans": [
+        {
+          "rom_offset": "0x057D4",
+          "length": 2,
+          "old_bytes": "A6 98",
+          "new_bytes": "8B 8C"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x057D4",
+          "end": "0x057D6",
+          "length": 2
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-0736a-raifu",
+      "report": "output/kunio_period_drama_softgate_0736a_raifu_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_0736a_raifu.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0736A",
+          "length": 3,
+          "old_bytes": "BB 95 AF",
+          "new_bytes": "96 8E 97"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0736A",
+          "end": "0x0736D",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-0739d-raifu",
+      "report": "output/kunio_period_drama_softgate_0739d_raifu_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_0739d_raifu.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0739D",
+          "length": 3,
+          "old_bytes": "BB 95 AF",
+          "new_bytes": "96 8E 97"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0739D",
+          "end": "0x073A0",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-dev-combined",
+      "report": "output/kunio_period_drama_softgate_dev_combined_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_dev_combined.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 23,
+      "expected_offset_count": 23,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0562F",
+          "length": 4,
+          "old_bytes": "90 92 82 91",
+          "new_bytes": "89 98 8E 90"
+        },
+        {
+          "rom_offset": "0x05643",
+          "length": 4,
+          "old_bytes": "9D 82 8C 91",
+          "new_bytes": "8D 8E 8F 90"
+        },
+        {
+          "rom_offset": "0x0561A",
+          "length": 2,
+          "old_bytes": "96 88",
+          "new_bytes": "8B 8C"
+        },
+        {
+          "rom_offset": "0x0569D",
+          "length": 2,
+          "old_bytes": "A0 92",
+          "new_bytes": "8B 8C"
+        },
+        {
+          "rom_offset": "0x056DA",
+          "length": 2,
+          "old_bytes": "9A 8C",
+          "new_bytes": "8B 8C"
+        },
+        {
+          "rom_offset": "0x0571C",
+          "length": 2,
+          "old_bytes": "92 84",
+          "new_bytes": "8B 8C"
+        },
+        {
+          "rom_offset": "0x057D4",
+          "length": 2,
+          "old_bytes": "A6 98",
+          "new_bytes": "8B 8C"
+        },
+        {
+          "rom_offset": "0x0736A",
+          "length": 3,
+          "old_bytes": "BB 95 AF",
+          "new_bytes": "96 8E 97"
+        },
+        {
+          "rom_offset": "0x0739D",
+          "length": 3,
+          "old_bytes": "BB 95 AF",
+          "new_bytes": "96 8E 97"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0561A",
+          "end": "0x0561C",
+          "length": 2
+        },
+        {
+          "start": "0x0562F",
+          "end": "0x05633",
+          "length": 4
+        },
+        {
+          "start": "0x05643",
+          "end": "0x05647",
+          "length": 4
+        },
+        {
+          "start": "0x0569D",
+          "end": "0x0569F",
+          "length": 2
+        },
+        {
+          "start": "0x056DA",
+          "end": "0x056DB",
+          "length": 1
+        },
+        {
+          "start": "0x0571C",
+          "end": "0x0571E",
+          "length": 2
+        },
+        {
+          "start": "0x057D4",
+          "end": "0x057D6",
+          "length": 2
+        },
+        {
+          "start": "0x0736A",
+          "end": "0x0736D",
+          "length": 3
+        },
+        {
+          "start": "0x0739D",
+          "end": "0x073A0",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-quarantine-05644-katana",
+      "report": "output/kunio_period_drama_softgate_quarantine_05644_katana_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_quarantine_05644_katana.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x05644",
+          "length": 3,
+          "old_bytes": "82 8C 91",
+          "new_bytes": "88 89 8A"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x05644",
+          "end": "0x05647",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-quarantine-06295-katana",
+      "report": "output/kunio_period_drama_softgate_quarantine_06295_katana_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_quarantine_06295_katana.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x06295",
+          "length": 3,
+          "old_bytes": "82 8C 91",
+          "new_bytes": "88 89 8A"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x06295",
+          "end": "0x06298",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-quarantine-0631c-katana",
+      "report": "output/kunio_period_drama_softgate_quarantine_0631c_katana_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_quarantine_0631c_katana.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0631C",
+          "length": 3,
+          "old_bytes": "82 8C 91",
+          "new_bytes": "88 89 8A"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0631C",
+          "end": "0x0631F",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-quarantine-0635a-katana",
+      "report": "output/kunio_period_drama_softgate_quarantine_0635a_katana_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_quarantine_0635a_katana.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x0635A",
+          "length": 3,
+          "old_bytes": "82 8C 91",
+          "new_bytes": "88 89 8A"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x0635A",
+          "end": "0x0635D",
+          "length": 3
+        }
+      ],
+      "errors": []
+    },
+    {
+      "build_id": "softgate-quarantine-07227-katana",
+      "report": "output/kunio_period_drama_softgate_quarantine_07227_katana_report.json",
+      "candidate_rom": "output/kunio_period_drama_softgate_quarantine_07227_katana.nes",
+      "font_rom": "output/kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+      "status": "PASS",
+      "failure_class": "none",
+      "changed_offset_count": 3,
+      "expected_offset_count": 3,
+      "expected_spans": [
+        {
+          "rom_offset": "0x07227",
+          "length": 3,
+          "old_bytes": "8A 94 99",
+          "new_bytes": "88 89 8A"
+        }
+      ],
+      "actual_changed_spans": [
+        {
+          "start": "0x07227",
+          "end": "0x0722A",
+          "length": 3
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -184,6 +184,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         f"- `{ips_name}`: primary IPS patch",
         "- `patch_progress_dashboard.md`: one-page current status, blockers, and next action",
         "- `candidate_pipeline/`: soft-gate build matrix, string candidates, smoke logs, quarantine notes, and padding experiment audits",
+        "- `candidate_pipeline/patch_scope_audit.md`: verifies candidate ROMs only alter planned PRG spans against the font-expanded base",
         "- `candidate_pipeline/release_gate_action_plan.md`: open release gates mapped to the next concrete evidence tasks",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
         "- `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS",
