@@ -38,6 +38,7 @@ KATANA_SLOT_CANDIDATES_MD = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_
 KATANA_SINGLE_SLOT_0502_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md"
 KATANA_SINGLE_SLOT_0503_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0503_notes.md"
 KATANA_SINGLE_SLOT_0506_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0506_notes.md"
+KATANA_SINGLE_SLOT_0508_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0508_notes.md"
 TRANSLATION_FIRST_STRATEGY_MD = REPO_ROOT / "rom_analysis" / "translation_first_strategy.md"
 STATE_CHEAT_PROBE_JSON = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.json"
 STATE_CHEAT_PROBE_MD = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.md"
@@ -187,6 +188,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `katana_single_slot_probe_0502_notes.md`: result of testing `$0502` alone",
         "- `katana_single_slot_probe_0503_notes.md`: result of testing `$0503` alone",
         "- `katana_single_slot_probe_0506_notes.md`: result of testing `$0506` alone",
+        "- `katana_single_slot_probe_0508_notes.md`: result of testing `$0508` alone",
         "- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role",
         "- `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing",
         "- `object_state_probe_candidates.md`: object/enemy RAM candidates for boss-spawn cheat probing",
@@ -380,6 +382,7 @@ def package() -> dict[str, object]:
         (KATANA_SINGLE_SLOT_0502_NOTES, "katana_single_slot_probe_0502_notes.md"),
         (KATANA_SINGLE_SLOT_0503_NOTES, "katana_single_slot_probe_0503_notes.md"),
         (KATANA_SINGLE_SLOT_0506_NOTES, "katana_single_slot_probe_0506_notes.md"),
+        (KATANA_SINGLE_SLOT_0508_NOTES, "katana_single_slot_probe_0508_notes.md"),
         (TRANSLATION_FIRST_STRATEGY_MD, "translation_first_strategy.md"),
         (STATE_CHEAT_PROBE_MD, "state_cheat_probe_candidates.md"),
         (STATE_CHEAT_PROBE_JSON, "state_cheat_probe_candidates.json"),

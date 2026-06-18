@@ -5,8 +5,8 @@ This ranks the addresses from the failed temporary-state probe so the next run c
 ## Summary
 
 - Probed addresses: **19**
-- Completed single-slot probes: 0x0502, 0x0503, 0x0506
-- Recommended next probe: Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with 0x0508.
+- Completed single-slot probes: 0x0502, 0x0503, 0x0506, 0x0508
+- Recommended next probe: Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with 0x0509.
 
 | classification | count |
 | --- | ---: |

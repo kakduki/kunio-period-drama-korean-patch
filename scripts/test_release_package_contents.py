@@ -68,6 +68,7 @@ def main() -> int:
     for required_bundle_file in [
         "audit_padding_experiment_pipeline.py",
         "generate_patch_progress_dashboard.py",
+        "katana_single_slot_probe_0508_notes.md",
         "lua/kunio_auto_dump.lua",
     ]:
         if not (BUNDLE_DIR / required_bundle_file).is_file():
@@ -99,6 +100,7 @@ def main() -> int:
         for required_bundle_file in [
             "audit_padding_experiment_pipeline.py",
             "generate_patch_progress_dashboard.py",
+            "katana_single_slot_probe_0508_notes.md",
             "lua/kunio_auto_dump.lua",
         ]:
             if f"{BUNDLE_DIR.name}/{required_bundle_file}" not in zip_names:
