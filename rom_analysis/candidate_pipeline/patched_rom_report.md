@@ -44,3 +44,47 @@
 - Failure class: `none`
 - Failure reason: `none`
 
+## Candidate `softgate-0736a-raifu`
+
+- Build status: `PASS`
+- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- Candidate ROM: `output\kunio_period_drama_softgate_0736a_raifu.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_0736a_raifu.ips`
+- Candidate MD5: `28aea3f00214fc3caec56c7cc2e553f8`
+- Source: `ライフ` / Raifu
+- Korean test string: `라이프`
+- ROM offset: `0x0736A`
+- PRG bank: `1`
+- PRG offset: `0x0735A`
+- Screen/context: `fceux_input_explorer_v042 frame 883 dialogue screen`
+- Old bytes: `BB 95 AF`
+- New bytes: `96 8E 97`
+- Patch classification: `PASS`
+- Boot smoke classification: `PASS`
+- Visual classification: `UNKNOWN` until the exact string is visually confirmed on a release/high-risk pass.
+- Failure class: `none`
+- Failure reason: `none`
+
+## Candidate `softgate-0739d-raifu`
+
+- Build status: `PASS`
+- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- Candidate ROM: `output\kunio_period_drama_softgate_0739d_raifu.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_0739d_raifu.ips`
+- Candidate MD5: `ad1534d9a2c5895af372c21698fa9a93`
+- Source: `ライフ` / Raifu
+- Korean test string: `라이프`
+- ROM offset: `0x0739D`
+- PRG bank: `1`
+- PRG offset: `0x0738D`
+- Screen/context: `fceux_input_explorer_v042 frame 883 dialogue screen`
+- Old bytes: `BB 95 AF`
+- New bytes: `96 8E 97`
+- Patch classification: `PASS`
+- Boot smoke classification: `PASS`
+- Visual classification: `UNKNOWN` until the exact string is visually confirmed on a release/high-risk pass.
+- Failure class: `none`
+- Failure reason: `none`
+

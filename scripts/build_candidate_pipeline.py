@@ -46,6 +46,26 @@ CANDIDATES = [
         "romaji": "Heishichi",
         "selection_reason": "active on the same real dialogue screen; equal-length planned bytes; boss/name context",
     },
+    {
+        "build_id": "softgate-0736a-raifu",
+        "slug": "0736a_raifu",
+        "rom_hit": "0x0736A",
+        "label_prefix": "rom_0736a_candidate_93",
+        "source_japanese": "\u30e9\u30a4\u30d5",
+        "korean": "\ub77c\uc774\ud504",
+        "romaji": "Raifu",
+        "selection_reason": "active on the same real dialogue screen; equal-length planned bytes; UI/status context",
+    },
+    {
+        "build_id": "softgate-0739d-raifu",
+        "slug": "0739d_raifu",
+        "rom_hit": "0x0739D",
+        "label_prefix": "rom_0739d_candidate_93",
+        "source_japanese": "\u30e9\u30a4\u30d5",
+        "korean": "\ub77c\uc774\ud504",
+        "romaji": "Raifu",
+        "selection_reason": "active on the same real dialogue screen; equal-length planned bytes; UI/status context",
+    },
 ]
 
 

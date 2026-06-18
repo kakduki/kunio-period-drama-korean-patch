@@ -5,5 +5,3 @@ rom_offset,label,risk_class,reason,action
 0x0571C,v04_watch_rom_0571c_스테이지_78,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
 0x057D4,v04_watch_rom_057d4_스테이지_8c,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
 0x07227,v04_rom_07227_candidate_84,VISUAL_CONTEXT_AMBIGUOUS,active in CPU memory but not the visibly readable bottom dialogue string in frame 883,do not patch in current single-string build
-0x0736A,v04_rom_0736a_candidate_93,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build
-0x0739D,v04_rom_0739d_candidate_93,DEFERRED_NOT_FALSE_POSITIVE,"active bytes are present, but this pass patches only one known string",do not patch in current single-string build

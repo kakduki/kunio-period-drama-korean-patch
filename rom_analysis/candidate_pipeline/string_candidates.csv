@@ -7,5 +7,5 @@ no,0x056DA,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_0
 no,0x0571C,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_0571c_스테이지_78,스테이지,,,,$9706-$9714,8B 8C,true,deferred to avoid broad or ambiguous multi-string patching in this pipeline pass
 no,0x057D4,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_057d4_스테이지_8c,스테이지,,,,$97C4-$97C8,8B 8C,true,deferred to avoid broad or ambiguous multi-string patching in this pipeline pass
 no,0x07227,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_rom_07227_candidate_84,무기,,,,$B216-$B21A,88 89 8A,true,deferred to avoid broad or ambiguous multi-string patching in this pipeline pass
-no,0x0736A,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_rom_0736a_candidate_93,UI,,,,$B359-$B35E,96 8E 97,true,deferred to avoid broad or ambiguous multi-string patching in this pipeline pass
-no,0x0739D,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_rom_0739d_candidate_93,UI,,,,$B38C-$B391,96 8E 97,true,deferred to avoid broad or ambiguous multi-string patching in this pipeline pass
+yes,0x0736A,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_rom_0736a_candidate_93,UI,ライフ,라이프,Raifu,$B359-$B35E,96 8E 97,true,active on the same real dialogue screen; equal-length planned bytes; UI/status context
+yes,0x0739D,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_rom_0739d_candidate_93,UI,ライフ,라이프,Raifu,$B38C-$B391,96 8E 97,true,active on the same real dialogue screen; equal-length planned bytes; UI/status context

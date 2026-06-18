@@ -1,0 +1,43 @@
+{
+  "build_id": "softgate-0739d-raifu",
+  "slug": "0739d_raifu",
+  "readable": {
+    "source_japanese": "ライフ",
+    "korean": "라이프",
+    "romaji": "Raifu"
+  },
+  "target": {
+    "label": "rom_0739d_candidate_93",
+    "evidence_level": "static-candidate+pointer",
+    "category_group": "UI/status",
+    "category": "UI",
+    "rom_hit": "0x0739D",
+    "source": "ライフ",
+    "korean": "라이프",
+    "required_glyphs": [
+      "라",
+      "이",
+      "프"
+    ],
+    "planned_prg_bytes": [
+      "0x96",
+      "0x8E",
+      "0x97"
+    ],
+    "original_expected_bytes": "BB 95 AF"
+  },
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "font_rom": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+  "candidate_rom": "output\\kunio_period_drama_softgate_0739d_raifu.nes",
+  "candidate_ips": "output\\kunio_period_drama_softgate_0739d_raifu.ips",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "ad1534d9a2c5895af372c21698fa9a93",
+  "rom_offset": "0x0739D",
+  "prg_bank": 1,
+  "prg_offset": "0x0738D",
+  "old_bytes": "BB 95 AF",
+  "new_bytes": "96 8E 97",
+  "build_status": "PASS",
+  "failure_class": "",
+  "failure_reason": ""
+}
