@@ -93,6 +93,7 @@ def main() -> int:
     gate_status = {row.get("gate"): row.get("status") for row in gate_rows}
     expected_gate_status = {
         "development soft gate": "PASS",
+        "candidate patch scope constrained": "PASS",
         "release-included visual proof": "FAIL",
         "high-risk/quarantined visual proof": "FAIL",
         "false-positive/ambiguous bytes excluded": "PASS",
@@ -120,6 +121,7 @@ def main() -> int:
         "VISUAL_PROOF_PENDING",
         "HIGH_RISK_VISUAL_PROOF_PENDING",
         "release zip contains no ROM | PASS | none",
+        "candidate patch scope constrained | PASS | none",
         "shortened padding rule acceptance | UNKNOWN | PADDING_RULE_UNPROVEN",
         "No `.nes` files in release zip",
         "Manual visual proof for every release-included string",

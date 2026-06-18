@@ -29,7 +29,7 @@ def main() -> int:
         "v043_rows": 7,
         "manual_dump_record_files": 0,
         "release_ready": False,
-        "release_gate_status_counts": {"PASS": 6, "FAIL": 2, "UNKNOWN": 1},
+        "release_gate_status_counts": {"PASS": 7, "FAIL": 2, "UNKNOWN": 1},
         "release_gate_action_count": 3,
         "release_gate_next_action": "release-included visual proof",
         "katana_itemlist_state_probe": "VISUAL_FAIL_ITEMLIST_EMPTY",

@@ -12,6 +12,8 @@ from rom_utils import REPO_ROOT
 PIPELINE_DIR = REPO_ROOT / "rom_analysis" / "candidate_pipeline"
 OUT_JSON = PIPELINE_DIR / "patch_scope_audit.json"
 OUT_MD = PIPELINE_DIR / "patch_scope_audit.md"
+RELEASE_GATE_JSON = PIPELINE_DIR / "release_gate_checklist.json"
+RELEASE_GATE_MD = PIPELINE_DIR / "release_gate_checklist.md"
 REPORTS = sorted((REPO_ROOT / "output").glob("kunio_period_drama_softgate_*_report.json"))
 
 
@@ -196,11 +198,85 @@ def write_markdown(payload: dict[str, object]) -> None:
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def sync_release_gate(payload: dict[str, object]) -> None:
+    if not RELEASE_GATE_JSON.exists() or not RELEASE_GATE_MD.exists():
+        return
+
+    gate = json.loads(RELEASE_GATE_JSON.read_text(encoding="utf-8"))
+    rows = [row for row in gate.get("gates", []) if row.get("gate") != "candidate patch scope constrained"]
+    status = "PASS" if payload["summary"].get("all_pass") else "FAIL"
+    failure_class = "none" if status == "PASS" else "PATCH_SCOPE_MISMATCH"
+    rows.append(
+        {
+            "gate": "candidate patch scope constrained",
+            "status": status,
+            "failure_class": failure_class,
+            "evidence": "patch_scope_audit.md verifies each softgate candidate only changes planned PRG spans",
+        }
+    )
+    order = {
+        "development soft gate": 10,
+        "candidate patch scope constrained": 20,
+        "release-included visual proof": 30,
+        "high-risk/quarantined visual proof": 40,
+        "false-positive/ambiguous bytes excluded": 50,
+        "base and patched hashes documented": 60,
+        "IPS applies from clean base ROM": 70,
+        "release zip contains no ROM": 80,
+        "regression boot smoke": 90,
+        "shortened padding rule acceptance": 100,
+    }
+    rows.sort(key=lambda row: order.get(str(row.get("gate")), 999))
+    status_counts = {gate_status: sum(1 for row in rows if row.get("status") == gate_status) for gate_status in ["PASS", "FAIL", "UNKNOWN"]}
+    gate["gates"] = rows
+    gate["summary"]["status_counts"] = status_counts
+    gate["summary"]["release_ready"] = status_counts.get("FAIL", 0) == 0 and status_counts.get("UNKNOWN", 0) == 0
+    RELEASE_GATE_JSON.write_text(json.dumps(gate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    lines = [
+        "# Release Gate Checklist",
+        "",
+        "Hard gates apply only to release candidates, not to soft-gated development builds.",
+        "",
+        "## Gate Status Summary",
+        "",
+        "| gate | status | failure class | evidence |",
+        "| --- | --- | --- | --- |",
+    ]
+    lines.extend(
+        f"| {row['gate']} | {row['status']} | {row['failure_class']} | {row['evidence']} |"
+        for row in rows
+    )
+    lines += [
+        "",
+        "## Development Soft Gate",
+        "",
+        "- [x] Select one active string from one known screen/context.",
+        "- [x] Record ROM offset, PRG bank, bytes, and context.",
+        "- [x] Build a one-string candidate ROM/IPS.",
+        "- [x] Verify candidate ROMs only alter planned PRG spans.",
+        "- [x] Run emulator boot smoke test.",
+        "- [x] Classify result as PASS/FAIL/UNKNOWN.",
+        "",
+        "## Release Hard Gate",
+        "",
+        "- [ ] Manual visual proof for every release-included string.",
+        "- [ ] Manual visual proof for every high-risk/quarantined string before merging into the dev candidate.",
+        "- [ ] No known false-positive or ambiguous byte ranges patched.",
+        "- [ ] Base ROM hash and patched ROM hash documented.",
+        "- [ ] IPS applies cleanly from a clean base ROM.",
+        "- [ ] No `.nes` files in release zip.",
+        "- [ ] Regression smoke test passes on the release candidate.",
+    ]
+    RELEASE_GATE_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def main() -> int:
     PIPELINE_DIR.mkdir(parents=True, exist_ok=True)
     payload = make_payload()
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     write_markdown(payload)
+    sync_release_gate(payload)
     print(f"Wrote {rel(OUT_JSON)}")
     print(f"Wrote {rel(OUT_MD)}")
     print(f"status_counts={payload['summary']['status_counts']}")

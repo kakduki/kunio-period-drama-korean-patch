@@ -49,7 +49,7 @@ Single-page status for the current Korean patch work.
 ## Release Gate
 
 - Ready: `False`
-- Gate status counts: `{'PASS': 6, 'FAIL': 2, 'UNKNOWN': 1}`
+- Gate status counts: `{'PASS': 7, 'FAIL': 2, 'UNKNOWN': 1}`
 - Failing gates: `release-included visual proof, high-risk/quarantined visual proof`
 - Unknown gates: `shortened padding rule acceptance`
 - Action plan items: **3**

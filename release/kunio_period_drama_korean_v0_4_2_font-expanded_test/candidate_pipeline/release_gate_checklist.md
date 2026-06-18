@@ -7,6 +7,7 @@ Hard gates apply only to release candidates, not to soft-gated development build
 | gate | status | failure class | evidence |
 | --- | --- | --- | --- |
 | development soft gate | PASS | none | selected/combined/quarantined candidate builds and boot smoke evidence are present |
+| candidate patch scope constrained | PASS | none | patch_scope_audit.md verifies each softgate candidate only changes planned PRG spans |
 | release-included visual proof | FAIL | VISUAL_PROOF_PENDING | primary v0.4.2 and softgate rows still require visible-screen proof before release |
 | high-risk/quarantined visual proof | FAIL | HIGH_RISK_VISUAL_PROOF_PENDING | 5 quarantined Katana candidates require item-list visual proof |
 | false-positive/ambiguous bytes excluded | PASS | none | quarantined candidates are isolated and not included in softgate-dev-combined |
@@ -21,6 +22,7 @@ Hard gates apply only to release candidates, not to soft-gated development build
 - [x] Select one active string from one known screen/context.
 - [x] Record ROM offset, PRG bank, bytes, and context.
 - [x] Build a one-string candidate ROM/IPS.
+- [x] Verify candidate ROMs only alter planned PRG spans.
 - [x] Run emulator boot smoke test.
 - [x] Classify result as PASS/FAIL/UNKNOWN.
 

@@ -10,6 +10,8 @@ from rom_utils import REPO_ROOT
 
 AUDIT_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "patch_scope_audit.json"
 AUDIT_MD = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "patch_scope_audit.md"
+RELEASE_GATE_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_checklist.json"
+RELEASE_GATE_MD = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_checklist.md"
 
 
 def main() -> int:
@@ -41,6 +43,13 @@ def main() -> int:
         errors.append("quarantined Katana row should audit ROM offset 0x07227")
 
     markdown = AUDIT_MD.read_text(encoding="utf-8")
+    release_gate = json.loads(RELEASE_GATE_JSON.read_text(encoding="utf-8"))
+    gate_status = {row.get("gate"): row.get("status") for row in release_gate.get("gates", [])}
+    if gate_status.get("candidate patch scope constrained") != "PASS":
+        errors.append(f"release gate did not record candidate patch scope PASS: {gate_status!r}")
+    release_gate_md = RELEASE_GATE_MD.read_text(encoding="utf-8")
+    if "candidate patch scope constrained | PASS | none" not in release_gate_md:
+        errors.append("release gate markdown missing patch scope PASS row")
     for text in [
         "Patch Scope Audit",
         "softgate-dev-combined",
