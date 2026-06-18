@@ -228,6 +228,74 @@
 
 These candidates are built as isolated ROM/IPS outputs only. They are not included in the cumulative dev candidate until visual proof is collected in the correct screen context.
 
+### Candidate `softgate-quarantine-05644-katana`
+
+- Build status: `PASS`
+- Risk class: `HIGH_RISK_OVERLAPS_SELECTED_DEV_SPAN`
+- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_05644_katana.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_05644_katana.ips`
+- Candidate MD5: `479c54ff09a4b6ecef6586682709f2fb`
+- Source: `カタナ` / Katana
+- Korean test string: `카타나`
+- ROM offset: `0x05644`
+- PRG bank: `1`
+- Old bytes: `82 8C 91`
+- New bytes: `88 89 8A`
+- Boot smoke classification: `PASS`
+- Visual classification: `HIGH_RISK_UNKNOWN` until Katana is visible on the item-list screen.
+- Combined dev inclusion: `no`
+
+### Candidate `softgate-quarantine-06295-katana`
+
+- Build status: `PASS`
+- Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
+- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_06295_katana.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_06295_katana.ips`
+- Candidate MD5: `41f9cd98e62e05901f20b15ae0b0836e`
+- Source: `カタナ` / Katana
+- Korean test string: `카타나`
+- ROM offset: `0x06295`
+- PRG bank: `1`
+- Old bytes: `82 8C 91`
+- New bytes: `88 89 8A`
+- Boot smoke classification: `PASS`
+- Visual classification: `HIGH_RISK_UNKNOWN` until Katana is visible on the item-list screen.
+- Combined dev inclusion: `no`
+
+### Candidate `softgate-quarantine-0631c-katana`
+
+- Build status: `PASS`
+- Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
+- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_0631c_katana.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_0631c_katana.ips`
+- Candidate MD5: `b4870e6f6e7fff1afe1d924128424237`
+- Source: `カタナ` / Katana
+- Korean test string: `카타나`
+- ROM offset: `0x0631C`
+- PRG bank: `1`
+- Old bytes: `82 8C 91`
+- New bytes: `88 89 8A`
+- Boot smoke classification: `PASS`
+- Visual classification: `HIGH_RISK_UNKNOWN` until Katana is visible on the item-list screen.
+- Combined dev inclusion: `no`
+
+### Candidate `softgate-quarantine-0635a-katana`
+
+- Build status: `PASS`
+- Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
+- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_0635a_katana.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_0635a_katana.ips`
+- Candidate MD5: `71194a85b30ed5c06ca6f5afbb6f310b`
+- Source: `カタナ` / Katana
+- Korean test string: `카타나`
+- ROM offset: `0x0635A`
+- PRG bank: `1`
+- Old bytes: `82 8C 91`
+- New bytes: `88 89 8A`
+- Boot smoke classification: `PASS`
+- Visual classification: `HIGH_RISK_UNKNOWN` until Katana is visible on the item-list screen.
+- Combined dev inclusion: `no`
+
 ### Candidate `softgate-quarantine-07227-katana`
 
 - Build status: `PASS`

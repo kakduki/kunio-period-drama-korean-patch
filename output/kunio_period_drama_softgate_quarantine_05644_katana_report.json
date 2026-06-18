@@ -1,0 +1,43 @@
+{
+  "build_id": "softgate-quarantine-05644-katana",
+  "slug": "quarantine_05644_katana",
+  "readable": {
+    "source_japanese": "カタナ",
+    "korean": "카타나",
+    "romaji": "Katana"
+  },
+  "target": {
+    "label": "rom_05644_candidate_7c",
+    "evidence_level": "static-candidate+pointer",
+    "category_group": "items/equipment",
+    "category": "무기",
+    "rom_hit": "0x05644",
+    "source": "カタナ",
+    "korean": "카타나",
+    "required_glyphs": [
+      "카",
+      "타",
+      "나"
+    ],
+    "planned_prg_bytes": [
+      "0x88",
+      "0x89",
+      "0x8A"
+    ],
+    "original_expected_bytes": "82 8C 91"
+  },
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "font_rom": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+  "candidate_rom": "output\\kunio_period_drama_softgate_quarantine_05644_katana.nes",
+  "candidate_ips": "output\\kunio_period_drama_softgate_quarantine_05644_katana.ips",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "479c54ff09a4b6ecef6586682709f2fb",
+  "rom_offset": "0x05644",
+  "prg_bank": 1,
+  "prg_offset": "0x05634",
+  "old_bytes": "82 8C 91",
+  "new_bytes": "88 89 8A",
+  "build_status": "PASS",
+  "failure_class": "",
+  "failure_reason": ""
+}
