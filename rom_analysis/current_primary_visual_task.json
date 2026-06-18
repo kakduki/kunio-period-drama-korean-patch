@@ -1,0 +1,48 @@
+{
+  "source": {
+    "next_manual_run": "rom_analysis/next_manual_run.json",
+    "primary_visual_checklist": "rom_analysis/primary_visual_checklist.json",
+    "auto_input_summary": "rom_analysis/fceux_input_explorer_v042/summary.json"
+  },
+  "summary": {
+    "target": "0x0569D",
+    "group": "Hashi",
+    "phase": "primary_v042_visual_review",
+    "decision": "NEEDS_MANUAL_VISUAL_PROOF",
+    "auto_input_byte_match": true,
+    "auto_input_context_status": "CONTEXT_REJECTED_DIALOGUE_NOT_LOCATION_LABEL",
+    "can_confirm_from_existing_auto_input": false,
+    "required_screen": "A patched-ROM screen where the Hashi bridge/stage/location label is visibly displayed.",
+    "rule": "Byte matches can guide capture work, but they do not approve visual review without the expected visible screen context."
+  },
+  "next_action": {
+    "phase": "primary_v042_visual_review",
+    "priority": 20,
+    "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
+    "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
+    "target": "0x0569D",
+    "group": "Hashi",
+    "screen_hint": "look for a bridge/stage/location label",
+    "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
+    "record_visual_review": "python scripts/record_primary_visual_review.py 0x0569D --confirm --screen-context \"look for a bridge/stage/location label visible\"",
+    "after_capture": [
+      "python scripts/refresh_after_manual_capture.py --phase primary"
+    ]
+  },
+  "primary_visual_row": {},
+  "existing_auto_input_evidence": {
+    "frame": "883",
+    "png": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png",
+    "target_records": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_target_records.tsv",
+    "record_snapshot": "85 8B 8C FF",
+    "expected_bytes": "8B 8C",
+    "visual_route_note": "Converted PNG confirms the auto-input route reached an in-game dialogue screen; this is not yet final patched-Korean visual approval.",
+    "context_rejection_reason": "The existing auto-input PNG reaches an in-game dialogue/background scene; it is not a clear bridge/stage/location label screen."
+  },
+  "commands": {
+    "preflight": "python scripts/preflight_manual_fceux.py",
+    "launch": "python scripts/run_next_manual_fceux.py",
+    "confirm_after_visible_match": "python scripts/confirm_next_primary_visual.py --confirm-visible",
+    "refresh_after_direct_fceux": "python scripts/refresh_after_manual_capture.py --phase primary"
+  }
+}

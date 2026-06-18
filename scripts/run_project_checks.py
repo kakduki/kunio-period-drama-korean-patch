@@ -36,6 +36,7 @@ KEY_PYTHON = [
     "scripts/generate_auto_input_evidence_report.py",
     "scripts/generate_auto_input_review_crops.py",
     "scripts/generate_auto_input_visual_triage.py",
+    "scripts/generate_current_primary_visual_task.py",
     "scripts/generate_katana_visual_explorer_report.py",
     "scripts/generate_katana_inventory_slot_candidates.py",
     "scripts/generate_manual_capture_cards.py",
@@ -82,6 +83,7 @@ KEY_PYTHON = [
     "scripts/test_auto_input_evidence_report.py",
     "scripts/test_auto_input_review_crops.py",
     "scripts/test_auto_input_visual_triage.py",
+    "scripts/test_current_primary_visual_task.py",
     "scripts/test_katana_visual_explorer_report.py",
     "scripts/test_katana_inventory_slot_candidates.py",
     "scripts/test_broad_patchability_v042_bytes.py",
@@ -199,6 +201,7 @@ REGEN_COMMANDS = [
     ["scripts/generate_manual_capture_status.py"],
     ["scripts/generate_manual_dump_inventory.py"],
     ["scripts/generate_next_manual_run.py"],
+    ["scripts/generate_current_primary_visual_task.py"],
     ["scripts/build_candidate_pipeline.py"],
     ["scripts/generate_release_gate_action_plan.py"],
     ["scripts/generate_patch_progress_dashboard.py"],
@@ -265,6 +268,7 @@ def main() -> int:
     run("auto-input evidence report", ["scripts/test_auto_input_evidence_report.py"])
     run("auto-input review crops", ["scripts/test_auto_input_review_crops.py"])
     run("auto-input visual triage", ["scripts/test_auto_input_visual_triage.py"])
+    run("current primary visual task", ["scripts/test_current_primary_visual_task.py"])
     run("Katana visual explorer report", ["scripts/test_katana_visual_explorer_report.py"])
     run("Katana inventory slot candidates", ["scripts/test_katana_inventory_slot_candidates.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])

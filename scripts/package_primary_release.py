@@ -68,6 +68,8 @@ MANUAL_DUMP_INVENTORY_MD = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.m
 MANUAL_CAPTURE_WORKFLOW_MD = REPO_ROOT / "rom_analysis" / "manual_capture_workflow.md"
 MANUAL_PROOF_ROUTES_JSON = REPO_ROOT / "rom_analysis" / "manual_proof_routes.json"
 MANUAL_PROOF_ROUTES_MD = REPO_ROOT / "rom_analysis" / "manual_proof_routes.md"
+CURRENT_PRIMARY_VISUAL_TASK_JSON = REPO_ROOT / "rom_analysis" / "current_primary_visual_task.json"
+CURRENT_PRIMARY_VISUAL_TASK_MD = REPO_ROOT / "rom_analysis" / "current_primary_visual_task.md"
 TRANSLATION_GLYPH_COVERAGE_JSON = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.json"
 TRANSLATION_GLYPH_COVERAGE_MD = REPO_ROOT / "rom_analysis" / "translation_glyph_coverage.md"
 TRANSLATION_PATTERN_SCAN_JSON = REPO_ROOT / "rom_analysis" / "translation_pattern_scan.json"
@@ -124,6 +126,7 @@ MANUAL_FCEUX_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_manual_fceux.py"
 RELEASE_GATE_ACTION_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_release_gate_action.py"
 PADDING_EXPERIMENT_AUDITOR = REPO_ROOT / "scripts" / "audit_padding_experiment_pipeline.py"
 PROGRESS_DASHBOARD_GENERATOR = REPO_ROOT / "scripts" / "generate_patch_progress_dashboard.py"
+CURRENT_PRIMARY_VISUAL_TASK_GENERATOR = REPO_ROOT / "scripts" / "generate_current_primary_visual_task.py"
 NEXT_MANUAL_FCEUX_RUNNER = REPO_ROOT / "scripts" / "run_next_manual_fceux.py"
 NEXT_PRIMARY_VISUAL_CONFIRMER = REPO_ROOT / "scripts" / "confirm_next_primary_visual.py"
 GD_TO_PNG_CONVERTER = REPO_ROOT / "scripts" / "convert_fceux_gd_to_png.py"
@@ -218,6 +221,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `manual_dump_inventory.md`: inventory of manual dump folders, screenshots, and target records",
         "- `manual_capture_workflow.md`: short manual FCEUX workflow with route watcher guidance",
         "- `manual_proof_routes.md`: three grouped manual routes for the current seven screen-proof candidates",
+        "- `current_primary_visual_task.md`: current single visual-proof task and why existing auto-input evidence is not enough",
         "- `route_fceux_targets.md`: route-specific FCEUX watcher files for those three manual routes",
         "- `route_proof_status.md`: current proof status for the three route-specific watchers",
         "- `release_test_checklist.md`: short apply/capture/review checklist for this bundle",
@@ -252,6 +256,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `preflight_release_gate_action.py`: checks open release-gate evidence task inputs before running them",
         "- `audit_padding_experiment_pipeline.py`: validates padding experiment evidence for shortened replacements",
         "- `generate_patch_progress_dashboard.py`: rebuilds the dashboard after evidence changes",
+        "- `generate_current_primary_visual_task.py`: rebuilds the current visual-proof task card",
         "- `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks",
         "- `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed",
         "- `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images",
@@ -424,6 +429,8 @@ def package() -> dict[str, object]:
         (MANUAL_CAPTURE_WORKFLOW_MD, "manual_capture_workflow.md"),
         (MANUAL_PROOF_ROUTES_MD, "manual_proof_routes.md"),
         (MANUAL_PROOF_ROUTES_JSON, "manual_proof_routes.json"),
+        (CURRENT_PRIMARY_VISUAL_TASK_MD, "current_primary_visual_task.md"),
+        (CURRENT_PRIMARY_VISUAL_TASK_JSON, "current_primary_visual_task.json"),
         (ROUTE_FCEUX_TARGETS_MD, "route_fceux_targets.md"),
         (ROUTE_FCEUX_TARGETS_JSON, "route_fceux_targets.json"),
         (ROUTE_PROOF_STATUS_MD, "route_proof_status.md"),
@@ -476,6 +483,7 @@ def package() -> dict[str, object]:
         (RELEASE_GATE_ACTION_PREFLIGHT, "preflight_release_gate_action.py"),
         (PADDING_EXPERIMENT_AUDITOR, "audit_padding_experiment_pipeline.py"),
         (PROGRESS_DASHBOARD_GENERATOR, "generate_patch_progress_dashboard.py"),
+        (CURRENT_PRIMARY_VISUAL_TASK_GENERATOR, "generate_current_primary_visual_task.py"),
         (NEXT_MANUAL_FCEUX_RUNNER, "run_next_manual_fceux.py"),
         (NEXT_PRIMARY_VISUAL_CONFIRMER, "confirm_next_primary_visual.py"),
         (GD_TO_PNG_CONVERTER, "convert_fceux_gd_to_png.py"),

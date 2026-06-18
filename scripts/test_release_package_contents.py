@@ -68,6 +68,9 @@ def main() -> int:
     for required_bundle_file in [
         "audit_padding_experiment_pipeline.py",
         "generate_patch_progress_dashboard.py",
+        "generate_current_primary_visual_task.py",
+        "current_primary_visual_task.md",
+        "current_primary_visual_task.json",
         "katana_single_slot_probe_0508_notes.md",
         "katana_single_slot_probe_0509_notes.md",
         "katana_runtime_state_probe_0700_itemlist_notes.md",
@@ -106,6 +109,9 @@ def main() -> int:
         for required_bundle_file in [
             "audit_padding_experiment_pipeline.py",
             "generate_patch_progress_dashboard.py",
+            "generate_current_primary_visual_task.py",
+            "current_primary_visual_task.md",
+            "current_primary_visual_task.json",
             "katana_single_slot_probe_0508_notes.md",
             "katana_single_slot_probe_0509_notes.md",
             "katana_runtime_state_probe_0700_itemlist_notes.md",

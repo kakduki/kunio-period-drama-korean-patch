@@ -27,7 +27,7 @@ This report ties the v0.4.2 scripted FCEUX route to its review image and active 
 | `0x056DA` | Hashi | look for a bridge/stage/location label | `$96C5-$96CE` | `8B 8C` | `auto_input_match_needs_visual` |
 | `0x0571C` | Hashi | look for a bridge/stage/location label | `$9706-$9714` | `8B 8C` | `auto_input_match_needs_visual` |
 | `0x057D4` | Hashi | look for a bridge/stage/location label | `$97C4-$97C8` | `8B 8C` | `auto_input_match_needs_visual` |
-| `0x07227` | Katana | look for a katana/weapon item label | `$B216-$B21A` | `88 89 8A` | `auto_input_match_needs_visual` |
+| `0x07227` | Katana | find a weapon/item list that visibly contains the Katana item; do not repeat the autoplay-route capture | `$B216-$B21A` | `88 89 8A` | `blocked_wrong_context_needs_inventory` |
 | `0x0736A` | Raifu | look for a life/status UI label | `$B359-$B35E` | `96 8E 97` | `auto_input_match_needs_visual` |
 | `0x0739D` | Raifu | look for a life/status UI label | `$B38C-$B391` | `96 8E 97` | `auto_input_match_needs_visual` |
 

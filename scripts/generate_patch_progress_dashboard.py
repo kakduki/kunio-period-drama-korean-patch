@@ -12,6 +12,7 @@ from rom_utils import REPO_ROOT
 
 PRIMARY_CONTENTS = REPO_ROOT / "rom_analysis" / "primary_patch_contents.json"
 NEXT_MANUAL_RUN = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
+CURRENT_PRIMARY_VISUAL_TASK = REPO_ROOT / "rom_analysis" / "current_primary_visual_task.json"
 PRIMARY_VISUAL = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 AUTO_INPUT_EVIDENCE = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.json"
 AUTO_INPUT_TRIAGE = REPO_ROOT / "rom_analysis" / "auto_input_visual_triage.json"
@@ -54,6 +55,7 @@ def portable(value: object) -> object:
 def make_payload() -> dict[str, object]:
     primary = load_json(PRIMARY_CONTENTS)
     next_run = load_json(NEXT_MANUAL_RUN)
+    current_visual_task = load_json(CURRENT_PRIMARY_VISUAL_TASK)
     visual = load_json(PRIMARY_VISUAL)
     auto_input = load_json(AUTO_INPUT_EVIDENCE)
     auto_triage = load_json(AUTO_INPUT_TRIAGE)
@@ -100,6 +102,7 @@ def make_payload() -> dict[str, object]:
         "source": {
             "primary_patch_contents": rel(PRIMARY_CONTENTS),
             "next_manual_run": rel(NEXT_MANUAL_RUN),
+            "current_primary_visual_task": rel(CURRENT_PRIMARY_VISUAL_TASK),
             "primary_visual_checklist": rel(PRIMARY_VISUAL),
             "auto_input_evidence_report": rel(AUTO_INPUT_EVIDENCE),
             "auto_input_visual_triage": rel(AUTO_INPUT_TRIAGE),
@@ -125,6 +128,9 @@ def make_payload() -> dict[str, object]:
             "pending_manual_actions": next_summary["action_count"],
             "pending_primary_visual_checks": next_summary["primary_visual_pending"],
             "pending_v043_route_proofs": next_summary["route_proof_pending"],
+            "current_visual_task_decision": current_visual_task["summary"].get("decision", ""),
+            "current_visual_task_context_status": current_visual_task["summary"].get("auto_input_context_status", ""),
+            "current_visual_task_required_screen": current_visual_task["summary"].get("required_screen", ""),
             "primary_auto_input_match_rows": visual["summary"].get("auto_input_match_rows", 0),
             "auto_input_latest_png": auto_input["summary"].get("latest_png_review_image", ""),
             "auto_input_matched_primary_rows": auto_input["summary"].get("matched_primary_rows", 0),
@@ -192,6 +198,9 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Pending manual actions: **{summary['pending_manual_actions']}**",
         f"- Pending primary visual checks: **{summary['pending_primary_visual_checks']}**",
         f"- Pending v0.4.3 route proofs: **{summary['pending_v043_route_proofs']}**",
+        f"- Current visual task decision: `{summary['current_visual_task_decision']}`",
+        f"- Current visual task context: `{summary['current_visual_task_context_status']}`",
+        f"- Current visual task required screen: {summary['current_visual_task_required_screen']}",
         f"- Checked-in manual dump record files: **{summary['manual_dump_record_files']}**",
         f"- Auto-input byte-match rows: **{summary['primary_auto_input_match_rows']}**",
         f"- Auto-input matched primary rows: **{summary['auto_input_matched_primary_rows']}**",
@@ -266,6 +275,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "```powershell",
         "python scripts/preflight_release_gate_action.py",
         "python scripts/preflight_manual_fceux.py",
+        "python scripts/generate_current_primary_visual_task.py",
         "python scripts/run_next_manual_fceux.py",
         "python scripts/confirm_next_primary_visual.py --confirm-visible",
         "python scripts/prepare_next_manual_run.py --powershell",

@@ -2,6 +2,7 @@
   "source": {
     "primary_patch_contents": "rom_analysis/primary_patch_contents.json",
     "next_manual_run": "rom_analysis/next_manual_run.json",
+    "current_primary_visual_task": "rom_analysis/current_primary_visual_task.json",
     "primary_visual_checklist": "rom_analysis/primary_visual_checklist.json",
     "auto_input_evidence_report": "rom_analysis/auto_input_evidence_report.json",
     "auto_input_visual_triage": "rom_analysis/auto_input_visual_triage.json",
@@ -27,6 +28,9 @@
     "pending_manual_actions": 12,
     "pending_primary_visual_checks": 9,
     "pending_v043_route_proofs": 3,
+    "current_visual_task_decision": "NEEDS_MANUAL_VISUAL_PROOF",
+    "current_visual_task_context_status": "CONTEXT_REJECTED_DIALOGUE_NOT_LOCATION_LABEL",
+    "current_visual_task_required_screen": "A patched-ROM screen where the Hashi bridge/stage/location label is visibly displayed.",
     "primary_auto_input_match_rows": 10,
     "auto_input_latest_png": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png",
     "auto_input_matched_primary_rows": 10,

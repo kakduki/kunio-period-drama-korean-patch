@@ -16,6 +16,9 @@ Single-page status for the current Korean patch work.
 - Pending manual actions: **12**
 - Pending primary visual checks: **9**
 - Pending v0.4.3 route proofs: **3**
+- Current visual task decision: `NEEDS_MANUAL_VISUAL_PROOF`
+- Current visual task context: `CONTEXT_REJECTED_DIALOGUE_NOT_LOCATION_LABEL`
+- Current visual task required screen: A patched-ROM screen where the Hashi bridge/stage/location label is visibly displayed.
 - Checked-in manual dump record files: **0**
 - Auto-input byte-match rows: **10**
 - Auto-input matched primary rows: **10**
@@ -84,6 +87,7 @@ Single-page status for the current Korean patch work.
 ```powershell
 python scripts/preflight_release_gate_action.py
 python scripts/preflight_manual_fceux.py
+python scripts/generate_current_primary_visual_task.py
 python scripts/run_next_manual_fceux.py
 python scripts/confirm_next_primary_visual.py --confirm-visible
 python scripts/prepare_next_manual_run.py --powershell
