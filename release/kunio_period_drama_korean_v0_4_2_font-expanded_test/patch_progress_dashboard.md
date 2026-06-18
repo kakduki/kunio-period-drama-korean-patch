@@ -27,6 +27,20 @@ Single-page status for the current Korean patch work.
 - Katana next step: Find or set the inventory state that makes the Katana item label appear on the reached item-list screen.
 - Katana slot next probe: Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with 0x0508.
 
+## Candidate Pipeline
+
+- Softgate dev combined: **9 strings**, `PASS`
+- Softgate dev ROM: `output\kunio_period_drama_softgate_dev_combined.nes`
+- Softgate dev IPS: `output\kunio_period_drama_softgate_dev_combined.ips`
+- Softgate dev MD5: `4905417f129726394941bed079c2e848`
+- Quarantined candidates: **5**
+- Quarantined build PASS: **5**
+- Quarantined smoke PASS: **5**
+- Padding v05 strategies: **5**
+- Padding v05 CPU PASS: **5**
+- Padding v05 strict PPU PASS: **0**
+- Padding decisions: `UNKNOWN_VISUAL_PADDING_RULE`
+
 ## v0.4.3 Gate
 
 - Candidate rows: **7**
@@ -51,6 +65,8 @@ Single-page status for the current Korean patch work.
 - v0.4.3 candidates have no base-ROM CPU-read proof yet.
 - v0.4.3 candidates have no visual-context confirmations yet.
 - No checked-in manual FCEUX dump records exist yet.
+- High-risk/quarantined candidates require visual proof before dev/release merge.
+- Shortened padding-rule candidates have CPU evidence but no strict PPU/visual acceptance yet.
 
 ## Useful Commands
 

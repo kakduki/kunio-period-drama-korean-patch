@@ -18,6 +18,7 @@ DECISION_MATRIX_JSON = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.json"
 DECISION_MATRIX_MD = REPO_ROOT / "rom_analysis" / "patch_decision_matrix.md"
 PROGRESS_DASHBOARD_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
 PROGRESS_DASHBOARD_MD = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.md"
+CANDIDATE_PIPELINE_DIR = REPO_ROOT / "rom_analysis" / "candidate_pipeline"
 AUTO_INPUT_EVIDENCE_JSON = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.json"
 AUTO_INPUT_EVIDENCE_MD = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.md"
 AUTO_INPUT_REVIEW_CROPS_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "review_crops.json"
@@ -168,6 +169,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "",
         f"- `{ips_name}`: primary IPS patch",
         "- `patch_progress_dashboard.md`: one-page current status, blockers, and next action",
+        "- `candidate_pipeline/`: soft-gate build matrix, string candidates, smoke logs, quarantine notes, and padding experiment audits",
         "- `patch_candidate_manifest.md`: candidate status and verification notes",
         "- `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS",
         "- `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS",
@@ -484,6 +486,12 @@ def package() -> dict[str, object]:
         dst = bundle_dir / "auto_input_review_crops" / src.name
         safe_copy(src, dst)
         copied_files.append(dst)
+
+    for src in sorted(CANDIDATE_PIPELINE_DIR.rglob("*")):
+        if src.is_file():
+            dst = bundle_dir / "candidate_pipeline" / src.relative_to(CANDIDATE_PIPELINE_DIR)
+            safe_copy(src, dst)
+            copied_files.append(dst)
 
     readme_path = bundle_dir / "README.md"
     write_release_readme(readme_path, summary, ips_path.name)

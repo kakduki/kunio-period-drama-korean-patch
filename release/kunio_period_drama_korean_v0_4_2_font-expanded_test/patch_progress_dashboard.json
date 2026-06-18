@@ -8,7 +8,10 @@
     "katana_visual_explorer": "rom_analysis/katana_visual_explorer_v042/report.json",
     "katana_inventory_slot_candidates": "rom_analysis/katana_inventory_slot_candidates.json",
     "v043_proof_status": "rom_analysis/v043_proof_status.json",
-    "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json"
+    "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json",
+    "candidate_combined_report": "output/kunio_period_drama_softgate_dev_combined_report.json",
+    "high_risk_candidates": "rom_analysis/candidate_pipeline/high_risk_candidates.csv",
+    "padding_experiment_matrix": "rom_analysis/candidate_pipeline/padding_experiment_matrix.json"
   },
   "summary": {
     "primary_candidate": "v0.4.2 font-expanded",
@@ -40,12 +43,28 @@
     "v043_visual_confirmations": 0,
     "v043_applied_rows": 0,
     "manual_dump_record_files": 0,
+    "softgate_dev_combined_status": "PASS",
+    "softgate_dev_combined_strings": 9,
+    "softgate_dev_combined_md5": "4905417f129726394941bed079c2e848",
+    "softgate_dev_combined_rom": "output\\kunio_period_drama_softgate_dev_combined.nes",
+    "softgate_dev_combined_ips": "output\\kunio_period_drama_softgate_dev_combined.ips",
+    "quarantined_candidate_count": 5,
+    "quarantined_build_pass_count": 5,
+    "quarantined_smoke_pass_count": 5,
+    "padding_v05_strategy_count": 5,
+    "padding_v05_cpu_pass_count": 5,
+    "padding_v05_ppu_pass_count": 0,
+    "padding_v05_decisions": [
+      "UNKNOWN_VISUAL_PADDING_RULE"
+    ],
     "release_ready": false,
     "release_blockers": [
       "Primary v0.4.2 rows still need visible-screen review.",
       "v0.4.3 candidates have no base-ROM CPU-read proof yet.",
       "v0.4.3 candidates have no visual-context confirmations yet.",
-      "No checked-in manual FCEUX dump records exist yet."
+      "No checked-in manual FCEUX dump records exist yet.",
+      "High-risk/quarantined candidates require visual proof before dev/release merge.",
+      "Shortened padding-rule candidates have CPU evidence but no strict PPU/visual acceptance yet."
     ]
   },
   "next_action": {

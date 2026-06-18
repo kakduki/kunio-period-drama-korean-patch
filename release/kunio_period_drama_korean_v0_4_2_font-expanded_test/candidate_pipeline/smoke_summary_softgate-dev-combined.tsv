@@ -1,0 +1,14 @@
+frame	reason	ppu_writes	last_ppu_addr	stem
+0	lua_start	0	0000	callback_mode=true
+0	periodic	0	0000	kunio_fceux_lua_output/frame_000000_001_periodic
+1	periodic	0	0000	kunio_fceux_lua_output/frame_000001_002_periodic
+33	ppu_burst	38	0000	kunio_fceux_lua_output/frame_000033_003_ppu_burst
+95	ppu_burst	46	0000	kunio_fceux_lua_output/frame_000095_004_ppu_burst
+125	ppu_burst	46	0000	kunio_fceux_lua_output/frame_000125_005_ppu_burst
+233	ppu_burst	72	0000	kunio_fceux_lua_output/frame_000233_006_ppu_burst
+284	ppu_burst	46	0000	kunio_fceux_lua_output/frame_000284_007_ppu_burst
+314	ppu_burst	254	20A1	kunio_fceux_lua_output/frame_000314_008_ppu_burst
+601	periodic	2	0000	kunio_fceux_lua_output/frame_000601_009_periodic
+653	ppu_burst	72	0000	kunio_fceux_lua_output/frame_000653_010_ppu_burst
+900	final	2	0000	kunio_fceux_lua_output/frame_000900_011_final
+900	lua_done	0	0000	11_dumps

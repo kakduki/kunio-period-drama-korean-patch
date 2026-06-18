@@ -1,0 +1,122 @@
+# Candidate Smoke Test Log
+
+[softgate-0562f-tatsuichi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0562f_tatsuichi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary.tsv
+
+[softgate-05643-heishichi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_05643_heishichi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-05643-heishichi.tsv
+
+[softgate-0561a-hashi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0561a_hashi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0561a-hashi.tsv
+
+[softgate-0569d-hashi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0569d_hashi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0569d-hashi.tsv
+
+[softgate-056da-hashi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_056da_hashi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-056da-hashi.tsv
+
+[softgate-0571c-hashi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0571c_hashi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0571c-hashi.tsv
+
+[softgate-057d4-hashi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_057d4_hashi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-057d4-hashi.tsv
+
+[softgate-0736a-raifu]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0736a_raifu.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0736a-raifu.tsv
+
+[softgate-0739d-raifu]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0739d_raifu.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0739d-raifu.tsv
+
+[softgate-dev-combined]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_dev_combined.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-dev-combined.tsv
+
+[softgate-quarantine-05644-katana]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_quarantine_05644_katana.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-05644-katana.tsv
+
+[softgate-quarantine-06295-katana]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_quarantine_06295_katana.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-06295-katana.tsv
+
+[softgate-quarantine-0631c-katana]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_quarantine_0631c_katana.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-0631c-katana.tsv
+
+[softgate-quarantine-0635a-katana]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_quarantine_0635a_katana.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-0635a-katana.tsv
+
+[softgate-quarantine-07227-katana]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_quarantine_07227_katana.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-07227-katana.tsv
+
