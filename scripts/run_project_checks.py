@@ -17,6 +17,7 @@ KEY_PYTHON = [
     "scripts/analyze_manual_screen_dump.py",
     "scripts/apply_primary_patch.py",
     "scripts/apply_ips_standalone.py",
+    "scripts/audit_padding_experiment_pipeline.py",
     "scripts/build_prg_patch_from_plan.py",
     "scripts/build_next_glyph_expansion_candidate.py",
     "scripts/build_broad_preview_candidate.py",
