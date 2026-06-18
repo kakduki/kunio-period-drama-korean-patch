@@ -282,7 +282,7 @@ def write_smoke_log_placeholder(report: dict[str, object]) -> None:
             "reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.",
             f"candidate_rom={report['candidate_rom']}",
             "lua_script=lua/kunio_auto_dump.lua",
-            "summary=rom_analysis/candidate_pipeline_smoke/summary.tsv",
+            "summary=rom_analysis/candidate_pipeline/smoke_summary.tsv",
         ]
         SMOKE_LOG.write_text("\n".join(lines) + "\n", encoding="utf-8")
         return
