@@ -80,3 +80,11 @@ candidate_rom=output\kunio_period_drama_softgate_dev_combined.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-dev-combined.tsv
 
+[softgate-quarantine-07227-katana]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_quarantine_07227_katana.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-07227-katana.tsv
+

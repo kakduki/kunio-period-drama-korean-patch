@@ -1,0 +1,2 @@
+build_id,rom_offset,prg_bank,source_japanese,korean,romaji,risk_class,build_status,boot_smoke,decision
+softgate-quarantine-07227-katana,0x07227,1,カタナ,카타나,Katana,HIGH_RISK_VISUAL_CONTEXT_PENDING,PASS,PASS,quarantined; not included in softgate-dev-combined until visual item-list proof exists

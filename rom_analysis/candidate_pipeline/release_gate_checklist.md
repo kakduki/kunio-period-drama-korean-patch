@@ -13,6 +13,7 @@ Hard gates apply only to release candidates, not to soft-gated development build
 ## Release Hard Gate
 
 - [ ] Manual visual proof for every release-included string.
+- [ ] Manual visual proof for every high-risk/quarantined string before merging into the dev candidate.
 - [ ] No known false-positive or ambiguous byte ranges patched.
 - [ ] Base ROM hash and patched ROM hash documented.
 - [ ] IPS applies cleanly from a clean base ROM.

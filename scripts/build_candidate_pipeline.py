@@ -16,6 +16,7 @@ OUT_DIR = REPO_ROOT / "rom_analysis" / "candidate_pipeline"
 BUILD_MATRIX = OUT_DIR / "build_matrix.md"
 STRING_CANDIDATES = OUT_DIR / "string_candidates.csv"
 FALSE_POSITIVES = OUT_DIR / "false_positive_list.csv"
+HIGH_RISK_CANDIDATES = OUT_DIR / "high_risk_candidates.csv"
 PATCHED_REPORT = OUT_DIR / "patched_rom_report.md"
 SMOKE_LOG = OUT_DIR / "smoke_test_log.txt"
 RELEASE_GATE = OUT_DIR / "release_gate_checklist.md"
@@ -121,6 +122,19 @@ CANDIDATES = [
         "selection_reason": "active on the same real dialogue screen; equal-length planned bytes; UI/status context",
     },
 ]
+QUARANTINED_CANDIDATES = [
+    {
+        "build_id": "softgate-quarantine-07227-katana",
+        "slug": "quarantine_07227_katana",
+        "rom_hit": "0x07227",
+        "label_prefix": "rom_07227_candidate_84",
+        "source_japanese": "\u30ab\u30bf\u30ca",
+        "korean": "\uce74\ud0c0\ub098",
+        "romaji": "Katana",
+        "selection_reason": "runtime-confirmed in earlier item-menu watch, but not visually readable in the current frame 883 dialogue screen; quarantine only",
+        "risk_class": "HIGH_RISK_VISUAL_CONTEXT_PENDING",
+    },
+]
 
 
 def md5(data: bytes) -> str:
@@ -144,6 +158,14 @@ def prg_bank(rom_offset: int) -> int:
 def candidate_by_rom_hit(rom_hit: str) -> dict[str, object] | None:
     normalized = rom_hit.upper()
     for candidate in CANDIDATES:
+        if str(candidate["rom_hit"]).upper() == normalized:
+            return candidate
+    return None
+
+
+def quarantined_candidate_by_rom_hit(rom_hit: str) -> dict[str, object] | None:
+    normalized = rom_hit.upper()
+    for candidate in QUARANTINED_CANDIDATES:
         if str(candidate["rom_hit"]).upper() == normalized:
             return candidate
     return None
@@ -311,22 +333,24 @@ def write_string_candidates(records: list[dict[str, str]]) -> None:
     for record in records:
         rom_hit = record["rom_hit"].replace("ROM+", "")
         candidate = candidate_by_rom_hit(rom_hit)
+        quarantined = quarantined_candidate_by_rom_hit(rom_hit)
+        readable = candidate or quarantined
         rows.append(
             {
-                "selected": "yes" if candidate else "no",
+                "selected": "yes" if candidate else "quarantine" if quarantined else "no",
                 "rom_offset": rom_hit,
                 "prg_bank": prg_bank(int(rom_hit, 16)),
                 "screen_context": "fceux_input_explorer_v042 frame 883 dialogue screen",
                 "label": record["label"],
                 "category": record["category"],
-                "source_japanese": candidate["source_japanese"] if candidate else "",
-                "korean": candidate["korean"] if candidate else "",
-                "romaji": candidate["romaji"] if candidate else "",
+                "source_japanese": readable["source_japanese"] if readable else "",
+                "korean": readable["korean"] if readable else "",
+                "romaji": readable["romaji"] if readable else "",
                 "cpu_range": record["cpu_range"],
                 "expected_bytes": record["expected_bytes"],
                 "active_expected_match": record["active_expected_match"],
-                "selection_reason": candidate["selection_reason"]
-                if candidate
+                "selection_reason": readable["selection_reason"]
+                if readable
                 else "deferred to avoid broad or ambiguous multi-string patching in this pipeline pass",
             }
         )
@@ -342,6 +366,8 @@ def write_false_positive_list(records: list[dict[str, str]]) -> None:
     for record in records:
         rom_hit = record["rom_hit"].replace("ROM+", "")
         if candidate_by_rom_hit(rom_hit):
+            continue
+        if quarantined_candidate_by_rom_hit(rom_hit):
             continue
         risk = "DEFERRED_NOT_FALSE_POSITIVE"
         reason = "active bytes are present, but this pass patches only one known string"
@@ -363,7 +389,49 @@ def write_false_positive_list(records: list[dict[str, str]]) -> None:
         writer.writerows(rows)
 
 
-def write_build_matrix(reports: list[dict[str, object]], combined_report: dict[str, object]) -> None:
+def write_high_risk_candidates(quarantined_reports: list[dict[str, object]]) -> None:
+    fieldnames = [
+        "build_id",
+        "rom_offset",
+        "prg_bank",
+        "source_japanese",
+        "korean",
+        "romaji",
+        "risk_class",
+        "build_status",
+        "boot_smoke",
+        "decision",
+    ]
+    rows = []
+    for report in quarantined_reports:
+        candidate = next(
+            candidate for candidate in QUARANTINED_CANDIDATES if candidate["build_id"] == report["build_id"]
+        )
+        rows.append(
+            {
+                "build_id": report["build_id"],
+                "rom_offset": report["rom_offset"],
+                "prg_bank": report["prg_bank"],
+                "source_japanese": report["readable"]["source_japanese"],
+                "korean": report["readable"]["korean"],
+                "romaji": report["readable"]["romaji"],
+                "risk_class": candidate["risk_class"],
+                "build_status": report["build_status"],
+                "boot_smoke": smoke_status_from_summary(str(report["build_id"])),
+                "decision": "quarantined; not included in softgate-dev-combined until visual item-list proof exists",
+            }
+        )
+    with HIGH_RISK_CANDIDATES.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_build_matrix(
+    reports: list[dict[str, object]],
+    combined_report: dict[str, object],
+    quarantined_reports: list[dict[str, object]],
+) -> None:
     lines = [
         "# Build Matrix",
         "",
@@ -389,6 +457,19 @@ def write_build_matrix(reports: list[dict[str, object]], combined_report: dict[s
         "`multiple` | 1 | cumulative equal-length PRG bytes + existing font expansion | "
         f"{combined_report['build_status']} | {combined_smoke} | soft gate only | cumulative dev candidate produced |"
     )
+    for report in quarantined_reports:
+        smoke_status = smoke_status_from_summary(str(report["build_id"]))
+        candidate = next(
+            candidate for candidate in QUARANTINED_CANDIDATES if candidate["build_id"] == report["build_id"]
+        )
+        lines.append(
+            "| "
+            f"`{report['build_id']}` | quarantined one string | "
+            "`item-menu/runtime watch evidence; visual context pending` | "
+            f"`{report['rom_offset']}` | {report['prg_bank']} | equal-length PRG bytes + existing font expansion | "
+            f"{report['build_status']} | {smoke_status} | required before release/dev merge | "
+            f"{candidate['risk_class']} |"
+        )
     lines += [
         "",
         "## Notes",
@@ -400,6 +481,12 @@ def write_build_matrix(reports: list[dict[str, object]], combined_report: dict[s
             f"- `{report['build_id']}` source string: "
             f"`{readable['source_japanese']}` / `{readable['korean']}` / {readable['romaji']}"
         )
+    for report in quarantined_reports:
+        readable = report["readable"]
+        lines.append(
+            f"- `{report['build_id']}` quarantined source string: "
+            f"`{readable['source_japanese']}` / `{readable['korean']}` / {readable['romaji']}"
+        )
     lines += [
         f"- Source screenshot: `{SCREENSHOT.relative_to(REPO_ROOT).as_posix()}`",
         "- This matrix intentionally does not require manual visual proof for development candidates.",
@@ -407,7 +494,11 @@ def write_build_matrix(reports: list[dict[str, object]], combined_report: dict[s
     BUILD_MATRIX.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def write_patched_report(reports: list[dict[str, object]], combined_report: dict[str, object]) -> None:
+def write_patched_report(
+    reports: list[dict[str, object]],
+    combined_report: dict[str, object],
+    quarantined_reports: list[dict[str, object]],
+) -> None:
     lines = [
         "# Patched ROM Report",
         "",
@@ -462,6 +553,37 @@ def write_patched_report(reports: list[dict[str, object]], combined_report: dict
             f"| `{row['rom_offset']}` | `{row['source_japanese']}` | `{row['korean']}` | "
             f"{row['romaji']} | `{row['old_bytes']}` | `{row['new_bytes']}` |"
         )
+    lines += [
+        "",
+        "## Quarantined High-Risk Candidates",
+        "",
+        "These candidates are built as isolated ROM/IPS outputs only. They are not included in the cumulative dev candidate until visual proof is collected in the correct screen context.",
+        "",
+    ]
+    for report in quarantined_reports:
+        readable = report["readable"]
+        candidate = next(
+            candidate for candidate in QUARANTINED_CANDIDATES if candidate["build_id"] == report["build_id"]
+        )
+        lines += [
+            f"### Candidate `{report['build_id']}`",
+            "",
+            f"- Build status: `{report['build_status']}`",
+            f"- Risk class: `{candidate['risk_class']}`",
+            f"- Candidate ROM: `{report['candidate_rom']}`",
+            f"- Candidate IPS: `{report['candidate_ips']}`",
+            f"- Candidate MD5: `{report['candidate_md5']}`",
+            f"- Source: `{readable['source_japanese']}` / {readable['romaji']}",
+            f"- Korean test string: `{readable['korean']}`",
+            f"- ROM offset: `{report['rom_offset']}`",
+            f"- PRG bank: `{report['prg_bank']}`",
+            f"- Old bytes: `{report['old_bytes']}`",
+            f"- New bytes: `{report['new_bytes']}`",
+            f"- Boot smoke classification: `{smoke_status_from_summary(str(report['build_id']))}`",
+            "- Visual classification: `HIGH_RISK_UNKNOWN` until Katana is visible on the item-list screen.",
+            "- Combined dev inclusion: `no`",
+            "",
+        ]
     lines.append("")
     PATCHED_REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -480,8 +602,16 @@ def smoke_status_from_summary(build_id: str) -> str:
     return "FAIL"
 
 
-def write_release_gate_checklist(reports: list[dict[str, object]], combined_report: dict[str, object]) -> None:
-    smoke_ids = [str(report["build_id"]) for report in reports] + [str(combined_report["build_id"])]
+def write_release_gate_checklist(
+    reports: list[dict[str, object]],
+    combined_report: dict[str, object],
+    quarantined_reports: list[dict[str, object]],
+) -> None:
+    smoke_ids = (
+        [str(report["build_id"]) for report in reports]
+        + [str(combined_report["build_id"])]
+        + [str(report["build_id"]) for report in quarantined_reports]
+    )
     smoke_checked = "x" if all(smoke_status_from_summary(build_id) == "PASS" for build_id in smoke_ids) else " "
     lines = [
         "# Release Gate Checklist",
@@ -499,6 +629,7 @@ def write_release_gate_checklist(reports: list[dict[str, object]], combined_repo
         "## Release Hard Gate",
         "",
         "- [ ] Manual visual proof for every release-included string.",
+        "- [ ] Manual visual proof for every high-risk/quarantined string before merging into the dev candidate.",
         "- [ ] No known false-positive or ambiguous byte ranges patched.",
         "- [ ] Base ROM hash and patched ROM hash documented.",
         "- [ ] IPS applies cleanly from a clean base ROM.",
@@ -508,9 +639,13 @@ def write_release_gate_checklist(reports: list[dict[str, object]], combined_repo
     RELEASE_GATE.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def write_smoke_log_placeholder(reports: list[dict[str, object]], combined_report: dict[str, object]) -> None:
+def write_smoke_log_placeholder(
+    reports: list[dict[str, object]],
+    combined_report: dict[str, object],
+    quarantined_reports: list[dict[str, object]],
+) -> None:
     lines = ["# Candidate Smoke Test Log", ""]
-    for report in [*reports, combined_report]:
+    for report in [*reports, combined_report, *quarantined_reports]:
         build_id = str(report["build_id"])
         smoke_status = smoke_status_from_summary(build_id)
         failure_class = "none" if smoke_status == "PASS" else "NOT_RUN"
@@ -535,9 +670,18 @@ def write_smoke_log_placeholder(reports: list[dict[str, object]], combined_repor
     SMOKE_LOG.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def write_json_reports(reports: list[dict[str, object]], combined_report: dict[str, object]) -> None:
+def write_json_reports(
+    reports: list[dict[str, object]],
+    combined_report: dict[str, object],
+    quarantined_reports: list[dict[str, object]],
+) -> None:
     for report in reports:
         candidate = next(candidate for candidate in CANDIDATES if candidate["build_id"] == report["build_id"])
+        output_report_path(candidate).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for report in quarantined_reports:
+        candidate = next(
+            candidate for candidate in QUARANTINED_CANDIDATES if candidate["build_id"] == report["build_id"]
+        )
         output_report_path(candidate).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     COMBINED_REPORT.write_text(json.dumps(combined_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -545,18 +689,23 @@ def write_json_reports(reports: list[dict[str, object]], combined_report: dict[s
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     reports = []
+    quarantined_reports = []
     records = load_active_records()
     for candidate in CANDIDATES:
         target = load_plan_target(candidate)
         reports.append(build_candidate_rom(candidate, target))
+    for candidate in QUARANTINED_CANDIDATES:
+        target = load_plan_target(candidate)
+        quarantined_reports.append(build_candidate_rom(candidate, target))
     combined_report = build_combined_rom(reports)
     write_string_candidates(records)
     write_false_positive_list(records)
-    write_build_matrix(reports, combined_report)
-    write_patched_report(reports, combined_report)
-    write_smoke_log_placeholder(reports, combined_report)
-    write_release_gate_checklist(reports, combined_report)
-    write_json_reports(reports, combined_report)
+    write_high_risk_candidates(quarantined_reports)
+    write_build_matrix(reports, combined_report, quarantined_reports)
+    write_patched_report(reports, combined_report, quarantined_reports)
+    write_smoke_log_placeholder(reports, combined_report, quarantined_reports)
+    write_release_gate_checklist(reports, combined_report, quarantined_reports)
+    write_json_reports(reports, combined_report, quarantined_reports)
     print("build_status=" + ",".join(f"{report['build_id']}:{report['build_status']}" for report in reports))
     for report in reports:
         print(f"candidate_rom={report['candidate_rom']}")
@@ -564,8 +713,18 @@ def main() -> int:
     print(f"combined_build_status={combined_report['build_status']}")
     print(f"combined_candidate_rom={combined_report['candidate_rom']}")
     print(f"combined_candidate_ips={combined_report['candidate_ips']}")
+    print("quarantined_build_status=" + ",".join(f"{report['build_id']}:{report['build_status']}" for report in quarantined_reports))
+    for report in quarantined_reports:
+        print(f"quarantined_candidate_rom={report['candidate_rom']}")
+        print(f"quarantined_candidate_ips={report['candidate_ips']}")
     print(f"artifacts={OUT_DIR.relative_to(REPO_ROOT)}")
-    return 0 if all(report["build_status"] == "PASS" for report in reports) and combined_report["build_status"] == "PASS" else 1
+    return (
+        0
+        if all(report["build_status"] == "PASS" for report in reports)
+        and combined_report["build_status"] == "PASS"
+        and all(report["build_status"] == "PASS" for report in quarantined_reports)
+        else 1
+    )
 
 
 if __name__ == "__main__":

@@ -1,2 +1,1 @@
 rom_offset,label,risk_class,reason,action
-0x07227,v04_rom_07227_candidate_84,VISUAL_CONTEXT_AMBIGUOUS,active in CPU memory but not the visibly readable bottom dialogue string in frame 883,do not patch in current single-string build

@@ -224,3 +224,25 @@
 | `0x0736A` | `ライフ` | `라이프` | Raifu | `BB 95 AF` | `96 8E 97` |
 | `0x0739D` | `ライフ` | `라이프` | Raifu | `BB 95 AF` | `96 8E 97` |
 
+## Quarantined High-Risk Candidates
+
+These candidates are built as isolated ROM/IPS outputs only. They are not included in the cumulative dev candidate until visual proof is collected in the correct screen context.
+
+### Candidate `softgate-quarantine-07227-katana`
+
+- Build status: `PASS`
+- Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
+- Candidate ROM: `output\kunio_period_drama_softgate_quarantine_07227_katana.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_quarantine_07227_katana.ips`
+- Candidate MD5: `dfd1888d4cad7f443d168318cd7e0ae5`
+- Source: `カタナ` / Katana
+- Korean test string: `카타나`
+- ROM offset: `0x07227`
+- PRG bank: `1`
+- Old bytes: `8A 94 99`
+- New bytes: `88 89 8A`
+- Boot smoke classification: `PASS`
+- Visual classification: `HIGH_RISK_UNKNOWN` until Katana is visible on the item-list screen.
+- Combined dev inclusion: `no`
+
+
