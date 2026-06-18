@@ -61,6 +61,16 @@ CANDIDATES = [
         "selection_reason": "active on the same real dialogue screen; equal-length planned bytes; encoding-exact stage/location label",
     },
     {
+        "build_id": "softgate-057d4-hashi",
+        "slug": "057d4_hashi",
+        "rom_hit": "0x057D4",
+        "label_prefix": "watch_rom_057d4_",
+        "source_japanese": "\u306f\u3057",
+        "korean": "\ub2e4\ub9ac",
+        "romaji": "Hashi",
+        "selection_reason": "active on the same real dialogue screen; equal-length planned bytes; pointer-backed stage/location label",
+    },
+    {
         "build_id": "softgate-0736a-raifu",
         "slug": "0736a_raifu",
         "rom_hit": "0x0736A",
