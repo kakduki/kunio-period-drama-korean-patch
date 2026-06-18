@@ -34,6 +34,7 @@ KATANA_ITEM_LIST_RECORDS = REPO_ROOT / "rom_analysis" / "katana_visual_explorer_
 KATANA_INVENTORY_PROBE_NOTES = REPO_ROOT / "rom_analysis" / "katana_inventory_probe_notes.md"
 KATANA_SLOT_CANDIDATES_JSON = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.json"
 KATANA_SLOT_CANDIDATES_MD = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.md"
+KATANA_SINGLE_SLOT_0502_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -106,6 +107,7 @@ KATANA_EXPLORER_REPORT_GENERATOR = REPO_ROOT / "scripts" / "generate_katana_visu
 KATANA_SLOT_CANDIDATES_GENERATOR = REPO_ROOT / "scripts" / "generate_katana_inventory_slot_candidates.py"
 LUA_KATANA_VISUAL_EXPLORER = REPO_ROOT / "lua" / "kunio_katana_visual_explorer_v042.lua"
 LUA_KATANA_INVENTORY_PROBE = REPO_ROOT / "lua" / "kunio_katana_inventory_probe_v042.lua"
+LUA_KATANA_SINGLE_SLOT_PROBE = REPO_ROOT / "lua" / "kunio_katana_single_slot_probe_v042.lua"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
@@ -156,6 +158,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `katana_visual_explorer_report.md`: focused route evidence that reaches the item list for the Katana visual target",
         "- `katana_inventory_probe_notes.md`: failed broad-injection probe notes for the Katana item-list state",
         "- `katana_inventory_slot_candidates.md`: narrowed address list for the next Katana inventory probe",
+        "- `katana_single_slot_probe_0502_notes.md`: result of testing `$0502` alone",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -330,6 +333,7 @@ def package() -> dict[str, object]:
         (KATANA_INVENTORY_PROBE_NOTES, "katana_inventory_probe_notes.md"),
         (KATANA_SLOT_CANDIDATES_MD, "katana_inventory_slot_candidates.md"),
         (KATANA_SLOT_CANDIDATES_JSON, "katana_inventory_slot_candidates.json"),
+        (KATANA_SINGLE_SLOT_0502_NOTES, "katana_single_slot_probe_0502_notes.md"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
@@ -400,6 +404,7 @@ def package() -> dict[str, object]:
         (KATANA_SLOT_CANDIDATES_GENERATOR, "generate_katana_inventory_slot_candidates.py"),
         (LUA_KATANA_VISUAL_EXPLORER, "lua/kunio_katana_visual_explorer_v042.lua"),
         (LUA_KATANA_INVENTORY_PROBE, "lua/kunio_katana_inventory_probe_v042.lua"),
+        (LUA_KATANA_SINGLE_SLOT_PROBE, "lua/kunio_katana_single_slot_probe_v042.lua"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),

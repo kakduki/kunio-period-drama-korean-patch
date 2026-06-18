@@ -13,6 +13,7 @@ def test_candidate_report_excludes_menu_state() -> None:
     assert rows["0x7700"]["classification"] == "exclude_menu_state"
     assert rows["0x0502"]["classification"] == "candidate_small_probe"
     assert payload["summary"]["classification_counts"]["candidate_small_probe"] == 5
+    assert payload["summary"]["completed_single_slot_probes"] == ["0x0502"]
 
 
 def test_candidate_markdown_names_next_probe() -> None:
@@ -21,7 +22,7 @@ def test_candidate_markdown_names_next_probe() -> None:
     text = OUT_MD.read_text(encoding="utf-8")
 
     assert "# Katana Inventory Slot Candidates" in text
-    assert "starting at 0x0502" in text
+    assert "continue with 0x0503" in text
     assert "`exclude_menu_state`" in text
 
 

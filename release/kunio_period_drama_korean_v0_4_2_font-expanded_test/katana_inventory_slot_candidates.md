@@ -5,7 +5,8 @@ This ranks the addresses from the failed temporary-state probe so the next run c
 ## Summary
 
 - Probed addresses: **19**
-- Recommended next probe: Try one candidate_small_probe address at a time, starting at 0x0502, and do not write broad SRAM/menu-control ranges.
+- Completed single-slot probes: 0x0502
+- Recommended next probe: Try one candidate_small_probe address at a time. 0x0502 was tested alone and did not show the Katana label; continue with 0x0503.
 
 | classification | count |
 | --- | ---: |

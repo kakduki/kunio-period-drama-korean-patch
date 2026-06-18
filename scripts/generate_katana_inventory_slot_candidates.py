@@ -16,6 +16,7 @@ MENU_SRAM = RUN_DIR / "manual_frame_001906_sram_6000_7fff.bin"
 ITEM_SRAM = RUN_DIR / "manual_frame_002385_sram_6000_7fff.bin"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.md"
+SINGLE_SLOT_0502_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md"
 
 
 PROBED_ADDRESSES = [
@@ -109,7 +110,8 @@ def make_payload() -> dict[str, object]:
         "summary": {
             "probed_addresses": len(rows),
             "classification_counts": counts,
-            "recommended_next_probe": "Try one candidate_small_probe address at a time, starting at 0x0502, and do not write broad SRAM/menu-control ranges.",
+            "completed_single_slot_probes": ["0x0502"] if SINGLE_SLOT_0502_NOTES.exists() else [],
+            "recommended_next_probe": "Try one candidate_small_probe address at a time. 0x0502 was tested alone and did not show the Katana label; continue with 0x0503.",
         },
         "rows": rows,
     }
@@ -125,6 +127,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "## Summary",
         "",
         f"- Probed addresses: **{summary['probed_addresses']}**",
+        f"- Completed single-slot probes: {', '.join(summary['completed_single_slot_probes']) or '-'}",
         f"- Recommended next probe: {summary['recommended_next_probe']}",
         "",
         "| classification | count |",
