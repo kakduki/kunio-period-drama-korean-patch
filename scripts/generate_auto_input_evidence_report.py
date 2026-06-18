@@ -10,6 +10,7 @@ from rom_utils import REPO_ROOT
 
 
 SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "summary.json"
+REVIEW_CROPS_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "review_crops.json"
 PRIMARY_VISUAL_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.md"
@@ -41,7 +42,14 @@ def normalize_rom(value: object) -> str:
 
 def make_payload() -> dict[str, object]:
     summary = load_json(SUMMARY_JSON)
+    review_crops = load_json(REVIEW_CROPS_JSON) if REVIEW_CROPS_JSON.exists() else {"crops": []}
     visual_rows = visual_rows_by_rom()
+    latest_png = rel(str(summary.get("latest_png_review_image", "")))
+    latest_stem = Path(latest_png).stem
+    latest_crops = [
+        crop for crop in review_crops.get("crops", [])
+        if isinstance(crop, dict) and Path(str(crop.get("path", ""))).stem.startswith(latest_stem)
+    ]
     matched_rows = []
     for match in summary.get("active_matches", []):
         if not isinstance(match, dict):
@@ -71,7 +79,9 @@ def make_payload() -> dict[str, object]:
             "active_expected_matches": summary.get("active_expected_matches"),
             "matched_primary_rows": len(matched_rows),
             "latest_screenshot": rel(str(summary.get("latest_screenshot", ""))),
-            "latest_png_review_image": rel(str(summary.get("latest_png_review_image", ""))),
+            "latest_png_review_image": latest_png,
+            "review_crops": rel(str(REVIEW_CROPS_JSON.relative_to(REPO_ROOT))) if REVIEW_CROPS_JSON.exists() else "",
+            "latest_crop_count": len(latest_crops),
             "latest_meta": rel(str(summary.get("latest_meta", ""))),
             "route_note": summary.get("visual_route_note", ""),
             "current_limit": (
@@ -80,6 +90,7 @@ def make_payload() -> dict[str, object]:
                 "are visually correct."
             ),
         },
+        "latest_crops": latest_crops,
         "matched_rows": matched_rows,
     }
 
@@ -99,6 +110,8 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Matched primary rows: **{summary['matched_primary_rows']}**",
         f"- Latest screenshot: `{summary['latest_screenshot']}`",
         f"- PNG review image: `{summary['latest_png_review_image']}`",
+        f"- Review crops: `{summary['review_crops']}`",
+        f"- Latest-frame crops: **{summary['latest_crop_count']}**",
         f"- Metadata: `{summary['latest_meta']}`",
         f"- Route note: {summary['route_note']}",
         f"- Current limit: {summary['current_limit']}",
@@ -112,6 +125,17 @@ def write_markdown(payload: dict[str, object]) -> None:
         lines.append(
             f"| `{row['rom_hit']}` | {row['romaji'] or '-'} | {row['screen_hint'] or '-'} | "
             f"`{row['cpu_range']}` | `{row['expected_bytes']}` | `{row['review_status']}` |"
+        )
+    lines += [
+        "",
+        "## Latest-Frame Crops",
+        "",
+        "| crop | image | region |",
+        "| --- | --- | --- |",
+    ]
+    for row in payload["latest_crops"]:
+        lines.append(
+            f"| `{row['crop']}` | `{row['path']}` | {row['x']},{row['y']} {row['width']}x{row['height']} |"
         )
     lines += [
         "",

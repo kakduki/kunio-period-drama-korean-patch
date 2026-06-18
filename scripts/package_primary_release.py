@@ -20,6 +20,8 @@ PROGRESS_DASHBOARD_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard
 PROGRESS_DASHBOARD_MD = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.md"
 AUTO_INPUT_EVIDENCE_JSON = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.json"
 AUTO_INPUT_EVIDENCE_MD = REPO_ROOT / "rom_analysis" / "auto_input_evidence_report.md"
+AUTO_INPUT_REVIEW_CROPS_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "review_crops.json"
+AUTO_INPUT_REVIEW_CROPS_MD = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "review_crops.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -86,6 +88,7 @@ NEXT_MANUAL_FCEUX_RUNNER = REPO_ROOT / "scripts" / "run_next_manual_fceux.py"
 NEXT_PRIMARY_VISUAL_CONFIRMER = REPO_ROOT / "scripts" / "confirm_next_primary_visual.py"
 GD_TO_PNG_CONVERTER = REPO_ROOT / "scripts" / "convert_fceux_gd_to_png.py"
 AUTO_INPUT_EVIDENCE_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input_evidence_report.py"
+AUTO_INPUT_REVIEW_CROPS_GENERATOR = REPO_ROOT / "scripts" / "generate_auto_input_review_crops.py"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
 LUA_MANUAL_V042_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_v042_capture_watch.lua"
@@ -131,6 +134,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS",
         "- `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS",
         "- `auto_input_evidence_report.md`: scripted-route PNG and byte-match evidence for v0.4.2 rows",
+        "- `auto_input_review_crops.md`: focused dialogue/overlay crops from scripted-route screenshots",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -172,6 +176,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed",
         "- `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images",
         "- `generate_auto_input_evidence_report.py`: rebuilds the auto-input evidence summary from checked-in capture records",
+        "- `generate_auto_input_review_crops.py`: rebuilds focused PNG crops from FCEUX `.gd` screenshots",
         "- `SHA256SUMS.txt`: checksums for bundle files",
         "",
         "## Required Base ROM",
@@ -288,6 +293,8 @@ def package() -> dict[str, object]:
         (PROGRESS_DASHBOARD_JSON, "patch_progress_dashboard.json"),
         (AUTO_INPUT_EVIDENCE_MD, "auto_input_evidence_report.md"),
         (AUTO_INPUT_EVIDENCE_JSON, "auto_input_evidence_report.json"),
+        (AUTO_INPUT_REVIEW_CROPS_MD, "auto_input_review_crops.md"),
+        (AUTO_INPUT_REVIEW_CROPS_JSON, "auto_input_review_crops.json"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
@@ -352,6 +359,7 @@ def package() -> dict[str, object]:
         (NEXT_PRIMARY_VISUAL_CONFIRMER, "confirm_next_primary_visual.py"),
         (GD_TO_PNG_CONVERTER, "convert_fceux_gd_to_png.py"),
         (AUTO_INPUT_EVIDENCE_GENERATOR, "generate_auto_input_evidence_report.py"),
+        (AUTO_INPUT_REVIEW_CROPS_GENERATOR, "generate_auto_input_review_crops.py"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),
         (LUA_MANUAL_V042_CAPTURE_WATCH, "lua/kunio_manual_v042_capture_watch.lua"),
@@ -367,6 +375,12 @@ def package() -> dict[str, object]:
         (LUA_ROUTE_HEISHICHI_TARGETS, "lua/kunio_route_heishichi_targets.lua"),
     ]:
         dst = bundle_dir / name
+        safe_copy(src, dst)
+        copied_files.append(dst)
+
+    crop_dir = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042"
+    for src in sorted(crop_dir.glob("*_screen_*_*.png")):
+        dst = bundle_dir / "auto_input_review_crops" / src.name
         safe_copy(src, dst)
         copied_files.append(dst)
 

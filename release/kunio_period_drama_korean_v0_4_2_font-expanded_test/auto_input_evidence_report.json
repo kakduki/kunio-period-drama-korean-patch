@@ -7,10 +7,34 @@
     "matched_primary_rows": 10,
     "latest_screenshot": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd",
     "latest_png_review_image": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png",
+    "review_crops": "rom_analysis/fceux_input_explorer_v042/review_crops.json",
+    "latest_crop_count": 2,
     "latest_meta": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_meta.txt",
     "route_note": "Converted PNG confirms the auto-input route reached an in-game dialogue screen; this is not yet final patched-Korean visual approval.",
     "current_limit": "This proves the scripted route reached an in-game dialogue screen and loaded the expected patched byte sequences into CPU memory. It does not by itself prove the final Korean glyphs are visually correct."
   },
+  "latest_crops": [
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd",
+      "crop": "dialogue_box",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_dialogue_box.png",
+      "x": 0,
+      "y": 184,
+      "width": 256,
+      "height": 56,
+      "bytes": 850
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd",
+      "crop": "top_overlay",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_top_overlay.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 24,
+      "bytes": 494
+    }
+  ],
   "matched_rows": [
     {
       "rom_hit": "0x0561A",

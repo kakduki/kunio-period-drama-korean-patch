@@ -1,0 +1,86 @@
+{
+  "source_dir": "rom_analysis/fceux_input_explorer_v042",
+  "crop_count": 8,
+  "crops": [
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000122_screen.gd",
+      "crop": "dialogue_box",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000122_screen_dialogue_box.png",
+      "x": 0,
+      "y": 184,
+      "width": 256,
+      "height": 56,
+      "bytes": 307
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000122_screen.gd",
+      "crop": "top_overlay",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000122_screen_top_overlay.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 24,
+      "bytes": 492
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000362_screen.gd",
+      "crop": "dialogue_box",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000362_screen_dialogue_box.png",
+      "x": 0,
+      "y": 184,
+      "width": 256,
+      "height": 56,
+      "bytes": 633
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000362_screen.gd",
+      "crop": "top_overlay",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000362_screen_top_overlay.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 24,
+      "bytes": 494
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000643_screen.gd",
+      "crop": "dialogue_box",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000643_screen_dialogue_box.png",
+      "x": 0,
+      "y": 184,
+      "width": 256,
+      "height": 56,
+      "bytes": 542
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000643_screen.gd",
+      "crop": "top_overlay",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000643_screen_top_overlay.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 24,
+      "bytes": 497
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd",
+      "crop": "dialogue_box",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_dialogue_box.png",
+      "x": 0,
+      "y": 184,
+      "width": 256,
+      "height": 56,
+      "bytes": 850
+    },
+    {
+      "source": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd",
+      "crop": "top_overlay",
+      "path": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_top_overlay.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 24,
+      "bytes": 494
+    }
+  ]
+}

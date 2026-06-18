@@ -10,6 +10,8 @@ This report ties the v0.4.2 scripted FCEUX route to its review image and active 
 - Matched primary rows: **10**
 - Latest screenshot: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd`
 - PNG review image: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png`
+- Review crops: `rom_analysis/fceux_input_explorer_v042/review_crops.json`
+- Latest-frame crops: **2**
 - Metadata: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_meta.txt`
 - Route note: Converted PNG confirms the auto-input route reached an in-game dialogue screen; this is not yet final patched-Korean visual approval.
 - Current limit: This proves the scripted route reached an in-game dialogue screen and loaded the expected patched byte sequences into CPU memory. It does not by itself prove the final Korean glyphs are visually correct.
@@ -28,6 +30,13 @@ This report ties the v0.4.2 scripted FCEUX route to its review image and active 
 | `0x07227` | Katana | look for a katana/weapon item label | `$B216-$B21A` | `88 89 8A` | `auto_input_match_needs_visual` |
 | `0x0736A` | Raifu | look for a life/status UI label | `$B359-$B35E` | `96 8E 97` | `auto_input_match_needs_visual` |
 | `0x0739D` | Raifu | look for a life/status UI label | `$B38C-$B391` | `96 8E 97` | `auto_input_match_needs_visual` |
+
+## Latest-Frame Crops
+
+| crop | image | region |
+| --- | --- | --- |
+| `dialogue_box` | `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_dialogue_box.png` | 0,184 256x56 |
+| `top_overlay` | `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_top_overlay.png` | 0,0 256x24 |
 
 ## Interpretation
 

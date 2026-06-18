@@ -14,6 +14,7 @@ def test_payload_summarizes_auto_input_matches() -> None:
 
     assert int(summary["matched_primary_rows"]) == 10
     assert str(summary["latest_png_review_image"]).endswith("manual_frame_000883_screen.png")
+    assert int(summary["latest_crop_count"]) == 2
     assert "visually correct" in str(summary["current_limit"])
 
 
@@ -24,6 +25,7 @@ def test_markdown_mentions_limit_and_matched_rows() -> None:
 
     assert "# Auto-Input Evidence Report" in text
     assert "0x07227" in text
+    assert "manual_frame_000883_screen_dialogue_box.png" in text
     assert "does not by itself prove" in text
 
 
