@@ -7,11 +7,30 @@ import json
 import shlex
 from pathlib import Path
 
-from rom_utils import REPO_ROOT
+try:
+    from rom_utils import REPO_ROOT
+except ModuleNotFoundError:
+    REPO_ROOT = Path(__file__).resolve().parent
 
 
-ACTION_PLAN = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_action_plan.json"
-PADDING_MATRIX = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json"
+BUNDLE_MODE = (REPO_ROOT / "candidate_pipeline").is_dir() and not (REPO_ROOT / "rom_analysis").exists()
+
+
+def first_existing(*paths: Path) -> Path:
+    for path in paths:
+        if path.exists():
+            return path
+    return paths[0]
+
+
+ACTION_PLAN = first_existing(
+    REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_action_plan.json",
+    REPO_ROOT / "candidate_pipeline" / "release_gate_action_plan.json",
+)
+PADDING_MATRIX = first_existing(
+    REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json",
+    REPO_ROOT / "candidate_pipeline" / "padding_experiment_matrix.json",
+)
 
 
 def load_json(path: Path) -> dict[str, object]:
@@ -29,6 +48,20 @@ def resolve_repo_path(raw: object) -> Path:
     path = Path(str(raw))
     if not path.is_absolute():
         path = REPO_ROOT / path
+    if path.exists() or not BUNDLE_MODE:
+        return path
+
+    text = str(raw).replace("\\", "/")
+    bundle_alternates: list[Path] = []
+    for prefix, replacement in [
+        ("scripts/", ""),
+        ("rom_analysis/candidate_pipeline/", "candidate_pipeline/"),
+    ]:
+        if text.startswith(prefix):
+            bundle_alternates.append(REPO_ROOT / replacement / text[len(prefix) :])
+    for alternate in bundle_alternates:
+        if alternate.exists():
+            return alternate
     return path
 
 
@@ -56,7 +89,10 @@ def validate_action(action: dict[str, object], padding_v05_count: int) -> tuple[
     if rom_raw and "<strategy>" not in rom_raw:
         rom_path = resolve_repo_path(rom_raw)
         if not rom_path.exists():
-            errors.append(f"{gate}: missing ROM input {rel(rom_path)}")
+            if BUNDLE_MODE and rom_path.suffix.lower() == ".nes":
+                warnings.append(f"{gate}: bundle intentionally omits ROM input {rel(rom_path)}")
+            else:
+                errors.append(f"{gate}: missing ROM input {rel(rom_path)}")
     elif phase == "padding_rule_acceptance" and padding_v05_count <= 0:
         errors.append(f"{gate}: no v05 padding strategies are available")
 
@@ -109,6 +145,7 @@ def main() -> int:
         warnings.extend(action_warnings)
 
     print("Release gate action preflight")
+    print(f"- mode: {'bundle' if BUNDLE_MODE else 'repository'}")
     print(f"- action plan: {rel(ACTION_PLAN)}")
     print(f"- actions: {len(actions)}")
     print(f"- first gate: {actions[0].get('gate') if actions and isinstance(actions[0], dict) else 'none'}")

@@ -117,6 +117,8 @@ CAPTURE_REFRESHER = REPO_ROOT / "scripts" / "refresh_after_manual_capture.py"
 NEXT_RUN_PREPARER = REPO_ROOT / "scripts" / "prepare_next_manual_run.py"
 MANUAL_FCEUX_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_manual_fceux.py"
 RELEASE_GATE_ACTION_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_release_gate_action.py"
+PADDING_EXPERIMENT_AUDITOR = REPO_ROOT / "scripts" / "audit_padding_experiment_pipeline.py"
+PROGRESS_DASHBOARD_GENERATOR = REPO_ROOT / "scripts" / "generate_patch_progress_dashboard.py"
 NEXT_MANUAL_FCEUX_RUNNER = REPO_ROOT / "scripts" / "run_next_manual_fceux.py"
 NEXT_PRIMARY_VISUAL_CONFIRMER = REPO_ROOT / "scripts" / "confirm_next_primary_visual.py"
 GD_TO_PNG_CONVERTER = REPO_ROOT / "scripts" / "convert_fceux_gd_to_png.py"
@@ -128,6 +130,7 @@ KATANA_SLOT_CANDIDATES_GENERATOR = REPO_ROOT / "scripts" / "generate_katana_inve
 LUA_KATANA_VISUAL_EXPLORER = REPO_ROOT / "lua" / "kunio_katana_visual_explorer_v042.lua"
 LUA_KATANA_INVENTORY_PROBE = REPO_ROOT / "lua" / "kunio_katana_inventory_probe_v042.lua"
 LUA_KATANA_SINGLE_SLOT_PROBE = REPO_ROOT / "lua" / "kunio_katana_single_slot_probe_v042.lua"
+LUA_AUTO_DUMP = REPO_ROOT / "lua" / "kunio_auto_dump.lua"
 LUA_STATE_SINGLE_BYTE_PROBE = REPO_ROOT / "lua" / "kunio_state_single_byte_probe.lua"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
 LUA_MANUAL_CAPTURE_WATCH = REPO_ROOT / "lua" / "kunio_manual_capture_watch.lua"
@@ -235,6 +238,8 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `prepare_next_manual_run.py`: prints the next focused manual FCEUX setup",
         "- `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator",
         "- `preflight_release_gate_action.py`: checks open release-gate evidence task inputs before running them",
+        "- `audit_padding_experiment_pipeline.py`: validates padding experiment evidence for shortened replacements",
+        "- `generate_patch_progress_dashboard.py`: rebuilds the dashboard after evidence changes",
         "- `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks",
         "- `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed",
         "- `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images",
@@ -452,6 +457,8 @@ def package() -> dict[str, object]:
         (NEXT_RUN_PREPARER, "prepare_next_manual_run.py"),
         (MANUAL_FCEUX_PREFLIGHT, "preflight_manual_fceux.py"),
         (RELEASE_GATE_ACTION_PREFLIGHT, "preflight_release_gate_action.py"),
+        (PADDING_EXPERIMENT_AUDITOR, "audit_padding_experiment_pipeline.py"),
+        (PROGRESS_DASHBOARD_GENERATOR, "generate_patch_progress_dashboard.py"),
         (NEXT_MANUAL_FCEUX_RUNNER, "run_next_manual_fceux.py"),
         (NEXT_PRIMARY_VISUAL_CONFIRMER, "confirm_next_primary_visual.py"),
         (GD_TO_PNG_CONVERTER, "convert_fceux_gd_to_png.py"),
@@ -466,6 +473,7 @@ def package() -> dict[str, object]:
         (LUA_KATANA_VISUAL_EXPLORER, "lua/kunio_katana_visual_explorer_v042.lua"),
         (LUA_KATANA_INVENTORY_PROBE, "lua/kunio_katana_inventory_probe_v042.lua"),
         (LUA_KATANA_SINGLE_SLOT_PROBE, "lua/kunio_katana_single_slot_probe_v042.lua"),
+        (LUA_AUTO_DUMP, "lua/kunio_auto_dump.lua"),
         (LUA_STATE_SINGLE_BYTE_PROBE, "lua/kunio_state_single_byte_probe.lua"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),
         (LUA_MANUAL_CAPTURE_WATCH, "lua/kunio_manual_capture_watch.lua"),

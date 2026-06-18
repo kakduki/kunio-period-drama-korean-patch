@@ -102,6 +102,7 @@ KEY_PYTHON = [
     "scripts/test_prepare_next_manual_run.py",
     "scripts/test_preflight_manual_fceux.py",
     "scripts/test_preflight_release_gate_action.py",
+    "scripts/test_preflight_release_gate_action_bundle.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_record_primary_visual_review.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -273,6 +274,7 @@ def main() -> int:
     run("next manual run helper", ["scripts/test_prepare_next_manual_run.py"])
     run("manual FCEUX preflight", ["scripts/test_preflight_manual_fceux.py"])
     run("release gate action preflight", ["scripts/test_preflight_release_gate_action.py"])
+    run("release gate action preflight bundle", ["scripts/test_preflight_release_gate_action_bundle.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("primary visual review recorder", ["scripts/test_record_primary_visual_review.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])

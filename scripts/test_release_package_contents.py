@@ -65,6 +65,13 @@ def main() -> int:
         errors.append("release README does not mention preflight_release_gate_action.py")
     if not (BUNDLE_DIR / "preflight_release_gate_action.py").is_file():
         errors.append("release bundle missing preflight_release_gate_action.py")
+    for required_bundle_file in [
+        "audit_padding_experiment_pipeline.py",
+        "generate_patch_progress_dashboard.py",
+        "lua/kunio_auto_dump.lua",
+    ]:
+        if not (BUNDLE_DIR / required_bundle_file).is_file():
+            errors.append(f"release bundle missing {required_bundle_file}")
 
     manifest_path = BUNDLE_DIR / "release_manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -89,6 +96,13 @@ def main() -> int:
                 errors.append(f"zip missing candidate pipeline file: {zip_relative}")
         if f"{BUNDLE_DIR.name}/preflight_release_gate_action.py" not in zip_names:
             errors.append("zip missing preflight_release_gate_action.py")
+        for required_bundle_file in [
+            "audit_padding_experiment_pipeline.py",
+            "generate_patch_progress_dashboard.py",
+            "lua/kunio_auto_dump.lua",
+        ]:
+            if f"{BUNDLE_DIR.name}/{required_bundle_file}" not in zip_names:
+                errors.append(f"zip missing {required_bundle_file}")
 
     if errors:
         for error in errors:

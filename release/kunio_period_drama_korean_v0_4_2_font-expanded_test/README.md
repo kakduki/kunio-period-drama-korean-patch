@@ -71,6 +71,8 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `prepare_next_manual_run.py`: prints the next focused manual FCEUX setup
 - `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator
 - `preflight_release_gate_action.py`: checks open release-gate evidence task inputs before running them
+- `audit_padding_experiment_pipeline.py`: validates padding experiment evidence for shortened replacements
+- `generate_patch_progress_dashboard.py`: rebuilds the dashboard after evidence changes
 - `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks
 - `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed
 - `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images
