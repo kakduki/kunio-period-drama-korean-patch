@@ -6,11 +6,11 @@
   "candidate_rom": "output\\kunio_period_drama_softgate_dev_combined.nes",
   "candidate_ips": "output\\kunio_period_drama_softgate_dev_combined.ips",
   "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
-  "candidate_md5": "26b3f397caa77a62e2136f5b7224c2f4",
+  "candidate_md5": "4905417f129726394941bed079c2e848",
   "build_status": "PASS",
   "failure_class": "",
   "failure_reason": "",
-  "applied_count": 8,
+  "applied_count": 9,
   "applied": [
     {
       "build_id": "softgate-0562f-tatsuichi",
@@ -29,6 +29,15 @@
       "romaji": "Heishichi",
       "old_bytes": "9D 82 8C 91",
       "new_bytes": "8D 8E 8F 90"
+    },
+    {
+      "build_id": "softgate-0561a-hashi",
+      "rom_offset": "0x0561A",
+      "source_japanese": "はし",
+      "korean": "다리",
+      "romaji": "Hashi",
+      "old_bytes": "96 88",
+      "new_bytes": "8B 8C"
     },
     {
       "build_id": "softgate-0569d-hashi",

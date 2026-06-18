@@ -16,6 +16,14 @@ candidate_rom=output\kunio_period_drama_softgate_05643_heishichi.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-05643-heishichi.tsv
 
+[softgate-0561a-hashi]
+smoke_test_status=PASS
+failure_class=none
+reason=FCEUX launched candidate ROM and lua/kunio_auto_dump.lua reported lua_done.
+candidate_rom=output\kunio_period_drama_softgate_0561a_hashi.nes
+lua_script=lua/kunio_auto_dump.lua
+summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-0561a-hashi.tsv
+
 [softgate-0569d-hashi]
 smoke_test_status=PASS
 failure_class=none

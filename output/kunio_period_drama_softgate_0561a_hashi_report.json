@@ -1,0 +1,41 @@
+{
+  "build_id": "softgate-0561a-hashi",
+  "slug": "0561a_hashi",
+  "readable": {
+    "source_japanese": "はし",
+    "korean": "다리",
+    "romaji": "Hashi"
+  },
+  "target": {
+    "label": "watch_rom_0561a_스테이지_7c",
+    "evidence_level": "static-candidate+pointer",
+    "category_group": "event/dialogue-related",
+    "category": "스테이지",
+    "rom_hit": "0x0561A",
+    "source": "はし",
+    "korean": "다리",
+    "required_glyphs": [
+      "다",
+      "리"
+    ],
+    "planned_prg_bytes": [
+      "0x8B",
+      "0x8C"
+    ],
+    "original_expected_bytes": "96 88"
+  },
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "font_rom": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+  "candidate_rom": "output\\kunio_period_drama_softgate_0561a_hashi.nes",
+  "candidate_ips": "output\\kunio_period_drama_softgate_0561a_hashi.ips",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "992f824025bf76ea4ab5272f760488ac",
+  "rom_offset": "0x0561A",
+  "prg_bank": 1,
+  "prg_offset": "0x0560A",
+  "old_bytes": "96 88",
+  "new_bytes": "8B 8C",
+  "build_status": "PASS",
+  "failure_class": "",
+  "failure_reason": ""
+}

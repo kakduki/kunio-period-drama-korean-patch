@@ -1,5 +1,5 @@
 selected,rom_offset,prg_bank,screen_context,label,category,source_japanese,korean,romaji,cpu_range,expected_bytes,active_expected_match,selection_reason
-no,0x0561A,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_0561a_스테이지_7c,스테이지,,,,$95BE-$960F,8B 8C,true,deferred to avoid broad or ambiguous multi-string patching in this pipeline pass
+yes,0x0561A,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_0561a_스테이지_7c,스테이지,はし,다리,Hashi,$95BE-$960F,8B 8C,true,active on the same real dialogue screen; equal-length planned bytes; pointer-backed stage/location label
 yes,0x0562F,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_0562f_보스_80,보스,たついち,타츠이치,Tatsuichi,$961A-$9623,89 98 8E 90,true,active on a real dialogue screen; equal-length planned bytes; boss/name context
 yes,0x05643,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_05643_보스_80,보스,へいしち,헤이시치,Heishichi,$9633-$9637,8D 8E 8F 90,true,active on the same real dialogue screen; equal-length planned bytes; boss/name context
 yes,0x0569D,1,fceux_input_explorer_v042 frame 883 dialogue screen,v04_watch_rom_0569d_스테이지_7a,스테이지,はし,다리,Hashi,$968C-$968F,8B 8C,true,active on the same real dialogue screen; equal-length planned bytes; encoding-exact stage/location label
