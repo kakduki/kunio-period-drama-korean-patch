@@ -34,7 +34,7 @@
       "exclude_menu_state": 3,
       "defer_unknown_state": 3
     },
-    "katana_slot_next_probe": "Try one candidate_small_probe address at a time. 0x0502 was tested alone and did not show the Katana label; continue with 0x0503.",
+    "katana_slot_next_probe": "Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with 0x0506.",
     "v043_rows": 7,
     "v043_cpu_read_matches": 0,
     "v043_visual_confirmations": 0,

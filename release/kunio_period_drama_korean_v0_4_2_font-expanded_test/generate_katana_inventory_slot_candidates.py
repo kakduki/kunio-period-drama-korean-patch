@@ -16,7 +16,10 @@ MENU_SRAM = RUN_DIR / "manual_frame_001906_sram_6000_7fff.bin"
 ITEM_SRAM = RUN_DIR / "manual_frame_002385_sram_6000_7fff.bin"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "katana_inventory_slot_candidates.md"
-SINGLE_SLOT_0502_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md"
+SINGLE_SLOT_NOTES = {
+    "0x0502": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0502_notes.md",
+    "0x0503": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0503_notes.md",
+}
 
 
 PROBED_ADDRESSES = [
@@ -99,6 +102,13 @@ def make_payload() -> dict[str, object]:
     counts: dict[str, int] = {}
     for row in rows:
         counts[str(row["classification"])] = counts.get(str(row["classification"]), 0) + 1
+    completed_single_slot_probes = [addr for addr, path in SINGLE_SLOT_NOTES.items() if path.exists()]
+    remaining_small_probes = [
+        row["address"]
+        for row in rows
+        if row["classification"] == "candidate_small_probe" and row["address"] not in completed_single_slot_probes
+    ]
+    next_probe = remaining_small_probes[0] if remaining_small_probes else "-"
     return {
         "source": {
             "menu_cpu": str(MENU_CPU.relative_to(REPO_ROOT)).replace("\\", "/"),
@@ -110,8 +120,8 @@ def make_payload() -> dict[str, object]:
         "summary": {
             "probed_addresses": len(rows),
             "classification_counts": counts,
-            "completed_single_slot_probes": ["0x0502"] if SINGLE_SLOT_0502_NOTES.exists() else [],
-            "recommended_next_probe": "Try one candidate_small_probe address at a time. 0x0502 was tested alone and did not show the Katana label; continue with 0x0503.",
+            "completed_single_slot_probes": completed_single_slot_probes,
+            "recommended_next_probe": f"Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with {next_probe}.",
         },
         "rows": rows,
     }
