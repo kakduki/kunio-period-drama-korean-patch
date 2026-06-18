@@ -18,6 +18,7 @@ HIGH_RISK = PIPELINE_DIR / "high_risk_candidates.csv"
 PATCHED_REPORT = PIPELINE_DIR / "patched_rom_report.md"
 SMOKE_LOG = PIPELINE_DIR / "smoke_test_log.txt"
 RELEASE_GATE = PIPELINE_DIR / "release_gate_checklist.md"
+RELEASE_GATE_JSON = PIPELINE_DIR / "release_gate_checklist.json"
 COMBINED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined_report.json"
 
 REQUIRED_FILES = [
@@ -28,6 +29,7 @@ REQUIRED_FILES = [
     PATCHED_REPORT,
     SMOKE_LOG,
     RELEASE_GATE,
+    RELEASE_GATE_JSON,
     COMBINED_REPORT,
 ]
 
@@ -79,6 +81,28 @@ def main() -> int:
             errors.append(f"{path.relative_to(REPO_ROOT).as_posix()} contains Windows-style report paths")
 
     release_gate = RELEASE_GATE.read_text(encoding="utf-8")
+    release_gate_payload = json.loads(RELEASE_GATE_JSON.read_text(encoding="utf-8"))
+    gate_rows = release_gate_payload.get("gates", [])
+    gate_status = {row.get("gate"): row.get("status") for row in gate_rows}
+    expected_gate_status = {
+        "development soft gate": "PASS",
+        "release-included visual proof": "FAIL",
+        "high-risk/quarantined visual proof": "FAIL",
+        "false-positive/ambiguous bytes excluded": "PASS",
+        "base and patched hashes documented": "PASS",
+        "IPS applies from clean base ROM": "PASS",
+        "release zip contains no ROM": "PASS",
+        "regression boot smoke": "PASS",
+        "shortened padding rule acceptance": "UNKNOWN",
+    }
+    if gate_status != expected_gate_status:
+        errors.append(f"unexpected release gate JSON status map: {gate_status}")
+    if release_gate_payload.get("summary", {}).get("release_ready") is not False:
+        errors.append("release gate JSON should mark release_ready false")
+    for row in gate_rows:
+        markdown_row = f"| {row['gate']} | {row['status']} | {row['failure_class']} | {row['evidence']} |"
+        if markdown_row not in release_gate:
+            errors.append(f"release gate markdown missing JSON row: {markdown_row}")
     for expected in [
         "Gate Status Summary",
         "Development Soft Gate",

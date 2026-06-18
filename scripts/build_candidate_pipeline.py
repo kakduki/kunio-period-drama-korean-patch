@@ -21,6 +21,7 @@ HIGH_RISK_CANDIDATES = OUT_DIR / "high_risk_candidates.csv"
 PATCHED_REPORT = OUT_DIR / "patched_rom_report.md"
 SMOKE_LOG = OUT_DIR / "smoke_test_log.txt"
 RELEASE_GATE = OUT_DIR / "release_gate_checklist.md"
+RELEASE_GATE_JSON = OUT_DIR / "release_gate_checklist.json"
 LEGACY_SMOKE_SUMMARY = OUT_DIR / "smoke_summary.tsv"
 RELEASE_TEST_ZIP = REPO_ROOT / "release" / "kunio_period_drama_korean_v0_4_2_font-expanded_test.zip"
 COMBINED_BUILD_ID = "softgate-dev-combined"
@@ -690,7 +691,13 @@ def write_release_gate_checklist(
     quarantine_builds_pass = all(report["build_status"] == "PASS" for report in quarantined_reports)
     smoke_all_pass = smoke_checked == "x"
     zip_gate = release_zip_rom_gate()
-    release_gate_rows = [
+    gate_rows = [
+        {
+            "gate": "development soft gate",
+            "status": "PASS",
+            "failure_class": "none",
+            "evidence": "selected/combined/quarantined candidate builds and boot smoke evidence are present",
+        },
         {
             "gate": "release-included visual proof",
             "status": "FAIL",
@@ -740,6 +747,24 @@ def write_release_gate_checklist(
             "evidence": "padding experiment CPU evidence exists, but strict PPU/visual acceptance is still missing",
         },
     ]
+    status_counts = {status: sum(1 for row in gate_rows if row["status"] == status) for status in ["PASS", "FAIL", "UNKNOWN"]}
+    RELEASE_GATE_JSON.write_text(
+        json.dumps(
+            {
+                "summary": {
+                    "status_counts": status_counts,
+                    "release_ready": status_counts.get("FAIL", 0) == 0 and status_counts.get("UNKNOWN", 0) == 0,
+                    "hard_gate_applies_to": "release candidates only",
+                    "soft_gate_applies_to": "development candidate builds",
+                },
+                "gates": gate_rows,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
     lines = [
         "# Release Gate Checklist",
         "",
@@ -749,11 +774,10 @@ def write_release_gate_checklist(
         "",
         "| gate | status | failure class | evidence |",
         "| --- | --- | --- | --- |",
-        "| development soft gate | PASS | none | selected/combined/quarantined candidate builds and boot smoke evidence are present |",
     ]
     lines.extend(
         f"| {row['gate']} | {row['status']} | {row['failure_class']} | {row['evidence']} |"
-        for row in release_gate_rows
+        for row in gate_rows
     )
     lines += [
         "",

@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "status_counts": {
+      "PASS": 6,
+      "FAIL": 2,
+      "UNKNOWN": 1
+    },
+    "release_ready": false,
+    "hard_gate_applies_to": "release candidates only",
+    "soft_gate_applies_to": "development candidate builds"
+  },
+  "gates": [
+    {
+      "gate": "development soft gate",
+      "status": "PASS",
+      "failure_class": "none",
+      "evidence": "selected/combined/quarantined candidate builds and boot smoke evidence are present"
+    },
+    {
+      "gate": "release-included visual proof",
+      "status": "FAIL",
+      "failure_class": "VISUAL_PROOF_PENDING",
+      "evidence": "primary v0.4.2 and softgate rows still require visible-screen proof before release"
+    },
+    {
+      "gate": "high-risk/quarantined visual proof",
+      "status": "FAIL",
+      "failure_class": "HIGH_RISK_VISUAL_PROOF_PENDING",
+      "evidence": "5 quarantined Katana candidates require item-list visual proof"
+    },
+    {
+      "gate": "false-positive/ambiguous bytes excluded",
+      "status": "PASS",
+      "failure_class": "none",
+      "evidence": "quarantined candidates are isolated and not included in softgate-dev-combined"
+    },
+    {
+      "gate": "base and patched hashes documented",
+      "status": "PASS",
+      "failure_class": "none",
+      "evidence": "patched_rom_report.md records base MD5 and candidate MD5 values"
+    },
+    {
+      "gate": "IPS applies from clean base ROM",
+      "status": "PASS",
+      "failure_class": "none",
+      "evidence": "scripts/test_candidate_ips_apply.py applies each softgate IPS to the clean base ROM and checks candidate MD5 values"
+    },
+    {
+      "gate": "release zip contains no ROM",
+      "status": "PASS",
+      "failure_class": "none",
+      "evidence": "release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip contains no .nes entries"
+    },
+    {
+      "gate": "regression boot smoke",
+      "status": "PASS",
+      "failure_class": "none",
+      "evidence": "smoke_summary_*.tsv files report lua_done for candidate boot tests"
+    },
+    {
+      "gate": "shortened padding rule acceptance",
+      "status": "UNKNOWN",
+      "failure_class": "PADDING_RULE_UNPROVEN",
+      "evidence": "padding experiment CPU evidence exists, but strict PPU/visual acceptance is still missing"
+    }
+  ]
+}
