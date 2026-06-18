@@ -31,6 +31,7 @@ def main() -> int:
         "release_gate_action_count": 3,
         "release_gate_next_action": "release-included visual proof",
         "katana_itemlist_state_probe": "VISUAL_FAIL_ITEMLIST_EMPTY",
+        "katana_autoplay_route_capture": "VISUAL_FAIL_WRONG_CONTEXT",
     }
     for key, value in expected.items():
         if summary.get(key) != value:
@@ -67,6 +68,8 @@ def main() -> int:
         "Auto-input byte-match rows",
         "Katana item-list state probe",
         "VISUAL_FAIL_ITEMLIST_EMPTY",
+        "Katana autoplay-route capture",
+        "VISUAL_FAIL_WRONG_CONTEXT",
     ]:
         if expected_text not in markdown:
             errors.append(f"{expected_text!r} missing from dashboard markdown")

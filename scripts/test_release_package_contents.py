@@ -72,6 +72,8 @@ def main() -> int:
         "katana_single_slot_probe_0509_notes.md",
         "katana_runtime_state_probe_0700_itemlist_notes.md",
         "katana_itemlist_state_probe_v042_early_notes.md",
+        "katana_autoplay_route_capture_v042_notes.md",
+        "lua/kunio_katana_autoplay_route_capture_v042.lua",
         "lua/kunio_katana_itemlist_state_probe_v042.lua",
         "lua/kunio_auto_dump.lua",
     ]:
@@ -108,6 +110,8 @@ def main() -> int:
             "katana_single_slot_probe_0509_notes.md",
             "katana_runtime_state_probe_0700_itemlist_notes.md",
             "katana_itemlist_state_probe_v042_early_notes.md",
+            "katana_autoplay_route_capture_v042_notes.md",
+            "lua/kunio_katana_autoplay_route_capture_v042.lua",
             "lua/kunio_katana_itemlist_state_probe_v042.lua",
             "lua/kunio_auto_dump.lua",
         ]:

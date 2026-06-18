@@ -299,7 +299,7 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 ### Candidate `softgate-quarantine-07227-katana`
 
 - Build status: `PASS`
-- Risk class: `HIGH_RISK_VISUAL_CONTEXT_PENDING`
+- Risk class: `HIGH_RISK_WRONG_CONTEXT_REPRODUCED`
 - Candidate ROM: `output/kunio_period_drama_softgate_quarantine_07227_katana.nes`
 - Candidate IPS: `output/kunio_period_drama_softgate_quarantine_07227_katana.ips`
 - Candidate MD5: `dfd1888d4cad7f443d168318cd7e0ae5`

@@ -42,6 +42,7 @@ KATANA_SINGLE_SLOT_0508_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot
 KATANA_SINGLE_SLOT_0509_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0509_notes.md"
 KATANA_RUNTIME_0700_NOTES = REPO_ROOT / "rom_analysis" / "katana_runtime_state_probe_0700_itemlist_notes.md"
 KATANA_ITEMLIST_STATE_PROBE_NOTES = REPO_ROOT / "rom_analysis" / "katana_itemlist_state_probe_v042_early_notes.md"
+KATANA_AUTOPLAY_ROUTE_CAPTURE_NOTES = REPO_ROOT / "rom_analysis" / "katana_autoplay_route_capture_v042_notes.md"
 TRANSLATION_FIRST_STRATEGY_MD = REPO_ROOT / "rom_analysis" / "translation_first_strategy.md"
 STATE_CHEAT_PROBE_JSON = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.json"
 STATE_CHEAT_PROBE_MD = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.md"
@@ -135,6 +136,7 @@ LUA_KATANA_VISUAL_EXPLORER = REPO_ROOT / "lua" / "kunio_katana_visual_explorer_v
 LUA_KATANA_INVENTORY_PROBE = REPO_ROOT / "lua" / "kunio_katana_inventory_probe_v042.lua"
 LUA_KATANA_SINGLE_SLOT_PROBE = REPO_ROOT / "lua" / "kunio_katana_single_slot_probe_v042.lua"
 LUA_KATANA_ITEMLIST_STATE_PROBE = REPO_ROOT / "lua" / "kunio_katana_itemlist_state_probe_v042.lua"
+LUA_KATANA_AUTOPLAY_ROUTE_CAPTURE = REPO_ROOT / "lua" / "kunio_katana_autoplay_route_capture_v042.lua"
 LUA_AUTO_DUMP = REPO_ROOT / "lua" / "kunio_auto_dump.lua"
 LUA_STATE_SINGLE_BYTE_PROBE = REPO_ROOT / "lua" / "kunio_state_single_byte_probe.lua"
 LUA_MANUAL_SCREEN_DUMP = REPO_ROOT / "lua" / "kunio_manual_screen_dump.lua"
@@ -196,6 +198,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `katana_single_slot_probe_0509_notes.md`: result of testing `$0509` alone",
         "- `katana_runtime_state_probe_0700_itemlist_notes.md`: result of testing grouped `$0700-$071F` item-list runtime values",
         "- `katana_itemlist_state_probe_v042_early_notes.md`: result of testing combined inventory/runtime bytes during the item-list route",
+        "- `katana_autoplay_route_capture_v042_notes.md`: result of replaying the older Katana PPU-hit autoplay route",
         "- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role",
         "- `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing",
         "- `object_state_probe_candidates.md`: object/enemy RAM candidates for boss-spawn cheat probing",
@@ -393,6 +396,7 @@ def package() -> dict[str, object]:
         (KATANA_SINGLE_SLOT_0509_NOTES, "katana_single_slot_probe_0509_notes.md"),
         (KATANA_RUNTIME_0700_NOTES, "katana_runtime_state_probe_0700_itemlist_notes.md"),
         (KATANA_ITEMLIST_STATE_PROBE_NOTES, "katana_itemlist_state_probe_v042_early_notes.md"),
+        (KATANA_AUTOPLAY_ROUTE_CAPTURE_NOTES, "katana_autoplay_route_capture_v042_notes.md"),
         (TRANSLATION_FIRST_STRATEGY_MD, "translation_first_strategy.md"),
         (STATE_CHEAT_PROBE_MD, "state_cheat_probe_candidates.md"),
         (STATE_CHEAT_PROBE_JSON, "state_cheat_probe_candidates.json"),
@@ -487,6 +491,7 @@ def package() -> dict[str, object]:
         (LUA_KATANA_INVENTORY_PROBE, "lua/kunio_katana_inventory_probe_v042.lua"),
         (LUA_KATANA_SINGLE_SLOT_PROBE, "lua/kunio_katana_single_slot_probe_v042.lua"),
         (LUA_KATANA_ITEMLIST_STATE_PROBE, "lua/kunio_katana_itemlist_state_probe_v042.lua"),
+        (LUA_KATANA_AUTOPLAY_ROUTE_CAPTURE, "lua/kunio_katana_autoplay_route_capture_v042.lua"),
         (LUA_AUTO_DUMP, "lua/kunio_auto_dump.lua"),
         (LUA_STATE_SINGLE_BYTE_PROBE, "lua/kunio_state_single_byte_probe.lua"),
         (LUA_MANUAL_SCREEN_DUMP, "lua/kunio_manual_screen_dump.lua"),

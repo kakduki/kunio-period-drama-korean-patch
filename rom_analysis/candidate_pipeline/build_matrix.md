@@ -18,7 +18,7 @@ Development builds use a soft gate. Release approval uses the separate hard gate
 | `softgate-quarantine-06295-katana` | quarantined one string | `item-menu/runtime watch evidence; visual context pending` | `0x06295` | 1 | equal-length PRG bytes + existing font expansion | PASS | PASS | required before release/dev merge | HIGH_RISK_VISUAL_CONTEXT_PENDING |
 | `softgate-quarantine-0631c-katana` | quarantined one string | `item-menu/runtime watch evidence; visual context pending` | `0x0631C` | 1 | equal-length PRG bytes + existing font expansion | PASS | PASS | required before release/dev merge | HIGH_RISK_VISUAL_CONTEXT_PENDING |
 | `softgate-quarantine-0635a-katana` | quarantined one string | `item-menu/runtime watch evidence; visual context pending` | `0x0635A` | 1 | equal-length PRG bytes + existing font expansion | PASS | PASS | required before release/dev merge | HIGH_RISK_VISUAL_CONTEXT_PENDING |
-| `softgate-quarantine-07227-katana` | quarantined one string | `item-menu/runtime watch evidence; visual context pending` | `0x07227` | 1 | equal-length PRG bytes + existing font expansion | PASS | PASS | required before release/dev merge | HIGH_RISK_VISUAL_CONTEXT_PENDING |
+| `softgate-quarantine-07227-katana` | quarantined one string | `item-menu/runtime watch evidence; visual context pending` | `0x07227` | 1 | equal-length PRG bytes + existing font expansion | PASS | PASS | required before release/dev merge | HIGH_RISK_WRONG_CONTEXT_REPRODUCED |
 
 ## Notes
 

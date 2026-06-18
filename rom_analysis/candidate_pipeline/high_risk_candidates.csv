@@ -3,4 +3,4 @@ softgate-quarantine-05644-katana,0x05644,1,カタナ,카타나,Katana,HIGH_RISK_
 softgate-quarantine-06295-katana,0x06295,1,カタナ,카타나,Katana,HIGH_RISK_VISUAL_CONTEXT_PENDING,PASS,PASS,quarantined; not included in softgate-dev-combined until visual item-list proof exists
 softgate-quarantine-0631c-katana,0x0631C,1,カタナ,카타나,Katana,HIGH_RISK_VISUAL_CONTEXT_PENDING,PASS,PASS,quarantined; not included in softgate-dev-combined until visual item-list proof exists
 softgate-quarantine-0635a-katana,0x0635A,1,カタナ,카타나,Katana,HIGH_RISK_VISUAL_CONTEXT_PENDING,PASS,PASS,quarantined; not included in softgate-dev-combined until visual item-list proof exists
-softgate-quarantine-07227-katana,0x07227,1,カタナ,카타나,Katana,HIGH_RISK_VISUAL_CONTEXT_PENDING,PASS,PASS,quarantined; not included in softgate-dev-combined until visual item-list proof exists
+softgate-quarantine-07227-katana,0x07227,1,カタナ,카타나,Katana,HIGH_RISK_WRONG_CONTEXT_REPRODUCED,PASS,PASS,quarantined; not included in softgate-dev-combined until visual item-list proof exists

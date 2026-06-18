@@ -27,6 +27,7 @@ Single-page status for the current Korean patch work.
 - Katana next step: Find or set the inventory state that makes the Katana item label appear on the reached item-list screen.
 - Katana slot next probe: Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; all candidate_small_probe addresses are exhausted; switch to grouped runtime-state probes.
 - Katana item-list state probe: `VISUAL_FAIL_ITEMLIST_EMPTY`
+- Katana autoplay-route capture: `VISUAL_FAIL_WRONG_CONTEXT`
 
 ## Candidate Pipeline
 

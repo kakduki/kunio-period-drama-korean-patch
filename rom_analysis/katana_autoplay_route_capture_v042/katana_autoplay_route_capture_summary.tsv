@@ -1,0 +1,7 @@
+frame	phase	capture_label	fingerprint	dump_prefix
+1942	2	pre_katana_ppu_burst	206542110:45120	kunio_fceux_lua_output/manual_frame_001943
+1976	2	katana_write_start	206542110:45120	kunio_fceux_lua_output/manual_frame_001977
+1980	2	katana_middle	206542110:45120	kunio_fceux_lua_output/manual_frame_001981
+1984	2	katana_write_end	980998441:26760	kunio_fceux_lua_output/manual_frame_001985
+2024	2	post_katana_menu_line	774405637:24840	kunio_fceux_lua_output/manual_frame_002025
+2100	done	done	206542110:45120	

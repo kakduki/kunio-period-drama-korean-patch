@@ -178,8 +178,8 @@ QUARANTINED_CANDIDATES = [
         "source_japanese": "\u30ab\u30bf\u30ca",
         "korean": "\uce74\ud0c0\ub098",
         "romaji": "Katana",
-        "selection_reason": "runtime-confirmed in earlier item-menu watch, but not visually readable in the current frame 883 dialogue screen; quarantine only",
-        "risk_class": "HIGH_RISK_VISUAL_CONTEXT_PENDING",
+        "selection_reason": "earlier runtime/PPU evidence was reproduced as a player/character-select context, not item-list visual proof; quarantine only",
+        "risk_class": "HIGH_RISK_WRONG_CONTEXT_REPRODUCED",
     },
 ]
 
