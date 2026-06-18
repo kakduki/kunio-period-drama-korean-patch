@@ -1,0 +1,52 @@
+{
+  "build_id": "softgate-dev-combined",
+  "scope": "combined selected soft-gate candidates",
+  "base_rom": "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "font_rom": "output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+  "candidate_rom": "output\\kunio_period_drama_softgate_dev_combined.nes",
+  "candidate_ips": "output\\kunio_period_drama_softgate_dev_combined.ips",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "b189b75366fa94c86711e53238f0e22e",
+  "build_status": "PASS",
+  "failure_class": "",
+  "failure_reason": "",
+  "applied_count": 4,
+  "applied": [
+    {
+      "build_id": "softgate-0562f-tatsuichi",
+      "rom_offset": "0x0562F",
+      "source_japanese": "たついち",
+      "korean": "타츠이치",
+      "romaji": "Tatsuichi",
+      "old_bytes": "90 92 82 91",
+      "new_bytes": "89 98 8E 90"
+    },
+    {
+      "build_id": "softgate-05643-heishichi",
+      "rom_offset": "0x05643",
+      "source_japanese": "へいしち",
+      "korean": "헤이시치",
+      "romaji": "Heishichi",
+      "old_bytes": "9D 82 8C 91",
+      "new_bytes": "8D 8E 8F 90"
+    },
+    {
+      "build_id": "softgate-0736a-raifu",
+      "rom_offset": "0x0736A",
+      "source_japanese": "ライフ",
+      "korean": "라이프",
+      "romaji": "Raifu",
+      "old_bytes": "BB 95 AF",
+      "new_bytes": "96 8E 97"
+    },
+    {
+      "build_id": "softgate-0739d-raifu",
+      "rom_offset": "0x0739D",
+      "source_japanese": "ライフ",
+      "korean": "라이프",
+      "romaji": "Raifu",
+      "old_bytes": "BB 95 AF",
+      "new_bytes": "96 8E 97"
+    }
+  ]
+}

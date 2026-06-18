@@ -88,3 +88,24 @@
 - Failure class: `none`
 - Failure reason: `none`
 
+## Candidate `softgate-dev-combined`
+
+- Build status: `PASS`
+- Base ROM: `rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
+- Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- Candidate ROM: `output\kunio_period_drama_softgate_dev_combined.nes`
+- Candidate IPS: `output\kunio_period_drama_softgate_dev_combined.ips`
+- Candidate MD5: `b189b75366fa94c86711e53238f0e22e`
+- Applied strings: `4`
+- Boot smoke classification: `PASS`
+- Visual classification: `UNKNOWN` until release/high-risk manual visual review.
+- Failure class: `none`
+- Failure reason: `none`
+
+| ROM offset | source | Korean | romaji | old bytes | new bytes |
+| --- | --- | --- | --- | --- | --- |
+| `0x0562F` | `たついち` | `타츠이치` | Tatsuichi | `90 92 82 91` | `89 98 8E 90` |
+| `0x05643` | `へいしち` | `헤이시치` | Heishichi | `9D 82 8C 91` | `8D 8E 8F 90` |
+| `0x0736A` | `ライフ` | `라이프` | Raifu | `BB 95 AF` | `96 8E 97` |
+| `0x0739D` | `ライフ` | `라이프` | Raifu | `BB 95 AF` | `96 8E 97` |
+
