@@ -25,6 +25,11 @@ NEXT_MANUAL_RUN = (
     if (ROOT / "rom_analysis" / "next_manual_run.json").exists()
     else ROOT / "next_manual_run.json"
 )
+CURRENT_PRIMARY_VISUAL_TASK = (
+    ROOT / "rom_analysis" / "current_primary_visual_task.json"
+    if (ROOT / "rom_analysis" / "current_primary_visual_task.json").exists()
+    else ROOT / "current_primary_visual_task.json"
+)
 
 
 def rel_to_abs(raw: str) -> Path:
@@ -40,13 +45,19 @@ def load_next_action(path: Path) -> dict[str, object] | None:
     return action if isinstance(action, dict) else None
 
 
+def load_current_visual_task() -> dict[str, object]:
+    if not CURRENT_PRIMARY_VISUAL_TASK.exists():
+        return {}
+    return json.loads(CURRENT_PRIMARY_VISUAL_TASK.read_text(encoding="utf-8"))
+
+
 def format_path(path: Path) -> str:
     if path.exists():
         return str(path)
     return f"{path}  [missing]"
 
 
-def make_summary(action: dict[str, object], *, powershell: bool) -> str:
+def make_summary(action: dict[str, object], *, current_visual_task: dict[str, object], powershell: bool) -> str:
     rom = rel_to_abs(str(action["rom_to_open"]))
     watcher = rel_to_abs(str(action["watcher_lua"]))
     after_capture = [str(command) for command in action.get("after_capture", [])]
@@ -59,6 +70,10 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
         )
     elif record_visual_review:
         confirm_command = record_visual_review
+    task_summary = current_visual_task.get("summary", {}) if isinstance(current_visual_task, dict) else {}
+    task_evidence = (
+        current_visual_task.get("existing_auto_input_evidence", {}) if isinstance(current_visual_task, dict) else {}
+    )
     lines = [
         "Next manual FCEUX capture",
         "",
@@ -76,6 +91,15 @@ def make_summary(action: dict[str, object], *, powershell: bool) -> str:
         "Important:",
         "- This is a manual capture step; it does not autoplay through the game.",
         "- Waiting on the title/opening screen will not create useful patch evidence.",
+    ]
+    if task_summary:
+        lines += [
+            f"- Required screen: {task_summary.get('required_screen', '')}",
+            f"- Existing auto-input context: {task_summary.get('auto_input_context_status', '')}",
+        ]
+        if task_evidence.get("context_rejection_reason"):
+            lines.append(f"- Existing PNG is not enough: {task_evidence['context_rejection_reason']}")
+    lines += [
         "",
         "At the target screen:",
         "- Press D to save the dump.",
@@ -117,7 +141,7 @@ def main() -> int:
         print("No pending manual FCEUX action.")
         return 0
 
-    print(make_summary(action, powershell=args.powershell), end="")
+    print(make_summary(action, current_visual_task=load_current_visual_task(), powershell=args.powershell), end="")
     return 0
 
 

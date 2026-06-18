@@ -21,6 +21,9 @@ def main() -> int:
     out = result.stdout
     required = [
         "Next manual FCEUX action: 0x0569D / Hashi",
+        "Required screen: A patched-ROM screen where the Hashi bridge/stage/location label is visibly displayed.",
+        "Existing auto-input context: CONTEXT_REJECTED_DIALOGUE_NOT_LOCATION_LABEL",
+        "Why existing PNG is not enough",
         "does not autoplay through the game",
         "press D in FCEUX",
         "scripts/run_fceux_lua_analysis.py",

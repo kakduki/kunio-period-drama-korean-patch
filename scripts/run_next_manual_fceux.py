@@ -56,8 +56,16 @@ def main() -> int:
         return 1
 
     command = launch_command(action, timeout=args.timeout)
+    task = context.get("current_visual_task", {})
+    task_summary = task.get("summary", {}) if isinstance(task, dict) else {}
+    task_evidence = task.get("existing_auto_input_evidence", {}) if isinstance(task, dict) else {}
     print(f"Next manual FCEUX action: {action['target']} / {action['group']}")
     print(f"Hint: {action['screen_hint']}")
+    if task_summary:
+        print(f"Required screen: {task_summary.get('required_screen', '')}")
+        print(f"Existing auto-input context: {task_summary.get('auto_input_context_status', '')}")
+        if task_evidence.get("context_rejection_reason"):
+            print(f"Why existing PNG is not enough: {task_evidence['context_rejection_reason']}")
     print("This launcher does not autoplay through the game.")
     print("Use FCEUX controls to reach the target screen, then press D in FCEUX. The launcher stops after the dump.")
     print("Launch command:")

@@ -12,6 +12,7 @@ from rom_utils import REPO_ROOT
 
 
 NEXT_MANUAL_RUN = REPO_ROOT / "rom_analysis" / "next_manual_run.json"
+CURRENT_PRIMARY_VISUAL_TASK = REPO_ROOT / "rom_analysis" / "current_primary_visual_task.json"
 MANIFEST = REPO_ROOT / "rom_analysis" / "patch_candidate_manifest.json"
 DEFAULT_MANUAL_TIMEOUT = 600
 DEFAULT_MANUAL_OUTPUT = "rom_analysis/fceux_manual_launch"
@@ -43,10 +44,12 @@ def load_next_manual_context() -> dict[str, object]:
     manifest = load_json(MANIFEST)
     next_run = load_json(NEXT_MANUAL_RUN)
     action = next_run.get("next_action")
+    current_visual_task = load_json(CURRENT_PRIMARY_VISUAL_TASK) if CURRENT_PRIMARY_VISUAL_TASK.exists() else {}
     return {
         "manifest": manifest,
         "next_run": next_run,
         "action": action,
+        "current_visual_task": current_visual_task,
     }
 
 
@@ -73,6 +76,7 @@ def launch_command(action: dict[str, object], *, timeout: int = DEFAULT_MANUAL_T
 def validate_next_action(context: dict[str, object]) -> tuple[list[str], list[str]]:
     manifest = context["manifest"]
     action = context["action"]
+    current_visual_task = context.get("current_visual_task", {})
     if not isinstance(manifest, dict) or not isinstance(action, dict):
         return [], []
 
@@ -103,6 +107,11 @@ def validate_next_action(context: dict[str, object]) -> tuple[list[str], list[st
 
     if not action.get("record_visual_review"):
         warnings.append("next action has no record_visual_review command")
+    if isinstance(current_visual_task, dict) and current_visual_task:
+        task_summary = current_visual_task.get("summary", {})
+        task_target = task_summary.get("target") if isinstance(task_summary, dict) else ""
+        if task_target and task_target != action.get("target"):
+            warnings.append(f"current visual task target {task_target} does not match next action {action.get('target')}")
 
     return errors, warnings
 
@@ -124,6 +133,11 @@ def main() -> int:
 
     target_rom = resolve_repo_path(action["rom_to_open"])
     watcher = resolve_repo_path(action["watcher_lua"])
+    current_visual_task = context.get("current_visual_task", {})
+    task_summary = current_visual_task.get("summary", {}) if isinstance(current_visual_task, dict) else {}
+    task_evidence = (
+        current_visual_task.get("existing_auto_input_evidence", {}) if isinstance(current_visual_task, dict) else {}
+    )
 
     print("Manual FCEUX preflight")
     print(f"- phase: {action['phase']}")
@@ -134,6 +148,13 @@ def main() -> int:
     print(f"- watcher Lua: {rel(watcher)}")
     if action.get("record_visual_review"):
         print(f"- record command: {action['record_visual_review']}")
+    if task_summary:
+        print("- current visual task:")
+        print(f"  decision: {task_summary.get('decision', '')}")
+        print(f"  required screen: {task_summary.get('required_screen', '')}")
+        print(f"  existing auto-input context: {task_summary.get('auto_input_context_status', '')}")
+        if task_evidence.get("context_rejection_reason"):
+            print(f"  why existing PNG is not enough: {task_evidence['context_rejection_reason']}")
     print("- launch helper:")
     print("  python " + " ".join(launch_command(action)))
 
