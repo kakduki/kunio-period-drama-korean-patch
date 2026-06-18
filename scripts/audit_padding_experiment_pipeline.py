@@ -23,7 +23,7 @@ BUILD_REPORTS = [
         "experiment_set": "v05-current-font-base",
         "build_report": REPO_ROOT / "output" / "kunio_period_drama_korean_prg_padding_exp_v05_build_report.json",
         "cpu_source": "v05-watch-dirs",
-        "ppu_source": "not-run",
+        "ppu_source": "v05-ppu-watch-dirs",
     },
 ]
 CPU_COMPARISON = REPO_ROOT / "rom_analysis" / "fceux_padding_exp_watch_comparison.json"
@@ -76,6 +76,12 @@ def watch_dir_for_v05(strategy: str) -> Path:
     return REPO_ROOT / "rom_analysis" / f"fceux_padding_exp_v05_{strategy}_watch"
 
 
+def ppu_watch_dir_for_v05(strategy: str) -> Path:
+    if strategy == "preserve_tail":
+        return REPO_ROOT / "rom_analysis" / "fceux_padding_exp_v05_preserve_tail_ppu_watch"
+    return REPO_ROOT / "rom_analysis" / f"fceux_padding_exp_v05_{strategy}_ppu_watch"
+
+
 def read_v05_cpu_row(strategy: str) -> dict[str, object] | None:
     watch_dir = watch_dir_for_v05(strategy)
     summary_path = watch_dir / "summary.tsv"
@@ -92,6 +98,55 @@ def read_v05_cpu_row(strategy: str) -> dict[str, object] | None:
         "hits": len(read_rows),
         "active_expected_matches": len(active_rows),
         "record_snapshots": sorted({row.get("record_snapshot", "") for row in active_rows if row.get("record_snapshot")}),
+        "input_dir": str(watch_dir.relative_to(REPO_ROOT)),
+    }
+
+
+def parse_hex_bytes(text: str) -> list[int]:
+    return [int(part, 16) for part in str(text).split() if part]
+
+
+def read_summary(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    rows = list(csv.DictReader(path.open(encoding="utf-8"), delimiter="\t"))
+    return rows[-1] if rows else {}
+
+
+def read_v05_ppu_row(strategy: str, expected_bytes: str) -> dict[str, object] | None:
+    watch_dir = ppu_watch_dir_for_v05(strategy)
+    summary = read_summary(watch_dir / "summary.tsv")
+    writes_path = watch_dir / "ppu_writes.tsv"
+    if not summary or not writes_path.exists():
+        return None
+    expected = parse_hex_bytes(expected_bytes)
+    by_frame: dict[int, dict[int, int]] = {}
+    ppu_writes = 0
+    with writes_path.open(encoding="utf-8") as handle:
+        for row in csv.DictReader(handle, delimiter="\t"):
+            try:
+                frame = int(row["frame"])
+                addr = int(row["vram_addr"].lstrip("$"), 16)
+                byte = int(row["byte"], 16)
+            except (KeyError, ValueError):
+                continue
+            ppu_writes += 1
+            if 0x2000 <= addr < 0x3000 and (addr & 0x3FF) < 0x3C0:
+                by_frame.setdefault(frame, {})[addr] = byte
+
+    matches = []
+    for frame, cells in sorted(by_frame.items()):
+        for addr in sorted(cells):
+            actual = [cells.get(addr + offset) for offset in range(len(expected))]
+            if actual == expected:
+                matches.append({"frame": frame, "vram_addr": f"${addr:04X}"})
+    return {
+        "final_reason": summary.get("reason", ""),
+        "final_frame": summary.get("frame", ""),
+        "ppu_writes": ppu_writes,
+        "frames_captured": len(by_frame),
+        "exact_vram_matches": len(matches),
+        "match_locations": matches[:12],
         "input_dir": str(watch_dir.relative_to(REPO_ROOT)),
     }
 
@@ -143,7 +198,12 @@ def main() -> int:
                 cpu_row = read_v05_cpu_row(strategy)
             else:
                 cpu_row = cpu_by_strategy.get(strategy)
-            ppu_row = ppu_by_strategy.get(strategy) if report_info["ppu_source"] == "comparison" else None
+            if report_info["ppu_source"] == "comparison":
+                ppu_row = ppu_by_strategy.get(strategy)
+            elif report_info["ppu_source"] == "v05-ppu-watch-dirs":
+                ppu_row = read_v05_ppu_row(strategy, str(build["patched_bytes"]))
+            else:
+                ppu_row = None
             cpu_status = status_from_cpu(cpu_row)
             ppu_status = status_from_ppu(ppu_row)
             row = {
