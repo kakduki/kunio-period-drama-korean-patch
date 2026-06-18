@@ -1,8 +1,8 @@
 {
   "bundle_dir": "release/kunio_period_drama_korean_v0_4_2_font-expanded_test",
   "zip_path": "release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip",
-  "zip_size": 255527,
-  "zip_md5": "543c406490d24c095204ecd3118c6521",
+  "zip_size": 255559,
+  "zip_md5": "a57bd41857e560ed01b7261ff2fea73f",
   "primary_ips": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
   "primary_candidate": "v0.4.2 font-expanded",
   "primary_candidate_md5": "ea11dc002a1a7b07682ce00a754b1a61",

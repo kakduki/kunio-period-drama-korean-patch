@@ -125,4 +125,5 @@ text_data/     전사/번역 참고 자료
 ## Current Progress Entry Point
 
 - Start here: `rom_analysis/patch_progress_dashboard.md` shows the current patch status, release blockers, and the next FCEUX manual capture target.
+- Next gate queue: `rom_analysis/candidate_pipeline/release_gate_action_plan.md` maps open release gates to concrete evidence tasks.
 - `rom_analysis/patch_progress_dashboard.md`: current one-page status, release blockers, and next FCEUX manual action

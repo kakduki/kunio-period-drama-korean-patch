@@ -7,6 +7,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`: primary IPS patch
 - `patch_progress_dashboard.md`: one-page current status, blockers, and next action
 - `candidate_pipeline/`: soft-gate build matrix, string candidates, smoke logs, quarantine notes, and padding experiment audits
+- `candidate_pipeline/release_gate_action_plan.md`: open release gates mapped to the next concrete evidence tasks
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS
 - `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS

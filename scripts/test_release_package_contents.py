@@ -56,8 +56,11 @@ def main() -> int:
             errors.append(f"release bundle contains ROM file: {path.relative_to(REPO_ROOT)}")
 
     readme = BUNDLE_DIR / "README.md"
-    if "candidate_pipeline/" not in readme.read_text(encoding="utf-8"):
+    readme_text = readme.read_text(encoding="utf-8")
+    if "candidate_pipeline/" not in readme_text:
         errors.append("release README does not mention candidate_pipeline/")
+    if "candidate_pipeline/release_gate_action_plan.md" not in readme_text:
+        errors.append("release README does not mention candidate_pipeline/release_gate_action_plan.md")
 
     manifest_path = BUNDLE_DIR / "release_manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))

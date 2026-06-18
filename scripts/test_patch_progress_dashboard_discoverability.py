@@ -18,16 +18,20 @@ def main() -> int:
         "README.md",
         [
             "rom_analysis/patch_progress_dashboard.md",
+            "rom_analysis/candidate_pipeline/release_gate_action_plan.md",
             "current patch status",
             "next FCEUX manual capture target",
+            "open release gates",
         ],
     )
     assert_contains(
         "rom_analysis/README.md",
         [
             "patch_progress_dashboard.md",
+            "candidate_pipeline/release_gate_action_plan.md",
             "release blockers",
             "next FCEUX manual action",
+            "concrete evidence tasks",
         ],
     )
     assert_contains(
@@ -35,6 +39,7 @@ def main() -> int:
         [
             "Patch Progress Dashboard",
             "Release Blockers",
+            "Next gate action",
             "0x07227",
         ],
     )
