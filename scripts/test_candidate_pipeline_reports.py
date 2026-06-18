@@ -80,8 +80,14 @@ def main() -> int:
 
     release_gate = RELEASE_GATE.read_text(encoding="utf-8")
     for expected in [
+        "Gate Status Summary",
         "Development Soft Gate",
         "Release Hard Gate",
+        "PASS",
+        "FAIL",
+        "UNKNOWN",
+        "VISUAL_PROOF_PENDING",
+        "HIGH_RISK_VISUAL_PROOF_PENDING",
         "No `.nes` files in release zip",
         "Manual visual proof for every release-included string",
     ]:

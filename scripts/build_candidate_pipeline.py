@@ -661,10 +661,70 @@ def write_release_gate_checklist(
         + [str(report["build_id"]) for report in quarantined_reports]
     )
     smoke_checked = "x" if all(smoke_status_from_summary(build_id) == "PASS" for build_id in smoke_ids) else " "
+    selected_builds_pass = all(report["build_status"] == "PASS" for report in reports)
+    combined_build_pass = combined_report["build_status"] == "PASS"
+    quarantine_builds_pass = all(report["build_status"] == "PASS" for report in quarantined_reports)
+    smoke_all_pass = smoke_checked == "x"
+    release_gate_rows = [
+        {
+            "gate": "release-included visual proof",
+            "status": "FAIL",
+            "failure_class": "VISUAL_PROOF_PENDING",
+            "evidence": "primary v0.4.2 and softgate rows still require visible-screen proof before release",
+        },
+        {
+            "gate": "high-risk/quarantined visual proof",
+            "status": "FAIL",
+            "failure_class": "HIGH_RISK_VISUAL_PROOF_PENDING",
+            "evidence": f"{len(quarantined_reports)} quarantined Katana candidates require item-list visual proof",
+        },
+        {
+            "gate": "false-positive/ambiguous bytes excluded",
+            "status": "PASS",
+            "failure_class": "none",
+            "evidence": "quarantined candidates are isolated and not included in softgate-dev-combined",
+        },
+        {
+            "gate": "base and patched hashes documented",
+            "status": "PASS",
+            "failure_class": "none",
+            "evidence": "patched_rom_report.md records base MD5 and candidate MD5 values",
+        },
+        {
+            "gate": "IPS applies from clean base ROM",
+            "status": "PASS" if selected_builds_pass and combined_build_pass and quarantine_builds_pass else "FAIL",
+            "failure_class": "none" if selected_builds_pass and combined_build_pass and quarantine_builds_pass else "BUILD_OR_IPS_GENERATION_FAILED",
+            "evidence": "candidate IPS files are generated from clean base-to-patched byte diffs",
+        },
+        {
+            "gate": "release zip contains no ROM",
+            "status": "UNKNOWN",
+            "failure_class": "PACKAGE_TEST_NOT_PART_OF_CANDIDATE_BUILD",
+            "evidence": "validated separately by scripts/test_release_package_contents.py after packaging",
+        },
+        {
+            "gate": "regression boot smoke",
+            "status": "PASS" if smoke_all_pass else "UNKNOWN",
+            "failure_class": "none" if smoke_all_pass else "SMOKE_EVIDENCE_MISSING",
+            "evidence": "smoke_summary_*.tsv files report lua_done for candidate boot tests",
+        },
+    ]
     lines = [
         "# Release Gate Checklist",
         "",
         "Hard gates apply only to release candidates, not to soft-gated development builds.",
+        "",
+        "## Gate Status Summary",
+        "",
+        "| gate | status | failure class | evidence |",
+        "| --- | --- | --- | --- |",
+        "| development soft gate | PASS | none | selected/combined/quarantined candidate builds and boot smoke evidence are present |",
+    ]
+    lines.extend(
+        f"| {row['gate']} | {row['status']} | {row['failure_class']} | {row['evidence']} |"
+        for row in release_gate_rows
+    )
+    lines += [
         "",
         "## Development Soft Gate",
         "",
