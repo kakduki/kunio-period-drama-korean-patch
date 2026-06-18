@@ -116,6 +116,7 @@ PRIMARY_VISUAL_REVIEW_RECORDER = REPO_ROOT / "scripts" / "record_primary_visual_
 CAPTURE_REFRESHER = REPO_ROOT / "scripts" / "refresh_after_manual_capture.py"
 NEXT_RUN_PREPARER = REPO_ROOT / "scripts" / "prepare_next_manual_run.py"
 MANUAL_FCEUX_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_manual_fceux.py"
+RELEASE_GATE_ACTION_PREFLIGHT = REPO_ROOT / "scripts" / "preflight_release_gate_action.py"
 NEXT_MANUAL_FCEUX_RUNNER = REPO_ROOT / "scripts" / "run_next_manual_fceux.py"
 NEXT_PRIMARY_VISUAL_CONFIRMER = REPO_ROOT / "scripts" / "confirm_next_primary_visual.py"
 GD_TO_PNG_CONVERTER = REPO_ROOT / "scripts" / "convert_fceux_gd_to_png.py"
@@ -233,6 +234,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `refresh_after_manual_capture.py`: one-command report refresh after manual FCEUX capture",
         "- `prepare_next_manual_run.py`: prints the next focused manual FCEUX setup",
         "- `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator",
+        "- `preflight_release_gate_action.py`: checks open release-gate evidence task inputs before running them",
         "- `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks",
         "- `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed",
         "- `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images",
@@ -449,6 +451,7 @@ def package() -> dict[str, object]:
         (CAPTURE_REFRESHER, "refresh_after_manual_capture.py"),
         (NEXT_RUN_PREPARER, "prepare_next_manual_run.py"),
         (MANUAL_FCEUX_PREFLIGHT, "preflight_manual_fceux.py"),
+        (RELEASE_GATE_ACTION_PREFLIGHT, "preflight_release_gate_action.py"),
         (NEXT_MANUAL_FCEUX_RUNNER, "run_next_manual_fceux.py"),
         (NEXT_PRIMARY_VISUAL_CONFIRMER, "confirm_next_primary_visual.py"),
         (GD_TO_PNG_CONVERTER, "convert_fceux_gd_to_png.py"),

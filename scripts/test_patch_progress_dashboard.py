@@ -57,6 +57,7 @@ def main() -> int:
         "Action plan items",
         "release-included visual proof",
         "shortened padding rule acceptance",
+        "python scripts/preflight_release_gate_action.py",
         "python scripts/preflight_manual_fceux.py",
         "python scripts/run_next_manual_fceux.py",
         "python scripts/confirm_next_primary_visual.py --confirm-visible",

@@ -70,6 +70,7 @@ KEY_PYTHON = [
     "scripts/package_primary_release.py",
     "scripts/prepare_next_manual_run.py",
     "scripts/preflight_manual_fceux.py",
+    "scripts/preflight_release_gate_action.py",
     "scripts/record_primary_visual_review.py",
     "scripts/record_visual_review.py",
     "scripts/readable_labels.py",
@@ -100,6 +101,7 @@ KEY_PYTHON = [
     "scripts/test_patch_progress_dashboard_discoverability.py",
     "scripts/test_prepare_next_manual_run.py",
     "scripts/test_preflight_manual_fceux.py",
+    "scripts/test_preflight_release_gate_action.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_record_primary_visual_review.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -270,6 +272,7 @@ def main() -> int:
     run("patch progress dashboard discoverability", ["scripts/test_patch_progress_dashboard_discoverability.py"])
     run("next manual run helper", ["scripts/test_prepare_next_manual_run.py"])
     run("manual FCEUX preflight", ["scripts/test_preflight_manual_fceux.py"])
+    run("release gate action preflight", ["scripts/test_preflight_release_gate_action.py"])
     run("primary visual checklist", ["scripts/test_primary_visual_checklist.py"])
     run("primary visual review recorder", ["scripts/test_record_primary_visual_review.py"])
     run("manual capture cards readable labels", ["scripts/test_manual_capture_cards_readable.py"])

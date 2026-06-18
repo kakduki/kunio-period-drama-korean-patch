@@ -252,6 +252,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "## Useful Commands",
         "",
         "```powershell",
+        "python scripts/preflight_release_gate_action.py",
         "python scripts/preflight_manual_fceux.py",
         "python scripts/run_next_manual_fceux.py",
         "python scripts/confirm_next_primary_visual.py --confirm-visible",

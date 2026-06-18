@@ -70,6 +70,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `refresh_after_manual_capture.py`: one-command report refresh after manual FCEUX capture
 - `prepare_next_manual_run.py`: prints the next focused manual FCEUX setup
 - `preflight_manual_fceux.py`: checks the next manual FCEUX inputs before launching the emulator
+- `preflight_release_gate_action.py`: checks open release-gate evidence task inputs before running them
 - `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks
 - `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed
 - `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images

@@ -61,6 +61,10 @@ def main() -> int:
         errors.append("release README does not mention candidate_pipeline/")
     if "candidate_pipeline/release_gate_action_plan.md" not in readme_text:
         errors.append("release README does not mention candidate_pipeline/release_gate_action_plan.md")
+    if "preflight_release_gate_action.py" not in readme_text:
+        errors.append("release README does not mention preflight_release_gate_action.py")
+    if not (BUNDLE_DIR / "preflight_release_gate_action.py").is_file():
+        errors.append("release bundle missing preflight_release_gate_action.py")
 
     manifest_path = BUNDLE_DIR / "release_manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -83,6 +87,8 @@ def main() -> int:
                 errors.append(f"manifest missing candidate pipeline file: {repo_relative}")
             if zip_relative not in zip_names:
                 errors.append(f"zip missing candidate pipeline file: {zip_relative}")
+        if f"{BUNDLE_DIR.name}/preflight_release_gate_action.py" not in zip_names:
+            errors.append("zip missing preflight_release_gate_action.py")
 
     if errors:
         for error in errors:
