@@ -22,6 +22,9 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing
 - `state_single_byte_probe_0720_b1_notes.md`: result of testing `$0720 = $B1` alone
 - `state_single_byte_probe_0721_45_notes.md`: result of testing `$0721 = $45` alone
+- `state_single_byte_probe_0722_c9_notes.md`: result of testing `$0722 = $C9` alone
+- `state_single_byte_probe_0723_7a_notes.md`: result of testing `$0723 = $7A` alone
+- `state_single_byte_probe_0723_7a_frame_001325_screen.png`: selected dialogue-like screen evidence from `$0723 = $7A`
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `next_manual_run.md`: single recommended next FCEUX action queue
