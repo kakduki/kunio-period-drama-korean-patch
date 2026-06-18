@@ -1,0 +1,534 @@
+{
+  "sources": [
+    {
+      "group": "input_dialogue",
+      "folder": "rom_analysis/fceux_input_explorer_v042",
+      "cpu_ram_snapshots": 4
+    },
+    {
+      "group": "katana_menu_route",
+      "folder": "rom_analysis/katana_visual_explorer_v042",
+      "cpu_ram_snapshots": 24
+    }
+  ],
+  "summary": {
+    "snapshots": 28,
+    "candidate_addresses": 724,
+    "top_candidate_count": 32,
+    "recommended_use": "Use these addresses as the first watch/write candidates for route cheats, not as confirmed cheat codes."
+  },
+  "top_candidates": [
+    {
+      "address": "0x00E7",
+      "role": "zero_page_engine_state",
+      "score": 54,
+      "unique_values": 26,
+      "adjacent_changes": 26,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "29 32 42 59",
+        "katana_menu_route": "05 1F 25 40 42 47 59 5B 63 69 6E 7F 8E 9A 9C A2 A8 AE AF BA C3 EC F0 F8"
+      },
+      "late_values": {
+        "input_dialogue": "0x32",
+        "katana_menu_route": "0x9A"
+      }
+    },
+    {
+      "address": "0x002A",
+      "role": "zero_page_engine_state",
+      "score": 43,
+      "unique_values": 17,
+      "adjacent_changes": 24,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "3A 5D 5F",
+        "katana_menu_route": "00 06 1B 2A 31 35 3A 3E 4C 4D 50 5D 5F 62 70 91 AB"
+      },
+      "late_values": {
+        "input_dialogue": "0x5D",
+        "katana_menu_route": "0x31"
+      }
+    },
+    {
+      "address": "0x002C",
+      "role": "zero_page_engine_state",
+      "score": 43,
+      "unique_values": 17,
+      "adjacent_changes": 24,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "92 EF F9",
+        "katana_menu_route": "00 1D 2B 31 36 47 50 79 89 92 94 C2 C7 D7 E1 EF F9"
+      },
+      "late_values": {
+        "input_dialogue": "0xEF",
+        "katana_menu_route": "0x89"
+      }
+    },
+    {
+      "address": "0x001F",
+      "role": "zero_page_engine_state",
+      "score": 40,
+      "unique_values": 15,
+      "adjacent_changes": 23,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "1D 67 77 E1",
+        "katana_menu_route": "05 56 60 61 67 77 80 81 D0 D5 DC EC FA"
+      },
+      "late_values": {
+        "input_dialogue": "0x1D",
+        "katana_menu_route": "0x80"
+      }
+    },
+    {
+      "address": "0x002D",
+      "role": "zero_page_engine_state",
+      "score": 37,
+      "unique_values": 14,
+      "adjacent_changes": 21,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "07 92",
+        "katana_menu_route": "00 07 20 25 6B 80 8B 8E 90 92 B1 BA D3 D4"
+      },
+      "late_values": {
+        "input_dialogue": "0x92",
+        "katana_menu_route": "0xD3"
+      }
+    },
+    {
+      "address": "0x001C",
+      "role": "zero_page_engine_state",
+      "score": 35,
+      "unique_values": 11,
+      "adjacent_changes": 22,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "19 73 C0 DC",
+        "katana_menu_route": "00 4E 51 64 73 85 C0 D1 DC F6"
+      },
+      "late_values": {
+        "input_dialogue": "0x19",
+        "katana_menu_route": "0x00"
+      }
+    },
+    {
+      "address": "0x0020",
+      "role": "zero_page_engine_state",
+      "score": 34,
+      "unique_values": 11,
+      "adjacent_changes": 21,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "02 7F 88",
+        "katana_menu_route": "02 06 0A 30 78 7F 80 88 89 98 D0"
+      },
+      "late_values": {
+        "input_dialogue": "0x88",
+        "katana_menu_route": "0x80"
+      }
+    },
+    {
+      "address": "0x0720",
+      "role": "runtime_flags",
+      "score": 34,
+      "unique_values": 13,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 0E 20 B1",
+        "katana_menu_route": "00 0E 0F 15 23 56 69 70 81 C4 F3"
+      },
+      "late_values": {
+        "input_dialogue": "0xB1",
+        "katana_menu_route": "0x69"
+      }
+    },
+    {
+      "address": "0x0721",
+      "role": "runtime_flags",
+      "score": 34,
+      "unique_values": 13,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 20 45 95",
+        "katana_menu_route": "00 1D 23 26 50 52 95 96 9E F2 F4"
+      },
+      "late_values": {
+        "input_dialogue": "0x45",
+        "katana_menu_route": "0x50"
+      }
+    },
+    {
+      "address": "0x0722",
+      "role": "runtime_flags",
+      "score": 34,
+      "unique_values": 13,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 12 20 C9",
+        "katana_menu_route": "00 0F 10 12 14 1C 23 55 5B 65 AC"
+      },
+      "late_values": {
+        "input_dialogue": "0xC9",
+        "katana_menu_route": "0x5B"
+      }
+    },
+    {
+      "address": "0x0723",
+      "role": "runtime_flags",
+      "score": 34,
+      "unique_values": 13,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 6B 72 7A",
+        "katana_menu_route": "00 39 3E 40 6C 72 73 7B 95 97 CC"
+      },
+      "late_values": {
+        "input_dialogue": "0x7A",
+        "katana_menu_route": "0x3E"
+      }
+    },
+    {
+      "address": "0x001A",
+      "role": "zero_page_engine_state",
+      "score": 33,
+      "unique_values": 11,
+      "adjacent_changes": 20,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "14 90",
+        "katana_menu_route": "00 01 02 03 10 14 28 80 90 A9 E0"
+      },
+      "late_values": {
+        "input_dialogue": "0x90",
+        "katana_menu_route": "0x80"
+      }
+    },
+    {
+      "address": "0x002B",
+      "role": "zero_page_engine_state",
+      "score": 33,
+      "unique_values": 11,
+      "adjacent_changes": 20,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "89 E2",
+        "katana_menu_route": "00 01 02 07 77 87 88 89 91 C3 E2"
+      },
+      "late_values": {
+        "input_dialogue": "0x89",
+        "katana_menu_route": "0x01"
+      }
+    },
+    {
+      "address": "0x0084",
+      "role": "zero_page_engine_state",
+      "score": 33,
+      "unique_values": 12,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 47 B0 ED",
+        "katana_menu_route": "00 25 28 31 47 80 A5 C0 CA E0"
+      },
+      "late_values": {
+        "input_dialogue": "0xED",
+        "katana_menu_route": "0x31"
+      }
+    },
+    {
+      "address": "0x0002",
+      "role": "zero_page_engine_state",
+      "score": 32,
+      "unique_values": 9,
+      "adjacent_changes": 21,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 31 3A 52",
+        "katana_menu_route": "00 31 34 35 36 38 52 98"
+      },
+      "late_values": {
+        "input_dialogue": "0x3A",
+        "katana_menu_route": "0x35"
+      }
+    },
+    {
+      "address": "0x0708",
+      "role": "runtime_flags",
+      "score": 31,
+      "unique_values": 12,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 42 72 BD",
+        "katana_menu_route": "00 1E 34 42 4C 54 5C 8C A2 C3"
+      },
+      "late_values": {
+        "input_dialogue": "0x72",
+        "katana_menu_route": "0x8C"
+      }
+    },
+    {
+      "address": "0x07A9",
+      "role": "runtime_flags",
+      "score": 30,
+      "unique_values": 11,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 0C 20",
+        "katana_menu_route": "00 17 1A 1B 1C 1E 21 64 8C"
+      },
+      "late_values": {
+        "input_dialogue": "0x0C",
+        "katana_menu_route": "0x1A"
+      }
+    },
+    {
+      "address": "0x0009",
+      "role": "zero_page_engine_state",
+      "score": 29,
+      "unique_values": 8,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 80",
+        "katana_menu_route": "00 04 10 20 40 80 E7 F3"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x00"
+      }
+    },
+    {
+      "address": "0x0013",
+      "role": "zero_page_engine_state",
+      "score": 29,
+      "unique_values": 12,
+      "adjacent_changes": 15,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 1D 77 E1",
+        "katana_menu_route": "00 56 60 77 78 81 D0 D5 DC EC"
+      },
+      "late_values": {
+        "input_dialogue": "0x1D",
+        "katana_menu_route": "0x00"
+      }
+    },
+    {
+      "address": "0x001D",
+      "role": "zero_page_engine_state",
+      "score": 29,
+      "unique_values": 7,
+      "adjacent_changes": 20,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 67",
+        "katana_menu_route": "00 01 03 04 63 67 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x00"
+      }
+    },
+    {
+      "address": "0x002F",
+      "role": "zero_page_engine_state",
+      "score": 29,
+      "unique_values": 9,
+      "adjacent_changes": 18,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 08",
+        "katana_menu_route": "00 01 07 08 10 12 17 60 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0x08",
+        "katana_menu_route": "0x01"
+      }
+    },
+    {
+      "address": "0x00FC",
+      "role": "zero_page_engine_state",
+      "score": 29,
+      "unique_values": 9,
+      "adjacent_changes": 18,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "03 09",
+        "katana_menu_route": "03 05 07 09 0B 0D 5F 61 6B"
+      },
+      "late_values": {
+        "input_dialogue": "0x03",
+        "katana_menu_route": "0x05"
+      }
+    },
+    {
+      "address": "0x07A8",
+      "role": "runtime_flags",
+      "score": 29,
+      "unique_values": 10,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 20 E4",
+        "katana_menu_route": "00 17 1F 21 64 78 8C B4"
+      },
+      "late_values": {
+        "input_dialogue": "0xE4",
+        "katana_menu_route": "0x78"
+      }
+    },
+    {
+      "address": "0x07C3",
+      "role": "runtime_flags",
+      "score": 29,
+      "unique_values": 10,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 F0 F1 FA",
+        "katana_menu_route": "00 31 35 36 38 F0 F1 F4 F6"
+      },
+      "late_values": {
+        "input_dialogue": "0xFA",
+        "katana_menu_route": "0x35"
+      }
+    },
+    {
+      "address": "0x0000",
+      "role": "zero_page_engine_state",
+      "score": 28,
+      "unique_values": 7,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 72 95",
+        "katana_menu_route": "00 2B 72 95 A9 BE E4"
+      },
+      "late_values": {
+        "input_dialogue": "0x72",
+        "katana_menu_route": "0x72"
+      }
+    },
+    {
+      "address": "0x0001",
+      "role": "zero_page_engine_state",
+      "score": 28,
+      "unique_values": 7,
+      "adjacent_changes": 19,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 AE B9",
+        "katana_menu_route": "00 9E AE B2 B7 B8 B9"
+      },
+      "late_values": {
+        "input_dialogue": "0xAE",
+        "katana_menu_route": "0xAE"
+      }
+    },
+    {
+      "address": "0x0003",
+      "role": "zero_page_engine_state",
+      "score": 28,
+      "unique_values": 6,
+      "adjacent_changes": 20,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 5D 84",
+        "katana_menu_route": "00 5D 65 80 84 85"
+      },
+      "late_values": {
+        "input_dialogue": "0x5D",
+        "katana_menu_route": "0x65"
+      }
+    },
+    {
+      "address": "0x002E",
+      "role": "zero_page_engine_state",
+      "score": 28,
+      "unique_values": 9,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00",
+        "katana_menu_route": "00 01 1C 4D 63 72 A8 D4 FF"
+      },
+      "late_values": {
+        "input_dialogue": "0x00",
+        "katana_menu_route": "0x01"
+      }
+    },
+    {
+      "address": "0x00F8",
+      "role": "zero_page_engine_state",
+      "score": 28,
+      "unique_values": 4,
+      "adjacent_changes": 22,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "88 8C",
+        "katana_menu_route": "08 0C 88 8C"
+      },
+      "late_values": {
+        "input_dialogue": "0x8C",
+        "katana_menu_route": "0x88"
+      }
+    },
+    {
+      "address": "0x073B",
+      "role": "runtime_flags",
+      "score": 28,
+      "unique_values": 9,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 1F 24 26",
+        "katana_menu_route": "00 18 1D 1F 20 24 26 29 2B"
+      },
+      "late_values": {
+        "input_dialogue": "0x1F",
+        "katana_menu_route": "0x29"
+      }
+    },
+    {
+      "address": "0x07BB",
+      "role": "runtime_flags",
+      "score": 28,
+      "unique_values": 9,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 1D 1F",
+        "katana_menu_route": "00 15 1D 22 23 25 26 27"
+      },
+      "late_values": {
+        "input_dialogue": "0x1D",
+        "katana_menu_route": "0x26"
+      }
+    },
+    {
+      "address": "0x07C5",
+      "role": "runtime_flags",
+      "score": 28,
+      "unique_values": 9,
+      "adjacent_changes": 17,
+      "group_separation": false,
+      "values_by_group": {
+        "input_dialogue": "00 04 58 E5",
+        "katana_menu_route": "00 03 04 44 58 82 AC C1 E5"
+      },
+      "late_values": {
+        "input_dialogue": "0x58",
+        "katana_menu_route": "0xC1"
+      }
+    }
+  ]
+}

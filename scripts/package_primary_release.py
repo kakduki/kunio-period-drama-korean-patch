@@ -38,6 +38,8 @@ KATANA_SINGLE_SLOT_0502_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot
 KATANA_SINGLE_SLOT_0503_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0503_notes.md"
 KATANA_SINGLE_SLOT_0506_NOTES = REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0506_notes.md"
 TRANSLATION_FIRST_STRATEGY_MD = REPO_ROOT / "rom_analysis" / "translation_first_strategy.md"
+STATE_CHEAT_PROBE_JSON = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.json"
+STATE_CHEAT_PROBE_MD = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -165,6 +167,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `katana_single_slot_probe_0503_notes.md`: result of testing `$0503` alone",
         "- `katana_single_slot_probe_0506_notes.md`: result of testing `$0506` alone",
         "- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role",
+        "- `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -343,6 +346,8 @@ def package() -> dict[str, object]:
         (KATANA_SINGLE_SLOT_0503_NOTES, "katana_single_slot_probe_0503_notes.md"),
         (KATANA_SINGLE_SLOT_0506_NOTES, "katana_single_slot_probe_0506_notes.md"),
         (TRANSLATION_FIRST_STRATEGY_MD, "translation_first_strategy.md"),
+        (STATE_CHEAT_PROBE_MD, "state_cheat_probe_candidates.md"),
+        (STATE_CHEAT_PROBE_JSON, "state_cheat_probe_candidates.json"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
@@ -411,6 +416,7 @@ def package() -> dict[str, object]:
         (AUTO_INPUT_VISUAL_TRIAGE_GENERATOR, "generate_auto_input_visual_triage.py"),
         (KATANA_EXPLORER_REPORT_GENERATOR, "generate_katana_visual_explorer_report.py"),
         (KATANA_SLOT_CANDIDATES_GENERATOR, "generate_katana_inventory_slot_candidates.py"),
+        (REPO_ROOT / "scripts" / "generate_state_cheat_probe_candidates.py", "generate_state_cheat_probe_candidates.py"),
         (LUA_KATANA_VISUAL_EXPLORER, "lua/kunio_katana_visual_explorer_v042.lua"),
         (LUA_KATANA_INVENTORY_PROBE, "lua/kunio_katana_inventory_probe_v042.lua"),
         (LUA_KATANA_SINGLE_SLOT_PROBE, "lua/kunio_katana_single_slot_probe_v042.lua"),
