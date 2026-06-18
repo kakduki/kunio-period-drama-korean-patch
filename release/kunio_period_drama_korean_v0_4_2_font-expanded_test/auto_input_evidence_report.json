@@ -1,0 +1,126 @@
+{
+  "source": "rom_analysis/fceux_input_explorer_v042/summary.json",
+  "summary": {
+    "frame": "883",
+    "targets_checked": 10,
+    "active_expected_matches": 10,
+    "matched_primary_rows": 10,
+    "latest_screenshot": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.gd",
+    "latest_png_review_image": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png",
+    "latest_meta": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_meta.txt",
+    "route_note": "Converted PNG confirms the auto-input route reached an in-game dialogue screen; this is not yet final patched-Korean visual approval.",
+    "current_limit": "This proves the scripted route reached an in-game dialogue screen and loaded the expected patched byte sequences into CPU memory. It does not by itself prove the final Korean glyphs are visually correct."
+  },
+  "matched_rows": [
+    {
+      "rom_hit": "0x0561A",
+      "romaji": "Hashi",
+      "meaning": "stage/location label",
+      "evidence_level": "static-candidate+pointer",
+      "screen_hint": "look for a bridge/stage/location label",
+      "cpu_range": "$95BE-$960F",
+      "expected_bytes": "8B 8C",
+      "record_snapshot": "7B 15 96 15 96 15 96 15 96 15 96 15 96 15 96 15 96 15 96 15 96 05 7B 0A 7B 0F 7B 14 7B 29 96 2E 96 33 96 19 7B 3D 96 1E 7B 47 96 4C 96 51 96 23 7B 5B 96 60 96 65 96 28 7B 6F 96 2D 7B 79 96 7D 96 82 96 87 96 8C 96 91 96 96 96 9B 8B 8C 96 9F 8B FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x0562F",
+      "romaji": "Tatsuichi",
+      "meaning": "name/dialogue label",
+      "evidence_level": "static-candidate",
+      "screen_hint": "look for a visible Tatsuichi name/dialogue context",
+      "cpu_range": "$961A-$9623",
+      "expected_bytes": "89 98 8E 90",
+      "record_snapshot": "0C B6 83 87 91 89 98 8E 90 FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x05643",
+      "romaji": "Heishichi",
+      "meaning": "name/dialogue label",
+      "evidence_level": "static-candidate+pointer",
+      "screen_hint": "look for a visible Heishichi name/dialogue context",
+      "cpu_range": "$9633-$9637",
+      "expected_bytes": "8D 8E 8F 90",
+      "record_snapshot": "8D 8E 8F 90 FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x0569D",
+      "romaji": "Hashi",
+      "meaning": "stage/location label",
+      "evidence_level": "encoding-exact",
+      "screen_hint": "look for a bridge/stage/location label",
+      "cpu_range": "$968C-$968F",
+      "expected_bytes": "8B 8C",
+      "record_snapshot": "85 8B 8C FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x056DA",
+      "romaji": "Hashi",
+      "meaning": "stage/location label",
+      "evidence_level": "static-candidate",
+      "screen_hint": "look for a bridge/stage/location label",
+      "cpu_range": "$96C5-$96CE",
+      "expected_bytes": "8B 8C",
+      "record_snapshot": "9A 07 99 8D 89 8B 8C 0F 83 FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x0571C",
+      "romaji": "Hashi",
+      "meaning": "stage/location label",
+      "evidence_level": "static-candidate",
+      "screen_hint": "look for a bridge/stage/location label",
+      "cpu_range": "$9706-$9714",
+      "expected_bytes": "8B 8C",
+      "record_snapshot": "8E 87 0A AB 83 A6 8B 8C A3 AE 94 A3 9F 92 FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x057D4",
+      "romaji": "Hashi",
+      "meaning": "stage/location label",
+      "evidence_level": "static-candidate+pointer",
+      "screen_hint": "look for a bridge/stage/location label",
+      "cpu_range": "$97C4-$97C8",
+      "expected_bytes": "8B 8C",
+      "record_snapshot": "8B 8C 8D 89 FF",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x07227",
+      "romaji": "Katana",
+      "meaning": "weapon/item label",
+      "evidence_level": "runtime-confirmed",
+      "screen_hint": "look for a katana/weapon item label",
+      "cpu_range": "$B216-$B21A",
+      "expected_bytes": "88 89 8A",
+      "record_snapshot": "85 88 89 8A 00",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x0736A",
+      "romaji": "Raifu",
+      "meaning": "UI life label",
+      "evidence_level": "static-candidate+pointer",
+      "screen_hint": "look for a life/status UI label",
+      "cpu_range": "$B359-$B35E",
+      "expected_bytes": "96 8E 97",
+      "record_snapshot": "F0 96 8E 97 CB 00",
+      "review_status": "auto_input_match_needs_visual"
+    },
+    {
+      "rom_hit": "0x0739D",
+      "romaji": "Raifu",
+      "meaning": "UI life label",
+      "evidence_level": "static-candidate+pointer",
+      "screen_hint": "look for a life/status UI label",
+      "cpu_range": "$B38C-$B391",
+      "expected_bytes": "96 8E 97",
+      "record_snapshot": "F0 96 8E 97 CA 00",
+      "review_status": "auto_input_match_needs_visual"
+    }
+  ]
+}

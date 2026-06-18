@@ -31,6 +31,7 @@ KEY_PYTHON = [
     "scripts/generate_broad_scan_fceux_targets.py",
     "scripts/generate_broad_scan_patchability.py",
     "scripts/generate_batch46_text_readiness.py",
+    "scripts/generate_auto_input_evidence_report.py",
     "scripts/generate_manual_capture_cards.py",
     "scripts/generate_manual_capture_status.py",
     "scripts/generate_manual_dump_inventory.py",
@@ -67,6 +68,7 @@ KEY_PYTHON = [
     "scripts/run_next_manual_fceux.py",
     "scripts/summarize_bank1_watch_reads.py",
     "scripts/test_analyze_manual_screen_dump.py",
+    "scripts/test_auto_input_evidence_report.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_batch46_text_readiness.py",
     "scripts/test_confirm_next_primary_visual.py",
@@ -227,6 +229,7 @@ def main() -> int:
     run("FCEUX GD screenshot converter", ["scripts/test_convert_fceux_gd_to_png.py"])
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
+    run("auto-input evidence report", ["scripts/test_auto_input_evidence_report.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
     run("manual capture watcher overlay", ["scripts/test_manual_capture_watcher_overlay.py"])

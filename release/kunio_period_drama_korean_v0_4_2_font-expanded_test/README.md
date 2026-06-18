@@ -9,6 +9,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `patch_candidate_manifest.md`: candidate status and verification notes
 - `primary_patch_contents.md`: readable list of the text rows currently changed by the primary IPS
 - `primary_visual_checklist.md`: visual-review queue for rows already changed by the primary IPS
+- `auto_input_evidence_report.md`: scripted-route PNG and byte-match evidence for v0.4.2 rows
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `next_manual_run.md`: single recommended next FCEUX action queue
@@ -49,6 +50,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `run_next_manual_fceux.py`: launches the current next manual FCEUX action after preflight checks
 - `confirm_next_primary_visual.py`: records the current next primary visual row after the screen is visibly confirmed
 - `convert_fceux_gd_to_png.py`: converts FCEUX `gui.gdscreenshot()` dumps into PNG review images
+- `generate_auto_input_evidence_report.py`: rebuilds the auto-input evidence summary from checked-in capture records
 - `SHA256SUMS.txt`: checksums for bundle files
 
 ## Required Base ROM

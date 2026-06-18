@@ -18,6 +18,8 @@ Single-page status for the current Korean patch work.
 - Pending v0.4.3 route proofs: **3**
 - Checked-in manual dump record files: **0**
 - Auto-input byte-match rows: **10**
+- Auto-input matched primary rows: **10**
+- Auto-input review image: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png`
 
 ## v0.4.3 Gate
 

@@ -3,6 +3,7 @@
     "primary_patch_contents": "rom_analysis/primary_patch_contents.json",
     "next_manual_run": "rom_analysis/next_manual_run.json",
     "primary_visual_checklist": "rom_analysis/primary_visual_checklist.json",
+    "auto_input_evidence_report": "rom_analysis/auto_input_evidence_report.json",
     "v043_proof_status": "rom_analysis/v043_proof_status.json",
     "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json"
   },
@@ -17,6 +18,8 @@
     "pending_primary_visual_checks": 10,
     "pending_v043_route_proofs": 3,
     "primary_auto_input_match_rows": 10,
+    "auto_input_latest_png": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png",
+    "auto_input_matched_primary_rows": 10,
     "v043_rows": 7,
     "v043_cpu_read_matches": 0,
     "v043_visual_confirmations": 0,
