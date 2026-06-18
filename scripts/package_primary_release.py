@@ -41,6 +41,7 @@ TRANSLATION_FIRST_STRATEGY_MD = REPO_ROOT / "rom_analysis" / "translation_first_
 STATE_CHEAT_PROBE_JSON = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.json"
 STATE_CHEAT_PROBE_MD = REPO_ROOT / "rom_analysis" / "state_cheat_probe_candidates.md"
 STATE_SINGLE_BYTE_0720_B1_NOTES = REPO_ROOT / "rom_analysis" / "state_single_byte_probe_0720_b1_notes.md"
+STATE_SINGLE_BYTE_0721_45_NOTES = REPO_ROOT / "rom_analysis" / "state_single_byte_probe_0721_45_notes.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -171,6 +172,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role",
         "- `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing",
         "- `state_single_byte_probe_0720_b1_notes.md`: result of testing `$0720 = $B1` alone",
+        "- `state_single_byte_probe_0721_45_notes.md`: result of testing `$0721 = $45` alone",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -353,6 +355,7 @@ def package() -> dict[str, object]:
         (STATE_CHEAT_PROBE_MD, "state_cheat_probe_candidates.md"),
         (STATE_CHEAT_PROBE_JSON, "state_cheat_probe_candidates.json"),
         (STATE_SINGLE_BYTE_0720_B1_NOTES, "state_single_byte_probe_0720_b1_notes.md"),
+        (STATE_SINGLE_BYTE_0721_45_NOTES, "state_single_byte_probe_0721_45_notes.md"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
