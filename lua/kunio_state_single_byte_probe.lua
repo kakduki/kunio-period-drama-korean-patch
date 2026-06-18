@@ -1,7 +1,8 @@
--- Single-byte state probe for route/scene cheat discovery.
+-- Single-byte or tiny paired-state probe for route/scene cheat discovery.
 --
 -- Set KUNIO_STATE_ADDR and KUNIO_STATE_VALUE to test one suspected state byte.
--- This script intentionally avoids broad writes: one address, one value, one run.
+-- Or set KUNIO_STATE_WRITES like "0x04FA=0x30,0x04F1=0x02" for a tiny paired probe.
+-- This script intentionally avoids broad writes: only explicitly listed bytes are written.
 
 local function script_dir()
     local source = debug.getinfo(1, "S").source or ""
@@ -20,6 +21,7 @@ KUNIO_MANUAL_DUMP_DEFINE_ONLY = nil
 
 local STATE_ADDR = tonumber(os.getenv("KUNIO_STATE_ADDR") or "0x0720")
 local STATE_VALUE = tonumber(os.getenv("KUNIO_STATE_VALUE") or "0xB1")
+local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES")
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "2400")
 local INJECT_START = tonumber(os.getenv("KUNIO_INJECT_START") or "520")
 local INJECT_END = tonumber(os.getenv("KUNIO_INJECT_END") or "1900")
@@ -32,8 +34,39 @@ local last_dump_frame = -999999
 
 local WATCH_ADDRS = {
     0x00E7, 0x002A, 0x002C, 0x001F, 0x002D, 0x001C, 0x0020,
+    0x04F1, 0x04FA, 0x04FB, 0x04FC, 0x04FD,
     0x0720, 0x0721, 0x0722, 0x0723, 0x0708, 0x07A8, 0x07A9,
 }
+
+local function parse_writes(text)
+    local writes = {}
+    if text == nil or text == "" then
+        writes[#writes + 1] = { addr = STATE_ADDR, value = STATE_VALUE }
+        return writes
+    end
+    for part in string.gmatch(text, "([^,]+)") do
+        local addr_text, value_text = string.match(part, "^%s*([^=]+)%s*=%s*([^=]+)%s*$")
+        local addr = tonumber(addr_text)
+        local value = tonumber(value_text)
+        if addr ~= nil and value ~= nil then
+            writes[#writes + 1] = { addr = addr, value = value }
+        end
+    end
+    if #writes == 0 then
+        writes[#writes + 1] = { addr = STATE_ADDR, value = STATE_VALUE }
+    end
+    return writes
+end
+
+local STATE_WRITES = parse_writes(STATE_WRITES_TEXT)
+
+local function writes_label()
+    local parts = {}
+    for _, item in ipairs(STATE_WRITES) do
+        parts[#parts + 1] = string.format("0x%04X=0x%02X", item.addr, item.value)
+    end
+    return table.concat(parts, ",")
+end
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -103,7 +136,7 @@ local function watch_values()
 end
 
 mkdir(KUNIO_MANUAL_DUMP_OUTPUT)
-append(summary_path, "frame\tphase\tstate_addr\tstate_value\tfingerprint\tdump_prefix")
+append(summary_path, "frame\tphase\tstate_addr\tstate_value\tfingerprint\tdump_prefix\twrites")
 append(watch_path, "frame\tphase\twatch_values")
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
@@ -112,15 +145,17 @@ while emu.framecount() < MAX_FRAMES do
     local frame = emu.framecount()
     local phase = "route"
     if frame >= INJECT_START and frame <= INJECT_END then
-        write_byte(STATE_ADDR, STATE_VALUE)
+        for _, item in ipairs(STATE_WRITES) do
+            write_byte(item.addr, item.value)
+        end
         phase = "inject"
     end
     joypad.set(1, input_for(frame))
     if frame % 60 == 0 then
         append(watch_path, table.concat({ tostring(frame), phase, watch_values() }, "\t"))
     end
-    gui.text(2, 8, "Kunio state single-byte probe")
-    gui.text(2, 17, string.format("addr=$%04X value=$%02X frame=%d", STATE_ADDR, STATE_VALUE, frame))
+    gui.text(2, 8, "Kunio state byte probe")
+    gui.text(2, 17, string.format("writes=%s frame=%d", writes_label(), frame))
     emu.frameadvance()
 
     if frame > 120 and frame - last_dump_frame >= SNAPSHOT_GAP then
@@ -136,6 +171,7 @@ while emu.framecount() < MAX_FRAMES do
                 string.format("0x%02X", STATE_VALUE),
                 fingerprint,
                 ok and tostring(prefix) or ("ERROR:" .. tostring(prefix)),
+                writes_label(),
             }, "\t"))
         end
     end
@@ -148,6 +184,7 @@ append(summary_path, table.concat({
     string.format("0x%02X", STATE_VALUE),
     tostring(last_fingerprint or ""),
     "",
+    writes_label(),
 }, "\t"))
 pcall(function() FCEU.pause() end)
 pcall(function() emu.pause() end)

@@ -1,0 +1,879 @@
+{
+  "summary": {
+    "snapshots": 28,
+    "object_range": "0x0300-0x04FF",
+    "candidate_blocks": 21,
+    "top_block_count": 12,
+    "recommended_use": "Use the recommended fields as a small paired-write queue; do not treat any block as confirmed until screenshots and target records change."
+  },
+  "top_blocks": [
+    {
+      "block": "0x04F0",
+      "score": 141,
+      "changing_fields": 8,
+      "recommended_fields": [
+        {
+          "address": "0x04FA",
+          "block": "0x04F0",
+          "column": "0xA",
+          "unique_values": 6,
+          "changes": 14,
+          "late_values": {
+            "input_dialogue": "0x30",
+            "katana_menu_route": "0x42"
+          },
+          "values_by_group": {
+            "input_dialogue": "30 3C",
+            "katana_menu_route": "30 3C 42 5C 5E 68"
+          }
+        },
+        {
+          "address": "0x04F1",
+          "block": "0x04F0",
+          "column": "0x1",
+          "unique_values": 4,
+          "changes": 14,
+          "late_values": {
+            "input_dialogue": "0x02",
+            "katana_menu_route": "0x01"
+          },
+          "values_by_group": {
+            "input_dialogue": "02 12",
+            "katana_menu_route": "00 01 02 12"
+          }
+        },
+        {
+          "address": "0x04FB",
+          "block": "0x04F0",
+          "column": "0xB",
+          "unique_values": 6,
+          "changes": 13,
+          "late_values": {
+            "input_dialogue": "0x31",
+            "katana_menu_route": "0x47"
+          },
+          "values_by_group": {
+            "input_dialogue": "31 3D",
+            "katana_menu_route": "31 3D 47 5D 5F 69"
+          }
+        },
+        {
+          "address": "0x04FC",
+          "block": "0x04F0",
+          "column": "0xC",
+          "unique_values": 6,
+          "changes": 13,
+          "late_values": {
+            "input_dialogue": "0x32",
+            "katana_menu_route": "0x35"
+          },
+          "values_by_group": {
+            "input_dialogue": "32 3E",
+            "katana_menu_route": "32 35 3E 5E 60 6A"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x04FA",
+          "value": "0x30"
+        },
+        {
+          "address": "0x04F1",
+          "value": "0x02"
+        },
+        {
+          "address": "0x04FB",
+          "value": "0x31"
+        },
+        {
+          "address": "0x04FC",
+          "value": "0x32"
+        }
+      ]
+    },
+    {
+      "block": "0x0430",
+      "score": 33,
+      "changing_fields": 7,
+      "recommended_fields": [
+        {
+          "address": "0x0432",
+          "block": "0x0430",
+          "column": "0x2",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0xA0"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 97 A0"
+          }
+        },
+        {
+          "address": "0x0434",
+          "block": "0x0430",
+          "column": "0x4",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x6A"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 58 6A"
+          }
+        },
+        {
+          "address": "0x0435",
+          "block": "0x0430",
+          "column": "0x5",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x12"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 07 12"
+          }
+        },
+        {
+          "address": "0x0439",
+          "block": "0x0430",
+          "column": "0x9",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x9B"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 97 9B"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x0432",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0434",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0435",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0439",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x03E0",
+      "score": 23,
+      "changing_fields": 5,
+      "recommended_fields": [
+        {
+          "address": "0x03E0",
+          "block": "0x03E0",
+          "column": "0x0",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0xB7"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 B7 C0"
+          }
+        },
+        {
+          "address": "0x03E1",
+          "block": "0x03E0",
+          "column": "0x1",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x0D"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 07 0D"
+          }
+        },
+        {
+          "address": "0x03E6",
+          "block": "0x03E0",
+          "column": "0x6",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x64"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 64 67"
+          }
+        },
+        {
+          "address": "0x03E7",
+          "block": "0x03E0",
+          "column": "0x7",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0xC4"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 C4 C7"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x03E0",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03E1",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03E6",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03E7",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x03F0",
+      "score": 21,
+      "changing_fields": 5,
+      "recommended_fields": [
+        {
+          "address": "0x03FA",
+          "block": "0x03F0",
+          "column": "0xA",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x21"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 18 21"
+          }
+        },
+        {
+          "address": "0x03FB",
+          "block": "0x03F0",
+          "column": "0xB",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x21"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 18 21"
+          }
+        },
+        {
+          "address": "0x03FC",
+          "block": "0x03F0",
+          "column": "0xC",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x21"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 18 21"
+          }
+        },
+        {
+          "address": "0x03F7",
+          "block": "0x03F0",
+          "column": "0x7",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x05"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 05"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x03FA",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03FB",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03FC",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03F7",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x0360",
+      "score": 15,
+      "changing_fields": 5,
+      "recommended_fields": [
+        {
+          "address": "0x0364",
+          "block": "0x0360",
+          "column": "0x4",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x01"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 01"
+          }
+        },
+        {
+          "address": "0x0365",
+          "block": "0x0360",
+          "column": "0x5",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x01"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 01"
+          }
+        },
+        {
+          "address": "0x0368",
+          "block": "0x0360",
+          "column": "0x8",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x01"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 01"
+          }
+        },
+        {
+          "address": "0x0369",
+          "block": "0x0360",
+          "column": "0x9",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x01"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 01"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x0364",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0365",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0368",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0369",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x0370",
+      "score": 15,
+      "changing_fields": 5,
+      "recommended_fields": [
+        {
+          "address": "0x0379",
+          "block": "0x0370",
+          "column": "0x9",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x93"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 93"
+          }
+        },
+        {
+          "address": "0x037A",
+          "block": "0x0370",
+          "column": "0xA",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x8F"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 8F"
+          }
+        },
+        {
+          "address": "0x037B",
+          "block": "0x0370",
+          "column": "0xB",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x80"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 80"
+          }
+        },
+        {
+          "address": "0x037C",
+          "block": "0x0370",
+          "column": "0xC",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x80"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 80"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x0379",
+          "value": "0x00"
+        },
+        {
+          "address": "0x037A",
+          "value": "0x00"
+        },
+        {
+          "address": "0x037B",
+          "value": "0x00"
+        },
+        {
+          "address": "0x037C",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x0400",
+      "score": 15,
+      "changing_fields": 3,
+      "recommended_fields": [
+        {
+          "address": "0x0401",
+          "block": "0x0400",
+          "column": "0x1",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x1C"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 18 1C"
+          }
+        },
+        {
+          "address": "0x0402",
+          "block": "0x0400",
+          "column": "0x2",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x1C"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 18 1C"
+          }
+        },
+        {
+          "address": "0x0403",
+          "block": "0x0400",
+          "column": "0x3",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x1C"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 18 1C"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x0401",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0402",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0403",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x0310",
+      "score": 13,
+      "changing_fields": 3,
+      "recommended_fields": [
+        {
+          "address": "0x031D",
+          "block": "0x0310",
+          "column": "0xD",
+          "unique_values": 2,
+          "changes": 3,
+          "late_values": {
+            "input_dialogue": "0x40",
+            "katana_menu_route": "0x00"
+          },
+          "values_by_group": {
+            "input_dialogue": "00 40",
+            "katana_menu_route": "00 40"
+          }
+        },
+        {
+          "address": "0x031E",
+          "block": "0x0310",
+          "column": "0xE",
+          "unique_values": 2,
+          "changes": 3,
+          "late_values": {
+            "input_dialogue": "0x40",
+            "katana_menu_route": "0x00"
+          },
+          "values_by_group": {
+            "input_dialogue": "00 40",
+            "katana_menu_route": "00 40"
+          }
+        },
+        {
+          "address": "0x0310",
+          "block": "0x0310",
+          "column": "0x0",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x60"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 60"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x031D",
+          "value": "0x40"
+        },
+        {
+          "address": "0x031E",
+          "value": "0x40"
+        },
+        {
+          "address": "0x0310",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x03D0",
+      "score": 13,
+      "changing_fields": 3,
+      "recommended_fields": [
+        {
+          "address": "0x03DB",
+          "block": "0x03D0",
+          "column": "0xB",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0xF3"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 F3 F9"
+          }
+        },
+        {
+          "address": "0x03DF",
+          "block": "0x03D0",
+          "column": "0xF",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x57"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 57 60"
+          }
+        },
+        {
+          "address": "0x03DE",
+          "block": "0x03D0",
+          "column": "0xE",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x7F"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 7F"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x03DB",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03DF",
+          "value": "0x00"
+        },
+        {
+          "address": "0x03DE",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x0320",
+      "score": 10,
+      "changing_fields": 2,
+      "recommended_fields": [
+        {
+          "address": "0x0325",
+          "block": "0x0320",
+          "column": "0x5",
+          "unique_values": 2,
+          "changes": 3,
+          "late_values": {
+            "input_dialogue": "0xFF",
+            "katana_menu_route": "0x00"
+          },
+          "values_by_group": {
+            "input_dialogue": "00 FF",
+            "katana_menu_route": "00 FF"
+          }
+        },
+        {
+          "address": "0x0326",
+          "block": "0x0320",
+          "column": "0x6",
+          "unique_values": 2,
+          "changes": 3,
+          "late_values": {
+            "input_dialogue": "0xFF",
+            "katana_menu_route": "0x00"
+          },
+          "values_by_group": {
+            "input_dialogue": "00 FF",
+            "katana_menu_route": "00 FF"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x0325",
+          "value": "0xFF"
+        },
+        {
+          "address": "0x0326",
+          "value": "0xFF"
+        }
+      ]
+    },
+    {
+      "block": "0x0390",
+      "score": 10,
+      "changing_fields": 2,
+      "recommended_fields": [
+        {
+          "address": "0x039E",
+          "block": "0x0390",
+          "column": "0xE",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x0B"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 01 0B"
+          }
+        },
+        {
+          "address": "0x039F",
+          "block": "0x0390",
+          "column": "0xF",
+          "unique_values": 3,
+          "changes": 2,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x03"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 01 03"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x039E",
+          "value": "0x00"
+        },
+        {
+          "address": "0x039F",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "block": "0x0300",
+      "score": 9,
+      "changing_fields": 3,
+      "recommended_fields": [
+        {
+          "address": "0x0304",
+          "block": "0x0300",
+          "column": "0x4",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x80"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 80"
+          }
+        },
+        {
+          "address": "0x0305",
+          "block": "0x0300",
+          "column": "0x5",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x80"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 80"
+          }
+        },
+        {
+          "address": "0x030F",
+          "block": "0x0300",
+          "column": "0xF",
+          "unique_values": 2,
+          "changes": 1,
+          "late_values": {
+            "input_dialogue": "0x00",
+            "katana_menu_route": "0x40"
+          },
+          "values_by_group": {
+            "input_dialogue": "00",
+            "katana_menu_route": "00 40"
+          }
+        }
+      ],
+      "recommended_probe": [
+        {
+          "address": "0x0304",
+          "value": "0x00"
+        },
+        {
+          "address": "0x0305",
+          "value": "0x00"
+        },
+        {
+          "address": "0x030F",
+          "value": "0x00"
+        }
+      ]
+    }
+  ]
+}

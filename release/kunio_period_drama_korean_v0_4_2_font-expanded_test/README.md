@@ -21,6 +21,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `translation_first_strategy.md`: current text-first patch plan and emulator-proof role
 - `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing
 - `object_state_probe_candidates.md`: object/enemy RAM candidates for boss-spawn cheat probing
+- `object_state_pair_plan.md`: grouped object-state blocks for paired-write probes
 - `state_single_byte_probe_0720_b1_notes.md`: result of testing `$0720 = $B1` alone
 - `state_single_byte_probe_0721_45_notes.md`: result of testing `$0721 = $45` alone
 - `state_single_byte_probe_0722_c9_notes.md`: result of testing `$0722 = $C9` alone
@@ -28,6 +29,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `state_single_byte_probe_0723_7a_frame_001325_screen.png`: selected dialogue-like screen evidence from `$0723 = $7A`
 - `object_state_single_byte_probe_04fa_30_notes.md`: result of testing `$04FA = $30` alone
 - `object_state_single_byte_probe_04fb_31_notes.md`: result of testing `$04FB = $31` alone
+- `object_state_pair_probe_04f0_dialogue_late_notes.md`: result of testing the top `0x04F0` paired object-state fields
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `next_manual_run.md`: single recommended next FCEUX action queue

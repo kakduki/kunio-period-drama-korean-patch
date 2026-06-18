@@ -50,6 +50,9 @@ STATE_SINGLE_BYTE_0723_7A_PNG = REPO_ROOT / "rom_analysis" / "state_single_byte_
 STATE_SINGLE_BYTE_0723_7A_RECORDS = REPO_ROOT / "rom_analysis" / "state_single_byte_probe_0723_7a_frame_001325_target_records.tsv"
 OBJECT_STATE_SINGLE_BYTE_04FA_30_NOTES = REPO_ROOT / "rom_analysis" / "object_state_single_byte_probe_04fa_30_notes.md"
 OBJECT_STATE_SINGLE_BYTE_04FB_31_NOTES = REPO_ROOT / "rom_analysis" / "object_state_single_byte_probe_04fb_31_notes.md"
+OBJECT_STATE_PAIR_PLAN_JSON = REPO_ROOT / "rom_analysis" / "object_state_pair_plan.json"
+OBJECT_STATE_PAIR_PLAN_MD = REPO_ROOT / "rom_analysis" / "object_state_pair_plan.md"
+OBJECT_STATE_PAIR_04F0_NOTES = REPO_ROOT / "rom_analysis" / "object_state_pair_probe_04f0_dialogue_late_notes.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -180,6 +183,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `translation_first_strategy.md`: current text-first patch plan and emulator-proof role",
         "- `state_cheat_probe_candidates.md`: RAM address candidates for route/scene cheat probing",
         "- `object_state_probe_candidates.md`: object/enemy RAM candidates for boss-spawn cheat probing",
+        "- `object_state_pair_plan.md`: grouped object-state blocks for paired-write probes",
         "- `state_single_byte_probe_0720_b1_notes.md`: result of testing `$0720 = $B1` alone",
         "- `state_single_byte_probe_0721_45_notes.md`: result of testing `$0721 = $45` alone",
         "- `state_single_byte_probe_0722_c9_notes.md`: result of testing `$0722 = $C9` alone",
@@ -187,6 +191,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `state_single_byte_probe_0723_7a_frame_001325_screen.png`: selected dialogue-like screen evidence from `$0723 = $7A`",
         "- `object_state_single_byte_probe_04fa_30_notes.md`: result of testing `$04FA = $30` alone",
         "- `object_state_single_byte_probe_04fb_31_notes.md`: result of testing `$04FB = $31` alone",
+        "- `object_state_pair_probe_04f0_dialogue_late_notes.md`: result of testing the top `0x04F0` paired object-state fields",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -370,6 +375,8 @@ def package() -> dict[str, object]:
         (STATE_CHEAT_PROBE_JSON, "state_cheat_probe_candidates.json"),
         (OBJECT_STATE_PROBE_MD, "object_state_probe_candidates.md"),
         (OBJECT_STATE_PROBE_JSON, "object_state_probe_candidates.json"),
+        (OBJECT_STATE_PAIR_PLAN_MD, "object_state_pair_plan.md"),
+        (OBJECT_STATE_PAIR_PLAN_JSON, "object_state_pair_plan.json"),
         (STATE_SINGLE_BYTE_0720_B1_NOTES, "state_single_byte_probe_0720_b1_notes.md"),
         (STATE_SINGLE_BYTE_0721_45_NOTES, "state_single_byte_probe_0721_45_notes.md"),
         (STATE_SINGLE_BYTE_0722_C9_NOTES, "state_single_byte_probe_0722_c9_notes.md"),
@@ -378,6 +385,7 @@ def package() -> dict[str, object]:
         (STATE_SINGLE_BYTE_0723_7A_RECORDS, "state_single_byte_probe_0723_7a_frame_001325_target_records.tsv"),
         (OBJECT_STATE_SINGLE_BYTE_04FA_30_NOTES, "object_state_single_byte_probe_04fa_30_notes.md"),
         (OBJECT_STATE_SINGLE_BYTE_04FB_31_NOTES, "object_state_single_byte_probe_04fb_31_notes.md"),
+        (OBJECT_STATE_PAIR_04F0_NOTES, "object_state_pair_probe_04f0_dialogue_late_notes.md"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),
@@ -448,6 +456,7 @@ def package() -> dict[str, object]:
         (KATANA_SLOT_CANDIDATES_GENERATOR, "generate_katana_inventory_slot_candidates.py"),
         (REPO_ROOT / "scripts" / "generate_state_cheat_probe_candidates.py", "generate_state_cheat_probe_candidates.py"),
         (REPO_ROOT / "scripts" / "generate_object_state_probe_candidates.py", "generate_object_state_probe_candidates.py"),
+        (REPO_ROOT / "scripts" / "generate_object_state_pair_plan.py", "generate_object_state_pair_plan.py"),
         (LUA_KATANA_VISUAL_EXPLORER, "lua/kunio_katana_visual_explorer_v042.lua"),
         (LUA_KATANA_INVENTORY_PROBE, "lua/kunio_katana_inventory_probe_v042.lua"),
         (LUA_KATANA_SINGLE_SLOT_PROBE, "lua/kunio_katana_single_slot_probe_v042.lua"),

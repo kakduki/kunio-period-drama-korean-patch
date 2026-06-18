@@ -14,7 +14,8 @@ def main() -> int:
     required = [
         "KUNIO_STATE_ADDR",
         "KUNIO_STATE_VALUE",
-        "one address, one value",
+        "KUNIO_STATE_WRITES",
+        "only explicitly listed bytes",
         "state_single_byte_probe_summary.tsv",
         "state_single_byte_probe_watch.tsv",
         "kunio_broad_scan_candidate_targets.lua",
