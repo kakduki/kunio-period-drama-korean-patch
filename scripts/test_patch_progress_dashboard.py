@@ -27,12 +27,20 @@ def main() -> int:
         "v043_rows": 7,
         "manual_dump_record_files": 0,
         "release_ready": False,
+        "release_gate_status_counts": {"PASS": 6, "FAIL": 2, "UNKNOWN": 1},
     }
     for key, value in expected.items():
         if summary.get(key) != value:
             errors.append(f"{key}: expected {value!r}, got {summary.get(key)!r}")
     if not summary.get("release_blockers"):
         errors.append("release blockers are missing")
+    if summary.get("release_gate_failures") != ["release-included visual proof", "high-risk/quarantined visual proof"]:
+        errors.append(f"unexpected release gate failures: {summary.get('release_gate_failures')!r}")
+    if summary.get("release_gate_unknowns") != ["shortened padding rule acceptance"]:
+        errors.append(f"unexpected release gate unknowns: {summary.get('release_gate_unknowns')!r}")
+    for key in ["primary_ips", "softgate_dev_combined_rom", "softgate_dev_combined_ips"]:
+        if "\\" in str(summary.get(key, "")):
+            errors.append(f"{key} contains a Windows path separator: {summary.get(key)!r}")
 
     next_action = payload.get("next_action")
     if not isinstance(next_action, dict) or next_action.get("target") != "0x07227":
@@ -42,6 +50,9 @@ def main() -> int:
     for expected_text in [
         "Patch Progress Dashboard",
         "Release Blockers",
+        "Release Gate",
+        "Gate status counts",
+        "shortened padding rule acceptance",
         "python scripts/preflight_manual_fceux.py",
         "python scripts/run_next_manual_fceux.py",
         "python scripts/confirm_next_primary_visual.py --confirm-visible",

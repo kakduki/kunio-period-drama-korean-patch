@@ -11,11 +11,12 @@
     "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json",
     "candidate_combined_report": "output/kunio_period_drama_softgate_dev_combined_report.json",
     "high_risk_candidates": "rom_analysis/candidate_pipeline/high_risk_candidates.csv",
-    "padding_experiment_matrix": "rom_analysis/candidate_pipeline/padding_experiment_matrix.json"
+    "padding_experiment_matrix": "rom_analysis/candidate_pipeline/padding_experiment_matrix.json",
+    "release_gate_checklist": "rom_analysis/candidate_pipeline/release_gate_checklist.json"
   },
   "summary": {
     "primary_candidate": "v0.4.2 font-expanded",
-    "primary_ips": "output\\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
+    "primary_ips": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips",
     "primary_expected_md5": "ea11dc002a1a7b07682ce00a754b1a61",
     "primary_applied_rows": 10,
     "primary_runtime_confirmed_rows": 1,
@@ -46,8 +47,8 @@
     "softgate_dev_combined_status": "PASS",
     "softgate_dev_combined_strings": 9,
     "softgate_dev_combined_md5": "4905417f129726394941bed079c2e848",
-    "softgate_dev_combined_rom": "output\\kunio_period_drama_softgate_dev_combined.nes",
-    "softgate_dev_combined_ips": "output\\kunio_period_drama_softgate_dev_combined.ips",
+    "softgate_dev_combined_rom": "output/kunio_period_drama_softgate_dev_combined.nes",
+    "softgate_dev_combined_ips": "output/kunio_period_drama_softgate_dev_combined.ips",
     "quarantined_candidate_count": 5,
     "quarantined_build_pass_count": 5,
     "quarantined_smoke_pass_count": 5,
@@ -56,6 +57,18 @@
     "padding_v05_ppu_pass_count": 0,
     "padding_v05_decisions": [
       "UNKNOWN_VISUAL_PADDING_RULE"
+    ],
+    "release_gate_status_counts": {
+      "PASS": 6,
+      "FAIL": 2,
+      "UNKNOWN": 1
+    },
+    "release_gate_failures": [
+      "release-included visual proof",
+      "high-risk/quarantined visual proof"
+    ],
+    "release_gate_unknowns": [
+      "shortened padding rule acceptance"
     ],
     "release_ready": false,
     "release_blockers": [

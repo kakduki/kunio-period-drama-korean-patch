@@ -5,7 +5,7 @@ Single-page status for the current Korean patch work.
 ## Current Patch
 
 - Primary candidate: **v0.4.2 font-expanded**
-- Primary IPS: `output\kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`
+- Primary IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`
 - Expected patched MD5: `ea11dc002a1a7b07682ce00a754b1a61`
 - Applied text rows: **10**
 - Runtime-confirmed rows: **1**
@@ -30,8 +30,8 @@ Single-page status for the current Korean patch work.
 ## Candidate Pipeline
 
 - Softgate dev combined: **9 strings**, `PASS`
-- Softgate dev ROM: `output\kunio_period_drama_softgate_dev_combined.nes`
-- Softgate dev IPS: `output\kunio_period_drama_softgate_dev_combined.ips`
+- Softgate dev ROM: `output/kunio_period_drama_softgate_dev_combined.nes`
+- Softgate dev IPS: `output/kunio_period_drama_softgate_dev_combined.ips`
 - Softgate dev MD5: `4905417f129726394941bed079c2e848`
 - Quarantined candidates: **5**
 - Quarantined build PASS: **5**
@@ -40,6 +40,13 @@ Single-page status for the current Korean patch work.
 - Padding v05 CPU PASS: **5**
 - Padding v05 strict PPU PASS: **0**
 - Padding decisions: `UNKNOWN_VISUAL_PADDING_RULE`
+
+## Release Gate
+
+- Ready: `False`
+- Gate status counts: `{'PASS': 6, 'FAIL': 2, 'UNKNOWN': 1}`
+- Failing gates: `release-included visual proof, high-risk/quarantined visual proof`
+- Unknown gates: `shortened padding rule acceptance`
 
 ## v0.4.3 Gate
 

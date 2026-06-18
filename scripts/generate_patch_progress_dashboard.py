@@ -22,6 +22,7 @@ MANUAL_DUMP_INVENTORY = REPO_ROOT / "rom_analysis" / "manual_dump_inventory.json
 CANDIDATE_COMBINED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_softgate_dev_combined_report.json"
 HIGH_RISK_CANDIDATES = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "high_risk_candidates.csv"
 PADDING_EXPERIMENT_MATRIX = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json"
+RELEASE_GATE_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_checklist.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.md"
 
@@ -41,6 +42,12 @@ def load_csv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def portable(value: object) -> object:
+    if isinstance(value, str):
+        return value.replace("\\", "/")
+    return value
+
+
 def make_payload() -> dict[str, object]:
     primary = load_json(PRIMARY_CONTENTS)
     next_run = load_json(NEXT_MANUAL_RUN)
@@ -54,6 +61,7 @@ def make_payload() -> dict[str, object]:
     candidate_combined = load_json(CANDIDATE_COMBINED_REPORT)
     high_risk_rows = load_csv(HIGH_RISK_CANDIDATES)
     padding_matrix = load_json(PADDING_EXPERIMENT_MATRIX)
+    release_gate = load_json(RELEASE_GATE_JSON)
 
     primary_summary = primary["summary"]
     next_summary = next_run["summary"]
@@ -80,6 +88,9 @@ def make_payload() -> dict[str, object]:
     ]
     padding_v05_cpu_pass = sum(1 for row in padding_v05 if row.get("cpu_active_status") == "PASS")
     padding_v05_ppu_pass = sum(1 for row in padding_v05 if row.get("ppu_exact_status") == "PASS")
+    release_gate_rows = release_gate.get("gates", [])
+    release_gate_failures = [row for row in release_gate_rows if row.get("status") == "FAIL"]
+    release_gate_unknowns = [row for row in release_gate_rows if row.get("status") == "UNKNOWN"]
 
     return {
         "source": {
@@ -95,10 +106,11 @@ def make_payload() -> dict[str, object]:
             "candidate_combined_report": rel(CANDIDATE_COMBINED_REPORT),
             "high_risk_candidates": rel(HIGH_RISK_CANDIDATES),
             "padding_experiment_matrix": rel(PADDING_EXPERIMENT_MATRIX),
+            "release_gate_checklist": rel(RELEASE_GATE_JSON),
         },
         "summary": {
             "primary_candidate": primary_summary["primary_candidate"],
-            "primary_ips": primary_summary["primary_ips"],
+            "primary_ips": portable(primary_summary["primary_ips"]),
             "primary_expected_md5": primary_summary["primary_candidate_md5"],
             "primary_applied_rows": primary_summary["applied_count"],
             "primary_runtime_confirmed_rows": primary_summary["runtime_confirmed_count"],
@@ -124,8 +136,8 @@ def make_payload() -> dict[str, object]:
             "softgate_dev_combined_status": candidate_combined["build_status"],
             "softgate_dev_combined_strings": candidate_combined["applied_count"],
             "softgate_dev_combined_md5": candidate_combined["candidate_md5"],
-            "softgate_dev_combined_rom": candidate_combined["candidate_rom"],
-            "softgate_dev_combined_ips": candidate_combined["candidate_ips"],
+            "softgate_dev_combined_rom": portable(candidate_combined["candidate_rom"]),
+            "softgate_dev_combined_ips": portable(candidate_combined["candidate_ips"]),
             "quarantined_candidate_count": len(high_risk_rows),
             "quarantined_build_pass_count": sum(1 for row in high_risk_rows if row.get("build_status") == "PASS"),
             "quarantined_smoke_pass_count": sum(1 for row in high_risk_rows if row.get("boot_smoke") == "PASS"),
@@ -133,7 +145,10 @@ def make_payload() -> dict[str, object]:
             "padding_v05_cpu_pass_count": padding_v05_cpu_pass,
             "padding_v05_ppu_pass_count": padding_v05_ppu_pass,
             "padding_v05_decisions": sorted({row.get("decision", "") for row in padding_v05 if row.get("decision")}),
-            "release_ready": False,
+            "release_gate_status_counts": release_gate.get("summary", {}).get("status_counts", {}),
+            "release_gate_failures": [row.get("gate", "") for row in release_gate_failures],
+            "release_gate_unknowns": [row.get("gate", "") for row in release_gate_unknowns],
+            "release_ready": release_gate.get("summary", {}).get("release_ready", False),
             "release_blockers": blockers,
         },
         "next_action": next_action,
@@ -186,6 +201,13 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Padding v05 CPU PASS: **{summary['padding_v05_cpu_pass_count']}**",
         f"- Padding v05 strict PPU PASS: **{summary['padding_v05_ppu_pass_count']}**",
         f"- Padding decisions: `{', '.join(summary['padding_v05_decisions']) or 'none'}`",
+        "",
+        "## Release Gate",
+        "",
+        f"- Ready: `{summary['release_ready']}`",
+        f"- Gate status counts: `{summary['release_gate_status_counts']}`",
+        f"- Failing gates: `{', '.join(summary['release_gate_failures']) or 'none'}`",
+        f"- Unknown gates: `{', '.join(summary['release_gate_unknowns']) or 'none'}`",
         "",
         "## v0.4.3 Gate",
         "",
