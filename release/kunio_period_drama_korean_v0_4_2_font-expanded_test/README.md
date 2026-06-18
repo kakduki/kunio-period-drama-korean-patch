@@ -14,6 +14,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `auto_input_visual_triage.md`: current decision on which auto-input evidence can and cannot be used for visual approval
 - `katana_visual_explorer_report.md`: focused route evidence that reaches the item list for the Katana visual target
 - `katana_inventory_probe_notes.md`: failed broad-injection probe notes for the Katana item-list state
+- `katana_inventory_slot_candidates.md`: narrowed address list for the next Katana inventory probe
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `next_manual_run.md`: single recommended next FCEUX action queue

@@ -1,0 +1,192 @@
+{
+  "source": {
+    "menu_cpu": "rom_analysis/katana_visual_explorer_v042/manual_frame_001906_cpu_ram.bin",
+    "item_cpu": "rom_analysis/katana_visual_explorer_v042/manual_frame_002385_cpu_ram.bin",
+    "menu_sram": "rom_analysis/katana_visual_explorer_v042/manual_frame_001906_sram_6000_7fff.bin",
+    "item_sram": "rom_analysis/katana_visual_explorer_v042/manual_frame_002385_sram_6000_7fff.bin",
+    "failed_probe": "lua/kunio_katana_inventory_probe_v042.lua"
+  },
+  "summary": {
+    "probed_addresses": 19,
+    "classification_counts": {
+      "candidate_small_probe": 5,
+      "defer_runtime_state": 8,
+      "exclude_menu_state": 3,
+      "defer_unknown_state": 3
+    },
+    "recommended_next_probe": "Try one candidate_small_probe address at a time, starting at 0x0502, and do not write broad SRAM/menu-control ranges."
+  },
+  "rows": [
+    {
+      "address": "0x0502",
+      "domain": "cpu",
+      "menu_value": "0x04",
+      "item_list_value": "0x3C",
+      "changed": true,
+      "classification": "candidate_small_probe",
+      "reason": "Small CPU state area that changed without being direct nametable data."
+    },
+    {
+      "address": "0x0503",
+      "domain": "cpu",
+      "menu_value": "0x06",
+      "item_list_value": "0x3E",
+      "changed": true,
+      "classification": "candidate_small_probe",
+      "reason": "Small CPU state area that changed without being direct nametable data."
+    },
+    {
+      "address": "0x0506",
+      "domain": "cpu",
+      "menu_value": "0x07",
+      "item_list_value": "0x01",
+      "changed": true,
+      "classification": "candidate_small_probe",
+      "reason": "Small CPU state area that changed without being direct nametable data."
+    },
+    {
+      "address": "0x0508",
+      "domain": "cpu",
+      "menu_value": "0x9C",
+      "item_list_value": "0x9C",
+      "changed": false,
+      "classification": "candidate_small_probe",
+      "reason": "Small CPU state area that changed without being direct nametable data."
+    },
+    {
+      "address": "0x0509",
+      "domain": "cpu",
+      "menu_value": "0xD9",
+      "item_list_value": "0x42",
+      "changed": true,
+      "classification": "candidate_small_probe",
+      "reason": "Small CPU state area that changed without being direct nametable data."
+    },
+    {
+      "address": "0x0700",
+      "domain": "cpu",
+      "menu_value": "0x80",
+      "item_list_value": "0x82",
+      "changed": true,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x0701",
+      "domain": "cpu",
+      "menu_value": "0x00",
+      "item_list_value": "0x0C",
+      "changed": true,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x0702",
+      "domain": "cpu",
+      "menu_value": "0x00",
+      "item_list_value": "0x0C",
+      "changed": true,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x0706",
+      "domain": "cpu",
+      "menu_value": "0x03",
+      "item_list_value": "0x00",
+      "changed": true,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x0707",
+      "domain": "cpu",
+      "menu_value": "0x00",
+      "item_list_value": "0x6E",
+      "changed": true,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x071D",
+      "domain": "cpu",
+      "menu_value": "0x00",
+      "item_list_value": "0x00",
+      "changed": false,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x071E",
+      "domain": "cpu",
+      "menu_value": "0x00",
+      "item_list_value": "0x00",
+      "changed": false,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x071F",
+      "domain": "cpu",
+      "menu_value": "0x00",
+      "item_list_value": "0x01",
+      "changed": true,
+      "classification": "defer_runtime_state",
+      "reason": "CPU runtime state differs by menu screen; may affect control flow."
+    },
+    {
+      "address": "0x7700",
+      "domain": "sram",
+      "menu_value": "0x01",
+      "item_list_value": "0x00",
+      "changed": true,
+      "classification": "exclude_menu_state",
+      "reason": "Observed route/menu-control bytes, not stable item-slot storage."
+    },
+    {
+      "address": "0x7701",
+      "domain": "sram",
+      "menu_value": "0x06",
+      "item_list_value": "0x05",
+      "changed": true,
+      "classification": "exclude_menu_state",
+      "reason": "Observed route/menu-control bytes, not stable item-slot storage."
+    },
+    {
+      "address": "0x7705",
+      "domain": "sram",
+      "menu_value": "0x10",
+      "item_list_value": "0x00",
+      "changed": true,
+      "classification": "exclude_menu_state",
+      "reason": "Observed route/menu-control bytes, not stable item-slot storage."
+    },
+    {
+      "address": "0x7720",
+      "domain": "sram",
+      "menu_value": "0x06",
+      "item_list_value": "0x06",
+      "changed": false,
+      "classification": "defer_unknown_state",
+      "reason": "Nearby state changed during menu transitions; test only after narrower evidence."
+    },
+    {
+      "address": "0x7721",
+      "domain": "sram",
+      "menu_value": "0xFE",
+      "item_list_value": "0xFE",
+      "changed": false,
+      "classification": "defer_unknown_state",
+      "reason": "Nearby state changed during menu transitions; test only after narrower evidence."
+    },
+    {
+      "address": "0x7722",
+      "domain": "sram",
+      "menu_value": "0x01",
+      "item_list_value": "0x01",
+      "changed": false,
+      "classification": "defer_unknown_state",
+      "reason": "Nearby state changed during menu transitions; test only after narrower evidence."
+    }
+  ]
+}

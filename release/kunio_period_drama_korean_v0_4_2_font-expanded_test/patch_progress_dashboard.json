@@ -6,6 +6,7 @@
     "auto_input_evidence_report": "rom_analysis/auto_input_evidence_report.json",
     "auto_input_visual_triage": "rom_analysis/auto_input_visual_triage.json",
     "katana_visual_explorer": "rom_analysis/katana_visual_explorer_v042/report.json",
+    "katana_inventory_slot_candidates": "rom_analysis/katana_inventory_slot_candidates.json",
     "v043_proof_status": "rom_analysis/v043_proof_status.json",
     "manual_dump_inventory": "rom_analysis/manual_dump_inventory.json"
   },
@@ -27,6 +28,13 @@
     "katana_item_list_frame": "2385",
     "katana_active_match_on_item_list": "false",
     "katana_next_step": "Find or set the inventory state that makes the Katana item label appear on the reached item-list screen.",
+    "katana_slot_candidate_counts": {
+      "candidate_small_probe": 5,
+      "defer_runtime_state": 8,
+      "exclude_menu_state": 3,
+      "defer_unknown_state": 3
+    },
+    "katana_slot_next_probe": "Try one candidate_small_probe address at a time, starting at 0x0502, and do not write broad SRAM/menu-control ranges.",
     "v043_rows": 7,
     "v043_cpu_read_matches": 0,
     "v043_visual_confirmations": 0,
