@@ -40,7 +40,7 @@ def main() -> int:
             "Patch Progress Dashboard",
             "Release Blockers",
             "Next gate action",
-            "0x07227",
+            "0x0569D",
         ],
     )
     print("OK: patch progress dashboard is linked from the project docs.")

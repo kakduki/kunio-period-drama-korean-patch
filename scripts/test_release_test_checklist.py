@@ -33,7 +33,7 @@ def main() -> int:
         "Release Test Checklist",
         "python scripts/apply_primary_patch.py",
         "Primary Screens To Check First",
-        "python scripts/record_primary_visual_review.py 0x07227 --confirm",
+        "python scripts/record_primary_visual_review.py 0x0569D --confirm",
         "lua/kunio_manual_broad_scan_dump.lua",
         "lua/kunio_manual_broad_scan_capture_watch.lua",
         "lua/kunio_manual_route_heishichi_capture_watch.lua",

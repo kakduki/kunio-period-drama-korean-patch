@@ -24,6 +24,8 @@ def primary_actions(primary: dict[str, object]) -> list[dict[str, object]]:
     for row in primary["rows"]:
         if row.get("visual_context_confirmed"):
             continue
+        if str(row.get("review_status", "")).startswith("blocked_"):
+            continue
         if row.get("matches") or row.get("capture_status") not in {"not_in_manual_capture_cards", "no_dump_records"}:
             continue
         actions.append(

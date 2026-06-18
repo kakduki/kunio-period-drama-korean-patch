@@ -24,8 +24,8 @@
     "primary_applied_rows": 10,
     "primary_runtime_confirmed_rows": 1,
     "primary_static_candidate_rows": 8,
-    "pending_manual_actions": 13,
-    "pending_primary_visual_checks": 10,
+    "pending_manual_actions": 12,
+    "pending_primary_visual_checks": 9,
     "pending_v043_route_proofs": 3,
     "primary_auto_input_match_rows": 10,
     "auto_input_latest_png": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen.png",
@@ -89,14 +89,14 @@
   },
   "next_action": {
     "phase": "primary_v042_visual_review",
-    "priority": 10,
+    "priority": 20,
     "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
     "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
-    "target": "0x07227",
-    "group": "Katana",
-    "screen_hint": "look for a katana/weapon item label",
+    "target": "0x0569D",
+    "group": "Hashi",
+    "screen_hint": "look for a bridge/stage/location label",
     "why": "This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.",
-    "record_visual_review": "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"look for a katana/weapon item label visible\"",
+    "record_visual_review": "python scripts/record_primary_visual_review.py 0x0569D --confirm --screen-context \"look for a bridge/stage/location label visible\"",
     "after_capture": [
       "python scripts/refresh_after_manual_capture.py --phase primary"
     ]

@@ -9,9 +9,9 @@
     "latest_dialogue_crop": "rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_dialogue_box.png",
     "byte_matched_primary_rows": 10,
     "visual_approval_rows": 0,
-    "next_visual_target": "0x07227",
-    "next_visual_group": "Katana",
-    "next_visual_hint": "look for a katana/weapon item label",
+    "next_visual_target": "0x0569D",
+    "next_visual_group": "Hashi",
+    "next_visual_hint": "look for a bridge/stage/location label",
     "decision": "Do not mark any primary row visually confirmed from this auto-input capture. Use it as route/byte-load evidence and adjust the next route toward the target context."
   },
   "rows": [

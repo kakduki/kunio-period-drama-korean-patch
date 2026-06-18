@@ -32,18 +32,18 @@ Do not keep blind autoplay running on the title/first screen. First verify the r
 
 | # | ROM | romaji | human hint | Korean | evidence | screen hint |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | `0x07227` | Katana | weapon/item label | 카타나 | `runtime-confirmed` | look for a katana/weapon item label |
-| 2 | `0x0569D` | Hashi | stage/location label | 다리 | `encoding-exact` | look for a bridge/stage/location label |
-| 3 | `0x0561A` | Hashi | stage/location label | 다리 | `static-candidate+pointer` | look for a bridge/stage/location label |
-| 4 | `0x05643` | Heishichi | name/dialogue label | 헤이시치 | `static-candidate+pointer` | look for a visible Heishichi name/dialogue context |
-| 5 | `0x057D4` | Hashi | stage/location label | 다리 | `static-candidate+pointer` | look for a bridge/stage/location label |
-| 6 | `0x0736A` | Raifu | UI life label | 라이프 | `static-candidate+pointer` | look for a life/status UI label |
-| 7 | `0x0739D` | Raifu | UI life label | 라이프 | `static-candidate+pointer` | look for a life/status UI label |
+| 1 | `0x0569D` | Hashi | stage/location label | 다리 | `encoding-exact` | look for a bridge/stage/location label |
+| 2 | `0x0561A` | Hashi | stage/location label | 다리 | `static-candidate+pointer` | look for a bridge/stage/location label |
+| 3 | `0x05643` | Heishichi | name/dialogue label | 헤이시치 | `static-candidate+pointer` | look for a visible Heishichi name/dialogue context |
+| 4 | `0x057D4` | Hashi | stage/location label | 다리 | `static-candidate+pointer` | look for a bridge/stage/location label |
+| 5 | `0x0736A` | Raifu | UI life label | 라이프 | `static-candidate+pointer` | look for a life/status UI label |
+| 6 | `0x0739D` | Raifu | UI life label | 라이프 | `static-candidate+pointer` | look for a life/status UI label |
+| 7 | `0x0562F` | Tatsuichi | name/dialogue label | 타츠이치 | `static-candidate` | look for a visible Tatsuichi name/dialogue context |
 
 After a matched primary screen:
 
 ```powershell
-python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context "katana/weapon item label visible"
+python scripts/record_primary_visual_review.py 0x0569D --confirm --screen-context "look for a bridge/stage/location label visible"
 python scripts/refresh_after_manual_capture.py --phase primary
 ```
 

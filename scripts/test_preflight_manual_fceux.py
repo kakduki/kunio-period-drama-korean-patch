@@ -20,10 +20,10 @@ def main() -> int:
     out = result.stdout
     required = [
         "Manual FCEUX preflight",
-        "target: 0x07227 / Katana",
+        "target: 0x0569D / Hashi",
         "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
         "lua/kunio_manual_v042_capture_watch.lua",
-        "record_primary_visual_review.py 0x07227 --confirm",
+        "record_primary_visual_review.py 0x0569D --confirm",
         "--stop-after-manual-dump",
         "run_fceux_lua_analysis.py",
         "OK: next manual FCEUX capture inputs are present.",

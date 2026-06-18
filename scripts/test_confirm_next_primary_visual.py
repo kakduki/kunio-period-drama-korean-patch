@@ -28,10 +28,10 @@ def main() -> int:
     )
     out = result.stdout
     required = [
-        "Confirming primary visual review: 0x07227 / Katana",
+        "Confirming primary visual review: 0x0569D / Hashi",
         "Command order: refresh manual dumps, record the visible-screen review, then refresh the queue.",
         "WARNING: no manual dump record is currently indexed",
-        "record_primary_visual_review.py 0x07227 --confirm",
+        "record_primary_visual_review.py 0x0569D --confirm",
         "refresh_after_manual_capture.py --phase primary",
     ]
     missing = [phrase for phrase in required if phrase not in out]

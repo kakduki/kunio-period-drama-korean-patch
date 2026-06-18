@@ -16,8 +16,8 @@ def check_next_queue_summary() -> None:
     with redirect_stdout(buffer):
         refresh.print_next_queue_summary()
     out = buffer.getvalue()
-    assert "next_manual_queue=actions=13 primary=10 routes=3" in out
-    assert "next_manual_action=phase=primary_v042_visual_review target=0x07227 group=Katana" in out
+    assert "next_manual_queue=actions=12 primary=9 routes=3" in out
+    assert "next_manual_action=phase=primary_v042_visual_review target=0x0569D group=Hashi" in out
 
 
 def check_no_record_skip() -> None:

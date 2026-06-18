@@ -19,11 +19,11 @@
       "status": "FAIL",
       "failure_class": "VISUAL_PROOF_PENDING",
       "action": "Run the current primary visual-review queue and record a visible matching screen.",
-      "target": "0x07227",
+      "target": "0x0569D",
       "phase": "primary_v042_visual_review",
       "rom_to_open": "output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes",
       "watcher_lua": "lua/kunio_manual_v042_capture_watch.lua",
-      "command": "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"look for a katana/weapon item label visible\"",
+      "command": "python scripts/record_primary_visual_review.py 0x0569D --confirm --screen-context \"look for a bridge/stage/location label visible\"",
       "refresh": "python scripts/refresh_after_manual_capture.py --phase primary",
       "evidence_needed": "visible-screen capture and primary visual review confirmation"
     },

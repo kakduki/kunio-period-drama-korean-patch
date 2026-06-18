@@ -13,8 +13,8 @@ Single-page status for the current Korean patch work.
 
 ## Manual Evidence
 
-- Pending manual actions: **13**
-- Pending primary visual checks: **10**
+- Pending manual actions: **12**
+- Pending primary visual checks: **9**
 - Pending v0.4.3 route proofs: **3**
 - Checked-in manual dump record files: **0**
 - Auto-input byte-match rows: **10**
@@ -62,11 +62,11 @@ Single-page status for the current Korean patch work.
 ## Next Action
 
 - Phase: `primary_v042_visual_review`
-- Target: `0x07227`
-- Group: `Katana`
+- Target: `0x0569D`
+- Group: `Hashi`
 - ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Lua: `lua/kunio_manual_v042_capture_watch.lua`
-- Hint: look for a katana/weapon item label
+- Hint: look for a bridge/stage/location label
 - After capture:
   - `python scripts/refresh_after_manual_capture.py --phase primary`
 

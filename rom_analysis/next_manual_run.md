@@ -4,8 +4,8 @@ This is the shortest current FCEUX action queue. It combines primary-patch visua
 
 ## Summary
 
-- Pending actions: **13**
-- Primary v0.4.2 visual checks: **10**
+- Pending actions: **12**
+- Primary v0.4.2 visual checks: **9**
 - v0.4.3 route proof checks: **3**
 - Recommended phase: `primary_v042_visual_review`
 - Rule: verify already-applied rows first, then prove new route candidates.
@@ -14,9 +14,9 @@ This is the shortest current FCEUX action queue. It combines primary-patch visua
 
 - Open ROM: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes`
 - Run Lua: `lua/kunio_manual_v042_capture_watch.lua`
-- Target: `0x07227`
-- Group: `Katana`
-- Screen hint: look for a katana/weapon item label
+- Target: `0x0569D`
+- Group: `Hashi`
+- Screen hint: look for a bridge/stage/location label
 - Why: This row is already changed by the primary IPS, so visual review moves the current patch closer to release-readiness.
 - If the visible screen is still the title/opening screen, stop with `Q` and manually change screens.
 - If you launch with `python scripts/run_next_manual_fceux.py`, a new dump triggers the after-capture refresh automatically.
@@ -25,7 +25,7 @@ This is the shortest current FCEUX action queue. It combines primary-patch visua
 Record matching visual review:
 
 ```powershell
-python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context "look for a katana/weapon item label visible"
+python scripts/record_primary_visual_review.py 0x0569D --confirm --screen-context "look for a bridge/stage/location label visible"
 ```
 
 After capture if you ran FCEUX/Lua directly instead of the launcher:
@@ -38,7 +38,6 @@ python scripts/refresh_after_manual_capture.py --phase primary
 
 | priority | phase | target | group | ROM | watcher | hint |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 10 | `primary_v042_visual_review` | `0x07227` | Katana | `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes` | `lua/kunio_manual_v042_capture_watch.lua` | look for a katana/weapon item label |
 | 20 | `primary_v042_visual_review` | `0x0569D` | Hashi | `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes` | `lua/kunio_manual_v042_capture_watch.lua` | look for a bridge/stage/location label |
 | 30 | `primary_v042_visual_review` | `0x0561A` | Hashi | `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes` | `lua/kunio_manual_v042_capture_watch.lua` | look for a bridge/stage/location label |
 | 30 | `primary_v042_visual_review` | `0x05643` | Heishichi | `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes` | `lua/kunio_manual_v042_capture_watch.lua` | look for a visible Heishichi name/dialogue context |

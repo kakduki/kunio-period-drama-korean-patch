@@ -20,8 +20,8 @@ def main() -> int:
     expected = {
         "primary_candidate": "v0.4.2 font-expanded",
         "primary_applied_rows": 10,
-        "pending_manual_actions": 13,
-        "pending_primary_visual_checks": 10,
+        "pending_manual_actions": 12,
+        "pending_primary_visual_checks": 9,
         "pending_v043_route_proofs": 3,
         "primary_auto_input_match_rows": 10,
         "v043_rows": 7,
@@ -47,7 +47,7 @@ def main() -> int:
             errors.append(f"{key} contains a Windows path separator: {summary.get(key)!r}")
 
     next_action = payload.get("next_action")
-    if not isinstance(next_action, dict) or next_action.get("target") != "0x07227":
+    if not isinstance(next_action, dict) or next_action.get("target") != "0x0569D":
         errors.append(f"unexpected next action: {next_action!r}")
 
     markdown = DASHBOARD_MD.read_text(encoding="utf-8")
@@ -64,7 +64,7 @@ def main() -> int:
         "python scripts/run_next_manual_fceux.py",
         "python scripts/confirm_next_primary_visual.py --confirm-visible",
         "python scripts/prepare_next_manual_run.py --powershell",
-        "0x07227",
+        "0x0569D",
         "Auto-input byte-match rows",
         "Katana item-list state probe",
         "VISUAL_FAIL_ITEMLIST_EMPTY",

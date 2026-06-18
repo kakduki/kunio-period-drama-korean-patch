@@ -69,6 +69,11 @@ def make_payload() -> dict[str, object]:
 
 def write_markdown(payload: dict[str, object]) -> None:
     summary = payload["summary"]
+    first_primary = payload["primary_visual_rows"][0] if payload["primary_visual_rows"] else {}
+    first_primary_command = (
+        f"python scripts/record_primary_visual_review.py {first_primary.get('rom_hit', '<rom_offset>')} "
+        f"--confirm --screen-context \"{first_primary.get('screen_hint', 'visible matching screen context')} visible\""
+    )
     lines = [
         "# Release Test Checklist",
         "",
@@ -116,7 +121,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "After a matched primary screen:",
         "",
         "```powershell",
-        "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"katana/weapon item label visible\"",
+        first_primary_command,
         "python scripts/refresh_after_manual_capture.py --phase primary",
         "```",
         "",

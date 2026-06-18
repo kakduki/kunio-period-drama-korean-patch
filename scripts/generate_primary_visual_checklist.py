@@ -13,6 +13,7 @@ PRIMARY_CONTENTS_JSON = REPO_ROOT / "rom_analysis" / "primary_patch_contents.jso
 MANUAL_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
 PRIMARY_REVIEW_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_review.json"
 AUTO_EXPLORER_SUMMARY_JSON = REPO_ROOT / "rom_analysis" / "fceux_input_explorer_v042" / "summary.json"
+KATANA_WRONG_CONTEXT_NOTES = REPO_ROOT / "rom_analysis" / "katana_autoplay_route_capture_v042_notes.md"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "primary_visual_checklist.md"
 
@@ -31,6 +32,14 @@ PRIORITY_BY_EVIDENCE = {
     "encoding-exact": 20,
     "static-candidate+pointer": 30,
     "static-candidate": 40,
+}
+
+BLOCKED_VISUAL_REVIEW = {
+    "0x07227": {
+        "status": "blocked_wrong_context_needs_inventory",
+        "reason": "Katana autoplay-route evidence reproduced a player/character-select screen, not the weapon/item list.",
+        "screen_hint": "find a weapon/item list that visibly contains the Katana item; do not repeat the autoplay-route capture",
+    }
 }
 
 
@@ -95,6 +104,12 @@ def screen_hint(row: dict[str, object]) -> str:
     return "manually reach the exact text/menu/status screen"
 
 
+def blocked_review_for(rom_hit: str) -> dict[str, str] | None:
+    if rom_hit == "0x07227" and KATANA_WRONG_CONTEXT_NOTES.exists():
+        return BLOCKED_VISUAL_REVIEW[rom_hit]
+    return None
+
+
 def make_payload() -> dict[str, object]:
     contents = load_json(PRIMARY_CONTENTS_JSON)
     statuses = status_by_rom()
@@ -113,6 +128,16 @@ def make_payload() -> dict[str, object]:
         review_status = "visual_confirmed" if visual_confirmed else str(capture_status)
         if not visual_confirmed and auto_match_count:
             review_status = "auto_input_match_needs_visual"
+        hint = screen_hint(row)
+        reviewer_note = str(review.get("reviewer_note", ""))
+        blocked_reason = ""
+        blocked = blocked_review_for(rom_hit)
+        if blocked and not visual_confirmed:
+            priority = 80
+            review_status = blocked["status"]
+            hint = blocked["screen_hint"]
+            blocked_reason = blocked["reason"]
+            reviewer_note = reviewer_note or blocked_reason
         rows.append(
             {
                 "priority": priority,
@@ -125,11 +150,12 @@ def make_payload() -> dict[str, object]:
                 "new_bytes": row.get("new_bytes", ""),
                 "evidence_level": evidence,
                 "manual_status": row.get("manual_status", ""),
-                "screen_hint": screen_hint(row),
+                "screen_hint": hint,
                 "capture_status": capture_status,
                 "visual_context_confirmed": visual_confirmed,
                 "screen_context": review.get("screen_context", ""),
-                "reviewer_note": review.get("reviewer_note", ""),
+                "reviewer_note": reviewer_note,
+                "blocked_reason": blocked_reason,
                 "review_status": review_status,
                 "record_file_count": manual.get("record_file_count", 0),
                 "matches": len(manual.get("matches", [])) if isinstance(manual.get("matches", []), list) else 0,
@@ -145,12 +171,15 @@ def make_payload() -> dict[str, object]:
     counts: dict[str, int] = {}
     visual_confirmed_count = 0
     auto_input_match_rows = 0
+    blocked_visual_count = 0
     for row in rows:
         counts[str(row["review_status"])] = counts.get(str(row["review_status"]), 0) + 1
         if row["visual_context_confirmed"]:
             visual_confirmed_count += 1
         if row["auto_input_match_count"]:
             auto_input_match_rows += 1
+        if str(row["review_status"]).startswith("blocked_"):
+            blocked_visual_count += 1
 
     return {
         "source": str(PRIMARY_CONTENTS_JSON.relative_to(REPO_ROOT)),
@@ -158,6 +187,8 @@ def make_payload() -> dict[str, object]:
             "row_count": len(rows),
             "visual_confirmed_count": visual_confirmed_count,
             "visual_pending_count": len(rows) - visual_confirmed_count,
+            "actionable_visual_pending_count": len(rows) - visual_confirmed_count - blocked_visual_count,
+            "blocked_visual_count": blocked_visual_count,
             "auto_input_match_rows": auto_input_match_rows,
             "primary_rom": PRIMARY_ROM,
             "watcher_lua": WATCHER_LUA,
@@ -180,6 +211,8 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Rows to visually verify: **{summary['row_count']}**",
         f"- Visual confirmations: **{summary['visual_confirmed_count']}**",
         f"- Pending visual checks: **{summary['visual_pending_count']}**",
+        f"- Actionable visual checks: **{summary['actionable_visual_pending_count']}**",
+        f"- Blocked visual checks: **{summary['blocked_visual_count']}**",
         f"- Auto-input byte-match rows: **{summary['auto_input_match_rows']}**",
         f"- Open patched ROM: `{summary['primary_rom']}`",
         f"- Run watcher once: `{summary['watcher_lua']}`",
@@ -216,7 +249,7 @@ def write_markdown(payload: dict[str, object]) -> None:
         "",
         "```powershell",
         SUMMARY_COMMAND,
-        "python scripts/record_primary_visual_review.py 0x07227 --confirm --screen-context \"katana/weapon item label visible\"",
+        "python scripts/record_primary_visual_review.py <rom_offset> --confirm --screen-context \"visible matching screen context\"",
         "python scripts/generate_manual_capture_status.py",
         "python scripts/generate_primary_visual_checklist.py",
         "```",

@@ -8,8 +8,8 @@ This separates byte-load evidence from final visual approval for the current scr
 - Latest dialogue crop: `rom_analysis/fceux_input_explorer_v042/manual_frame_000883_screen_dialogue_box.png`
 - Byte-matched primary rows: **10**
 - Visual approvals from this capture: **0**
-- Next visual target: `0x07227` / Katana
-- Next visual hint: look for a katana/weapon item label
+- Next visual target: `0x0569D` / Hashi
+- Next visual hint: look for a bridge/stage/location label
 - Decision: Do not mark any primary row visually confirmed from this auto-input capture. Use it as route/byte-load evidence and adjust the next route toward the target context.
 
 ## Row Triage
