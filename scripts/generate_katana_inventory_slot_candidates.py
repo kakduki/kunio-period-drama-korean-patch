@@ -21,6 +21,7 @@ SINGLE_SLOT_NOTES = {
     "0x0503": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0503_notes.md",
     "0x0506": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0506_notes.md",
     "0x0508": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0508_notes.md",
+    "0x0509": REPO_ROOT / "rom_analysis" / "katana_single_slot_probe_0509_notes.md",
 }
 
 
@@ -110,7 +111,11 @@ def make_payload() -> dict[str, object]:
         for row in rows
         if row["classification"] == "candidate_small_probe" and row["address"] not in completed_single_slot_probes
     ]
-    next_probe = remaining_small_probes[0] if remaining_small_probes else "-"
+    next_probe = (
+        f"continue with {remaining_small_probes[0]}"
+        if remaining_small_probes
+        else "all candidate_small_probe addresses are exhausted; switch to grouped runtime-state probes"
+    )
     return {
         "source": {
             "menu_cpu": str(MENU_CPU.relative_to(REPO_ROOT)).replace("\\", "/"),
@@ -123,7 +128,7 @@ def make_payload() -> dict[str, object]:
             "probed_addresses": len(rows),
             "classification_counts": counts,
             "completed_single_slot_probes": completed_single_slot_probes,
-            "recommended_next_probe": f"Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; continue with {next_probe}.",
+            "recommended_next_probe": f"Try one candidate_small_probe address at a time. Completed probes did not show the Katana label; {next_probe}.",
         },
         "rows": rows,
     }

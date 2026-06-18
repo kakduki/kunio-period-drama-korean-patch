@@ -1,0 +1,19 @@
+frame	phase	slot_addr	slot_value	fingerprint	dump_prefix
+121	route	0x0509	0x84	877702039:25800	kunio_fceux_lua_output/manual_frame_000122
+211	route	0x0509	0x84	206542110:45120	kunio_fceux_lua_output/manual_frame_000212
+301	route	0x0509	0x84	697285037:29760	kunio_fceux_lua_output/manual_frame_000302
+391	route	0x0509	0x84	972456399:45600	kunio_fceux_lua_output/manual_frame_000392
+642	route	0x0509	0x84	206542110:45120	kunio_fceux_lua_output/manual_frame_000643
+732	route	0x0509	0x84	972456399:45600	kunio_fceux_lua_output/manual_frame_000733
+974	route	0x0509	0x84	206542110:45120	kunio_fceux_lua_output/manual_frame_000975
+1064	route	0x0509	0x84	972456399:45600	kunio_fceux_lua_output/manual_frame_001065
+1335	route	0x0509	0x84	206542110:45120	kunio_fceux_lua_output/manual_frame_001336
+1425	route	0x0509	0x84	972456399:45600	kunio_fceux_lua_output/manual_frame_001426
+1624	inject	0x0509	0x84	206542110:45120	kunio_fceux_lua_output/manual_frame_001625
+1714	inject	0x0509	0x84	774405637:24840	kunio_fceux_lua_output/manual_frame_001715
+1804	inject	0x0509	0x84	206542110:45120	kunio_fceux_lua_output/manual_frame_001805
+1910	inject	0x0509	0x84	697285037:29760	kunio_fceux_lua_output/manual_frame_001911
+2000	inject	0x0509	0x84	323851653:39240	kunio_fceux_lua_output/manual_frame_002001
+2275	inject	0x0509	0x84	657096094:30720	kunio_fceux_lua_output/manual_frame_002276
+2365	inject	0x0509	0x84	323851653:39240	kunio_fceux_lua_output/manual_frame_002366
+2700	done	0x0509	0x84	323851653:39240	
