@@ -49,6 +49,7 @@ STATE_SINGLE_BYTE_0723_7A_NOTES = REPO_ROOT / "rom_analysis" / "state_single_byt
 STATE_SINGLE_BYTE_0723_7A_PNG = REPO_ROOT / "rom_analysis" / "state_single_byte_probe_0723_7a_frame_001325_screen.png"
 STATE_SINGLE_BYTE_0723_7A_RECORDS = REPO_ROOT / "rom_analysis" / "state_single_byte_probe_0723_7a_frame_001325_target_records.tsv"
 OBJECT_STATE_SINGLE_BYTE_04FA_30_NOTES = REPO_ROOT / "rom_analysis" / "object_state_single_byte_probe_04fa_30_notes.md"
+OBJECT_STATE_SINGLE_BYTE_04FB_31_NOTES = REPO_ROOT / "rom_analysis" / "object_state_single_byte_probe_04fb_31_notes.md"
 MANUAL_CAPTURE_CARDS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_cards.json"
 MANUAL_CAPTURE_CARDS_MD = REPO_ROOT / "rom_analysis" / "manual_capture_cards.md"
 MANUAL_CAPTURE_STATUS_JSON = REPO_ROOT / "rom_analysis" / "manual_capture_status.json"
@@ -185,6 +186,7 @@ def write_release_readme(path: Path, summary: dict[str, object], ips_name: str) 
         "- `state_single_byte_probe_0723_7a_notes.md`: result of testing `$0723 = $7A` alone",
         "- `state_single_byte_probe_0723_7a_frame_001325_screen.png`: selected dialogue-like screen evidence from `$0723 = $7A`",
         "- `object_state_single_byte_probe_04fa_30_notes.md`: result of testing `$04FA = $30` alone",
+        "- `object_state_single_byte_probe_04fb_31_notes.md`: result of testing `$04FB = $31` alone",
         "- `patch_decision_matrix.md`: next manual verification priorities",
         "- `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops",
         "- `next_manual_run.md`: single recommended next FCEUX action queue",
@@ -375,6 +377,7 @@ def package() -> dict[str, object]:
         (STATE_SINGLE_BYTE_0723_7A_PNG, "state_single_byte_probe_0723_7a_frame_001325_screen.png"),
         (STATE_SINGLE_BYTE_0723_7A_RECORDS, "state_single_byte_probe_0723_7a_frame_001325_target_records.tsv"),
         (OBJECT_STATE_SINGLE_BYTE_04FA_30_NOTES, "object_state_single_byte_probe_04fa_30_notes.md"),
+        (OBJECT_STATE_SINGLE_BYTE_04FB_31_NOTES, "object_state_single_byte_probe_04fb_31_notes.md"),
         (DECISION_MATRIX_MD, "patch_decision_matrix.md"),
         (DECISION_MATRIX_JSON, "patch_decision_matrix.json"),
         (MANUAL_CAPTURE_CARDS_MD, "manual_capture_cards.md"),

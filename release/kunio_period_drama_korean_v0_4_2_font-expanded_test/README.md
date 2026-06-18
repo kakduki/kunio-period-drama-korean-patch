@@ -27,6 +27,7 @@ This is an incomplete manual-test IPS bundle, not a final release.
 - `state_single_byte_probe_0723_7a_notes.md`: result of testing `$0723 = $7A` alone
 - `state_single_byte_probe_0723_7a_frame_001325_screen.png`: selected dialogue-like screen evidence from `$0723 = $7A`
 - `object_state_single_byte_probe_04fa_30_notes.md`: result of testing `$04FA = $30` alone
+- `object_state_single_byte_probe_04fb_31_notes.md`: result of testing `$04FB = $31` alone
 - `patch_decision_matrix.md`: next manual verification priorities
 - `manual_capture_cards.md`: short FCEUX tasks to avoid blind autoplay loops
 - `next_manual_run.md`: single recommended next FCEUX action queue
