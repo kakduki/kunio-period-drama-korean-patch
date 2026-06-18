@@ -47,6 +47,8 @@ Single-page status for the current Korean patch work.
 - Gate status counts: `{'PASS': 6, 'FAIL': 2, 'UNKNOWN': 1}`
 - Failing gates: `release-included visual proof, high-risk/quarantined visual proof`
 - Unknown gates: `shortened padding rule acceptance`
+- Action plan items: **3**
+- Next gate action: `release-included visual proof`
 
 ## v0.4.3 Gate
 

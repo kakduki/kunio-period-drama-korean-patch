@@ -28,6 +28,8 @@ def main() -> int:
         "manual_dump_record_files": 0,
         "release_ready": False,
         "release_gate_status_counts": {"PASS": 6, "FAIL": 2, "UNKNOWN": 1},
+        "release_gate_action_count": 3,
+        "release_gate_next_action": "release-included visual proof",
     }
     for key, value in expected.items():
         if summary.get(key) != value:
@@ -52,6 +54,8 @@ def main() -> int:
         "Release Blockers",
         "Release Gate",
         "Gate status counts",
+        "Action plan items",
+        "release-included visual proof",
         "shortened padding rule acceptance",
         "python scripts/preflight_manual_fceux.py",
         "python scripts/run_next_manual_fceux.py",

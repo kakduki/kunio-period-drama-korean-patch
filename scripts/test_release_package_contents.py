@@ -40,6 +40,8 @@ def main() -> int:
         "smoke_test_log.txt",
         "release_gate_checklist.md",
         "release_gate_checklist.json",
+        "release_gate_action_plan.md",
+        "release_gate_action_plan.json",
         "high_risk_candidates.csv",
         "padding_experiment_matrix.md",
         "padding_experiment_matrix.json",

@@ -23,6 +23,7 @@ CANDIDATE_COMBINED_REPORT = REPO_ROOT / "output" / "kunio_period_drama_softgate_
 HIGH_RISK_CANDIDATES = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "high_risk_candidates.csv"
 PADDING_EXPERIMENT_MATRIX = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "padding_experiment_matrix.json"
 RELEASE_GATE_JSON = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_checklist.json"
+RELEASE_GATE_ACTION_PLAN = REPO_ROOT / "rom_analysis" / "candidate_pipeline" / "release_gate_action_plan.json"
 OUT_JSON = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.json"
 OUT_MD = REPO_ROOT / "rom_analysis" / "patch_progress_dashboard.md"
 
@@ -62,6 +63,7 @@ def make_payload() -> dict[str, object]:
     high_risk_rows = load_csv(HIGH_RISK_CANDIDATES)
     padding_matrix = load_json(PADDING_EXPERIMENT_MATRIX)
     release_gate = load_json(RELEASE_GATE_JSON)
+    release_gate_action_plan = load_json(RELEASE_GATE_ACTION_PLAN)
 
     primary_summary = primary["summary"]
     next_summary = next_run["summary"]
@@ -107,6 +109,7 @@ def make_payload() -> dict[str, object]:
             "high_risk_candidates": rel(HIGH_RISK_CANDIDATES),
             "padding_experiment_matrix": rel(PADDING_EXPERIMENT_MATRIX),
             "release_gate_checklist": rel(RELEASE_GATE_JSON),
+            "release_gate_action_plan": rel(RELEASE_GATE_ACTION_PLAN),
         },
         "summary": {
             "primary_candidate": primary_summary["primary_candidate"],
@@ -148,6 +151,8 @@ def make_payload() -> dict[str, object]:
             "release_gate_status_counts": release_gate.get("summary", {}).get("status_counts", {}),
             "release_gate_failures": [row.get("gate", "") for row in release_gate_failures],
             "release_gate_unknowns": [row.get("gate", "") for row in release_gate_unknowns],
+            "release_gate_action_count": release_gate_action_plan.get("summary", {}).get("action_count", 0),
+            "release_gate_next_action": release_gate_action_plan.get("summary", {}).get("next_gate", "none"),
             "release_ready": release_gate.get("summary", {}).get("release_ready", False),
             "release_blockers": blockers,
         },
@@ -208,6 +213,8 @@ def write_markdown(payload: dict[str, object]) -> None:
         f"- Gate status counts: `{summary['release_gate_status_counts']}`",
         f"- Failing gates: `{', '.join(summary['release_gate_failures']) or 'none'}`",
         f"- Unknown gates: `{', '.join(summary['release_gate_unknowns']) or 'none'}`",
+        f"- Action plan items: **{summary['release_gate_action_count']}**",
+        f"- Next gate action: `{summary['release_gate_next_action']}`",
         "",
         "## v0.4.3 Gate",
         "",

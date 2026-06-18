@@ -54,6 +54,7 @@ KEY_PYTHON = [
     "scripts/generate_primary_visual_checklist.py",
     "scripts/generate_reference_capture_plan.py",
     "scripts/generate_release_test_checklist.py",
+    "scripts/generate_release_gate_action_plan.py",
     "scripts/generate_route_fceux_targets.py",
     "scripts/generate_route_proof_status.py",
     "scripts/generate_state_cheat_probe_candidates.py",
@@ -107,6 +108,7 @@ KEY_PYTHON = [
     "scripts/test_reference_capture_plan.py",
     "scripts/test_refresh_after_manual_capture.py",
     "scripts/test_release_package_contents.py",
+    "scripts/test_release_gate_action_plan.py",
     "scripts/test_release_test_checklist.py",
     "scripts/test_route_fceux_targets.py",
     "scripts/test_route_proof_status.py",
@@ -192,6 +194,8 @@ REGEN_COMMANDS = [
     ["scripts/generate_manual_capture_status.py"],
     ["scripts/generate_manual_dump_inventory.py"],
     ["scripts/generate_next_manual_run.py"],
+    ["scripts/build_candidate_pipeline.py"],
+    ["scripts/generate_release_gate_action_plan.py"],
     ["scripts/generate_patch_progress_dashboard.py"],
 ]
 
@@ -272,6 +276,7 @@ def main() -> int:
     run("reference-guided capture plan", ["scripts/test_reference_capture_plan.py"])
     run("manual capture refresh helper", ["scripts/test_refresh_after_manual_capture.py"])
     run("release package contents", ["scripts/test_release_package_contents.py"])
+    run("release gate action plan", ["scripts/test_release_gate_action_plan.py"])
     run("release test checklist", ["scripts/test_release_test_checklist.py"])
     run("route FCEUX targets", ["scripts/test_route_fceux_targets.py"])
     run("route proof status", ["scripts/test_route_proof_status.py"])
