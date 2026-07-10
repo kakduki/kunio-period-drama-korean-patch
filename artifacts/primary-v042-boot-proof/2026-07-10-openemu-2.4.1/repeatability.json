@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "kind": "openemu_visual_opening_baseline",
+  "scope": "visual pixels only; not RAM/PPU/trace/translation-target proof",
+  "runtime": {
+    "application": "OpenEmu",
+    "window_title": "kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded"
+  },
+  "primary": {
+    "file": "opening-baseline-primary.png",
+    "captured_at_utc": "2026-07-10T07:34:36.606164+00:00",
+    "window_rect_points": {
+      "x": 402,
+      "y": 77,
+      "width": 876,
+      "height": 748
+    },
+    "image_pixels": {
+      "width": 1752,
+      "height": 1496
+    },
+    "sha256": "ee9c5f4060373ae86cf41e660852f6713965a754440a88568e5eb3b3e9e830b3"
+  },
+  "repeats": [
+    {
+      "file": "repeat-01.png",
+      "captured_at_utc": "2026-07-10T07:34:39.057261+00:00",
+      "window_rect_points": {
+        "x": 402,
+        "y": 77,
+        "width": 876,
+        "height": 748
+      },
+      "image_pixels": {
+        "width": 1752,
+        "height": 1496
+      },
+      "sha256": "3ddeeb07088218102ab3d124bcd8881a8d126368cea55335c30c4d2f74167b08"
+    },
+    {
+      "file": "repeat-02.png",
+      "captured_at_utc": "2026-07-10T07:34:41.206773+00:00",
+      "window_rect_points": {
+        "x": 402,
+        "y": 77,
+        "width": 876,
+        "height": 748
+      },
+      "image_pixels": {
+        "width": 1752,
+        "height": 1496
+      },
+      "sha256": "3ddeeb07088218102ab3d124bcd8881a8d126368cea55335c30c4d2f74167b08"
+    },
+    {
+      "file": "repeat-03.png",
+      "captured_at_utc": "2026-07-10T07:34:43.512040+00:00",
+      "window_rect_points": {
+        "x": 402,
+        "y": 77,
+        "width": 876,
+        "height": 748
+      },
+      "image_pixels": {
+        "width": 1752,
+        "height": 1496
+      },
+      "sha256": "ee9c5f4060373ae86cf41e660852f6713965a754440a88568e5eb3b3e9e830b3"
+    }
+  ],
+  "repeatability": {
+    "repeat_count": 3,
+    "unique_sha256_count": 2,
+    "exact_hash_match": false,
+    "comparison_scope": "PNG bytes after identical rectangular screen-capture procedure"
+  }
+}

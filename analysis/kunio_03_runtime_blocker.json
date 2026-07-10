@@ -1,0 +1,42 @@
+{
+  "gate": "kunio-03-baseline",
+  "status": "BLOCKED_RUNTIME",
+  "observed_at_utc": "2026-07-10T00:27:25Z",
+  "base_rom": {
+    "path": "rom/kunio.nes",
+    "md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "bytes": 262160
+  },
+  "required_evidence": [
+    "opening Japanese line screenshot",
+    "frame index",
+    "replayable input sequence",
+    "save state",
+    "nametable dump",
+    "RAM dump",
+    "three identical reproductions"
+  ],
+  "runtime_probe": {
+    "path_fceux": "NOT_FOUND",
+    "path_qfceux": "NOT_FOUND",
+    "path_mesen": "NOT_FOUND",
+    "path_mesen2": "NOT_FOUND",
+    "fceux_app_binaries": [
+      "/Applications/FCEUX.app/Contents/MacOS/fceux",
+      "/Applications/fceux.app/Contents/MacOS/fceux"
+    ],
+    "result": "Both app binaries abort before help output with dyld unresolved dependencies."
+  },
+  "missing_dylibs": [
+    "/usr/local/opt/zstd/lib/libzstd.1.dylib",
+    "/usr/local/opt/libvpx/lib/libvpx.8.dylib",
+    "/usr/local/opt/libbluray/lib/libbluray.2.dylib",
+    "/usr/local/opt/libx11/lib/libX11.6.dylib",
+    "/usr/local/opt/libsoxr/lib/libsoxr.0.dylib"
+  ],
+  "environment": {
+    "machine": "x86_64",
+    "homebrew": "not found"
+  },
+  "integrity_decision": "No save state, screenshot, RAM/nametable dump, trace, or ROM mutation was fabricated. The baseline gate remains incomplete until an executable emulator can produce the required runtime evidence."
+}

@@ -5,6 +5,12 @@
     "visual_review": "rom_analysis/manual_screen_dump_broad_scan/visual_review.json",
     "build_report": "output/kunio_period_drama_korean_prg_plan_v0.4.3_broad_verified_build_report.json"
   },
+  "recovery_policy": {
+    "evidence_mode": "static_reference_recovery",
+    "emulator_capture_permitted": false,
+    "english_ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad",
+    "rule": "Opening-menu captures cannot confirm an in-game Korean text target. Prioritize verified English IPS structural correlation before any debugger-capable runtime proof."
+  },
   "summary": {
     "rows": 7,
     "cpu_read_matches": 0,

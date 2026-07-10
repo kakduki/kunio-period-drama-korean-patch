@@ -65,7 +65,8 @@ def apply_ips(base: bytes, ips_path: Path) -> bytes:
 
 
 def resolve_repo_path(raw: str) -> Path:
-    path = Path(raw)
+    """Resolve manifest paths exported from either Windows or POSIX hosts."""
+    path = Path(raw.replace("\\", "/"))
     if not path.is_absolute():
         path = REPO_ROOT / path
     return path

@@ -1,10 +1,15 @@
+# Private ROM assets and archives
 rom/*.nes
 rom/*.zip
+
+# Generated ROM/IPS artifacts; the three test IPS files below are intentionally versioned.
 output/*.nes
 output/*.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips
+
+# Local emulator/tool output
 tools/
 rom_analysis/chr/
 rom_analysis/font/
@@ -12,5 +17,19 @@ rom_analysis/fceux_lua/*.bin
 rom_analysis/fceux_bank1_watch*/
 rom_analysis/fceux_v04_equal_length_watch_long/
 rom_analysis/disasm_6502_output.txt
+rom_analysis/task3_mmc3_trace/*.log
+*.sav
+*.srm
+*.state
+*.mss
+
+# Hermes local planning/session artifacts
+.hermes/
+
+# Downloaded third-party reference patch; recreate with fetch_technos_samurai_reference.py
+reference/technos-samurai-v1/
+
+# Python and macOS local artifacts
 __pycache__/
+*.py[cod]
 .DS_Store

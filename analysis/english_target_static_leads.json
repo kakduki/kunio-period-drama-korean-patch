@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "purpose": "static English-reference byte and candidate-pointer leads only; no emulator/runtime claim",
+  "offset_convention": {
+    "coordinate_space": "iNES file offset including 16-byte header",
+    "header_bytes": 16,
+    "intervals": "start inclusive, end_exclusive"
+  },
+  "base": {
+    "path": "rom/kunio.nes",
+    "md5": "0d406a85285b4de8468f0dab6aad5fe5"
+  },
+  "english_reference": {
+    "ips_path": "reference/technos-samurai-v1/TSe-v10.ips",
+    "ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad"
+  },
+  "input_artifacts": {
+    "correlation": "analysis/korean_target_english_reference_correlation.json",
+    "runs": "analysis/english_reference_runs.json"
+  },
+  "lead_count": 5,
+  "leads": [
+    {
+      "task": 3,
+      "file_offset": 21157,
+      "file_offset_hex": "0x052A5",
+      "byte_length": 3,
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "classification": "static_only",
+      "base_bytes": "82 84 7E",
+      "english_bytes": "8F 00 7E",
+      "english_target_bytes_differ": true,
+      "overlap_ranges": [
+        {
+          "run_id": 5,
+          "file_start": 21156,
+          "file_end_exclusive": 21159,
+          "physical_bank": 2,
+          "overlap_start": 21157,
+          "overlap_end_exclusive": 21159,
+          "overlap_bytes": 2
+        }
+      ],
+      "run_context": [
+        {
+          "run_id": 5,
+          "file_start": 21156,
+          "file_end_exclusive": 21159,
+          "base_hex": "82 82 84",
+          "english_hex": "8E 8F 00"
+        }
+      ],
+      "pointer_scan": {
+        "status": "mapper_unknown_static_candidates",
+        "method": "scan PRG for little-endian occurrences of all four possible 8KiB MMC3 CPU-window addresses, then retain the subset immediately preceded by an official 6502 absolute-operand opcode; no mapper state or instruction-boundary proof asserted",
+        "cpu_address_candidates": 4,
+        "candidate_windows": [
+          {
+            "cpu_address": "0x9295",
+            "base_little_endian_hits": [
+              {
+                "file_offset": 35159,
+                "physical_prg_bank": 4
+              }
+            ],
+            "english_little_endian_hits": [
+              {
+                "file_offset": 22285,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 22319,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 22479,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 22519,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 22555,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 22760,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 23397,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 23826,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 24545,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 24813,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 25046,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 25116,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 25146,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 25800,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 25901,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 27023,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 27577,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 27953,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 28101,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 28161,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 28746,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 29196,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 29265,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 29494,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 30109,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 30140,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 30214,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 30499,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 30564,
+                "physical_prg_bank": 3
+              },
+              {
+                "file_offset": 35159,
+                "physical_prg_bank": 4
+              },
+              {
+                "file_offset": 80264,
+                "physical_prg_bank": 9
+              },
+              {
+                "file_offset": 80678,
+                "physical_prg_bank": 9
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xB295",
+            "base_little_endian_hits": [
+              {
+                "file_offset": 111181,
+                "physical_prg_bank": 13
+              }
+            ],
+            "english_little_endian_hits": [
+              {
+                "file_offset": 111181,
+                "physical_prg_bank": 13
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xD295",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xF295",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          }
+        ],
+        "opcode_absolute_operand_hits": [
+          {
+            "cpu_address": "0x9295",
+            "base_hits": [],
+            "english_hits": [
+              {
+                "instruction_file_offset": 22284,
+                "operand_file_offset": 22285,
+                "physical_prg_bank": 2,
+                "opcode": "0x8D",
+                "mnemonic": "STA abs"
+              },
+              {
+                "instruction_file_offset": 22554,
+                "operand_file_offset": 22555,
+                "physical_prg_bank": 2,
+                "opcode": "0x99",
+                "mnemonic": "STA abs,Y"
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xB295",
+            "base_hits": [
+              {
+                "instruction_file_offset": 111180,
+                "operand_file_offset": 111181,
+                "physical_prg_bank": 13,
+                "opcode": "0x20",
+                "mnemonic": "JSR abs"
+              }
+            ],
+            "english_hits": [
+              {
+                "instruction_file_offset": 111180,
+                "operand_file_offset": 111181,
+                "physical_prg_bank": 13,
+                "opcode": "0x20",
+                "mnemonic": "JSR abs"
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xD295",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xF295",
+            "base_hits": [],
+            "english_hits": []
+          }
+        ]
+      },
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "limitations": "Byte replacement and 16-bit occurrences are static leads only; they do not prove a text pointer, CPU read, renderer path, or matching scene."
+    },
+    {
+      "task": 4,
+      "file_offset": 23525,
+      "file_offset_hex": "0x05BE5",
+      "byte_length": 3,
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "classification": "static_only",
+      "base_bytes": "97 99 93",
+      "english_bytes": "93 95 8E",
+      "english_target_bytes_differ": true,
+      "overlap_ranges": [
+        {
+          "run_id": 173,
+          "file_start": 23524,
+          "file_end_exclusive": 23575,
+          "physical_bank": 2,
+          "overlap_start": 23525,
+          "overlap_end_exclusive": 23528,
+          "overlap_bytes": 3
+        }
+      ],
+      "run_context": [
+        {
+          "run_id": 173,
+          "file_start": 23524,
+          "file_end_exclusive": 23575,
+          "base_hex": "87 97 99 93 B4 8A 83 FF 87 97 99 87 B5 9A AE FF 9C 94 82 90 8D 87 FF 0A 8C B5 88 9C AE 14 8C FF 95 A8 90 99 85 9F A3 A8 FF 0C B2 B4 94 8E B4 90 FF 8F 9C",
+          "english_hex": "29 93 95 8E FF 23 90 92 89 83 85 99 FF 2A 93 89 8C 8B FF 27 93 89 8C 8B FF FF 24 94 88 89 83 8B FF 28 93 81 95 83 99 FF 25 8E 81 92 89 94 81 FF 20 8A 85"
+        }
+      ],
+      "pointer_scan": {
+        "status": "mapper_unknown_static_candidates",
+        "method": "scan PRG for little-endian occurrences of all four possible 8KiB MMC3 CPU-window addresses, then retain the subset immediately preceded by an official 6502 absolute-operand opcode; no mapper state or instruction-boundary proof asserted",
+        "cpu_address_candidates": 4,
+        "candidate_windows": [
+          {
+            "cpu_address": "0x9BD5",
+            "base_little_endian_hits": [
+              {
+                "file_offset": 105176,
+                "physical_prg_bank": 12
+              }
+            ],
+            "english_little_endian_hits": [
+              {
+                "file_offset": 105176,
+                "physical_prg_bank": 12
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xBBD5",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xDBD5",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xFBD5",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          }
+        ],
+        "opcode_absolute_operand_hits": [
+          {
+            "cpu_address": "0x9BD5",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xBBD5",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xDBD5",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xFBD5",
+            "base_hits": [],
+            "english_hits": []
+          }
+        ]
+      },
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "limitations": "Byte replacement and 16-bit occurrences are static leads only; they do not prove a text pointer, CPU read, renderer path, or matching scene."
+    },
+    {
+      "task": 5,
+      "file_offset": 25236,
+      "file_offset_hex": "0x06294",
+      "byte_length": 4,
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "classification": "static_only",
+      "base_bytes": "9D 82 8C 91",
+      "english_bytes": "93 88 8F 97",
+      "english_target_bytes_differ": true,
+      "overlap_ranges": [
+        {
+          "run_id": 392,
+          "file_start": 25236,
+          "file_end_exclusive": 25246,
+          "physical_bank": 3,
+          "overlap_start": 25236,
+          "overlap_end_exclusive": 25240,
+          "overlap_bytes": 4
+        }
+      ],
+      "run_context": [
+        {
+          "run_id": 392,
+          "file_start": 25236,
+          "file_end_exclusive": 25246,
+          "base_hex": "9D 82 8C 91 99 81 96 87 96 B5",
+          "english_hex": "93 88 8F 97 00 94 88 85 93 85"
+        }
+      ],
+      "pointer_scan": {
+        "status": "mapper_unknown_static_candidates",
+        "method": "scan PRG for little-endian occurrences of all four possible 8KiB MMC3 CPU-window addresses, then retain the subset immediately preceded by an official 6502 absolute-operand opcode; no mapper state or instruction-boundary proof asserted",
+        "cpu_address_candidates": 4,
+        "candidate_windows": [
+          {
+            "cpu_address": "0x8284",
+            "base_little_endian_hits": [
+              {
+                "file_offset": 80288,
+                "physical_prg_bank": 9
+              }
+            ],
+            "english_little_endian_hits": [
+              {
+                "file_offset": 23269,
+                "physical_prg_bank": 2
+              },
+              {
+                "file_offset": 79890,
+                "physical_prg_bank": 9
+              },
+              {
+                "file_offset": 80228,
+                "physical_prg_bank": 9
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xA284",
+            "base_little_endian_hits": [
+              {
+                "file_offset": 17397,
+                "physical_prg_bank": 2
+              }
+            ],
+            "english_little_endian_hits": [
+              {
+                "file_offset": 17397,
+                "physical_prg_bank": 2
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xC284",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xE284",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          }
+        ],
+        "opcode_absolute_operand_hits": [
+          {
+            "cpu_address": "0x8284",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xA284",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xC284",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xE284",
+            "base_hits": [],
+            "english_hits": []
+          }
+        ]
+      },
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "limitations": "Byte replacement and 16-bit occurrences are static leads only; they do not prove a text pointer, CPU read, renderer path, or matching scene."
+    },
+    {
+      "task": 6,
+      "file_offset": 25371,
+      "file_offset_hex": "0x0631B",
+      "byte_length": 4,
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "classification": "static_only",
+      "base_bytes": "9D 82 8C 91",
+      "english_bytes": "FF F0 BB 00",
+      "english_target_bytes_differ": true,
+      "overlap_ranges": [
+        {
+          "run_id": 395,
+          "file_start": 25265,
+          "file_end_exclusive": 25442,
+          "physical_bank": 3,
+          "overlap_start": 25371,
+          "overlap_end_exclusive": 25375,
+          "overlap_bytes": 4
+        }
+      ],
+      "run_context": [
+        {
+          "run_id": 395,
+          "file_start": 25265,
+          "file_end_exclusive": 25442,
+          "base_hex": "81 1A A6 B4 CA 00 81 88 94 83 CA FF F0 BB 85 A2 B2 90 91 86 82 CA 00 81 88 94 83 93 B2 99 9A FF F0 BB 82 10 93 AE 99 F0 8B AE 06 F8 F9 00 81 82 93 96 95 B4 93 A4 A9 0E CA FF F0 BB 90 8C 86 96 92 84 B2 CB 00 81 B4 8C 99 9F 89 B4 8D A6 F8 F9 00 81 88 94 83 96 8C 94 88 95 AF 00 A3 B4 93 B2 98 B2 9A 95 8C 10 CA FF F0 BB 9D 82 8C 91 99 81 96 87 96 00 A6 B3 88 92 90 84 94 82 93 A4 A9 0E FF F0 BB 14 83 13 B2 CC 00 81 B4 8C 99 00 9A A4 8B 96 B5 AF F8 F9 00 92 82 93 8A A7 AA A2 B2 CA FF F0 BB 81 B4 8C 06 00 9D 82 8C 91 13 0A 0B AE 8D",
+          "english_hex": "94 97 8F CA FF F0 BB 00 8A 85 85 9A B9 00 99 8F 95 B6 92 85 00 94 8F 95 87 88 B9 00 82 95 94 F8 88 85 89 93 89 00 97 89 8C 8C 00 83 92 95 93 88 00 99 8F 95 CA CA FF F0 BB 00 8E 99 81 88 CA 00 8C 81 94 85 92 CB FF F0 BB 00 88 85 99 CA 00 99 8F 95 B6 92 85 00 94 88 8F 93 85 F8 94 97 8F 00 82 81 84 71 81 93 93 85 93 CC FF F0 BB 00 89 B6 8D 00 8B 89 8E 93 95 CB 00 8C 85 94 B6 93 F8 82 8F 8F 87 89 85 CA FF F0 BB 00 84 81 8D 8E CA 00 94 8F 8F 00 82 81 84 00 99 8F 95 B6 92 85 F8 8F 8E 00 94 88 85 00 97 92 8F 8E 87 00 93 89 84 85 BA"
+        }
+      ],
+      "pointer_scan": {
+        "status": "mapper_unknown_static_candidates",
+        "method": "scan PRG for little-endian occurrences of all four possible 8KiB MMC3 CPU-window addresses, then retain the subset immediately preceded by an official 6502 absolute-operand opcode; no mapper state or instruction-boundary proof asserted",
+        "cpu_address_candidates": 4,
+        "candidate_windows": [
+          {
+            "cpu_address": "0x830B",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xA30B",
+            "base_little_endian_hits": [
+              {
+                "file_offset": 53305,
+                "physical_prg_bank": 6
+              }
+            ],
+            "english_little_endian_hits": [
+              {
+                "file_offset": 53305,
+                "physical_prg_bank": 6
+              }
+            ]
+          },
+          {
+            "cpu_address": "0xC30B",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xE30B",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          }
+        ],
+        "opcode_absolute_operand_hits": [
+          {
+            "cpu_address": "0x830B",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xA30B",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xC30B",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xE30B",
+            "base_hits": [],
+            "english_hits": []
+          }
+        ]
+      },
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "limitations": "Byte replacement and 16-bit occurrences are static leads only; they do not prove a text pointer, CPU read, renderer path, or matching scene."
+    },
+    {
+      "task": 7,
+      "file_offset": 25433,
+      "file_offset_hex": "0x06359",
+      "byte_length": 4,
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "classification": "static_only",
+      "base_bytes": "9D 82 8C 91",
+      "english_bytes": "8F 8E 87 00",
+      "english_target_bytes_differ": true,
+      "overlap_ranges": [
+        {
+          "run_id": 395,
+          "file_start": 25265,
+          "file_end_exclusive": 25442,
+          "physical_bank": 3,
+          "overlap_start": 25433,
+          "overlap_end_exclusive": 25437,
+          "overlap_bytes": 4
+        }
+      ],
+      "run_context": [
+        {
+          "run_id": 395,
+          "file_start": 25265,
+          "file_end_exclusive": 25442,
+          "base_hex": "81 1A A6 B4 CA 00 81 88 94 83 CA FF F0 BB 85 A2 B2 90 91 86 82 CA 00 81 88 94 83 93 B2 99 9A FF F0 BB 82 10 93 AE 99 F0 8B AE 06 F8 F9 00 81 82 93 96 95 B4 93 A4 A9 0E CA FF F0 BB 90 8C 86 96 92 84 B2 CB 00 81 B4 8C 99 9F 89 B4 8D A6 F8 F9 00 81 88 94 83 96 8C 94 88 95 AF 00 A3 B4 93 B2 98 B2 9A 95 8C 10 CA FF F0 BB 9D 82 8C 91 99 81 96 87 96 00 A6 B3 88 92 90 84 94 82 93 A4 A9 0E FF F0 BB 14 83 13 B2 CC 00 81 B4 8C 99 00 9A A4 8B 96 B5 AF F8 F9 00 92 82 93 8A A7 AA A2 B2 CA FF F0 BB 81 B4 8C 06 00 9D 82 8C 91 13 0A 0B AE 8D",
+          "english_hex": "94 97 8F CA FF F0 BB 00 8A 85 85 9A B9 00 99 8F 95 B6 92 85 00 94 8F 95 87 88 B9 00 82 95 94 F8 88 85 89 93 89 00 97 89 8C 8C 00 83 92 95 93 88 00 99 8F 95 CA CA FF F0 BB 00 8E 99 81 88 CA 00 8C 81 94 85 92 CB FF F0 BB 00 88 85 99 CA 00 99 8F 95 B6 92 85 00 94 88 8F 93 85 F8 94 97 8F 00 82 81 84 71 81 93 93 85 93 CC FF F0 BB 00 89 B6 8D 00 8B 89 8E 93 95 CB 00 8C 85 94 B6 93 F8 82 8F 8F 87 89 85 CA FF F0 BB 00 84 81 8D 8E CA 00 94 8F 8F 00 82 81 84 00 99 8F 95 B6 92 85 F8 8F 8E 00 94 88 85 00 97 92 8F 8E 87 00 93 89 84 85 BA"
+        }
+      ],
+      "pointer_scan": {
+        "status": "mapper_unknown_static_candidates",
+        "method": "scan PRG for little-endian occurrences of all four possible 8KiB MMC3 CPU-window addresses, then retain the subset immediately preceded by an official 6502 absolute-operand opcode; no mapper state or instruction-boundary proof asserted",
+        "cpu_address_candidates": 4,
+        "candidate_windows": [
+          {
+            "cpu_address": "0x8349",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xA349",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xC349",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          },
+          {
+            "cpu_address": "0xE349",
+            "base_little_endian_hits": [],
+            "english_little_endian_hits": []
+          }
+        ],
+        "opcode_absolute_operand_hits": [
+          {
+            "cpu_address": "0x8349",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xA349",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xC349",
+            "base_hits": [],
+            "english_hits": []
+          },
+          {
+            "cpu_address": "0xE349",
+            "base_hits": [],
+            "english_hits": []
+          }
+        ]
+      },
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "limitations": "Byte replacement and 16-bit occurrences are static leads only; they do not prove a text pointer, CPU read, renderer path, or matching scene."
+    }
+  ]
+}

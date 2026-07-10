@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "kind": "openemu_visual_opening_baseline",
+  "scope": "visual pixels only; not RAM/PPU/trace/translation-target proof",
+  "runtime": {
+    "application": "OpenEmu",
+    "window_title": "kunio"
+  },
+  "primary": {
+    "file": "opening-baseline-primary.png",
+    "captured_at_utc": "2026-07-10T05:03:10.544104+00:00",
+    "window_rect_points": {
+      "x": 402,
+      "y": 77,
+      "width": 876,
+      "height": 748
+    },
+    "image_pixels": {
+      "width": 1752,
+      "height": 1496
+    },
+    "sha256": "fec355884d83df7214dae1d257457107fc33033de0bc4f761aacb8d44e38049a"
+  },
+  "repeats": [
+    {
+      "file": "repeat-01.png",
+      "captured_at_utc": "2026-07-10T05:03:12.990523+00:00",
+      "window_rect_points": {
+        "x": 402,
+        "y": 77,
+        "width": 876,
+        "height": 748
+      },
+      "image_pixels": {
+        "width": 1752,
+        "height": 1496
+      },
+      "sha256": "fec355884d83df7214dae1d257457107fc33033de0bc4f761aacb8d44e38049a"
+    },
+    {
+      "file": "repeat-02.png",
+      "captured_at_utc": "2026-07-10T05:03:15.149069+00:00",
+      "window_rect_points": {
+        "x": 402,
+        "y": 77,
+        "width": 876,
+        "height": 748
+      },
+      "image_pixels": {
+        "width": 1752,
+        "height": 1496
+      },
+      "sha256": "fec355884d83df7214dae1d257457107fc33033de0bc4f761aacb8d44e38049a"
+    },
+    {
+      "file": "repeat-03.png",
+      "captured_at_utc": "2026-07-10T05:03:17.492130+00:00",
+      "window_rect_points": {
+        "x": 402,
+        "y": 77,
+        "width": 876,
+        "height": 748
+      },
+      "image_pixels": {
+        "width": 1752,
+        "height": 1496
+      },
+      "sha256": "fec355884d83df7214dae1d257457107fc33033de0bc4f761aacb8d44e38049a"
+    }
+  ],
+  "repeatability": {
+    "repeat_count": 3,
+    "unique_sha256_count": 1,
+    "exact_hash_match": true,
+    "comparison_scope": "PNG bytes after identical rectangular screen-capture procedure"
+  }
+}

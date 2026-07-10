@@ -16,6 +16,13 @@ def main() -> int:
     payload = json.loads(STATUS_JSON.read_text(encoding="utf-8"))
     rows = payload["rows"]
     errors = []
+    recovery = payload.get("recovery_policy", {})
+    if recovery.get("evidence_mode") != "static_reference_recovery":
+        errors.append("missing static_reference_recovery policy")
+    if recovery.get("emulator_capture_permitted") is not False:
+        errors.append("opening-menu emulator capture must be prohibited")
+    if recovery.get("english_ips_sha256") != "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad":
+        errors.append("verified English IPS digest missing from recovery policy")
     if payload["summary"]["rows"] != 7:
         errors.append(f"expected 7 proof rows, got {payload['summary']['rows']}")
     for key in ["cpu_read_match_present", "visual_context_confirmed", "applied_in_v043_build"]:

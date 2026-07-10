@@ -10,6 +10,13 @@ This report joins the broad-scan proof packet, CPU-read summary, visual review f
 - Applied in v0.4.3 build: **0**
 - Build verdict: `no candidate built; manual CPU-read and visual-context evidence is incomplete`
 
+## Static-recovery boundary (active)
+
+- **Evidence mode:** `static_reference_recovery`
+- **Opening-menu emulator loops are prohibited as evidence.** They cannot confirm an in-game Korean text target and are not a next action for this report.
+- The verified English IPS (`cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad`) is now the first structural reference.
+- Read `analysis/korean_target_english_reference_correlation.md` before any future debugger-capable runtime work. A later trace may prove a live route, but it cannot be replaced by repeated title/menu captures.
+
 ## Rows
 
 | task | status | ROM | human hint | expected text | Korean | CPU read | visual | planned bytes | next action |

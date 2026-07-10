@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "purpose": "static physical-offset correlation only; no emulator or runtime claim",
+  "offset_convention": {
+    "coordinate_space": "iNES file offset including 16-byte header",
+    "header_bytes": 16,
+    "intervals": "start inclusive, end_exclusive",
+    "target_span_rule": "file_offset + len(original_bytes)",
+    "physical_prg_bank_rule": "(file_offset - 0x10) // 0x2000; not a CPU mapper bank"
+  },
+  "method": "exact physical byte-span overlap against digest-verified English IPS runs; no emulator evidence used",
+  "base": {
+    "path": "rom/kunio.nes",
+    "md5": "0d406a85285b4de8468f0dab6aad5fe5"
+  },
+  "reference": {
+    "runs_path": "analysis/english_reference_runs.json",
+    "ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad",
+    "record_count": 99
+  },
+  "source_status": "rom_analysis/v043_proof_status.json",
+  "classification_counts": {
+    "unrelated_to_english_reference": 2,
+    "structurally_supported": 5
+  },
+  "rows": [
+    {
+      "task": 1,
+      "file_offset": 17420,
+      "rom_offset": "0x0440C",
+      "byte_length": 3,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "CA D0 E9",
+      "base_bytes_actual": "CA D0 E9",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "B5 93 AB",
+      "source_display": "かじや",
+      "korean_display": "대장간",
+      "classification": "unrelated_to_english_reference",
+      "overlap_run_ids": [],
+      "overlap_ranges": [],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "No verified English changed run overlaps this exact span. This does not disprove the Japanese target, but the English reference supplies no physical support here."
+    },
+    {
+      "task": 2,
+      "file_offset": 18676,
+      "rom_offset": "0x048F4",
+      "byte_length": 3,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "07 09 03",
+      "base_bytes_actual": "07 09 03",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "89 98 A1",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "classification": "unrelated_to_english_reference",
+      "overlap_run_ids": [],
+      "overlap_ranges": [],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "No verified English changed run overlaps this exact span. This does not disprove the Japanese target, but the English reference supplies no physical support here."
+    },
+    {
+      "task": 3,
+      "file_offset": 21157,
+      "rom_offset": "0x052A5",
+      "byte_length": 3,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "82 84 7E",
+      "base_bytes_actual": "82 84 7E",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "89 98 A1",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "classification": "structurally_supported",
+      "overlap_run_ids": [
+        5
+      ],
+      "overlap_ranges": [
+        {
+          "run_id": 5,
+          "file_start": 21156,
+          "file_end_exclusive": 21159,
+          "physical_bank": 2,
+          "overlap_start": 21157,
+          "overlap_end_exclusive": 21159,
+          "overlap_bytes": 2
+        }
+      ],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "The verified English patch changes this exact PRG byte span; this is reusable structural prioritization only, not proof of the Japanese renderer/pointer path."
+    },
+    {
+      "task": 4,
+      "file_offset": 23525,
+      "rom_offset": "0x05BE5",
+      "byte_length": 3,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "97 99 93",
+      "base_bytes_actual": "97 99 93",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "89 98 A1",
+      "source_display": "たつじ",
+      "korean_display": "타츠지",
+      "classification": "structurally_supported",
+      "overlap_run_ids": [
+        173
+      ],
+      "overlap_ranges": [
+        {
+          "run_id": 173,
+          "file_start": 23524,
+          "file_end_exclusive": 23575,
+          "physical_bank": 2,
+          "overlap_start": 23525,
+          "overlap_end_exclusive": 23528,
+          "overlap_bytes": 3
+        }
+      ],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "The verified English patch changes this exact PRG byte span; this is reusable structural prioritization only, not proof of the Japanese renderer/pointer path."
+    },
+    {
+      "task": 5,
+      "file_offset": 25236,
+      "rom_offset": "0x06294",
+      "byte_length": 4,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "9D 82 8C 91",
+      "base_bytes_actual": "9D 82 8C 91",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "8D 8E 8F 90",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "classification": "structurally_supported",
+      "overlap_run_ids": [
+        392
+      ],
+      "overlap_ranges": [
+        {
+          "run_id": 392,
+          "file_start": 25236,
+          "file_end_exclusive": 25246,
+          "physical_bank": 3,
+          "overlap_start": 25236,
+          "overlap_end_exclusive": 25240,
+          "overlap_bytes": 4
+        }
+      ],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "The verified English patch changes this exact PRG byte span; this is reusable structural prioritization only, not proof of the Japanese renderer/pointer path."
+    },
+    {
+      "task": 6,
+      "file_offset": 25371,
+      "rom_offset": "0x0631B",
+      "byte_length": 4,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "9D 82 8C 91",
+      "base_bytes_actual": "9D 82 8C 91",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "8D 8E 8F 90",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "classification": "structurally_supported",
+      "overlap_run_ids": [
+        395
+      ],
+      "overlap_ranges": [
+        {
+          "run_id": 395,
+          "file_start": 25265,
+          "file_end_exclusive": 25442,
+          "physical_bank": 3,
+          "overlap_start": 25371,
+          "overlap_end_exclusive": 25375,
+          "overlap_bytes": 4
+        }
+      ],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "The verified English patch changes this exact PRG byte span; this is reusable structural prioritization only, not proof of the Japanese renderer/pointer path."
+    },
+    {
+      "task": 7,
+      "file_offset": 25433,
+      "rom_offset": "0x06359",
+      "byte_length": 4,
+      "offset_convention": "iNES file offset including 16-byte header",
+      "base_bytes_expected": "9D 82 8C 91",
+      "base_bytes_actual": "9D 82 8C 91",
+      "base_bytes_verified": true,
+      "planned_korean_prg_bytes": "8D 8E 8F 90",
+      "source_display": "へいしち",
+      "korean_display": "헤이시치",
+      "classification": "structurally_supported",
+      "overlap_run_ids": [
+        395
+      ],
+      "overlap_ranges": [
+        {
+          "run_id": 395,
+          "file_start": 25265,
+          "file_end_exclusive": 25442,
+          "physical_bank": 3,
+          "overlap_start": 25433,
+          "overlap_end_exclusive": 25437,
+          "overlap_bytes": 4
+        }
+      ],
+      "runtime_proof_required": true,
+      "release_ready": false,
+      "reason": "The verified English patch changes this exact PRG byte span; this is reusable structural prioritization only, not proof of the Japanese renderer/pointer path."
+    }
+  ]
+}
