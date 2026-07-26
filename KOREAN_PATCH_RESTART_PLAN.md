@@ -57,10 +57,18 @@ rom_analysis/english_patch_reference.md, rom_analysis/english_script_reference.m
 - 기준 레코드: ROM 0x071B6, CPU B1A6, pointer 182
 - 현재 화면 문구: 쿠니마사: 어서 움직여! / 분조 두목이 큰일이야!
 - 런타임 결과: 47/47 대상 읽기 일치, frame 883, lua_done
+- 실제 출력 타일: 75개 타일 출력이 모두 후보 ROM의 변경 CHR 타일과 일치
+- 화면별 CHR 상태: MMC3 control 0x07, R0/R1=0x3C/0x3E, PPUCTRL=0x88 또는
+  0x8C. 두 PPUCTRL 값 모두 배경 패턴 테이블 0x0000을 사용한다.
+- 이 상태에서는 MMC3의 R0/R1 2KiB 쌍 때문에 대사 출력 코드 0x00-0xFF가
+  물리 CHR Bank 7의 tile 0x100+code에 대응한다. 이 공식은 pointer 182의
+  검증된 오프닝 문맥에만 적용한다.
 - 인접 pointer 183: 정적 보존 PASS, 실제 화면은 UNKNOWN
 
 이 증거는 rom_analysis/opening_dialogue_16x16_speaker_separator_proof.md와
-rom_analysis/dialogue_glyph_capacity_plan.md에 남긴다.
+rom_analysis/dialogue_glyph_capacity_plan.md,
+rom_analysis/opening_mapper_trace_capture/analysis.md,
+rom_analysis/opening_font_runtime_mapping_audit.md에 남긴다.
 
 ## 단계 0: 실행 안전장치
 
@@ -105,7 +113,10 @@ jp_bytes, control_tokens, english_structure_reference, korean_text, status
 증거로 비교한 뒤 하나를 선택한다.
 
 1. 장면 또는 대사 묶음별 CHR 글꼴 페이지: 동시에 필요한 글자만 한 페이지에
-   넣고, 실제 게임의 뱅크 전환 시점과 충돌하지 않는지 확인한다.
+   넣고, 실제 게임의 뱅크 전환 시점과 충돌하지 않는지 확인한다. Bank 7 복제
+   페이지의 첫 두 실험은 페이지 값 복귀와 가변 PRG 창 실행 문제로 FAIL했다.
+   따라서 고정 PRG 코드 공간과 페이지 수명 제어가 별도로 증명되기 전에는 이
+   방식을 번역 후보에 사용하지 않는다.
 2. 대사 코드/렌더러 확장: 제어 바이트를 보존하면서 더 넓은 소스 코드 풀을
    해석하도록 렌더러를 확장한다.
 3. 조합형 한글: 초성/중성/종성을 조합해 타일 수를 줄이는 방법이다. 앞의 두
@@ -168,11 +179,15 @@ jp_bytes, control_tokens, english_structure_reference, korean_text, status
 ## 바로 이어서 할 일
 
 1. 영어 패치의 대사/이름표/UI/CHR 변경을 한 장의 구현 지도에 고정한다.
-2. Bank 1 대사 렌더러와 CHR 뱅크 전환 경로를 추적해, 전체 글꼴 후보의 실제
-   코드 풀과 페이지 가능성을 판정한다.
-3. 그 결과를 바탕으로 오프닝 인접 레코드 두 개가 같은 글꼴 페이지를 공유할
-   수 있는지 정적으로 검증한다.
-4. 이 세 단계가 끝난 뒤에만 다음 한국어 대사 레코드를 후보 ROM으로 만든다.
+2. 검증된 pointer 182의 출력 타일/CHR 상태를 글꼴 컨텍스트 프로필로 고정하고,
+   새 코드 풀은 그 프로필 밖에서 자동 거부하게 만든다.
+3. 고정 Bank 7 글꼴만으로 표현 가능한 오프닝 대사 1-2개를 골라, 영어 패치가
+   증명한 포인터 재배치 모델로 파일럿 후보를 만든다.
+4. 동적 CHR 페이지는 마지막 고정 PRG 뱅크 안의 안전한 실행 공간 또는 코드
+   재배치가 증명될 때까지 별도 연구로 남긴다. `FEDD`에서 Bank 1 코드 동굴로
+   점프하는 방식은 금지한다.
+5. 파일럿 화면이 PASS가 된 뒤에만 같은 고정 페이지를 공유하는 인접 레코드를
+   다음 작은 배치로 묶는다.
 
 따라서 앞으로의 FCEUX 실행은 오프닝을 오래 돌리는 일이 아니라, 위의 특정
 레코드나 특정 화면을 확인하고 즉시 종료하는 짧은 증명 실행이 된다.

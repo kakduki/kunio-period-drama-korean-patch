@@ -24,6 +24,11 @@ def main() -> int:
         write(root / "source_reads.tsv", "frame\taddress\tpc\n650\tB1A6\t9ABC\n")
         write(root / "buffer_writes.tsv", "frame\taddress\n650\t7000\n")
         write(root / "queue_writes.tsv", "frame\taddress\n650\t711D\n")
+        write(
+            root / "emitted_tiles.tsv",
+            "frame\trole\taddress\tvalue\tpc\ty\tsource_byte\tmapper_control\tmapper_select\tppu_control\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7\n"
+            "650\ttop\t7139\t81\t95AE\t00\t81\t07\t1\t8C\t3C\t3E\t30\t31\t32\t33\t02\t03\n",
+        )
         write(root / "dma.tsv", "frame\tpage\n650\t02\n")
         write(root / "oam_writes.tsv", "frame\taddress\n650\t0201\n")
         write(root / "ppu_writes.tsv", "frame\ttype\n650\tdata\n")
@@ -35,6 +40,7 @@ def main() -> int:
     assert payload["checks"]["target_source_reads"] == "PASS"
     assert payload["checks"]["renderer_buffer_writes"] == "PASS"
     assert payload["checks"]["renderer_queue_writes"] == "PASS"
+    assert payload["checks"]["target_emitted_tile_rows"] == "PASS"
     assert payload["checks"]["dialogue_nametable_writes"] == "PASS"
     assert payload["checks"]["ppu_rows_captured"] == "PASS"
     print("Opening dialogue renderer probe analyzer tests passed.")

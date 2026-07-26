@@ -1,0 +1,60 @@
+{
+  "status": "ROUTINE_TRACE_CAPTURED",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "target_parser_execution": "PASS",
+    "target_source_reads": "PASS",
+    "target_emit_prep_execution": "PASS",
+    "target_emit_dispatch_execution": "PASS",
+    "renderer_buffer_writes": "UNKNOWN",
+    "renderer_queue_writes": "PASS",
+    "target_emitted_tile_rows": "PASS",
+    "unrelated_oam_activity": "OBSERVED",
+    "dialogue_nametable_writes": "PASS",
+    "ppu_rows_captured": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "parser_hits_by_label": {
+      "emit_dispatch": 17,
+      "emit_prep": 17,
+      "parser": 18
+    },
+    "parser_source_bytes": {
+      "00": 6,
+      "81": 3,
+      "82": 3,
+      "83": 3,
+      "84": 3,
+      "85": 3,
+      "86": 3,
+      "87": 3,
+      "88": 3,
+      "89": 3,
+      "8A": 3,
+      "8B": 3,
+      "8C": 3,
+      "C8": 3,
+      "C9": 3,
+      "CA": 3,
+      "FF": 1
+    },
+    "parser_pcs": {
+      "915A": 18,
+      "955F": 17,
+      "9593": 17
+    },
+    "source_read_pcs": {
+      "915A": 18
+    },
+    "source_read_count": 18,
+    "buffer_write_count": 0,
+    "queue_write_count": 288,
+    "emitted_tile_count": 34,
+    "oam_write_count": 1366,
+    "dma_write_count": 823,
+    "dialogue_nametable_write_count": 456,
+    "ppu_row_count": 30
+  }
+}

@@ -24,11 +24,17 @@ local dma_path = OUT_DIR .. "/dma.tsv"
 local oam_path = OUT_DIR .. "/oam_writes.tsv"
 local ppu_writes_path = OUT_DIR .. "/ppu_writes.tsv"
 local ppu_path = OUT_DIR .. "/ppu_rows.tsv"
+local emitted_tiles_path = OUT_DIR .. "/emitted_tiles.tsv"
 local trace_count = 0
 local captured = false
 local last_dma_page = nil
 local ppu_addr_high = nil
 local ppu_addr = 0
+local mapper_control = nil
+local mapper_select = nil
+local ppu_control = nil
+local mapper_registers = {}
+local emitted_tile_count = 0
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -46,6 +52,11 @@ end
 
 local function hex4(value)
     return string.format("%04X", (value or 0) % 0x10000)
+end
+
+local function optional_hex2(value)
+    if value == nil then return "" end
+    return hex2(value)
 end
 
 local function read_byte(addr)
@@ -164,14 +175,50 @@ local function on_queue_write(addr, size, value)
     local frame = emu.framecount()
     if trace_count >= TRACE_LIMIT or frame < TRACE_START then return end
     trace_count = trace_count + 1
+    local pc = read_register("pc")
+    local pointer = text_pointer()
     append(queue_path, table.concat({
         frame,
         hex4(addr or 0),
         hex2(value or 0),
-        hex4(read_register("pc")),
-        hex4(text_pointer()),
+        hex4(pc),
+        hex4(pointer),
         hex2(read_register("y")),
     }, "\t"))
+    if pointer == TARGET_POINTER and (pc == 0x95AE or pc == 0x95B3) then
+        local values = {
+            frame,
+            pc == 0x95AE and "top" or "bottom",
+            hex4(addr or 0),
+            hex2(value or 0),
+            hex4(pc),
+            hex2(read_register("y")),
+            hex2(target_source_byte()),
+            optional_hex2(mapper_control),
+            mapper_select == nil and "" or tostring(mapper_select),
+            optional_hex2(ppu_control),
+        }
+        for index = 0, 7 do
+            values[#values + 1] = optional_hex2(mapper_registers[index])
+        end
+        append(emitted_tiles_path, table.concat(values, "\t"))
+        emitted_tile_count = emitted_tile_count + 1
+    end
+end
+
+local function on_mapper_select(addr, size, value)
+    mapper_control = value
+    mapper_select = value % 8
+end
+
+local function on_mapper_data(addr, size, value)
+    if mapper_select ~= nil and mapper_select >= 0 and mapper_select <= 7 then
+        mapper_registers[mapper_select] = value
+    end
+end
+
+local function on_ppu_control(addr, size, value)
+    ppu_control = value
 end
 
 local function on_oam_write(addr, size, value)
@@ -325,6 +372,7 @@ append(dma_path, "frame\tpage\tpc\tstream_05")
 append(oam_path, "frame\taddress\tvalue\tpc\tstream_05\ty")
 append(ppu_writes_path, "frame\ttype\tppu_address\tvalue\tpc\tstream_05\ty")
 append(ppu_path, "row\tvalues")
+append(emitted_tiles_path, "frame\trole\taddress\tvalue\tpc\ty\tsource_byte\tmapper_control\tmapper_select\tppu_control\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7")
 
 local parser_registered = register_exec(PARSER_CPU, trace_exec("parser"))
 local prep_registered = register_exec(EMIT_PREP_CPU, trace_exec("emit_prep"))
@@ -336,6 +384,9 @@ local dma_registered = register_write(0x4014, 1, on_dma_write)
 local oamdata_registered = register_write(0x2004, 1, on_oamdata_write)
 local ppuaddr_registered = register_write(0x2006, 1, on_ppuaddr_write)
 local ppudata_registered = register_write(0x2007, 1, on_ppudata_write)
+local mapper_select_registered = register_write(0x8000, 1, on_mapper_select)
+local mapper_data_registered = register_write(0x8001, 1, on_mapper_data)
+local ppu_control_registered = register_write(0x2000, 1, on_ppu_control)
 local source_read_registered = true
 for addr = TARGET_POINTER, TARGET_POINTER + 0x24 do
     source_read_registered = register_read(addr, on_source_read) and source_read_registered
@@ -344,7 +395,7 @@ append(summary_path, table.concat({
     0,
     "lua_start",
     tostring(parser_registered and prep_registered and dispatch_registered),
-    tostring(buffer_registered) .. ";" .. tostring(queue_registered) .. ";" .. tostring(oam_registered) .. ";" .. tostring(dma_registered) .. ";" .. tostring(oamdata_registered) .. ";" .. tostring(ppuaddr_registered) .. ";" .. tostring(ppudata_registered) .. ";" .. tostring(source_read_registered),
+    tostring(buffer_registered) .. ";" .. tostring(queue_registered) .. ";" .. tostring(oam_registered) .. ";" .. tostring(dma_registered) .. ";" .. tostring(oamdata_registered) .. ";" .. tostring(ppuaddr_registered) .. ";" .. tostring(ppudata_registered) .. ";" .. tostring(mapper_select_registered) .. ";" .. tostring(mapper_data_registered) .. ";" .. tostring(ppu_control_registered) .. ";" .. tostring(source_read_registered),
     "target=" .. hex4(TARGET_POINTER),
 }, "\t"))
 
@@ -368,7 +419,7 @@ append(summary_path, table.concat({
     "lua_done",
     tostring(captured),
     hex2(last_dma_page or 0),
-    tostring(trace_count),
+    tostring(trace_count) .. ";emitted_tiles=" .. tostring(emitted_tile_count),
 }, "\t"))
 pcall(function() FCEU.pause() end)
 pcall(function() emu.pause() end)

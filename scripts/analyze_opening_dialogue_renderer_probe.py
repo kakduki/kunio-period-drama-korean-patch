@@ -34,6 +34,7 @@ def classify(input_dir: Path) -> dict[str, object]:
     oam_rows = read_tsv(input_dir / "oam_writes.tsv")
     ppu_writes = read_tsv(input_dir / "ppu_writes.tsv")
     ppu_rows = read_tsv(input_dir / "ppu_rows.tsv")
+    emitted_tiles = read_tsv(input_dir / "emitted_tiles.tsv")
     final_reason = summary[-1].get("reason", "") if summary else ""
     labels = Counter(row.get("label", "") for row in parser_rows)
     source_bytes = Counter(row.get("source_byte", "") for row in parser_rows)
@@ -50,6 +51,7 @@ def classify(input_dir: Path) -> dict[str, object]:
             "target_emit_dispatch_execution": "PASS" if labels.get("emit_dispatch", 0) else "UNKNOWN",
             "renderer_buffer_writes": "PASS" if buffer_rows else "UNKNOWN",
             "renderer_queue_writes": "PASS" if queue_rows else "UNKNOWN",
+            "target_emitted_tile_rows": "PASS" if emitted_tiles else "UNKNOWN",
             "unrelated_oam_activity": "OBSERVED" if oam_rows or dma_rows else "UNKNOWN",
             "dialogue_nametable_writes": "PASS" if ppu_writes else "UNKNOWN",
             "ppu_rows_captured": "PASS" if len(ppu_rows) == 30 else "FAIL",
@@ -63,6 +65,7 @@ def classify(input_dir: Path) -> dict[str, object]:
             "source_read_count": len(source_reads),
             "buffer_write_count": len(buffer_rows),
             "queue_write_count": len(queue_rows),
+            "emitted_tile_count": len(emitted_tiles),
             "oam_write_count": len(oam_rows),
             "dma_write_count": len(dma_rows),
             "dialogue_nametable_write_count": len(ppu_writes),
@@ -95,6 +98,7 @@ def render_markdown(payload: dict[str, object]) -> str:
             f"- Target source reads: `{evidence['source_read_count']}`",
             f"- Renderer-buffer writes: `{evidence['buffer_write_count']}`",
             f"- Renderer-queue writes: `{evidence['queue_write_count']}`",
+            f"- Target emitted tile rows: `{evidence['emitted_tile_count']}`",
             f"- Unrelated OAM tile-code writes: `{evidence['oam_write_count']}`",
             f"- Unrelated OAM DMA writes: `{evidence['dma_write_count']}`",
             f"- Dialogue-nametable writes: `{evidence['dialogue_nametable_write_count']}`",

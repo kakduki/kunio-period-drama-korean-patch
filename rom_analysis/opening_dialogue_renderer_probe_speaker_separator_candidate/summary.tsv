@@ -1,0 +1,4 @@
+frame	reason	screenshot	last_dma_page	trace_count
+0	lua_start	true	true;true;true;true;true;true;true;true;true;true;true	target=B1A6
+883	capture	true	02	2050
+883	lua_done	true	02	2050;emitted_tiles=90

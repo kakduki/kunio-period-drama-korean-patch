@@ -1,0 +1,219 @@
+{
+  "overall_verdict": "PASS",
+  "reason": "lua_done",
+  "capture_frame": 883,
+  "callback_counts": {
+    "mapper_select": 18130,
+    "mapper_data": 18130,
+    "ppu_control": 4110
+  },
+  "recurring_write_pcs": {
+    "mmc3_select": [
+      {
+        "pc": "0xFF3F",
+        "writes": 4233
+      },
+      {
+        "pc": "0xFF50",
+        "writes": 4233
+      },
+      {
+        "pc": "0xFEDD",
+        "writes": 2069
+      },
+      {
+        "pc": "0xFEEC",
+        "writes": 2069
+      },
+      {
+        "pc": "0xEDDE",
+        "writes": 1368
+      },
+      {
+        "pc": "0xFEFC",
+        "writes": 842
+      },
+      {
+        "pc": "0xFF0C",
+        "writes": 842
+      },
+      {
+        "pc": "0xFF1C",
+        "writes": 842
+      },
+      {
+        "pc": "0xFF2C",
+        "writes": 842
+      },
+      {
+        "pc": "0xED56",
+        "writes": 819
+      }
+    ],
+    "mmc3_data": [
+      {
+        "pc": "0xFF49",
+        "writes": 4233
+      },
+      {
+        "pc": "0xFF5C",
+        "writes": 4233
+      },
+      {
+        "pc": "0xFEE3",
+        "writes": 2069
+      },
+      {
+        "pc": "0xFEF2",
+        "writes": 2069
+      },
+      {
+        "pc": "0xEDE2",
+        "writes": 1368
+      },
+      {
+        "pc": "0xFF02",
+        "writes": 842
+      },
+      {
+        "pc": "0xFF12",
+        "writes": 842
+      },
+      {
+        "pc": "0xFF22",
+        "writes": 842
+      },
+      {
+        "pc": "0xFF32",
+        "writes": 842
+      },
+      {
+        "pc": "0xED5C",
+        "writes": 819
+      }
+    ],
+    "ppu_control": [
+      {
+        "pc": "0xDD6E",
+        "writes": 1503
+      },
+      {
+        "pc": "0xEDB8",
+        "writes": 1368
+      },
+      {
+        "pc": "0xFDC9",
+        "writes": 685
+      },
+      {
+        "pc": "0xD6C9",
+        "writes": 476
+      },
+      {
+        "pc": "0xFED4",
+        "writes": 12
+      },
+      {
+        "pc": "0xFDDA",
+        "writes": 12
+      },
+      {
+        "pc": "0xFD8B",
+        "writes": 12
+      },
+      {
+        "pc": "0xFF86",
+        "writes": 12
+      },
+      {
+        "pc": "0xE8E4",
+        "writes": 9
+      },
+      {
+        "pc": "0xE923",
+        "writes": 9
+      },
+      {
+        "pc": "0xFEC8",
+        "writes": 8
+      },
+      {
+        "pc": "0xDDD4",
+        "writes": 6
+      }
+    ]
+  },
+  "mapper_control": "0x07",
+  "chr_mode": 0,
+  "ppu_control": "0x8C",
+  "background_pattern_base": "0x0000",
+  "chr_registers": [
+    "0x3C",
+    "0x3E",
+    "0x30",
+    "0x31",
+    "0x32",
+    "0x33"
+  ],
+  "chr_1k_windows": [
+    {
+      "ppu_window": "0x0000-0x03FF",
+      "chr_1k_bank": 60,
+      "physical_chr_8k_bank": 7
+    },
+    {
+      "ppu_window": "0x0400-0x07FF",
+      "chr_1k_bank": 61,
+      "physical_chr_8k_bank": 7
+    },
+    {
+      "ppu_window": "0x0800-0x0BFF",
+      "chr_1k_bank": 62,
+      "physical_chr_8k_bank": 7
+    },
+    {
+      "ppu_window": "0x0C00-0x0FFF",
+      "chr_1k_bank": 63,
+      "physical_chr_8k_bank": 7
+    },
+    {
+      "ppu_window": "0x1000-0x13FF",
+      "chr_1k_bank": 48,
+      "physical_chr_8k_bank": 6
+    },
+    {
+      "ppu_window": "0x1400-0x17FF",
+      "chr_1k_bank": 49,
+      "physical_chr_8k_bank": 6
+    },
+    {
+      "ppu_window": "0x1800-0x1BFF",
+      "chr_1k_bank": 50,
+      "physical_chr_8k_bank": 6
+    },
+    {
+      "ppu_window": "0x1C00-0x1FFF",
+      "chr_1k_bank": 51,
+      "physical_chr_8k_bank": 6
+    }
+  ],
+  "reference_code_mappings": [
+    {
+      "code": "0x81",
+      "ppu_pattern_address": "0x0810",
+      "ppu_window": "0x0800-0x0BFF",
+      "chr_1k_bank": 62,
+      "physical_chr_8k_bank": 7,
+      "physical_tile_in_bank": "0x181"
+    },
+    {
+      "code": "0x9A",
+      "ppu_pattern_address": "0x09A0",
+      "ppu_window": "0x0800-0x0BFF",
+      "chr_1k_bank": 62,
+      "physical_chr_8k_bank": 7,
+      "physical_tile_in_bank": "0x19A"
+    }
+  ],
+  "expected_reference_slots_match": true
+}

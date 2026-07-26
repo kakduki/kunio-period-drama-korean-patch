@@ -1,0 +1,19 @@
+frame	label	cpu_addr	value	active_expected_match	record_snapshot
+646	opening_ptr_182_korean_bank8_page_switch_proof	$B1A6	81	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+648	opening_ptr_182_korean_bank8_page_switch_proof	$B1A7	82	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+650	opening_ptr_182_korean_bank8_page_switch_proof	$B1A8	83	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+652	opening_ptr_182_korean_bank8_page_switch_proof	$B1A9	84	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+654	opening_ptr_182_korean_bank8_page_switch_proof	$B1AA	85	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+656	opening_ptr_182_korean_bank8_page_switch_proof	$B1AB	86	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+658	opening_ptr_182_korean_bank8_page_switch_proof	$B1AC	87	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+660	opening_ptr_182_korean_bank8_page_switch_proof	$B1AD	88	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+662	opening_ptr_182_korean_bank8_page_switch_proof	$B1AE	C8	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+664	opening_ptr_182_korean_bank8_page_switch_proof	$B1AF	C9	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+666	opening_ptr_182_korean_bank8_page_switch_proof	$B1B0	00	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+668	opening_ptr_182_korean_bank8_page_switch_proof	$B1B1	89	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+670	opening_ptr_182_korean_bank8_page_switch_proof	$B1B2	8A	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+672	opening_ptr_182_korean_bank8_page_switch_proof	$B1B3	8B	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+674	opening_ptr_182_korean_bank8_page_switch_proof	$B1B4	8C	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+676	opening_ptr_182_korean_bank8_page_switch_proof	$B1B5	CA	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+678	opening_ptr_182_korean_bank8_page_switch_proof	$B1B6	00	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+680	opening_ptr_182_korean_bank8_page_switch_proof	$B1B7	FF	true	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00

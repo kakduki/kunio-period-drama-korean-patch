@@ -1,0 +1,4 @@
+frame	reason	detail_a	detail_b	detail_c
+0	lua_start	capture_frame=883	max_frames=920	mapper_callbacks=true
+883	capture	registered_select=true	registered_data=true	registered_ppu_control=true
+883	lua_done	captured=true	mapper_data_callbacks=18130	ppu_control_callbacks=4093

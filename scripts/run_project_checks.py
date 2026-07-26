@@ -18,6 +18,8 @@ KEY_PYTHON = [
     "scripts/analyze_english_font_slots.py",
     "scripts/analyze_opening_dialogue_proof_capture.py",
     "scripts/analyze_opening_dialogue_renderer_probe.py",
+    "scripts/analyze_opening_mapper_trace.py",
+    "scripts/audit_opening_font_runtime_mapping.py",
     "scripts/compile_korean_scene_batch.py",
     "scripts/extract_english_reference_script.py",
     "scripts/analyze_broad_scan_manual_dump.py",
@@ -34,6 +36,8 @@ KEY_PYTHON = [
     "scripts/build_opening_dialogue_8x16_proof.py",
     "scripts/build_opening_dialogue_16x16_proof.py",
     "scripts/build_opening_dialogue_16x16_capacity.py",
+    "scripts/build_opening_dialogue_bank8_page_switch_proof.py",
+    "scripts/build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/build_v042_font_expanded_candidate.py",
     "scripts/build_v043_from_broad_scan_proof.py",
@@ -98,6 +102,8 @@ KEY_PYTHON = [
     "scripts/test_analyze_english_font_slots.py",
     "scripts/test_analyze_opening_dialogue_proof_capture.py",
     "scripts/test_analyze_opening_dialogue_renderer_probe.py",
+    "scripts/test_analyze_opening_mapper_trace.py",
+    "scripts/test_audit_opening_font_runtime_mapping.py",
     "scripts/test_compile_korean_scene_batch.py",
     "scripts/test_analyze_reference_ips.py",
     "scripts/test_extract_english_reference_script.py",
@@ -113,6 +119,8 @@ KEY_PYTHON = [
     "scripts/test_build_opening_dialogue_8x16_proof.py",
     "scripts/test_build_opening_dialogue_16x16_proof.py",
     "scripts/test_build_opening_dialogue_16x16_capacity.py",
+    "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
+    "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/test_candidate_pipeline_reports.py",
     "scripts/test_candidate_ips_apply.py",
     "scripts/test_candidate_patch_scope.py",
@@ -173,11 +181,14 @@ LUA_TARGETS = [
     "lua/kunio_opening_dialogue_16x16_capacity_tier2_target.lua",
     "lua/kunio_opening_dialogue_16x16_relocation_proof_target.lua",
     "lua/kunio_opening_dialogue_16x16_speaker_separator_proof_target.lua",
+    "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
+    "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
 ]
 
 LUA_SCRIPTS = [
     "lua/kunio_auto_dump.lua",
     "lua/kunio_opening_dialogue_proof.lua",
+    "lua/kunio_opening_mapper_trace.lua",
     "lua/kunio_opening_dialogue_renderer_probe.lua",
     "lua/kunio_autoplay_watch.lua",
     "lua/kunio_bank1_watch.lua",
@@ -307,11 +318,15 @@ def main() -> int:
     run("English reference font slot mapper", ["scripts/test_analyze_english_font_slots.py"])
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])
     run("opening dialogue renderer probe analyzer", ["scripts/test_analyze_opening_dialogue_renderer_probe.py"])
+    run("opening MMC3 mapper trace analyzer", ["scripts/test_analyze_opening_mapper_trace.py"])
+    run("opening font runtime mapping audit", ["scripts/test_audit_opening_font_runtime_mapping.py"])
     run("Korean scene-batch compiler", ["scripts/test_compile_korean_scene_batch.py"])
     run("opening dialogue proof patch", ["scripts/test_build_opening_dialogue_proof.py"])
     run("opening dialogue 8x16 proof patch", ["scripts/test_build_opening_dialogue_8x16_proof.py"])
     run("opening dialogue paired 16x16 proof patch", ["scripts/test_build_opening_dialogue_16x16_proof.py"])
     run("opening dialogue catalog-driven paired 16x16 capacity", ["scripts/test_build_opening_dialogue_16x16_capacity.py"])
+    run("opening dialogue Bank 8 page-switch proof", ["scripts/test_build_opening_dialogue_bank8_page_switch_proof.py"])
+    run("opening dialogue Bank 8 persistent page proof", ["scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py"])
     run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])
     run("reference IPS analyzer", ["scripts/test_analyze_reference_ips.py"])
     run(

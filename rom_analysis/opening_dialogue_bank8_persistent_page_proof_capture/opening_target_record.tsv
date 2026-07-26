@@ -1,0 +1,2 @@
+frame	label	cpu_range	expected_bytes	active_expected_match	record_snapshot
+883	opening_ptr_182_korean_bank8_persistent_page_proof	$B1A6-$B1CA	81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C CA 00 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00	false	00 FC 02 FE FF 02 FE FC 01 04 00 00 00 00 FF 02 FE FC 01 04 00 00 00 00 00 00 01 00 FF FE 00 02 04 FC 00 02 FC

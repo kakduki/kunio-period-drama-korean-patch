@@ -1,0 +1,26 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_dialogue_bank8_persistent_page_proof_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "FAIL",
+    "visual_korean_glyph_review": "UNKNOWN"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 0,
+    "matched_read_hits": 0,
+    "matched_capture_record": false,
+    "screenshots": [
+      "rom_analysis\\opening_dialogue_bank8_persistent_page_proof_capture\\opening_dialogue_frame_000883_screen.gd"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_dialogue_bank8_persistent_page_proof_capture\\opening_dialogue_frame_000883_nametable_2000_23bf.bin"
+    ],
+    "visual_note": ""
+  },
+  "overall_smoke": "FAIL",
+  "overall_proof": "UNKNOWN"
+}
