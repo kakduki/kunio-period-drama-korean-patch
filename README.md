@@ -1,153 +1,86 @@
 # 쿠니오 시대극 한국어 패치 프로젝트
 
-`Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`의 일본어 텍스트를 한국어로 바꾸기 위한 분석/패치 저장소입니다.
+Kunio Kun no Jidaigeki Dayo Zenin Shuugou! 일본판을 대상으로 하는 한국어 패치
+분석/빌드 저장소다. ROM 파일과 제3자 영어 IPS는 저장소에 넣지 않는다.
 
-이 저장소에는 ROM 파일을 포함하지 않습니다. 각자 보유한 정품 기반 일본판 ROM을 `rom/` 폴더에 넣고 분석/패치 스크립트를 실행합니다.
+## 현재 기준
 
-## 2026-07 재시작 결정
+전체 작업 순서는 KOREAN_PATCH_RESTART_PLAN.md가 기준이다.
 
-현재 주 작업은 오프닝 자동주행이나 기존 v0.4.x 시각 큐가 아닙니다.
-완성된 영어 패치의 문자 코드, 텍스트 블록, 포인터 테이블을 먼저 복원합니다.
-한글 글꼴은 실제 게임 화면에서 가독성 게이트를 통과해야 합니다. 픽셀이
-표시되는 것만으로는 후보를 승격하지 않습니다.
+- 영어 패치의 문장이나 바이너리를 복사하지 않고, 포인터/글꼴/재배치 구조만
+  참고한다.
+- 일반 autoplay로 게임을 진행하며 화면을 찾지 않는다.
+- 한글 16x16 오프닝 한 레코드는 기술 증명으로 통과했지만, 최종 패치나
+  대량 번역본은 아니다.
+- 기존 v0.4.x ROM/IPS 후보는 과거 실험 자료다. 현재 릴리스 기준이 아니다.
 
-- 현재 실행 계획: `KOREAN_PATCH_EXECUTION_PLAN.md`
-- 구조 분석 재시작 기록: `KOREAN_PATCH_REBOOT_PLAN.md`
-- 영어판 구조 분석: `rom_analysis/english_patch_reference.md`
-- 영어판 대본/포인터 구조 추출: `rom_analysis/english_script_reference.md`
-- 대사 렌더러 코드 증거: `rom_analysis/dialogue_renderer_evidence.md`
-- 보수적 원문 카탈로그: `text_data/script_catalog.tsv`
-- 기존 v0.4.x 빌드: 레거시 실험 후보, 최종 패치 아님
-- FCEUX: 구조 분석 후 최소 후보 화면을 확인할 때만 사용
+## 영어 패치에서 얻은 확정 구조
 
-영어 IPS를 입수했을 때만 다음 명령으로 구조 자료를 다시 생성할 수 있습니다.
-명령은 IPS를 메모리에서만 읽으며, 영어판 ROM을 만들거나 저장하지 않습니다.
+- 주요 대사 포인터 테이블: ROM 0x05DD4-0x05FC3, 248개 엔트리
+- 주요 대사 데이터: PRG Bank 1
+- 확인된 영어 대사 코드: 0x81-0x9A
+- 확인된 대사 글꼴 위치: 물리 CHR Bank 7의 0x181-0x19A
+- 긴 영어 대사는 포인터를 재지정하여 다른 Bank 1 레코드 공간으로 이동
 
-```powershell
-python scripts/extract_english_reference_script.py --reference-ips "C:/path/to/TSe-v10.ips"
-```
+세부 구현 지도는 rom_analysis/english_patch_implementation_map.md를, 원시
+분석 근거는 rom_analysis/english_patch_reference.md와
+rom_analysis/english_script_reference.md를 본다.
 
-## 현재 상태
+## 현재 기술 증명
 
-- 기준 ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- 현재 1차 테스트 후보: `v0.4.2 font-expanded`
-- 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.ips`
-- 테스트 번들: `release/kunio_period_drama_korean_v0_4_2_font-expanded_test.zip`
-- 패치 적용 후 예상 MD5: `ea11dc002a1a7b07682ce00a754b1a61`
-- 선택 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips` (수동 화면 비교용, primary 아님)
+오프닝 pointer 182에서 다음 문구를 16x16 한글로 표시했다.
 
-아직 최종 패치가 아닙니다. 현재 후보는 안전한 equal-length PRG 텍스트 일부와 CHR 글리프만 적용한 수동 검증용 빌드입니다.
-새 한글패치 경로의 기준은 `english_pointer_map.json`과 `script_catalog.tsv`이며, v0.4.x 후보는 구조 복원이 끝날 때까지 릴리스 기준으로 사용하지 않습니다.
+    쿠니마사: 어서 움직여!
+    분조 두목이 큰일이야!
 
-## 빠른 검증
+이 후보는 47/47 대상 읽기 일치, frame 883 캡처, lua_done을 기록했다. 다만
+18개 글자와 로컬 콜론 타일을 쓰는 한 장면 증명일 뿐이다. 전체 글꼴 용량,
+다음 레코드, 메뉴/상태/아이템/이벤트 렌더러는 아직 별도 과제다.
 
-```powershell
-python scripts/verify_primary_patch.py
-python scripts/verify_broad_preview_patch.py
-python scripts/run_project_checks.py
-```
+근거:
 
-현재 테스트 IPS를 내 ROM에 적용하려면:
+- rom_analysis/opening_dialogue_16x16_speaker_separator_proof.md
+- rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/analysis.md
+- rom_analysis/dialogue_glyph_capacity_plan.md
+- rom_analysis/font_readability_gate.md
 
-```powershell
-python scripts/apply_primary_patch.py --output output/kunio_period_drama_korean_v0.4.2_test_applied.nes
-```
+## 다음 작업
 
-생성물을 다시 만들면서 확인하려면:
+1. Bank 1 대사 렌더러와 CHR 뱅크 전환을 추적해 한글 글꼴 페이지 전략을
+   확정한다.
+2. 영어 포인터 구조와 일본판 원문 토큰을 기반으로 대사 카탈로그를 완성한다.
+3. 같은 글꼴 페이지를 공유하는 오프닝 대사 2-5개를 정적으로 빌드한다.
+4. 대상 레코드/화면만 확인하는 짧은 FCEUX 증명으로 PASS, FAIL, UNKNOWN을
+   기록한다.
+5. 오프닝, 메뉴, 상태/아이템, 이벤트를 서로 다른 렌더러 가족으로 검증한다.
 
-```powershell
-python scripts/run_project_checks.py --regen
-```
+## 빠른 검사
 
-## 중요한 작업 원칙
+개발 환경에서 전체 정적 검사를 실행한다.
 
-- FCEUX 자동 진행이 `stagnant_screen`을 기록하거나 첫 화면/초기 메뉴만 반복하면 즉시 중단합니다.
-- `scripts/run_fceux_lua_analysis.py`는 타깃 없는 기본 autoplay를 자동으로 짧게 제한합니다. 길게 돌릴 때는 `--target-lua`로 감시 대상을 주거나 `--allow-long-autoplay`를 명시합니다.
-- 유튜브 영상은 대사 흐름과 전사 참고용입니다. 실제 패치 승격은 ROM 오프셋, 바이트 매핑, 런타임 메모리, 화면 증거가 필요합니다.
-- `needs-padding-rule` 항목은 화면에서 패딩/종료 규칙이 확인되기 전까지 최종 후보에 넣지 않습니다.
-- v0.4/broad-scan 충돌 항목은 수동 화면 증거가 나오기 전까지 어느 쪽도 확정하지 않습니다.
+    python scripts/run_project_checks.py
 
-## 다음에 볼 파일
+영어 IPS가 로컬에 있을 때만 구조 자료를 다시 생성한다. 이 명령은 IPS를
+메모리에서 읽을 뿐, 영어 ROM이나 IPS를 저장소에 복사하지 않는다.
 
-- `rom_analysis/patch_decision_matrix.md`: 다음 수동 검증 우선순위
-- `rom_analysis/manual_capture_cards.md`: FCEUX 앞에서 바로 따라 할 짧은 캡처 카드
-- `rom_analysis/manual_capture_status.md`: 수동 덤프가 생긴 뒤 카드별 증거 상태표
-- `rom_analysis/release_test_checklist.md`: 현재 IPS 적용부터 수동 캡처/검토까지의 짧은 체크리스트
-- `rom_analysis/translation_glyph_coverage.md`: 전체 번역 데이터 기준 글리프 커버리지
-- `rom_analysis/next_glyph_expansion_plan.md`: 다음 한글 글리프 확장 우선순위
-- `rom_analysis/v042_text_promotion_readiness.md`: v0.4.2 폰트 기준 다음 텍스트 후보 준비도
-- `rom_analysis/v042_manual_proof_packet.md`: 첫 화면 루프 대신 확인할 7개 base-ROM 수동 검증 과제
-- `rom_analysis/primary_patch_contents.md`: 현재 primary IPS가 바꾸는 텍스트 10개, 바이트, 증거 상태
-- `rom_analysis/kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified_report.md`: 화면 테스트용 broad preview IPS 내용과 경고
-- `rom_analysis/kunio_period_drama_korean_font_expansion_v0.5_batch32_report.md`: 로컬 v0.5 글리프 확장 실험 빌드 리포트
-- `rom_analysis/patch_candidate_manifest.md`: 현재 ROM/IPS 후보 목록
-- `rom_analysis/manual_capture_workflow.md`: FCEUX 수동 캡처 절차
-- `rom_analysis/v04_broad_candidate_conflicts.md`: v0.4와 broad-scan 충돌 목록
-- `rom_analysis/prg_padding_options.md`: 짧아지는 번역의 패딩 위험 목록
+    python scripts/extract_english_reference_script.py --reference-ips C:/path/to/TSe-v10.ips
 
-## 수동 FCEUX 검증 흐름
+FCEUX 실행 규칙과 전용 검증 명령은 FCEUX_LUA_AUTOMATION.md를 따른다.
 
-현재 테스트 후보를 확인할 때:
+## 레거시 증거 대시보드
 
-```text
-output/kunio_period_drama_korean_prg_plan_v0.4.2_font_expanded.nes
-```
+이전 v0.4.x 실험의 current patch status, next FCEUX manual capture target, open release gates는 아래 문서에 남아 있다. 이들은 과거 후보의 검증 큐를 보존하는
+참고 자료이며, 새 한국어 패치 작업 순서를 대신하지 않는다.
 
-1. FCEUX에서 위 ROM을 엽니다.
-2. `rom_analysis/patch_decision_matrix.md`의 상위 항목에 해당하는 화면까지 직접 진행합니다.
-3. 해당 화면에서 일시정지합니다.
-4. FCEUX Lua 메뉴에서 `lua/kunio_manual_v042_screen_dump.lua`를 실행합니다.
-5. 덤프를 요약합니다.
+- rom_analysis/patch_progress_dashboard.md
+- rom_analysis/candidate_pipeline/release_gate_action_plan.md
 
-```powershell
-python scripts/analyze_manual_screen_dump.py --input-dir rom_analysis/manual_screen_dump_v042 --output rom_analysis/manual_screen_dump_v042/summary.md
-```
+## 폴더
 
-broad-scan 후보를 확인할 때는 base ROM에서 화면을 열고 `lua/kunio_manual_broad_scan_dump.lua`를 사용합니다.
-요약 결과는 `rom_analysis/manual_screen_dump_broad_scan/summary.md`와 `summary.json`에 저장됩니다.
-화면 맥락까지 맞는 후보는 아래처럼 기록한 뒤 `python scripts/build_v043_from_broad_scan_proof.py`로 v0.4.3 후보를 만들 수 있습니다.
-
-```powershell
-python scripts/record_visual_review.py 0x0440C --confirm --screen-context "blacksmith label visible"
-```
-
-이 도구는 `visual_context_confirmed`를 갱신하면서 CPU read 증거가 아직 없으면 경고합니다.
-
-## 현재 최우선 확인 항목
-
-`rom_analysis/patch_decision_matrix.md` 기준:
-
-1. `0x06295`, `0x0631C`, `0x0635A`: v0.4와 broad-scan 해석이 충돌하는 항목
-2. `0x05644`: 이미 적용된 근처 항목과 겹치는 local overlap
-3. `0x071A4`: 런타임 확인은 됐지만 짧아지는 번역이라 패딩 규칙 검증 필요
-4. `0x0440C`, `0x048F4`, `0x052A5`, `0x05BE5`: broad-scan 비충돌 후보
-
-## 주요 스크립트
-
-- `scripts/verify_primary_patch.py`: 현재 primary IPS가 기준 ROM에 정상 적용되는지 확인
-- `scripts/apply_primary_patch.py`: 현재 primary IPS를 개인 보유 ROM에 적용
-- `scripts/build_v043_from_broad_scan_proof.py`: CPU read와 화면 맥락이 둘 다 확인된 broad-scan 후보만 v0.4.3으로 승격
-- `scripts/run_project_checks.py`: Python, Lua, IPS, manifest 핵심 체크
-- `scripts/generate_patch_decision_matrix.py`: 다음 수동 검증 결정표 생성
-- `scripts/package_primary_release.py`: ROM 없는 테스트 IPS 번들 생성
-- `scripts/run_fceux_lua_analysis.py`: FCEUX Lua 자동 분석 실행기
-- `scripts/analyze_manual_screen_dump.py`: 수동 화면 덤프 요약
-
-## 저장소 구조
-
-```text
-font/          한국어 글리프와 CHR 관련 자료
-lua/           FCEUX Lua 자동화 및 수동 덤프 스크립트
-output/        로컬 테스트 ROM/IPS 산출물
-release/       ROM 없는 테스트 배포 번들
-rom/           개인 보유 ROM 위치, git 제외
-rom_analysis/  분석 결과와 검증 큐
-scripts/       Python 분석/빌드/검증 도구
-text_data/     전사/번역 참고 자료
-```
-
-## Current Progress Entry Point
-
-- Start here: `rom_analysis/patch_progress_dashboard.md` shows the current patch status, release blockers, and the next FCEUX manual capture target.
-- Next gate queue: `rom_analysis/candidate_pipeline/release_gate_action_plan.md` maps open release gates to concrete evidence tasks.
-- `rom_analysis/patch_progress_dashboard.md`: current one-page status, release blockers, and next FCEUX manual action
+    font/          한글 글꼴 소스와 CHR 관련 자료
+    lua/           대상별 FCEUX Lua 스크립트
+    output/        로컬 생성 ROM/IPS, Git 제외
+    rom/           개인 보유 기준 ROM, Git 제외
+    rom_analysis/  분석 결과, 증거, 구현 지도
+    scripts/       분석/빌드/검증 도구
+    text_data/     원문 토큰, 전사, 한국어 번역 입력

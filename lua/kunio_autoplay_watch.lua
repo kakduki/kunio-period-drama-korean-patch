@@ -16,7 +16,7 @@
 --     --clean-output --no-dump-hex --no-dump-bin
 
 local OUT_DIR   = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/fceux_bank1_watch_test"
-local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "5000")
+local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "900")
 local HIT_LIMIT  = tonumber(os.getenv("KUNIO_HIT_LIMIT")  or "50000")
 -- per-phase hit budget: phase 2 (menu) gets 30000, phase 3 (stage) gets 20000
 local PHASE2_LIMIT = tonumber(os.getenv("KUNIO_PHASE2_LIMIT") or "30000")

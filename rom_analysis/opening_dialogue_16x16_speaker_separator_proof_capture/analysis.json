@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_dialogue_16x16_speaker_separator_proof_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 47,
+    "matched_read_hits": 47,
+    "matched_capture_record": true,
+    "screenshots": [
+      "rom_analysis\\opening_dialogue_16x16_speaker_separator_proof_capture\\opening_dialogue_frame_000883_screen.gd",
+      "rom_analysis\\opening_dialogue_16x16_speaker_separator_proof_capture\\opening_dialogue_frame_000883_screen.png"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_dialogue_16x16_speaker_separator_proof_capture\\opening_dialogue_frame_000883_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "Native frame 883 review: the local paired 16x16 colon clearly separates the speaker name in '쿠니마사: 어서 움직여!' while both Korean lines remain readable with preserved spaces. No visible opening-scene background or UI damage. The raw 0xBB byte is intentionally absent from this Korean record, so this is a visible speaker-separator surrogate proof rather than a universal control-byte decoder."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}

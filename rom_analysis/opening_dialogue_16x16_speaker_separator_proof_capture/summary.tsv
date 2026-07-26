@@ -1,0 +1,4 @@
+frame	reason	registered	hits	detail
+0	lua_start	47	0	capture_frame=883;target=opening_ptr_182_korean_16x16_speaker_separator_proof
+883	capture	47	47	screenshot=true;target_match=true
+883	lua_done	47	47	captured=true

@@ -64,6 +64,13 @@ def main() -> int:
             45,
             True,
         ),
+        (
+            "opening_ptr_182_16x16_speaker_separator_proof.json",
+            tuple(range(0x81, 0x9B)) + (0xC4, 0xC5, 0xC0, 0xC1, 0xC2, 0xC3, 0xC6, 0xC7, 0xC8, 0xC9),
+            18,
+            47,
+            True,
+        ),
     )
     for filename, expected_codes, expected_glyph_count, expected_length, expects_relocation in catalogs:
         config = validate_capacity_catalog(root / "text_data" / "korean_scene_batches" / filename)

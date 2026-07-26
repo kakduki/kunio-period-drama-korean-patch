@@ -145,7 +145,7 @@ def parse_capacity_profile(raw: object) -> dict[str, object]:
     pairs: dict[str, tuple[int, int]] = {}
     for glyph, value in pairs_raw.items():
         if not isinstance(glyph, str) or len(glyph) != 1:
-            raise CatalogError("glyph_code_pairs keys must be one Korean character")
+            raise CatalogError("glyph_code_pairs keys must be one character")
         pairs[glyph] = parse_code_pair(value, glyph=glyph)
     start = parse_hex_byte(raw.get("helper_start_code"))
     end_exclusive = parse_hex_byte(raw.get("helper_end_code_exclusive"))

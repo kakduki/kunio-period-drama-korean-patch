@@ -21,10 +21,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QFCEUX = ROOT / "tools" / "fceux-2.6.6-win64-QtSDL" / "bin" / "qfceux.exe"
 DEFAULT_FCEUX = ROOT / "tools" / "fceux-2.6.6-win64" / "fceux64.exe"
-DEFAULT_LUA_SCRIPT = ROOT / "lua" / "kunio_auto_dump.lua"
 STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
-BLIND_AUTOPLAY_FRAME_CAP = 1800
-BLIND_AUTOPLAY_TIMEOUT_CAP = 90
+BLIND_AUTOPLAY_FRAME_CAP = 900
+BLIND_AUTOPLAY_TIMEOUT_CAP = 45
+BLIND_AUTOPLAY_SCRIPT_NAMES = {"kunio_auto_dump.lua", "kunio_autoplay_watch.lua"}
 
 
 def find_rom() -> Path:
@@ -53,7 +53,12 @@ def find_fceux(explicit: str | None) -> Path:
 
 
 def find_lua_script(explicit: str | None) -> Path:
-    lua_script = Path(explicit).expanduser() if explicit else DEFAULT_LUA_SCRIPT
+    if not explicit:
+        raise ValueError(
+            "No Lua script selected. Use a dedicated, bounded --lua-script "
+            "with a target record or capture condition."
+        )
+    lua_script = Path(explicit).expanduser()
     if not lua_script.is_absolute():
         lua_script = ROOT / lua_script
     lua_script = lua_script.resolve()
@@ -122,28 +127,43 @@ def summary_final_reason(summary: Path) -> str | None:
     return None
 
 
-def is_blind_autoplay(args: argparse.Namespace, lua_script: Path) -> bool:
-    if args.target_lua:
-        return False
-    return lua_script.name in {"kunio_auto_dump.lua", "kunio_autoplay_watch.lua"}
+def is_blind_autoplay(lua_script: Path) -> bool:
+    return lua_script.name in BLIND_AUTOPLAY_SCRIPT_NAMES
 
 
 def apply_blind_autoplay_budget(args: argparse.Namespace, lua_script: Path) -> None:
-    if args.allow_long_autoplay or not is_blind_autoplay(args, lua_script):
+    if not is_blind_autoplay(lua_script):
         return
     if args.frames > BLIND_AUTOPLAY_FRAME_CAP:
         print(
-            "Blind autoplay frame budget applied: "
+            "Blind autoplay hard frame budget applied: "
             f"{args.frames} -> {BLIND_AUTOPLAY_FRAME_CAP}. "
-            "Use --allow-long-autoplay only when a specific route is worth testing."
+            "Use a dedicated target script for any real verification."
         )
         args.frames = BLIND_AUTOPLAY_FRAME_CAP
     if args.timeout > BLIND_AUTOPLAY_TIMEOUT_CAP:
         print(
-            "Blind autoplay timeout budget applied: "
+            "Blind autoplay hard timeout budget applied: "
             f"{args.timeout}s -> {BLIND_AUTOPLAY_TIMEOUT_CAP}s."
         )
         args.timeout = BLIND_AUTOPLAY_TIMEOUT_CAP
+
+
+def validate_run_intent(args: argparse.Namespace, lua_script: Path) -> None:
+    if args.frames <= 0:
+        raise ValueError("--frames must be positive.")
+    if args.timeout <= 0:
+        raise ValueError("--timeout must be positive.")
+    if args.allow_long_autoplay:
+        raise ValueError(
+            "--allow-long-autoplay is retired. Use a dedicated bounded "
+            "Lua script instead of extending untargeted gameplay."
+        )
+    if is_blind_autoplay(lua_script) and not args.allow_blind_autoplay:
+        raise ValueError(
+            "Refusing untargeted autoplay. Use a dedicated target Lua script, "
+            "or pass --allow-blind-autoplay for one 900-frame diagnostic run."
+        )
 
 
 def print_manual_capture_hint(reason: str) -> None:
@@ -220,10 +240,11 @@ def update_cfg(exe: Path, lua_script_name: str, output_dir_name: str) -> None:
 
 
 def launch(args: argparse.Namespace) -> int:
+    lua_script = find_lua_script(args.lua_script)
+    validate_run_intent(args, lua_script)
+    apply_blind_autoplay_budget(args, lua_script)
     rom = Path(args.rom).expanduser().resolve() if args.rom else find_rom()
     source_exe = find_fceux(args.fceux)
-    lua_script = find_lua_script(args.lua_script)
-    apply_blind_autoplay_budget(args, lua_script)
     final_output = Path(args.final_output).expanduser().resolve()
     exe = stage_fceux(source_exe)
     fceux_workdir = exe.parent
@@ -323,11 +344,12 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rom", help="Path to the .nes ROM. Defaults to first rom/*.nes.")
     parser.add_argument("--fceux", help="Path to qfceux.exe or fceux64.exe.")
-    parser.add_argument("--lua-script", default=str(DEFAULT_LUA_SCRIPT), help="Lua script to stage and run inside FCEUX.")
+    parser.add_argument("--lua-script", help="Dedicated, bounded Lua script to stage and run inside FCEUX.")
     parser.add_argument("--target-lua", help="Optional Lua target table copied beside the Lua script and exposed as KUNIO_TARGETS_LUA.")
-    parser.add_argument("--frames", type=int, default=7200, help="Frames to run in Lua.")
-    parser.add_argument("--timeout", type=int, default=180, help="Seconds before stopping FCEUX.")
-    parser.add_argument("--allow-long-autoplay", action="store_true", help="Disable the short safety budget for untargeted autoplay runs.")
+    parser.add_argument("--frames", type=int, default=1200, help="Hard frame ceiling for the selected Lua run.")
+    parser.add_argument("--timeout", type=int, default=90, help="Hard wall-clock ceiling before stopping FCEUX.")
+    parser.add_argument("--allow-blind-autoplay", action="store_true", help="Allow one diagnostic run of a legacy autoplay Lua script; it remains hard-capped at 900 frames and 45 seconds.")
+    parser.add_argument("--allow-long-autoplay", action="store_true", help="Retired; raises an error. Use a dedicated target Lua script instead.")
     parser.add_argument("--snapshot-every", type=int, default=300, help="Periodic dump interval in frames.")
     parser.add_argument("--ppu-burst-threshold", type=int, default=24, help="PPUDATA/PPUADDR writes per frame that trigger a dump.")
     parser.add_argument("--hit-limit", type=int, default=50000, help="Maximum read hits for watcher Lua scripts that support KUNIO_HIT_LIMIT.")

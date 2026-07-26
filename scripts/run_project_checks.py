@@ -172,6 +172,7 @@ LUA_TARGETS = [
     "lua/kunio_opening_dialogue_16x16_capacity_tier1_target.lua",
     "lua/kunio_opening_dialogue_16x16_capacity_tier2_target.lua",
     "lua/kunio_opening_dialogue_16x16_relocation_proof_target.lua",
+    "lua/kunio_opening_dialogue_16x16_speaker_separator_proof_target.lua",
 ]
 
 LUA_SCRIPTS = [

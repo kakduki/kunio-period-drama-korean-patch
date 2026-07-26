@@ -1,6 +1,6 @@
 # Dialogue Glyph Capacity Plan
 
-Status: **OPENING_17_GLYPH_POOL_AND_RELOCATION_PROVEN**
+Status: **OPENING_18_GLYPH_POOL_SPEAKER_SEPARATOR_AND_RELOCATION_PROVEN**
 
 This document records only what the fixed opening route proves. It is not a
 whole-game font allocation or release approval.
@@ -14,6 +14,7 @@ whole-game font allocation or release approval.
 | Tier 1 source pool | PASS: 13 Korean syllables / 26 source slots `0x81-0x9A` | `opening_dialogue_16x16_capacity_tier1_capture/` |
 | Tier 2 source pool | PASS: 17 Korean syllables / 34 source slots `0x81-0x9A` plus `0xC0-0xC7` | `opening_dialogue_16x16_capacity_tier2_capture/` |
 | Expanded primary record | PASS: 45-byte pointer-182 record, all 45 runtime reads match at frame 883 | `opening_dialogue_16x16_relocation_proof_capture/` |
+| Speaker separator surrogate | PASS: local paired 16x16 colon avoids the renderer-special raw `0xBB` byte; 47/47 runtime reads match at frame 883 | `opening_dialogue_16x16_speaker_separator_proof_capture/` |
 | Pointer 183 preservation | STATIC PASS: original 21-byte record copied from `0x071DB` to `0x07FF6` / `$BFE6`; table entry 183 changes from `$B1CB` to `$BFE6` | `opening_dialogue_16x16_relocation_proof.json` |
 | Pointer 183 display | UNKNOWN: its own event context has not been captured | no claim beyond static preservation |
 
@@ -24,17 +25,17 @@ or IPS is included in the repository.
 
 ## Current Opening Candidate
 
-The bounded candidate renders:
+The newest bounded candidate renders:
 
 ```text
-쿠니마사 어서 움직여!
+쿠니마사: 어서 움직여!
 분조 두목이 큰일이야!
 ```
 
-It is a 45-byte, context-checked capacity and relocation proof. The current
-helper range deliberately excludes the renderer-special speaker byte `0xBB`,
-so the speaker separator is not yet part of this candidate. That keeps the
-result useful without pretending it is final release text.
+It is a 47-byte, context-checked capacity and relocation proof. The original
+raw `0xBB` speaker separator is intentionally absent from this Korean record:
+a local paired 16x16 colon uses `0xC8,0xC9` instead. This proves readable
+speaker separation on the opening screen, not a universal raw-`0xBB` decoder.
 
 ## Verification Contract
 
@@ -45,7 +46,7 @@ Every opening candidate uses the same route:
 3. Stop when Lua writes `lua_done`; do not continue into free gameplay.
 4. Require matching target reads, a native screenshot, and a scoped byte audit.
 
-For the current candidate, the result is `45/45` matching target reads,
+For the current candidate, the result is `47/47` matching target reads,
 `lua_done`, a readable native screenshot, and no visible opening background or
 UI damage. The neighbouring record remains `STATIC_PASS_RUNTIME_UNKNOWN` until
 its actual scene is reached by a bounded route, save state, or debug state.
@@ -54,8 +55,8 @@ its actual scene is reached by a bounded route, save state, or debug state.
 
 - A persistent glyph strategy for all dialogue scenes rather than one
   scene-local 17-syllable pool.
-- A helper layout that supports both the `0x81-0x9A` / `0xC0-0xC7` allocation
-  and the `0xBB` speaker separator without intercepting it.
+- A release-wide speaker/control-token model. The current colon glyph is a
+  visible surrogate for one record and does not replace raw `0xBB` decoding.
 - Pointer-growth rules beyond one explicitly audited neighbour and code-cave
   tail.
 - Menu, status, item, and event/boss text renderers, each with its own target

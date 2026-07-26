@@ -7,6 +7,7 @@ output/opening_dialogue_16x16_proof/
 output/opening_dialogue_16x16_capacity_tier1/
 output/opening_dialogue_16x16_capacity_tier2/
 output/opening_dialogue_16x16_relocation_proof/
+output/opening_dialogue_16x16_speaker_separator_proof/
 output/font_comparison_handcrafted/
 !output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips
@@ -28,6 +29,8 @@ rom_analysis/opening_dialogue_16x16_capacity_tier2_capture/*.bin
 rom_analysis/opening_dialogue_16x16_capacity_tier2_capture/*.gd
 rom_analysis/opening_dialogue_16x16_relocation_proof_capture/*.bin
 rom_analysis/opening_dialogue_16x16_relocation_proof_capture/*.gd
+rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/*.bin
+rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/*.gd
 rom_analysis/opening_dialogue_renderer_probe/*.bin
 rom_analysis/opening_dialogue_renderer_probe/*.gd
 rom_analysis/opening_dialogue_renderer_probe/dma.tsv

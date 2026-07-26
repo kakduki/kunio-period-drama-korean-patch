@@ -10,31 +10,55 @@ from run_fceux_lua_analysis import (
     BLIND_AUTOPLAY_FRAME_CAP,
     BLIND_AUTOPLAY_TIMEOUT_CAP,
     apply_blind_autoplay_budget,
+    find_lua_script,
     latest_manual_dump_record,
     mirror_staged_manual_outputs,
     parse_args,
+    validate_run_intent,
 )
 
 
-def check_default_blind_autoplay_is_capped() -> None:
+def expect_value_error(callback) -> None:
+    try:
+        callback()
+    except ValueError:
+        return
+    raise AssertionError("expected ValueError")
+
+
+def check_default_blind_autoplay_is_refused() -> None:
     args = parse_args([])
+    expect_value_error(lambda: validate_run_intent(args, Path("kunio_auto_dump.lua")))
+
+
+def check_missing_lua_script_is_refused_before_gui_setup() -> None:
+    expect_value_error(lambda: find_lua_script(None))
+
+
+def check_target_table_does_not_legitimize_legacy_autoplay() -> None:
+    args = parse_args(["--target-lua", "lua/kunio_opening_dialogue_proof_target.lua"])
+    expect_value_error(lambda: validate_run_intent(args, Path("kunio_auto_dump.lua")))
+
+
+def check_explicit_blind_autoplay_is_hard_capped() -> None:
+    args = parse_args(["--allow-blind-autoplay", "--frames", "99999", "--timeout", "9999"])
+    validate_run_intent(args, Path("kunio_auto_dump.lua"))
     apply_blind_autoplay_budget(args, Path("kunio_auto_dump.lua"))
     assert args.frames == BLIND_AUTOPLAY_FRAME_CAP
     assert args.timeout == BLIND_AUTOPLAY_TIMEOUT_CAP
 
 
 def check_targeted_watch_is_not_capped() -> None:
-    args = parse_args(["--target-lua", "lua/kunio_broad_scan_candidate_targets.lua"])
+    args = parse_args(["--frames", "2400", "--timeout", "180"])
     original = (args.frames, args.timeout)
-    apply_blind_autoplay_budget(args, Path("kunio_auto_dump.lua"))
+    validate_run_intent(args, Path("kunio_opening_dialogue_proof.lua"))
+    apply_blind_autoplay_budget(args, Path("kunio_opening_dialogue_proof.lua"))
     assert (args.frames, args.timeout) == original
 
 
-def check_explicit_long_autoplay_is_not_capped() -> None:
+def check_retired_long_autoplay_option_is_refused() -> None:
     args = parse_args(["--allow-long-autoplay"])
-    original = (args.frames, args.timeout)
-    apply_blind_autoplay_budget(args, Path("kunio_auto_dump.lua"))
-    assert (args.frames, args.timeout) == original
+    expect_value_error(lambda: validate_run_intent(args, Path("kunio_auto_dump.lua")))
 
 
 def check_staged_manual_outputs_are_mirrored() -> None:
@@ -65,9 +89,12 @@ def check_latest_manual_dump_record() -> None:
 
 
 def main() -> int:
-    check_default_blind_autoplay_is_capped()
+    check_default_blind_autoplay_is_refused()
+    check_missing_lua_script_is_refused_before_gui_setup()
+    check_target_table_does_not_legitimize_legacy_autoplay()
+    check_explicit_blind_autoplay_is_hard_capped()
     check_targeted_watch_is_not_capped()
-    check_explicit_long_autoplay_is_not_capped()
+    check_retired_long_autoplay_option_is_refused()
     check_staged_manual_outputs_are_mirrored()
     check_latest_manual_dump_record()
     print("OK: run_fceux_lua_analysis autoplay budget guard")

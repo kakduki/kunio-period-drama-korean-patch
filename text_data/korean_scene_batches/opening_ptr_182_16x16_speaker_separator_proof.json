@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "batch_id": "opening_ptr_182_16x16_speaker_separator_proof",
+  "translation_basis": "Japanese opening-scene context; English IPS is used only for pointer and dialogue-code structure. The original 0xBB speaker separator is represented visually by a local paired 16x16 colon so it is not intercepted by the Korean helper range.",
+  "renderer_profile": "paired_8x16_cells_for_16x16_korean_speaker_separator",
+  "capacity_profile": {
+    "helper_start_code": "81",
+    "helper_end_code_exclusive": "CA",
+    "english_reference_source_codes": [
+      "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D",
+      "8E", "8F", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9A"
+    ],
+    "glyph_code_pairs": {
+      "쿠": ["81", "82"], "니": ["83", "84"], "마": ["85", "86"], "사": ["87", "88"],
+      "어": ["89", "8A"], "서": ["8B", "8C"], "움": ["8D", "8E"], "직": ["8F", "90"],
+      "여": ["91", "92"], "분": ["93", "94"], "조": ["95", "96"], "두": ["97", "98"],
+      "목": ["99", "9A"], "이": ["C4", "C5"], "큰": ["C0", "C1"], "일": ["C2", "C3"],
+      "야": ["C6", "C7"], ":": ["C8", "C9"]
+    }
+  },
+  "records": [
+    {
+      "id": "PTR-182-16X16-SPEAKER-SEPARATOR",
+      "context": "opening dialogue",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_original_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+      "expected_encoded_bytes": "81 82 83 84 85 86 87 88 C8 C9 00 89 8A 8B 8C 00 8D 8E 8F 90 91 92 CA F8 93 94 95 96 00 97 98 99 9A C4 C5 00 C0 C1 C2 C3 C4 C5 C6 C7 CA 00 FF",
+      "base_record_length": 37,
+      "expected_length": 47,
+      "japanese_source": "Opening record 182. The original speaker separator is byte 0xBB; this proof uses a local 16x16 colon glyph rather than asking the helper to intercept 0xBB.",
+      "korean_text": "쿠니마사: 어서 움직여! 분조 두목이 큰일이야!",
+      "translation_basis": "The visible colon restores the speaker-name distinction in the native dialogue box. It is an opening renderer proof, not a release-wide solution for every control byte.",
+      "status": "speaker_separator_surrogate_and_neighbor_relocation_proof_not_release_translation",
+      "relocation": {
+        "preserved_pointer_index": 183,
+        "preserved_pointer_rom_offset": "0x05F42",
+        "expected_pointer_cpu": "0xB1CB",
+        "preserved_record_rom_offset": "0x071DB",
+        "preserved_record_length": 21,
+        "expected_pointer_indices": [183]
+      },
+      "tokens": [
+        {"glyph_pair": "쿠"}, {"glyph_pair": "니"}, {"glyph_pair": "마"}, {"glyph_pair": "사"}, {"glyph_pair": ":"}, {"byte": "00"},
+        {"glyph_pair": "어"}, {"glyph_pair": "서"}, {"byte": "00"}, {"glyph_pair": "움"}, {"glyph_pair": "직"}, {"glyph_pair": "여"}, {"byte": "CA"}, {"byte": "F8"},
+        {"glyph_pair": "분"}, {"glyph_pair": "조"}, {"byte": "00"}, {"glyph_pair": "두"}, {"glyph_pair": "목"}, {"glyph_pair": "이"}, {"byte": "00"},
+        {"glyph_pair": "큰"}, {"glyph_pair": "일"}, {"glyph_pair": "이"}, {"glyph_pair": "야"}, {"byte": "CA"}, {"byte": "00"}, {"byte": "FF"}
+      ]
+    }
+  ]
+}

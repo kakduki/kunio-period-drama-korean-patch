@@ -5,13 +5,13 @@
 -- and writes frame-indexed memory dumps for later text/font analysis.
 
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/fceux_lua"
-local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "7200")
+local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "900")
 local SNAPSHOT_EVERY = tonumber(os.getenv("KUNIO_SNAPSHOT_EVERY") or "300")
 local BURST_THRESHOLD = tonumber(os.getenv("KUNIO_PPU_BURST_THRESHOLD") or "24")
 local DUMP_HEX = os.getenv("KUNIO_DUMP_HEX") ~= "0"
 local DUMP_BIN = os.getenv("KUNIO_DUMP_BIN") ~= "0"
 local STAGNATION_ABORT = os.getenv("KUNIO_STAGNATION_ABORT") ~= "0"
-local STAGNATION_MIN_FRAMES = tonumber(os.getenv("KUNIO_STAGNATION_MIN_FRAMES") or "1800")
+local STAGNATION_MIN_FRAMES = tonumber(os.getenv("KUNIO_STAGNATION_MIN_FRAMES") or "600")
 local STAGNATION_SAMPLES = tonumber(os.getenv("KUNIO_STAGNATION_SAMPLES") or "4")
 
 local summary_path = OUT_DIR .. "/summary.tsv"

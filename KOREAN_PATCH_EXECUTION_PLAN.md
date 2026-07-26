@@ -1,5 +1,9 @@
 # Korean Patch Execution Plan
 
+> Current operating plan: KOREAN_PATCH_RESTART_PLAN.md. This document retains
+> the earlier renderer evidence and supporting detail; the restart plan is the
+> authority for work order, autoplay policy, and release scope.
+
 ## Purpose
 
 Build a maintainable Korean patch for `Kunio Kun no Jidaigeki Dayo Zenin
