@@ -121,7 +121,7 @@ def summary_final_reason(summary: Path) -> str | None:
     if not summary.exists():
         return None
     text = summary.read_text(encoding="utf-8", errors="ignore")
-    for marker in ("lua_done", "stagnant_screen", "hit_limit"):
+    for marker in ("lua_done", "target_not_seen", "stagnant_screen", "hit_limit"):
         if marker in text:
             return marker
     return None
@@ -177,6 +177,11 @@ def print_manual_capture_hint(reason: str) -> None:
         print(
             "No Lua completion marker was seen before timeout. If the emulator is still "
             "on the opening/title screen, switch to manual capture instead of increasing frames."
+        )
+    elif reason == "target_not_seen":
+        print(
+            "The bounded target was not reached before its frame cap. Review the route or "
+            "target definition before attempting another run; do not extend free-form gameplay."
         )
 
 

@@ -1,18 +1,21 @@
 # Patched ROM Report
 
-Status: **PROOF_CANDIDATE_VISUALLY_VERIFIED_TWO_OPENING_CONTEXTS**
+Status: **PASS_FOR_THREE_OPENING_CONTEXTS**
 
 - Base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM MD5: `d1bd6e285c818ed60890282d8704f80a`
+- Candidate ROM MD5: `46cedd1da6d49643f5dd6bc4895ce706`
 - English reference IPS SHA-256: `cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad`
-- Pointer 182: `0x05F40` -> `0x071B6` / `$B1A6`, 33 bytes.
-- Pointer 183: `0x05F42` -> `0x071D7` / `$B1C7`, 25 bytes; pointer 184 remains `$B1E0`.
-- Candidate Korean records: `쿠니오: 서둘러! 분조두목 위험!` and `오코토: 쿠니오! 기다렸어!`.
-- Changed spans: 126; escaped bytes: 0.
-- Font profile: `readable` (14 px, BOX resampling, threshold 145).
-- Runtime evidence: pointer 182 passed 33/33 reads at frame 883; pointer 183 passed 25/25 reads at frame 1095; both bounded Lua runs ended with `lua_done`.
-- Native visual review: PASS for both screens.
+- Pointer 182: `0x05F40` -> `0x071B6` / `$B1A6`, 32 bytes.
+- Pointer 183: `0x05F42` moves `$B1CB` -> `0x071D6` / `$B1C6`, 25 bytes.
+- Pointer 184: `0x05F44` moves `$B1E0` -> `0x071EF` / `$B1DF`, 23 bytes.
+- Pointer 185 remains `$B1F8`; the range guard permits only entries 182-184.
+- Changed spans: 129; changed-byte scope audit: PASS; escaped bytes: 0.
+- Font profile: `readable` (14 px, BOX resampling, threshold 145), 20 scene-local
+  Korean glyphs rendered through paired 8x16 cells.
+- Runtime evidence: pointer 182 frame 883 `32/32`; pointer 183 frame 1093
+  `25/25`; pointer 184 frame 1399 `23/23`; all bounded runs ended `lua_done`.
+- Native visual review: PASS for all three screens.
 
-The generated ROM and IPS remain local/ignored. This report records only the
-reproducible inputs, scoped result, and verification evidence. It is not a
-release-ready full translation.
+The English patch validates structure only. Pointer 184's Japanese source was
+captured from the base ROM before translation. Generated ROM and IPS artifacts
+remain local/ignored. This is not a release-ready full translation.

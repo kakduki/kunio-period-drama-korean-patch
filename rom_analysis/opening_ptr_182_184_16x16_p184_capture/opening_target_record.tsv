@@ -1,0 +1,2 @@
+frame	label	cpu_range	expected_bytes	active_expected_match	record_snapshot
+1399	opening_ptr_182_184_korean_p184	$B1DF-$B1F5	81 82 83 84 85 86 BB 00 85 86 99 9A 9B 9C 00 85 86 9D 9E 9F C0 CA FF	true	81 82 83 84 85 86 BB 00 85 86 99 9A 9B 9C 00 85 86 9D 9E 9F C0 CA FF

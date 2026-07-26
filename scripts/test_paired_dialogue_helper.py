@@ -3,7 +3,11 @@
 
 from __future__ import annotations
 
-from paired_dialogue_helper import HelperAssemblyError, build_record_scoped_paired_helper
+from paired_dialogue_helper import (
+    HelperAssemblyError,
+    build_record_range_scoped_paired_helper,
+    build_record_scoped_paired_helper,
+)
 
 
 def main() -> int:
@@ -33,6 +37,37 @@ def main() -> int:
         pass
     else:
         raise AssertionError("mixed-bank record guard must be rejected")
+
+    range_helper = build_record_range_scoped_paired_helper(
+        record_cpu_start=0xB1A6,
+        record_cpu_end=0xB1E0,
+        source_ranges=((0x81, 0xA1), (0xC0, 0xCA)),
+        entry_cpu=0xBFA5,
+        max_size=0x5B,
+    )
+    assert range_helper.record_cpu_addresses == ()
+    assert range_helper.record_cpu_range == (0xB1A6, 0xB1E0)
+    assert range_helper.marker_cpu == range_helper.entry_cpu + range_helper.entry_length
+    assert len(range_helper.code) <= 0x5B
+    assert range_helper.accepts_source_code(0xA0)
+    assert range_helper.accepts_source_code(0xC9)
+    assert not range_helper.accepts_source_code(0xCA)
+    # After the successful high/low range comparisons, execution must reach
+    # the source-code dispatcher rather than restore through the fallback path.
+    assert range_helper.code[17:20] == bytes((0x68, 0xC9, 0x81))
+
+    try:
+        build_record_range_scoped_paired_helper(
+            record_cpu_start=0xB1A6,
+            record_cpu_end=0xB2A6,
+            source_ranges=((0x81, 0xA1),),
+            entry_cpu=0xBFA5,
+            max_size=0x5B,
+        )
+    except HelperAssemblyError:
+        pass
+    else:
+        raise AssertionError("mixed-bank range guard must be rejected")
 
     print("Record-scoped paired dialogue helper tests passed.")
     return 0

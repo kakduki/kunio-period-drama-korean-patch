@@ -14,6 +14,7 @@ from run_fceux_lua_analysis import (
     latest_manual_dump_record,
     mirror_staged_manual_outputs,
     parse_args,
+    summary_final_reason,
     validate_run_intent,
 )
 
@@ -88,6 +89,13 @@ def check_latest_manual_dump_record() -> None:
         assert latest_manual_dump_record(root) == second
 
 
+def check_bounded_target_miss_is_a_terminal_reason() -> None:
+    with tempfile.TemporaryDirectory() as raw_tmp:
+        summary = Path(raw_tmp) / "summary.tsv"
+        summary.write_text("frame\\treason\\n1430\\ttarget_not_seen\\n", encoding="utf-8")
+        assert summary_final_reason(summary) == "target_not_seen"
+
+
 def main() -> int:
     check_default_blind_autoplay_is_refused()
     check_missing_lua_script_is_refused_before_gui_setup()
@@ -97,6 +105,7 @@ def main() -> int:
     check_retired_long_autoplay_option_is_refused()
     check_staged_manual_outputs_are_mirrored()
     check_latest_manual_dump_record()
+    check_bounded_target_miss_is_a_terminal_reason()
     print("OK: run_fceux_lua_analysis autoplay budget guard")
     return 0
 

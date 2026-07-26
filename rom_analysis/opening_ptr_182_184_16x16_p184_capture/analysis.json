@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_ptr_182_184_16x16_p184_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 23,
+    "matched_read_hits": 23,
+    "matched_capture_record": true,
+    "screenshots": [
+      "rom_analysis\\opening_ptr_182_184_16x16_p184_capture\\opening_dialogue_frame_001399_screen.gd",
+      "rom_analysis\\opening_ptr_182_184_16x16_p184_capture\\opening_dialogue_frame_001399_screen.png"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_ptr_182_184_16x16_p184_capture\\opening_dialogue_frame_001399_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "The Korean reunion line is legible; the newly used glyphs for the compact long-time-no-see wording are crisp with no clipping, overlap, or tile corruption."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}

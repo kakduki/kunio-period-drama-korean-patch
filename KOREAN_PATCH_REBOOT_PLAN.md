@@ -1,169 +1,79 @@
-# 쿠니오 시대극 한글 패치 재시작 계획
+# Korean Patch Reboot Plan
 
-## 결론
+## Goal
 
-오프닝 자동주행과 무차별 문자열 검색은 중단한다.
+Build a maintainable Korean patch for the Japanese ROM without treating the
+opening scene as a search loop. The current three-record opening candidate is
+a regression baseline, not the route used to discover future text.
 
-새 주 경로는 완성된 영어 패치 `Technos Samurai: Downtown Special v1.00`을
-동일한 일본판 ROM에 적용해 텍스트 블록, 문자 코드, 포인터 테이블을 역추적한 뒤
-그 구조 위에 한국어 스크립트 삽입기를 만드는 것이다.
+## Current Baseline
 
-기존 v0.4.x 후보와 FCEUX 증거는 삭제하지 않지만, 새 구조 분석이 끝날 때까지
-릴리스 기반이 아닌 레거시 실험 자료로 취급한다.
+- Base ROM: MD5 `0d406a85285b4de8468f0dab6aad5fe5`.
+- Three opening dialogue contexts are verified in FCEUX with readable 16x16
+  Korean: pointer 182 (`32/32` reads), pointer 183 (`25/25`), and pointer 184
+  (`23/23`). See
+  `rom_analysis/opening_ptr_182_184_16x16_readability_runtime.md`.
+- The candidate is deliberately scene-local. It proves a renderer path and a
+  small Korean glyph set; it is not a full translation or a release build.
 
-## 확인된 사실
+## Non-Negotiable Rules
 
-- 기준 ROM MD5는 `0d406a85285b4de8468f0dab6aad5fe5`이며 기존 저장소 기준과 일치한다.
-- 영어판은 ROM 크기를 늘리지 않고 완성 번역을 구현했다.
-- 영어 IPS는 99개 레코드이며 실제 변경은 12,582바이트다.
-- 변경량은 PRG 10,295바이트, CHR 2,286바이트, iNES 헤더 1바이트다.
-- PRG Bank 1에 7,934바이트가 집중되어 있어 주 대본/포인터 영역으로 볼 수 있다.
-- 메뉴·아이템 문자열은 `공백=0x00`, `A=0x01 ... Z=0x1A` 직접 타일 코드를 쓴다.
-- 대사·이름 문자열은 `A=0x81 ... Z=0x9A`, 구분/제어 `0xFF` 경로를 쓴다.
-- 영어판 `0x0561B` 블록에서 `KUNIO`, `RIKI`, `BUNZO` 이름을 확인했다.
-- 영어판 `0x056BC`부터 문장 데이터가 시작한다.
-- 영어판 README는 텍스트 교체와 포인터 재계산을 명시한다.
-- 영어판 번역 문장은 의역이 강하므로 한국어 번역 원문으로 사용하지 않는다.
+1. Never use unbounded autoplay to find dialogue.
+2. Every FCEUX run must declare a target, hard frame budget, deterministic
+   inputs, capture condition, and terminal reason.
+3. A byte sequence is not translated merely because it resembles text. It
+   needs a renderer family, ROM owner, controls/terminator, and screen context.
+4. Generated ROMs and IPS files remain local and ignored. Git contains the
+   compiler, catalogs, reports, tests, and small visual evidence.
+5. A static build may be useful, but it remains `UNKNOWN` until its named
+   screen is captured. A missing manual dump never blocks candidate generation.
 
-세부 증거는 `rom_analysis/english_patch_reference.md`에 기록한다.
+## English Patch Boundary
 
-## 2026-07-26 구조 추출 결과
+The English IPS is a structural reference only. It may establish:
 
-영어 IPS를 메모리에서만 기준 ROM에 적용해 다음의 재현 가능한 구조 자료를 만들었다.
-영어 IPS나 영어판 ROM은 저장하거나 배포하지 않는다.
+- pointer-table ownership and record relocation rules;
+- dialogue source-byte and CHR slot relationships;
+- which ROM blocks are likely text, code, fonts, or unrelated data.
 
-- `rom_analysis/english_patch_record_map.csv`: IPS 99개 레코드의 ROM 영역/역할 분류
-- `rom_analysis/english_pointer_map.json`: Bank 1 대사 포인터 테이블
-- `rom_analysis/english_script_dump.tsv`: 이름/사전 포인터 블록 및 포인터별 원시 바이트 덤프
-- `text_data/script_catalog.tsv`: 번역 이전의 보수적 포인터 카탈로그
-- `rom_analysis/english_script_reference.md`: 사람이 읽는 요약
+It may not supply Korean wording, English pixels, English code, header edits,
+or broad binary changes for the Korean patch. Japanese base-ROM evidence,
+Japanese transcriptions, and video timing establish meaning and order.
 
-확정된 사실:
+## Repeatable Per-Family Loop
 
-- 대사 포인터 테이블은 `ROM+0x05DD4`에서 시작해 `ROM+0x05FC4` 직전에서 끝난다.
-- 테이블에는 248개 항목이 있으며, 영어판은 그중 244개 포인터를 다시 계산했다.
-- 모든 영어 포인터는 PRG Bank 1 안을 가리킨다. 따라서 이 블록은 실제 대사/문자열 저장 경로의 강한 구조 증거다.
-- 영어판의 대사는 원문의 직역이 아니다. 영어 텍스트는 화면 폭, 제어 바이트, 포인터 재배치의 참고 자료로만 사용한다.
-- 일본어 포인터 대사의 글리프 경로는 기존 메뉴용 `+0x7A` 가설과 동일하다고 확정되지 않았다. 현재 카탈로그는 일본어 바이트를 `<XX>` 토큰으로 보존한다.
-- `rom_analysis/dialogue_renderer_evidence.md`는 대사 렌더러가 두 입력 스트림, 저니블 분기, 여섯 특수 바이트를 처리한다는 것을 기록한다.
+1. **Map**: classify one renderer family and create a catalog row with pointer
+   or ROM offset, PRG bank, original bytes, controls, and owner.
+2. **Reach**: prepare the shortest deterministic route. Use direct menu input,
+   save/debug state, or a verified cheat state for events and bosses; do not
+   attempt to play combat automatically.
+3. **Interpret**: capture the Japanese base context, then write compact Korean
+   text and identify the exact glyph additions it requires.
+4. **Build**: compile a candidate with a changed-byte allowlist covering only
+   declared records, pointers, helper code, and CHR tiles.
+5. **Smoke**: run the target route once. Capture the screen and stop as soon
+   as the expected bytes are read.
+6. **Classify**: record `PASS`, `FAIL`, or `UNKNOWN` with the reason. A failure
+   must name its class: boot, pointer, renderer, font, context, or route.
+7. **Promote**: add only passing records to the next scene batch. Keep all
+   other rows out of a release build.
 
-다음 하드 작업은 대사용 원본 글리프/렌더러 표의 복원이다. 이 표가 검증되기 전에는
-`<XX>` 토큰을 억지로 가나나 한글 후보로 바꾸지 않는다.
+## Work Order
 
-참고 출처:
+1. Keep the verified three-opening candidate as the fixed regression test.
+2. Inventory title/menu strings and choose one that a short menu-navigation
+   script can reach from boot.
+3. Treat status labels as a separate renderer family and use an explicit menu
+   route or state, not gameplay progression.
+4. Treat item/shop text as another separate family with its own state/route.
+5. For event and boss dialogue, first create a reproducible save/debug/cheat
+   state. The state is for reaching a target screen, not for bypassing evidence.
+6. Expand the Korean font only when a concrete next context needs it and that
+   context can be captured. Do not reserve a global glyph pool by guesswork.
 
-- 공식 보존 다운로드: `https://www.dynamic-designs.us/downloads.shtml`
-- 패치 정보/해시: `https://romhackplaza.org/translations/downtown-special-kunio-kun-no-jidaigeki-dayo-zenin-shuugou-english-translation-nes/`
+## Release Gate
 
-## 기존 방식이 막힌 이유
-
-1. 이 ROM은 Shift-JIS 평문이 아니라 여러 전용 타일 코드를 사용한다.
-2. `+0x7A` 가설 하나로 모든 후보를 해석하면서 메뉴, 대사, 포인터 데이터가 섞였다.
-3. 게임 진행 조건상 보스와 이벤트를 자동으로 재현하려면 사실상 게임을 플레이해야 한다.
-4. 화면 자동화는 문자열 위치를 찾기 전에 시작되어 오프닝 장면만 반복했다.
-5. 화면에서 바이트가 보였다는 사실과 그 바이트가 의도한 문자열이라는 사실을 분리하지 못했다.
-
-## 새 작업 순서
-
-### 1단계: 영어판 구조 지도 완성
-
-목표는 FCEUX 없이 정적으로 대본 위치를 확정하는 것이다.
-
-- 영어 IPS 99개 레코드를 `text`, `pointer`, `code`, `font`, `icon`, `palette`, `header`로 분류한다.
-- Bank 1의 7개 레코드를 우선 처리한다.
-
-| ROM 범위 | 우선 해석 |
-| --- | --- |
-| `0x05288-0x052C6` | 텍스트 렌더/지원 데이터 |
-| `0x0561B-0x056AF` | 이름·대사 표 |
-| `0x056BC-0x05D53` | 대사 블록 1 |
-| `0x05DD4-0x07766` | 포인터 표 + 대사 블록 2 |
-| `0x07894-0x078AA` | 성장률 UI |
-| `0x07FB6-0x07FEC` | 추가 메뉴/라벨 |
-| `0x07FF7-0x0800E` | 추가 메뉴/라벨 |
-
-산출물:
-
-- `rom_analysis/english_patch_record_map.csv`
-- `rom_analysis/english_script_dump.tsv`
-- `rom_analysis/english_pointer_map.json`
-
-완료 조건:
-
-- 영어판에서 이름, 메뉴, 아이템, 대사 각각 10개 이상을 자동 디코딩한다.
-- 각 문자열의 ROM offset, PRG bank, 시작/종료 규칙, 포인터 참조를 기록한다.
-
-### 2단계: 일본판 원문 레코드 대응
-
-- 영어판 포인터 순서와 일본판 포인터 순서를 비교한다.
-- 같은 인덱스의 일본판 바이트를 기존 가나 타일표로 디코딩한다.
-- 유튜브 영상과 전사 자료는 장면 순서와 원문 확인에만 사용한다.
-- 화면을 찾아 플레이해서 ROM offset을 추측하지 않는다.
-
-산출물:
-
-- `text_data/script_catalog.tsv`
-- 필수 열: `id`, `context`, `jp_offset`, `jp_text`, `en_offset`, `en_text`,
-  `pointer_offset`, `terminator`, `max_width`, `status`
-
-완료 조건:
-
-- 오프닝 대사 1개, 메뉴 1개, 아이템명 1개의 일본판/영어판 대응이 정적으로 증명된다.
-
-### 3단계: 한국어 문자표와 폰트 확정
-
-- 현재 번역 초안에는 고유 한글 220자가 필요하다.
-- 먼저 실제 추출 대본을 번역한 뒤 고유 글자 수를 다시 계산한다.
-- CHR Bank 7에서 영어판이 사용한 글꼴 영역과 보호해야 할 숫자·기호·아이콘을 분류한다.
-- 8x8 완성형 한글을 기본안으로 사용하고, 가독성 미달일 때만 2타일/동적 뱅크 방식을 검토한다.
-- 기존 `0x101-0x1B5` 181슬롯 제한과 `+0x7A` 인코딩을 새 기본값으로 승계하지 않는다.
-
-완료 조건:
-
-- 메뉴 경로와 대사 경로 각각에서 `가나다` 테스트 문자열이 정상 디코딩/표시 가능한 문자표를 가진다.
-- 폰트 변경이 승인한 CHR 범위를 벗어나지 않는다.
-
-### 4단계: 추출기·삽입기 구축
-
-- 대본을 TSV/JSON으로 추출하고 재삽입해 원본과 바이트가 동일한 round-trip 테스트를 만든다.
-- 번역문 길이에 맞춰 포인터를 자동 재계산한다.
-- 제어코드, 줄바꿈, 화자명, 종료코드는 별도 토큰으로 보존한다.
-- 영어판의 의역 문장은 구조 참고만 하고 한국어 번역은 일본어 원문을 기준으로 한다.
-
-완료 조건:
-
-- 무수정 스크립트 추출→재삽입 ROM의 SHA-256이 원본과 같다.
-- 한 문자열만 바꾼 ROM에서 변경 범위가 해당 텍스트, 포인터, 폰트 승인 범위로 제한된다.
-
-### 5단계: 최소 후보 ROM
-
-검증 순서는 플레이가 거의 필요 없는 화면부터 잡는다.
-
-1. 시작 메뉴 한 항목
-2. 상태창 라벨 한 항목
-3. 상점/아이템명 한 항목
-4. 오프닝 대사 한 줄
-5. 이벤트·보스 대사
-
-각 후보는 `PASS`, `FAIL`, `UNKNOWN`으로 기록한다.
-
-- `PASS`: 패치 범위, 포인터, 부팅, 목표 화면이 모두 확인됨
-- `FAIL`: 부팅 실패, 포인터 오류, 글꼴 오류, 문맥 오류 등 원인 확정
-- `UNKNOWN`: 정적 검증은 통과했으나 목표 화면 증거가 없음
-
-### 6단계: 시각 검증과 릴리스
-
-- FCEUX는 구조 탐색 도구가 아니라 마지막 화면 확인 도구로 사용한다.
-- 오프닝 자동주행을 장시간 실행하지 않는다.
-- 메뉴와 오프닝은 짧은 입력 스크립트로 확인한다.
-- 후반 이벤트는 세이브 상태, 디버그 상태 주입, 치트로 직접 진입한다.
-- 모든 릴리스 포함 문자열에 화면 증거를 요구하지 않고, 대표 화면과 고위험 제어코드/포인터 변경을 우선 검증한다.
-
-## 다음 실행 과제
-
-1. `0x05DD4-0x07766`에서 포인터 표의 끝과 대사 데이터의 시작을 분리한다.
-2. `0x0561B` 이름표와 `0x056BC` 대사 블록을 자동 덤프하는 디코더를 만든다.
-3. 영어 포인터와 일본 포인터를 인덱스별로 비교한다.
-4. 첫 번째 정적 대응 문자열을 `script_catalog.tsv`에 기록한다.
-
-이 네 과제가 끝나기 전에는 FCEUX 자동주행이나 기존 Hashi/Katana 시각 큐를 재개하지 않는다.
+Development uses soft gates: a built candidate may exist with `UNKNOWN` visual
+status. Release promotion requires base-ROM identity, scoped-byte audit,
+bounded boot/target evidence, native readability evidence for high-risk text,
+and all required renderer families marked `PASS`.

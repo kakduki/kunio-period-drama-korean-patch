@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "batch_id": "opening_ptr_182_184_16x16_readability",
+  "translation_basis": "Japanese opening screenshots captured from the base ROM are the semantic source. The English IPS is used only to validate pointer, source-slot, CHR, and relocation structure; its text, code, and pixels are not copied.",
+  "renderer_profile": "record_range_scoped_paired_8x16_cells_for_16x16_korean",
+  "font_profile": "readable",
+  "record_guard": {
+    "kind": "record_base_range",
+    "start_cpu": "0xB1A6",
+    "end_cpu": "0xB1E0",
+    "expected_base_pointer_indices": [182, 183, 184]
+  },
+  "capacity_profile": {
+    "source_ranges": [["81", "A0"], ["C0", "C9"]],
+    "english_reference_source_codes": [
+      "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D",
+      "8E", "8F", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9A"
+    ],
+    "locally_proven_source_codes": ["9D", "9E", "C0"],
+    "new_runtime_verification_source_codes": ["9F", "C8"],
+    "glyph_code_pairs": {
+      "쿠": ["81", "82"],
+      "니": ["83", "84"],
+      "오": ["85", "86"],
+      "서": ["87", "88"],
+      "둘": ["89", "8A"],
+      "러": ["8B", "8C"],
+      "분": ["8D", "8E"],
+      "조": ["8F", "90"],
+      "두": ["91", "92"],
+      "목": ["93", "94"],
+      "위": ["95", "96"],
+      "험": ["97", "98"],
+      "코": ["99", "9A"],
+      "토": ["9B", "9C"],
+      "랜": ["9D", "9E"],
+      "만": ["9F", "C0"],
+      "기": ["C1", "C2"],
+      "다": ["C3", "C4"],
+      "렸": ["C5", "C6"],
+      "어": ["C7", "C8"]
+    }
+  },
+  "records": [
+    {
+      "id": "PTR-182-OPENING-COMPACT-16X16",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_base_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE",
+      "old_pointer_cpu": "0xB1A6",
+      "new_pointer_cpu": "0xB1A6",
+      "expected_length": 32,
+      "expected_encoded_bytes": "81 82 83 84 85 86 BB 00 87 88 89 8A 8B 8C CA F8 8D 8E 8F 90 91 92 93 94 00 95 96 97 98 CA 00 FF",
+      "japanese_context": "Kunio urgently says to hurry because Mr. Bunzo, the boss figure, is in danger.",
+      "korean_text": "쿠니오: 서둘러! 분조두목 위험!",
+      "tokens": [
+        {"glyph_pair": "쿠"}, {"glyph_pair": "니"}, {"glyph_pair": "오"}, {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "서"}, {"glyph_pair": "둘"}, {"glyph_pair": "러"}, {"byte": "CA"}, {"byte": "F8"},
+        {"glyph_pair": "분"}, {"glyph_pair": "조"}, {"glyph_pair": "두"}, {"glyph_pair": "목"}, {"byte": "00"},
+        {"glyph_pair": "위"}, {"glyph_pair": "험"}, {"byte": "CA"}, {"byte": "00"}, {"byte": "FF"}
+      ]
+    },
+    {
+      "id": "PTR-183-OPENING-OKOTO-16X16",
+      "pointer_index": 183,
+      "pointer_rom_offset": "0x05F42",
+      "record_rom_offset": "0x071D6",
+      "expected_base_bytes": "AE 13 84 CA FF 85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF",
+      "old_pointer_cpu": "0xB1CB",
+      "new_pointer_cpu": "0xB1C6",
+      "expected_length": 25,
+      "expected_encoded_bytes": "85 86 99 9A 9B 9C BB 00 81 82 83 84 85 86 CA C1 C2 C3 C4 C5 C6 C7 C8 CA FF",
+      "japanese_context": "Okoto welcomes Kunio and says that she has been waiting for him.",
+      "korean_text": "오코토: 쿠니오! 기다렸어!",
+      "tokens": [
+        {"glyph_pair": "오"}, {"glyph_pair": "코"}, {"glyph_pair": "토"}, {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "쿠"}, {"glyph_pair": "니"}, {"glyph_pair": "오"}, {"byte": "CA"},
+        {"glyph_pair": "기"}, {"glyph_pair": "다"}, {"glyph_pair": "렸"}, {"glyph_pair": "어"}, {"byte": "CA"}, {"byte": "FF"}
+      ]
+    },
+    {
+      "id": "PTR-184-OPENING-REUNION-16X16",
+      "pointer_index": 184,
+      "pointer_rom_offset": "0x05F44",
+      "record_rom_offset": "0x071EF",
+      "expected_base_bytes": "FF 88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF",
+      "old_pointer_cpu": "0xB1E0",
+      "new_pointer_cpu": "0xB1DF",
+      "expected_length": 23,
+      "expected_encoded_bytes": "81 82 83 84 85 86 BB 00 85 86 99 9A 9B 9C 00 85 86 9D 9E 9F C0 CA FF",
+      "japanese_context": "Base-ROM screen capture shows Kunio addressing Okoto and politely saying that it has been a long time.",
+      "korean_text": "쿠니오: 오코토, 오랜만.",
+      "tokens": [
+        {"glyph_pair": "쿠"}, {"glyph_pair": "니"}, {"glyph_pair": "오"}, {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "오"}, {"glyph_pair": "코"}, {"glyph_pair": "토"}, {"byte": "00"},
+        {"glyph_pair": "오"}, {"glyph_pair": "랜"}, {"glyph_pair": "만"}, {"byte": "CA"}, {"byte": "FF"}
+      ]
+    }
+  ],
+  "protected_next_pointer": {
+    "pointer_index": 185,
+    "expected_pointer_cpu": "0xB1F8"
+  }
+}

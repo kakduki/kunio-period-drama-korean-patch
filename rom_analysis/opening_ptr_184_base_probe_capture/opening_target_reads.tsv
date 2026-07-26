@@ -1,0 +1,25 @@
+frame	label	cpu_addr	value	active_expected_match	record_snapshot
+1339	opening_ptr_184_base_context	$B1E0	88	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1341	opening_ptr_184_base_context	$B1E1	96	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1343	opening_ptr_184_base_context	$B1E2	9F	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1345	opening_ptr_184_base_context	$B1E3	8B	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1347	opening_ptr_184_base_context	$B1E4	BB	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1349	opening_ptr_184_base_context	$B1E5	85	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1351	opening_ptr_184_base_context	$B1E6	8A	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1353	opening_ptr_184_base_context	$B1E7	94	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1355	opening_ptr_184_base_context	$B1E8	8B	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1357	opening_ptr_184_base_context	$B1E9	AE	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1359	opening_ptr_184_base_context	$B1EA	CB	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1361	opening_ptr_184_base_context	$B1EB	F8	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1361	opening_ptr_184_base_context	$B1EC	F9	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1363	opening_ptr_184_base_context	$B1ED	00	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1365	opening_ptr_184_base_context	$B1EE	85	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1367	opening_ptr_184_base_context	$B1EF	9B	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1369	opening_ptr_184_base_context	$B1F0	8B	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1371	opening_ptr_184_base_context	$B1F1	8C	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1373	opening_ptr_184_base_context	$B1F2	1C	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1375	opening_ptr_184_base_context	$B1F3	A8	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1377	opening_ptr_184_base_context	$B1F4	13	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1379	opening_ptr_184_base_context	$B1F5	B2	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1381	opening_ptr_184_base_context	$B1F6	CA	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF
+1383	opening_ptr_184_base_context	$B1F7	FF	true	88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF

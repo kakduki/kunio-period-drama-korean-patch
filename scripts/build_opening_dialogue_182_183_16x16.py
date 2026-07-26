@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Build a readable, two-record Korean opening-dialogue candidate.
+"""Build a readable Korean opening-dialogue candidate from an owned catalog.
 
-This candidate is deliberately small but moves beyond a one-record font demo:
-it keeps pointers 182 and 183 in the same verified opening scene, allocates a
-19-syllable 16x16 pool, preserves renderer controls outside explicit source
-ranges, and packs the two records without overwriting pointer 184.
+The default catalog is a two-record proof. The same guarded builder can also
+accept the explicitly declared three-record opening batch, which proves that
+an owned contiguous pointer-base range can scale without broad renderer hooks.
 """
 
 from __future__ import annotations
@@ -31,7 +30,10 @@ from build_opening_dialogue_proof import BASE_MD5, CHR_BANK, resolve_base_rom
 from build_patch import make_records, write_ips
 from compile_korean_scene_batch import CatalogError, load_catalog, parse_hex_byte, parse_hex_bytes
 from korean_tile_font import square_font_profile, write_square_preview
-from paired_dialogue_helper import build_record_scoped_paired_helper
+from paired_dialogue_helper import (
+    build_record_range_scoped_paired_helper,
+    build_record_scoped_paired_helper,
+)
 from rom_utils import REPO_ROOT
 
 
@@ -49,6 +51,20 @@ DEFAULT_OUT_STEM = "kunio_period_drama_korean_opening_ptr_182_183_16x16_readabil
 DEFAULT_REPORT_JSON = REPO_ROOT / "rom_analysis" / "opening_ptr_182_183_16x16_readability.json"
 DEFAULT_REPORT_MARKDOWN = REPO_ROOT / "rom_analysis" / "opening_ptr_182_183_16x16_readability.md"
 DEFAULT_PREVIEW = REPO_ROOT / "rom_analysis" / "opening_ptr_182_183_16x16_readability_font_preview.png"
+
+
+OPENING_BATCH_SPECS: dict[str, dict[str, object]] = {
+    "opening_ptr_182_183_16x16_readability": {
+        "renderer_profile": "record_scoped_paired_8x16_cells_for_16x16_korean",
+        "pointer_indices": (182, 183),
+        "guard_kind": "record_list",
+    },
+    "opening_ptr_182_184_16x16_readability": {
+        "renderer_profile": "record_range_scoped_paired_8x16_cells_for_16x16_korean",
+        "pointer_indices": (182, 183, 184),
+        "guard_kind": "record_base_range",
+    },
+}
 
 
 def report_path(path: Path) -> str:
@@ -157,8 +173,8 @@ def parse_record(raw: object, *, ordinal: int) -> dict[str, object]:
         raise CatalogError(f"record {ordinal} needs an id")
     if not isinstance(parsed["korean_text"], str) or not parsed["korean_text"]:
         raise CatalogError(f"record {ordinal} needs Korean text")
-    if len(parsed["expected_base_bytes"]) != expected_length:
-        raise CatalogError(f"record {ordinal} expected_base_bytes length does not equal expected_length")
+    if not parsed["expected_base_bytes"]:
+        raise CatalogError(f"record {ordinal} needs non-empty expected_base_bytes")
     if parsed["pointer_rom_offset"] != POINTER_TABLE_ROM_OFFSET + pointer_index * 2:
         raise CatalogError(f"record {ordinal} pointer table offset does not match index")
     if parsed["new_pointer_cpu"] != bank1_rom_to_cpu(int(parsed["record_rom_offset"])):
@@ -168,10 +184,14 @@ def parse_record(raw: object, *, ordinal: int) -> dict[str, object]:
 
 def validate_catalog(catalog_path: Path) -> dict[str, object]:
     catalog = load_catalog(catalog_path)
-    if catalog.get("batch_id") != "opening_ptr_182_183_16x16_readability":
-        raise CatalogError("unexpected two-record opening catalog id")
-    if catalog.get("renderer_profile") != "record_scoped_paired_8x16_cells_for_16x16_korean":
-        raise CatalogError("unexpected renderer profile")
+    batch_id = catalog.get("batch_id")
+    if not isinstance(batch_id, str) or batch_id not in OPENING_BATCH_SPECS:
+        raise CatalogError("unexpected opening catalog id")
+    spec = OPENING_BATCH_SPECS[batch_id]
+    if catalog.get("renderer_profile") != spec["renderer_profile"]:
+        raise CatalogError("unexpected opening renderer profile")
+    expected_indices = tuple(spec["pointer_indices"])
+    guard_kind = str(spec["guard_kind"])
     font_profile = catalog.get("font_profile", "readable")
     if not isinstance(font_profile, str):
         raise CatalogError("font_profile must be a named profile")
@@ -185,8 +205,9 @@ def validate_catalog(catalog_path: Path) -> dict[str, object]:
     source_codes = source_codes_for_pairs(pairs)
     if any(not source_in_ranges(code, ranges) for code in source_codes):
         raise CatalogError("glyph source code falls outside a declared helper range")
-    if any(code == 0xBB for code in source_codes):
-        raise CatalogError("0xBB stays a renderer-special control and cannot be a glyph half")
+    forbidden_source_codes = {0xBB, 0xCA, 0xFF}
+    if any(code in forbidden_source_codes for code in source_codes):
+        raise CatalogError("renderer controls cannot be used as Korean glyph halves")
     english_raw = capacity.get("english_reference_source_codes")
     if not isinstance(english_raw, list) or not english_raw:
         raise CatalogError("english_reference_source_codes must be a non-empty list")
@@ -196,12 +217,11 @@ def validate_catalog(catalog_path: Path) -> dict[str, object]:
 
     raw_records = catalog["records"]
     assert isinstance(raw_records, list)
-    if len(raw_records) != 2:
-        raise CatalogError("two-record opening catalog must contain exactly two records")
+    if len(raw_records) != len(expected_indices):
+        raise CatalogError("opening catalog record count does not match its owned pointer range")
     records = [parse_record(raw, ordinal=index) for index, raw in enumerate(raw_records)]
-    primary, following = records
-    if primary["pointer_index"] != PRIMARY_POINTER_INDEX or following["pointer_index"] != FOLLOWING_POINTER_INDEX:
-        raise CatalogError("records must be pointer 182 followed by pointer 183")
+    if tuple(int(record["pointer_index"]) for record in records) != expected_indices:
+        raise CatalogError("opening catalog pointer order does not match its declared batch")
     encoded_records: list[bytes] = []
     used_glyphs: list[str] = []
     for index, record in enumerate(records):
@@ -216,26 +236,58 @@ def validate_catalog(catalog_path: Path) -> dict[str, object]:
             if glyph not in used_glyphs:
                 used_glyphs.append(glyph)
     if set(used_glyphs) != set(pairs):
-        raise CatalogError("two-record catalog must exercise every allocated glyph")
-    if int(following["record_rom_offset"]) != int(primary["record_rom_offset"]) + len(encoded_records[0]):
-        raise CatalogError("pointer 183 must begin immediately after the shortened pointer-182 record")
-    if int(primary["old_pointer_cpu"]) != int(primary["new_pointer_cpu"]):
-        raise CatalogError("pointer 182 is expected to retain its base table pointer")
-    if int(following["old_pointer_cpu"]) == int(following["new_pointer_cpu"]):
-        raise CatalogError("pointer 183 must explicitly move to its packed record start")
+        raise CatalogError("opening catalog must exercise every allocated glyph")
+    for current, following, encoded in zip(records, records[1:], encoded_records):
+        if int(following["record_rom_offset"]) != int(current["record_rom_offset"]) + len(encoded):
+            raise CatalogError("opening records must be packed without gaps")
+
+    record_guard: dict[str, object] | None = None
+    if guard_kind == "record_list":
+        if int(records[0]["pointer_index"]) != PRIMARY_POINTER_INDEX or int(records[1]["pointer_index"]) != FOLLOWING_POINTER_INDEX:
+            raise CatalogError("record-list opening batch must start at pointers 182 and 183")
+        if int(records[0]["old_pointer_cpu"]) != int(records[0]["new_pointer_cpu"]):
+            raise CatalogError("pointer 182 is expected to retain its base table pointer")
+        if int(records[1]["old_pointer_cpu"]) == int(records[1]["new_pointer_cpu"]):
+            raise CatalogError("pointer 183 must explicitly move to its packed record start")
+    elif guard_kind == "record_base_range":
+        raw_guard = catalog.get("record_guard")
+        if not isinstance(raw_guard, dict) or raw_guard.get("kind") != "record_base_range":
+            raise CatalogError("range-scoped opening batch needs an explicit record_guard")
+        start_cpu = parse_hex_address(raw_guard.get("start_cpu"), field="record_guard start_cpu")
+        end_cpu = parse_hex_address(raw_guard.get("end_cpu"), field="record_guard end_cpu")
+        if any(
+            not start_cpu <= int(record[key]) <= end_cpu
+            for record in records
+            for key in ("old_pointer_cpu", "new_pointer_cpu")
+        ):
+            raise CatalogError("record_guard must contain every old and new record base")
+        declared_indices = raw_guard.get("expected_base_pointer_indices")
+        if declared_indices != list(expected_indices):
+            raise CatalogError("record_guard must declare every owned base pointer index")
+        record_guard = {
+            "kind": "record_base_range",
+            "start_cpu": start_cpu,
+            "end_cpu": end_cpu,
+            "expected_base_pointer_indices": expected_indices,
+        }
+    else:
+        raise CatalogError(f"unsupported opening guard kind: {guard_kind}")
 
     protected = catalog.get("protected_next_pointer")
     if not isinstance(protected, dict):
         raise CatalogError("protected_next_pointer is required")
     protected_index = protected.get("pointer_index")
-    if protected_index != NEXT_POINTER_INDEX:
-        raise CatalogError("protected_next_pointer must identify pointer 184")
+    if protected_index != expected_indices[-1] + 1:
+        raise CatalogError("protected_next_pointer must identify the next untouched pointer")
     protected_cpu = parse_hex_address(protected.get("expected_pointer_cpu"), field="protected_next_pointer expected_pointer_cpu")
     source = catalog_path.read_bytes()
     return {
         "catalog_path": report_path(catalog_path),
         "catalog_sha256": hashlib.sha256(source).hexdigest(),
-        "batch_id": catalog["batch_id"],
+        "batch_id": batch_id,
+        "guard_kind": guard_kind,
+        "record_guard": record_guard,
+        "expected_pointer_indices": expected_indices,
         "font_profile": font_profile,
         "source_ranges": ranges,
         "glyph_code_pairs": pairs,
@@ -244,6 +296,7 @@ def validate_catalog(catalog_path: Path) -> dict[str, object]:
         "records": records,
         "encoded_records": encoded_records,
         "used_glyphs": used_glyphs,
+        "protected_next_pointer_index": protected_index,
         "protected_next_pointer_cpu": protected_cpu,
     }
 
@@ -257,6 +310,16 @@ def pointer_owners(base: bytes, cpu_address: int) -> list[int]:
     return [index for index in range(POINTER_TABLE_ENTRY_COUNT) if pointer_cpu(base, index) == cpu_address]
 
 
+def pointer_indices_in_range(base: bytes, start_cpu: int, end_cpu: int) -> list[int]:
+    """Return table indices whose base pointers fall inside an owned range."""
+
+    return [
+        index
+        for index in range(POINTER_TABLE_ENTRY_COUNT)
+        if start_cpu <= pointer_cpu(base, index) <= end_cpu
+    ]
+
+
 def apply_candidate(
     base: bytes,
     glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
@@ -268,9 +331,9 @@ def apply_candidate(
     ranges = config["source_ranges"]
     assert isinstance(records, list) and isinstance(encoded_records, list)
     assert isinstance(pairs, dict) and isinstance(ranges, tuple)
-    primary, following = records
-    primary_bytes, following_bytes = encoded_records
-    assert isinstance(primary_bytes, bytes) and isinstance(following_bytes, bytes)
+    guard_kind = config["guard_kind"]
+    protected_index = config["protected_next_pointer_index"]
+    assert isinstance(guard_kind, str) and isinstance(protected_index, int)
 
     for record in records:
         offset = int(record["record_rom_offset"])
@@ -280,20 +343,40 @@ def apply_candidate(
             raise ValueError(f"base bytes do not match catalog for {record['id']}")
         if pointer_cpu(base, int(record["pointer_index"])) != int(record["old_pointer_cpu"]):
             raise ValueError(f"base pointer does not match catalog for {record['id']}")
-    if pointer_owners(base, int(following["old_pointer_cpu"])) != [FOLLOWING_POINTER_INDEX]:
-        raise ValueError("pointer 183 base record has unexpected additional owners")
-    if pointer_cpu(base, NEXT_POINTER_INDEX) != int(config["protected_next_pointer_cpu"]):
-        raise ValueError("pointer 184 differs from the protected base pointer")
-    following_end = int(following["record_rom_offset"]) + len(following_bytes)
-    if following_end != bank1_cpu_to_rom(int(config["protected_next_pointer_cpu"])):
-        raise ValueError("packed pointer-183 record would overlap pointer 184")
+        if int(record["old_pointer_cpu"]) != int(record["new_pointer_cpu"]):
+            owners = pointer_owners(base, int(record["old_pointer_cpu"]))
+            if owners != [int(record["pointer_index"])]:
+                raise ValueError(f"moved record has unexpected base-pointer owners: {record['id']}")
+    if pointer_cpu(base, protected_index) != int(config["protected_next_pointer_cpu"]):
+        raise ValueError("the next untouched pointer differs from the catalog")
+    final_end = int(records[-1]["record_rom_offset"]) + len(encoded_records[-1])
+    if final_end > bank1_cpu_to_rom(int(config["protected_next_pointer_cpu"])):
+        raise ValueError("packed opening records would overlap the next untouched pointer")
 
-    helper = build_record_scoped_paired_helper(
-        record_cpu_addresses=(int(primary["new_pointer_cpu"]), int(following["new_pointer_cpu"])),
-        source_ranges=ranges,
-        entry_cpu=CODE_CAVE_CPU,
-        max_size=CODE_CAVE_SIZE,
-    )
+    if guard_kind == "record_list":
+        helper = build_record_scoped_paired_helper(
+            record_cpu_addresses=tuple(int(record["new_pointer_cpu"]) for record in records),
+            source_ranges=ranges,
+            entry_cpu=CODE_CAVE_CPU,
+            max_size=CODE_CAVE_SIZE,
+        )
+    elif guard_kind == "record_base_range":
+        guard = config["record_guard"]
+        assert isinstance(guard, dict)
+        start_cpu = int(guard["start_cpu"])
+        end_cpu = int(guard["end_cpu"])
+        expected_indices = tuple(int(index) for index in guard["expected_base_pointer_indices"])
+        if pointer_indices_in_range(base, start_cpu, end_cpu) != list(expected_indices):
+            raise ValueError("base pointer ownership does not match the declared range guard")
+        helper = build_record_range_scoped_paired_helper(
+            record_cpu_start=start_cpu,
+            record_cpu_end=end_cpu,
+            source_ranges=ranges,
+            entry_cpu=CODE_CAVE_CPU,
+            max_size=CODE_CAVE_SIZE,
+        )
+    else:
+        raise ValueError(f"unsupported opening guard kind: {guard_kind}")
     renderer_patched, targets = apply_paired_renderer_assets(
         base,
         glyph_tiles,
@@ -317,20 +400,30 @@ def apply_candidate(
             pointer_rom_offset=f"0x{int(record['pointer_rom_offset']):05X}",
             cpu_address=f"0x{int(record['new_pointer_cpu']):04X}",
         )
-    pointer_offset = int(following["pointer_rom_offset"])
-    patched[pointer_offset:pointer_offset + 2] = int(following["new_pointer_cpu"]).to_bytes(2, "little")
-    add_target(
-        targets,
-        kind="dialogue_pointer",
-        rom_offset=pointer_offset,
-        length=2,
-        pointer_index=FOLLOWING_POINTER_INDEX,
-        original_cpu_address=f"0x{int(following['old_pointer_cpu']):04X}",
-        new_cpu_address=f"0x{int(following['new_pointer_cpu']):04X}",
-    )
-    if pointer_cpu(bytes(patched), NEXT_POINTER_INDEX) != int(config["protected_next_pointer_cpu"]):
-        raise AssertionError("pointer 184 changed during the two-record packing step")
-    _assert_scoped_changes(base, patched, targets, label="two-record paired 16x16 candidate")
+    for record in records:
+        if int(record["old_pointer_cpu"]) == int(record["new_pointer_cpu"]):
+            continue
+        pointer_offset = int(record["pointer_rom_offset"])
+        patched[pointer_offset:pointer_offset + 2] = int(record["new_pointer_cpu"]).to_bytes(2, "little")
+        add_target(
+            targets,
+            kind="dialogue_pointer",
+            rom_offset=pointer_offset,
+            length=2,
+            pointer_index=record["pointer_index"],
+            original_cpu_address=f"0x{int(record['old_pointer_cpu']):04X}",
+            new_cpu_address=f"0x{int(record['new_pointer_cpu']):04X}",
+        )
+    if pointer_cpu(bytes(patched), protected_index) != int(config["protected_next_pointer_cpu"]):
+        raise AssertionError("the next untouched pointer changed during opening packing")
+    if guard_kind == "record_base_range":
+        guard = config["record_guard"]
+        assert isinstance(guard, dict)
+        expected_indices = [int(index) for index in guard["expected_base_pointer_indices"]]
+        actual_indices = pointer_indices_in_range(bytes(patched), int(guard["start_cpu"]), int(guard["end_cpu"]))
+        if actual_indices != expected_indices:
+            raise AssertionError("patched pointer ownership escaped the declared range guard")
+    _assert_scoped_changes(base, patched, targets, label="opening paired 16x16 candidate")
     return bytes(patched), targets, helper
 
 
@@ -338,19 +431,20 @@ def render_report(payload: dict[str, object]) -> str:
     source = payload["source"]
     candidate = payload["candidate"]
     lines = [
-        "# Two-Record Opening Korean 16x16 Candidate",
+        "# Opening Korean 16x16 Candidate",
         "",
         "Status: **CANDIDATE_BUILT_NOT_RUNTIME_VERIFIED**",
         "",
-        "This candidate packs two context-confirmed opening records without using",
-        "unbounded gameplay. It is a font-capacity and record-boundary candidate,",
-        "not a release translation batch.",
+        "This candidate packs only the opening records declared by its catalog.",
+        "It is a font-capacity and record-boundary candidate, not a release",
+        "translation batch.",
         "",
         "## Scope",
         "",
         f"- Glyphs: `{source['unique_glyph_count']}` / source slots: `{source['source_slot_count']}`.",
         f"- Source ranges: {', '.join(source['source_ranges'])}.",
         f"- Helper: `{source['helper_length']}` bytes; marker hook `{source['marker_cpu']}`.",
+        f"- Guard: `{source['guard_kind']}`{source['guard_detail']}.",
     ]
     for record in source["records"]:
         lines.append(
@@ -368,8 +462,8 @@ def render_report(payload: dict[str, object]) -> str:
             f"- IPS: `{candidate['ips_path']}`",
             f"- ROM: `{candidate['rom_path']}`",
             "",
-            "Promotion requires the separate bounded pointer-182 and pointer-183",
-            "captures, matching runtime reads, and native readability review for both screens.",
+            "Promotion requires bounded capture, matching runtime reads, and native",
+            "readability review for every declared opening record.",
             "",
         ]
     )
@@ -427,7 +521,13 @@ def main() -> int:
     records = config["records"]
     encoded_records = config["encoded_records"]
     ranges = config["source_ranges"]
+    guard_kind = config["guard_kind"]
+    guard = config["record_guard"]
     assert isinstance(records, list) and isinstance(encoded_records, list) and isinstance(ranges, tuple)
+    assert isinstance(guard_kind, str)
+    guard_detail = ""
+    if isinstance(guard, dict):
+        guard_detail = f" (`0x{int(guard['start_cpu']):04X}-0x{int(guard['end_cpu']):04X}`)"
     payload = {
         "status": "CANDIDATE_BUILT_NOT_RUNTIME_VERIFIED",
         "source": {
@@ -445,6 +545,8 @@ def main() -> int:
             "source_ranges": [f"0x{start:02X}-0x{end - 1:02X}" for start, end in ranges],
             "helper_length": len(helper.code),
             "marker_cpu": f"0x{helper.marker_cpu:04X}",
+            "guard_kind": guard_kind,
+            "guard_detail": guard_detail,
             "records": [
                 {
                     "id": record["id"],

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_FOR_THREE_OPENING_CONTEXTS",
+  "scope": "development candidate only; not a release build",
+  "base_rom_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_rom_md5": "46cedd1da6d49643f5dd6bc4895ce706",
+  "candidate_id": "opening_ptr_182_184_16x16_readability",
+  "english_reference": {
+    "ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad",
+    "used_for": [
+      "pointer-table ownership",
+      "Bank 7 source-slot and CHR structure",
+      "record relocation behavior"
+    ],
+    "not_used_for": [
+      "Korean wording",
+      "English code or pixels",
+      "unrelated English-patch changes"
+    ]
+  },
+  "run_policy": {
+    "unbounded_autoplay": "forbidden",
+    "success_condition": "named target bytes are read, one screen is captured, then Lua reports lua_done",
+    "failure_condition": "a target miss, budget exhaustion, or explicit Lua failure remains FAIL or UNKNOWN; it is never silently retried as free-form gameplay"
+  },
+  "records": [
+    {
+      "pointer_index": 182,
+      "base": { "rom_offset": "0x071B6", "cpu_address": "0xB1A6" },
+      "candidate": { "rom_offset": "0x071B6", "cpu_address": "0xB1A6", "byte_count": 32 },
+      "korean_text": "쿠니오: 서둘러! 분조목 위험!",
+      "capture": {
+        "max_frames": 920,
+        "frame": 883,
+        "registered_read_hits": 32,
+        "matched_read_hits": 32,
+        "final_reason": "lua_done",
+        "screenshot": "rom_analysis/opening_ptr_182_184_16x16_p182_capture/opening_dialogue_frame_000883_screen.png",
+        "visual_review": "PASS"
+      }
+    },
+    {
+      "pointer_index": 183,
+      "base": { "rom_offset": "0x071DB", "cpu_address": "0xB1CB" },
+      "candidate": { "rom_offset": "0x071D6", "cpu_address": "0xB1C6", "byte_count": 25 },
+      "korean_text": "오코토: 쿠니오! 기다렸어!",
+      "capture": {
+        "max_frames": 1180,
+        "frame": 1093,
+        "registered_read_hits": 25,
+        "matched_read_hits": 25,
+        "final_reason": "lua_done",
+        "screenshot": "rom_analysis/opening_ptr_182_184_16x16_p183_capture/opening_dialogue_frame_001093_screen.png",
+        "visual_review": "PASS"
+      }
+    },
+    {
+      "pointer_index": 184,
+      "base": { "rom_offset": "0x071F0", "cpu_address": "0xB1E0" },
+      "candidate": { "rom_offset": "0x071EF", "cpu_address": "0xB1DF", "byte_count": 23 },
+      "korean_text": "쿠니오: 오코토, 오랜만.",
+      "base_context_capture": {
+        "frame": 1401,
+        "matched_read_hits": 24,
+        "screenshot": "rom_analysis/opening_ptr_184_base_probe_capture/opening_dialogue_frame_001401_screen.png"
+      },
+      "capture": {
+        "max_frames": 1430,
+        "frame": 1399,
+        "registered_read_hits": 23,
+        "matched_read_hits": 23,
+        "final_reason": "lua_done",
+        "screenshot": "rom_analysis/opening_ptr_182_184_16x16_p184_capture/opening_dialogue_frame_001399_screen.png",
+        "visual_review": "PASS"
+      }
+    }
+  ],
+  "remaining_release_risk": [
+    "menu, status, item/shop, and event/boss renderer families have not been verified",
+    "the 20-glyph 16x16 allocation is scene-local",
+    "the candidate is not a full translated script or release package"
+  ]
+}

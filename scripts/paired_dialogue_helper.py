@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Generate compact, record-scoped 16x16 Korean dialogue helpers.
+"""Generate compact, explicitly scoped 16x16 Korean dialogue helpers.
 
 The game renderer normally treats one source byte as one vertical 8x16 cell.
-The helpers produced here redirect only declared Bank-1 dialogue records and
-only declared source-code ranges, allowing two adjacent source cells to form
-one readable 16x16 Korean syllable.  Keeping the record and source filters
-explicit prevents renderer controls such as ``0xBB`` and ``0xCA`` from being
-mistaken for font data.
+The helpers produced here redirect only declared Bank-1 dialogue records or a
+declared contiguous record-base range, and only declared source-code ranges.
+Two adjacent source cells can then form one readable 16x16 Korean syllable.
+Keeping both filters explicit prevents renderer controls such as ``0xBB`` and
+``0xCA`` from being mistaken for font data.
 """
 
 from __future__ import annotations
@@ -114,6 +114,7 @@ class PairedDialogueHelper:
     source_ranges: tuple[tuple[int, int], ...]
     record_cpu_addresses: tuple[int, ...]
     entry_cpu: int
+    record_cpu_range: tuple[int, int] | None = None
 
     @property
     def entry_length(self) -> int:
@@ -224,4 +225,106 @@ def build_record_scoped_paired_helper(
         source_ranges=ranges,
         record_cpu_addresses=records,
         entry_cpu=entry_cpu,
+    )
+
+
+def build_record_range_scoped_paired_helper(
+    *,
+    record_cpu_start: int,
+    record_cpu_end: int,
+    source_ranges: Iterable[tuple[int, int]],
+    entry_cpu: int,
+    max_size: int,
+) -> PairedDialogueHelper:
+    """Build a helper for one explicitly owned contiguous record-base range.
+
+    The range applies to the parser's base pointer in zero-page ``$1A/$1B``;
+    it is not a broad byte-address range.  Callers must separately prove that
+    every pointer-table owner in the range belongs to the same Korean batch.
+    The end byte may not be ``0xFF`` because the compact gate compares an
+    end-exclusive low byte.
+    """
+
+    if not 0x8000 <= record_cpu_start <= record_cpu_end <= 0xBFFF:
+        raise HelperAssemblyError("record range must be inside a switchable CPU window")
+    high = record_cpu_start >> 8
+    if record_cpu_end >> 8 != high:
+        raise HelperAssemblyError("record range must stay within one CPU high byte")
+    end_low = record_cpu_end & 0xFF
+    if end_low == 0xFF:
+        raise HelperAssemblyError("record range ending in 0xFF cannot use the compact gate")
+    ranges = _normalize_ranges(source_ranges)
+    if max_size <= 0:
+        raise HelperAssemblyError("helper code cave size must be positive")
+
+    asm = _Assembler(entry_cpu)
+    asm.label("entry")
+    asm.emit(0x48)  # PHA: retain the source byte while testing the record base.
+    asm.emit(0xA5, 0x1B, 0xC9, high)  # LDA $1B; CMP #record-high
+    asm.branch(0xD0, "entry_restore")  # BNE
+    asm.emit(0xA5, 0x1A)  # LDA $1A
+    asm.emit(0xC9, record_cpu_start & 0xFF)  # CMP #range-start-low
+    asm.branch(0x90, "entry_restore")  # BCC
+    asm.emit(0xC9, end_low + 1)  # CMP #range-end-low, exclusive
+    asm.branch(0xB0, "entry_restore")  # BCS
+
+    # A successful range check falls straight into the source-code dispatch.
+    # Keep the restore block after the dispatcher so this costs no extra JMP.
+    asm.label("entry_source")
+    asm.emit(0x68)  # PLA
+    _emit_range_dispatch(
+        asm,
+        ranges,
+        match_label="entry_handle",
+        fallback_label="entry_fallback",
+    )
+
+    asm.label("entry_fallback")
+    entry_fallback_cpu = asm.address
+    asm.emit(0xC9, 0x00)  # CMP #$00
+    asm.branch(0xF0, "entry_zero")  # BEQ: replay the original zero-byte path.
+    asm.jmp(ENTRY_CONTINUE_NONZERO_CPU)
+    asm.label("entry_zero")
+    asm.jmp(ENTRY_CONTINUE_TILE_CPU)
+
+    asm.label("entry_handle")
+    asm.emit(0x85, 0x1B, 0x18, 0x69, 0x20)  # STA $1B; CLC; ADC #$20
+    asm.jmp(ENTRY_CONTINUE_TILE_CPU)
+
+    asm.label("entry_restore")
+    asm.emit(0x68)  # PLA
+    asm.jmp(entry_fallback_cpu)
+
+    entry_end_cpu = asm.address
+
+    asm.label("marker")
+    marker_cpu = asm.address
+    asm.emit(0xA5, 0x1B)  # LDA $1B: saved top tile or ordinary renderer state.
+    _emit_range_dispatch(
+        asm,
+        ranges,
+        match_label="marker_handle",
+        fallback_label="marker_fallback",
+    )
+    asm.label("marker_fallback")
+    asm.emit(0xA9, 0x00)  # LDA #$00
+    asm.jmp(MARKER_CONTINUE_CPU)
+    asm.label("marker_handle")
+    asm.emit(0x48, 0xA9, high, 0x85, 0x1B, 0x68)  # PHA; LDA #high; STA $1B; PLA
+    asm.jmp(MARKER_CONTINUE_CPU)
+
+    code = asm.finish()
+    if marker_cpu != entry_cpu + (entry_end_cpu - entry_cpu):
+        raise HelperAssemblyError("marker helper start does not follow the entry helper")
+    if len(code) > max_size:
+        raise HelperAssemblyError(
+            f"record-range-scoped helper needs {len(code)} bytes but cave holds {max_size}"
+        )
+    return PairedDialogueHelper(
+        code=code,
+        marker_cpu=marker_cpu,
+        source_ranges=ranges,
+        record_cpu_addresses=(),
+        entry_cpu=entry_cpu,
+        record_cpu_range=(record_cpu_start, record_cpu_end),
     )

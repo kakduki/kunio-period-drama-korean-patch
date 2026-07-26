@@ -126,6 +126,7 @@ KEY_PYTHON = [
     "scripts/test_build_opening_dialogue_16x16_proof.py",
     "scripts/test_build_opening_dialogue_16x16_capacity.py",
     "scripts/test_build_opening_dialogue_182_183_16x16.py",
+    "scripts/test_build_opening_dialogue_182_184_16x16.py",
     "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/test_candidate_pipeline_reports.py",
@@ -191,8 +192,12 @@ LUA_TARGETS = [
     "lua/kunio_opening_dialogue_16x16_speaker_separator_proof_target.lua",
     "lua/kunio_opening_dialogue_16x16_readability_proof_target.lua",
     "lua/kunio_opening_ptr_183_base_target.lua",
+    "lua/kunio_opening_ptr_184_base_target.lua",
     "lua/kunio_opening_ptr_182_183_16x16_p182_target.lua",
     "lua/kunio_opening_ptr_182_183_16x16_p183_target.lua",
+    "lua/kunio_opening_ptr_182_184_16x16_p182_target.lua",
+    "lua/kunio_opening_ptr_182_184_16x16_p183_target.lua",
+    "lua/kunio_opening_ptr_182_184_16x16_p184_target.lua",
     "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
 ]
@@ -201,6 +206,7 @@ LUA_SCRIPTS = [
     "lua/kunio_auto_dump.lua",
     "lua/kunio_opening_dialogue_proof.lua",
     "lua/kunio_opening_ptr_183_probe.lua",
+    "lua/kunio_opening_ptr_184_base_probe.lua",
     "lua/kunio_opening_mapper_trace.lua",
     "lua/kunio_opening_dialogue_renderer_probe.lua",
     "lua/kunio_autoplay_watch.lua",
@@ -341,6 +347,7 @@ def main() -> int:
     run("opening dialogue paired 16x16 proof patch", ["scripts/test_build_opening_dialogue_16x16_proof.py"])
     run("opening dialogue catalog-driven paired 16x16 capacity", ["scripts/test_build_opening_dialogue_16x16_capacity.py"])
     run("two-record opening Korean 16x16 candidate", ["scripts/test_build_opening_dialogue_182_183_16x16.py"])
+    run("three-record range-scoped opening Korean 16x16 candidate", ["scripts/test_build_opening_dialogue_182_184_16x16.py"])
     run("opening dialogue Bank 8 page-switch proof", ["scripts/test_build_opening_dialogue_bank8_page_switch_proof.py"])
     run("opening dialogue Bank 8 persistent page proof", ["scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py"])
     run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])

@@ -2,80 +2,49 @@
 
 ## Current Result
 
-The project now has a two-screen, bounded proof of readable Korean dialogue:
+The project has a three-screen, bounded proof of readable Korean dialogue.
 
 - Base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
 - English reference IPS SHA-256:
   `cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad`.
-- Opening pointer 182: ROM `0x071B6`, PRG Bank 1, CPU `$B1A6`.
-- Opening pointer 183: moved from `$B1CB` to ROM `0x071D7` / CPU `$B1C7`;
-  pointer 184 remains `$B1E0`.
-- Candidate ROM MD5: `d1bd6e285c818ed60890282d8704f80a`.
-- Native FCEUX frame 883: pointer 182, 33/33 target reads, screenshot, and
-  visual readability pass.
-- Native FCEUX frame 1095: pointer 183, 25/25 target reads, screenshot, and
-  visual readability pass.
+- Current candidate ROM MD5: `46cedd1da6d49643f5dd6bc4895ce706`.
+- Pointer 182: ROM `0x071B6`, PRG Bank 1, CPU `$B1A6`, frame 883, `32/32`.
+- Pointer 183: moved from `$B1CB` to ROM `0x071D6` / CPU `$B1C6`, frame 1093,
+  `25/25`.
+- Pointer 184: moved from `$B1E0` to ROM `0x071EF` / CPU `$B1DF`, frame 1399,
+  `23/23`.
+- Native visual review passed for all three 16x16 Korean screens.
 
-This is a development candidate with two verified opening contexts. It is not
-a release build and does not imply that other screens share this renderer.
+This is a development candidate for one opening dialogue family, not a release
+build and not evidence for menus, status text, or later events.
 
-## What Stops Here
+## Operating Rules
 
-Do not use unbounded autoplay to search for later dialogue. In particular, do
-not loop the opening route after this point. It is only a deterministic
-regression case for pointer 182.
-
-Do not translate all extracted byte strings. A string becomes patchable only
-after its renderer family, control bytes, ROM ownership, and screen context
-are recorded.
-
-## English Patch Reference
-
-The public English patch is a structural reference only:
-
-1. It proves a 248-entry dialogue pointer table at `0x05DD4-0x05FC3`.
-2. It proves dialogue source slots `0x81-0x9A` map to CHR Bank 7 tiles
-   `0x181-0x19A`.
-3. It proves Bank 1 dialogue records can be relocated with pointer updates.
-4. Its English wording, header change, and unrelated renderer changes are not
-   copied into the Korean patch.
-
-## Build Order
-
-1. Maintain a context catalog before translating:
-   pointer, ROM offset, PRG bank, original bytes, control tokens, Japanese
-   context, Korean wording, glyphs, and verification status.
-2. Treat each renderer family independently:
-   dialogue, title/menu, status labels, item/shop text, and event/boss text.
-3. For a single confirmed record, build a scoped candidate ROM with an
-   allowlist that covers only text, declared pointers, helper code, and CHR
-   tiles.
-4. Run a bounded smoke test that has a named target, a hard frame limit, and a
-   capture/stop condition.
-5. Record results as PASS, FAIL, or UNKNOWN. A static build without a target
-   screen stays UNKNOWN rather than being discarded or promoted.
+1. Do not use unbounded FCEUX autoplay. A run requires a named target, hard
+   frame cap, deterministic inputs, one capture condition, and an explicit stop.
+2. Do not translate all extracted byte sequences. Each record needs its owning
+   renderer, controls, ROM range, and Japanese context first.
+3. Use the English patch only for structure: pointer table, source slots, CHR,
+   and relocation behavior. Do not copy its wording, code, pixels, or headers.
+4. Build candidates with narrow changed-byte allowlists and preserve neighbour
+   pointer ownership.
+5. Mark every record `PASS`, `FAIL`, or `UNKNOWN`; only `PASS` records enter a
+   release candidate.
 
 ## Next Work
 
-1. Use the Japanese pointer catalog and English structural map to select the
-   next one or two records only when a short route, save state, debug state,
-   or verified cheat state can reach their exact screen.
-2. Create the target Lua table and a hard capture stop condition before any
-   FCEUX launch. It must never depend on free-form combat or boss progression.
-3. Extend Korean glyph capacity only after the exact new screen proves its CHR
-   mapping. The current 19-glyph pool is opening-scene-local.
-4. Preserve raw `0xBB` as a renderer control. Pointer 183 now proves that it
-   can coexist with Korean text; it must not be reassigned as a Korean glyph.
-5. Promote only context-level passes into a release candidate; require manual
-   visual evidence for high-risk release rows, not for every exploratory
-   static build.
+1. Retain the three opening records as a fast regression test only.
+2. Build a title/menu catalog and select one direct-navigation target.
+3. Establish separate state/route targets for status labels and item/shop text.
+4. Obtain reproducible save/debug/cheat states before touching event or boss
+   dialogue; never try to solve combat through free-form automation.
+5. Expand the glyph pool only when a reachable context has a concrete need.
 
 ## Evidence
 
+- Reboot plan: `KOREAN_PATCH_REBOOT_PLAN.md`
 - English structure: `rom_analysis/english_patch_implementation_map.md`
-- Font decision: `rom_analysis/font_readability_gate.md`
-- Readability comparison: `rom_analysis/opening_font_profile_comparison/report.md`
-- Native proof:
-  `rom_analysis/opening_dialogue_16x16_readability_proof_capture/analysis.md`
-- Two-record runtime proof:
-  `rom_analysis/opening_ptr_182_183_16x16_readability_runtime.md`
+- Three-record runtime proof:
+  `rom_analysis/opening_ptr_182_184_16x16_readability_runtime.md`
+- Source catalog:
+  `text_data/korean_scene_batches/opening_ptr_182_184_16x16_readability.json`

@@ -1,3 +1,4 @@
-id,context,rom_offset,prg_bank,cpu_address,japanese_context,korean_text,font_profile,runtime_status,visual_status,decision
-PTR-182-OPENING-COMPACT-16X16,opening dialogue,0x071B6,1,0xB1A6,"Kunio urgently says to hurry because Mr. Bunzo is in danger.","쿠니오: 서둘러! 분조두목 위험!",readable,PASS,PASS,PASS_FOR_TWO_OPENING_CONTEXTS
-PTR-183-OPENING-OKOTO-16X16,opening dialogue,0x071D7,1,0xB1C7,"Okoto welcomes Kunio and says that she has been waiting for him.","오코토: 쿠니오! 기다렸어!",readable,PASS,PASS,PASS_FOR_TWO_OPENING_CONTEXTS
+id,context,base_rom_offset,candidate_rom_offset,prg_bank,base_cpu,candidate_cpu,japanese_context,korean_text,font_profile,runtime_status,visual_status,decision
+PTR-182-OPENING-COMPACT-16X16,opening dialogue,0x071B6,0x071B6,1,0xB1A6,0xB1A6,"Kunio urgently says to hurry because Mr. Bunzo is in danger.","쿠니오: 서둘러! 분조목 위험!",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
+PTR-183-OPENING-OKOTO-16X16,opening dialogue,0x071DB,0x071D6,1,0xB1CB,0xB1C6,"Okoto welcomes Kunio and says that she has been waiting for him.","오코토: 쿠니오! 기다렸어!",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
+PTR-184-OPENING-REUNION-16X16,opening dialogue,0x071F0,0x071EF,1,0xB1E0,0xB1DF,"Kunio addresses Okoto and politely says that it has been a long time.","쿠니오: 오코토, 오랜만.",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS

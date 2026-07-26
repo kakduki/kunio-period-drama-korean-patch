@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_ptr_182_184_16x16_p183_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 25,
+    "matched_read_hits": 25,
+    "matched_capture_record": true,
+    "screenshots": [
+      "rom_analysis\\opening_ptr_182_184_16x16_p183_capture\\opening_dialogue_frame_001093_screen.gd",
+      "rom_analysis\\opening_ptr_182_184_16x16_p183_capture\\opening_dialogue_frame_001093_screen.png"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_ptr_182_184_16x16_p183_capture\\opening_dialogue_frame_001093_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "The Korean speaker line and reply are legible; the 16x16 glyphs are crisp with no clipping, overlap, or tile corruption."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}

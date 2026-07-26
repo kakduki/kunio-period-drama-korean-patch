@@ -1,0 +1,4 @@
+frame	reason	registered	hits	detail
+0	lua_start	25	0	advance=900-910;target=opening_ptr_182_184_korean_p183
+1093	capture	25	25	screenshot=true;target_match=true
+1093	lua_done	25	25	captured=true;complete_frame=1075

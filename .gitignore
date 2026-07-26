@@ -10,6 +10,7 @@ output/opening_dialogue_16x16_relocation_proof/
 output/opening_dialogue_16x16_speaker_separator_proof/
 output/opening_dialogue_16x16_readability_proof/
 output/opening_ptr_182_183_16x16_readability/
+output/opening_ptr_182_184_16x16_readability/
 output/opening_dialogue_bank8_page_switch_proof/
 output/opening_dialogue_bank8_persistent_page_proof/
 output/font_comparison_handcrafted/
@@ -39,10 +40,18 @@ rom_analysis/opening_dialogue_16x16_readability_proof_capture/*.bin
 rom_analysis/opening_dialogue_16x16_readability_proof_capture/*.gd
 rom_analysis/opening_ptr_183_base_probe_capture/*.bin
 rom_analysis/opening_ptr_183_base_probe_capture/*.gd
+rom_analysis/opening_ptr_184_base_probe_capture/*.bin
+rom_analysis/opening_ptr_184_base_probe_capture/*.gd
 rom_analysis/opening_ptr_182_183_16x16_p182_capture/*.bin
 rom_analysis/opening_ptr_182_183_16x16_p182_capture/*.gd
 rom_analysis/opening_ptr_182_183_16x16_p183_capture/*.bin
 rom_analysis/opening_ptr_182_183_16x16_p183_capture/*.gd
+rom_analysis/opening_ptr_182_184_16x16_p184_capture/*.bin
+rom_analysis/opening_ptr_182_184_16x16_p184_capture/*.gd
+rom_analysis/opening_ptr_182_184_16x16_p182_capture/*.bin
+rom_analysis/opening_ptr_182_184_16x16_p182_capture/*.gd
+rom_analysis/opening_ptr_182_184_16x16_p183_capture/*.bin
+rom_analysis/opening_ptr_182_184_16x16_p183_capture/*.gd
 rom_analysis/opening_dialogue_renderer_probe/*.bin
 rom_analysis/opening_dialogue_renderer_probe/*.gd
 rom_analysis/opening_dialogue_renderer_probe/dma.tsv

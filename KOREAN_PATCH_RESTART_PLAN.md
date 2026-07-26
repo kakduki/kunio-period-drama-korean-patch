@@ -10,13 +10,15 @@ the original restart rules and phased plan intact.
 - The English IPS remains a structural reference only: pointer table, source
   slots, CHR ownership, and relocation behavior. No English text, code, or
   pixels are copied.
-- The current readable Korean candidate has two independently verified opening
-  contexts: pointer 182 at ROM `0x071B6` / `$B1A6` (33/33 reads, frame 883) and
-  pointer 183 at ROM `0x071D7` / `$B1C7` (25/25 reads, frame 1095).
-- Pointer 183 is no longer `UNKNOWN`; its relocated record, native separator
-  byte `0xBB`, readable Korean spacing, and on-screen output all passed.
-- The current candidate MD5 is `d1bd6e285c818ed60890282d8704f80a`. Its
-  19-glyph 16x16 allocation is still scene-local and is not a release font.
+- The current readable Korean candidate has three independently verified opening
+  contexts: pointer 182 at ROM `0x071B6` / `$B1A6` (32/32 reads, frame 883),
+  pointer 183 at ROM `0x071D6` / `$B1C6` (25/25 reads, frame 1093), and pointer
+  184 at ROM `0x071EF` / `$B1DF` (23/23 reads, frame 1399).
+- The candidate preserves the native separator byte `0xBB`, moves only pointer
+  entries 183-184 inside a guarded three-record range, and leaves pointer 185
+  at `$B1F8`.
+- The current candidate MD5 is `46cedd1da6d49643f5dd6bc4895ce706`. Its
+  20-glyph 16x16 allocation is still scene-local and is not a release font.
 - The next unit of work is one context-confirmed record or renderer family at
   a time, using a short deterministic route, save/debug state, or verified
   cheat state. Do not resume unbounded game progression to discover text.
