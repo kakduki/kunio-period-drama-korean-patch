@@ -1,6 +1,6 @@
 # Korean Dialogue Font Readability Gate
 
-Status: **PASS_FOR_OPENING_PAIRED_16X16_SPEAKER_SEPARATOR_PROOF**
+Status: **PASS_FOR_OPENING_PAIRED_16X16_READABILITY_PROOF**
 
 This development gate measures a real native dialogue frame. It is not a
 release gate and it does not authorize bulk translation.
@@ -14,6 +14,7 @@ release gate and it does not authorize bulk translation.
 | paired 16x16 Tier 2 | same scene and frame | 37/37 reads and capture pass | PASS: all 17 syllables, including `0xC0-0xC7`, are distinct | capacity evidence; compact text only |
 | paired 16x16 expanded record | same scene and frame | 45/45 reads, `lua_done`, and capture pass | PASS: `쿠니마사 어서 움직여!` / `분조 두목이 큰일이야!` is readable with preserved spaces and no visible scene damage | opening record and relocation proof |
 | paired 16x16 speaker separator | same scene and frame | 47/47 reads, `lua_done`, and capture pass | PASS: `쿠니마사: 어서 움직여!` / `분조 두목이 큰일이야!` keeps the name, colon, spaces, and punctuation distinct | opening speaker-separator proof only |
+| paired 16x16 readable profile | same scene and frame | 38/38 reads, `lua_done`, and capture pass | PASS: 14-pixel Malgun Gothic Bold with BOX resampling retains interior whitespace and keeps both Korean lines legible | preferred opening readability prototype only |
 
 ## Evidence
 
@@ -27,6 +28,10 @@ release gate and it does not authorize bulk translation.
 - Speaker-separator full screen: `rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/opening_dialogue_frame_000883_screen.png`
 - Speaker-separator 4x crop: `rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
 - Speaker-separator smoke report: `rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/analysis.md`
+- Readability-profile comparison: `rom_analysis/opening_font_profile_comparison/profiles.png`
+- Readability-profile metrics: `rom_analysis/opening_font_profile_comparison/report.md`
+- Readability-profile full screen: `rom_analysis/opening_dialogue_16x16_readability_proof_capture/opening_dialogue_frame_000883_screen.png`
+- Readability-profile smoke report: `rom_analysis/opening_dialogue_16x16_readability_proof_capture/analysis.md`
 
 The route ends at frame 883 with `lua_done`. It is not an autoplay session and
 does not wait for later gameplay or boss events.
@@ -40,6 +45,14 @@ control-token problem. The relocated pointer-183 record is statically
 preserved, but its own on-screen result is `UNKNOWN` until a separate bounded
 capture reaches it.
 
+### Readability-Profile Scope
+
+The 15-glyph readability allocation is a scene-local proof, not a complete
+Korean character set. It does not remove the raw `0xBB` control-token
+constraint or prove that pointer 183 appears correctly on screen. The frame
+883 route is a regression target only; it must not be repeated as a way to
+search for later scenes.
+
 ## Next Gate
 
 1. Design a release-wide dialogue code layout that preserves raw control tokens
@@ -48,3 +61,5 @@ capture reaches it.
 3. Verify each pointer relocation both statically and in its own screen context.
 4. Move to title/menu and item/status renderers only through deterministic,
    bounded routes or save/debug states.
+5. Do not repeat the frame-883 opening route unless a specifically changed
+   pointer-182 candidate needs regression evidence.

@@ -1,0 +1,13 @@
+candidate=opening_ptr_182_16x16_readability_proof
+frame_budget=920
+capture_frame=883
+final_reason=lua_done
+registered_read_hits=38
+matched_read_hits=38
+matched_capture_record=True
+screen_capture=PASS
+nametable_capture=PASS
+visual_korean_glyph_review=PASS
+overall_smoke=PASS
+overall_proof=PASS
+screenshot=rom_analysis\opening_dialogue_16x16_readability_proof_capture\opening_dialogue_frame_000883_screen.png

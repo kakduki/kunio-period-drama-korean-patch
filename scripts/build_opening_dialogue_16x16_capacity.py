@@ -43,7 +43,7 @@ from build_opening_dialogue_proof import (
 )
 from build_patch import make_records, write_ips
 from compile_korean_scene_batch import CatalogError, load_catalog, parse_hex_byte, parse_hex_bytes
-from korean_tile_font import write_square_preview
+from korean_tile_font import SQUARE_FONT_PROFILES, square_font_profile, write_square_preview
 from rom_utils import REPO_ROOT
 
 
@@ -173,6 +173,10 @@ def parse_capacity_profile(raw: object) -> dict[str, object]:
 def validate_capacity_catalog(catalog_path: Path) -> dict[str, object]:
     catalog = load_catalog(catalog_path)
     profile = parse_capacity_profile(catalog.get("capacity_profile"))
+    font_profile = catalog.get("font_profile", "legacy")
+    if not isinstance(font_profile, str):
+        raise CatalogError("font_profile must be a named square Korean font profile")
+    square_font_profile(font_profile)
     records = catalog["records"]
     assert isinstance(records, list)
     if len(records) != 1 or not isinstance(records[0], dict):
@@ -224,6 +228,7 @@ def validate_capacity_catalog(catalog_path: Path) -> dict[str, object]:
         "relocation": relocation,
         "glyphs": glyphs,
         "profile": profile,
+        "font_profile": font_profile,
     }
 
 
@@ -392,6 +397,12 @@ def main() -> int:
     parser.add_argument("--reference-ips", required=True, help="English reference IPS")
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     parser.add_argument("--font", help="Korean TrueType font path")
+    parser.add_argument(
+        "--font-profile",
+        choices=tuple(sorted(SQUARE_FONT_PROFILES)),
+        default=None,
+        help="Override the catalog's named 16x16 Korean raster profile",
+    )
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--out-stem", default=DEFAULT_OUT_STEM)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
@@ -424,7 +435,11 @@ def main() -> int:
         base, ips_path, source_codes=english_codes
     )
     font = default_square_font(args.font)
-    glyph_tiles = build_square_glyph_tiles(font, pairs)
+    font_profile_name = args.font_profile or str(config["font_profile"])
+    font_settings = square_font_profile(font_profile_name)
+    glyph_tiles = build_square_glyph_tiles(
+        font, pairs, font_profile=font_profile_name
+    )
     patched, targets = apply_capacity_candidate(base, glyph_tiles, config)
     records = make_records(base, patched)
 
@@ -434,7 +449,12 @@ def main() -> int:
     write_ips(ips_output, records)
     rom_output.write_bytes(patched)
     write_square_preview(
-        list(pairs), args.preview, font_path=font, target_pixels=15, threshold=100
+        list(pairs),
+        args.preview,
+        font_path=font,
+        target_pixels=int(font_settings["target_pixels"]),
+        threshold=int(font_settings["threshold"]),
+        resample=str(font_settings["resample"]),
     )
 
     changed = changed_spans(base, patched)
@@ -466,6 +486,8 @@ def main() -> int:
             "catalog_sha256": config["catalog_sha256"],
             "korean_text": config["record"]["korean_text"],
             "font": str(font),
+            "font_profile": font_profile_name,
+            "font_profile_settings": font_settings,
             "font_preview": str(args.preview),
             "chr_bank": CHR_BANK,
             "unique_glyph_count": len(pairs),

@@ -24,6 +24,22 @@ TALL_TILE_HEIGHT = 16
 SQUARE_TILE_WIDTH = 16
 SQUARE_TILE_HEIGHT = 16
 
+# A square glyph profile is part of a candidate's compatibility contract.
+# Keep the historical proof output available, but give new candidates a
+# deliberate 16x16 profile with a little more whitespace between strokes.
+SQUARE_FONT_PROFILES: dict[str, dict[str, int | str]] = {
+    "legacy": {
+        "target_pixels": 15,
+        "threshold": 100,
+        "resample": "lanczos",
+    },
+    "readable": {
+        "target_pixels": 14,
+        "threshold": 145,
+        "resample": "box",
+    },
+}
+
 # The first proof scene has a deliberately small glyph set. These glyphs are
 # drawn as native 8x8 bitmaps instead of downscaling a TrueType outline. Each
 # row is an 8-pixel scanline; this keeps the comparison deterministic and lets
@@ -59,6 +75,16 @@ def find_korean_font(candidate: str | Path | None = None) -> Path:
     raise FileNotFoundError(
         "No Korean TrueType font found. Pass --font with a readable font path."
     )
+
+
+def square_font_profile(name: str) -> dict[str, int | str]:
+    """Return a validated copy of a named 16x16 Korean font profile."""
+
+    try:
+        return dict(SQUARE_FONT_PROFILES[name])
+    except KeyError as exc:
+        choices = ", ".join(sorted(SQUARE_FONT_PROFILES))
+        raise ValueError(f"unknown square Korean font profile {name!r}; choose: {choices}") from exc
 
 
 def _pillow():
@@ -175,6 +201,7 @@ def normalize_glyph_to_square_bitmap(
     target_pixels: int = 15,
     source_size: int = 64,
     threshold: int = 100,
+    resample: str = "lanczos",
 ) -> list[list[int]]:
     """Return a centered 16x16 bitmap for a paired 8x16 dialogue cell.
 
@@ -206,6 +233,13 @@ def normalize_glyph_to_square_bitmap(
     content = canvas.getbbox()
     if content is None:
         raise ValueError(f"font produced an empty pixel bitmap for {character!r}")
+    resample_modes = {
+        "box": Image.Resampling.BOX,
+        "lanczos": Image.Resampling.LANCZOS,
+        "nearest": Image.Resampling.NEAREST,
+    }
+    if resample not in resample_modes:
+        raise ValueError(f"unsupported square-glyph resampling mode: {resample}")
     glyph = canvas.crop(content)
     scale = min(target_pixels / glyph.width, target_pixels / glyph.height)
     resized = glyph.resize(
@@ -213,7 +247,7 @@ def normalize_glyph_to_square_bitmap(
             max(1, round(glyph.width * scale)),
             max(1, round(glyph.height * scale)),
         ),
-        Image.Resampling.LANCZOS,
+        resample_modes[resample],
     )
     bitmap = [[0 for _ in range(SQUARE_TILE_WIDTH)] for _ in range(SQUARE_TILE_HEIGHT)]
     left = (SQUARE_TILE_WIDTH - resized.width) // 2
@@ -329,6 +363,7 @@ def render_square_tiles(
     font_path: str | Path | None = None,
     target_pixels: int = 15,
     threshold: int = 100,
+    resample: str = "lanczos",
 ) -> tuple[bytes, bytes, bytes, bytes]:
     """Render one Korean syllable into four NES tiles for a 16x16 cell."""
 
@@ -338,6 +373,7 @@ def render_square_tiles(
             font_path=font_path,
             target_pixels=target_pixels,
             threshold=threshold,
+            resample=resample,
         )
     )
 
@@ -439,6 +475,7 @@ def write_square_preview(
     font_path: str | Path | None = None,
     target_pixels: int = 15,
     threshold: int = 100,
+    resample: str = "lanczos",
 ) -> None:
     """Write an enlarged preview of literal 16x16 paired-cell glyphs."""
 
@@ -458,6 +495,7 @@ def write_square_preview(
             font_path=font_path,
             target_pixels=target_pixels,
             threshold=threshold,
+            resample=resample,
         )
         origin_x = (index % columns) * cell_width + 6
         origin_y = (index // columns) * cell_height + label_height

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "batch_id": "opening_ptr_182_16x16_readability_proof",
+  "translation_basis": "Opening record 182 is checked against the original Japanese context and the English IPS structure. Kunio urges the player to hurry because Mr. Bunzo is in danger.",
+  "renderer_profile": "paired_8x16_cells_for_16x16_korean_readability_proof",
+  "font_profile": "readable",
+  "capacity_profile": {
+    "helper_start_code": "81",
+    "helper_end_code_exclusive": "CA",
+    "english_reference_source_codes": [
+      "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D",
+      "8E", "8F", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9A"
+    ],
+    "glyph_code_pairs": {
+      "\uCFE0": ["81", "82"],
+      "\uB2C8": ["83", "84"],
+      "\uC624": ["85", "86"],
+      "\uC11C": ["87", "88"],
+      "\uB458": ["89", "8A"],
+      "\uB7EC": ["8B", "8C"],
+      "\uBD84": ["8D", "8E"],
+      "\uC870": ["8F", "90"],
+      "\uB450": ["91", "92"],
+      "\uBAA9": ["93", "94"],
+      "\uC774": ["95", "96"],
+      "\uC704": ["97", "98"],
+      "\uD5D8": ["99", "9A"],
+      "\uD574": ["C0", "C1"],
+      ":": ["C8", "C9"]
+    }
+  },
+  "records": [
+    {
+      "id": "PTR-182-16X16-READABILITY-PROOF",
+      "context": "opening dialogue",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_original_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+      "expected_encoded_bytes": "81 82 83 84 85 86 C8 C9 00 87 88 89 8A 8B 8C CA F8 8D 8E 8F 90 00 91 92 93 94 95 96 00 97 98 99 9A C0 C1 CA 00 FF",
+      "base_record_length": 37,
+      "expected_length": 38,
+      "japanese_source": "Opening record 182: Kunio speaks first, followed by an urgent warning that Mr. Bunzo is in danger.",
+      "korean_text": "\uCFE0\uB2C8\uC624: \uC11C\uB458\uB7EC! \uBD84\uC870 \uB450\uBAA9\uC774 \uC704\uD5D8\uD574!",
+      "translation_basis": "The Korean keeps the original speaker identity and urgent meaning while remaining compact enough for the verified 16x16 paired-cell renderer.",
+      "status": "translation_fidelity_and_readability_proof_not_release_translation",
+      "relocation": {
+        "preserved_pointer_index": 183,
+        "preserved_pointer_rom_offset": "0x05F42",
+        "expected_pointer_cpu": "0xB1CB",
+        "preserved_record_rom_offset": "0x071DB",
+        "preserved_record_length": 21,
+        "expected_pointer_indices": [183]
+      },
+      "tokens": [
+        {"glyph_pair": "\uCFE0"},
+        {"glyph_pair": "\uB2C8"},
+        {"glyph_pair": "\uC624"},
+        {"glyph_pair": ":"},
+        {"byte": "00"},
+        {"glyph_pair": "\uC11C"},
+        {"glyph_pair": "\uB458"},
+        {"glyph_pair": "\uB7EC"},
+        {"byte": "CA"},
+        {"byte": "F8"},
+        {"glyph_pair": "\uBD84"},
+        {"glyph_pair": "\uC870"},
+        {"byte": "00"},
+        {"glyph_pair": "\uB450"},
+        {"glyph_pair": "\uBAA9"},
+        {"glyph_pair": "\uC774"},
+        {"byte": "00"},
+        {"glyph_pair": "\uC704"},
+        {"glyph_pair": "\uD5D8"},
+        {"glyph_pair": "\uD574"},
+        {"byte": "CA"},
+        {"byte": "00"},
+        {"byte": "FF"}
+      ]
+    }
+  ]
+}

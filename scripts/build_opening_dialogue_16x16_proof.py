@@ -50,7 +50,13 @@ from build_opening_dialogue_proof import (
 )
 from build_patch import make_records, write_ips
 from compile_korean_scene_batch import CatalogError, load_catalog, parse_hex_byte, parse_hex_bytes
-from korean_tile_font import find_korean_font, render_square_tiles, write_square_preview
+from korean_tile_font import (
+    SQUARE_FONT_PROFILES,
+    find_korean_font,
+    render_square_tiles,
+    square_font_profile,
+    write_square_preview,
+)
 from rom_utils import REPO_ROOT
 
 
@@ -172,9 +178,18 @@ def validate_opening_16x16_catalog(catalog_path: Path) -> dict[str, object]:
 def build_square_glyph_tiles(
     font_path: str | Path | None,
     glyph_code_pairs: dict[str, tuple[int, int]] = PAIR_GLYPH_CODES,
+    *,
+    font_profile: str = "legacy",
 ) -> dict[str, tuple[bytes, bytes, bytes, bytes]]:
+    settings = square_font_profile(font_profile)
     return {
-        glyph: render_square_tiles(glyph, font_path=font_path, target_pixels=15, threshold=100)
+        glyph: render_square_tiles(
+            glyph,
+            font_path=font_path,
+            target_pixels=int(settings["target_pixels"]),
+            threshold=int(settings["threshold"]),
+            resample=str(settings["resample"]),
+        )
         for glyph in glyph_code_pairs
     }
 
@@ -451,6 +466,12 @@ def main() -> int:
     parser.add_argument("--reference-ips", required=True, help="English reference IPS")
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     parser.add_argument("--font", help="Korean TrueType font path")
+    parser.add_argument(
+        "--font-profile",
+        choices=tuple(sorted(SQUARE_FONT_PROFILES)),
+        default="legacy",
+        help="Named 16x16 Korean raster profile",
+    )
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
@@ -469,7 +490,8 @@ def main() -> int:
     catalog = validate_opening_16x16_catalog(args.catalog)
     reference = validate_english_reference_source_slots(base, ips_path)
     font = default_square_font(args.font)
-    glyph_tiles = build_square_glyph_tiles(font)
+    font_settings = square_font_profile(args.font_profile)
+    glyph_tiles = build_square_glyph_tiles(font, font_profile=args.font_profile)
     patched, targets = apply_opening_16x16_proof(base, glyph_tiles)
     records = make_records(base, patched)
 
@@ -478,7 +500,14 @@ def main() -> int:
     rom_output = args.out_dir / f"{OUT_STEM}.nes"
     write_ips(ips_output, records)
     rom_output.write_bytes(patched)
-    write_square_preview(list(PAIR_GLYPH_CODES), args.preview, font_path=font, target_pixels=15, threshold=100)
+    write_square_preview(
+        list(PAIR_GLYPH_CODES),
+        args.preview,
+        font_path=font,
+        target_pixels=int(font_settings["target_pixels"]),
+        threshold=int(font_settings["threshold"]),
+        resample=str(font_settings["resample"]),
+    )
 
     changed = changed_spans(base, patched)
     payload = {
@@ -493,6 +522,8 @@ def main() -> int:
             "catalog_sha256": catalog["catalog_sha256"],
             "korean_text": catalog["record"]["korean_text"],
             "font": str(font),
+            "font_profile": args.font_profile,
+            "font_profile_settings": font_settings,
             "font_preview": str(args.preview),
             "renderer_entry_rom_offset": f"0x{RENDER_ENTRY_ROM_OFFSET:05X}",
             "renderer_entry_cpu": f"0x{RENDER_ENTRY_CPU:04X}",

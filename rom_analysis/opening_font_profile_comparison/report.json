@@ -1,0 +1,1093 @@
+{
+  "glyphs": [
+    "쿠",
+    "니",
+    "오",
+    "서",
+    "둘",
+    "러",
+    "분",
+    "조",
+    "두",
+    "목",
+    "이",
+    "위",
+    "험",
+    "해",
+    ":"
+  ],
+  "preview": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_font_profile_comparison\\profiles.png",
+  "recommended_profile": "malgun-bold-airy",
+  "profiles": [
+    {
+      "slug": "malgun-bold-baseline",
+      "font_path": "C:\\Windows\\Fonts\\malgunbd.ttf",
+      "target_pixels": 15,
+      "threshold": 100,
+      "resample": "lanczos",
+      "metrics": {
+        "glyph_count": 15,
+        "glyphs": [
+          {
+            "glyph": "쿠",
+            "ink_pixels": 87,
+            "ink_density": 0.3398,
+            "bounds": [
+              1,
+              0,
+              14,
+              14
+            ],
+            "components": 1,
+            "touches_edge": true
+          },
+          {
+            "glyph": "니",
+            "ink_pixels": 64,
+            "ink_density": 0.25,
+            "bounds": [
+              2,
+              0,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "오",
+            "ink_pixels": 88,
+            "ink_density": 0.3438,
+            "bounds": [
+              0,
+              1,
+              14,
+              13
+            ],
+            "components": 1,
+            "touches_edge": true
+          },
+          {
+            "glyph": "서",
+            "ink_pixels": 72,
+            "ink_density": 0.2812,
+            "bounds": [
+              1,
+              0,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "둘",
+            "ink_pixels": 112,
+            "ink_density": 0.4375,
+            "bounds": [
+              1,
+              0,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "러",
+            "ink_pixels": 89,
+            "ink_density": 0.3477,
+            "bounds": [
+              2,
+              0,
+              13,
+              14
+            ],
+            "components": 1,
+            "touches_edge": true
+          },
+          {
+            "glyph": "분",
+            "ink_pixels": 121,
+            "ink_density": 0.4727,
+            "bounds": [
+              0,
+              0,
+              14,
+              14
+            ],
+            "components": 3,
+            "touches_edge": true
+          },
+          {
+            "glyph": "조",
+            "ink_pixels": 90,
+            "ink_density": 0.3516,
+            "bounds": [
+              0,
+              2,
+              14,
+              13
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "두",
+            "ink_pixels": 82,
+            "ink_density": 0.3203,
+            "bounds": [
+              1,
+              0,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "목",
+            "ink_pixels": 92,
+            "ink_density": 0.3594,
+            "bounds": [
+              1,
+              0,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "이",
+            "ink_pixels": 78,
+            "ink_density": 0.3047,
+            "bounds": [
+              2,
+              0,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "위",
+            "ink_pixels": 91,
+            "ink_density": 0.3555,
+            "bounds": [
+              1,
+              0,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": true
+          },
+          {
+            "glyph": "험",
+            "ink_pixels": 117,
+            "ink_density": 0.457,
+            "bounds": [
+              1,
+              0,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          },
+          {
+            "glyph": "해",
+            "ink_pixels": 113,
+            "ink_density": 0.4414,
+            "bounds": [
+              1,
+              0,
+              13,
+              14
+            ],
+            "components": 1,
+            "touches_edge": true
+          },
+          {
+            "glyph": ":",
+            "ink_pixels": 36,
+            "ink_density": 0.1406,
+            "bounds": [
+              5,
+              0,
+              9,
+              14
+            ],
+            "components": 2,
+            "touches_edge": true
+          }
+        ],
+        "average_ink_density": 0.3469,
+        "minimum_ink_density": 0.1406,
+        "maximum_ink_density": 0.4727,
+        "minimum_pairwise_hamming": 36,
+        "duplicate_pairs": [],
+        "edge_touching_glyph_count": 15,
+        "triage_pass": false
+      }
+    },
+    {
+      "slug": "malgun-bold-airy",
+      "font_path": "C:\\Windows\\Fonts\\malgunbd.ttf",
+      "target_pixels": 14,
+      "threshold": 145,
+      "resample": "box",
+      "metrics": {
+        "glyph_count": 15,
+        "glyphs": [
+          {
+            "glyph": "쿠",
+            "ink_pixels": 71,
+            "ink_density": 0.2773,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "니",
+            "ink_pixels": 58,
+            "ink_density": 0.2266,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "오",
+            "ink_pixels": 62,
+            "ink_density": 0.2422,
+            "bounds": [
+              1,
+              2,
+              14,
+              13
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "서",
+            "ink_pixels": 61,
+            "ink_density": 0.2383,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "둘",
+            "ink_pixels": 69,
+            "ink_density": 0.2695,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "러",
+            "ink_pixels": 76,
+            "ink_density": 0.2969,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "분",
+            "ink_pixels": 86,
+            "ink_density": 0.3359,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "조",
+            "ink_pixels": 55,
+            "ink_density": 0.2148,
+            "bounds": [
+              1,
+              2,
+              14,
+              13
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "두",
+            "ink_pixels": 82,
+            "ink_density": 0.3203,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "목",
+            "ink_pixels": 81,
+            "ink_density": 0.3164,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "이",
+            "ink_pixels": 66,
+            "ink_density": 0.2578,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "위",
+            "ink_pixels": 77,
+            "ink_density": 0.3008,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "험",
+            "ink_pixels": 97,
+            "ink_density": 0.3789,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "해",
+            "ink_pixels": 79,
+            "ink_density": 0.3086,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": ":",
+            "ink_pixels": 24,
+            "ink_density": 0.0938,
+            "bounds": [
+              6,
+              1,
+              9,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          }
+        ],
+        "average_ink_density": 0.2719,
+        "minimum_ink_density": 0.0938,
+        "maximum_ink_density": 0.3789,
+        "minimum_pairwise_hamming": 28,
+        "duplicate_pairs": [],
+        "edge_touching_glyph_count": 0,
+        "triage_pass": true
+      }
+    },
+    {
+      "slug": "nanum-extra-bold",
+      "font_path": "C:\\Windows\\Fonts\\NanumGothicExtraBold.ttf",
+      "target_pixels": 14,
+      "threshold": 135,
+      "resample": "box",
+      "metrics": {
+        "glyph_count": 15,
+        "glyphs": [
+          {
+            "glyph": "쿠",
+            "ink_pixels": 57,
+            "ink_density": 0.2227,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "니",
+            "ink_pixels": 57,
+            "ink_density": 0.2227,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "오",
+            "ink_pixels": 66,
+            "ink_density": 0.2578,
+            "bounds": [
+              1,
+              2,
+              14,
+              13
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "서",
+            "ink_pixels": 66,
+            "ink_density": 0.2578,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "둘",
+            "ink_pixels": 84,
+            "ink_density": 0.3281,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "러",
+            "ink_pixels": 71,
+            "ink_density": 0.2773,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "분",
+            "ink_pixels": 78,
+            "ink_density": 0.3047,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "조",
+            "ink_pixels": 58,
+            "ink_density": 0.2266,
+            "bounds": [
+              1,
+              2,
+              14,
+              12
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "두",
+            "ink_pixels": 68,
+            "ink_density": 0.2656,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "목",
+            "ink_pixels": 71,
+            "ink_density": 0.2773,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "이",
+            "ink_pixels": 71,
+            "ink_density": 0.2773,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "위",
+            "ink_pixels": 80,
+            "ink_density": 0.3125,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "험",
+            "ink_pixels": 81,
+            "ink_density": 0.3164,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 5,
+            "touches_edge": false
+          },
+          {
+            "glyph": "해",
+            "ink_pixels": 92,
+            "ink_density": 0.3594,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 4,
+            "touches_edge": false
+          },
+          {
+            "glyph": ":",
+            "ink_pixels": 24,
+            "ink_density": 0.0938,
+            "bounds": [
+              6,
+              1,
+              9,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          }
+        ],
+        "average_ink_density": 0.2667,
+        "minimum_ink_density": 0.0938,
+        "maximum_ink_density": 0.3594,
+        "minimum_pairwise_hamming": 35,
+        "duplicate_pairs": [],
+        "edge_touching_glyph_count": 0,
+        "triage_pass": true
+      }
+    },
+    {
+      "slug": "kopub-dotum-bold",
+      "font_path": "C:\\Windows\\Fonts\\KoPubDotumBold.ttf",
+      "target_pixels": 14,
+      "threshold": 135,
+      "resample": "box",
+      "metrics": {
+        "glyph_count": 15,
+        "glyphs": [
+          {
+            "glyph": "쿠",
+            "ink_pixels": 74,
+            "ink_density": 0.2891,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "니",
+            "ink_pixels": 52,
+            "ink_density": 0.2031,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "오",
+            "ink_pixels": 77,
+            "ink_density": 0.3008,
+            "bounds": [
+              1,
+              1,
+              14,
+              13
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "서",
+            "ink_pixels": 56,
+            "ink_density": 0.2188,
+            "bounds": [
+              3,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "둘",
+            "ink_pixels": 91,
+            "ink_density": 0.3555,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "러",
+            "ink_pixels": 67,
+            "ink_density": 0.2617,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "분",
+            "ink_pixels": 80,
+            "ink_density": 0.3125,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "조",
+            "ink_pixels": 79,
+            "ink_density": 0.3086,
+            "bounds": [
+              1,
+              1,
+              14,
+              13
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "두",
+            "ink_pixels": 68,
+            "ink_density": 0.2656,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "목",
+            "ink_pixels": 75,
+            "ink_density": 0.293,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "이",
+            "ink_pixels": 70,
+            "ink_density": 0.2734,
+            "bounds": [
+              2,
+              1,
+              12,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "위",
+            "ink_pixels": 72,
+            "ink_density": 0.2812,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "험",
+            "ink_pixels": 88,
+            "ink_density": 0.3438,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "해",
+            "ink_pixels": 86,
+            "ink_density": 0.3359,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": ":",
+            "ink_pixels": 27,
+            "ink_density": 0.1055,
+            "bounds": [
+              6,
+              1,
+              9,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          }
+        ],
+        "average_ink_density": 0.2766,
+        "minimum_ink_density": 0.1055,
+        "maximum_ink_density": 0.3555,
+        "minimum_pairwise_hamming": 27,
+        "duplicate_pairs": [],
+        "edge_touching_glyph_count": 0,
+        "triage_pass": true
+      }
+    },
+    {
+      "slug": "gulim-screen",
+      "font_path": "C:\\Windows\\Fonts\\gulim.ttc",
+      "target_pixels": 14,
+      "threshold": 135,
+      "resample": "box",
+      "metrics": {
+        "glyph_count": 15,
+        "glyphs": [
+          {
+            "glyph": "쿠",
+            "ink_pixels": 37,
+            "ink_density": 0.1445,
+            "bounds": [
+              1,
+              1,
+              13,
+              8
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "니",
+            "ink_pixels": 31,
+            "ink_density": 0.1211,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "오",
+            "ink_pixels": 34,
+            "ink_density": 0.1328,
+            "bounds": [
+              2,
+              2,
+              13,
+              13
+            ],
+            "components": 5,
+            "touches_edge": false
+          },
+          {
+            "glyph": "서",
+            "ink_pixels": 38,
+            "ink_density": 0.1484,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "둘",
+            "ink_pixels": 64,
+            "ink_density": 0.25,
+            "bounds": [
+              2,
+              1,
+              13,
+              13
+            ],
+            "components": 5,
+            "touches_edge": false
+          },
+          {
+            "glyph": "러",
+            "ink_pixels": 35,
+            "ink_density": 0.1367,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 4,
+            "touches_edge": false
+          },
+          {
+            "glyph": "분",
+            "ink_pixels": 23,
+            "ink_density": 0.0898,
+            "bounds": [
+              2,
+              2,
+              13,
+              13
+            ],
+            "components": 5,
+            "touches_edge": false
+          },
+          {
+            "glyph": "조",
+            "ink_pixels": 34,
+            "ink_density": 0.1328,
+            "bounds": [
+              2,
+              2,
+              13,
+              13
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "두",
+            "ink_pixels": 15,
+            "ink_density": 0.0586,
+            "bounds": [
+              2,
+              1,
+              12,
+              9
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "목",
+            "ink_pixels": 34,
+            "ink_density": 0.1328,
+            "bounds": [
+              1,
+              1,
+              14,
+              12
+            ],
+            "components": 5,
+            "touches_edge": false
+          },
+          {
+            "glyph": "이",
+            "ink_pixels": 38,
+            "ink_density": 0.1484,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "위",
+            "ink_pixels": 45,
+            "ink_density": 0.1758,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "험",
+            "ink_pixels": 63,
+            "ink_density": 0.2461,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 5,
+            "touches_edge": false
+          },
+          {
+            "glyph": "해",
+            "ink_pixels": 48,
+            "ink_density": 0.1875,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 4,
+            "touches_edge": false
+          },
+          {
+            "glyph": ":",
+            "ink_pixels": 14,
+            "ink_density": 0.0547,
+            "bounds": [
+              6,
+              1,
+              8,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          }
+        ],
+        "average_ink_density": 0.144,
+        "minimum_ink_density": 0.0547,
+        "maximum_ink_density": 0.25,
+        "minimum_pairwise_hamming": 24,
+        "duplicate_pairs": [],
+        "edge_touching_glyph_count": 0,
+        "triage_pass": false
+      }
+    }
+  ]
+}

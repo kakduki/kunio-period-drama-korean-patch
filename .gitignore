@@ -8,6 +8,7 @@ output/opening_dialogue_16x16_capacity_tier1/
 output/opening_dialogue_16x16_capacity_tier2/
 output/opening_dialogue_16x16_relocation_proof/
 output/opening_dialogue_16x16_speaker_separator_proof/
+output/opening_dialogue_16x16_readability_proof/
 output/opening_dialogue_bank8_page_switch_proof/
 output/opening_dialogue_bank8_persistent_page_proof/
 output/font_comparison_handcrafted/
@@ -33,6 +34,8 @@ rom_analysis/opening_dialogue_16x16_relocation_proof_capture/*.bin
 rom_analysis/opening_dialogue_16x16_relocation_proof_capture/*.gd
 rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/*.bin
 rom_analysis/opening_dialogue_16x16_speaker_separator_proof_capture/*.gd
+rom_analysis/opening_dialogue_16x16_readability_proof_capture/*.bin
+rom_analysis/opening_dialogue_16x16_readability_proof_capture/*.gd
 rom_analysis/opening_dialogue_renderer_probe/*.bin
 rom_analysis/opening_dialogue_renderer_probe/*.gd
 rom_analysis/opening_dialogue_renderer_probe/dma.tsv

@@ -1,0 +1,2 @@
+id,context,rom_offset,prg_bank,cpu_address,japanese_context,korean_text,font_profile,runtime_status,visual_status,decision
+PTR-182-16X16-READABILITY-PROOF,opening dialogue,0x071B6,1,0xB1A6,"Opening record 182: Kunio speaks first, followed by an urgent warning that Mr. Bunzo is in danger.",쿠니오: 서둘러! 분조 두목이 위험해!,readable,PASS,PASS,PASS_FOR_OPENING_PROOF_ONLY

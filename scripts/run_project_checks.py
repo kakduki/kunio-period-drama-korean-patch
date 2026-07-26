@@ -19,6 +19,8 @@ KEY_PYTHON = [
     "scripts/analyze_opening_dialogue_proof_capture.py",
     "scripts/analyze_opening_dialogue_renderer_probe.py",
     "scripts/analyze_opening_mapper_trace.py",
+    "scripts/audit_korean_square_font.py",
+    "scripts/generate_readability_proof_artifacts.py",
     "scripts/audit_opening_font_runtime_mapping.py",
     "scripts/compile_korean_scene_batch.py",
     "scripts/extract_english_reference_script.py",
@@ -103,6 +105,8 @@ KEY_PYTHON = [
     "scripts/test_analyze_opening_dialogue_proof_capture.py",
     "scripts/test_analyze_opening_dialogue_renderer_probe.py",
     "scripts/test_analyze_opening_mapper_trace.py",
+    "scripts/test_audit_korean_square_font.py",
+    "scripts/test_generate_readability_proof_artifacts.py",
     "scripts/test_audit_opening_font_runtime_mapping.py",
     "scripts/test_compile_korean_scene_batch.py",
     "scripts/test_analyze_reference_ips.py",
@@ -181,6 +185,7 @@ LUA_TARGETS = [
     "lua/kunio_opening_dialogue_16x16_capacity_tier2_target.lua",
     "lua/kunio_opening_dialogue_16x16_relocation_proof_target.lua",
     "lua/kunio_opening_dialogue_16x16_speaker_separator_proof_target.lua",
+    "lua/kunio_opening_dialogue_16x16_readability_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
 ]
@@ -319,6 +324,8 @@ def main() -> int:
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])
     run("opening dialogue renderer probe analyzer", ["scripts/test_analyze_opening_dialogue_renderer_probe.py"])
     run("opening MMC3 mapper trace analyzer", ["scripts/test_analyze_opening_mapper_trace.py"])
+    run("Korean 16x16 font comparison", ["scripts/test_audit_korean_square_font.py"])
+    run("readability proof pipeline artifacts", ["scripts/test_generate_readability_proof_artifacts.py"])
     run("opening font runtime mapping audit", ["scripts/test_audit_opening_font_runtime_mapping.py"])
     run("Korean scene-batch compiler", ["scripts/test_compile_korean_scene_batch.py"])
     run("opening dialogue proof patch", ["scripts/test_build_opening_dialogue_proof.py"])

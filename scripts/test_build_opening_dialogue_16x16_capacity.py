@@ -49,13 +49,14 @@ def make_fixture() -> bytes:
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     catalogs = (
-        ("opening_ptr_182_16x16_capacity_tier1.json", tuple(range(0x81, 0x9B)), 13, 37, False),
+        ("opening_ptr_182_16x16_capacity_tier1.json", tuple(range(0x81, 0x9B)), 13, 37, False, "legacy"),
         (
             "opening_ptr_182_16x16_capacity_tier2.json",
             tuple(range(0x81, 0x9B)) + tuple(range(0xC0, 0xC8)),
             17,
             37,
             False,
+            "legacy",
         ),
         (
             "opening_ptr_182_16x16_relocation_proof.json",
@@ -63,6 +64,7 @@ def main() -> int:
             17,
             45,
             True,
+            "legacy",
         ),
         (
             "opening_ptr_182_16x16_speaker_separator_proof.json",
@@ -70,9 +72,25 @@ def main() -> int:
             18,
             47,
             True,
+            "legacy",
+        ),
+        (
+            "opening_ptr_182_16x16_readability_proof.json",
+            tuple(range(0x81, 0x9B)) + (0xC0, 0xC1, 0xC8, 0xC9),
+            15,
+            38,
+            True,
+            "readable",
         ),
     )
-    for filename, expected_codes, expected_glyph_count, expected_length, expects_relocation in catalogs:
+    for (
+        filename,
+        expected_codes,
+        expected_glyph_count,
+        expected_length,
+        expects_relocation,
+        expected_font_profile,
+    ) in catalogs:
         config = validate_capacity_catalog(root / "text_data" / "korean_scene_batches" / filename)
         profile = config["profile"]
         assert isinstance(profile, dict)
@@ -82,6 +100,7 @@ def main() -> int:
         assert source_codes == expected_codes
         assert len(pairs) == expected_glyph_count
         assert len(config["encoded"]) == expected_length
+        assert config["font_profile"] == expected_font_profile
 
         glyphs = {
             glyph: tuple(bytes([index + part]) * 16 for part in range(1, 5))
@@ -97,7 +116,9 @@ def main() -> int:
             code for code in source_codes
         } | {code + 0x20 for code in source_codes}
         if expects_relocation:
-            helper = helper_code_for_range(start_code=0x81, end_code_exclusive=0xC8)
+            helper_end = profile["helper_end_code_exclusive"]
+            assert isinstance(helper_end, int)
+            helper = helper_code_for_range(start_code=0x81, end_code_exclusive=helper_end)
             relocated_rom_offset = CODE_CAVE_ROM_OFFSET + len(helper)
             assert patched[NEIGHBOR_POINTER_ROM_OFFSET:NEIGHBOR_POINTER_ROM_OFFSET + 2] == (
                 CODE_CAVE_CPU + len(helper)
