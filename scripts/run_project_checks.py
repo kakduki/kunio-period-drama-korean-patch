@@ -38,6 +38,7 @@ KEY_PYTHON = [
     "scripts/build_opening_dialogue_8x16_proof.py",
     "scripts/build_opening_dialogue_16x16_proof.py",
     "scripts/build_opening_dialogue_16x16_capacity.py",
+    "scripts/build_opening_dialogue_182_183_16x16.py",
     "scripts/build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/build_v041_conflict_safe_candidate.py",
@@ -88,6 +89,7 @@ KEY_PYTHON = [
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
+    "scripts/paired_dialogue_helper.py",
     "scripts/korean_tile_font.py",
     "scripts/prepare_next_manual_run.py",
     "scripts/preflight_manual_fceux.py",
@@ -123,6 +125,7 @@ KEY_PYTHON = [
     "scripts/test_build_opening_dialogue_8x16_proof.py",
     "scripts/test_build_opening_dialogue_16x16_proof.py",
     "scripts/test_build_opening_dialogue_16x16_capacity.py",
+    "scripts/test_build_opening_dialogue_182_183_16x16.py",
     "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/test_candidate_pipeline_reports.py",
@@ -144,6 +147,7 @@ KEY_PYTHON = [
     "scripts/test_preflight_manual_fceux.py",
     "scripts/test_preflight_release_gate_action.py",
     "scripts/test_preflight_release_gate_action_bundle.py",
+    "scripts/test_paired_dialogue_helper.py",
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_record_primary_visual_review.py",
     "scripts/test_manual_capture_cards_readable.py",
@@ -186,6 +190,9 @@ LUA_TARGETS = [
     "lua/kunio_opening_dialogue_16x16_relocation_proof_target.lua",
     "lua/kunio_opening_dialogue_16x16_speaker_separator_proof_target.lua",
     "lua/kunio_opening_dialogue_16x16_readability_proof_target.lua",
+    "lua/kunio_opening_ptr_183_base_target.lua",
+    "lua/kunio_opening_ptr_182_183_16x16_p182_target.lua",
+    "lua/kunio_opening_ptr_182_183_16x16_p183_target.lua",
     "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
 ]
@@ -193,6 +200,7 @@ LUA_TARGETS = [
 LUA_SCRIPTS = [
     "lua/kunio_auto_dump.lua",
     "lua/kunio_opening_dialogue_proof.lua",
+    "lua/kunio_opening_ptr_183_probe.lua",
     "lua/kunio_opening_mapper_trace.lua",
     "lua/kunio_opening_dialogue_renderer_probe.lua",
     "lua/kunio_autoplay_watch.lua",
@@ -332,9 +340,11 @@ def main() -> int:
     run("opening dialogue 8x16 proof patch", ["scripts/test_build_opening_dialogue_8x16_proof.py"])
     run("opening dialogue paired 16x16 proof patch", ["scripts/test_build_opening_dialogue_16x16_proof.py"])
     run("opening dialogue catalog-driven paired 16x16 capacity", ["scripts/test_build_opening_dialogue_16x16_capacity.py"])
+    run("two-record opening Korean 16x16 candidate", ["scripts/test_build_opening_dialogue_182_183_16x16.py"])
     run("opening dialogue Bank 8 page-switch proof", ["scripts/test_build_opening_dialogue_bank8_page_switch_proof.py"])
     run("opening dialogue Bank 8 persistent page proof", ["scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py"])
     run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])
+    run("record-scoped paired dialogue helper", ["scripts/test_paired_dialogue_helper.py"])
     run("reference IPS analyzer", ["scripts/test_analyze_reference_ips.py"])
     run(
         "English reference script extractor",

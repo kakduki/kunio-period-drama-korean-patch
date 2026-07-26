@@ -2,19 +2,22 @@
 
 ## Current Result
 
-The project now has one bounded, native proof of readable Korean dialogue:
+The project now has a two-screen, bounded proof of readable Korean dialogue:
 
 - Base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
 - English reference IPS SHA-256:
   `cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad`.
 - Opening pointer 182: ROM `0x071B6`, PRG Bank 1, CPU `$B1A6`.
-- Candidate record: 38 bytes, one-byte growth, with pointer 183 preserved at
-  the approved code-cave tail.
-- Native FCEUX frame 883: bounded completion, 38/38 target reads, screenshot,
-  and visual readability all pass.
+- Opening pointer 183: moved from `$B1CB` to ROM `0x071D7` / CPU `$B1C7`;
+  pointer 184 remains `$B1E0`.
+- Candidate ROM MD5: `d1bd6e285c818ed60890282d8704f80a`.
+- Native FCEUX frame 883: pointer 182, 33/33 target reads, screenshot, and
+  visual readability pass.
+- Native FCEUX frame 1095: pointer 183, 25/25 target reads, screenshot, and
+  visual readability pass.
 
-This is a development proof, not a release build and not evidence that every
-screen uses the same text renderer.
+This is a development candidate with two verified opening contexts. It is not
+a release build and does not imply that other screens share this renderer.
 
 ## What Stops Here
 
@@ -54,15 +57,15 @@ The public English patch is a structural reference only:
 
 ## Next Work
 
-1. Use the existing English pointer map and Japanese catalog to choose a
-   second record whose scene can be reached by a short deterministic menu
-   route, save state, debug state, or verified cheat route.
-2. Create a target-specific Lua script before launching FCEUX. It must never
-   depend on free-form combat or boss progression.
+1. Use the Japanese pointer catalog and English structural map to select the
+   next one or two records only when a short route, save state, debug state,
+   or verified cheat state can reach their exact screen.
+2. Create the target Lua table and a hard capture stop condition before any
+   FCEUX launch. It must never depend on free-form combat or boss progression.
 3. Extend Korean glyph capacity only after the exact new screen proves its CHR
-   mapping. Do not reuse the opening's scene-local allocation blindly.
-4. Verify pointer 183 separately before relying on its relocation in a broader
-   batch.
+   mapping. The current 19-glyph pool is opening-scene-local.
+4. Preserve raw `0xBB` as a renderer control. Pointer 183 now proves that it
+   can coexist with Korean text; it must not be reassigned as a Korean glyph.
 5. Promote only context-level passes into a release candidate; require manual
    visual evidence for high-risk release rows, not for every exploratory
    static build.
@@ -74,3 +77,5 @@ The public English patch is a structural reference only:
 - Readability comparison: `rom_analysis/opening_font_profile_comparison/report.md`
 - Native proof:
   `rom_analysis/opening_dialogue_16x16_readability_proof_capture/analysis.md`
+- Two-record runtime proof:
+  `rom_analysis/opening_ptr_182_183_16x16_readability_runtime.md`

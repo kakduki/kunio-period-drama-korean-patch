@@ -1,6 +1,6 @@
 # Korean Dialogue Font Readability Gate
 
-Status: **PASS_FOR_OPENING_PAIRED_16X16_READABILITY_PROOF**
+Status: **PASS_FOR_TWO_OPENING_CONTEXTS_ONLY**
 
 This development gate measures a real native dialogue frame. It is not a
 release gate and it does not authorize bulk translation.
@@ -15,6 +15,7 @@ release gate and it does not authorize bulk translation.
 | paired 16x16 expanded record | same scene and frame | 45/45 reads, `lua_done`, and capture pass | PASS: `쿠니마사 어서 움직여!` / `분조 두목이 큰일이야!` is readable with preserved spaces and no visible scene damage | opening record and relocation proof |
 | paired 16x16 speaker separator | same scene and frame | 47/47 reads, `lua_done`, and capture pass | PASS: `쿠니마사: 어서 움직여!` / `분조 두목이 큰일이야!` keeps the name, colon, spaces, and punctuation distinct | opening speaker-separator proof only |
 | paired 16x16 readable profile | same scene and frame | 38/38 reads, `lua_done`, and capture pass | PASS: 14-pixel Malgun Gothic Bold with BOX resampling retains interior whitespace and keeps both Korean lines legible | preferred opening readability prototype only |
+| two-record opening candidate | pointer 182 frame 883; pointer 183 frame 1095 | 33/33 and 25/25 reads, `lua_done`, and captures pass | PASS: both Korean dialogue screens are legible; pointer 183 preserves the native `0xBB` speaker separator and adds normal spacing | two verified opening contexts only |
 
 ## Evidence
 
@@ -32,26 +33,28 @@ release gate and it does not authorize bulk translation.
 - Readability-profile metrics: `rom_analysis/opening_font_profile_comparison/report.md`
 - Readability-profile full screen: `rom_analysis/opening_dialogue_16x16_readability_proof_capture/opening_dialogue_frame_000883_screen.png`
 - Readability-profile smoke report: `rom_analysis/opening_dialogue_16x16_readability_proof_capture/analysis.md`
+- Two-record pointer-182 screenshot: `rom_analysis/opening_ptr_182_183_16x16_p182_capture/opening_dialogue_frame_000883_screen.png`
+- Two-record pointer-182 smoke report: `rom_analysis/opening_ptr_182_183_16x16_p182_capture/analysis.md`
+- Two-record pointer-183 screenshot: `rom_analysis/opening_ptr_182_183_16x16_p183_capture/opening_dialogue_frame_001095_screen.png`
+- Two-record pointer-183 smoke report: `rom_analysis/opening_ptr_182_183_16x16_p183_capture/analysis.md`
 
 The route ends at frame 883 with `lua_done`. It is not an autoplay session and
 does not wait for later gameplay or boss events.
 
 ## Scope Limit
 
-This pass covers one dialogue renderer, pointer 182, and one opening screen.
-The 18-glyph allocation includes a local colon and is a scene-local proof, not
-a complete Korean character set. The raw `0xBB` separator is still a separate
-control-token problem. The relocated pointer-183 record is statically
-preserved, but its own on-screen result is `UNKNOWN` until a separate bounded
-capture reaches it.
+This pass covers one dialogue renderer and two opening screens, pointer 182
+and pointer 183. The 19-glyph allocation includes a local 16x16 colon for
+pointer 182 and remains a scene-local proof, not a complete Korean character
+set. The raw `0xBB` separator is preserved and visibly works in pointer 183;
+it remains a control token rather than an allocatable Korean glyph slot.
 
 ### Readability-Profile Scope
 
-The 15-glyph readability allocation is a scene-local proof, not a complete
-Korean character set. It does not remove the raw `0xBB` control-token
-constraint or prove that pointer 183 appears correctly on screen. The frame
-883 route is a regression target only; it must not be repeated as a way to
-search for later scenes.
+The earlier 15-glyph readability allocation is superseded by the 19-glyph
+two-record candidate for these two contexts. Neither allocation is a complete
+Korean character set. The frame-883 and frame-1095 routes are regression
+targets only; they must not be repeated as a way to search for later scenes.
 
 ## Next Gate
 

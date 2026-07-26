@@ -1,0 +1,2 @@
+frame	label	cpu_range	expected_bytes	active_expected_match	record_snapshot
+1095	opening_ptr_183_base_context	$B1CB-$B1DF	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF

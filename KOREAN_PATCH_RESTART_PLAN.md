@@ -1,5 +1,26 @@
 # 쿠니오 시대극 한국어 패치 재시작 계획
 
+## Current Checkpoint Update
+
+This update supersedes any older current-status statement below while keeping
+the original restart rules and phased plan intact.
+
+- Blind opening autoplay remains retired. Every FCEUX run must name one target,
+  impose a hard frame cap, and stop immediately after its capture condition.
+- The English IPS remains a structural reference only: pointer table, source
+  slots, CHR ownership, and relocation behavior. No English text, code, or
+  pixels are copied.
+- The current readable Korean candidate has two independently verified opening
+  contexts: pointer 182 at ROM `0x071B6` / `$B1A6` (33/33 reads, frame 883) and
+  pointer 183 at ROM `0x071D7` / `$B1C7` (25/25 reads, frame 1095).
+- Pointer 183 is no longer `UNKNOWN`; its relocated record, native separator
+  byte `0xBB`, readable Korean spacing, and on-screen output all passed.
+- The current candidate MD5 is `d1bd6e285c818ed60890282d8704f80a`. Its
+  19-glyph 16x16 allocation is still scene-local and is not a release font.
+- The next unit of work is one context-confirmed record or renderer family at
+  a time, using a short deterministic route, save/debug state, or verified
+  cheat state. Do not resume unbounded game progression to discover text.
+
 상태: 현재 작업 기준
 
 ## 결론

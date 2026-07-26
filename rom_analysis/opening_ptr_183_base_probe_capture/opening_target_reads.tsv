@@ -1,0 +1,22 @@
+frame	label	cpu_addr	value	active_expected_match	record_snapshot
+1037	opening_ptr_183_base_context	$B1CB	85	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1039	opening_ptr_183_base_context	$B1CC	8A	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1041	opening_ptr_183_base_context	$B1CD	94	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1043	opening_ptr_183_base_context	$B1CE	BB	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1045	opening_ptr_183_base_context	$B1CF	88	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1047	opening_ptr_183_base_context	$B1D0	96	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1049	opening_ptr_183_base_context	$B1D1	9F	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1051	opening_ptr_183_base_context	$B1D2	8B	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1053	opening_ptr_183_base_context	$B1D3	8B	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1055	opening_ptr_183_base_context	$B1D4	AE	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1057	opening_ptr_183_base_context	$B1D5	CA	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1059	opening_ptr_183_base_context	$B1D6	85	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1061	opening_ptr_183_base_context	$B1D7	9F	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1063	opening_ptr_183_base_context	$B1D8	91	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1065	opening_ptr_183_base_context	$B1D9	8C	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1067	opening_ptr_183_base_context	$B1DA	93	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1069	opening_ptr_183_base_context	$B1DB	9F	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1071	opening_ptr_183_base_context	$B1DC	8C	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1073	opening_ptr_183_base_context	$B1DD	90	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1075	opening_ptr_183_base_context	$B1DE	CA	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF
+1077	opening_ptr_183_base_context	$B1DF	FF	true	85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF

@@ -1,0 +1,4 @@
+frame	reason	registered	hits	detail
+0	lua_start	21	0	advance=900-910;target=opening_ptr_183_base_context
+1095	capture	21	21	screenshot=true;target_match=true
+1095	lua_done	21	21	captured=true;complete_frame=1077

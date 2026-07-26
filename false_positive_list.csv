@@ -1,6 +1,5 @@
 candidate,reason,classification,disposition
-Raw 0xBB inside dialogue records,Renderer-special speaker separator; it is not a Korean glyph slot.,control_token,Preserve unless a separately verified helper handles it.
-Pointer 183 display,The neighbour is statically relocated but has no independent screen capture.,context_unknown,Do not translate or promote before a bounded target capture.
+Raw 0xBB outside verified records,"0xBB is a renderer-special speaker separator, not a Korean glyph slot. Pointer 183 proves it can be preserved inside a Korean record.",control_token,"Preserve it exactly; require a context capture before using it in another record."
 Other Bank 1 pointer rows,"Pointer correspondence proves structure, not the active screen or Korean rendering route.",structural_only,"Keep as catalog candidates, not patch bytes."
-Base-ROM Japanese glyph-looking bytes,The base Japanese dialogue glyph map is not fully decoded.,encoding_unknown,Do not treat byte resemblance as translatable text.
-Dynamic CHR Bank 8 paging,The recorded page-switch and persistent-page probes failed at runtime.,failed_renderer_experiment,Excluded from the current fixed-Bank-7 path.
+Base-ROM Japanese glyph-looking bytes,"The base Japanese dialogue glyph map is not fully decoded.",encoding_unknown,"Do not treat byte resemblance as translatable text."
+Dynamic CHR Bank 8 paging,"The recorded page-switch and persistent-page probes failed at runtime.",failed_renderer_experiment,"Excluded from the current fixed-Bank-7 path."

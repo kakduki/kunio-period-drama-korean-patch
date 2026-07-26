@@ -28,6 +28,7 @@ from build_opening_dialogue_8x16_proof import (
     ENTRY_HOOK,
     HELPER_CODE,
     MARKER_HOOK,
+    MARKER_HELPER_CPU,
     RENDER_ENTRY_CPU,
     RENDER_ENTRY_ORIGINAL,
     RENDER_ENTRY_ROM_OFFSET,
@@ -233,22 +234,48 @@ def add_target(
     targets.append({"kind": kind, "rom_offset": rom_offset, "length": length, **extra})
 
 
-def apply_paired_opening_candidate(
+def _source_in_ranges(code: int, source_ranges: tuple[tuple[int, int], ...]) -> bool:
+    return any(start <= code < end for start, end in source_ranges)
+
+
+def _assert_scoped_changes(
+    base: bytes,
+    patched: bytes,
+    targets: list[dict[str, object]],
+    *,
+    label: str,
+) -> None:
+    allowed = [
+        (int(target["rom_offset"]), int(target["rom_offset"]) + int(target["length"]))
+        for target in targets
+    ]
+    escaped = [
+        offset
+        for offset, (old, new) in enumerate(zip(base, patched))
+        if old != new and not any(start <= offset < end for start, end in allowed)
+    ]
+    if escaped:
+        raise AssertionError(f"{label} changed {len(escaped)} byte(s) outside its allowlist")
+
+
+def apply_paired_renderer_assets(
     base: bytes,
     glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
     *,
-    proof_record: bytes,
     glyph_code_pairs: dict[str, tuple[int, int]],
     helper_code: bytes,
     helper_start_code: int,
     helper_end_code_exclusive: int,
+    source_ranges: tuple[tuple[int, int], ...] | None = None,
+    marker_helper_cpu: int = MARKER_HELPER_CPU,
 ) -> tuple[bytes, list[dict[str, object]]]:
-    """Apply one bounded paired-cell record and a parameterized helper range."""
+    """Apply bounded paired-cell CHR assets and renderer hooks.
 
-    if len(proof_record) != RECORD_LENGTH:
-        raise AssertionError("paired 16x16 record length invariant failed")
-    if base[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] != ORIGINAL_RECORD:
-        raise ValueError("opening source record does not match the verified base bytes")
+    Text-record placement remains separate so a context-specific builder can
+    safely pack more than one adjacent record without duplicating the proven
+    renderer/CHR allowlist logic.
+    """
+
     if base[RENDER_ENTRY_ROM_OFFSET:RENDER_ENTRY_ROM_OFFSET + len(RENDER_ENTRY_ORIGINAL)] != RENDER_ENTRY_ORIGINAL:
         raise ValueError("renderer entry bytes do not match the verified base ROM")
     if base[RENDER_MARKER_ROM_OFFSET:RENDER_MARKER_ROM_OFFSET + len(RENDER_MARKER_ORIGINAL)] != RENDER_MARKER_ORIGINAL:
@@ -263,7 +290,8 @@ def apply_paired_opening_candidate(
         raise ValueError("paired 16x16 candidate needs at least one glyph pair")
     if len(set(source_codes)) != len(source_codes):
         raise AssertionError("paired 16x16 candidate reuses a source slot across tile halves")
-    if not all(helper_start_code <= code < helper_end_code_exclusive for code in source_codes):
+    active_ranges = source_ranges or ((helper_start_code, helper_end_code_exclusive),)
+    if not all(_source_in_ranges(code, active_ranges) for code in source_codes):
         raise AssertionError("paired 16x16 source slot is outside the helper range")
     if not all(code + BOTTOM_TILE_DELTA <= 0xFF for code in source_codes):
         raise AssertionError("paired 16x16 source slot has no in-bank bottom tile")
@@ -274,14 +302,6 @@ def apply_paired_opening_candidate(
     layout = parse_ines_layout(base)
     patched = bytearray(base)
     targets: list[dict[str, object]] = []
-    patched[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] = proof_record
-    add_target(
-        targets,
-        kind="dialogue_record",
-        rom_offset=RECORD_ROM_OFFSET,
-        length=RECORD_LENGTH,
-        pointer_rom_offset=POINTER_ROM_OFFSET,
-    )
 
     for glyph, (left_code, right_code) in glyph_code_pairs.items():
         tiles = glyph_tiles.get(glyph)
@@ -314,13 +334,17 @@ def apply_paired_opening_candidate(
         length=len(ENTRY_HOOK),
         cpu_address=f"0x{RENDER_ENTRY_CPU:04X}",
     )
-    patched[RENDER_MARKER_ROM_OFFSET:RENDER_MARKER_ROM_OFFSET + len(MARKER_HOOK)] = MARKER_HOOK
+    marker_hook = bytes((0x4C, marker_helper_cpu & 0xFF, marker_helper_cpu >> 8))
+    if not CODE_CAVE_CPU <= marker_helper_cpu < CODE_CAVE_CPU + len(helper_code):
+        raise ValueError("paired helper marker target is outside the helper code")
+    patched[RENDER_MARKER_ROM_OFFSET:RENDER_MARKER_ROM_OFFSET + len(marker_hook)] = marker_hook
     add_target(
         targets,
         kind="renderer_marker_hook",
         rom_offset=RENDER_MARKER_ROM_OFFSET,
-        length=len(MARKER_HOOK),
+        length=len(marker_hook),
         cpu_address=f"0x{RENDER_MARKER_CPU:04X}",
+        helper_cpu_address=f"0x{marker_helper_cpu:04X}",
     )
     patched[CODE_CAVE_ROM_OFFSET:CODE_CAVE_ROM_OFFSET + len(helper_code)] = helper_code
     add_target(
@@ -331,17 +355,47 @@ def apply_paired_opening_candidate(
         cpu_address=f"0x{CODE_CAVE_CPU:04X}",
     )
 
-    allowed = [
-        (int(target["rom_offset"]), int(target["rom_offset"]) + int(target["length"]))
-        for target in targets
-    ]
-    escaped = [
-        offset
-        for offset, (old, new) in enumerate(zip(base, patched))
-        if old != new and not any(start <= offset < end for start, end in allowed)
-    ]
-    if escaped:
-        raise AssertionError(f"paired 16x16 candidate changed {len(escaped)} byte(s) outside its allowlist")
+    return bytes(patched), targets
+
+
+def apply_paired_opening_candidate(
+    base: bytes,
+    glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
+    *,
+    proof_record: bytes,
+    glyph_code_pairs: dict[str, tuple[int, int]],
+    helper_code: bytes,
+    helper_start_code: int,
+    helper_end_code_exclusive: int,
+    source_ranges: tuple[tuple[int, int], ...] | None = None,
+    marker_helper_cpu: int = MARKER_HELPER_CPU,
+) -> tuple[bytes, list[dict[str, object]]]:
+    """Apply one bounded paired-cell opening record and renderer assets."""
+
+    if len(proof_record) != RECORD_LENGTH:
+        raise AssertionError("paired 16x16 record length invariant failed")
+    if base[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] != ORIGINAL_RECORD:
+        raise ValueError("opening source record does not match the verified base bytes")
+    renderer_patched, targets = apply_paired_renderer_assets(
+        base,
+        glyph_tiles,
+        glyph_code_pairs=glyph_code_pairs,
+        helper_code=helper_code,
+        helper_start_code=helper_start_code,
+        helper_end_code_exclusive=helper_end_code_exclusive,
+        source_ranges=source_ranges,
+        marker_helper_cpu=marker_helper_cpu,
+    )
+    patched = bytearray(renderer_patched)
+    patched[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] = proof_record
+    add_target(
+        targets,
+        kind="dialogue_record",
+        rom_offset=RECORD_ROM_OFFSET,
+        length=RECORD_LENGTH,
+        pointer_rom_offset=POINTER_ROM_OFFSET,
+    )
+    _assert_scoped_changes(base, patched, targets, label="paired 16x16 candidate")
     return bytes(patched), targets
 
 

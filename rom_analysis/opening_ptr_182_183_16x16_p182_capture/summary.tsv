@@ -1,0 +1,4 @@
+frame	reason	registered	hits	detail
+0	lua_start	33	0	capture_frame=883;target=opening_ptr_182_183_korean_p182
+883	capture	33	33	screenshot=true;target_match=true
+883	lua_done	33	33	captured=true

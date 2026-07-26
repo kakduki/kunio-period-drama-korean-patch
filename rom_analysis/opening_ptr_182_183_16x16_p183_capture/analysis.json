@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_ptr_182_183_16x16_p183_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 25,
+    "matched_read_hits": 25,
+    "matched_capture_record": true,
+    "screenshots": [
+      "rom_analysis\\opening_ptr_182_183_16x16_p183_capture\\opening_dialogue_frame_001095_screen.gd",
+      "rom_analysis\\opening_ptr_182_183_16x16_p183_capture\\opening_dialogue_frame_001095_screen.png"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_ptr_182_183_16x16_p183_capture\\opening_dialogue_frame_001095_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "Native 256x240 review: the Okoto line is legible, preserves the original separator behavior, and keeps readable spacing after the speaker name."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}

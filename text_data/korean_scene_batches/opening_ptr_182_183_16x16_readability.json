@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "batch_id": "opening_ptr_182_183_16x16_readability",
+  "translation_basis": "Japanese opening context is the semantic source. The English IPS is used only to validate pointer and source-slot structure; its text, code, and pixels are not copied.",
+  "renderer_profile": "record_scoped_paired_8x16_cells_for_16x16_korean",
+  "font_profile": "readable",
+  "capacity_profile": {
+    "source_ranges": [["81", "9F"], ["C0", "C8"]],
+    "english_reference_source_codes": [
+      "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D",
+      "8E", "8F", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9A"
+    ],
+    "glyph_code_pairs": {
+      "\uCFE0": ["81", "82"],
+      "\uB2C8": ["83", "84"],
+      "\uC624": ["85", "86"],
+      "\uC11C": ["87", "88"],
+      "\uB458": ["89", "8A"],
+      "\uB7EC": ["8B", "8C"],
+      "\uBD84": ["8D", "8E"],
+      "\uC870": ["8F", "90"],
+      "\uB450": ["91", "92"],
+      "\uBAA9": ["93", "94"],
+      "\uC704": ["95", "96"],
+      "\uD5D8": ["97", "98"],
+      ":": ["99", "9A"],
+      "\uCF54": ["9B", "9C"],
+      "\uD1A0": ["9D", "9E"],
+      "\uAE30": ["C0", "C1"],
+      "\uB2E4": ["C2", "C3"],
+      "\uB838": ["C4", "C5"],
+      "\uC5B4": ["C6", "C7"]
+    }
+  },
+  "records": [
+    {
+      "id": "PTR-182-OPENING-COMPACT-16X16",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_base_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE",
+      "old_pointer_cpu": "0xB1A6",
+      "new_pointer_cpu": "0xB1A6",
+      "expected_length": 33,
+      "expected_encoded_bytes": "81 82 83 84 85 86 99 9A 00 87 88 89 8A 8B 8C CA F8 8D 8E 8F 90 91 92 93 94 00 95 96 97 98 CA 00 FF",
+      "japanese_context": "Kunio urgently says to hurry because Mr. Bunzo, the boss figure, is in danger.",
+      "korean_text": "\uCFE0\uB2C8\uC624: \uC11C\uB458\uB7EC! \uBD84\uC870\uB450\uBAA9 \uC704\uD5D8!",
+      "tokens": [
+        {"glyph_pair": "\uCFE0"}, {"glyph_pair": "\uB2C8"}, {"glyph_pair": "\uC624"}, {"glyph_pair": ":"}, {"byte": "00"},
+        {"glyph_pair": "\uC11C"}, {"glyph_pair": "\uB458"}, {"glyph_pair": "\uB7EC"}, {"byte": "CA"}, {"byte": "F8"},
+        {"glyph_pair": "\uBD84"}, {"glyph_pair": "\uC870"}, {"glyph_pair": "\uB450"}, {"glyph_pair": "\uBAA9"}, {"byte": "00"},
+        {"glyph_pair": "\uC704"}, {"glyph_pair": "\uD5D8"}, {"byte": "CA"}, {"byte": "00"}, {"byte": "FF"}
+      ]
+    },
+    {
+      "id": "PTR-183-OPENING-OKOTO-16X16",
+      "pointer_index": 183,
+      "pointer_rom_offset": "0x05F42",
+      "record_rom_offset": "0x071D7",
+      "expected_base_bytes": "13 84 CA FF 85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF",
+      "old_pointer_cpu": "0xB1CB",
+      "new_pointer_cpu": "0xB1C7",
+      "expected_length": 25,
+      "expected_encoded_bytes": "85 86 9B 9C 9D 9E BB 00 81 82 83 84 85 86 CA C0 C1 C2 C3 C4 C5 C6 C7 CA FF",
+      "japanese_context": "Okoto welcomes Kunio and says that she has been waiting for him.",
+      "korean_text": "\uC624\uCF54\uD1A0: \uCFE0\uB2C8\uC624! \uAE30\uB2E4\uB838\uC5B4!",
+      "tokens": [
+        {"glyph_pair": "\uC624"}, {"glyph_pair": "\uCF54"}, {"glyph_pair": "\uD1A0"}, {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "\uCFE0"}, {"glyph_pair": "\uB2C8"}, {"glyph_pair": "\uC624"}, {"byte": "CA"},
+        {"glyph_pair": "\uAE30"}, {"glyph_pair": "\uB2E4"}, {"glyph_pair": "\uB838"}, {"glyph_pair": "\uC5B4"}, {"byte": "CA"}, {"byte": "FF"}
+      ]
+    }
+  ],
+  "protected_next_pointer": {
+    "pointer_index": 184,
+    "expected_pointer_cpu": "0xB1E0"
+  }
+}
