@@ -11,6 +11,12 @@
 
 ## Generated files
 
+- `english_patch_record_map.csv`: classification of all records in the external English reference IPS; the IPS itself is not stored
+- `english_pointer_map.json`: verified Bank 1 pointer-table geometry and paired Japanese/English pointer targets
+- `english_script_dump.tsv`: byte-preserving English-reference dump; Japanese dialogue bytes intentionally remain tokenized until the dialogue glyph path is mapped
+- `english_script_reference.md`: concise interpretation rules and structural summary for the reference map
+- `dialogue_renderer_evidence.json` / `dialogue_renderer_evidence.md`: static proof that the dialogue path has two source streams and control-byte branches; direct glyph decoding is blocked pending a traced emitted-tile proof
+- `../text_data/script_catalog.tsv`: conservative pointer-index catalog for translation preparation; entries are not approved patch targets
 - `extract_text_output.txt`: heuristic text/pointer scan
 - `../text_data/translation_readable_reference.md` / `../text_data/translation_readable_reference.json`: readable transcription-to-translation join table with romaji/context hints; currently covers 144 of 144 `translation_data.txt` entries, including 24 auto-romaji fallback technique names
 - `find_text_output.txt`: PRG text-like byte-region scan

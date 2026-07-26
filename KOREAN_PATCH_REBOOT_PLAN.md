@@ -27,6 +27,29 @@
 
 세부 증거는 `rom_analysis/english_patch_reference.md`에 기록한다.
 
+## 2026-07-26 구조 추출 결과
+
+영어 IPS를 메모리에서만 기준 ROM에 적용해 다음의 재현 가능한 구조 자료를 만들었다.
+영어 IPS나 영어판 ROM은 저장하거나 배포하지 않는다.
+
+- `rom_analysis/english_patch_record_map.csv`: IPS 99개 레코드의 ROM 영역/역할 분류
+- `rom_analysis/english_pointer_map.json`: Bank 1 대사 포인터 테이블
+- `rom_analysis/english_script_dump.tsv`: 이름/사전 포인터 블록 및 포인터별 원시 바이트 덤프
+- `text_data/script_catalog.tsv`: 번역 이전의 보수적 포인터 카탈로그
+- `rom_analysis/english_script_reference.md`: 사람이 읽는 요약
+
+확정된 사실:
+
+- 대사 포인터 테이블은 `ROM+0x05DD4`에서 시작해 `ROM+0x05FC4` 직전에서 끝난다.
+- 테이블에는 248개 항목이 있으며, 영어판은 그중 244개 포인터를 다시 계산했다.
+- 모든 영어 포인터는 PRG Bank 1 안을 가리킨다. 따라서 이 블록은 실제 대사/문자열 저장 경로의 강한 구조 증거다.
+- 영어판의 대사는 원문의 직역이 아니다. 영어 텍스트는 화면 폭, 제어 바이트, 포인터 재배치의 참고 자료로만 사용한다.
+- 일본어 포인터 대사의 글리프 경로는 기존 메뉴용 `+0x7A` 가설과 동일하다고 확정되지 않았다. 현재 카탈로그는 일본어 바이트를 `<XX>` 토큰으로 보존한다.
+- `rom_analysis/dialogue_renderer_evidence.md`는 대사 렌더러가 두 입력 스트림, 저니블 분기, 여섯 특수 바이트를 처리한다는 것을 기록한다.
+
+다음 하드 작업은 대사용 원본 글리프/렌더러 표의 복원이다. 이 표가 검증되기 전에는
+`<XX>` 토큰을 억지로 가나나 한글 후보로 바꾸지 않는다.
+
 참고 출처:
 
 - 공식 보존 다운로드: `https://www.dynamic-designs.us/downloads.shtml`

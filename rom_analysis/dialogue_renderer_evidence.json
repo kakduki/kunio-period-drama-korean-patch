@@ -1,0 +1,36 @@
+{
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "base_sha256": "54d79f15f60a32123e95fbf20661128a13ee0eee1941e0ff98ba7bb54343e23a"
+  },
+  "parser": {
+    "rom_offset": "0x08256",
+    "prg_bank": 2,
+    "control_compare_offset": "0x0826C",
+    "primary_stream_zero_page": "0x05",
+    "secondary_stream_zero_page": "0x07",
+    "low_nibble_branch": {
+      "mask": "0x0F",
+      "threshold": "0x0E"
+    },
+    "special_control_bytes": [
+      "0x8A",
+      "0x8B",
+      "0xAC",
+      "0xB0",
+      "0xBB",
+      "0xFA"
+    ],
+    "mask_lookup_cpu_address": "0x829E",
+    "mask_lookup_rom_offset": "0x082AE",
+    "mask_table": [
+      "0x00",
+      "0x03",
+      "0x01",
+      "0x01"
+    ]
+  },
+  "decoder_status": "UNRESOLVED",
+  "safe_direct_glyph_decode": false,
+  "next_requirement": "Trace the initialization of zero-page streams 0x05 and 0x07, then verify the emitted tile byte for one known dialogue record."
+}

@@ -1,0 +1,2497 @@
+{
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "base_sha256": "54d79f15f60a32123e95fbf20661128a13ee0eee1941e0ff98ba7bb54343e23a",
+    "reference_ips_not_stored": true
+  },
+  "pointer_table": {
+    "bank_index": 1,
+    "rom_start": "0x05DD4",
+    "rom_end_exclusive": "0x05FC4",
+    "entry_count": 248,
+    "cpu_range": "$8000-$BFFF",
+    "first_non_pointer_word": "0x0099"
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pointer_rom_offset": "0x05DD4",
+      "jp_pointer_cpu": "0x9FD7",
+      "en_pointer_cpu": "0x9FD6",
+      "jp_target_rom_offset": "0x05FE7",
+      "en_target_rom_offset": "0x05FE6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 1,
+      "pointer_rom_offset": "0x05DD6",
+      "jp_pointer_cpu": "0x9FF9",
+      "en_pointer_cpu": "0xA002",
+      "jp_target_rom_offset": "0x06009",
+      "en_target_rom_offset": "0x06012",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 2,
+      "pointer_rom_offset": "0x05DD8",
+      "jp_pointer_cpu": "0xA004",
+      "en_pointer_cpu": "0xA010",
+      "jp_target_rom_offset": "0x06014",
+      "en_target_rom_offset": "0x06020",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 3,
+      "pointer_rom_offset": "0x05DDA",
+      "jp_pointer_cpu": "0xA012",
+      "en_pointer_cpu": "0xA029",
+      "jp_target_rom_offset": "0x06022",
+      "en_target_rom_offset": "0x06039",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 4,
+      "pointer_rom_offset": "0x05DDC",
+      "jp_pointer_cpu": "0xA044",
+      "en_pointer_cpu": "0xA054",
+      "jp_target_rom_offset": "0x06054",
+      "en_target_rom_offset": "0x06064",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 5,
+      "pointer_rom_offset": "0x05DDE",
+      "jp_pointer_cpu": "0xA06E",
+      "en_pointer_cpu": "0xA071",
+      "jp_target_rom_offset": "0x0607E",
+      "en_target_rom_offset": "0x06081",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 6,
+      "pointer_rom_offset": "0x05DE0",
+      "jp_pointer_cpu": "0xA079",
+      "en_pointer_cpu": "0xA08A",
+      "jp_target_rom_offset": "0x06089",
+      "en_target_rom_offset": "0x0609A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 7,
+      "pointer_rom_offset": "0x05DE2",
+      "jp_pointer_cpu": "0xA092",
+      "en_pointer_cpu": "0xA0A5",
+      "jp_target_rom_offset": "0x060A2",
+      "en_target_rom_offset": "0x060B5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 8,
+      "pointer_rom_offset": "0x05DE4",
+      "jp_pointer_cpu": "0xA09D",
+      "en_pointer_cpu": "0xA0B9",
+      "jp_target_rom_offset": "0x060AD",
+      "en_target_rom_offset": "0x060C9",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 9,
+      "pointer_rom_offset": "0x05DE6",
+      "jp_pointer_cpu": "0xA0B3",
+      "en_pointer_cpu": "0xB0DF",
+      "jp_target_rom_offset": "0x060C3",
+      "en_target_rom_offset": "0x070EF",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 10,
+      "pointer_rom_offset": "0x05DE8",
+      "jp_pointer_cpu": "0xA0C3",
+      "en_pointer_cpu": "0xA0E3",
+      "jp_target_rom_offset": "0x060D3",
+      "en_target_rom_offset": "0x060F3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 11,
+      "pointer_rom_offset": "0x05DEA",
+      "jp_pointer_cpu": "0xA0F2",
+      "en_pointer_cpu": "0xA119",
+      "jp_target_rom_offset": "0x06102",
+      "en_target_rom_offset": "0x06129",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 12,
+      "pointer_rom_offset": "0x05DEC",
+      "jp_pointer_cpu": "0xA10B",
+      "en_pointer_cpu": "0xA137",
+      "jp_target_rom_offset": "0x0611B",
+      "en_target_rom_offset": "0x06147",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 13,
+      "pointer_rom_offset": "0x05DEE",
+      "jp_pointer_cpu": "0xA113",
+      "en_pointer_cpu": "0xA13E",
+      "jp_target_rom_offset": "0x06123",
+      "en_target_rom_offset": "0x0614E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 14,
+      "pointer_rom_offset": "0x05DF0",
+      "jp_pointer_cpu": "0xA122",
+      "en_pointer_cpu": "0xA151",
+      "jp_target_rom_offset": "0x06132",
+      "en_target_rom_offset": "0x06161",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 15,
+      "pointer_rom_offset": "0x05DF2",
+      "jp_pointer_cpu": "0xA148",
+      "en_pointer_cpu": "0xA162",
+      "jp_target_rom_offset": "0x06158",
+      "en_target_rom_offset": "0x06172",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 16,
+      "pointer_rom_offset": "0x05DF4",
+      "jp_pointer_cpu": "0xA158",
+      "en_pointer_cpu": "0xA182",
+      "jp_target_rom_offset": "0x06168",
+      "en_target_rom_offset": "0x06192",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 17,
+      "pointer_rom_offset": "0x05DF6",
+      "jp_pointer_cpu": "0xA16B",
+      "en_pointer_cpu": "0xA191",
+      "jp_target_rom_offset": "0x0617B",
+      "en_target_rom_offset": "0x061A1",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 18,
+      "pointer_rom_offset": "0x05DF8",
+      "jp_pointer_cpu": "0xA178",
+      "en_pointer_cpu": "0xA1A6",
+      "jp_target_rom_offset": "0x06188",
+      "en_target_rom_offset": "0x061B6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 19,
+      "pointer_rom_offset": "0x05DFA",
+      "jp_pointer_cpu": "0xA19D",
+      "en_pointer_cpu": "0xA1D1",
+      "jp_target_rom_offset": "0x061AD",
+      "en_target_rom_offset": "0x061E1",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 20,
+      "pointer_rom_offset": "0x05DFC",
+      "jp_pointer_cpu": "0xA1AC",
+      "en_pointer_cpu": "0xA1E7",
+      "jp_target_rom_offset": "0x061BC",
+      "en_target_rom_offset": "0x061F7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 21,
+      "pointer_rom_offset": "0x05DFE",
+      "jp_pointer_cpu": "0xA1D7",
+      "en_pointer_cpu": "0xA216",
+      "jp_target_rom_offset": "0x061E7",
+      "en_target_rom_offset": "0x06226",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 22,
+      "pointer_rom_offset": "0x05E00",
+      "jp_pointer_cpu": "0xA204",
+      "en_pointer_cpu": "0xA137",
+      "jp_target_rom_offset": "0x06214",
+      "en_target_rom_offset": "0x06147",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 23,
+      "pointer_rom_offset": "0x05E02",
+      "jp_pointer_cpu": "0xA211",
+      "en_pointer_cpu": "0xA249",
+      "jp_target_rom_offset": "0x06221",
+      "en_target_rom_offset": "0x06259",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 24,
+      "pointer_rom_offset": "0x05E04",
+      "jp_pointer_cpu": "0xA228",
+      "en_pointer_cpu": "0xA263",
+      "jp_target_rom_offset": "0x06238",
+      "en_target_rom_offset": "0x06273",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 25,
+      "pointer_rom_offset": "0x05E06",
+      "jp_pointer_cpu": "0xA23D",
+      "en_pointer_cpu": "0xA27C",
+      "jp_target_rom_offset": "0x0624D",
+      "en_target_rom_offset": "0x0628C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 26,
+      "pointer_rom_offset": "0x05E08",
+      "jp_pointer_cpu": "0xA26A",
+      "en_pointer_cpu": "0xA2A6",
+      "jp_target_rom_offset": "0x0627A",
+      "en_target_rom_offset": "0x062B6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 27,
+      "pointer_rom_offset": "0x05E0A",
+      "jp_pointer_cpu": "0xA296",
+      "en_pointer_cpu": "0xA2D8",
+      "jp_target_rom_offset": "0x062A6",
+      "en_target_rom_offset": "0x062E8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 28,
+      "pointer_rom_offset": "0x05E0C",
+      "jp_pointer_cpu": "0xA2AD",
+      "en_pointer_cpu": "0xA2E8",
+      "jp_target_rom_offset": "0x062BD",
+      "en_target_rom_offset": "0x062F8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 29,
+      "pointer_rom_offset": "0x05E0E",
+      "jp_pointer_cpu": "0xA2C1",
+      "en_pointer_cpu": "0xA30C",
+      "jp_target_rom_offset": "0x062D1",
+      "en_target_rom_offset": "0x0631C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 30,
+      "pointer_rom_offset": "0x05E10",
+      "jp_pointer_cpu": "0xA2DB",
+      "en_pointer_cpu": "0xA328",
+      "jp_target_rom_offset": "0x062EB",
+      "en_target_rom_offset": "0x06338",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 31,
+      "pointer_rom_offset": "0x05E12",
+      "jp_pointer_cpu": "0xA309",
+      "en_pointer_cpu": "0xA353",
+      "jp_target_rom_offset": "0x06319",
+      "en_target_rom_offset": "0x06363",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 32,
+      "pointer_rom_offset": "0x05E14",
+      "jp_pointer_cpu": "0xA322",
+      "en_pointer_cpu": "0xA378",
+      "jp_target_rom_offset": "0x06332",
+      "en_target_rom_offset": "0x06388",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 33,
+      "pointer_rom_offset": "0x05E16",
+      "jp_pointer_cpu": "0xA342",
+      "en_pointer_cpu": "0xA390",
+      "jp_target_rom_offset": "0x06352",
+      "en_target_rom_offset": "0x063A0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 34,
+      "pointer_rom_offset": "0x05E18",
+      "jp_pointer_cpu": "0xA353",
+      "en_pointer_cpu": "0xA3A3",
+      "jp_target_rom_offset": "0x06363",
+      "en_target_rom_offset": "0x063B3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 35,
+      "pointer_rom_offset": "0x05E1A",
+      "jp_pointer_cpu": "0xA373",
+      "en_pointer_cpu": "0xA3BA",
+      "jp_target_rom_offset": "0x06383",
+      "en_target_rom_offset": "0x063CA",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 36,
+      "pointer_rom_offset": "0x05E1C",
+      "jp_pointer_cpu": "0xA39A",
+      "en_pointer_cpu": "0xA3DB",
+      "jp_target_rom_offset": "0x063AA",
+      "en_target_rom_offset": "0x063EB",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 37,
+      "pointer_rom_offset": "0x05E1E",
+      "jp_pointer_cpu": "0xA3B0",
+      "en_pointer_cpu": "0xA3EA",
+      "jp_target_rom_offset": "0x063C0",
+      "en_target_rom_offset": "0x063FA",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 38,
+      "pointer_rom_offset": "0x05E20",
+      "jp_pointer_cpu": "0xA3C3",
+      "en_pointer_cpu": "0xA3FB",
+      "jp_target_rom_offset": "0x063D3",
+      "en_target_rom_offset": "0x0640B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 39,
+      "pointer_rom_offset": "0x05E22",
+      "jp_pointer_cpu": "0xA3F1",
+      "en_pointer_cpu": "0xA42A",
+      "jp_target_rom_offset": "0x06401",
+      "en_target_rom_offset": "0x0643A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 40,
+      "pointer_rom_offset": "0x05E24",
+      "jp_pointer_cpu": "0xA41C",
+      "en_pointer_cpu": "0xA44C",
+      "jp_target_rom_offset": "0x0642C",
+      "en_target_rom_offset": "0x0645C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 41,
+      "pointer_rom_offset": "0x05E26",
+      "jp_pointer_cpu": "0xA432",
+      "en_pointer_cpu": "0xA461",
+      "jp_target_rom_offset": "0x06442",
+      "en_target_rom_offset": "0x06471",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 42,
+      "pointer_rom_offset": "0x05E28",
+      "jp_pointer_cpu": "0xA447",
+      "en_pointer_cpu": "0xA47B",
+      "jp_target_rom_offset": "0x06457",
+      "en_target_rom_offset": "0x0648B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 43,
+      "pointer_rom_offset": "0x05E2A",
+      "jp_pointer_cpu": "0xA451",
+      "en_pointer_cpu": "0xA48C",
+      "jp_target_rom_offset": "0x06461",
+      "en_target_rom_offset": "0x0649C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 44,
+      "pointer_rom_offset": "0x05E2C",
+      "jp_pointer_cpu": "0xA47E",
+      "en_pointer_cpu": "0xA4AA",
+      "jp_target_rom_offset": "0x0648E",
+      "en_target_rom_offset": "0x064BA",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 45,
+      "pointer_rom_offset": "0x05E2E",
+      "jp_pointer_cpu": "0xA491",
+      "en_pointer_cpu": "0xA4C0",
+      "jp_target_rom_offset": "0x064A1",
+      "en_target_rom_offset": "0x064D0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 46,
+      "pointer_rom_offset": "0x05E30",
+      "jp_pointer_cpu": "0xA4C3",
+      "en_pointer_cpu": "0xA4F9",
+      "jp_target_rom_offset": "0x064D3",
+      "en_target_rom_offset": "0x06509",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 47,
+      "pointer_rom_offset": "0x05E32",
+      "jp_pointer_cpu": "0xA4CF",
+      "en_pointer_cpu": "0xA506",
+      "jp_target_rom_offset": "0x064DF",
+      "en_target_rom_offset": "0x06516",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 48,
+      "pointer_rom_offset": "0x05E34",
+      "jp_pointer_cpu": "0xA4F2",
+      "en_pointer_cpu": "0xA52F",
+      "jp_target_rom_offset": "0x06502",
+      "en_target_rom_offset": "0x0653F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 49,
+      "pointer_rom_offset": "0x05E36",
+      "jp_pointer_cpu": "0xA518",
+      "en_pointer_cpu": "0xA08A",
+      "jp_target_rom_offset": "0x06528",
+      "en_target_rom_offset": "0x0609A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 50,
+      "pointer_rom_offset": "0x05E38",
+      "jp_pointer_cpu": "0xA52D",
+      "en_pointer_cpu": "0xA55E",
+      "jp_target_rom_offset": "0x0653D",
+      "en_target_rom_offset": "0x0656E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 51,
+      "pointer_rom_offset": "0x05E3A",
+      "jp_pointer_cpu": "0xA53C",
+      "en_pointer_cpu": "0xA56D",
+      "jp_target_rom_offset": "0x0654C",
+      "en_target_rom_offset": "0x0657D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 52,
+      "pointer_rom_offset": "0x05E3C",
+      "jp_pointer_cpu": "0xA54F",
+      "en_pointer_cpu": "0xA579",
+      "jp_target_rom_offset": "0x0655F",
+      "en_target_rom_offset": "0x06589",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 53,
+      "pointer_rom_offset": "0x05E3E",
+      "jp_pointer_cpu": "0xA57A",
+      "en_pointer_cpu": "0xA595",
+      "jp_target_rom_offset": "0x0658A",
+      "en_target_rom_offset": "0x065A5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 54,
+      "pointer_rom_offset": "0x05E40",
+      "jp_pointer_cpu": "0xA5A7",
+      "en_pointer_cpu": "0xA5C1",
+      "jp_target_rom_offset": "0x065B7",
+      "en_target_rom_offset": "0x065D1",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 55,
+      "pointer_rom_offset": "0x05E42",
+      "jp_pointer_cpu": "0xA5BF",
+      "en_pointer_cpu": "0xA5D8",
+      "jp_target_rom_offset": "0x065CF",
+      "en_target_rom_offset": "0x065E8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 56,
+      "pointer_rom_offset": "0x05E44",
+      "jp_pointer_cpu": "0xA5E9",
+      "en_pointer_cpu": "0xA60E",
+      "jp_target_rom_offset": "0x065F9",
+      "en_target_rom_offset": "0x0661E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 57,
+      "pointer_rom_offset": "0x05E46",
+      "jp_pointer_cpu": "0xA603",
+      "en_pointer_cpu": "0xB05F",
+      "jp_target_rom_offset": "0x06613",
+      "en_target_rom_offset": "0x0706F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 58,
+      "pointer_rom_offset": "0x05E48",
+      "jp_pointer_cpu": "0xA61B",
+      "en_pointer_cpu": "0xA62A",
+      "jp_target_rom_offset": "0x0662B",
+      "en_target_rom_offset": "0x0663A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 59,
+      "pointer_rom_offset": "0x05E4A",
+      "jp_pointer_cpu": "0xA630",
+      "en_pointer_cpu": "0xA63D",
+      "jp_target_rom_offset": "0x06640",
+      "en_target_rom_offset": "0x0664D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 60,
+      "pointer_rom_offset": "0x05E4C",
+      "jp_pointer_cpu": "0xA65E",
+      "en_pointer_cpu": "0xA65E",
+      "jp_target_rom_offset": "0x0666E",
+      "en_target_rom_offset": "0x0666E",
+      "pointer_changed": false,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 61,
+      "pointer_rom_offset": "0x05E4E",
+      "jp_pointer_cpu": "0xA680",
+      "en_pointer_cpu": "0xA688",
+      "jp_target_rom_offset": "0x06690",
+      "en_target_rom_offset": "0x06698",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 62,
+      "pointer_rom_offset": "0x05E50",
+      "jp_pointer_cpu": "0xA69F",
+      "en_pointer_cpu": "0xA6B2",
+      "jp_target_rom_offset": "0x066AF",
+      "en_target_rom_offset": "0x066C2",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 63,
+      "pointer_rom_offset": "0x05E52",
+      "jp_pointer_cpu": "0xA6B1",
+      "en_pointer_cpu": "0xA6C7",
+      "jp_target_rom_offset": "0x066C1",
+      "en_target_rom_offset": "0x066D7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 64,
+      "pointer_rom_offset": "0x05E54",
+      "jp_pointer_cpu": "0xA6DA",
+      "en_pointer_cpu": "0xA08A",
+      "jp_target_rom_offset": "0x066EA",
+      "en_target_rom_offset": "0x0609A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 65,
+      "pointer_rom_offset": "0x05E56",
+      "jp_pointer_cpu": "0xA6F3",
+      "en_pointer_cpu": "0xA6F1",
+      "jp_target_rom_offset": "0x06703",
+      "en_target_rom_offset": "0x06701",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 66,
+      "pointer_rom_offset": "0x05E58",
+      "jp_pointer_cpu": "0xA6FF",
+      "en_pointer_cpu": "0xA6FC",
+      "jp_target_rom_offset": "0x0670F",
+      "en_target_rom_offset": "0x0670C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 67,
+      "pointer_rom_offset": "0x05E5A",
+      "jp_pointer_cpu": "0xA70B",
+      "en_pointer_cpu": "0xA70D",
+      "jp_target_rom_offset": "0x0671B",
+      "en_target_rom_offset": "0x0671D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 68,
+      "pointer_rom_offset": "0x05E5C",
+      "jp_pointer_cpu": "0xA737",
+      "en_pointer_cpu": "0xA73D",
+      "jp_target_rom_offset": "0x06747",
+      "en_target_rom_offset": "0x0674D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 69,
+      "pointer_rom_offset": "0x05E5E",
+      "jp_pointer_cpu": "0xA75D",
+      "en_pointer_cpu": "0xA763",
+      "jp_target_rom_offset": "0x0676D",
+      "en_target_rom_offset": "0x06773",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 70,
+      "pointer_rom_offset": "0x05E60",
+      "jp_pointer_cpu": "0xA77E",
+      "en_pointer_cpu": "0xA788",
+      "jp_target_rom_offset": "0x0678E",
+      "en_target_rom_offset": "0x06798",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 71,
+      "pointer_rom_offset": "0x05E62",
+      "jp_pointer_cpu": "0xA795",
+      "en_pointer_cpu": "0xA7A0",
+      "jp_target_rom_offset": "0x067A5",
+      "en_target_rom_offset": "0x067B0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 72,
+      "pointer_rom_offset": "0x05E64",
+      "jp_pointer_cpu": "0xA7AE",
+      "en_pointer_cpu": "0xA7C0",
+      "jp_target_rom_offset": "0x067BE",
+      "en_target_rom_offset": "0x067D0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 73,
+      "pointer_rom_offset": "0x05E66",
+      "jp_pointer_cpu": "0xA7D2",
+      "en_pointer_cpu": "0xA7E4",
+      "jp_target_rom_offset": "0x067E2",
+      "en_target_rom_offset": "0x067F4",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 74,
+      "pointer_rom_offset": "0x05E68",
+      "jp_pointer_cpu": "0xA7EA",
+      "en_pointer_cpu": "0xA7FA",
+      "jp_target_rom_offset": "0x067FA",
+      "en_target_rom_offset": "0x0680A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 75,
+      "pointer_rom_offset": "0x05E6A",
+      "jp_pointer_cpu": "0xA7F8",
+      "en_pointer_cpu": "0xA80D",
+      "jp_target_rom_offset": "0x06808",
+      "en_target_rom_offset": "0x0681D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 76,
+      "pointer_rom_offset": "0x05E6C",
+      "jp_pointer_cpu": "0xA80B",
+      "en_pointer_cpu": "0xA08A",
+      "jp_target_rom_offset": "0x0681B",
+      "en_target_rom_offset": "0x0609A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 77,
+      "pointer_rom_offset": "0x05E6E",
+      "jp_pointer_cpu": "0xA839",
+      "en_pointer_cpu": "0xA823",
+      "jp_target_rom_offset": "0x06849",
+      "en_target_rom_offset": "0x06833",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 78,
+      "pointer_rom_offset": "0x05E70",
+      "jp_pointer_cpu": "0xA84F",
+      "en_pointer_cpu": "0xA84B",
+      "jp_target_rom_offset": "0x0685F",
+      "en_target_rom_offset": "0x0685B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 79,
+      "pointer_rom_offset": "0x05E72",
+      "jp_pointer_cpu": "0xA87F",
+      "en_pointer_cpu": "0xA87C",
+      "jp_target_rom_offset": "0x0688F",
+      "en_target_rom_offset": "0x0688C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 80,
+      "pointer_rom_offset": "0x05E74",
+      "jp_pointer_cpu": "0xA8A9",
+      "en_pointer_cpu": "0xA896",
+      "jp_target_rom_offset": "0x068B9",
+      "en_target_rom_offset": "0x068A6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 81,
+      "pointer_rom_offset": "0x05E76",
+      "jp_pointer_cpu": "0xA8DB",
+      "en_pointer_cpu": "0xA8C7",
+      "jp_target_rom_offset": "0x068EB",
+      "en_target_rom_offset": "0x068D7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 82,
+      "pointer_rom_offset": "0x05E78",
+      "jp_pointer_cpu": "0xA8FB",
+      "en_pointer_cpu": "0xA8F5",
+      "jp_target_rom_offset": "0x0690B",
+      "en_target_rom_offset": "0x06905",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 83,
+      "pointer_rom_offset": "0x05E7A",
+      "jp_pointer_cpu": "0xA914",
+      "en_pointer_cpu": "0xA910",
+      "jp_target_rom_offset": "0x06924",
+      "en_target_rom_offset": "0x06920",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 84,
+      "pointer_rom_offset": "0x05E7C",
+      "jp_pointer_cpu": "0xA91C",
+      "en_pointer_cpu": "0xA91D",
+      "jp_target_rom_offset": "0x0692C",
+      "en_target_rom_offset": "0x0692D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 85,
+      "pointer_rom_offset": "0x05E7E",
+      "jp_pointer_cpu": "0xA949",
+      "en_pointer_cpu": "0xA94E",
+      "jp_target_rom_offset": "0x06959",
+      "en_target_rom_offset": "0x0695E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 86,
+      "pointer_rom_offset": "0x05E80",
+      "jp_pointer_cpu": "0xA978",
+      "en_pointer_cpu": "0xA974",
+      "jp_target_rom_offset": "0x06988",
+      "en_target_rom_offset": "0x06984",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 87,
+      "pointer_rom_offset": "0x05E82",
+      "jp_pointer_cpu": "0xA98D",
+      "en_pointer_cpu": "0xA991",
+      "jp_target_rom_offset": "0x0699D",
+      "en_target_rom_offset": "0x069A1",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 88,
+      "pointer_rom_offset": "0x05E84",
+      "jp_pointer_cpu": "0xA9BD",
+      "en_pointer_cpu": "0xA9C0",
+      "jp_target_rom_offset": "0x069CD",
+      "en_target_rom_offset": "0x069D0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 89,
+      "pointer_rom_offset": "0x05E86",
+      "jp_pointer_cpu": "0xA9EE",
+      "en_pointer_cpu": "0xA9E8",
+      "jp_target_rom_offset": "0x069FE",
+      "en_target_rom_offset": "0x069F8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 90,
+      "pointer_rom_offset": "0x05E88",
+      "jp_pointer_cpu": "0xAA05",
+      "en_pointer_cpu": "0xAA10",
+      "jp_target_rom_offset": "0x06A15",
+      "en_target_rom_offset": "0x06A20",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 91,
+      "pointer_rom_offset": "0x05E8A",
+      "jp_pointer_cpu": "0xAA22",
+      "en_pointer_cpu": "0xAA39",
+      "jp_target_rom_offset": "0x06A32",
+      "en_target_rom_offset": "0x06A49",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 92,
+      "pointer_rom_offset": "0x05E8C",
+      "jp_pointer_cpu": "0xAA4C",
+      "en_pointer_cpu": "0xAA54",
+      "jp_target_rom_offset": "0x06A5C",
+      "en_target_rom_offset": "0x06A64",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 93,
+      "pointer_rom_offset": "0x05E8E",
+      "jp_pointer_cpu": "0xAA5E",
+      "en_pointer_cpu": "0xAA65",
+      "jp_target_rom_offset": "0x06A6E",
+      "en_target_rom_offset": "0x06A75",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 94,
+      "pointer_rom_offset": "0x05E90",
+      "jp_pointer_cpu": "0xAA6C",
+      "en_pointer_cpu": "0xAA7C",
+      "jp_target_rom_offset": "0x06A7C",
+      "en_target_rom_offset": "0x06A8C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 95,
+      "pointer_rom_offset": "0x05E92",
+      "jp_pointer_cpu": "0xAA81",
+      "en_pointer_cpu": "0xAA9C",
+      "jp_target_rom_offset": "0x06A91",
+      "en_target_rom_offset": "0x06AAC",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 96,
+      "pointer_rom_offset": "0x05E94",
+      "jp_pointer_cpu": "0xAAAD",
+      "en_pointer_cpu": "0xAAC6",
+      "jp_target_rom_offset": "0x06ABD",
+      "en_target_rom_offset": "0x06AD6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 97,
+      "pointer_rom_offset": "0x05E96",
+      "jp_pointer_cpu": "0xAAC2",
+      "en_pointer_cpu": "0xAAE0",
+      "jp_target_rom_offset": "0x06AD2",
+      "en_target_rom_offset": "0x06AF0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 98,
+      "pointer_rom_offset": "0x05E98",
+      "jp_pointer_cpu": "0xAADA",
+      "en_pointer_cpu": "0xAAF8",
+      "jp_target_rom_offset": "0x06AEA",
+      "en_target_rom_offset": "0x06B08",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 99,
+      "pointer_rom_offset": "0x05E9A",
+      "jp_pointer_cpu": "0xAAF2",
+      "en_pointer_cpu": "0xAB17",
+      "jp_target_rom_offset": "0x06B02",
+      "en_target_rom_offset": "0x06B27",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 100,
+      "pointer_rom_offset": "0x05E9C",
+      "jp_pointer_cpu": "0xAB2B",
+      "en_pointer_cpu": "0xA08A",
+      "jp_target_rom_offset": "0x06B3B",
+      "en_target_rom_offset": "0x0609A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 101,
+      "pointer_rom_offset": "0x05E9E",
+      "jp_pointer_cpu": "0xAB40",
+      "en_pointer_cpu": "0xAB40",
+      "jp_target_rom_offset": "0x06B50",
+      "en_target_rom_offset": "0x06B50",
+      "pointer_changed": false,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 102,
+      "pointer_rom_offset": "0x05EA0",
+      "jp_pointer_cpu": "0xAB55",
+      "en_pointer_cpu": "0xAB5B",
+      "jp_target_rom_offset": "0x06B65",
+      "en_target_rom_offset": "0x06B6B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 103,
+      "pointer_rom_offset": "0x05EA2",
+      "jp_pointer_cpu": "0xAB69",
+      "en_pointer_cpu": "0xAB70",
+      "jp_target_rom_offset": "0x06B79",
+      "en_target_rom_offset": "0x06B80",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 104,
+      "pointer_rom_offset": "0x05EA4",
+      "jp_pointer_cpu": "0xAB81",
+      "en_pointer_cpu": "0xAB8C",
+      "jp_target_rom_offset": "0x06B91",
+      "en_target_rom_offset": "0x06B9C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 105,
+      "pointer_rom_offset": "0x05EA6",
+      "jp_pointer_cpu": "0xABAF",
+      "en_pointer_cpu": "0xABB1",
+      "jp_target_rom_offset": "0x06BBF",
+      "en_target_rom_offset": "0x06BC1",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 106,
+      "pointer_rom_offset": "0x05EA8",
+      "jp_pointer_cpu": "0xABDD",
+      "en_pointer_cpu": "0xABD4",
+      "jp_target_rom_offset": "0x06BED",
+      "en_target_rom_offset": "0x06BE4",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 107,
+      "pointer_rom_offset": "0x05EAA",
+      "jp_pointer_cpu": "0xABF7",
+      "en_pointer_cpu": "0xABEE",
+      "jp_target_rom_offset": "0x06C07",
+      "en_target_rom_offset": "0x06BFE",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 108,
+      "pointer_rom_offset": "0x05EAC",
+      "jp_pointer_cpu": "0xAC14",
+      "en_pointer_cpu": "0xAC0D",
+      "jp_target_rom_offset": "0x06C24",
+      "en_target_rom_offset": "0x06C1D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 109,
+      "pointer_rom_offset": "0x05EAE",
+      "jp_pointer_cpu": "0xAC25",
+      "en_pointer_cpu": "0xAC25",
+      "jp_target_rom_offset": "0x06C35",
+      "en_target_rom_offset": "0x06C35",
+      "pointer_changed": false,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 110,
+      "pointer_rom_offset": "0x05EB0",
+      "jp_pointer_cpu": "0xAC3F",
+      "en_pointer_cpu": "0xB074",
+      "jp_target_rom_offset": "0x06C4F",
+      "en_target_rom_offset": "0x07084",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 111,
+      "pointer_rom_offset": "0x05EB2",
+      "jp_pointer_cpu": "0xAC50",
+      "en_pointer_cpu": "0xBFC3",
+      "jp_target_rom_offset": "0x06C60",
+      "en_target_rom_offset": "0x07FD3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 112,
+      "pointer_rom_offset": "0x05EB4",
+      "jp_pointer_cpu": "0xAC55",
+      "en_pointer_cpu": "0xAC53",
+      "jp_target_rom_offset": "0x06C65",
+      "en_target_rom_offset": "0x06C63",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 113,
+      "pointer_rom_offset": "0x05EB6",
+      "jp_pointer_cpu": "0xAC61",
+      "en_pointer_cpu": "0xAC67",
+      "jp_target_rom_offset": "0x06C71",
+      "en_target_rom_offset": "0x06C77",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 114,
+      "pointer_rom_offset": "0x05EB8",
+      "jp_pointer_cpu": "0xAC78",
+      "en_pointer_cpu": "0xAC81",
+      "jp_target_rom_offset": "0x06C88",
+      "en_target_rom_offset": "0x06C91",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 115,
+      "pointer_rom_offset": "0x05EBA",
+      "jp_pointer_cpu": "0xAC7F",
+      "en_pointer_cpu": "0xAC8B",
+      "jp_target_rom_offset": "0x06C8F",
+      "en_target_rom_offset": "0x06C9B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 116,
+      "pointer_rom_offset": "0x05EBC",
+      "jp_pointer_cpu": "0xAC8D",
+      "en_pointer_cpu": "0xAC9A",
+      "jp_target_rom_offset": "0x06C9D",
+      "en_target_rom_offset": "0x06CAA",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 117,
+      "pointer_rom_offset": "0x05EBE",
+      "jp_pointer_cpu": "0xACA0",
+      "en_pointer_cpu": "0xACA8",
+      "jp_target_rom_offset": "0x06CB0",
+      "en_target_rom_offset": "0x06CB8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 118,
+      "pointer_rom_offset": "0x05EC0",
+      "jp_pointer_cpu": "0xACB0",
+      "en_pointer_cpu": "0xACB8",
+      "jp_target_rom_offset": "0x06CC0",
+      "en_target_rom_offset": "0x06CC8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 119,
+      "pointer_rom_offset": "0x05EC2",
+      "jp_pointer_cpu": "0xACC2",
+      "en_pointer_cpu": "0xACC9",
+      "jp_target_rom_offset": "0x06CD2",
+      "en_target_rom_offset": "0x06CD9",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 120,
+      "pointer_rom_offset": "0x05EC4",
+      "jp_pointer_cpu": "0xACD3",
+      "en_pointer_cpu": "0xACDE",
+      "jp_target_rom_offset": "0x06CE3",
+      "en_target_rom_offset": "0x06CEE",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 121,
+      "pointer_rom_offset": "0x05EC6",
+      "jp_pointer_cpu": "0xACE0",
+      "en_pointer_cpu": "0xACE9",
+      "jp_target_rom_offset": "0x06CF0",
+      "en_target_rom_offset": "0x06CF9",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 122,
+      "pointer_rom_offset": "0x05EC8",
+      "jp_pointer_cpu": "0xACF6",
+      "en_pointer_cpu": "0xACFB",
+      "jp_target_rom_offset": "0x06D06",
+      "en_target_rom_offset": "0x06D0B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 123,
+      "pointer_rom_offset": "0x05ECA",
+      "jp_pointer_cpu": "0xAD09",
+      "en_pointer_cpu": "0xAD0D",
+      "jp_target_rom_offset": "0x06D19",
+      "en_target_rom_offset": "0x06D1D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 124,
+      "pointer_rom_offset": "0x05ECC",
+      "jp_pointer_cpu": "0xAD1B",
+      "en_pointer_cpu": "0xAD29",
+      "jp_target_rom_offset": "0x06D2B",
+      "en_target_rom_offset": "0x06D39",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 125,
+      "pointer_rom_offset": "0x05ECE",
+      "jp_pointer_cpu": "0xAD26",
+      "en_pointer_cpu": "0xAD35",
+      "jp_target_rom_offset": "0x06D36",
+      "en_target_rom_offset": "0x06D45",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 126,
+      "pointer_rom_offset": "0x05ED0",
+      "jp_pointer_cpu": "0xAD32",
+      "en_pointer_cpu": "0xAD42",
+      "jp_target_rom_offset": "0x06D42",
+      "en_target_rom_offset": "0x06D52",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 127,
+      "pointer_rom_offset": "0x05ED2",
+      "jp_pointer_cpu": "0xAD41",
+      "en_pointer_cpu": "0xAD58",
+      "jp_target_rom_offset": "0x06D51",
+      "en_target_rom_offset": "0x06D68",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 128,
+      "pointer_rom_offset": "0x05ED4",
+      "jp_pointer_cpu": "0xAD4E",
+      "en_pointer_cpu": "0xAD60",
+      "jp_target_rom_offset": "0x06D5E",
+      "en_target_rom_offset": "0x06D70",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 129,
+      "pointer_rom_offset": "0x05ED6",
+      "jp_pointer_cpu": "0xAD56",
+      "en_pointer_cpu": "0xAD69",
+      "jp_target_rom_offset": "0x06D66",
+      "en_target_rom_offset": "0x06D79",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 130,
+      "pointer_rom_offset": "0x05ED8",
+      "jp_pointer_cpu": "0xAD61",
+      "en_pointer_cpu": "0xAD76",
+      "jp_target_rom_offset": "0x06D71",
+      "en_target_rom_offset": "0x06D86",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 131,
+      "pointer_rom_offset": "0x05EDA",
+      "jp_pointer_cpu": "0xAD6D",
+      "en_pointer_cpu": "0xAD7E",
+      "jp_target_rom_offset": "0x06D7D",
+      "en_target_rom_offset": "0x06D8E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 132,
+      "pointer_rom_offset": "0x05EDC",
+      "jp_pointer_cpu": "0xAD75",
+      "en_pointer_cpu": "0xAC81",
+      "jp_target_rom_offset": "0x06D85",
+      "en_target_rom_offset": "0x06C91",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 133,
+      "pointer_rom_offset": "0x05EDE",
+      "jp_pointer_cpu": "0xAD7C",
+      "en_pointer_cpu": "0xAD60",
+      "jp_target_rom_offset": "0x06D8C",
+      "en_target_rom_offset": "0x06D70",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 134,
+      "pointer_rom_offset": "0x05EE0",
+      "jp_pointer_cpu": "0xAD84",
+      "en_pointer_cpu": "0xAD86",
+      "jp_target_rom_offset": "0x06D94",
+      "en_target_rom_offset": "0x06D96",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 135,
+      "pointer_rom_offset": "0x05EE2",
+      "jp_pointer_cpu": "0xAD8E",
+      "en_pointer_cpu": "0xAD95",
+      "jp_target_rom_offset": "0x06D9E",
+      "en_target_rom_offset": "0x06DA5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 136,
+      "pointer_rom_offset": "0x05EE4",
+      "jp_pointer_cpu": "0xAD9A",
+      "en_pointer_cpu": "0xAD9E",
+      "jp_target_rom_offset": "0x06DAA",
+      "en_target_rom_offset": "0x06DAE",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 137,
+      "pointer_rom_offset": "0x05EE6",
+      "jp_pointer_cpu": "0xADB2",
+      "en_pointer_cpu": "0xADB3",
+      "jp_target_rom_offset": "0x06DC2",
+      "en_target_rom_offset": "0x06DC3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 138,
+      "pointer_rom_offset": "0x05EE8",
+      "jp_pointer_cpu": "0xADD1",
+      "en_pointer_cpu": "0xADCB",
+      "jp_target_rom_offset": "0x06DE1",
+      "en_target_rom_offset": "0x06DDB",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 139,
+      "pointer_rom_offset": "0x05EEA",
+      "jp_pointer_cpu": "0xADE3",
+      "en_pointer_cpu": "0xADE8",
+      "jp_target_rom_offset": "0x06DF3",
+      "en_target_rom_offset": "0x06DF8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 140,
+      "pointer_rom_offset": "0x05EEC",
+      "jp_pointer_cpu": "0xADF3",
+      "en_pointer_cpu": "0xBFCC",
+      "jp_target_rom_offset": "0x06E03",
+      "en_target_rom_offset": "0x07FDC",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 141,
+      "pointer_rom_offset": "0x05EEE",
+      "jp_pointer_cpu": "0xADFD",
+      "en_pointer_cpu": "0xADF6",
+      "jp_target_rom_offset": "0x06E0D",
+      "en_target_rom_offset": "0x06E06",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 142,
+      "pointer_rom_offset": "0x05EF0",
+      "jp_pointer_cpu": "0xAE07",
+      "en_pointer_cpu": "0xADFE",
+      "jp_target_rom_offset": "0x06E17",
+      "en_target_rom_offset": "0x06E0E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 143,
+      "pointer_rom_offset": "0x05EF2",
+      "jp_pointer_cpu": "0xAE11",
+      "en_pointer_cpu": "0xAE08",
+      "jp_target_rom_offset": "0x06E21",
+      "en_target_rom_offset": "0x06E18",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 144,
+      "pointer_rom_offset": "0x05EF4",
+      "jp_pointer_cpu": "0xAE1D",
+      "en_pointer_cpu": "0xAE10",
+      "jp_target_rom_offset": "0x06E2D",
+      "en_target_rom_offset": "0x06E20",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 145,
+      "pointer_rom_offset": "0x05EF6",
+      "jp_pointer_cpu": "0xAE29",
+      "en_pointer_cpu": "0xAE1D",
+      "jp_target_rom_offset": "0x06E39",
+      "en_target_rom_offset": "0x06E2D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 146,
+      "pointer_rom_offset": "0x05EF8",
+      "jp_pointer_cpu": "0xAE38",
+      "en_pointer_cpu": "0xAE2C",
+      "jp_target_rom_offset": "0x06E48",
+      "en_target_rom_offset": "0x06E3C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 147,
+      "pointer_rom_offset": "0x05EFA",
+      "jp_pointer_cpu": "0xAE56",
+      "en_pointer_cpu": "0xAE3F",
+      "jp_target_rom_offset": "0x06E66",
+      "en_target_rom_offset": "0x06E4F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 148,
+      "pointer_rom_offset": "0x05EFC",
+      "jp_pointer_cpu": "0xAE61",
+      "en_pointer_cpu": "0xAE4E",
+      "jp_target_rom_offset": "0x06E71",
+      "en_target_rom_offset": "0x06E5E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 149,
+      "pointer_rom_offset": "0x05EFE",
+      "jp_pointer_cpu": "0xAE70",
+      "en_pointer_cpu": "0xAE5B",
+      "jp_target_rom_offset": "0x06E80",
+      "en_target_rom_offset": "0x06E6B",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 150,
+      "pointer_rom_offset": "0x05F00",
+      "jp_pointer_cpu": "0xAE78",
+      "en_pointer_cpu": "0xAE63",
+      "jp_target_rom_offset": "0x06E88",
+      "en_target_rom_offset": "0x06E73",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 151,
+      "pointer_rom_offset": "0x05F02",
+      "jp_pointer_cpu": "0xAE87",
+      "en_pointer_cpu": "0xAE71",
+      "jp_target_rom_offset": "0x06E97",
+      "en_target_rom_offset": "0x06E81",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 152,
+      "pointer_rom_offset": "0x05F04",
+      "jp_pointer_cpu": "0xAE98",
+      "en_pointer_cpu": "0xAE78",
+      "jp_target_rom_offset": "0x06EA8",
+      "en_target_rom_offset": "0x06E88",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 153,
+      "pointer_rom_offset": "0x05F06",
+      "jp_pointer_cpu": "0xAEA7",
+      "en_pointer_cpu": "0xAE80",
+      "jp_target_rom_offset": "0x06EB7",
+      "en_target_rom_offset": "0x06E90",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 154,
+      "pointer_rom_offset": "0x05F08",
+      "jp_pointer_cpu": "0xAEB7",
+      "en_pointer_cpu": "0xAE94",
+      "jp_target_rom_offset": "0x06EC7",
+      "en_target_rom_offset": "0x06EA4",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 155,
+      "pointer_rom_offset": "0x05F0A",
+      "jp_pointer_cpu": "0xAECC",
+      "en_pointer_cpu": "0xAE9D",
+      "jp_target_rom_offset": "0x06EDC",
+      "en_target_rom_offset": "0x06EAD",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 156,
+      "pointer_rom_offset": "0x05F0C",
+      "jp_pointer_cpu": "0xAEE1",
+      "en_pointer_cpu": "0xAEA7",
+      "jp_target_rom_offset": "0x06EF1",
+      "en_target_rom_offset": "0x06EB7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 157,
+      "pointer_rom_offset": "0x05F0E",
+      "jp_pointer_cpu": "0xAEEF",
+      "en_pointer_cpu": "0xAEAD",
+      "jp_target_rom_offset": "0x06EFF",
+      "en_target_rom_offset": "0x06EBD",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 158,
+      "pointer_rom_offset": "0x05F10",
+      "jp_pointer_cpu": "0xAEFF",
+      "en_pointer_cpu": "0xAEC2",
+      "jp_target_rom_offset": "0x06F0F",
+      "en_target_rom_offset": "0x06ED2",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 159,
+      "pointer_rom_offset": "0x05F12",
+      "jp_pointer_cpu": "0xAF0E",
+      "en_pointer_cpu": "0xB749",
+      "jp_target_rom_offset": "0x06F1E",
+      "en_target_rom_offset": "0x07759",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 160,
+      "pointer_rom_offset": "0x05F14",
+      "jp_pointer_cpu": "0xAF1D",
+      "en_pointer_cpu": "0xAEC2",
+      "jp_target_rom_offset": "0x06F2D",
+      "en_target_rom_offset": "0x06ED2",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 161,
+      "pointer_rom_offset": "0x05F16",
+      "jp_pointer_cpu": "0xAF2C",
+      "en_pointer_cpu": "0xAED5",
+      "jp_target_rom_offset": "0x06F3C",
+      "en_target_rom_offset": "0x06EE5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 162,
+      "pointer_rom_offset": "0x05F18",
+      "jp_pointer_cpu": "0xAF3A",
+      "en_pointer_cpu": "0xAED4",
+      "jp_target_rom_offset": "0x06F4A",
+      "en_target_rom_offset": "0x06EE4",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 163,
+      "pointer_rom_offset": "0x05F1A",
+      "jp_pointer_cpu": "0xAF49",
+      "en_pointer_cpu": "0xAEE4",
+      "jp_target_rom_offset": "0x06F59",
+      "en_target_rom_offset": "0x06EF4",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 164,
+      "pointer_rom_offset": "0x05F1C",
+      "jp_pointer_cpu": "0xAF60",
+      "en_pointer_cpu": "0xAEF0",
+      "jp_target_rom_offset": "0x06F70",
+      "en_target_rom_offset": "0x06F00",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 165,
+      "pointer_rom_offset": "0x05F1E",
+      "jp_pointer_cpu": "0xAF83",
+      "en_pointer_cpu": "0xAF06",
+      "jp_target_rom_offset": "0x06F93",
+      "en_target_rom_offset": "0x06F16",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 166,
+      "pointer_rom_offset": "0x05F20",
+      "jp_pointer_cpu": "0xAFA8",
+      "en_pointer_cpu": "0xAF2D",
+      "jp_target_rom_offset": "0x06FB8",
+      "en_target_rom_offset": "0x06F3D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 167,
+      "pointer_rom_offset": "0x05F22",
+      "jp_pointer_cpu": "0xAFC4",
+      "en_pointer_cpu": "0xAF49",
+      "jp_target_rom_offset": "0x06FD4",
+      "en_target_rom_offset": "0x06F59",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 168,
+      "pointer_rom_offset": "0x05F24",
+      "jp_pointer_cpu": "0xAFD6",
+      "en_pointer_cpu": "0xB01F",
+      "jp_target_rom_offset": "0x06FE6",
+      "en_target_rom_offset": "0x0702F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 169,
+      "pointer_rom_offset": "0x05F26",
+      "jp_pointer_cpu": "0xAFF7",
+      "en_pointer_cpu": "0xAF65",
+      "jp_target_rom_offset": "0x07007",
+      "en_target_rom_offset": "0x06F75",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 170,
+      "pointer_rom_offset": "0x05F28",
+      "jp_pointer_cpu": "0xB01D",
+      "en_pointer_cpu": "0xAF92",
+      "jp_target_rom_offset": "0x0702D",
+      "en_target_rom_offset": "0x06FA2",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 171,
+      "pointer_rom_offset": "0x05F2A",
+      "jp_pointer_cpu": "0xB04D",
+      "en_pointer_cpu": "0xAFB5",
+      "jp_target_rom_offset": "0x0705D",
+      "en_target_rom_offset": "0x06FC5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 172,
+      "pointer_rom_offset": "0x05F2C",
+      "jp_pointer_cpu": "0xB078",
+      "en_pointer_cpu": "0xAFD7",
+      "jp_target_rom_offset": "0x07088",
+      "en_target_rom_offset": "0x06FE7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 173,
+      "pointer_rom_offset": "0x05F2E",
+      "jp_pointer_cpu": "0xB07E",
+      "en_pointer_cpu": "0xAFE0",
+      "jp_target_rom_offset": "0x0708E",
+      "en_target_rom_offset": "0x06FF0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 174,
+      "pointer_rom_offset": "0x05F30",
+      "jp_pointer_cpu": "0xB09F",
+      "en_pointer_cpu": "0xAFF8",
+      "jp_target_rom_offset": "0x070AF",
+      "en_target_rom_offset": "0x07008",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 175,
+      "pointer_rom_offset": "0x05F32",
+      "jp_pointer_cpu": "0xB0C9",
+      "en_pointer_cpu": "0xB11C",
+      "jp_target_rom_offset": "0x070D9",
+      "en_target_rom_offset": "0x0712C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 176,
+      "pointer_rom_offset": "0x05F34",
+      "jp_pointer_cpu": "0xB0DA",
+      "en_pointer_cpu": "0xB134",
+      "jp_target_rom_offset": "0x070EA",
+      "en_target_rom_offset": "0x07144",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 177,
+      "pointer_rom_offset": "0x05F36",
+      "jp_pointer_cpu": "0xB0F1",
+      "en_pointer_cpu": "0xB159",
+      "jp_target_rom_offset": "0x07101",
+      "en_target_rom_offset": "0x07169",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 178,
+      "pointer_rom_offset": "0x05F38",
+      "jp_pointer_cpu": "0xB123",
+      "en_pointer_cpu": "0xB179",
+      "jp_target_rom_offset": "0x07133",
+      "en_target_rom_offset": "0x07189",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 179,
+      "pointer_rom_offset": "0x05F3A",
+      "jp_pointer_cpu": "0xB143",
+      "en_pointer_cpu": "0xB198",
+      "jp_target_rom_offset": "0x07153",
+      "en_target_rom_offset": "0x071A8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 180,
+      "pointer_rom_offset": "0x05F3C",
+      "jp_pointer_cpu": "0xB16D",
+      "en_pointer_cpu": "0xB1C2",
+      "jp_target_rom_offset": "0x0717D",
+      "en_target_rom_offset": "0x071D2",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 181,
+      "pointer_rom_offset": "0x05F3E",
+      "jp_pointer_cpu": "0xB188",
+      "en_pointer_cpu": "0xB1DF",
+      "jp_target_rom_offset": "0x07198",
+      "en_target_rom_offset": "0x071EF",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "jp_pointer_cpu": "0xB1A6",
+      "en_pointer_cpu": "0xB1F4",
+      "jp_target_rom_offset": "0x071B6",
+      "en_target_rom_offset": "0x07204",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 183,
+      "pointer_rom_offset": "0x05F42",
+      "jp_pointer_cpu": "0xB1CB",
+      "en_pointer_cpu": "0xB220",
+      "jp_target_rom_offset": "0x071DB",
+      "en_target_rom_offset": "0x07230",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 184,
+      "pointer_rom_offset": "0x05F44",
+      "jp_pointer_cpu": "0xB1E0",
+      "en_pointer_cpu": "0xB22E",
+      "jp_target_rom_offset": "0x071F0",
+      "en_target_rom_offset": "0x0723E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 185,
+      "pointer_rom_offset": "0x05F46",
+      "jp_pointer_cpu": "0xB1F8",
+      "en_pointer_cpu": "0xB24C",
+      "jp_target_rom_offset": "0x07208",
+      "en_target_rom_offset": "0x0725C",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 186,
+      "pointer_rom_offset": "0x05F48",
+      "jp_pointer_cpu": "0xB207",
+      "en_pointer_cpu": "0xB260",
+      "jp_target_rom_offset": "0x07217",
+      "en_target_rom_offset": "0x07270",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 187,
+      "pointer_rom_offset": "0x05F4A",
+      "jp_pointer_cpu": "0xB232",
+      "en_pointer_cpu": "0xB27F",
+      "jp_target_rom_offset": "0x07242",
+      "en_target_rom_offset": "0x0728F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 188,
+      "pointer_rom_offset": "0x05F4C",
+      "jp_pointer_cpu": "0xB239",
+      "en_pointer_cpu": "0xB29C",
+      "jp_target_rom_offset": "0x07249",
+      "en_target_rom_offset": "0x072AC",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 189,
+      "pointer_rom_offset": "0x05F4E",
+      "jp_pointer_cpu": "0xB257",
+      "en_pointer_cpu": "0xB2C8",
+      "jp_target_rom_offset": "0x07267",
+      "en_target_rom_offset": "0x072D8",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 190,
+      "pointer_rom_offset": "0x05F50",
+      "jp_pointer_cpu": "0xB270",
+      "en_pointer_cpu": "0xB2ED",
+      "jp_target_rom_offset": "0x07280",
+      "en_target_rom_offset": "0x072FD",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 191,
+      "pointer_rom_offset": "0x05F52",
+      "jp_pointer_cpu": "0xB29C",
+      "en_pointer_cpu": "0xB315",
+      "jp_target_rom_offset": "0x072AC",
+      "en_target_rom_offset": "0x07325",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 192,
+      "pointer_rom_offset": "0x05F54",
+      "jp_pointer_cpu": "0xB2B6",
+      "en_pointer_cpu": "0xB330",
+      "jp_target_rom_offset": "0x072C6",
+      "en_target_rom_offset": "0x07340",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 193,
+      "pointer_rom_offset": "0x05F56",
+      "jp_pointer_cpu": "0xB2CC",
+      "en_pointer_cpu": "0xB349",
+      "jp_target_rom_offset": "0x072DC",
+      "en_target_rom_offset": "0x07359",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 194,
+      "pointer_rom_offset": "0x05F58",
+      "jp_pointer_cpu": "0xB2E7",
+      "en_pointer_cpu": "0xB361",
+      "jp_target_rom_offset": "0x072F7",
+      "en_target_rom_offset": "0x07371",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 195,
+      "pointer_rom_offset": "0x05F5A",
+      "jp_pointer_cpu": "0xB310",
+      "en_pointer_cpu": "0xA0CE",
+      "jp_target_rom_offset": "0x07320",
+      "en_target_rom_offset": "0x060DE",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 196,
+      "pointer_rom_offset": "0x05F5C",
+      "jp_pointer_cpu": "0xB324",
+      "en_pointer_cpu": "0xB6F6",
+      "jp_target_rom_offset": "0x07334",
+      "en_target_rom_offset": "0x07706",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 197,
+      "pointer_rom_offset": "0x05F5E",
+      "jp_pointer_cpu": "0xB331",
+      "en_pointer_cpu": "0xB37D",
+      "jp_target_rom_offset": "0x07341",
+      "en_target_rom_offset": "0x0738D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 198,
+      "pointer_rom_offset": "0x05F60",
+      "jp_pointer_cpu": "0xB359",
+      "en_pointer_cpu": "0xB393",
+      "jp_target_rom_offset": "0x07369",
+      "en_target_rom_offset": "0x073A3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 199,
+      "pointer_rom_offset": "0x05F62",
+      "jp_pointer_cpu": "0xB365",
+      "en_pointer_cpu": "0xB3A5",
+      "jp_target_rom_offset": "0x07375",
+      "en_target_rom_offset": "0x073B5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 200,
+      "pointer_rom_offset": "0x05F64",
+      "jp_pointer_cpu": "0xB38C",
+      "en_pointer_cpu": "0xB3CF",
+      "jp_target_rom_offset": "0x0739C",
+      "en_target_rom_offset": "0x073DF",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 201,
+      "pointer_rom_offset": "0x05F66",
+      "jp_pointer_cpu": "0xB397",
+      "en_pointer_cpu": "0xB3E0",
+      "jp_target_rom_offset": "0x073A7",
+      "en_target_rom_offset": "0x073F0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 202,
+      "pointer_rom_offset": "0x05F68",
+      "jp_pointer_cpu": "0xB39F",
+      "en_pointer_cpu": "0xB3F1",
+      "jp_target_rom_offset": "0x073AF",
+      "en_target_rom_offset": "0x07401",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 203,
+      "pointer_rom_offset": "0x05F6A",
+      "jp_pointer_cpu": "0xB3B4",
+      "en_pointer_cpu": "0xB403",
+      "jp_target_rom_offset": "0x073C4",
+      "en_target_rom_offset": "0x07413",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 204,
+      "pointer_rom_offset": "0x05F6C",
+      "jp_pointer_cpu": "0xB3D1",
+      "en_pointer_cpu": "0xB42D",
+      "jp_target_rom_offset": "0x073E1",
+      "en_target_rom_offset": "0x0743D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 205,
+      "pointer_rom_offset": "0x05F6E",
+      "jp_pointer_cpu": "0xB3F4",
+      "en_pointer_cpu": "0xB44E",
+      "jp_target_rom_offset": "0x07404",
+      "en_target_rom_offset": "0x0745E",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 206,
+      "pointer_rom_offset": "0x05F70",
+      "jp_pointer_cpu": "0xB41E",
+      "en_pointer_cpu": "0xB47D",
+      "jp_target_rom_offset": "0x0742E",
+      "en_target_rom_offset": "0x0748D",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 207,
+      "pointer_rom_offset": "0x05F72",
+      "jp_pointer_cpu": "0xB447",
+      "en_pointer_cpu": "0xB4A6",
+      "jp_target_rom_offset": "0x07457",
+      "en_target_rom_offset": "0x074B6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 208,
+      "pointer_rom_offset": "0x05F74",
+      "jp_pointer_cpu": "0xB471",
+      "en_pointer_cpu": "0xB4C7",
+      "jp_target_rom_offset": "0x07481",
+      "en_target_rom_offset": "0x074D7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 209,
+      "pointer_rom_offset": "0x05F76",
+      "jp_pointer_cpu": "0xB48B",
+      "en_pointer_cpu": "0xB4D7",
+      "jp_target_rom_offset": "0x0749B",
+      "en_target_rom_offset": "0x074E7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 210,
+      "pointer_rom_offset": "0x05F78",
+      "jp_pointer_cpu": "0xB4A8",
+      "en_pointer_cpu": "0xB040",
+      "jp_target_rom_offset": "0x074B8",
+      "en_target_rom_offset": "0x07050",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 211,
+      "pointer_rom_offset": "0x05F7A",
+      "jp_pointer_cpu": "0xB4C3",
+      "en_pointer_cpu": "0xB4F3",
+      "jp_target_rom_offset": "0x074D3",
+      "en_target_rom_offset": "0x07503",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 212,
+      "pointer_rom_offset": "0x05F7C",
+      "jp_pointer_cpu": "0xB4CD",
+      "en_pointer_cpu": "0xB500",
+      "jp_target_rom_offset": "0x074DD",
+      "en_target_rom_offset": "0x07510",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 213,
+      "pointer_rom_offset": "0x05F7E",
+      "jp_pointer_cpu": "0xB4D7",
+      "en_pointer_cpu": "0xB50A",
+      "jp_target_rom_offset": "0x074E7",
+      "en_target_rom_offset": "0x0751A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 214,
+      "pointer_rom_offset": "0x05F80",
+      "jp_pointer_cpu": "0xB4E5",
+      "en_pointer_cpu": "0xB51A",
+      "jp_target_rom_offset": "0x074F5",
+      "en_target_rom_offset": "0x0752A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 215,
+      "pointer_rom_offset": "0x05F82",
+      "jp_pointer_cpu": "0xB505",
+      "en_pointer_cpu": "0xB542",
+      "jp_target_rom_offset": "0x07515",
+      "en_target_rom_offset": "0x07552",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 216,
+      "pointer_rom_offset": "0x05F84",
+      "jp_pointer_cpu": "0xB531",
+      "en_pointer_cpu": "0xB56A",
+      "jp_target_rom_offset": "0x07541",
+      "en_target_rom_offset": "0x0757A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 217,
+      "pointer_rom_offset": "0x05F86",
+      "jp_pointer_cpu": "0xB55B",
+      "en_pointer_cpu": "0xB59A",
+      "jp_target_rom_offset": "0x0756B",
+      "en_target_rom_offset": "0x075AA",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 218,
+      "pointer_rom_offset": "0x05F88",
+      "jp_pointer_cpu": "0xB563",
+      "en_pointer_cpu": "0xB5A3",
+      "jp_target_rom_offset": "0x07573",
+      "en_target_rom_offset": "0x075B3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 219,
+      "pointer_rom_offset": "0x05F8A",
+      "jp_pointer_cpu": "0xB574",
+      "en_pointer_cpu": "0xB5BC",
+      "jp_target_rom_offset": "0x07584",
+      "en_target_rom_offset": "0x075CC",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 220,
+      "pointer_rom_offset": "0x05F8C",
+      "jp_pointer_cpu": "0xB582",
+      "en_pointer_cpu": "0xB5C7",
+      "jp_target_rom_offset": "0x07592",
+      "en_target_rom_offset": "0x075D7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 221,
+      "pointer_rom_offset": "0x05F8E",
+      "jp_pointer_cpu": "0xB59C",
+      "en_pointer_cpu": "0xB5E9",
+      "jp_target_rom_offset": "0x075AC",
+      "en_target_rom_offset": "0x075F9",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 222,
+      "pointer_rom_offset": "0x05F90",
+      "jp_pointer_cpu": "0xB5A4",
+      "en_pointer_cpu": "0xB5F5",
+      "jp_target_rom_offset": "0x075B4",
+      "en_target_rom_offset": "0x07605",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 223,
+      "pointer_rom_offset": "0x05F92",
+      "jp_pointer_cpu": "0xB5CA",
+      "en_pointer_cpu": "0xB61F",
+      "jp_target_rom_offset": "0x075DA",
+      "en_target_rom_offset": "0x0762F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 224,
+      "pointer_rom_offset": "0x05F94",
+      "jp_pointer_cpu": "0xB5E1",
+      "en_pointer_cpu": "0xB636",
+      "jp_target_rom_offset": "0x075F1",
+      "en_target_rom_offset": "0x07646",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 225,
+      "pointer_rom_offset": "0x05F96",
+      "jp_pointer_cpu": "0xB600",
+      "en_pointer_cpu": "0xB64F",
+      "jp_target_rom_offset": "0x07610",
+      "en_target_rom_offset": "0x0765F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 226,
+      "pointer_rom_offset": "0x05F98",
+      "jp_pointer_cpu": "0xB610",
+      "en_pointer_cpu": "0xB664",
+      "jp_target_rom_offset": "0x07620",
+      "en_target_rom_offset": "0x07674",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 227,
+      "pointer_rom_offset": "0x05F9A",
+      "jp_pointer_cpu": "0xB62C",
+      "en_pointer_cpu": "0xB671",
+      "jp_target_rom_offset": "0x0763C",
+      "en_target_rom_offset": "0x07681",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 228,
+      "pointer_rom_offset": "0x05F9C",
+      "jp_pointer_cpu": "0xB637",
+      "en_pointer_cpu": "0xB679",
+      "jp_target_rom_offset": "0x07647",
+      "en_target_rom_offset": "0x07689",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 229,
+      "pointer_rom_offset": "0x05F9E",
+      "jp_pointer_cpu": "0xB656",
+      "en_pointer_cpu": "0xB6A0",
+      "jp_target_rom_offset": "0x07666",
+      "en_target_rom_offset": "0x076B0",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 230,
+      "pointer_rom_offset": "0x05FA0",
+      "jp_pointer_cpu": "0xB662",
+      "en_pointer_cpu": "0xB6A9",
+      "jp_target_rom_offset": "0x07672",
+      "en_target_rom_offset": "0x076B9",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 231,
+      "pointer_rom_offset": "0x05FA2",
+      "jp_pointer_cpu": "0xB66D",
+      "en_pointer_cpu": "0xB6B5",
+      "jp_target_rom_offset": "0x0767D",
+      "en_target_rom_offset": "0x076C5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 232,
+      "pointer_rom_offset": "0x05FA4",
+      "jp_pointer_cpu": "0xB67E",
+      "en_pointer_cpu": "0xB6C7",
+      "jp_target_rom_offset": "0x0768E",
+      "en_target_rom_offset": "0x076D7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 233,
+      "pointer_rom_offset": "0x05FA6",
+      "jp_pointer_cpu": "0xB68C",
+      "en_pointer_cpu": "0xB6D6",
+      "jp_target_rom_offset": "0x0769C",
+      "en_target_rom_offset": "0x076E6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 234,
+      "pointer_rom_offset": "0x05FA8",
+      "jp_pointer_cpu": "0xB69C",
+      "en_pointer_cpu": "0xB6E5",
+      "jp_target_rom_offset": "0x076AC",
+      "en_target_rom_offset": "0x076F5",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 235,
+      "pointer_rom_offset": "0x05FAA",
+      "jp_pointer_cpu": "0xB6AB",
+      "en_pointer_cpu": "0xA102",
+      "jp_target_rom_offset": "0x076BB",
+      "en_target_rom_offset": "0x06112",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 236,
+      "pointer_rom_offset": "0x05FAC",
+      "jp_pointer_cpu": "0xB6B8",
+      "en_pointer_cpu": "0xB0A6",
+      "jp_target_rom_offset": "0x076C8",
+      "en_target_rom_offset": "0x070B6",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 237,
+      "pointer_rom_offset": "0x05FAE",
+      "jp_pointer_cpu": "0xB6D1",
+      "en_pointer_cpu": "0xB70A",
+      "jp_target_rom_offset": "0x076E1",
+      "en_target_rom_offset": "0x0771A",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 238,
+      "pointer_rom_offset": "0x05FB0",
+      "jp_pointer_cpu": "0xB6E8",
+      "en_pointer_cpu": "0xB723",
+      "jp_target_rom_offset": "0x076F8",
+      "en_target_rom_offset": "0x07733",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 239,
+      "pointer_rom_offset": "0x05FB2",
+      "jp_pointer_cpu": "0xB6F4",
+      "en_pointer_cpu": "0xB72F",
+      "jp_target_rom_offset": "0x07704",
+      "en_target_rom_offset": "0x0773F",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 240,
+      "pointer_rom_offset": "0x05FB4",
+      "jp_pointer_cpu": "0xB702",
+      "en_pointer_cpu": "0xBFE7",
+      "jp_target_rom_offset": "0x07712",
+      "en_target_rom_offset": "0x07FF7",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 241,
+      "pointer_rom_offset": "0x05FB6",
+      "jp_pointer_cpu": "0xB716",
+      "en_pointer_cpu": "0xB739",
+      "jp_target_rom_offset": "0x07726",
+      "en_target_rom_offset": "0x07749",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 242,
+      "pointer_rom_offset": "0x05FB8",
+      "jp_pointer_cpu": "0xB727",
+      "en_pointer_cpu": "0xB0C3",
+      "jp_target_rom_offset": "0x07737",
+      "en_target_rom_offset": "0x070D3",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 243,
+      "pointer_rom_offset": "0x05FBA",
+      "jp_pointer_cpu": "0xB741",
+      "en_pointer_cpu": "0xBFF9",
+      "jp_target_rom_offset": "0x07751",
+      "en_target_rom_offset": "0x08009",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 244,
+      "pointer_rom_offset": "0x05FBC",
+      "jp_pointer_cpu": "0xB74C",
+      "en_pointer_cpu": "0xBFF6",
+      "jp_target_rom_offset": "0x0775C",
+      "en_target_rom_offset": "0x08006",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 245,
+      "pointer_rom_offset": "0x05FBE",
+      "jp_pointer_cpu": "0xB751",
+      "en_pointer_cpu": "0xBFD4",
+      "jp_target_rom_offset": "0x07761",
+      "en_target_rom_offset": "0x07FE4",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 246,
+      "pointer_rom_offset": "0x05FC0",
+      "jp_pointer_cpu": "0xBBF0",
+      "en_pointer_cpu": "0xBBF0",
+      "jp_target_rom_offset": "0x07C00",
+      "en_target_rom_offset": "0x07C00",
+      "pointer_changed": false,
+      "en_target_in_bank1": true
+    },
+    {
+      "index": 247,
+      "pointer_rom_offset": "0x05FC2",
+      "jp_pointer_cpu": "0x828B",
+      "en_pointer_cpu": "0x8D00",
+      "jp_target_rom_offset": "0x0429B",
+      "en_target_rom_offset": "0x04D10",
+      "pointer_changed": true,
+      "en_target_in_bank1": true
+    }
+  ]
+}

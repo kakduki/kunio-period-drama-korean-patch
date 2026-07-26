@@ -11,8 +11,18 @@
 
 - 새 작업 계획: `KOREAN_PATCH_REBOOT_PLAN.md`
 - 영어판 구조 분석: `rom_analysis/english_patch_reference.md`
+- 영어판 대본/포인터 구조 추출: `rom_analysis/english_script_reference.md`
+- 대사 렌더러 코드 증거: `rom_analysis/dialogue_renderer_evidence.md`
+- 보수적 원문 카탈로그: `text_data/script_catalog.tsv`
 - 기존 v0.4.x 빌드: 레거시 실험 후보, 최종 패치 아님
 - FCEUX: 구조 분석 후 최소 후보 화면을 확인할 때만 사용
+
+영어 IPS를 입수했을 때만 다음 명령으로 구조 자료를 다시 생성할 수 있습니다.
+명령은 IPS를 메모리에서만 읽으며, 영어판 ROM을 만들거나 저장하지 않습니다.
+
+```powershell
+python scripts/extract_english_reference_script.py --reference-ips "C:/path/to/TSe-v10.ips"
+```
 
 ## 현재 상태
 
@@ -24,6 +34,7 @@
 - 선택 테스트 IPS: `output/kunio_period_drama_korean_prg_plan_v0.4.3_broad_preview_unverified.ips` (수동 화면 비교용, primary 아님)
 
 아직 최종 패치가 아닙니다. 현재 후보는 안전한 equal-length PRG 텍스트 일부와 CHR 글리프만 적용한 수동 검증용 빌드입니다.
+새 한글패치 경로의 기준은 `english_pointer_map.json`과 `script_catalog.tsv`이며, v0.4.x 후보는 구조 복원이 끝날 때까지 릴리스 기준으로 사용하지 않습니다.
 
 ## 빠른 검증
 
