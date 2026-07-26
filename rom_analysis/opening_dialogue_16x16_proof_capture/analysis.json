@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_dialogue_16x16_proof_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 37,
+    "matched_read_hits": 37,
+    "matched_capture_record": true,
+    "screenshots": [
+      "rom_analysis\\opening_dialogue_16x16_proof_capture\\opening_dialogue_frame_000883_screen.gd",
+      "rom_analysis\\opening_dialogue_16x16_proof_capture\\opening_dialogue_frame_000883_screen.png"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_dialogue_16x16_proof_capture\\opening_dialogue_frame_000883_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "Native frame 883 review: paired 16x16 syllables are distinguishable in the dialogue box; the compact wording is a renderer/font proof only, not final translation text."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}

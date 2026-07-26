@@ -7,6 +7,7 @@ from korean_tile_font import (
     bitmap_to_nes_2bpp,
     handcrafted_glyph_to_bitmap,
     render_tile,
+    square_bitmap_to_nes_2bpp_tiles,
     tall_bitmap_to_nes_2bpp_tiles,
 )
 
@@ -33,6 +34,16 @@ def main() -> int:
     assert top[:8] == bytes([0x80, 0, 0, 0, 0, 0, 0, 0])
     assert bottom[:8] == bytes([0x01, 0, 0, 0, 0, 0, 0, 0])
     assert top[8:] == top[:8] and bottom[8:] == bottom[:8]
+    square = [[0] * 16 for _ in range(16)]
+    square[0][0] = 1
+    square[0][8] = 1
+    square[8][0] = 1
+    square[8][8] = 1
+    top_left, top_right, bottom_left, bottom_right = square_bitmap_to_nes_2bpp_tiles(square)
+    assert top_left[:8] == bytes([0x80, 0, 0, 0, 0, 0, 0, 0])
+    assert top_right[:8] == top_left[:8]
+    assert bottom_left[:8] == top_left[:8]
+    assert bottom_right[:8] == top_left[:8]
     try:
         handcrafted_glyph_to_bitmap("A")
     except ValueError:

@@ -21,6 +21,8 @@ DEFAULT_FONT_CANDIDATES = (
 TILE_WIDTH = 8
 TILE_HEIGHT = 8
 TALL_TILE_HEIGHT = 16
+SQUARE_TILE_WIDTH = 16
+SQUARE_TILE_HEIGHT = 16
 
 # The first proof scene has a deliberately small glyph set. These glyphs are
 # drawn as native 8x8 bitmaps instead of downscaling a TrueType outline. Each
@@ -166,6 +168,63 @@ def normalize_glyph_to_tall_bitmap(
     ]
 
 
+def normalize_glyph_to_square_bitmap(
+    character: str,
+    *,
+    font_path: str | Path | None = None,
+    target_pixels: int = 15,
+    source_size: int = 64,
+    threshold: int = 100,
+) -> list[list[int]]:
+    """Return a centered 16x16 bitmap for a paired 8x16 dialogue cell.
+
+    The dialogue renderer can place two existing 8x16 cells side by side.
+    This produces a native 16x16 Korean syllable without inventing a second
+    VRAM queue format. Preserve the source aspect ratio while fitting it in a
+    15-pixel box so adjacent syllables retain a one-pixel breathing margin.
+    """
+
+    if len(character) != 1:
+        raise ValueError("A tile renderer accepts exactly one character")
+    if not 1 <= target_pixels <= SQUARE_TILE_WIDTH:
+        raise ValueError("target_pixels must fit inside a 16x16 tile square")
+    Image, ImageDraw, ImageFont = _pillow()
+    font = ImageFont.truetype(str(find_korean_font(font_path)), source_size)
+    canvas = Image.new("L", (source_size * 2, source_size * 2), 0)
+    draw = ImageDraw.Draw(canvas)
+    bbox = draw.textbbox((0, 0), character, font=font)
+    width = bbox[2] - bbox[0]
+    height = bbox[3] - bbox[1]
+    if width <= 0 or height <= 0:
+        raise ValueError(f"font produced an empty glyph for {character!r}")
+    draw.text(
+        (source_size // 2 - bbox[0], source_size // 2 - bbox[1]),
+        character,
+        font=font,
+        fill=255,
+    )
+    content = canvas.getbbox()
+    if content is None:
+        raise ValueError(f"font produced an empty pixel bitmap for {character!r}")
+    glyph = canvas.crop(content)
+    scale = min(target_pixels / glyph.width, target_pixels / glyph.height)
+    resized = glyph.resize(
+        (
+            max(1, round(glyph.width * scale)),
+            max(1, round(glyph.height * scale)),
+        ),
+        Image.Resampling.LANCZOS,
+    )
+    bitmap = [[0 for _ in range(SQUARE_TILE_WIDTH)] for _ in range(SQUARE_TILE_HEIGHT)]
+    left = (SQUARE_TILE_WIDTH - resized.width) // 2
+    top = (SQUARE_TILE_HEIGHT - resized.height) // 2
+    for y in range(resized.height):
+        for x in range(resized.width):
+            if resized.getpixel((x, y)) >= threshold:
+                bitmap[top + y][left + x] = 1
+    return bitmap
+
+
 def handcrafted_glyph_to_bitmap(character: str) -> list[list[int]]:
     """Return a manually designed 8x8 bitmap for a reviewed Korean glyph."""
 
@@ -226,6 +285,25 @@ def tall_bitmap_to_nes_2bpp_tiles(bitmap: list[list[int]]) -> tuple[bytes, bytes
     )
 
 
+def square_bitmap_to_nes_2bpp_tiles(
+    bitmap: list[list[int]],
+) -> tuple[bytes, bytes, bytes, bytes]:
+    """Split a 16x16 bitmap into top-left, top-right, bottom-left, bottom-right."""
+
+    if len(bitmap) != SQUARE_TILE_HEIGHT or any(
+        len(row) != SQUARE_TILE_WIDTH for row in bitmap
+    ):
+        raise ValueError("expected a 16x16 bitmap")
+    top = bitmap[:TILE_HEIGHT]
+    bottom = bitmap[TILE_HEIGHT:]
+    return (
+        bitmap_to_nes_2bpp([row[:TILE_WIDTH] for row in top]),
+        bitmap_to_nes_2bpp([row[TILE_WIDTH:] for row in top]),
+        bitmap_to_nes_2bpp([row[:TILE_WIDTH] for row in bottom]),
+        bitmap_to_nes_2bpp([row[TILE_WIDTH:] for row in bottom]),
+    )
+
+
 def render_tile(character: str, *, style: str = "raster", **kwargs: object) -> bytes:
     return bitmap_to_nes_2bpp(glyph_to_bitmap(character, style=style, **kwargs))
 
@@ -240,6 +318,25 @@ def render_tall_tiles(
         normalize_glyph_to_tall_bitmap(
             character,
             font_path=font_path,
+            threshold=threshold,
+        )
+    )
+
+
+def render_square_tiles(
+    character: str,
+    *,
+    font_path: str | Path | None = None,
+    target_pixels: int = 15,
+    threshold: int = 100,
+) -> tuple[bytes, bytes, bytes, bytes]:
+    """Render one Korean syllable into four NES tiles for a 16x16 cell."""
+
+    return square_bitmap_to_nes_2bpp_tiles(
+        normalize_glyph_to_square_bitmap(
+            character,
+            font_path=font_path,
+            target_pixels=target_pixels,
             threshold=threshold,
         )
     )
@@ -315,6 +412,51 @@ def write_tall_preview(
         bitmap = normalize_glyph_to_tall_bitmap(
             character,
             font_path=font_path,
+            threshold=threshold,
+        )
+        origin_x = (index % columns) * cell_width + 6
+        origin_y = (index // columns) * cell_height + label_height
+        draw.text((origin_x, origin_y - label_height), character, fill="black", font=label_font)
+        for y, row in enumerate(bitmap):
+            for x, pixel in enumerate(row):
+                draw.rectangle(
+                    (
+                        origin_x + x * scale,
+                        origin_y + y * scale,
+                        origin_x + (x + 1) * scale - 1,
+                        origin_y + (y + 1) * scale - 1,
+                    ),
+                    fill="black" if pixel else "white",
+                )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    image.save(output)
+
+
+def write_square_preview(
+    characters: list[str],
+    output: Path,
+    *,
+    font_path: str | Path | None = None,
+    target_pixels: int = 15,
+    threshold: int = 100,
+) -> None:
+    """Write an enlarged preview of literal 16x16 paired-cell glyphs."""
+
+    Image, ImageDraw, ImageFont = _pillow()
+    scale = 7
+    label_height = 14
+    columns = 8
+    rows = (len(characters) + columns - 1) // columns
+    cell_width = SQUARE_TILE_WIDTH * scale + 12
+    cell_height = SQUARE_TILE_HEIGHT * scale + label_height + 8
+    image = Image.new("RGB", (columns * cell_width, rows * cell_height), "white")
+    draw = ImageDraw.Draw(image)
+    label_font = ImageFont.load_default()
+    for index, character in enumerate(characters):
+        bitmap = normalize_glyph_to_square_bitmap(
+            character,
+            font_path=font_path,
+            target_pixels=target_pixels,
             threshold=threshold,
         )
         origin_x = (index % columns) * cell_width + 6

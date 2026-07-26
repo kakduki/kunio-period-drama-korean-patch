@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "batch_id": "opening_ptr_182_16x16_proof",
+  "translation_basis": "Japanese transcript and opening-scene context; the English patch supplies only pointer-table and source-slot structure.",
+  "renderer_profile": "paired_8x16_cells_for_16x16_korean",
+  "records": [
+    {
+      "id": "PTR-182-16X16",
+      "context": "opening dialogue",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_original_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+      "expected_length": 37,
+      "japanese_source": "Opening record 182; full transcription remains catalog work outside this font proof.",
+      "korean_text": "쿠니마사: 어서! 분조!",
+      "translation_basis": "Compact in-context wording selected only to keep this eight-glyph 16x16 renderer proof within the currently proven 17 source-code slots. It is not the final release translation for this record.",
+      "status": "renderer_font_proof_only",
+      "tokens": [
+        {"glyph_pair": "쿠"}, {"glyph_pair": "니"}, {"glyph_pair": "마"}, {"glyph_pair": "사"},
+        {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "어"}, {"glyph_pair": "서"}, {"byte": "CA"}, {"byte": "F8"},
+        {"glyph_pair": "분"}, {"glyph_pair": "조"}, {"byte": "CA"},
+        {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"},
+        {"byte": "00"},
+        {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"},
+        {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "FF"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+frame	label	cpu_range	expected_bytes	active_expected_match	record_snapshot
+883	opening_ptr_182_korean_16x16_pair_proof	$B1A6-$B1CA	81 8C 82 8D 83 8E 84 8F BB 00 85 90 86 91 CA F8 87 92 88 93 CA 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF	true	81 8C 82 8D 83 8E 84 8F BB 00 85 90 86 91 CA F8 87 92 88 93 CA 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF

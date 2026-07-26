@@ -32,6 +32,7 @@ KEY_PYTHON = [
     "scripts/build_candidate_pipeline.py",
     "scripts/build_opening_dialogue_proof.py",
     "scripts/build_opening_dialogue_8x16_proof.py",
+    "scripts/build_opening_dialogue_16x16_proof.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/build_v042_font_expanded_candidate.py",
     "scripts/build_v043_from_broad_scan_proof.py",
@@ -109,6 +110,7 @@ KEY_PYTHON = [
     "scripts/test_batch46_text_readiness.py",
     "scripts/test_build_opening_dialogue_proof.py",
     "scripts/test_build_opening_dialogue_8x16_proof.py",
+    "scripts/test_build_opening_dialogue_16x16_proof.py",
     "scripts/test_candidate_pipeline_reports.py",
     "scripts/test_candidate_ips_apply.py",
     "scripts/test_candidate_patch_scope.py",
@@ -164,6 +166,7 @@ LUA_TARGETS = [
     "lua/kunio_padding_exp_pad_f8f9_targets.lua",
     "lua/kunio_padding_exp_preserve_tail_targets.lua",
     "lua/kunio_opening_dialogue_proof_target.lua",
+    "lua/kunio_opening_dialogue_16x16_proof_target.lua",
 ]
 
 LUA_SCRIPTS = [
@@ -301,6 +304,7 @@ def main() -> int:
     run("Korean scene-batch compiler", ["scripts/test_compile_korean_scene_batch.py"])
     run("opening dialogue proof patch", ["scripts/test_build_opening_dialogue_proof.py"])
     run("opening dialogue 8x16 proof patch", ["scripts/test_build_opening_dialogue_8x16_proof.py"])
+    run("opening dialogue paired 16x16 proof patch", ["scripts/test_build_opening_dialogue_16x16_proof.py"])
     run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])
     run("reference IPS analyzer", ["scripts/test_analyze_reference_ips.py"])
     run(

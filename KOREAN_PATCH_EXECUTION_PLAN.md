@@ -55,9 +55,10 @@ dialogue window.
    - common words can be read without relying on the source text;
    - punctuation, spaces, and speaker labels remain clear;
    - no glyph collides with a neighbour or is confused with another glyph.
-5. If an 8x8 bitmap cannot meet the gate, first use the game's existing
-   vertical two-tile dialogue layout for an 8x16 Korean glyph. Only consider
-   a 2x2-tile (16x16) layout if that native capture still fails the gate.
+5. Use the game's existing vertical two-tile dialogue layout as an 8x16
+   technical building block. If the native capture remains too narrow for
+   Korean reading, pair two adjacent 8x16 cells into one 16x16 syllable before
+   considering any new VRAM queue format.
 
 Deliverables:
 
@@ -126,16 +127,15 @@ A result is recorded as:
 
 ## Immediate Sequence
 
-1. Record the present 8x8 font as a functional-display pass but a readability
-   failure.
-2. Produce native-size comparison candidates and select an 8x8 design only if
-   it meets the gate.
-3. Test the existing vertical pair as an 8x16 renderer path. Move to 16x16
-   layout work only if the 8x16 native capture fails; do not continue bulk
-   translation on the 8x8 path.
-4. Expand the opening script catalog only after the font decision.
-5. Build the first scene-level Korean compiler candidate, then verify it with
-   the existing bounded opening route.
+1. Record the 8x8 font as a functional-display pass but a readability failure.
+2. Keep the 8x16 vertical pair as a verified renderer building block, not the
+   final Korean font decision.
+3. Use paired 8x16 cells for a 16x16 Korean syllable and prove it on one real
+   opening record with the bounded frame-883 route.
+4. Solve release-capable glyph capacity and paired-cell width accounting before
+   expanding translation text.
+5. Expand the opening catalog only from context-checked Japanese material, then
+   build and capture one complete record at a time.
 
 ## Current Checkpoint
 
@@ -145,34 +145,43 @@ The following proof-level work is complete:
   and the `0x81-0x9A` dialogue font slots. No English ROM or IPS is stored.
 - Pointer entry 182 is tied to ROM `0x071B6`, CPU `$B1A6`, and a real opening
   dialogue capture at frame 883.
-- The existing two vertical dialogue tiles now render one Korean syllable as
-  8x16. The one-record candidate booted, read the expected 37 bytes, and
-  passed a native screenshot readability review.
+- The existing two vertical dialogue tiles render one source byte as an 8x16
+  cell. That path booted and read the expected 37 bytes, but its native
+  screenshot is too narrow for the intended Korean readability bar.
+- Two adjacent 8x16 cells now render one Korean syllable as 16x16. The paired
+  one-record candidate booted, matched all 37 runtime record reads, captured
+  the native scene at frame 883, and passed the one-record font review.
+- `text_data/korean_scene_batches/opening_ptr_182_16x16.json` records the
+  compact eight-glyph font proof explicitly. Its wording is not a release
+  translation and must not be promoted as one.
 - `text_data/korean_scene_batches/opening_ptr_182.json` is compiled with
   explicit glyph/control tokens. Its compiler reproduces the verified record
   byte-for-byte and rejects a batch that exceeds the current safe slot pool.
 
 The following is deliberately still open:
 
-- The one-record proof uses 17 unique Korean glyphs. It is not evidence that
-  every dialogue record can share one final Korean font page.
-- The current compiler admits 17 8x16-proven code slots (`0x81-0x89`,
-  `0x8C-0x93`) and excludes `0x8A` and `0x8B`; it does not authorise
-  untested Japanese-code or CHR slots.
+- The paired 16x16 proof uses eight unique Korean glyphs and 16 source slots.
+  It is not evidence that every dialogue record can share one final Korean
+  font page.
+- The current proven pool contains 17 one-cell codes (`0x81-0x89`,
+  `0x8C-0x93`) and excludes `0x8A` and `0x8B`. A 16x16 syllable consumes two
+  of those codes, so the proof pool supports only eight complete syllables and
+  one spare code; it does not authorise broad translation or untested CHR slots.
 - Pointer relocation, menu renderers, status labels, and event/boss dialogue
   remain separate context families and must not inherit this result blindly.
 
 ## Next Technical Gate
 
-1. Probe one additional dialogue code/vertical CHR pair at a time with the
-   same bounded opening capture.
-2. Record the result in `rom_analysis/dialogue_glyph_capacity_plan.md` and
-   extend the allocator only after the target code, top tile, bottom tile, and
-   native screenshot all agree.
-3. Select an opening batch that fits the proven pool, compile it from explicit
-   tokens, and capture its exact context.
-4. Solve a release-capable multi-scene glyph capacity strategy before bulk
-   translation or pointer relocation.
+1. Audit candidate source/CHR slots and determine whether a larger static pool
+   or scene-local CHR paging can support a release-capable 16x16 glyph set.
+2. Record each validated source and four-tile glyph placement in
+   `rom_analysis/dialogue_glyph_capacity_plan.md`; do not extend allocation
+   based only on byte similarity.
+3. Add paired-cell width accounting and explicit control-token preservation to
+   the scene compiler before encoding a full opening record.
+4. Capture each expanded record through a bounded, known context route and
+   solve the multi-scene capacity strategy before bulk translation or pointer
+   relocation.
 
 ## What Is Deliberately Retired
 
