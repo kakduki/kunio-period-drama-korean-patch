@@ -15,6 +15,10 @@ from rom_utils import REPO_ROOT
 KEY_PYTHON = [
     "scripts/analyze_reference_ips.py",
     "scripts/analyze_dialogue_renderer.py",
+    "scripts/analyze_english_font_slots.py",
+    "scripts/analyze_opening_dialogue_proof_capture.py",
+    "scripts/analyze_opening_dialogue_renderer_probe.py",
+    "scripts/compile_korean_scene_batch.py",
     "scripts/extract_english_reference_script.py",
     "scripts/analyze_broad_scan_manual_dump.py",
     "scripts/analyze_manual_screen_dump.py",
@@ -26,6 +30,8 @@ KEY_PYTHON = [
     "scripts/build_next_glyph_expansion_candidate.py",
     "scripts/build_broad_preview_candidate.py",
     "scripts/build_candidate_pipeline.py",
+    "scripts/build_opening_dialogue_proof.py",
+    "scripts/build_opening_dialogue_8x16_proof.py",
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/build_v042_font_expanded_candidate.py",
     "scripts/build_v043_from_broad_scan_proof.py",
@@ -74,6 +80,7 @@ KEY_PYTHON = [
     "scripts/generate_v041_fceux_targets.py",
     "scripts/generate_v04_fceux_targets.py",
     "scripts/package_primary_release.py",
+    "scripts/korean_tile_font.py",
     "scripts/prepare_next_manual_run.py",
     "scripts/preflight_manual_fceux.py",
     "scripts/preflight_release_gate_action.py",
@@ -86,6 +93,10 @@ KEY_PYTHON = [
     "scripts/summarize_bank1_watch_reads.py",
     "scripts/test_analyze_manual_screen_dump.py",
     "scripts/test_analyze_dialogue_renderer.py",
+    "scripts/test_analyze_english_font_slots.py",
+    "scripts/test_analyze_opening_dialogue_proof_capture.py",
+    "scripts/test_analyze_opening_dialogue_renderer_probe.py",
+    "scripts/test_compile_korean_scene_batch.py",
     "scripts/test_analyze_reference_ips.py",
     "scripts/test_extract_english_reference_script.py",
     "scripts/test_auto_input_evidence_report.py",
@@ -96,6 +107,8 @@ KEY_PYTHON = [
     "scripts/test_katana_inventory_slot_candidates.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_batch46_text_readiness.py",
+    "scripts/test_build_opening_dialogue_proof.py",
+    "scripts/test_build_opening_dialogue_8x16_proof.py",
     "scripts/test_candidate_pipeline_reports.py",
     "scripts/test_candidate_ips_apply.py",
     "scripts/test_candidate_patch_scope.py",
@@ -118,6 +131,7 @@ KEY_PYTHON = [
     "scripts/test_primary_visual_checklist.py",
     "scripts/test_record_primary_visual_review.py",
     "scripts/test_manual_capture_cards_readable.py",
+    "scripts/test_korean_tile_font.py",
     "scripts/test_run_fceux_budget.py",
     "scripts/test_run_next_manual_fceux.py",
     "scripts/test_reference_capture_plan.py",
@@ -149,10 +163,13 @@ LUA_TARGETS = [
     "lua/kunio_padding_exp_pad_ff_targets.lua",
     "lua/kunio_padding_exp_pad_f8f9_targets.lua",
     "lua/kunio_padding_exp_preserve_tail_targets.lua",
+    "lua/kunio_opening_dialogue_proof_target.lua",
 ]
 
 LUA_SCRIPTS = [
     "lua/kunio_auto_dump.lua",
+    "lua/kunio_opening_dialogue_proof.lua",
+    "lua/kunio_opening_dialogue_renderer_probe.lua",
     "lua/kunio_autoplay_watch.lua",
     "lua/kunio_bank1_watch.lua",
     "lua/kunio_input_explorer_v042.lua",
@@ -278,6 +295,13 @@ def main() -> int:
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("dialogue renderer analyzer", ["scripts/test_analyze_dialogue_renderer.py"])
+    run("English reference font slot mapper", ["scripts/test_analyze_english_font_slots.py"])
+    run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])
+    run("opening dialogue renderer probe analyzer", ["scripts/test_analyze_opening_dialogue_renderer_probe.py"])
+    run("Korean scene-batch compiler", ["scripts/test_compile_korean_scene_batch.py"])
+    run("opening dialogue proof patch", ["scripts/test_build_opening_dialogue_proof.py"])
+    run("opening dialogue 8x16 proof patch", ["scripts/test_build_opening_dialogue_8x16_proof.py"])
+    run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])
     run("reference IPS analyzer", ["scripts/test_analyze_reference_ips.py"])
     run(
         "English reference script extractor",

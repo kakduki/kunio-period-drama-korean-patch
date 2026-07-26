@@ -1,0 +1,315 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_VISUALLY_VERIFIED",
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "pointer_index": 182,
+    "pointer_rom_offset": "0x05F40",
+    "record_rom_offset": "0x071B6",
+    "record_length": 37,
+    "original_record_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+    "candidate_record_bytes": "81 82 83 84 BB 00 85 86 87 CA F8 88 89 00 8C 8D 8E 00 8F 90 8E 91 CA 00 00 00 00 00 00 00 00 00 00 00 00 00 FF",
+    "japanese_source": "くにまさ『はやくしねぇかい！ ぶんぞう親分がてぇへんなんでえ！』",
+    "english_reference": "KUNIO: HURRY, SLUG! MR. BUNZO'S IN TROUBLE!",
+    "korean_text": "쿠니마사: 서둘러! 분조 두목이 큰일이야!",
+    "font": "C:\\Windows\\Fonts\\gulim.ttc",
+    "font_preview": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_dialogue_korean_font_preview.png"
+  },
+  "english_reference_validation": {
+    "ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad",
+    "validated_slots": [
+      {
+        "character": "쿠",
+        "code": "0x81",
+        "physical_tile": "0x181",
+        "rom_offset": "0x2F820"
+      },
+      {
+        "character": "니",
+        "code": "0x82",
+        "physical_tile": "0x182",
+        "rom_offset": "0x2F830"
+      },
+      {
+        "character": "마",
+        "code": "0x83",
+        "physical_tile": "0x183",
+        "rom_offset": "0x2F840"
+      },
+      {
+        "character": "사",
+        "code": "0x84",
+        "physical_tile": "0x184",
+        "rom_offset": "0x2F850"
+      },
+      {
+        "character": "서",
+        "code": "0x85",
+        "physical_tile": "0x185",
+        "rom_offset": "0x2F860"
+      },
+      {
+        "character": "둘",
+        "code": "0x86",
+        "physical_tile": "0x186",
+        "rom_offset": "0x2F870"
+      },
+      {
+        "character": "러",
+        "code": "0x87",
+        "physical_tile": "0x187",
+        "rom_offset": "0x2F880"
+      },
+      {
+        "character": "분",
+        "code": "0x88",
+        "physical_tile": "0x188",
+        "rom_offset": "0x2F890"
+      },
+      {
+        "character": "조",
+        "code": "0x89",
+        "physical_tile": "0x189",
+        "rom_offset": "0x2F8A0"
+      },
+      {
+        "character": "두",
+        "code": "0x8C",
+        "physical_tile": "0x18C",
+        "rom_offset": "0x2F8D0"
+      },
+      {
+        "character": "목",
+        "code": "0x8D",
+        "physical_tile": "0x18D",
+        "rom_offset": "0x2F8E0"
+      },
+      {
+        "character": "이",
+        "code": "0x8E",
+        "physical_tile": "0x18E",
+        "rom_offset": "0x2F8F0"
+      },
+      {
+        "character": "큰",
+        "code": "0x8F",
+        "physical_tile": "0x18F",
+        "rom_offset": "0x2F900"
+      },
+      {
+        "character": "일",
+        "code": "0x90",
+        "physical_tile": "0x190",
+        "rom_offset": "0x2F910"
+      },
+      {
+        "character": "야",
+        "code": "0x91",
+        "physical_tile": "0x191",
+        "rom_offset": "0x2F920"
+      }
+    ]
+  },
+  "candidate": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "patched_md5": "b7e0d83c820f4368646ce42e171e97f5",
+    "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_opening_dialogue_proof.ips",
+    "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_opening_dialogue_proof.nes",
+    "ips_record_count": 16,
+    "changed_span_count": 16,
+    "changed_spans": [
+      {
+        "start": "0x071B6",
+        "end_exclusive": "0x071BA"
+      },
+      {
+        "start": "0x071BB",
+        "end_exclusive": "0x071D0"
+      },
+      {
+        "start": "0x071D1",
+        "end_exclusive": "0x071DA"
+      },
+      {
+        "start": "0x2F820",
+        "end_exclusive": "0x2F827"
+      },
+      {
+        "start": "0x2F828",
+        "end_exclusive": "0x2F82F"
+      },
+      {
+        "start": "0x2F830",
+        "end_exclusive": "0x2F832"
+      },
+      {
+        "start": "0x2F835",
+        "end_exclusive": "0x2F83A"
+      },
+      {
+        "start": "0x2F83D",
+        "end_exclusive": "0x2F897"
+      },
+      {
+        "start": "0x2F898",
+        "end_exclusive": "0x2F89F"
+      },
+      {
+        "start": "0x2F8A0",
+        "end_exclusive": "0x2F8A7"
+      },
+      {
+        "start": "0x2F8A8",
+        "end_exclusive": "0x2F8AF"
+      },
+      {
+        "start": "0x2F8D0",
+        "end_exclusive": "0x2F8D7"
+      },
+      {
+        "start": "0x2F8D8",
+        "end_exclusive": "0x2F8DF"
+      },
+      {
+        "start": "0x2F8E0",
+        "end_exclusive": "0x2F907"
+      },
+      {
+        "start": "0x2F908",
+        "end_exclusive": "0x2F90F"
+      },
+      {
+        "start": "0x2F910",
+        "end_exclusive": "0x2F930"
+      }
+    ],
+    "escaped_byte_count": 0,
+    "targets": [
+      {
+        "kind": "dialogue_record",
+        "rom_offset": 29110,
+        "length": 37,
+        "pointer_rom_offset": 24384
+      },
+      {
+        "kind": "font_tile",
+        "character": "쿠",
+        "code": "0x81",
+        "physical_tile": "0x181",
+        "rom_offset": 194592,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "니",
+        "code": "0x82",
+        "physical_tile": "0x182",
+        "rom_offset": 194608,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "마",
+        "code": "0x83",
+        "physical_tile": "0x183",
+        "rom_offset": 194624,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "사",
+        "code": "0x84",
+        "physical_tile": "0x184",
+        "rom_offset": 194640,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "서",
+        "code": "0x85",
+        "physical_tile": "0x185",
+        "rom_offset": 194656,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "둘",
+        "code": "0x86",
+        "physical_tile": "0x186",
+        "rom_offset": 194672,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "러",
+        "code": "0x87",
+        "physical_tile": "0x187",
+        "rom_offset": 194688,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "분",
+        "code": "0x88",
+        "physical_tile": "0x188",
+        "rom_offset": 194704,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "조",
+        "code": "0x89",
+        "physical_tile": "0x189",
+        "rom_offset": 194720,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "두",
+        "code": "0x8C",
+        "physical_tile": "0x18C",
+        "rom_offset": 194768,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "목",
+        "code": "0x8D",
+        "physical_tile": "0x18D",
+        "rom_offset": 194784,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "이",
+        "code": "0x8E",
+        "physical_tile": "0x18E",
+        "rom_offset": 194800,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "큰",
+        "code": "0x8F",
+        "physical_tile": "0x18F",
+        "rom_offset": 194816,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "일",
+        "code": "0x90",
+        "physical_tile": "0x190",
+        "rom_offset": 194832,
+        "length": 16
+      },
+      {
+        "kind": "font_tile",
+        "character": "야",
+        "code": "0x91",
+        "physical_tile": "0x191",
+        "rom_offset": 194848,
+        "length": 16
+      }
+    ]
+  }
+}

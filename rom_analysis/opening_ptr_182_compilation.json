@@ -1,0 +1,48 @@
+{
+  "status": "CATALOG_COMPILED_NOT_RELEASE_APPROVED",
+  "batch_id": "opening_ptr_182_proof",
+  "catalog_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\text_data\\korean_scene_batches\\opening_ptr_182.json",
+  "catalog_sha256": "ac930a016177a3d9acc932234a2a282e6d34e606f43c26b8cd1e3b4d01c32058",
+  "translation_basis": "Japanese transcript and opening-scene context; the English patch supplies only pointer-table structure.",
+  "glyph_codes": {
+    "쿠": "0x81",
+    "니": "0x82",
+    "마": "0x83",
+    "사": "0x84",
+    "어": "0x85",
+    "서": "0x86",
+    "움": "0x87",
+    "직": "0x88",
+    "여": "0x89",
+    "분": "0x8C",
+    "조": "0x8D",
+    "두": "0x8E",
+    "목": "0x8F",
+    "이": "0x90",
+    "큰": "0x91",
+    "일": "0x92",
+    "야": "0x93"
+  },
+  "reserved_glyph_codes": [
+    "0x8A",
+    "0x8B"
+  ],
+  "available_slot_count": 17,
+  "records": [
+    {
+      "id": "PTR-182",
+      "context": "opening dialogue",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_length": 37,
+      "expected_original_hex": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+      "encoded_hex": "81 82 83 84 BB 00 85 86 87 88 89 CA F8 8C 8D 00 8E 8F 90 00 91 92 90 93 CA 00 00 00 00 00 00 00 00 00 00 00 FF",
+      "korean_text": "쿠니마사: 어서 움직여! 분조 두목이 큰일이야!",
+      "japanese_source": "くにまさ『はやくしねぇかい！ ぶんぞう親分がてぇへんなんでえ！』",
+      "translation_basis": "Japanese transcript and opening-scene context; English wording is not used as the Korean translation source.",
+      "status": "verified_proof",
+      "glyph_count": 18
+    }
+  ]
+}

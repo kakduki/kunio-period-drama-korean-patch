@@ -1,0 +1,858 @@
+{
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "reference_md5": "63e1d902807981f524af97748cd99500",
+    "reference_ips_not_stored": true
+  },
+  "scope": {
+    "chr_bank_size": 8192,
+    "tile_size": 16,
+    "tiles_per_chr_bank": 512,
+    "english_letter_codes": [
+      "0x81",
+      "0x9A"
+    ],
+    "observed_dialogue_physical_tile_formula": "0x100 + dialogue tile code",
+    "mapping_warning": "Physical 8 KiB CHR-bank coordinates; runtime MMC3 mapping still needs screen-context proof before a release patch."
+  },
+  "changed_chr_banks": [
+    {
+      "chr_bank": 1,
+      "rom_range": [
+        "0x22010",
+        "0x2400F"
+      ],
+      "changed_tile_count": 1,
+      "changed_byte_count": 8,
+      "changed_tile_spans": [
+        "0x033"
+      ],
+      "english_letter_slots": []
+    },
+    {
+      "chr_bank": 2,
+      "rom_range": [
+        "0x24010",
+        "0x2600F"
+      ],
+      "changed_tile_count": 38,
+      "changed_byte_count": 281,
+      "changed_tile_spans": [
+        "0x002-0x004",
+        "0x007-0x009",
+        "0x014-0x01B",
+        "0x020-0x021",
+        "0x026",
+        "0x029-0x02A",
+        "0x032-0x034",
+        "0x037-0x039",
+        "0x03B",
+        "0x046-0x048",
+        "0x04A-0x04B",
+        "0x056-0x058",
+        "0x05D",
+        "0x068-0x069",
+        "0x06B"
+      ],
+      "english_letter_slots": []
+    },
+    {
+      "chr_bank": 7,
+      "rom_range": [
+        "0x2E010",
+        "0x3000F"
+      ],
+      "changed_tile_count": 181,
+      "changed_byte_count": 1900,
+      "changed_tile_spans": [
+        "0x101-0x139",
+        "0x150-0x159",
+        "0x15C",
+        "0x160-0x166",
+        "0x169-0x16A",
+        "0x16C",
+        "0x178-0x179",
+        "0x17C",
+        "0x181-0x1B6",
+        "0x1B8-0x1B9",
+        "0x1BB",
+        "0x1BD",
+        "0x1C0-0x1CC",
+        "0x1D1",
+        "0x1D4",
+        "0x1E0-0x1FA"
+      ],
+      "english_letter_slots": [
+        {
+          "code": "0x81",
+          "english_letter": "A",
+          "physical_tile": "0x181",
+          "tile": "0x181",
+          "rom_offset": "0x2F820",
+          "changed_bytes": 14,
+          "base_sha1_16": "556d643857454437",
+          "reference_sha1_16": "225341efebf56ffa"
+        },
+        {
+          "code": "0x82",
+          "english_letter": "B",
+          "physical_tile": "0x182",
+          "tile": "0x182",
+          "rom_offset": "0x2F830",
+          "changed_bytes": 14,
+          "base_sha1_16": "9cb1096e021c7636",
+          "reference_sha1_16": "fdd5282511e4eb07"
+        },
+        {
+          "code": "0x83",
+          "english_letter": "C",
+          "physical_tile": "0x183",
+          "tile": "0x183",
+          "rom_offset": "0x2F840",
+          "changed_bytes": 14,
+          "base_sha1_16": "2d69a2d0c8a9c034",
+          "reference_sha1_16": "57e58b526927a762"
+        },
+        {
+          "code": "0x84",
+          "english_letter": "D",
+          "physical_tile": "0x184",
+          "tile": "0x184",
+          "rom_offset": "0x2F850",
+          "changed_bytes": 14,
+          "base_sha1_16": "4a18f1bb93f11095",
+          "reference_sha1_16": "1914a30d222cc91a"
+        },
+        {
+          "code": "0x85",
+          "english_letter": "E",
+          "physical_tile": "0x185",
+          "tile": "0x185",
+          "rom_offset": "0x2F860",
+          "changed_bytes": 14,
+          "base_sha1_16": "3189c6b9ec2e1ad8",
+          "reference_sha1_16": "ef3dac58af419713"
+        },
+        {
+          "code": "0x86",
+          "english_letter": "F",
+          "physical_tile": "0x186",
+          "tile": "0x186",
+          "rom_offset": "0x2F870",
+          "changed_bytes": 14,
+          "base_sha1_16": "920a2a870296dcae",
+          "reference_sha1_16": "59e3c76e3b72b524"
+        },
+        {
+          "code": "0x87",
+          "english_letter": "G",
+          "physical_tile": "0x187",
+          "tile": "0x187",
+          "rom_offset": "0x2F880",
+          "changed_bytes": 14,
+          "base_sha1_16": "5f42aa810ee59bf9",
+          "reference_sha1_16": "a6f90edfee221ca6"
+        },
+        {
+          "code": "0x88",
+          "english_letter": "H",
+          "physical_tile": "0x188",
+          "tile": "0x188",
+          "rom_offset": "0x2F890",
+          "changed_bytes": 14,
+          "base_sha1_16": "d303a22149bcb5ed",
+          "reference_sha1_16": "fd31a436a98997b5"
+        },
+        {
+          "code": "0x89",
+          "english_letter": "I",
+          "physical_tile": "0x189",
+          "tile": "0x189",
+          "rom_offset": "0x2F8A0",
+          "changed_bytes": 14,
+          "base_sha1_16": "fca8d82540757033",
+          "reference_sha1_16": "ecc1d522ce1e2478"
+        },
+        {
+          "code": "0x8A",
+          "english_letter": "J",
+          "physical_tile": "0x18A",
+          "tile": "0x18A",
+          "rom_offset": "0x2F8B0",
+          "changed_bytes": 14,
+          "base_sha1_16": "dec5639786e3e153",
+          "reference_sha1_16": "8eaf5d742ae8f712"
+        },
+        {
+          "code": "0x8B",
+          "english_letter": "K",
+          "physical_tile": "0x18B",
+          "tile": "0x18B",
+          "rom_offset": "0x2F8C0",
+          "changed_bytes": 14,
+          "base_sha1_16": "005a07ef20a18d20",
+          "reference_sha1_16": "0c9241dc70f080db"
+        },
+        {
+          "code": "0x8C",
+          "english_letter": "L",
+          "physical_tile": "0x18C",
+          "tile": "0x18C",
+          "rom_offset": "0x2F8D0",
+          "changed_bytes": 14,
+          "base_sha1_16": "8e1fdf7ac72e85bc",
+          "reference_sha1_16": "1c6af57e6257f4b4"
+        },
+        {
+          "code": "0x8D",
+          "english_letter": "M",
+          "physical_tile": "0x18D",
+          "tile": "0x18D",
+          "rom_offset": "0x2F8E0",
+          "changed_bytes": 14,
+          "base_sha1_16": "b6375bf2e4e958b0",
+          "reference_sha1_16": "7ee0ced2e0b2d556"
+        },
+        {
+          "code": "0x8E",
+          "english_letter": "N",
+          "physical_tile": "0x18E",
+          "tile": "0x18E",
+          "rom_offset": "0x2F8F0",
+          "changed_bytes": 14,
+          "base_sha1_16": "a1f5b87207b12e6d",
+          "reference_sha1_16": "299277eac24ef588"
+        },
+        {
+          "code": "0x8F",
+          "english_letter": "O",
+          "physical_tile": "0x18F",
+          "tile": "0x18F",
+          "rom_offset": "0x2F900",
+          "changed_bytes": 12,
+          "base_sha1_16": "5e1dcbffb8866a6d",
+          "reference_sha1_16": "356e4af5e66a585c"
+        },
+        {
+          "code": "0x90",
+          "english_letter": "P",
+          "physical_tile": "0x190",
+          "tile": "0x190",
+          "rom_offset": "0x2F910",
+          "changed_bytes": 14,
+          "base_sha1_16": "bd920866dc165961",
+          "reference_sha1_16": "e627deef934e0d15"
+        },
+        {
+          "code": "0x91",
+          "english_letter": "Q",
+          "physical_tile": "0x191",
+          "tile": "0x191",
+          "rom_offset": "0x2F920",
+          "changed_bytes": 14,
+          "base_sha1_16": "c5d397ed3140e021",
+          "reference_sha1_16": "9884d1d84f4fe30b"
+        },
+        {
+          "code": "0x92",
+          "english_letter": "R",
+          "physical_tile": "0x192",
+          "tile": "0x192",
+          "rom_offset": "0x2F930",
+          "changed_bytes": 14,
+          "base_sha1_16": "2092988ce97d918d",
+          "reference_sha1_16": "4dfe0e8c629159c2"
+        },
+        {
+          "code": "0x93",
+          "english_letter": "S",
+          "physical_tile": "0x193",
+          "tile": "0x193",
+          "rom_offset": "0x2F940",
+          "changed_bytes": 14,
+          "base_sha1_16": "b4b64aa6eab092f1",
+          "reference_sha1_16": "2c33a8c4a76fbd84"
+        },
+        {
+          "code": "0x94",
+          "english_letter": "T",
+          "physical_tile": "0x194",
+          "tile": "0x194",
+          "rom_offset": "0x2F950",
+          "changed_bytes": 14,
+          "base_sha1_16": "99a059665b2b1ad0",
+          "reference_sha1_16": "cbe3b4b9d2909ba5"
+        },
+        {
+          "code": "0x95",
+          "english_letter": "U",
+          "physical_tile": "0x195",
+          "tile": "0x195",
+          "rom_offset": "0x2F960",
+          "changed_bytes": 14,
+          "base_sha1_16": "045f29ace7cee10b",
+          "reference_sha1_16": "1868ccdb064288e2"
+        },
+        {
+          "code": "0x96",
+          "english_letter": "V",
+          "physical_tile": "0x196",
+          "tile": "0x196",
+          "rom_offset": "0x2F970",
+          "changed_bytes": 14,
+          "base_sha1_16": "393ea16b49d91315",
+          "reference_sha1_16": "b956ef5d86584b08"
+        },
+        {
+          "code": "0x97",
+          "english_letter": "W",
+          "physical_tile": "0x197",
+          "tile": "0x197",
+          "rom_offset": "0x2F980",
+          "changed_bytes": 14,
+          "base_sha1_16": "f2354af56ac6d412",
+          "reference_sha1_16": "ec266287585c4b33"
+        },
+        {
+          "code": "0x98",
+          "english_letter": "X",
+          "physical_tile": "0x198",
+          "tile": "0x198",
+          "rom_offset": "0x2F990",
+          "changed_bytes": 14,
+          "base_sha1_16": "0f61ba158dc22f61",
+          "reference_sha1_16": "67669ace4af85c1f"
+        },
+        {
+          "code": "0x99",
+          "english_letter": "Y",
+          "physical_tile": "0x199",
+          "tile": "0x199",
+          "rom_offset": "0x2F9A0",
+          "changed_bytes": 14,
+          "base_sha1_16": "3a466615509b8eef",
+          "reference_sha1_16": "2f29c9695b08c23b"
+        },
+        {
+          "code": "0x9A",
+          "english_letter": "Z",
+          "physical_tile": "0x19A",
+          "tile": "0x19A",
+          "rom_offset": "0x2F9B0",
+          "changed_bytes": 14,
+          "base_sha1_16": "7135fdbb26326377",
+          "reference_sha1_16": "420a22495004148a"
+        }
+      ]
+    },
+    {
+      "chr_bank": 12,
+      "rom_range": [
+        "0x38010",
+        "0x3A00F"
+      ],
+      "changed_tile_count": 12,
+      "changed_byte_count": 30,
+      "changed_tile_spans": [
+        "0x0C0-0x0C3",
+        "0x0C5",
+        "0x0C7",
+        "0x0CA",
+        "0x0CE",
+        "0x0D2-0x0D5"
+      ],
+      "english_letter_slots": []
+    },
+    {
+      "chr_bank": 15,
+      "rom_range": [
+        "0x3E010",
+        "0x4000F"
+      ],
+      "changed_tile_count": 8,
+      "changed_byte_count": 67,
+      "changed_tile_spans": [
+        "0x0AF",
+        "0x0B9",
+        "0x0BB",
+        "0x0BD",
+        "0x1B2-0x1B5"
+      ],
+      "english_letter_slots": []
+    }
+  ],
+  "english_letter_code_coverage": [
+    {
+      "code": "0x81",
+      "english_letter": "A",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x181",
+          "rom_offset": "0x2F820",
+          "changed_bytes": 14,
+          "reference_sha1_16": "225341efebf56ffa"
+        }
+      ]
+    },
+    {
+      "code": "0x82",
+      "english_letter": "B",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x182",
+          "rom_offset": "0x2F830",
+          "changed_bytes": 14,
+          "reference_sha1_16": "fdd5282511e4eb07"
+        }
+      ]
+    },
+    {
+      "code": "0x83",
+      "english_letter": "C",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x183",
+          "rom_offset": "0x2F840",
+          "changed_bytes": 14,
+          "reference_sha1_16": "57e58b526927a762"
+        }
+      ]
+    },
+    {
+      "code": "0x84",
+      "english_letter": "D",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x184",
+          "rom_offset": "0x2F850",
+          "changed_bytes": 14,
+          "reference_sha1_16": "1914a30d222cc91a"
+        }
+      ]
+    },
+    {
+      "code": "0x85",
+      "english_letter": "E",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x185",
+          "rom_offset": "0x2F860",
+          "changed_bytes": 14,
+          "reference_sha1_16": "ef3dac58af419713"
+        }
+      ]
+    },
+    {
+      "code": "0x86",
+      "english_letter": "F",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x186",
+          "rom_offset": "0x2F870",
+          "changed_bytes": 14,
+          "reference_sha1_16": "59e3c76e3b72b524"
+        }
+      ]
+    },
+    {
+      "code": "0x87",
+      "english_letter": "G",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x187",
+          "rom_offset": "0x2F880",
+          "changed_bytes": 14,
+          "reference_sha1_16": "a6f90edfee221ca6"
+        }
+      ]
+    },
+    {
+      "code": "0x88",
+      "english_letter": "H",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x188",
+          "rom_offset": "0x2F890",
+          "changed_bytes": 14,
+          "reference_sha1_16": "fd31a436a98997b5"
+        }
+      ]
+    },
+    {
+      "code": "0x89",
+      "english_letter": "I",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x189",
+          "rom_offset": "0x2F8A0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "ecc1d522ce1e2478"
+        }
+      ]
+    },
+    {
+      "code": "0x8A",
+      "english_letter": "J",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x18A",
+          "rom_offset": "0x2F8B0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "8eaf5d742ae8f712"
+        }
+      ]
+    },
+    {
+      "code": "0x8B",
+      "english_letter": "K",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x18B",
+          "rom_offset": "0x2F8C0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "0c9241dc70f080db"
+        }
+      ]
+    },
+    {
+      "code": "0x8C",
+      "english_letter": "L",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x18C",
+          "rom_offset": "0x2F8D0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "1c6af57e6257f4b4"
+        }
+      ]
+    },
+    {
+      "code": "0x8D",
+      "english_letter": "M",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x18D",
+          "rom_offset": "0x2F8E0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "7ee0ced2e0b2d556"
+        }
+      ]
+    },
+    {
+      "code": "0x8E",
+      "english_letter": "N",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x18E",
+          "rom_offset": "0x2F8F0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "299277eac24ef588"
+        }
+      ]
+    },
+    {
+      "code": "0x8F",
+      "english_letter": "O",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x18F",
+          "rom_offset": "0x2F900",
+          "changed_bytes": 12,
+          "reference_sha1_16": "356e4af5e66a585c"
+        }
+      ]
+    },
+    {
+      "code": "0x90",
+      "english_letter": "P",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x190",
+          "rom_offset": "0x2F910",
+          "changed_bytes": 14,
+          "reference_sha1_16": "e627deef934e0d15"
+        }
+      ]
+    },
+    {
+      "code": "0x91",
+      "english_letter": "Q",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x191",
+          "rom_offset": "0x2F920",
+          "changed_bytes": 14,
+          "reference_sha1_16": "9884d1d84f4fe30b"
+        }
+      ]
+    },
+    {
+      "code": "0x92",
+      "english_letter": "R",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x192",
+          "rom_offset": "0x2F930",
+          "changed_bytes": 14,
+          "reference_sha1_16": "4dfe0e8c629159c2"
+        }
+      ]
+    },
+    {
+      "code": "0x93",
+      "english_letter": "S",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x193",
+          "rom_offset": "0x2F940",
+          "changed_bytes": 14,
+          "reference_sha1_16": "2c33a8c4a76fbd84"
+        }
+      ]
+    },
+    {
+      "code": "0x94",
+      "english_letter": "T",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x194",
+          "rom_offset": "0x2F950",
+          "changed_bytes": 14,
+          "reference_sha1_16": "cbe3b4b9d2909ba5"
+        }
+      ]
+    },
+    {
+      "code": "0x95",
+      "english_letter": "U",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x195",
+          "rom_offset": "0x2F960",
+          "changed_bytes": 14,
+          "reference_sha1_16": "1868ccdb064288e2"
+        }
+      ]
+    },
+    {
+      "code": "0x96",
+      "english_letter": "V",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x196",
+          "rom_offset": "0x2F970",
+          "changed_bytes": 14,
+          "reference_sha1_16": "b956ef5d86584b08"
+        }
+      ]
+    },
+    {
+      "code": "0x97",
+      "english_letter": "W",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x197",
+          "rom_offset": "0x2F980",
+          "changed_bytes": 14,
+          "reference_sha1_16": "ec266287585c4b33"
+        }
+      ]
+    },
+    {
+      "code": "0x98",
+      "english_letter": "X",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x198",
+          "rom_offset": "0x2F990",
+          "changed_bytes": 14,
+          "reference_sha1_16": "67669ace4af85c1f"
+        }
+      ]
+    },
+    {
+      "code": "0x99",
+      "english_letter": "Y",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x199",
+          "rom_offset": "0x2F9A0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "2f29c9695b08c23b"
+        }
+      ]
+    },
+    {
+      "code": "0x9A",
+      "english_letter": "Z",
+      "physical_slot_count": 1,
+      "chr_banks": [
+        7
+      ],
+      "reference_glyph_variants": 1,
+      "slots": [
+        {
+          "chr_bank": 7,
+          "physical_tile": "0x19A",
+          "rom_offset": "0x2F9B0",
+          "changed_bytes": 14,
+          "reference_sha1_16": "420a22495004148a"
+        }
+      ]
+    }
+  ],
+  "reference_changed_tile_glyph_hashes": {
+    "unique_count": 179,
+    "reused_hash_count": 43
+  }
+}

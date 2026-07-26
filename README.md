@@ -8,8 +8,11 @@
 
 현재 주 작업은 오프닝 자동주행이나 기존 v0.4.x 시각 큐가 아닙니다.
 완성된 영어 패치의 문자 코드, 텍스트 블록, 포인터 테이블을 먼저 복원합니다.
+한글 글꼴은 실제 게임 화면에서 가독성 게이트를 통과해야 합니다. 픽셀이
+표시되는 것만으로는 후보를 승격하지 않습니다.
 
-- 새 작업 계획: `KOREAN_PATCH_REBOOT_PLAN.md`
+- 현재 실행 계획: `KOREAN_PATCH_EXECUTION_PLAN.md`
+- 구조 분석 재시작 기록: `KOREAN_PATCH_REBOOT_PLAN.md`
 - 영어판 구조 분석: `rom_analysis/english_patch_reference.md`
 - 영어판 대본/포인터 구조 추출: `rom_analysis/english_script_reference.md`
 - 대사 렌더러 코드 증거: `rom_analysis/dialogue_renderer_evidence.md`

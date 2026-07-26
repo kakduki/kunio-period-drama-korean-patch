@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_dialogue_proof_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 37,
+    "matched_read_hits": 37,
+    "matched_capture_record": true,
+    "screenshots": [
+      "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_dialogue_proof_capture\\opening_dialogue_frame_000883_screen.gd",
+      "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_dialogue_proof_capture\\opening_dialogue_frame_000883_screen.png"
+    ],
+    "nametables": [
+      "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_dialogue_proof_capture\\opening_dialogue_frame_000883_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "Captured opening scene visually reviewed: the two Korean dialogue lines are readable."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}
