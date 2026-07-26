@@ -8,8 +8,8 @@ public English patch's *structure*, not its English wording or its binary
 changes.
 
 The first Korean opening-dialogue proof is retained as evidence that the
-dialogue path and Bank 7 font slots can be changed. It is not a release
-candidate: its 8x8 rasterized Korean font fails the release readability gate.
+dialogue path and Bank 7 font slots can be changed. Its 8x8 raster is a failed
+readability baseline; the current opening direction is paired 16x16 Korean.
 
 ## Non-Negotiable Rules
 
@@ -142,46 +142,52 @@ A result is recorded as:
 The following proof-level work is complete:
 
 - The English IPS was used in memory only to map the 248-entry pointer table
-  and the `0x81-0x9A` dialogue font slots. No English ROM or IPS is stored.
+  and the `0x81-0x9A` dialogue font slots, and to confirm that this dialogue
+  family can relocate records. No English ROM or IPS is stored.
 - Pointer entry 182 is tied to ROM `0x071B6`, CPU `$B1A6`, and a real opening
   dialogue capture at frame 883.
 - The existing two vertical dialogue tiles render one source byte as an 8x16
   cell. That path booted and read the expected 37 bytes, but its native
   screenshot is too narrow for the intended Korean readability bar.
 - Two adjacent 8x16 cells now render one Korean syllable as 16x16. The paired
-  one-record candidate booted, matched all 37 runtime record reads, captured
-  the native scene at frame 883, and passed the one-record font review.
-- `text_data/korean_scene_batches/opening_ptr_182_16x16.json` records the
-  compact eight-glyph font proof explicitly. Its wording is not a release
-  translation and must not be promoted as one.
-- `text_data/korean_scene_batches/opening_ptr_182.json` is compiled with
-  explicit glyph/control tokens. Its compiler reproduces the verified record
-  byte-for-byte and rejects a batch that exceeds the current safe slot pool.
+  candidates booted, matched their target reads, captured the native scene at
+  frame 883, and passed the opening readability review.
+- The fixed opening route proved 17 distinct Korean syllables through source
+  slots `0x81-0x9A` and `0xC0-0xC7`. The latter slots have this route's runtime
+  evidence only; they are not a blanket Bank 7 allocation.
+- `text_data/korean_scene_batches/opening_ptr_182_16x16_relocation_proof.json`
+  encodes a context-checked 45-byte opening record with explicit control bytes.
+  It renders `쿠니마사 어서 움직여!` and `분조 두목이 큰일이야!` at frame 883.
+- That 45-byte record overlaps pointer 183's base record. The builder copies
+  the exact 21-byte neighbour from ROM `0x071DB` to the approved cave tail at
+  `0x07FF6` / `$BFE6`, changes only pointer-table entry 183, and checks all
+  changed bytes against its allowlist. The primary record has `45/45` matching
+  runtime reads and `lua_done`; pointer 183's own displayed context remains
+  `UNKNOWN`.
 
 The following is deliberately still open:
 
-- The paired 16x16 proof uses eight unique Korean glyphs and 16 source slots.
-  It is not evidence that every dialogue record can share one final Korean
-  font page.
-- The current proven pool contains 17 one-cell codes (`0x81-0x89`,
-  `0x8C-0x93`) and excludes `0x8A` and `0x8B`. A 16x16 syllable consumes two
-  of those codes, so the proof pool supports only eight complete syllables and
-  one spare code; it does not authorise broad translation or untested CHR slots.
-- Pointer relocation, menu renderers, status labels, and event/boss dialogue
-  remain separate context families and must not inherit this result blindly.
+- The 17-syllable paired pool is still scene-local. It cannot support the full
+  Korean script without a wider, separately verified allocation strategy.
+- The helper range used for `0x81-0x9A` plus `0xC0-0xC7` deliberately excludes
+  the renderer-special `0xBB` speaker separator. Speaker formatting therefore
+  needs its own helper design and capture.
+- Pointer relocation beyond the one audited neighbour, menu renderers, status
+  labels, and event/boss dialogue remain separate context families and must not
+  inherit this result blindly.
 
 ## Next Technical Gate
 
-1. Audit candidate source/CHR slots and determine whether a larger static pool
-   or scene-local CHR paging can support a release-capable 16x16 glyph set.
-2. Record each validated source and four-tile glyph placement in
-   `rom_analysis/dialogue_glyph_capacity_plan.md`; do not extend allocation
-   based only on byte similarity.
-3. Add paired-cell width accounting and explicit control-token preservation to
-   the scene compiler before encoding a full opening record.
-4. Capture each expanded record through a bounded, known context route and
-   solve the multi-scene capacity strategy before bulk translation or pointer
-   relocation.
+1. Design a dialogue helper that can preserve `0xBB` speaker formatting while
+   keeping the proven Korean source ranges, then validate it on one record.
+2. Audit a larger static pool or a scene-local CHR paging method for a
+   release-capable 16x16 glyph set; record every source and four-tile placement
+   in `rom_analysis/dialogue_glyph_capacity_plan.md`.
+3. Generalize pointer growth only through a catalog-declared allocation and a
+   static owner scan, then capture every relocated record in its own context.
+4. Move to title/menu, item/status, and event/boss text only through short,
+   deterministic routes, save states, or debug states. Never revive unbounded
+   opening-screen autoplay as a discovery method.
 
 ## What Is Deliberately Retired
 

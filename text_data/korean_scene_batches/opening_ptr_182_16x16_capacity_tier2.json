@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "batch_id": "opening_ptr_182_16x16_capacity_tier2",
+  "translation_basis": "Japanese opening-scene context; English IPS validates only the established 0x81-0x9A dialogue source area, while C0-C7 are isolated runtime probe slots.",
+  "renderer_profile": "paired_8x16_cells_for_16x16_korean_tier2",
+  "capacity_profile": {
+    "helper_start_code": "81",
+    "helper_end_code_exclusive": "C8",
+    "english_reference_source_codes": [
+      "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D",
+      "8E", "8F", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9A"
+    ],
+    "glyph_code_pairs": {
+      "쿠": ["81", "82"], "니": ["83", "84"], "마": ["85", "86"], "사": ["87", "88"],
+      "어": ["89", "8A"], "서": ["8B", "8C"], "움": ["8D", "8E"], "직": ["8F", "90"],
+      "여": ["91", "92"], "분": ["93", "94"], "조": ["95", "96"], "두": ["97", "98"],
+      "목": ["99", "9A"], "큰": ["C0", "C1"], "일": ["C2", "C3"], "이": ["C4", "C5"],
+      "야": ["C6", "C7"]
+    }
+  },
+  "records": [
+    {
+      "id": "PTR-182-16X16-TIER2",
+      "context": "opening dialogue",
+      "pointer_index": 182,
+      "pointer_rom_offset": "0x05F40",
+      "record_rom_offset": "0x071B6",
+      "expected_original_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+      "expected_encoded_bytes": "81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 CA F8 93 94 95 96 97 98 99 9A C0 C1 C2 C3 C4 C5 C6 C7 FF",
+      "expected_length": 37,
+      "japanese_source": "Opening record 182; tier 2 exercises the full 17-syllable Korean coverage before pointer relocation and final spacing work.",
+      "korean_text": "쿠니마사어서움직여! / 분조두목큰일이야",
+      "translation_basis": "The full semantic phrase is retained, but the fixed 37-byte probe removes normal Korean spacing and the speaker separator. It is a source-slot capacity test, not release dialogue text.",
+      "status": "17_glyph_capacity_probe_not_release_translation",
+      "tokens": [
+        {"glyph_pair": "쿠"}, {"glyph_pair": "니"}, {"glyph_pair": "마"}, {"glyph_pair": "사"},
+        {"glyph_pair": "어"}, {"glyph_pair": "서"}, {"glyph_pair": "움"}, {"glyph_pair": "직"}, {"glyph_pair": "여"},
+        {"byte": "CA"}, {"byte": "F8"},
+        {"glyph_pair": "분"}, {"glyph_pair": "조"}, {"glyph_pair": "두"}, {"glyph_pair": "목"},
+        {"glyph_pair": "큰"}, {"glyph_pair": "일"}, {"glyph_pair": "이"}, {"glyph_pair": "야"}, {"byte": "FF"}
+      ]
+    }
+  ]
+}

@@ -1,48 +1,64 @@
 # Dialogue Glyph Capacity Plan
 
-Status: **PROOF_POOL_ONLY**
+Status: **OPENING_17_GLYPH_POOL_AND_RELOCATION_PROVEN**
 
-The opening proof proves an 8x16 Korean glyph in the live dialogue window. It
-does not yet prove a final, whole-game Korean glyph capacity.
+This document records only what the fixed opening route proves. It is not a
+whole-game font allocation or release approval.
 
-## Proven Now
+## Proven In The Opening Route
 
 | item | result | evidence |
 | --- | --- | --- |
-| Dialogue source record | Pointer 182 at ROM `0x071B6` / CPU `$B1A6` | bounded renderer trace and target record capture |
-| Renderer layout | one source byte produces an existing vertical two-tile pair | queue trace and native capture |
-| Korean 8x16 glyphs | 17 unique glyphs in the opening proof | `font_readability_gate.md` |
-| English-reference code area | `0x81-0x9A` maps to Bank 7 physical tiles `0x181-0x19A` | `english_font_slot_map.md` |
-| Current allocator pool | 17 codes: `0x81-0x89`, `0x8C-0x93` | `compile_korean_scene_batch.py` |
+| Dialogue source record | PASS: pointer 182 at ROM `0x071B6` / CPU `$B1A6` | bounded target capture |
+| Renderer layout | PASS: two native vertical 8x16 cells can form one Korean 16x16 syllable | renderer trace and native capture |
+| Tier 1 source pool | PASS: 13 Korean syllables / 26 source slots `0x81-0x9A` | `opening_dialogue_16x16_capacity_tier1_capture/` |
+| Tier 2 source pool | PASS: 17 Korean syllables / 34 source slots `0x81-0x9A` plus `0xC0-0xC7` | `opening_dialogue_16x16_capacity_tier2_capture/` |
+| Expanded primary record | PASS: 45-byte pointer-182 record, all 45 runtime reads match at frame 883 | `opening_dialogue_16x16_relocation_proof_capture/` |
+| Pointer 183 preservation | STATIC PASS: original 21-byte record copied from `0x071DB` to `0x07FF6` / `$BFE6`; table entry 183 changes from `$B1CB` to `$BFE6` | `opening_dialogue_16x16_relocation_proof.json` |
+| Pointer 183 display | UNKNOWN: its own event context has not been captured | no claim beyond static preservation |
 
-`0x8A` and `0x8B` stay reserved because the current renderer experiment did
-not prove their branch behaviour for the 8x16 helper. The source proof itself
-uses `0x81-0x89` and `0x8C-0x93`, including newly captured top/bottom pairs
-for `0x92/0xB2` and `0x93/0xB3`.
+The English IPS validates the ownership of source slots `0x81-0x9A` and shows
+that this dialogue family already uses pointer relocation. Korean glyph pixels,
+the code-cave helper, and Korean wording are generated locally; no English ROM
+or IPS is included in the repository.
 
-## Not Proven Yet
+## Current Opening Candidate
 
-- Whether codes `0x94-0x9A` can safely enter the 8x16 helper.
-- Whether their corresponding bottom tiles can be replaced without affecting
-  another screen or renderer family.
-- A single font arrangement large enough for all Korean dialogue, menus, and
-  labels in one released ROM.
-- Pointer relocation and record growth rules for Korean text that does not fit
-  an original record.
+The bounded candidate renders:
 
-The original Japanese font map contains additional physical tiles, but that is
-not permission to overwrite them. A physical tile listing alone does not show
-its runtime renderer, control-code role, or screen context.
+```text
+쿠니마사 어서 움직여!
+분조 두목이 큰일이야!
+```
 
-## Controlled Expansion Procedure
+It is a 45-byte, context-checked capacity and relocation proof. The current
+helper range deliberately excludes the renderer-special speaker byte `0xBB`,
+so the speaker separator is not yet part of this candidate. That keeps the
+result useful without pretending it is final release text.
 
-1. Choose one unapproved source code and its physical top/bottom CHR pair.
-2. Build a one-record candidate with no other new text changes.
-3. Run the same frame-883 bounded capture; require `lua_done`, exact target
-   record bytes, and a native screenshot.
-4. Mark the pair `PASS`, `FAIL`, or `UNKNOWN` with its ROM offsets and screen
-   context.
-5. Only `PASS` pairs may be added to the compiler allocator.
+## Verification Contract
 
-Until this table has more passing pairs, a batch with more than 17 unique
-Korean glyphs is a deliberate compiler error rather than a risky ROM build.
+Every opening candidate uses the same route:
+
+1. Run only the known input sequence to the opening dialogue.
+2. Capture at frame 883.
+3. Stop when Lua writes `lua_done`; do not continue into free gameplay.
+4. Require matching target reads, a native screenshot, and a scoped byte audit.
+
+For the current candidate, the result is `45/45` matching target reads,
+`lua_done`, a readable native screenshot, and no visible opening background or
+UI damage. The neighbouring record remains `STATIC_PASS_RUNTIME_UNKNOWN` until
+its actual scene is reached by a bounded route, save state, or debug state.
+
+## Still Open
+
+- A persistent glyph strategy for all dialogue scenes rather than one
+  scene-local 17-syllable pool.
+- A helper layout that supports both the `0x81-0x9A` / `0xC0-0xC7` allocation
+  and the `0xBB` speaker separator without intercepting it.
+- Pointer-growth rules beyond one explicitly audited neighbour and code-cave
+  tail.
+- Menu, status, item, and event/boss text renderers, each with its own target
+  route and font evidence.
+
+No other Shift-JIS-like bytes, CHR slots, or pointer records inherit this pass.

@@ -1,54 +1,45 @@
 # Korean Dialogue Font Readability Gate
 
-Status: **PASS_FOR_ONE_RECORD_PAIRED_16X16_PROOF**
+Status: **PASS_FOR_OPENING_PAIRED_16X16_EXPANDED_RECORD**
 
-This is a development gate, not release approval. It deliberately separates a
-working glyph path from a complete Korean translation and prevents the project
-from returning to unbounded emulator autoplay.
-
-## Compared Candidates
+This development gate measures a real native dialogue frame. It is not a
+release gate and it does not authorize bulk translation.
 
 | candidate | native scene | runtime result | readability result | decision |
 | --- | --- | --- | --- | --- |
-| 8x8 raster baseline | opening dialogue, frame 883 | target record read and display pass | FAIL: syllable shapes are too compressed to review reliably | retain only as a structural baseline |
-| 8x16 vertical-pair proof | same scene and frame | bounded boot, target read, and screen capture pass | FAIL at the intended Korean-quality bar: shapes are still too narrow to scale safely | retain as the technical building block |
-| paired 8x16 cells (16x16 Korean) | same scene and frame | bounded boot, 37/37 target reads, and screen capture pass | PASS for this eight-glyph renderer/font proof: syllables, speaker mark, spaces, and punctuation are distinguishable without collisions | use as the provisional dialogue-font direction |
-
-The 16x16 candidate does not add a new VRAM queue. It places two already-proven
-vertical 8x16 cells side by side, so one Korean syllable has four 8x8 CHR tiles.
-That keeps the runtime change bounded to the existing target-record gate.
+| 8x8 raster baseline | opening dialogue, frame 883 | target record display pass | FAIL: syllables are too compressed | structural baseline only |
+| 8x16 vertical-pair proof | same scene and frame | bounded boot and target reads pass | FAIL at the Korean-quality bar: still too narrow | technical building block only |
+| paired 8x16 cells, eight syllables | same scene and frame | 37/37 reads and capture pass | PASS: proof glyphs, punctuation, and spaces are distinguishable | provisional 16x16 renderer direction |
+| paired 16x16 Tier 1 | same scene and frame | 37/37 reads and capture pass | PASS: 13 syllables remain distinct | source-pool expansion evidence |
+| paired 16x16 Tier 2 | same scene and frame | 37/37 reads and capture pass | PASS: all 17 syllables, including `0xC0-0xC7`, are distinct | capacity evidence; compact text only |
+| paired 16x16 expanded record | same scene and frame | 45/45 reads, `lua_done`, and capture pass | PASS: `쿠니마사 어서 움직여!` / `분조 두목이 큰일이야!` is readable with preserved spaces and no visible scene damage | opening record and relocation proof |
 
 ## Evidence
 
-- 8x8 baseline crop: `rom_analysis/opening_dialogue_proof_capture/opening_dialogue_frame_000883_dialogue_crop.png`
-- 8x16 comparison crop: `rom_analysis/opening_dialogue_8x16_proof_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
-- 16x16 full native screen: `rom_analysis/opening_dialogue_16x16_proof_capture/opening_dialogue_frame_000883_screen.png`
-- 16x16 enlarged dialogue crop: `rom_analysis/opening_dialogue_16x16_proof_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
-- 16x16 bounded smoke report: `rom_analysis/opening_dialogue_16x16_proof_capture/analysis.md`
-- 16x16 runtime record evidence: `rom_analysis/opening_dialogue_16x16_proof_capture/opening_target_record.tsv`
+- 16x16 first proof crop: `rom_analysis/opening_dialogue_16x16_proof_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
+- Tier 1 capture: `rom_analysis/opening_dialogue_16x16_capacity_tier1_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
+- Tier 2 capture: `rom_analysis/opening_dialogue_16x16_capacity_tier2_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
+- Expanded-record full screen: `rom_analysis/opening_dialogue_16x16_relocation_proof_capture/opening_dialogue_frame_000883_screen.png`
+- Expanded-record 4x crop: `rom_analysis/opening_dialogue_16x16_relocation_proof_capture/opening_dialogue_frame_000883_screen_dialogue_box_4x.png`
+- Expanded-record smoke report: `rom_analysis/opening_dialogue_16x16_relocation_proof_capture/analysis.md`
+- Expanded-record runtime bytes: `rom_analysis/opening_dialogue_16x16_relocation_proof_capture/opening_target_record.tsv`
 
-The 16x16 bounded run ended with `lua_done` at frame 883. It registered 37
-target-record reads, and the captured runtime bytes exactly matched the paired
-candidate record. The runner stopped after that capture and never entered free
-gameplay.
+The route ends at frame 883 with `lua_done`. It is not an autoplay session and
+does not wait for later gameplay or boss events.
 
 ## Scope Limit
 
-The pass covers only pointer-table entry 182 and the proof wording
-`쿠니마사: 어서! 분조!`. That wording uses eight unique Korean syllables and
-16 source slots. It was intentionally compact to prove the renderer and font;
-it is not the final release translation for the record.
-
-The current safe source pool has 17 one-cell codes (`0x81-0x89`,
-`0x8C-0x93`), while a 16x16 syllable consumes two of them. Therefore it proves
-only eight full syllables plus one spare code. It does not authorise bulk
-translation, untested CHR slots, pointer relocation, menus, or event dialogue.
+This pass covers one dialogue renderer, pointer 182, and one opening screen.
+The 17-syllable allocation uses 34 source slots and is a scene-local proof, not
+a complete Korean character set. The relocated pointer-183 record is statically
+preserved, but its own on-screen result is `UNKNOWN` until a separate bounded
+capture reaches it.
 
 ## Next Gate
 
-1. Establish a release-capable dialogue glyph-capacity strategy: additional
-   verified slots, scene-local CHR paging, or another renderer-owned path.
-2. Add width-aware paired-cell encoding that preserves explicit line breaks,
-   waits, speaker markers, and terminators.
-3. Encode a full, context-checked opening record only after it fits the proven
-   capacity strategy, then capture that exact scene with the same bounded route.
+1. Design an expanded dialogue code layout that preserves the special `0xBB`
+   speaker separator while retaining Korean source slots.
+2. Establish a multi-scene glyph capacity strategy before translating batches.
+3. Verify each pointer relocation both statically and in its own screen context.
+4. Move to title/menu and item/status renderers only through deterministic,
+   bounded routes or save/debug states.

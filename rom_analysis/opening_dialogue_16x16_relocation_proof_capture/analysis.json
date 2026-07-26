@@ -1,0 +1,27 @@
+{
+  "status": "PROOF_CANDIDATE_VISUALLY_VERIFIED",
+  "input_dir": "rom_analysis\\opening_dialogue_16x16_relocation_proof_capture",
+  "checks": {
+    "bounded_lua_completion": "PASS",
+    "screen_capture": "PASS",
+    "nametable_capture": "PASS",
+    "target_record_runtime_read": "PASS",
+    "visual_korean_glyph_review": "PASS"
+  },
+  "evidence": {
+    "final_reason": "lua_done",
+    "registered_read_hits": 45,
+    "matched_read_hits": 45,
+    "matched_capture_record": true,
+    "screenshots": [
+      "rom_analysis\\opening_dialogue_16x16_relocation_proof_capture\\opening_dialogue_frame_000883_screen.gd",
+      "rom_analysis\\opening_dialogue_16x16_relocation_proof_capture\\opening_dialogue_frame_000883_screen.png"
+    ],
+    "nametables": [
+      "rom_analysis\\opening_dialogue_16x16_relocation_proof_capture\\opening_dialogue_frame_000883_nametable_2000_23bf.bin"
+    ],
+    "visual_note": "Native frame 883 review: the expanded paired 16x16 text reads as '쿠니마사 어서 움직여!' and '분조 두목이 큰일이야!' with distinct syllables and preserved spaces. No visible opening-scene background or UI damage. Pointer 183 preservation is statically verified, but its own runtime context is not captured here."
+  },
+  "overall_smoke": "PASS",
+  "overall_proof": "PASS"
+}

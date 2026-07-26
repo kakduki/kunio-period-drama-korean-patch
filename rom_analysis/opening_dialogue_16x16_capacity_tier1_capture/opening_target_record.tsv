@@ -1,0 +1,2 @@
+frame	label	cpu_range	expected_bytes	active_expected_match	record_snapshot
+883	opening_ptr_182_korean_16x16_capacity_tier1	$B1A6-$B1CA	81 82 83 84 85 86 87 88 BB 00 89 8A 8B 8C 00 8D 8E 8F 90 91 92 CA F8 93 94 95 96 00 97 98 99 9A CA 00 00 00 FF	true	81 82 83 84 85 86 87 88 BB 00 89 8A 8B 8C 00 8D 8E 8F 90 91 92 CA F8 93 94 95 96 00 97 98 99 9A CA 00 00 00 FF

@@ -80,6 +80,7 @@ PROOF_RECORD = bytes.fromhex(
     "87 92 88 93 CA 00 00 00 00 00 00 00 00 00 00 00 "
     "00 00 00 00 FF"
 )
+SOURCE_RANGE_PATTERN = bytes.fromhex("C9 81 90 0D C9 94 B0 09")
 
 
 def default_square_font(candidate: str | Path | None) -> Path:
@@ -91,7 +92,10 @@ def default_square_font(candidate: str | Path | None) -> Path:
     return find_korean_font()
 
 
-def encode_pair_tokens(tokens: object) -> tuple[bytes, list[str]]:
+def encode_pair_tokens(
+    tokens: object,
+    glyph_code_pairs: dict[str, tuple[int, int]] = PAIR_GLYPH_CODES,
+) -> tuple[bytes, list[str]]:
     """Encode explicit control bytes plus known two-byte Korean glyph pairs."""
 
     if not isinstance(tokens, list) or not tokens:
@@ -111,7 +115,7 @@ def encode_pair_tokens(tokens: object) -> tuple[bytes, list[str]]:
             glyph = token["glyph_pair"]
             if not isinstance(glyph, str) or len(glyph) != 1:
                 raise CatalogError(f"16x16 proof token {index} glyph_pair must be one character")
-            pair = PAIR_GLYPH_CODES.get(glyph)
+            pair = glyph_code_pairs.get(glyph)
             if pair is None:
                 raise CatalogError(f"16x16 proof token {index} has no approved pair: {glyph!r}")
             encoded.extend(pair)
@@ -167,11 +171,40 @@ def validate_opening_16x16_catalog(catalog_path: Path) -> dict[str, object]:
 
 def build_square_glyph_tiles(
     font_path: str | Path | None,
+    glyph_code_pairs: dict[str, tuple[int, int]] = PAIR_GLYPH_CODES,
 ) -> dict[str, tuple[bytes, bytes, bytes, bytes]]:
     return {
         glyph: render_square_tiles(glyph, font_path=font_path, target_pixels=15, threshold=100)
-        for glyph in PAIR_GLYPH_CODES
+        for glyph in glyph_code_pairs
     }
+
+
+def source_codes_for_pairs(glyph_code_pairs: dict[str, tuple[int, int]]) -> tuple[int, ...]:
+    return tuple(code for pair in glyph_code_pairs.values() for code in pair)
+
+
+def helper_code_for_range(
+    *,
+    start_code: int = 0x81,
+    end_code_exclusive: int = 0x94,
+) -> bytes:
+    """Retarget the bounded helper to one contiguous source-code range.
+
+    Both range checks live in the same 0xFF code cave as the original proof.
+    This changes only comparison immediates; the helper length and branch
+    layout remain unchanged. Callers must still keep special control bytes out
+    of their allocated range.
+    """
+
+    if not 0x80 <= start_code < end_code_exclusive <= 0xE0:
+        raise ValueError("helper source-code range must fit below parser control bytes")
+    replacement = bytes((0xC9, start_code, 0x90, 0x0D, 0xC9, end_code_exclusive, 0xB0, 0x09))
+    if HELPER_CODE.count(SOURCE_RANGE_PATTERN) != 2:
+        raise AssertionError("unexpected bounded helper range-check layout")
+    helper = HELPER_CODE.replace(SOURCE_RANGE_PATTERN, replacement)
+    if len(helper) != len(HELPER_CODE):
+        raise AssertionError("retargeted helper changed length")
+    return helper
 
 
 def add_target(
@@ -185,14 +218,20 @@ def add_target(
     targets.append({"kind": kind, "rom_offset": rom_offset, "length": length, **extra})
 
 
-def apply_opening_16x16_proof(
+def apply_paired_opening_candidate(
     base: bytes,
     glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
+    *,
+    proof_record: bytes,
+    glyph_code_pairs: dict[str, tuple[int, int]],
+    helper_code: bytes,
+    helper_start_code: int,
+    helper_end_code_exclusive: int,
 ) -> tuple[bytes, list[dict[str, object]]]:
-    """Apply only the catalog record, paired font tiles, and proven 8x16 hooks."""
+    """Apply one bounded paired-cell record and a parameterized helper range."""
 
-    if len(PROOF_RECORD) != RECORD_LENGTH:
-        raise AssertionError("16x16 proof record length invariant failed")
+    if len(proof_record) != RECORD_LENGTH:
+        raise AssertionError("paired 16x16 record length invariant failed")
     if base[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] != ORIGINAL_RECORD:
         raise ValueError("opening source record does not match the verified base bytes")
     if base[RENDER_ENTRY_ROM_OFFSET:RENDER_ENTRY_ROM_OFFSET + len(RENDER_ENTRY_ORIGINAL)] != RENDER_ENTRY_ORIGINAL:
@@ -202,18 +241,25 @@ def apply_opening_16x16_proof(
     cave_end = CODE_CAVE_ROM_OFFSET + CODE_CAVE_SIZE
     if base[CODE_CAVE_ROM_OFFSET:cave_end] != b"\xff" * CODE_CAVE_SIZE:
         raise ValueError("the paired-cell renderer cave is not an untouched 0xFF run")
-    if len(HELPER_CODE) > CODE_CAVE_SIZE:
+    if len(helper_code) > CODE_CAVE_SIZE:
         raise AssertionError("paired-cell renderer helper does not fit the approved cave")
-    safe_codes = set(KOREAN_GLYPH_CODES.values())
-    if not set(PAIR_SOURCE_CODES) <= safe_codes:
-        raise AssertionError("16x16 pair uses a source code without 8x16 runtime evidence")
-    if len(set(PAIR_SOURCE_CODES)) != len(PAIR_SOURCE_CODES):
-        raise AssertionError("16x16 proof reuses a source slot across different tile halves")
+    source_codes = source_codes_for_pairs(glyph_code_pairs)
+    if not source_codes:
+        raise ValueError("paired 16x16 candidate needs at least one glyph pair")
+    if len(set(source_codes)) != len(source_codes):
+        raise AssertionError("paired 16x16 candidate reuses a source slot across tile halves")
+    if not all(helper_start_code <= code < helper_end_code_exclusive for code in source_codes):
+        raise AssertionError("paired 16x16 source slot is outside the helper range")
+    if not all(code + BOTTOM_TILE_DELTA <= 0xFF for code in source_codes):
+        raise AssertionError("paired 16x16 source slot has no in-bank bottom tile")
+    tile_codes = set(source_codes) | {code + BOTTOM_TILE_DELTA for code in source_codes}
+    if len(tile_codes) != len(source_codes) * 2:
+        raise AssertionError("paired 16x16 source and bottom tile slots collide")
 
     layout = parse_ines_layout(base)
     patched = bytearray(base)
     targets: list[dict[str, object]] = []
-    patched[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] = PROOF_RECORD
+    patched[RECORD_ROM_OFFSET:RECORD_ROM_OFFSET + RECORD_LENGTH] = proof_record
     add_target(
         targets,
         kind="dialogue_record",
@@ -222,7 +268,7 @@ def apply_opening_16x16_proof(
         pointer_rom_offset=POINTER_ROM_OFFSET,
     )
 
-    for glyph, (left_code, right_code) in PAIR_GLYPH_CODES.items():
+    for glyph, (left_code, right_code) in glyph_code_pairs.items():
         tiles = glyph_tiles.get(glyph)
         if tiles is None or len(tiles) != 4 or any(len(tile) != 16 for tile in tiles):
             raise ValueError(f"missing 16x16 tile quartet for {glyph!r}")
@@ -261,12 +307,12 @@ def apply_opening_16x16_proof(
         length=len(MARKER_HOOK),
         cpu_address=f"0x{RENDER_MARKER_CPU:04X}",
     )
-    patched[CODE_CAVE_ROM_OFFSET:CODE_CAVE_ROM_OFFSET + len(HELPER_CODE)] = HELPER_CODE
+    patched[CODE_CAVE_ROM_OFFSET:CODE_CAVE_ROM_OFFSET + len(helper_code)] = helper_code
     add_target(
         targets,
         kind="renderer_helper",
         rom_offset=CODE_CAVE_ROM_OFFSET,
-        length=len(HELPER_CODE),
+        length=len(helper_code),
         cpu_address=f"0x{CODE_CAVE_CPU:04X}",
     )
 
@@ -280,8 +326,28 @@ def apply_opening_16x16_proof(
         if old != new and not any(start <= offset < end for start, end in allowed)
     ]
     if escaped:
-        raise AssertionError(f"16x16 proof changed {len(escaped)} byte(s) outside its allowlist")
+        raise AssertionError(f"paired 16x16 candidate changed {len(escaped)} byte(s) outside its allowlist")
     return bytes(patched), targets
+
+
+def apply_opening_16x16_proof(
+    base: bytes,
+    glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
+) -> tuple[bytes, list[dict[str, object]]]:
+    """Apply the original eight-glyph proof through the generic bounded path."""
+
+    safe_codes = set(KOREAN_GLYPH_CODES.values())
+    if not set(PAIR_SOURCE_CODES) <= safe_codes:
+        raise AssertionError("16x16 proof uses a source code without 8x16 runtime evidence")
+    return apply_paired_opening_candidate(
+        base,
+        glyph_tiles,
+        proof_record=PROOF_RECORD,
+        glyph_code_pairs=PAIR_GLYPH_CODES,
+        helper_code=HELPER_CODE,
+        helper_start_code=0x81,
+        helper_end_code_exclusive=0x94,
+    )
 
 
 def changed_spans(original: bytes, patched: bytes) -> list[tuple[int, int]]:
@@ -299,7 +365,12 @@ def changed_spans(original: bytes, patched: bytes) -> list[tuple[int, int]]:
     return spans
 
 
-def validate_english_reference_source_slots(base: bytes, ips_path: Path) -> dict[str, object]:
+def validate_english_reference_source_slots(
+    base: bytes,
+    ips_path: Path,
+    *,
+    source_codes: tuple[int, ...] = PAIR_SOURCE_CODES,
+) -> dict[str, object]:
     """Confirm English reference ownership of the source half slots only.
 
     The bottom half slots are selected from the native 8x16 proof, not copied
@@ -311,7 +382,7 @@ def validate_english_reference_source_slots(base: bytes, ips_path: Path) -> dict
     reference = apply_records(base, records, truncate_size)
     layout = parse_ines_layout(base)
     slots = []
-    for code in sorted(PAIR_SOURCE_CODES):
+    for code in sorted(source_codes):
         offset = target_tile_offset(layout, code)
         if base[offset:offset + 16] == reference[offset:offset + 16]:
             raise ValueError(f"English reference did not change source slot 0x{code:02X}")
