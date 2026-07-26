@@ -13,6 +13,7 @@ from rom_utils import REPO_ROOT
 
 
 KEY_PYTHON = [
+    "scripts/analyze_reference_ips.py",
     "scripts/analyze_broad_scan_manual_dump.py",
     "scripts/analyze_manual_screen_dump.py",
     "scripts/apply_primary_patch.py",
@@ -82,6 +83,7 @@ KEY_PYTHON = [
     "scripts/run_next_manual_fceux.py",
     "scripts/summarize_bank1_watch_reads.py",
     "scripts/test_analyze_manual_screen_dump.py",
+    "scripts/test_analyze_reference_ips.py",
     "scripts/test_auto_input_evidence_report.py",
     "scripts/test_auto_input_review_crops.py",
     "scripts/test_auto_input_visual_triage.py",
@@ -271,6 +273,7 @@ def main() -> int:
     run("FCEUX GD screenshot converter", ["scripts/test_convert_fceux_gd_to_png.py"])
     run("manual dump inventory", ["scripts/test_manual_dump_inventory.py"])
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
+    run("reference IPS analyzer", ["scripts/test_analyze_reference_ips.py"])
     run("auto-input evidence report", ["scripts/test_auto_input_evidence_report.py"])
     run("auto-input review crops", ["scripts/test_auto_input_review_crops.py"])
     run("auto-input visual triage", ["scripts/test_auto_input_visual_triage.py"])

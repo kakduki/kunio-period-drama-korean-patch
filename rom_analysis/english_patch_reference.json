@@ -1,0 +1,8355 @@
+{
+  "source": {
+    "base_rom": "Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "base_size": 262160,
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "base_sha1": "4338c3001c5e2bf5fad0f282bfee23b79e0ad959",
+    "base_payload_sha1": "e42b77a11280eb0c99d654cd08b8933fa8ddb999",
+    "ips_patch": "TSe-v10.ips",
+    "ips_size": 15054,
+    "ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad"
+  },
+  "patched": {
+    "size": 262160,
+    "md5": "63e1d902807981f524af97748cd99500",
+    "sha1": "74a83909bb4a0786b5dec3b4411099ccf154ca27",
+    "payload_sha1": "cc3033c255b020babdb636439942f315ee7f6dd3"
+  },
+  "ines": {
+    "header_size": 16,
+    "prg_start": 16,
+    "prg_end": 131088,
+    "prg_banks_16k": 8,
+    "chr_start": 131088,
+    "chr_end": 262160,
+    "chr_banks_8k": 16
+  },
+  "ips": {
+    "record_count": 99,
+    "rle_record_count": 0,
+    "truncate_size": null,
+    "record_payload_bytes": 14551,
+    "largest_records": [
+      {
+        "offset": 24020,
+        "end_exclusive": 30567,
+        "length": 6547,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 6208
+      },
+      {
+        "offset": 22204,
+        "end_exclusive": 23892,
+        "length": 1688,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 1470
+      },
+      {
+        "offset": 116955,
+        "end_exclusive": 118059,
+        "length": 1104,
+        "region": "PRG",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 1001
+      },
+      {
+        "offset": 194592,
+        "end_exclusive": 195455,
+        "length": 863,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 754
+      },
+      {
+        "offset": 196120,
+        "end_exclusive": 196542,
+        "length": 422,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 313
+      },
+      {
+        "offset": 80171,
+        "end_exclusive": 80589,
+        "length": 418,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 305
+      },
+      {
+        "offset": 79659,
+        "end_exclusive": 79956,
+        "length": 297,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 250
+      },
+      {
+        "offset": 193016,
+        "end_exclusive": 193295,
+        "length": 279,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 208
+      },
+      {
+        "offset": 108408,
+        "end_exclusive": 108638,
+        "length": 230,
+        "region": "PRG",
+        "bank": 6,
+        "rle": false,
+        "actual_changed_bytes": 198
+      },
+      {
+        "offset": 192552,
+        "end_exclusive": 192767,
+        "length": 215,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 98
+      },
+      {
+        "offset": 192777,
+        "end_exclusive": 192991,
+        "length": 214,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 96
+      },
+      {
+        "offset": 195600,
+        "end_exclusive": 195807,
+        "length": 207,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 172
+      },
+      {
+        "offset": 22043,
+        "end_exclusive": 22192,
+        "length": 149,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 135
+      },
+      {
+        "offset": 116801,
+        "end_exclusive": 116944,
+        "length": 143,
+        "region": "PRG",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 74
+      },
+      {
+        "offset": 81119,
+        "end_exclusive": 81254,
+        "length": 135,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 128
+      },
+      {
+        "offset": 193832,
+        "end_exclusive": 193967,
+        "length": 135,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 63
+      },
+      {
+        "offset": 81332,
+        "end_exclusive": 81456,
+        "length": 124,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 110
+      },
+      {
+        "offset": 147818,
+        "end_exclusive": 147920,
+        "length": 102,
+        "region": "CHR",
+        "bank": 2,
+        "rle": false,
+        "actual_changed_bytes": 49
+      },
+      {
+        "offset": 193322,
+        "end_exclusive": 193423,
+        "length": 101,
+        "region": "CHR",
+        "bank": 7,
+        "rle": false,
+        "actual_changed_bytes": 46
+      },
+      {
+        "offset": 80059,
+        "end_exclusive": 80143,
+        "length": 84,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 80
+      },
+      {
+        "offset": 80610,
+        "end_exclusive": 80691,
+        "length": 81,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 66
+      },
+      {
+        "offset": 21128,
+        "end_exclusive": 21191,
+        "length": 63,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 27
+      },
+      {
+        "offset": 32694,
+        "end_exclusive": 32749,
+        "length": 55,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 52
+      },
+      {
+        "offset": 260914,
+        "end_exclusive": 260969,
+        "length": 55,
+        "region": "CHR",
+        "bank": 15,
+        "rle": false,
+        "actual_changed_bytes": 53
+      },
+      {
+        "offset": 148600,
+        "end_exclusive": 148640,
+        "length": 40,
+        "region": "CHR",
+        "bank": 2,
+        "rle": false,
+        "actual_changed_bytes": 24
+      },
+      {
+        "offset": 147592,
+        "end_exclusive": 147631,
+        "length": 39,
+        "region": "CHR",
+        "bank": 2,
+        "rle": false,
+        "actual_changed_bytes": 20
+      },
+      {
+        "offset": 148280,
+        "end_exclusive": 148319,
+        "length": 39,
+        "region": "CHR",
+        "bank": 2,
+        "rle": false,
+        "actual_changed_bytes": 21
+      },
+      {
+        "offset": 148848,
+        "end_exclusive": 148887,
+        "length": 39,
+        "region": "CHR",
+        "bank": 2,
+        "rle": false,
+        "actual_changed_bytes": 21
+      },
+      {
+        "offset": 79578,
+        "end_exclusive": 79614,
+        "length": 36,
+        "region": "PRG",
+        "bank": 4,
+        "rle": false,
+        "actual_changed_bytes": 27
+      },
+      {
+        "offset": 149136,
+        "end_exclusive": 149167,
+        "length": 31,
+        "region": "CHR",
+        "bank": 2,
+        "rle": false,
+        "actual_changed_bytes": 18
+      }
+    ],
+    "prg_bank1_records": [
+      {
+        "offset": 21128,
+        "end_exclusive": 21191,
+        "length": 63,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 27
+      },
+      {
+        "offset": 22043,
+        "end_exclusive": 22192,
+        "length": 149,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 135
+      },
+      {
+        "offset": 22204,
+        "end_exclusive": 23892,
+        "length": 1688,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 1470
+      },
+      {
+        "offset": 24020,
+        "end_exclusive": 30567,
+        "length": 6547,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 6208
+      },
+      {
+        "offset": 30868,
+        "end_exclusive": 30891,
+        "length": 23,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 20
+      },
+      {
+        "offset": 32694,
+        "end_exclusive": 32749,
+        "length": 55,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 52
+      },
+      {
+        "offset": 32759,
+        "end_exclusive": 32783,
+        "length": 24,
+        "region": "PRG",
+        "bank": 1,
+        "rle": false,
+        "actual_changed_bytes": 22
+      }
+    ]
+  },
+  "changes": {
+    "changed_byte_count": 12582,
+    "changed_span_count": 1170,
+    "region_changed_bytes": {
+      "header": 1,
+      "PRG": 10295,
+      "CHR": 2286
+    },
+    "bank_summary": [
+      {
+        "region": "PRG",
+        "bank": 1,
+        "changed_bytes": 7934,
+        "changed_spans": 526,
+        "first_offset": 21128,
+        "last_offset": 32782
+      },
+      {
+        "region": "PRG",
+        "bank": 3,
+        "changed_bytes": 5,
+        "changed_spans": 1,
+        "first_offset": 64561,
+        "last_offset": 64565
+      },
+      {
+        "region": "PRG",
+        "bank": 4,
+        "changed_bytes": 1013,
+        "changed_spans": 107,
+        "first_offset": 79544,
+        "last_offset": 81518
+      },
+      {
+        "region": "PRG",
+        "bank": 6,
+        "changed_bytes": 221,
+        "changed_spans": 17,
+        "first_offset": 107247,
+        "last_offset": 113540
+      },
+      {
+        "region": "PRG",
+        "bank": 7,
+        "changed_bytes": 1122,
+        "changed_spans": 144,
+        "first_offset": 116801,
+        "last_offset": 127805
+      },
+      {
+        "region": "CHR",
+        "bank": 1,
+        "changed_bytes": 8,
+        "changed_spans": 1,
+        "first_offset": 140096,
+        "last_offset": 140103
+      },
+      {
+        "region": "CHR",
+        "bank": 2,
+        "changed_bytes": 281,
+        "changed_spans": 48,
+        "first_offset": 147512,
+        "last_offset": 149198
+      },
+      {
+        "region": "CHR",
+        "bank": 7,
+        "changed_bytes": 1900,
+        "changed_spans": 299,
+        "first_offset": 192552,
+        "last_offset": 196541
+      },
+      {
+        "region": "CHR",
+        "bank": 12,
+        "changed_bytes": 30,
+        "changed_spans": 17,
+        "first_offset": 232478,
+        "last_offset": 232803
+      },
+      {
+        "region": "CHR",
+        "bank": 15,
+        "changed_bytes": 67,
+        "changed_spans": 9,
+        "first_offset": 256779,
+        "last_offset": 260968
+      }
+    ],
+    "largest_spans": [
+      {
+        "start": 117471,
+        "end_exclusive": 117687,
+        "length": 216,
+        "region": "PRG",
+        "bank": 7
+      },
+      {
+        "start": 24762,
+        "end_exclusive": 24970,
+        "length": 208,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 25265,
+        "end_exclusive": 25442,
+        "length": 177,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 27299,
+        "end_exclusive": 27457,
+        "length": 158,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 27944,
+        "end_exclusive": 28092,
+        "length": 148,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 79788,
+        "end_exclusive": 79936,
+        "length": 148,
+        "region": "PRG",
+        "bank": 4
+      },
+      {
+        "start": 25450,
+        "end_exclusive": 25597,
+        "length": 147,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 23223,
+        "end_exclusive": 23363,
+        "length": 140,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 108502,
+        "end_exclusive": 108638,
+        "length": 136,
+        "region": "PRG",
+        "bank": 6
+      },
+      {
+        "start": 29959,
+        "end_exclusive": 30090,
+        "length": 131,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 29228,
+        "end_exclusive": 29355,
+        "length": 127,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 23610,
+        "end_exclusive": 23736,
+        "length": 126,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 23393,
+        "end_exclusive": 23516,
+        "length": 123,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 29753,
+        "end_exclusive": 29871,
+        "length": 118,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 117119,
+        "end_exclusive": 117234,
+        "length": 115,
+        "region": "PRG",
+        "bank": 7
+      },
+      {
+        "start": 28663,
+        "end_exclusive": 28771,
+        "length": 108,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 30462,
+        "end_exclusive": 30567,
+        "length": 105,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 27703,
+        "end_exclusive": 27807,
+        "length": 104,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 26951,
+        "end_exclusive": 27054,
+        "length": 103,
+        "region": "PRG",
+        "bank": 1
+      },
+      {
+        "start": 29081,
+        "end_exclusive": 29181,
+        "length": 100,
+        "region": "PRG",
+        "bank": 1
+      }
+    ],
+    "header_changes": [
+      {
+        "offset": 6,
+        "base": 65,
+        "patched": 67
+      }
+    ]
+  },
+  "new_ascii_runs": [
+    {
+      "rom_offset": 30862,
+      "prg_offset": 30846,
+      "prg_bank": 1,
+      "length": 7,
+      "text": "zzzzzz6"
+    },
+    {
+      "rom_offset": 81074,
+      "prg_offset": 81058,
+      "prg_bank": 4,
+      "length": 5,
+      "text": "$5GVq"
+    },
+    {
+      "rom_offset": 81270,
+      "prg_offset": 81254,
+      "prg_bank": 4,
+      "length": 10,
+      "text": "%/8?FNYbit"
+    },
+    {
+      "rom_offset": 108468,
+      "prg_offset": 108452,
+      "prg_bank": 6,
+      "length": 6,
+      "text": "zz\\\\\\z"
+    },
+    {
+      "rom_offset": 108485,
+      "prg_offset": 108469,
+      "prg_bank": 6,
+      "length": 5,
+      "text": "z\\\\\\z"
+    },
+    {
+      "rom_offset": 108500,
+      "prg_offset": 108484,
+      "prg_bank": 6,
+      "length": 6,
+      "text": "zz\\\\\\z"
+    },
+    {
+      "rom_offset": 108510,
+      "prg_offset": 108494,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108518,
+      "prg_offset": 108502,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108526,
+      "prg_offset": 108510,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108534,
+      "prg_offset": 108518,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108542,
+      "prg_offset": 108526,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108550,
+      "prg_offset": 108534,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108558,
+      "prg_offset": 108542,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108566,
+      "prg_offset": 108550,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108574,
+      "prg_offset": 108558,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108582,
+      "prg_offset": 108566,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108590,
+      "prg_offset": 108574,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108598,
+      "prg_offset": 108582,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108606,
+      "prg_offset": 108590,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108614,
+      "prg_offset": 108598,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108622,
+      "prg_offset": 108606,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 108630,
+      "prg_offset": 108614,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "\\\\\\z"
+    },
+    {
+      "rom_offset": 113455,
+      "prg_offset": 113439,
+      "prg_bank": 6,
+      "length": 4,
+      "text": "}}}z"
+    }
+  ],
+  "english_tile_alpha_runs": [
+    {
+      "rom_offset": 30871,
+      "prg_offset": 30855,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "GROWTH",
+      "bytes": "07 12 0F 17 14 08"
+    },
+    {
+      "rom_offset": 30878,
+      "prg_offset": 30862,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "RATES",
+      "bytes": "12 01 14 05 13"
+    },
+    {
+      "rom_offset": 30884,
+      "prg_offset": 30868,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "LEFTEND",
+      "bytes": "0C 05 06 14 05 0E 04"
+    },
+    {
+      "rom_offset": 64561,
+      "prg_offset": 64545,
+      "prg_bank": 3,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NONE",
+      "bytes": "0E 0F 0E 05"
+    },
+    {
+      "rom_offset": 79578,
+      "prg_offset": 79562,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "TECHNOS",
+      "bytes": "14 05 03 08 0E 0F 13"
+    },
+    {
+      "rom_offset": 79586,
+      "prg_offset": 79570,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "JAPAN",
+      "bytes": "0A 01 10 01 0E"
+    },
+    {
+      "rom_offset": 79592,
+      "prg_offset": 79576,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "CORP",
+      "bytes": "03 0F 12 10"
+    },
+    {
+      "rom_offset": 80611,
+      "prg_offset": 80595,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLAYER",
+      "bytes": "10 0C 01 19 05 12"
+    },
+    {
+      "rom_offset": 80619,
+      "prg_offset": 80603,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLAYER",
+      "bytes": "10 0C 01 19 05 12"
+    },
+    {
+      "rom_offset": 107247,
+      "prg_offset": 107231,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MENU",
+      "bytes": "0D 05 0E 15"
+    },
+    {
+      "rom_offset": 108408,
+      "prg_offset": 108392,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FOOD",
+      "bytes": "06 0F 0F 04"
+    },
+    {
+      "rom_offset": 108422,
+      "prg_offset": 108406,
+      "prg_bank": 6,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "HEALER",
+      "bytes": "08 05 01 0C 05 12"
+    },
+    {
+      "rom_offset": 108432,
+      "prg_offset": 108416,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TECH",
+      "bytes": "14 05 03 08"
+    },
+    {
+      "rom_offset": 108440,
+      "prg_offset": 108424,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FOOD",
+      "bytes": "06 0F 0F 04"
+    },
+    {
+      "rom_offset": 108448,
+      "prg_offset": 108432,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108454,
+      "prg_offset": 108438,
+      "prg_bank": 6,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "CHANCE",
+      "bytes": "03 08 01 0E 03 05"
+    },
+    {
+      "rom_offset": 108464,
+      "prg_offset": 108448,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FOOD",
+      "bytes": "06 0F 0F 04"
+    },
+    {
+      "rom_offset": 108474,
+      "prg_offset": 108458,
+      "prg_bank": 6,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "SHOPBUNZO",
+      "bytes": "13 08 0F 10 02 15 0E 1A 0F"
+    },
+    {
+      "rom_offset": 108490,
+      "prg_offset": 108474,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108496,
+      "prg_offset": 108480,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FOOD",
+      "bytes": "06 0F 0F 04"
+    },
+    {
+      "rom_offset": 108506,
+      "prg_offset": 108490,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108514,
+      "prg_offset": 108498,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108522,
+      "prg_offset": 108506,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108530,
+      "prg_offset": 108514,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108538,
+      "prg_offset": 108522,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108546,
+      "prg_offset": 108530,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108554,
+      "prg_offset": 108538,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108562,
+      "prg_offset": 108546,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108570,
+      "prg_offset": 108554,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108578,
+      "prg_offset": 108562,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108586,
+      "prg_offset": 108570,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108594,
+      "prg_offset": 108578,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108602,
+      "prg_offset": 108586,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108610,
+      "prg_offset": 108594,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108618,
+      "prg_offset": 108602,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 108626,
+      "prg_offset": 108610,
+      "prg_bank": 6,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOP",
+      "bytes": "13 08 0F 10"
+    },
+    {
+      "rom_offset": 113482,
+      "prg_offset": 113466,
+      "prg_bank": 6,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SAVED",
+      "bytes": "13 01 16 05 04"
+    },
+    {
+      "rom_offset": 117012,
+      "prg_offset": 116996,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIST",
+      "bytes": "06 09 13 14"
+    },
+    {
+      "rom_offset": 117024,
+      "prg_offset": 117008,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "0B 09 03 0B"
+    },
+    {
+      "rom_offset": 117047,
+      "prg_offset": 117031,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORP",
+      "bytes": "14 0F 12 10"
+    },
+    {
+      "rom_offset": 117059,
+      "prg_offset": 117043,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "ATTACK",
+      "bytes": "01 14 14 01 03 0B"
+    },
+    {
+      "rom_offset": 117073,
+      "prg_offset": 117057,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FUMI",
+      "bytes": "06 15 0D 09"
+    },
+    {
+      "rom_offset": 117085,
+      "prg_offset": 117069,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GUARD",
+      "bytes": "07 15 01 12 04"
+    },
+    {
+      "rom_offset": 117096,
+      "prg_offset": 117080,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SCREW",
+      "bytes": "13 03 12 05 17"
+    },
+    {
+      "rom_offset": 117107,
+      "prg_offset": 117091,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "TORNADO",
+      "bytes": "14 0F 12 0E 01 04 0F"
+    },
+    {
+      "rom_offset": 117122,
+      "prg_offset": 117106,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORP",
+      "bytes": "14 0F 12 10"
+    },
+    {
+      "rom_offset": 117132,
+      "prg_offset": 117116,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "HELICPTR",
+      "bytes": "08 05 0C 09 03 10 14 12"
+    },
+    {
+      "rom_offset": 117146,
+      "prg_offset": 117130,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DRILL",
+      "bytes": "04 12 09 0C 0C"
+    },
+    {
+      "rom_offset": 117157,
+      "prg_offset": 117141,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SLAP",
+      "bytes": "13 0C 01 10"
+    },
+    {
+      "rom_offset": 117170,
+      "prg_offset": 117154,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DAGGR",
+      "bytes": "04 01 07 07 12"
+    },
+    {
+      "rom_offset": 117184,
+      "prg_offset": 117168,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "HEADBUTT",
+      "bytes": "08 05 01 04 02 15 14 14"
+    },
+    {
+      "rom_offset": 117198,
+      "prg_offset": 117182,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "BMPKNART",
+      "bytes": "02 0D 10 0B 0E 01 12 14"
+    },
+    {
+      "rom_offset": 117214,
+      "prg_offset": 117198,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIST",
+      "bytes": "06 09 13 14"
+    },
+    {
+      "rom_offset": 117227,
+      "prg_offset": 117211,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "0B 09 03 0B"
+    },
+    {
+      "rom_offset": 117238,
+      "prg_offset": 117222,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SCREW",
+      "bytes": "13 03 12 05 17"
+    },
+    {
+      "rom_offset": 117250,
+      "prg_offset": 117234,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "MASSAGE",
+      "bytes": "0D 01 13 13 01 07 05"
+    },
+    {
+      "rom_offset": 117263,
+      "prg_offset": 117247,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BIGBANG",
+      "bytes": "02 09 07 02 01 0E 07"
+    },
+    {
+      "rom_offset": 117276,
+      "prg_offset": 117260,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "WARPSHOT",
+      "bytes": "17 01 12 10 13 08 0F 14"
+    },
+    {
+      "rom_offset": 117290,
+      "prg_offset": 117274,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "DEFLECT",
+      "bytes": "04 05 06 0C 05 03 14"
+    },
+    {
+      "rom_offset": 117305,
+      "prg_offset": 117289,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KIUKIU",
+      "bytes": "0B 09 15 0B 09 15"
+    },
+    {
+      "rom_offset": 117319,
+      "prg_offset": 117303,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SWING",
+      "bytes": "13 17 09 0E 07"
+    },
+    {
+      "rom_offset": 117330,
+      "prg_offset": 117314,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PICKLE",
+      "bytes": "10 09 03 0B 0C 05"
+    },
+    {
+      "rom_offset": 117342,
+      "prg_offset": 117326,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MEAL",
+      "bytes": "0D 05 01 0C"
+    },
+    {
+      "rom_offset": 117352,
+      "prg_offset": 117336,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SOBA",
+      "bytes": "13 0F 02 01"
+    },
+    {
+      "rom_offset": 117362,
+      "prg_offset": 117346,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "UDON",
+      "bytes": "15 04 0F 0E"
+    },
+    {
+      "rom_offset": 117372,
+      "prg_offset": 117356,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SOUP",
+      "bytes": "13 0F 15 10"
+    },
+    {
+      "rom_offset": 117391,
+      "prg_offset": 117375,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FISH",
+      "bytes": "06 09 13 08"
+    },
+    {
+      "rom_offset": 117401,
+      "prg_offset": 117385,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "TENPURA",
+      "bytes": "14 05 0E 10 15 12 01"
+    },
+    {
+      "rom_offset": 117414,
+      "prg_offset": 117398,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DANGO",
+      "bytes": "04 01 0E 07 0F"
+    },
+    {
+      "rom_offset": 117425,
+      "prg_offset": 117409,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "RICEBALL",
+      "bytes": "12 09 03 05 02 01 0C 0C"
+    },
+    {
+      "rom_offset": 117439,
+      "prg_offset": 117423,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MANJUU",
+      "bytes": "0D 01 0E 0A 15 15"
+    },
+    {
+      "rom_offset": 117451,
+      "prg_offset": 117435,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SUSHI",
+      "bytes": "13 15 13 08 09"
+    },
+    {
+      "rom_offset": 117462,
+      "prg_offset": 117446,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SALVE",
+      "bytes": "13 01 0C 16 05"
+    },
+    {
+      "rom_offset": 117473,
+      "prg_offset": 117457,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "POULTICE",
+      "bytes": "10 0F 15 0C 14 09 03 05"
+    },
+    {
+      "rom_offset": 117487,
+      "prg_offset": 117471,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TONIC",
+      "bytes": "14 0F 0E 09 03"
+    },
+    {
+      "rom_offset": 117499,
+      "prg_offset": 117483,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "TOYAMA",
+      "bytes": "14 0F 19 01 0D 01"
+    },
+    {
+      "rom_offset": 117511,
+      "prg_offset": 117495,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ELIXIR",
+      "bytes": "05 0C 09 18 09 12"
+    },
+    {
+      "rom_offset": 117524,
+      "prg_offset": 117508,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "COTTON",
+      "bytes": "03 0F 14 14 0F 0E"
+    },
+    {
+      "rom_offset": 117537,
+      "prg_offset": 117521,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "COTTON",
+      "bytes": "03 0F 14 14 0F 0E"
+    },
+    {
+      "rom_offset": 117550,
+      "prg_offset": 117534,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LONG",
+      "bytes": "0C 0F 0E 07"
+    },
+    {
+      "rom_offset": 117561,
+      "prg_offset": 117545,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "OBSCENE",
+      "bytes": "0F 02 13 03 05 0E 05"
+    },
+    {
+      "rom_offset": 117575,
+      "prg_offset": 117559,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "COMMON",
+      "bytes": "03 0F 0D 0D 0F 0E"
+    },
+    {
+      "rom_offset": 117588,
+      "prg_offset": 117572,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WIDE",
+      "bytes": "17 09 04 05"
+    },
+    {
+      "rom_offset": 117599,
+      "prg_offset": 117583,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THICK",
+      "bytes": "14 08 09 03 0B"
+    },
+    {
+      "rom_offset": 117611,
+      "prg_offset": 117595,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WHITE",
+      "bytes": "17 08 09 14 05"
+    },
+    {
+      "rom_offset": 117633,
+      "prg_offset": 117617,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PRICEY",
+      "bytes": "10 12 09 03 05 19"
+    },
+    {
+      "rom_offset": 117646,
+      "prg_offset": 117630,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SILK",
+      "bytes": "13 09 0C 0B"
+    },
+    {
+      "rom_offset": 117657,
+      "prg_offset": 117641,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SILK",
+      "bytes": "13 09 0C 0B"
+    },
+    {
+      "rom_offset": 117668,
+      "prg_offset": 117652,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THICK",
+      "bytes": "14 08 09 03 0B"
+    },
+    {
+      "rom_offset": 117680,
+      "prg_offset": 117664,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SAUCY",
+      "bytes": "13 01 15 03 19"
+    },
+    {
+      "rom_offset": 117692,
+      "prg_offset": 117676,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "NARITA",
+      "bytes": "0E 01 12 09 14 01"
+    },
+    {
+      "rom_offset": 117715,
+      "prg_offset": 117699,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SOFT",
+      "bytes": "13 0F 06 14"
+    },
+    {
+      "rom_offset": 117726,
+      "prg_offset": 117710,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WOOL",
+      "bytes": "17 0F 0F 0C"
+    },
+    {
+      "rom_offset": 117740,
+      "prg_offset": 117724,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "TWISTED",
+      "bytes": "14 17 09 13 14 05 04"
+    },
+    {
+      "rom_offset": 117754,
+      "prg_offset": 117738,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PONGEE",
+      "bytes": "10 0F 0E 07 05 05"
+    },
+    {
+      "rom_offset": 117766,
+      "prg_offset": 117750,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "DOUBLEUP",
+      "bytes": "04 0F 15 02 0C 05 15 10"
+    },
+    {
+      "rom_offset": 117781,
+      "prg_offset": 117765,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SNOW",
+      "bytes": "13 0E 0F 17"
+    },
+    {
+      "rom_offset": 117792,
+      "prg_offset": 117776,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SPIKED",
+      "bytes": "13 10 09 0B 05 04"
+    },
+    {
+      "rom_offset": 117805,
+      "prg_offset": 117789,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CAMEL",
+      "bytes": "03 01 0D 05 0C"
+    },
+    {
+      "rom_offset": 117817,
+      "prg_offset": 117801,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "KAPPA",
+      "bytes": "0B 01 10 10 01"
+    },
+    {
+      "rom_offset": 117829,
+      "prg_offset": 117813,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "MAGIC",
+      "bytes": "0D 01 07 09 03"
+    },
+    {
+      "rom_offset": 117841,
+      "prg_offset": 117825,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SANKI",
+      "bytes": "13 01 0E 0B 09"
+    },
+    {
+      "rom_offset": 117856,
+      "prg_offset": 117840,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "CRSR",
+      "bytes": "03 12 13 12"
+    },
+    {
+      "rom_offset": 117867,
+      "prg_offset": 117851,
+      "prg_bank": 7,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "MYSTERY",
+      "bytes": "0D 19 13 14 05 12 19"
+    },
+    {
+      "rom_offset": 117880,
+      "prg_offset": 117864,
+      "prg_bank": 7,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "GOODTIME",
+      "bytes": "07 0F 0F 04 14 09 0D 05"
+    },
+    {
+      "rom_offset": 117896,
+      "prg_offset": 117880,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "EFFECT",
+      "bytes": "05 06 06 05 03 14"
+    },
+    {
+      "rom_offset": 117909,
+      "prg_offset": 117893,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MASTER",
+      "bytes": "0D 01 13 14 05 12"
+    },
+    {
+      "rom_offset": 117922,
+      "prg_offset": 117906,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "JUMP",
+      "bytes": "0A 15 0D 10"
+    },
+    {
+      "rom_offset": 117943,
+      "prg_offset": 117927,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ABET",
+      "bytes": "00 01 02 05 14"
+    },
+    {
+      "rom_offset": 117951,
+      "prg_offset": 117935,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "STAY",
+      "bytes": "13 14 01 19"
+    },
+    {
+      "rom_offset": 117956,
+      "prg_offset": 117940,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ANONE",
+      "bytes": "00 01 0E 0F 0E 05"
+    },
+    {
+      "rom_offset": 117963,
+      "prg_offset": 117947,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "EXIT",
+      "bytes": "05 18 09 14"
+    },
+    {
+      "rom_offset": 117972,
+      "prg_offset": 117956,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HALF",
+      "bytes": "08 01 0C 06"
+    },
+    {
+      "rom_offset": 117989,
+      "prg_offset": 117973,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ALLY",
+      "bytes": "01 0C 0C 19"
+    },
+    {
+      "rom_offset": 117994,
+      "prg_offset": 117978,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "STATUS",
+      "bytes": "13 14 01 14 15 13"
+    },
+    {
+      "rom_offset": 118001,
+      "prg_offset": 117985,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ALLY",
+      "bytes": "01 0C 0C 19"
+    },
+    {
+      "rom_offset": 118006,
+      "prg_offset": 117990,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TECH",
+      "bytes": "14 05 03 08"
+    },
+    {
+      "rom_offset": 118011,
+      "prg_offset": 117995,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SETUP",
+      "bytes": "13 05 14 15 10"
+    },
+    {
+      "rom_offset": 118017,
+      "prg_offset": 118001,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "SETTNG",
+      "bytes": "13 05 14 14 0E 07"
+    },
+    {
+      "rom_offset": 118024,
+      "prg_offset": 118008,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAVE",
+      "bytes": "13 01 16 05"
+    }
+  ],
+  "english_dialogue_tile_alpha_runs": [
+    {
+      "rom_offset": 21160,
+      "prg_offset": 21144,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "EVEN",
+      "bytes": "85 96 85 8E"
+    },
+    {
+      "rom_offset": 21176,
+      "prg_offset": 21160,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "EVEN",
+      "bytes": "85 96 85 8E"
+    },
+    {
+      "rom_offset": 22042,
+      "prg_offset": 22026,
+      "prg_bank": 1,
+      "length": 111,
+      "changed_ratio": 0.901,
+      "text": "VKUNIORIKI BUNZOJUUKITSUI TATSUYAGO JINROHEISIKINSUTAME GONSAGINPAICHI ROKU TSUU ASAJIYONO TORA HAN NIZAEHEIRU",
+      "bytes": "96 8B 95 8E 89 8F 92 89 8B 89 FF 82 95 8E 9A 8F 8A 95 95 8B 89 94 93 95 89 FF 94 81 94 93 95 99 81 87 8F FF 8A 89 8E 92 8F 88 85 89 93 89 8B 89 8E 93 95 94 81 8D 85 FF 87 8F 8E 93 81 87 89 8E 90 81 89 83 88 89 FF 92 8F 8B 95 FF 94 93 95 95 FF 81 93 81 8A 89 99 8F 8E 8F FF 94 8F 92 81 FF 88 81 8E FF FF 8E 89 9A 81 85 88 85 89 92 95"
+    },
+    {
+      "rom_offset": 22156,
+      "prg_offset": 22140,
+      "prg_bank": 1,
+      "length": 36,
+      "changed_ratio": 0.889,
+      "text": "OBINAMATSUOKOTO OMON RAO SANKI",
+      "bytes": "FF 8F 82 89 8E 81 8D 81 94 93 95 8F 8B 8F 94 8F FF FF FF FF FF 8F 8D 8F 8E FF 92 81 8F FF FF 93 81 8E 8B 89"
+    },
+    {
+      "rom_offset": 22203,
+      "prg_offset": 22187,
+      "prg_bank": 1,
+      "length": 801,
+      "changed_ratio": 0.905,
+      "text": "VYUKI ITOKISAKI TAMO SAIZOHAGI HASHIKOSU HANSUKOUE HIRA HIDE ASHI BEN SAITAMOEMOMURA SADA SEKI YOTSUTOMO KUMA WATA URAE TOME ONOKIYATA ISORORIHEICHIE SUMI SHIN MUNE GENSUOISA HEMO YOTA KAME TAKI HISA SAHEIKISU NORI KOUKISUEMATAKE UMEMABOBU YUUE YOSHIRIHE HACHIDEZOUKUMI TARO URASAYONE SHIMATERU SUYA MORI ISHI SAKU URAJISHIBAJMGQ SHIROJUNZOINETAAKIZOYURI SUTE SHUU EBINOCHIJIATSU KANA SUKE GOSU TSUNOKIKU TOSHITSUKIOBISAYASU KENGOMANSIKATSUSONO GOSA TOUBEZENE OMENOMOCHISHOU INGO NEHA TEMA MOHE SOME KAMO MATA UKI GORO KOTA TSUDAINOSUUMETAUSUKEMANGONENKIKURO TEHA SENBESENPAHOME TAHA KICHINETA TAGO MANPEKETA KUNKIMOMO TANE HEKO MATAAMEHEIMASU UNJI MONO DENSUUMESIMAGO RAHA MOHEISENROCHOU KAN KANPAIMOHAMINO KANTAFUNE KANSUSUJI SICHIUSHI ROHEIKOME GOBEEZENJISUNE KINE SUZU INEMOHATA UNOMAYAENONEKI",
+      "bytes": "96 99 95 8B 89 FF 89 94 8F 8B 89 93 81 8B 89 FF 94 81 8D 8F FF 93 81 89 9A 8F 88 81 87 89 FF 88 81 93 88 89 8B 8F 93 95 FF 88 81 8E 93 95 8B 8F 95 85 FF 88 89 92 81 FF 88 89 84 85 FF 81 93 88 89 FF 82 85 8E FF FF 93 81 89 94 81 8D 8F 85 8D 8F 8D 95 92 81 FF 93 81 84 81 FF 93 85 8B 89 FF 99 8F 94 93 95 94 8F 8D 8F FF 8B 95 8D 81 FF 97 81 94 81 FF 95 92 81 85 FF 94 8F 8D 85 FF 8F 8E 8F 8B 89 99 81 94 81 FF 89 93 8F 92 8F 92 89 88 85 89 83 88 89 85 FF 93 95 8D 89 FF 93 88 89 8E FF 8D 95 8E 85 FF 87 85 8E 93 95 8F 89 93 81 FF 88 85 8D 8F FF 99 8F 94 81 FF 8B 81 8D 85 FF 94 81 8B 89 FF 88 89 93 81 FF 93 81 88 85 89 8B 89 93 95 FF 8E 8F 92 89 FF 8B 8F 95 8B 89 93 95 85 8D 81 94 81 8B 85 FF 95 8D 85 8D 81 82 8F 82 95 FF 99 95 95 85 FF 99 8F 93 88 89 92 89 88 85 FF 88 81 83 88 89 84 85 9A 8F 95 8B 95 8D 89 FF 94 81 92 8F FF 95 92 81 93 81 99 8F 8E 85 FF 93 88 89 8D 81 94 85 92 95 FF 93 95 99 81 FF 8D 8F 92 89 FF 89 93 88 89 FF 93 81 8B 95 FF 95 92 81 8A 89 93 88 89 82 81 8A 8D 87 91 FF 93 88 89 92 8F 8A 95 8E 9A 8F 89 8E 85 94 81 81 8B 89 9A 8F 99 95 92 89 FF 93 95 94 85 FF 93 88 95 95 FF 85 82 89 8E 8F 83 88 89 8A 89 81 94 93 95 FF 8B 81 8E 81 FF 93 95 8B 85 FF 87 8F 93 95 FF 94 93 95 8E 8F 8B 89 8B 95 FF 94 8F 93 88 89 94 93 95 8B 89 8F 82 89 93 81 99 81 93 95 FF 8B 85 8E 87 8F 8D 81 8E 93 89 8B 81 94 93 95 93 8F 8E 8F FF 87 8F 93 81 FF 94 8F 95 82 85 9A 85 8E 85 FF 8F 8D 85 8E 8F 8D 8F 83 88 89 93 88 8F 95 FF 89 8E 87 8F FF 8E 85 88 81 FF 94 85 8D 81 FF 8D 8F 88 85 FF 93 8F 8D 85 FF 8B 81 8D 8F FF 8D 81 94 81 FF 95 8B 89 FF FF 87 8F 92 8F FF 8B 8F 94 81 FF 94 93 95 84 81 89 8E 8F 93 95 95 8D 85 94 81 95 93 95 8B 85 8D 81 8E 87 8F 8E 85 8E 8B 89 8B 95 92 8F FF 94 85 88 81 FF 93 85 8E 82 85 93 85 8E 90 81 88 8F 8D 85 FF 94 81 88 81 FF 8B 89 83 88 89 8E 85 94 81 FF 94 81 87 8F FF 8D 81 8E 90 85 8B 85 94 81 FF 8B 95 8E 8B 89 8D 8F 8D 8F FF 94 81 8E 85 FF 88 85 8B 8F FF 8D 81 94 81 81 8D 85 88 85 89 8D 81 93 95 FF 95 8E 8A 89 FF 8D 8F 8E 8F FF 84 85 8E 93 95 95 8D 85 93 89 8D 81 87 8F FF 92 81 88 81 FF 8D 8F 88 85 89 93 85 8E 92 8F 83 88 8F 95 FF 8B 81 8E FF FF 8B 81 8E 90 81 89 8D 8F 88 81 8D 89 8E 8F FF 8B 81 8E 94 81 86 95 8E 85 FF 8B 81 8E 93 95 93 95 8A 89 FF 93 89 83 88 89 95 93 88 89 FF 92 8F 88 85 89 8B 8F 8D 85 FF 87 8F 82 85 85 9A 85 8E 8A 89 93 95 8E 85 FF 8B 89 8E 85 FF 93 95 9A 95 FF 89 8E 85 8D 8F 88 81 94 81 FF 95 8E 8F 8D 81 99 81 85 8E 8F 8E 85 8B 89 FF"
+    },
+    {
+      "rom_offset": 23164,
+      "prg_offset": 23148,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "FIST M",
+      "bytes": "86 89 93 94 FF 8D"
+    },
+    {
+      "rom_offset": 23171,
+      "prg_offset": 23155,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "KICK M",
+      "bytes": "8B 89 83 8B FF 8D"
+    },
+    {
+      "rom_offset": 23178,
+      "prg_offset": 23162,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "WPN E",
+      "bytes": "97 90 8E FF 85"
+    },
+    {
+      "rom_offset": 23184,
+      "prg_offset": 23168,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "TORP N",
+      "bytes": "94 8F 92 90 FF 8E"
+    },
+    {
+      "rom_offset": 23191,
+      "prg_offset": 23175,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 0.875,
+      "text": "ATTACK M",
+      "bytes": "81 94 94 81 83 8B FF 8D"
+    },
+    {
+      "rom_offset": 23200,
+      "prg_offset": 23184,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "FUMI H",
+      "bytes": "86 95 8D 89 FF 88"
+    },
+    {
+      "rom_offset": 23207,
+      "prg_offset": 23191,
+      "prg_bank": 1,
+      "length": 21,
+      "changed_ratio": 0.952,
+      "text": "GUARD SCREW TORNADO S",
+      "bytes": "87 95 81 92 84 FF 93 83 92 85 97 FF 94 8F 92 8E 81 84 8F FF 93"
+    },
+    {
+      "rom_offset": 23229,
+      "prg_offset": 23213,
+      "prg_bank": 1,
+      "length": 24,
+      "changed_ratio": 1.0,
+      "text": "TORP HELICPTR DRILL SLAP",
+      "bytes": "94 8F 92 90 FF 88 85 8C 89 83 90 94 92 FF 84 92 89 8C 8C FF 93 8C 81 90"
+    },
+    {
+      "rom_offset": 23254,
+      "prg_offset": 23238,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "SP DAGGR",
+      "bytes": "93 90 FF 84 81 87 87 92"
+    },
+    {
+      "rom_offset": 23263,
+      "prg_offset": 23247,
+      "prg_bank": 1,
+      "length": 22,
+      "changed_ratio": 1.0,
+      "text": "SP HEADBUTT BMPKNART M",
+      "bytes": "93 90 FF 88 85 81 84 82 95 94 94 FF 82 8D 90 8B 8E 81 92 94 FF 8D"
+    },
+    {
+      "rom_offset": 23286,
+      "prg_offset": 23270,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIST",
+      "bytes": "86 89 93 94"
+    },
+    {
+      "rom_offset": 23294,
+      "prg_offset": 23278,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 23299,
+      "prg_offset": 23283,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SCREW",
+      "bytes": "FF 93 83 92 85 97"
+    },
+    {
+      "rom_offset": 23306,
+      "prg_offset": 23290,
+      "prg_bank": 1,
+      "length": 35,
+      "changed_ratio": 1.0,
+      "text": "MASSAGE BIGBANG WARPSHOT DEFLECT M",
+      "bytes": "FF 8D 81 93 93 81 87 85 FF 82 89 87 82 81 8E 87 FF 97 81 92 90 93 88 8F 94 FF 84 85 86 8C 85 83 94 FF 8D"
+    },
+    {
+      "rom_offset": 23342,
+      "prg_offset": 23326,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "KIUKIU M",
+      "bytes": "8B 89 95 8B 89 95 FF 8D"
+    },
+    {
+      "rom_offset": 23351,
+      "prg_offset": 23335,
+      "prg_bank": 1,
+      "length": 99,
+      "changed_ratio": 0.96,
+      "text": "SWING PICKLE MEAL SOBA UDON SOUP IMO FISH TENPURA DANGO RICEBALL MANJUU SUSHI SALVE POULTICE TONIC",
+      "bytes": "93 97 89 8E 87 FF 90 89 83 8B 8C 85 FF 8D 85 81 8C FF 93 8F 82 81 FF 95 84 8F 8E FF 93 8F 95 90 FF 89 8D 8F FF 86 89 93 88 FF 94 85 8E 90 95 92 81 FF 84 81 8E 87 8F FF 92 89 83 85 82 81 8C 8C FF 8D 81 8E 8A 95 95 FF 93 95 93 88 89 FF 93 81 8C 96 85 FF 90 8F 95 8C 94 89 83 85 FF 94 8F 8E 89 83 FF"
+    },
+    {
+      "rom_offset": 23451,
+      "prg_offset": 23435,
+      "prg_bank": 1,
+      "length": 14,
+      "changed_ratio": 1.0,
+      "text": "TOYAMA ELIXIR",
+      "bytes": "94 8F 99 81 8D 81 FF 85 8C 89 98 89 92 FF"
+    },
+    {
+      "rom_offset": 23466,
+      "prg_offset": 23450,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "COTTON",
+      "bytes": "83 8F 94 94 8F 8E FF"
+    },
+    {
+      "rom_offset": 23474,
+      "prg_offset": 23458,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "COTTON",
+      "bytes": "83 8F 94 94 8F 8E FF"
+    },
+    {
+      "rom_offset": 23482,
+      "prg_offset": 23466,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LONG",
+      "bytes": "8C 8F 8E 87 FF"
+    },
+    {
+      "rom_offset": 23488,
+      "prg_offset": 23472,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "OBSCENE",
+      "bytes": "8F 82 93 83 85 8E 85 FF"
+    },
+    {
+      "rom_offset": 23497,
+      "prg_offset": 23481,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "COMMON",
+      "bytes": "83 8F 8D 8D 8F 8E FF"
+    },
+    {
+      "rom_offset": 23505,
+      "prg_offset": 23489,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WIDE",
+      "bytes": "97 89 84 85 FF"
+    },
+    {
+      "rom_offset": 23511,
+      "prg_offset": 23495,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "THICK",
+      "bytes": "94 88 89 83 8B FF"
+    },
+    {
+      "rom_offset": 23518,
+      "prg_offset": 23502,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "WHITE",
+      "bytes": "97 88 89 94 85 FF"
+    },
+    {
+      "rom_offset": 23525,
+      "prg_offset": 23509,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SUN",
+      "bytes": "93 95 8E FF"
+    },
+    {
+      "rom_offset": 23530,
+      "prg_offset": 23514,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "PRICEY",
+      "bytes": "90 92 89 83 85 99 FF"
+    },
+    {
+      "rom_offset": 23538,
+      "prg_offset": 23522,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SILK",
+      "bytes": "93 89 8C 8B FF"
+    },
+    {
+      "rom_offset": 23544,
+      "prg_offset": 23528,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SILK",
+      "bytes": "93 89 8C 8B FF FF"
+    },
+    {
+      "rom_offset": 23551,
+      "prg_offset": 23535,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "THICK",
+      "bytes": "94 88 89 83 8B FF"
+    },
+    {
+      "rom_offset": 23558,
+      "prg_offset": 23542,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SAUCY",
+      "bytes": "93 81 95 83 99 FF"
+    },
+    {
+      "rom_offset": 23565,
+      "prg_offset": 23549,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "NARITA",
+      "bytes": "8E 81 92 89 94 81 FF"
+    },
+    {
+      "rom_offset": 23573,
+      "prg_offset": 23557,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "JET",
+      "bytes": "8A 85 94 FF"
+    },
+    {
+      "rom_offset": 23578,
+      "prg_offset": 23562,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SOFT",
+      "bytes": "93 8F 86 94 FF"
+    },
+    {
+      "rom_offset": 23584,
+      "prg_offset": 23568,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WOOL",
+      "bytes": "97 8F 8F 8C FF"
+    },
+    {
+      "rom_offset": 23590,
+      "prg_offset": 23574,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "TWISTED",
+      "bytes": "94 97 89 93 94 85 84 FF"
+    },
+    {
+      "rom_offset": 23599,
+      "prg_offset": 23583,
+      "prg_bank": 1,
+      "length": 16,
+      "changed_ratio": 0.938,
+      "text": "PONGEE DOUBLEUP",
+      "bytes": "90 8F 8E 87 85 85 FF 84 8F 95 82 8C 85 95 90 FF"
+    },
+    {
+      "rom_offset": 23616,
+      "prg_offset": 23600,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SNOW",
+      "bytes": "93 8E 8F 97 FF"
+    },
+    {
+      "rom_offset": 23622,
+      "prg_offset": 23606,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "SPIKED",
+      "bytes": "93 90 89 8B 85 84 FF"
+    },
+    {
+      "rom_offset": 23630,
+      "prg_offset": 23614,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "CAMEL",
+      "bytes": "83 81 8D 85 8C FF"
+    },
+    {
+      "rom_offset": 23637,
+      "prg_offset": 23621,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KAPPA",
+      "bytes": "8B 81 90 90 81 FF"
+    },
+    {
+      "rom_offset": 23644,
+      "prg_offset": 23628,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MAGIC",
+      "bytes": "8D 81 87 89 83 FF"
+    },
+    {
+      "rom_offset": 23651,
+      "prg_offset": 23635,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "SANKI MAP",
+      "bytes": "93 81 8E 8B 89 FF 8D 81 90"
+    },
+    {
+      "rom_offset": 23661,
+      "prg_offset": 23645,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CRSR",
+      "bytes": "83 92 93 92 FF"
+    },
+    {
+      "rom_offset": 23667,
+      "prg_offset": 23651,
+      "prg_bank": 1,
+      "length": 17,
+      "changed_ratio": 1.0,
+      "text": "MYSTERY GOODTIME",
+      "bytes": "8D 99 93 94 85 92 99 FF 87 8F 8F 84 94 89 8D 85 FF"
+    },
+    {
+      "rom_offset": 23686,
+      "prg_offset": 23670,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "EFFECT",
+      "bytes": "85 86 86 85 83 94 FF"
+    },
+    {
+      "rom_offset": 23694,
+      "prg_offset": 23678,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "MASTER",
+      "bytes": "8D 81 93 94 85 92 FF"
+    },
+    {
+      "rom_offset": 23702,
+      "prg_offset": 23686,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JUMP",
+      "bytes": "8A 95 8D 90"
+    },
+    {
+      "rom_offset": 23709,
+      "prg_offset": 23693,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "KAPPA",
+      "bytes": "8B 81 90 90 81 FF FF FF"
+    },
+    {
+      "rom_offset": 23718,
+      "prg_offset": 23702,
+      "prg_bank": 1,
+      "length": 19,
+      "changed_ratio": 0.947,
+      "text": "CAMEL RAINCOAT",
+      "bytes": "83 81 8D 85 8C FF 92 81 89 8E 83 8F 81 94 FF FF FF FF FF"
+    },
+    {
+      "rom_offset": 23761,
+      "prg_offset": 23745,
+      "prg_bank": 1,
+      "length": 50,
+      "changed_ratio": 0.96,
+      "text": "STAM VIT PUNCH KICK WPN THROW AGI WILL DEF STR MAX",
+      "bytes": "93 94 81 8D FF 96 89 94 FF 90 95 8E 83 88 FF 8B 89 83 8B FF 97 90 8E FF 94 88 92 8F 97 FF 81 87 89 FF 97 89 8C 8C FF 84 85 86 FF 93 94 92 FF 8D 81 98"
+    },
+    {
+      "rom_offset": 23812,
+      "prg_offset": 23796,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "VIT MAX",
+      "bytes": "96 89 94 FF 8D 81 98"
+    },
+    {
+      "rom_offset": 24518,
+      "prg_offset": 24502,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NAME",
+      "bytes": "8E 81 8D 85"
+    },
+    {
+      "rom_offset": 24526,
+      "prg_offset": 24510,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GINPA",
+      "bytes": "87 89 8E 90 81"
+    },
+    {
+      "rom_offset": 24533,
+      "prg_offset": 24517,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 24544,
+      "prg_offset": 24528,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TURF",
+      "bytes": "94 95 92 86"
+    },
+    {
+      "rom_offset": 24556,
+      "prg_offset": 24540,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "FIGHT",
+      "bytes": "86 89 87 88 94"
+    },
+    {
+      "rom_offset": 24576,
+      "prg_offset": 24560,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "LETTING",
+      "bytes": "8C 85 94 94 89 8E 87"
+    },
+    {
+      "rom_offset": 24588,
+      "prg_offset": 24572,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "PASS",
+      "bytes": "90 81 93 93"
+    },
+    {
+      "rom_offset": 24597,
+      "prg_offset": 24581,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HOLY",
+      "bytes": "88 8F 8C 99"
+    },
+    {
+      "rom_offset": 24602,
+      "prg_offset": 24586,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHIT",
+      "bytes": "93 88 89 94"
+    },
+    {
+      "rom_offset": 24621,
+      "prg_offset": 24605,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MEET",
+      "bytes": "8D 85 85 94"
+    },
+    {
+      "rom_offset": 24626,
+      "prg_offset": 24610,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AGAIN",
+      "bytes": "81 87 81 89 8E"
+    },
+    {
+      "rom_offset": 24636,
+      "prg_offset": 24620,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "REMEMBER",
+      "bytes": "92 85 8D 85 8D 82 85 92"
+    },
+    {
+      "rom_offset": 24645,
+      "prg_offset": 24629,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THOSE",
+      "bytes": "94 88 8F 93 85"
+    },
+    {
+      "rom_offset": 24651,
+      "prg_offset": 24635,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DUDES",
+      "bytes": "84 95 84 85 93"
+    },
+    {
+      "rom_offset": 24658,
+      "prg_offset": 24642,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THEY",
+      "bytes": "94 88 85 99"
+    },
+    {
+      "rom_offset": 24670,
+      "prg_offset": 24654,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ONES",
+      "bytes": "8F 8E 85 93"
+    },
+    {
+      "rom_offset": 24691,
+      "prg_offset": 24675,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEAT",
+      "bytes": "82 85 81 94"
+    },
+    {
+      "rom_offset": 24699,
+      "prg_offset": 24683,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "BOYS",
+      "bytes": "82 8F 99 93"
+    },
+    {
+      "rom_offset": 24712,
+      "prg_offset": 24696,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "FIGHT",
+      "bytes": "86 89 87 88 94"
+    },
+    {
+      "rom_offset": 24718,
+      "prg_offset": 24702,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LIKE",
+      "bytes": "8C 89 8B 85"
+    },
+    {
+      "rom_offset": 24733,
+      "prg_offset": 24717,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLEASE",
+      "bytes": "90 8C 85 81 93 85"
+    },
+    {
+      "rom_offset": 24747,
+      "prg_offset": 24731,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JOIN",
+      "bytes": "8A 8F 89 8E"
+    },
+    {
+      "rom_offset": 24769,
+      "prg_offset": 24753,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "NOTHIN",
+      "bytes": "8E 8F 94 88 89 8E"
+    },
+    {
+      "rom_offset": 24788,
+      "prg_offset": 24772,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "COME",
+      "bytes": "83 8F 8D 85"
+    },
+    {
+      "rom_offset": 24797,
+      "prg_offset": 24781,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "BUNZO",
+      "bytes": "FF 82 95 8E 9A 8F"
+    },
+    {
+      "rom_offset": 24805,
+      "prg_offset": 24789,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLEASE",
+      "bytes": "90 8C 85 81 93 85"
+    },
+    {
+      "rom_offset": 24812,
+      "prg_offset": 24796,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HURRY",
+      "bytes": "88 95 92 92 99"
+    },
+    {
+      "rom_offset": 24824,
+      "prg_offset": 24808,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GIVE",
+      "bytes": "87 89 96 85"
+    },
+    {
+      "rom_offset": 24844,
+      "prg_offset": 24828,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GOOD",
+      "bytes": "87 8F 8F 84"
+    },
+    {
+      "rom_offset": 24852,
+      "prg_offset": 24836,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "LEARNED",
+      "bytes": "8C 85 81 92 8E 85 84"
+    },
+    {
+      "rom_offset": 24862,
+      "prg_offset": 24846,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "TECHNIQUE",
+      "bytes": "94 85 83 88 8E 89 91 95 85"
+    },
+    {
+      "rom_offset": 24886,
+      "prg_offset": 24870,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SEEN",
+      "bytes": "93 85 85 8E"
+    },
+    {
+      "rom_offset": 24891,
+      "prg_offset": 24875,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "NOTHIN",
+      "bytes": "8E 8F 94 88 89 8E"
+    },
+    {
+      "rom_offset": 24913,
+      "prg_offset": 24897,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LEMME",
+      "bytes": "8C 85 8D 8D 85"
+    },
+    {
+      "rom_offset": 24919,
+      "prg_offset": 24903,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 24932,
+      "prg_offset": 24916,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "THANKS",
+      "bytes": "94 88 81 8E 8B 93"
+    },
+    {
+      "rom_offset": 24945,
+      "prg_offset": 24929,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ICHI",
+      "bytes": "FF 89 83 88 89"
+    },
+    {
+      "rom_offset": 24964,
+      "prg_offset": 24948,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GUYS",
+      "bytes": "87 95 99 93"
+    },
+    {
+      "rom_offset": 24970,
+      "prg_offset": 24954,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "ANYWAY",
+      "bytes": "81 8E 99 97 81 99"
+    },
+    {
+      "rom_offset": 24977,
+      "prg_offset": 24961,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ROKU",
+      "bytes": "FF 92 8F 8B 95"
+    },
+    {
+      "rom_offset": 24992,
+      "prg_offset": 24976,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ROKU",
+      "bytes": "FF 92 8F 8B 95"
+    },
+    {
+      "rom_offset": 24999,
+      "prg_offset": 24983,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AARGH",
+      "bytes": "81 81 92 87 88"
+    },
+    {
+      "rom_offset": 25008,
+      "prg_offset": 24992,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LOST",
+      "bytes": "8C 8F 93 94"
+    },
+    {
+      "rom_offset": 25045,
+      "prg_offset": 25029,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HURT",
+      "bytes": "88 95 92 94"
+    },
+    {
+      "rom_offset": 25050,
+      "prg_offset": 25034,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WOMEN",
+      "bytes": "97 8F 8D 85 8E"
+    },
+    {
+      "rom_offset": 25060,
+      "prg_offset": 25044,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WHAT",
+      "bytes": "97 88 81 94"
+    },
+    {
+      "rom_offset": 25068,
+      "prg_offset": 25052,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEAT",
+      "bytes": "82 85 81 94"
+    },
+    {
+      "rom_offset": 25073,
+      "prg_offset": 25057,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "THEM",
+      "bytes": "94 88 85 8D"
+    },
+    {
+      "rom_offset": 25082,
+      "prg_offset": 25066,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 25087,
+      "prg_offset": 25071,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 25092,
+      "prg_offset": 25076,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "JINRO",
+      "bytes": "8A 89 8E 92 8F"
+    },
+    {
+      "rom_offset": 25098,
+      "prg_offset": 25082,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SENT",
+      "bytes": "93 85 8E 94"
+    },
+    {
+      "rom_offset": 25109,
+      "prg_offset": 25093,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 25114,
+      "prg_offset": 25098,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 25119,
+      "prg_offset": 25103,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "BUTTS",
+      "bytes": "82 95 94 94 93"
+    },
+    {
+      "rom_offset": 25133,
+      "prg_offset": 25117,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GONNA",
+      "bytes": "87 8F 8E 8E 81"
+    },
+    {
+      "rom_offset": 25139,
+      "prg_offset": 25123,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 25144,
+      "prg_offset": 25128,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 25149,
+      "prg_offset": 25133,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ASSES",
+      "bytes": "81 93 93 85 93"
+    },
+    {
+      "rom_offset": 25170,
+      "prg_offset": 25154,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "CHINA",
+      "bytes": "83 88 89 8E 81"
+    },
+    {
+      "rom_offset": 25180,
+      "prg_offset": 25164,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "JINRO",
+      "bytes": "8A 89 8E 92 8F"
+    },
+    {
+      "rom_offset": 25186,
+      "prg_offset": 25170,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 25217,
+      "prg_offset": 25201,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 25222,
+      "prg_offset": 25206,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 25236,
+      "prg_offset": 25220,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHOW",
+      "bytes": "93 88 8F 97"
+    },
+    {
+      "rom_offset": 25241,
+      "prg_offset": 25225,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THESE",
+      "bytes": "94 88 85 93 85"
+    },
+    {
+      "rom_offset": 25247,
+      "prg_offset": 25231,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "LOSERS",
+      "bytes": "8C 8F 93 85 92 93"
+    },
+    {
+      "rom_offset": 25256,
+      "prg_offset": 25240,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THING",
+      "bytes": "94 88 89 8E 87"
+    },
+    {
+      "rom_offset": 25273,
+      "prg_offset": 25257,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JEEZ",
+      "bytes": "8A 85 85 9A"
+    },
+    {
+      "rom_offset": 25286,
+      "prg_offset": 25270,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TOUGH",
+      "bytes": "94 8F 95 87 88"
+    },
+    {
+      "rom_offset": 25297,
+      "prg_offset": 25281,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HEISI",
+      "bytes": "88 85 89 93 89"
+    },
+    {
+      "rom_offset": 25303,
+      "prg_offset": 25287,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 25308,
+      "prg_offset": 25292,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CRUSH",
+      "bytes": "83 92 95 93 88"
+    },
+    {
+      "rom_offset": 25323,
+      "prg_offset": 25307,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NYAH",
+      "bytes": "8E 99 81 88"
+    },
+    {
+      "rom_offset": 25329,
+      "prg_offset": 25313,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LATER",
+      "bytes": "8C 81 94 85 92"
+    },
+    {
+      "rom_offset": 25351,
+      "prg_offset": 25335,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THOSE",
+      "bytes": "94 88 8F 93 85"
+    },
+    {
+      "rom_offset": 25365,
+      "prg_offset": 25349,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ASSES",
+      "bytes": "81 93 93 85 93"
+    },
+    {
+      "rom_offset": 25379,
+      "prg_offset": 25363,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "KINSU",
+      "bytes": "8B 89 8E 93 95"
+    },
+    {
+      "rom_offset": 25392,
+      "prg_offset": 25376,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "BOOGIE",
+      "bytes": "82 8F 8F 87 89 85"
+    },
+    {
+      "rom_offset": 25403,
+      "prg_offset": 25387,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DAMN",
+      "bytes": "84 81 8D 8E"
+    },
+    {
+      "rom_offset": 25431,
+      "prg_offset": 25415,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WRONG",
+      "bytes": "97 92 8F 8E 87"
+    },
+    {
+      "rom_offset": 25437,
+      "prg_offset": 25421,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SIDE",
+      "bytes": "93 89 84 85"
+    },
+    {
+      "rom_offset": 25450,
+      "prg_offset": 25434,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GONNA",
+      "bytes": "87 8F 8E 8E 81"
+    },
+    {
+      "rom_offset": 25456,
+      "prg_offset": 25440,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TELL",
+      "bytes": "94 85 8C 8C"
+    },
+    {
+      "rom_offset": 25464,
+      "prg_offset": 25448,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BROTHER",
+      "bytes": "82 92 8F 94 88 85 92"
+    },
+    {
+      "rom_offset": 25473,
+      "prg_offset": 25457,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HEISI",
+      "bytes": "88 85 89 93 89"
+    },
+    {
+      "rom_offset": 25483,
+      "prg_offset": 25467,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CATCH",
+      "bytes": "83 81 94 83 88"
+    },
+    {
+      "rom_offset": 25516,
+      "prg_offset": 25500,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HEISI",
+      "bytes": "88 85 89 93 89"
+    },
+    {
+      "rom_offset": 25526,
+      "prg_offset": 25510,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GAWD",
+      "bytes": "87 81 97 84"
+    },
+    {
+      "rom_offset": 25539,
+      "prg_offset": 25523,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TOUGH",
+      "bytes": "94 8F 95 87 88"
+    },
+    {
+      "rom_offset": 25549,
+      "prg_offset": 25533,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 25554,
+      "prg_offset": 25538,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 25559,
+      "prg_offset": 25543,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "JINRO",
+      "bytes": "8A 89 8E 92 8F"
+    },
+    {
+      "rom_offset": 25565,
+      "prg_offset": 25549,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 25590,
+      "prg_offset": 25574,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "RUN",
+      "bytes": "92 95 8E FF"
+    },
+    {
+      "rom_offset": 25597,
+      "prg_offset": 25581,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "FIGHT",
+      "bytes": "86 89 87 88 94"
+    },
+    {
+      "rom_offset": 25618,
+      "prg_offset": 25602,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WORK",
+      "bytes": "97 8F 92 8B"
+    },
+    {
+      "rom_offset": 25633,
+      "prg_offset": 25617,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "THOUGHT",
+      "bytes": "94 88 8F 95 87 88 94"
+    },
+    {
+      "rom_offset": 25645,
+      "prg_offset": 25629,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SERVED",
+      "bytes": "93 85 92 96 85 84"
+    },
+    {
+      "rom_offset": 25652,
+      "prg_offset": 25636,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 25661,
+      "prg_offset": 25645,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SORRY",
+      "bytes": "93 8F 92 92 99"
+    },
+    {
+      "rom_offset": 25677,
+      "prg_offset": 25661,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GIMME",
+      "bytes": "87 89 8D 8D 85"
+    },
+    {
+      "rom_offset": 25685,
+      "prg_offset": 25669,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "BREAK",
+      "bytes": "82 92 85 81 8B"
+    },
+    {
+      "rom_offset": 25695,
+      "prg_offset": 25679,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TAKE",
+      "bytes": "94 81 8B 85"
+    },
+    {
+      "rom_offset": 25703,
+      "prg_offset": 25687,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WITH",
+      "bytes": "97 89 94 88"
+    },
+    {
+      "rom_offset": 25716,
+      "prg_offset": 25700,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "PHEW",
+      "bytes": "90 88 85 97"
+    },
+    {
+      "rom_offset": 25726,
+      "prg_offset": 25710,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NEED",
+      "bytes": "8E 85 85 84"
+    },
+    {
+      "rom_offset": 25733,
+      "prg_offset": 25717,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BATH",
+      "bytes": "82 81 94 88"
+    },
+    {
+      "rom_offset": 25759,
+      "prg_offset": 25743,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HERE",
+      "bytes": "88 85 92 85"
+    },
+    {
+      "rom_offset": 25768,
+      "prg_offset": 25752,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TAKE",
+      "bytes": "94 81 8B 85"
+    },
+    {
+      "rom_offset": 25773,
+      "prg_offset": 25757,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 25778,
+      "prg_offset": 25762,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KANPOU",
+      "bytes": "8B 81 8E 90 8F 95"
+    },
+    {
+      "rom_offset": 25799,
+      "prg_offset": 25783,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "CURE",
+      "bytes": "83 95 92 85"
+    },
+    {
+      "rom_offset": 25815,
+      "prg_offset": 25799,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 25822,
+      "prg_offset": 25806,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HOLY",
+      "bytes": "88 8F 8C 99"
+    },
+    {
+      "rom_offset": 25827,
+      "prg_offset": 25811,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "GUARD",
+      "bytes": "87 95 81 92 84"
+    },
+    {
+      "rom_offset": 25834,
+      "prg_offset": 25818,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "PREPARE",
+      "bytes": "90 92 85 90 81 92 85"
+    },
+    {
+      "rom_offset": 25846,
+      "prg_offset": 25830,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "HEAVEN",
+      "bytes": "88 85 81 96 85 8E"
+    },
+    {
+      "rom_offset": 25855,
+      "prg_offset": 25839,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WRATH",
+      "bytes": "97 92 81 94 88"
+    },
+    {
+      "rom_offset": 25872,
+      "prg_offset": 25856,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "WHAT",
+      "bytes": "97 88 81 94"
+    },
+    {
+      "rom_offset": 25881,
+      "prg_offset": 25865,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "LOUSY",
+      "bytes": "8C 8F 95 93 99"
+    },
+    {
+      "rom_offset": 25887,
+      "prg_offset": 25871,
+      "prg_bank": 1,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "FOREIGNERS",
+      "bytes": "86 8F 92 85 89 87 8E 85 92 93"
+    },
+    {
+      "rom_offset": 25899,
+      "prg_offset": 25883,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 25912,
+      "prg_offset": 25896,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SUCKS",
+      "bytes": "93 95 83 8B 93"
+    },
+    {
+      "rom_offset": 25927,
+      "prg_offset": 25911,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GIMME",
+      "bytes": "87 89 8D 8D 85"
+    },
+    {
+      "rom_offset": 25935,
+      "prg_offset": 25919,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "BREAK",
+      "bytes": "82 92 85 81 8B"
+    },
+    {
+      "rom_offset": 25946,
+      "prg_offset": 25930,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BYGONES",
+      "bytes": "82 99 87 8F 8E 85 93"
+    },
+    {
+      "rom_offset": 25957,
+      "prg_offset": 25941,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BYGONES",
+      "bytes": "82 99 87 8F 8E 85 93"
+    },
+    {
+      "rom_offset": 25969,
+      "prg_offset": 25953,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LATER",
+      "bytes": "8C 81 94 85 92"
+    },
+    {
+      "rom_offset": 25984,
+      "prg_offset": 25968,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "HEEHEE",
+      "bytes": "88 85 85 88 85 85"
+    },
+    {
+      "rom_offset": 25996,
+      "prg_offset": 25980,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "NOTHING",
+      "bytes": "8E 8F 94 88 89 8E 87"
+    },
+    {
+      "rom_offset": 26004,
+      "prg_offset": 25988,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "PERSONAL",
+      "bytes": "90 85 92 93 8F 8E 81 8C"
+    },
+    {
+      "rom_offset": 26014,
+      "prg_offset": 25998,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SORRY",
+      "bytes": "93 8F 92 92 99"
+    },
+    {
+      "rom_offset": 26028,
+      "prg_offset": 26012,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WORK",
+      "bytes": "97 8F 92 8B"
+    },
+    {
+      "rom_offset": 26041,
+      "prg_offset": 26025,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WELL",
+      "bytes": "97 85 8C 8C"
+    },
+    {
+      "rom_offset": 26049,
+      "prg_offset": 26033,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAVE",
+      "bytes": "88 81 96 85"
+    },
+    {
+      "rom_offset": 26054,
+      "prg_offset": 26038,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SOME",
+      "bytes": "93 8F 8D 85"
+    },
+    {
+      "rom_offset": 26059,
+      "prg_offset": 26043,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NEWS",
+      "bytes": "8E 85 97 93"
+    },
+    {
+      "rom_offset": 26068,
+      "prg_offset": 26052,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 26073,
+      "prg_offset": 26057,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TOOK",
+      "bytes": "94 8F 8F 8B"
+    },
+    {
+      "rom_offset": 26082,
+      "prg_offset": 26066,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GIRL",
+      "bytes": "87 89 92 8C"
+    },
+    {
+      "rom_offset": 26102,
+      "prg_offset": 26086,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WITH",
+      "bytes": "97 89 94 88"
+    },
+    {
+      "rom_offset": 26116,
+      "prg_offset": 26100,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "INSTEAD",
+      "bytes": "89 8E 93 94 85 81 84"
+    },
+    {
+      "rom_offset": 26132,
+      "prg_offset": 26116,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TEACH",
+      "bytes": "94 85 81 83 88"
+    },
+    {
+      "rom_offset": 26138,
+      "prg_offset": 26122,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOU",
+      "bytes": "99 8F 95 FF"
+    },
+    {
+      "rom_offset": 26148,
+      "prg_offset": 26132,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "FAMOUS",
+      "bytes": "86 81 8D 8F 95 93"
+    },
+    {
+      "rom_offset": 26155,
+      "prg_offset": 26139,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "DAGGER",
+      "bytes": "84 81 87 87 85 92"
+    },
+    {
+      "rom_offset": 26162,
+      "prg_offset": 26146,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ATTACK",
+      "bytes": "81 94 94 81 83 8B"
+    },
+    {
+      "rom_offset": 26173,
+      "prg_offset": 26157,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CATCH",
+      "bytes": "83 81 94 83 88"
+    },
+    {
+      "rom_offset": 26182,
+      "prg_offset": 26166,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LATER",
+      "bytes": "8C 81 94 85 92"
+    },
+    {
+      "rom_offset": 26192,
+      "prg_offset": 26176,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "LOOKING",
+      "bytes": "8C 8F 8F 8B 89 8E 87"
+    },
+    {
+      "rom_offset": 26204,
+      "prg_offset": 26188,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 26213,
+      "prg_offset": 26197,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "CAREFUL",
+      "bytes": "83 81 92 85 86 95 8C"
+    },
+    {
+      "rom_offset": 26225,
+      "prg_offset": 26209,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 26230,
+      "prg_offset": 26214,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "WOULDN",
+      "bytes": "97 8F 95 8C 84 8E"
+    },
+    {
+      "rom_offset": 26239,
+      "prg_offset": 26223,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KIDNAP",
+      "bytes": "8B 89 84 8E 81 90"
+    },
+    {
+      "rom_offset": 26248,
+      "prg_offset": 26232,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GIRL",
+      "bytes": "87 89 92 8C"
+    },
+    {
+      "rom_offset": 26254,
+      "prg_offset": 26238,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WOULD",
+      "bytes": "97 8F 95 8C 84"
+    },
+    {
+      "rom_offset": 26271,
+      "prg_offset": 26255,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "TELLING",
+      "bytes": "94 85 8C 8C 89 8E 87"
+    },
+    {
+      "rom_offset": 26293,
+      "prg_offset": 26277,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "GRABBED",
+      "bytes": "87 92 81 82 82 85 84"
+    },
+    {
+      "rom_offset": 26309,
+      "prg_offset": 26293,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THEY",
+      "bytes": "94 88 85 99"
+    },
+    {
+      "rom_offset": 26317,
+      "prg_offset": 26301,
+      "prg_bank": 1,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "DANGEROUS",
+      "bytes": "84 81 8E 87 85 92 8F 95 93 FF"
+    },
+    {
+      "rom_offset": 26342,
+      "prg_offset": 26326,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HEARD",
+      "bytes": "88 85 81 92 84"
+    },
+    {
+      "rom_offset": 26355,
+      "prg_offset": 26339,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PRETTY",
+      "bytes": "90 92 85 94 94 99"
+    },
+    {
+      "rom_offset": 26362,
+      "prg_offset": 26346,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TOUGH",
+      "bytes": "94 8F 95 87 88"
+    },
+    {
+      "rom_offset": 26372,
+      "prg_offset": 26356,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLEASE",
+      "bytes": "90 8C 85 81 93 85"
+    },
+    {
+      "rom_offset": 26391,
+      "prg_offset": 26375,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BACK",
+      "bytes": "82 81 83 8B"
+    },
+    {
+      "rom_offset": 26401,
+      "prg_offset": 26385,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YEAH",
+      "bytes": "99 85 81 88"
+    },
+    {
+      "rom_offset": 26410,
+      "prg_offset": 26394,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "GRABBED",
+      "bytes": "87 92 81 82 82 85 84"
+    },
+    {
+      "rom_offset": 26422,
+      "prg_offset": 26406,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GIRL",
+      "bytes": "87 89 92 8C"
+    },
+    {
+      "rom_offset": 26435,
+      "prg_offset": 26419,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GREAT",
+      "bytes": "87 92 85 81 94"
+    },
+    {
+      "rom_offset": 26441,
+      "prg_offset": 26425,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ONE",
+      "bytes": "8F 8E 85 FF"
+    },
+    {
+      "rom_offset": 26448,
+      "prg_offset": 26432,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "GOTTA",
+      "bytes": "87 8F 94 94 81"
+    },
+    {
+      "rom_offset": 26454,
+      "prg_offset": 26438,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEAT",
+      "bytes": "82 85 81 94"
+    },
+    {
+      "rom_offset": 26468,
+      "prg_offset": 26452,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WANT",
+      "bytes": "97 81 8E 94"
+    },
+    {
+      "rom_offset": 26477,
+      "prg_offset": 26461,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BACK",
+      "bytes": "82 81 83 8B"
+    },
+    {
+      "rom_offset": 26486,
+      "prg_offset": 26470,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THAT",
+      "bytes": "94 88 81 94"
+    },
+    {
+      "rom_offset": 26491,
+      "prg_offset": 26475,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOZO",
+      "bytes": "82 8F 9A 8F"
+    },
+    {
+      "rom_offset": 26500,
+      "prg_offset": 26484,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "AWAY",
+      "bytes": "81 97 81 99"
+    },
+    {
+      "rom_offset": 26506,
+      "prg_offset": 26490,
+      "prg_bank": 1,
+      "length": 12,
+      "changed_ratio": 1.0,
+      "text": "UNBELIEVABLE",
+      "bytes": "95 8E 82 85 8C 89 85 96 81 82 8C 85"
+    },
+    {
+      "rom_offset": 26523,
+      "prg_offset": 26507,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "FINISH",
+      "bytes": "86 89 8E 89 93 88"
+    },
+    {
+      "rom_offset": 26534,
+      "prg_offset": 26518,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "DAMN",
+      "bytes": "84 81 8D 8E"
+    },
+    {
+      "rom_offset": 26554,
+      "prg_offset": 26538,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "REGRET",
+      "bytes": "92 85 87 92 85 94"
+    },
+    {
+      "rom_offset": 26561,
+      "prg_offset": 26545,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "LETTING",
+      "bytes": "8C 85 94 94 89 8E 87"
+    },
+    {
+      "rom_offset": 26593,
+      "prg_offset": 26577,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ARMY",
+      "bytes": "81 92 8D 99"
+    },
+    {
+      "rom_offset": 26598,
+      "prg_offset": 26582,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 26603,
+      "prg_offset": 26587,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "STOP",
+      "bytes": "93 94 8F 90"
+    },
+    {
+      "rom_offset": 26619,
+      "prg_offset": 26603,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WHILE",
+      "bytes": "97 88 89 8C 85"
+    },
+    {
+      "rom_offset": 26641,
+      "prg_offset": 26625,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AGAIN",
+      "bytes": "81 87 81 89 8E"
+    },
+    {
+      "rom_offset": 26647,
+      "prg_offset": 26631,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DAMN",
+      "bytes": "84 81 8D 8E"
+    },
+    {
+      "rom_offset": 26669,
+      "prg_offset": 26653,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JOKE",
+      "bytes": "8A 8F 8B 85"
+    },
+    {
+      "rom_offset": 26689,
+      "prg_offset": 26673,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 26694,
+      "prg_offset": 26678,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 26702,
+      "prg_offset": 26686,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "BEHIND",
+      "bytes": "82 85 88 89 8E 84"
+    },
+    {
+      "rom_offset": 26709,
+      "prg_offset": 26693,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 26721,
+      "prg_offset": 26705,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "CAREFUL",
+      "bytes": "83 81 92 85 86 95 8C"
+    },
+    {
+      "rom_offset": 26730,
+      "prg_offset": 26714,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 26735,
+      "prg_offset": 26719,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HIRED",
+      "bytes": "88 89 92 85 84"
+    },
+    {
+      "rom_offset": 26741,
+      "prg_offset": 26725,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SOME",
+      "bytes": "93 8F 8D 85"
+    },
+    {
+      "rom_offset": 26746,
+      "prg_offset": 26730,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GOON",
+      "bytes": "87 8F 8F 8E"
+    },
+    {
+      "rom_offset": 26751,
+      "prg_offset": 26735,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "CALLED",
+      "bytes": "83 81 8C 8C 85 84"
+    },
+    {
+      "rom_offset": 26758,
+      "prg_offset": 26742,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "ASAJI",
+      "bytes": "81 93 81 8A 89 FF"
+    },
+    {
+      "rom_offset": 26767,
+      "prg_offset": 26751,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 26772,
+      "prg_offset": 26756,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 26777,
+      "prg_offset": 26761,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAYS",
+      "bytes": "93 81 99 93"
+    },
+    {
+      "rom_offset": 26782,
+      "prg_offset": 26766,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "THANKS",
+      "bytes": "94 88 81 8E 8B 93"
+    },
+    {
+      "rom_offset": 26796,
+      "prg_offset": 26780,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MUST",
+      "bytes": "8D 95 93 94"
+    },
+    {
+      "rom_offset": 26801,
+      "prg_offset": 26785,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIND",
+      "bytes": "86 89 8E 84"
+    },
+    {
+      "rom_offset": 26815,
+      "prg_offset": 26799,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 26821,
+      "prg_offset": 26805,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "REALLY",
+      "bytes": "92 85 81 8C 8C 99"
+    },
+    {
+      "rom_offset": 26828,
+      "prg_offset": 26812,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WORKS",
+      "bytes": "97 8F 92 8B 93"
+    },
+    {
+      "rom_offset": 26850,
+      "prg_offset": 26834,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 26855,
+      "prg_offset": 26839,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 26877,
+      "prg_offset": 26861,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "STRONG",
+      "bytes": "93 94 92 8F 8E 87"
+    },
+    {
+      "rom_offset": 26888,
+      "prg_offset": 26872,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "FORGIVE",
+      "bytes": "86 8F 92 87 89 96 85"
+    },
+    {
+      "rom_offset": 26915,
+      "prg_offset": 26899,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BROTHER",
+      "bytes": "82 92 8F 94 88 85 92"
+    },
+    {
+      "rom_offset": 26943,
+      "prg_offset": 26927,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "LIKE",
+      "bytes": "8C 89 8B 85"
+    },
+    {
+      "rom_offset": 26951,
+      "prg_offset": 26935,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "INGENIOUS",
+      "bytes": "89 8E 87 85 8E 89 8F 95 93"
+    },
+    {
+      "rom_offset": 26961,
+      "prg_offset": 26945,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MASTER",
+      "bytes": "8D 81 93 94 85 92"
+    },
+    {
+      "rom_offset": 26968,
+      "prg_offset": 26952,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "PLAN",
+      "bytes": "90 8C 81 8E"
+    },
+    {
+      "rom_offset": 26984,
+      "prg_offset": 26968,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NEED",
+      "bytes": "8E 85 85 84"
+    },
+    {
+      "rom_offset": 26998,
+      "prg_offset": 26982,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "ELIMINATE",
+      "bytes": "85 8C 89 8D 89 8E 81 94 85"
+    },
+    {
+      "rom_offset": 27015,
+      "prg_offset": 26999,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WATCH",
+      "bytes": "97 81 94 83 88"
+    },
+    {
+      "rom_offset": 27021,
+      "prg_offset": 27005,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 27026,
+      "prg_offset": 27010,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "BACKS",
+      "bytes": "82 81 83 8B 93"
+    },
+    {
+      "rom_offset": 27033,
+      "prg_offset": 27017,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "HEEHEE",
+      "bytes": "88 85 85 88 85 85"
+    },
+    {
+      "rom_offset": 27040,
+      "prg_offset": 27024,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "FF 94 8F 92 81"
+    },
+    {
+      "rom_offset": 27055,
+      "prg_offset": 27039,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "BELIEVE",
+      "bytes": "82 85 8C 89 85 96 85"
+    },
+    {
+      "rom_offset": 27067,
+      "prg_offset": 27051,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "IDIOTS",
+      "bytes": "89 84 89 8F 94 93"
+    },
+    {
+      "rom_offset": 27078,
+      "prg_offset": 27062,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27087,
+      "prg_offset": 27071,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 27107,
+      "prg_offset": 27091,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "BECOMING",
+      "bytes": "82 85 83 8F 8D 89 8E 87"
+    },
+    {
+      "rom_offset": 27118,
+      "prg_offset": 27102,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "NUISANCE",
+      "bytes": "8E 95 89 93 81 8E 83 85"
+    },
+    {
+      "rom_offset": 27127,
+      "prg_offset": 27111,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 27135,
+      "prg_offset": 27119,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WHAT",
+      "bytes": "97 88 81 94"
+    },
+    {
+      "rom_offset": 27147,
+      "prg_offset": 27131,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WANT",
+      "bytes": "97 81 8E 94"
+    },
+    {
+      "rom_offset": 27152,
+      "prg_offset": 27136,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DONE",
+      "bytes": "84 8F 8E 85"
+    },
+    {
+      "rom_offset": 27157,
+      "prg_offset": 27141,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WITH",
+      "bytes": "97 89 94 88"
+    },
+    {
+      "rom_offset": 27162,
+      "prg_offset": 27146,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THEM",
+      "bytes": "94 88 85 8D"
+    },
+    {
+      "rom_offset": 27167,
+      "prg_offset": 27151,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "FF 94 8F 92 81"
+    },
+    {
+      "rom_offset": 27179,
+      "prg_offset": 27163,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TAKE",
+      "bytes": "94 81 8B 85"
+    },
+    {
+      "rom_offset": 27184,
+      "prg_offset": 27168,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "CARE",
+      "bytes": "83 81 92 85"
+    },
+    {
+      "rom_offset": 27192,
+      "prg_offset": 27176,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THEM",
+      "bytes": "94 88 85 8D"
+    },
+    {
+      "rom_offset": 27197,
+      "prg_offset": 27181,
+      "prg_bank": 1,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "PERSONALLY",
+      "bytes": "90 85 92 93 8F 8E 81 8C 8C 99"
+    },
+    {
+      "rom_offset": 27212,
+      "prg_offset": 27196,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GAWD",
+      "bytes": "87 81 97 84"
+    },
+    {
+      "rom_offset": 27222,
+      "prg_offset": 27206,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GUYS",
+      "bytes": "87 95 99 93"
+    },
+    {
+      "rom_offset": 27246,
+      "prg_offset": 27230,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "BALLS",
+      "bytes": "82 81 8C 8C 93"
+    },
+    {
+      "rom_offset": 27263,
+      "prg_offset": 27247,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "STILL",
+      "bytes": "93 94 89 8C 8C"
+    },
+    {
+      "rom_offset": 27269,
+      "prg_offset": 27253,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ALIVE",
+      "bytes": "81 8C 89 96 85"
+    },
+    {
+      "rom_offset": 27275,
+      "prg_offset": 27259,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 27287,
+      "prg_offset": 27271,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SORRY",
+      "bytes": "93 8F 92 92 99"
+    },
+    {
+      "rom_offset": 27293,
+      "prg_offset": 27277,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "PIECE",
+      "bytes": "90 89 85 83 85"
+    },
+    {
+      "rom_offset": 27302,
+      "prg_offset": 27286,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHIT",
+      "bytes": "93 88 89 94"
+    },
+    {
+      "rom_offset": 27318,
+      "prg_offset": 27302,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MEET",
+      "bytes": "8D 85 85 94"
+    },
+    {
+      "rom_offset": 27323,
+      "prg_offset": 27307,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AGAIN",
+      "bytes": "81 87 81 89 8E"
+    },
+    {
+      "rom_offset": 27334,
+      "prg_offset": 27318,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEAT",
+      "bytes": "82 85 81 94"
+    },
+    {
+      "rom_offset": 27339,
+      "prg_offset": 27323,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 27353,
+      "prg_offset": 27337,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HERE",
+      "bytes": "88 85 92 85"
+    },
+    {
+      "rom_offset": 27359,
+      "prg_offset": 27343,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TAKE",
+      "bytes": "94 81 8B 85"
+    },
+    {
+      "rom_offset": 27364,
+      "prg_offset": 27348,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27369,
+      "prg_offset": 27353,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CHARM",
+      "bytes": "83 88 81 92 8D"
+    },
+    {
+      "rom_offset": 27387,
+      "prg_offset": 27371,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "SHITTING",
+      "bytes": "93 88 89 94 94 89 8E 87"
+    },
+    {
+      "rom_offset": 27403,
+      "prg_offset": 27387,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "MAYBE",
+      "bytes": "8D 81 99 82 85"
+    },
+    {
+      "rom_offset": 27417,
+      "prg_offset": 27401,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEAT",
+      "bytes": "82 85 81 94"
+    },
+    {
+      "rom_offset": 27434,
+      "prg_offset": 27418,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "FIGHT",
+      "bytes": "86 89 87 88 94"
+    },
+    {
+      "rom_offset": 27458,
+      "prg_offset": 27442,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "BALLS",
+      "bytes": "82 81 8C 8C 93"
+    },
+    {
+      "rom_offset": 27466,
+      "prg_offset": 27450,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "ASAJI",
+      "bytes": "81 93 81 8A 89 FF"
+    },
+    {
+      "rom_offset": 27475,
+      "prg_offset": 27459,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 27480,
+      "prg_offset": 27464,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 27485,
+      "prg_offset": 27469,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GAVE",
+      "bytes": "87 81 96 85"
+    },
+    {
+      "rom_offset": 27493,
+      "prg_offset": 27477,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27509,
+      "prg_offset": 27493,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 27514,
+      "prg_offset": 27498,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 27529,
+      "prg_offset": 27513,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SETTLE",
+      "bytes": "93 85 94 94 8C 85"
+    },
+    {
+      "rom_offset": 27536,
+      "prg_offset": 27520,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27541,
+      "prg_offset": 27525,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LATER",
+      "bytes": "8C 81 94 85 92"
+    },
+    {
+      "rom_offset": 27547,
+      "prg_offset": 27531,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 27564,
+      "prg_offset": 27548,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GONNA",
+      "bytes": "87 8F 8E 8E 81"
+    },
+    {
+      "rom_offset": 27570,
+      "prg_offset": 27554,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 27575,
+      "prg_offset": 27559,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 27593,
+      "prg_offset": 27577,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "FIRST",
+      "bytes": "86 89 92 93 94"
+    },
+    {
+      "rom_offset": 27607,
+      "prg_offset": 27591,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "CLUE",
+      "bytes": "83 8C 95 85"
+    },
+    {
+      "rom_offset": 27628,
+      "prg_offset": 27612,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WERE",
+      "bytes": "97 85 92 85"
+    },
+    {
+      "rom_offset": 27633,
+      "prg_offset": 27617,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JUST",
+      "bytes": "8A 95 93 94"
+    },
+    {
+      "rom_offset": 27640,
+      "prg_offset": 27624,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "PAWN",
+      "bytes": "90 81 97 8E"
+    },
+    {
+      "rom_offset": 27645,
+      "prg_offset": 27629,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 27657,
+      "prg_offset": 27641,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "PRAY",
+      "bytes": "90 92 81 99"
+    },
+    {
+      "rom_offset": 27662,
+      "prg_offset": 27646,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WHILE",
+      "bytes": "97 88 89 8C 85"
+    },
+    {
+      "rom_offset": 27684,
+      "prg_offset": 27668,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "STUPID",
+      "bytes": "93 94 95 90 89 84"
+    },
+    {
+      "rom_offset": 27691,
+      "prg_offset": 27675,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "BASTARDS",
+      "bytes": "82 81 93 94 81 92 84 93"
+    },
+    {
+      "rom_offset": 27714,
+      "prg_offset": 27698,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "MUSIC",
+      "bytes": "8D 95 93 89 83"
+    },
+    {
+      "rom_offset": 27723,
+      "prg_offset": 27707,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27728,
+      "prg_offset": 27712,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "VIDEO",
+      "bytes": "96 89 84 85 8F"
+    },
+    {
+      "rom_offset": 27734,
+      "prg_offset": 27718,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GAME",
+      "bytes": "87 81 8D 85"
+    },
+    {
+      "rom_offset": 27739,
+      "prg_offset": 27723,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GREAT",
+      "bytes": "87 92 85 81 94"
+    },
+    {
+      "rom_offset": 27750,
+      "prg_offset": 27734,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TAKE",
+      "bytes": "94 81 8B 85"
+    },
+    {
+      "rom_offset": 27755,
+      "prg_offset": 27739,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THAT",
+      "bytes": "94 88 81 94"
+    },
+    {
+      "rom_offset": 27778,
+      "prg_offset": 27762,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "REALLY",
+      "bytes": "92 85 81 8C 8C 99"
+    },
+    {
+      "rom_offset": 27785,
+      "prg_offset": 27769,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PISSED",
+      "bytes": "90 89 93 93 85 84"
+    },
+    {
+      "rom_offset": 27796,
+      "prg_offset": 27780,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AIYEE",
+      "bytes": "81 89 99 85 85"
+    },
+    {
+      "rom_offset": 27814,
+      "prg_offset": 27798,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DUM",
+      "bytes": "84 95 8D FF"
+    },
+    {
+      "rom_offset": 27825,
+      "prg_offset": 27809,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TWERP",
+      "bytes": "94 97 85 92 90"
+    },
+    {
+      "rom_offset": 27842,
+      "prg_offset": 27826,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TIME",
+      "bytes": "94 89 8D 85"
+    },
+    {
+      "rom_offset": 27851,
+      "prg_offset": 27835,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ROCK",
+      "bytes": "92 8F 83 8B"
+    },
+    {
+      "rom_offset": 27859,
+      "prg_offset": 27843,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "ROLL",
+      "bytes": "92 8F 8C 8C"
+    },
+    {
+      "rom_offset": 27868,
+      "prg_offset": 27852,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JEEZ",
+      "bytes": "8A 85 85 9A"
+    },
+    {
+      "rom_offset": 27874,
+      "prg_offset": 27858,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27879,
+      "prg_offset": 27863,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SUCKS",
+      "bytes": "93 95 83 8B 93"
+    },
+    {
+      "rom_offset": 27889,
+      "prg_offset": 27873,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "WHOOPS",
+      "bytes": "97 88 8F 8F 90 93"
+    },
+    {
+      "rom_offset": 27900,
+      "prg_offset": 27884,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WHAT",
+      "bytes": "97 88 81 94"
+    },
+    {
+      "rom_offset": 27918,
+      "prg_offset": 27902,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "LEMME",
+      "bytes": "8C 85 8D 8D 85"
+    },
+    {
+      "rom_offset": 27940,
+      "prg_offset": 27924,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "GONNA",
+      "bytes": "87 8F 8E 8E 81"
+    },
+    {
+      "rom_offset": 27946,
+      "prg_offset": 27930,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 27951,
+      "prg_offset": 27935,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 27967,
+      "prg_offset": 27951,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WIMP",
+      "bytes": "97 89 8D 90"
+    },
+    {
+      "rom_offset": 27980,
+      "prg_offset": 27964,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 27994,
+      "prg_offset": 27978,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "REMEMBER",
+      "bytes": "92 85 8D 85 8D 82 85 92"
+    },
+    {
+      "rom_offset": 28019,
+      "prg_offset": 28003,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ARGH",
+      "bytes": "81 92 87 88"
+    },
+    {
+      "rom_offset": 28028,
+      "prg_offset": 28012,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "DICKWEED",
+      "bytes": "84 89 83 8B 97 85 85 84"
+    },
+    {
+      "rom_offset": 28068,
+      "prg_offset": 28052,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "WELCOME",
+      "bytes": "FF 97 85 8C 83 8F 8D 85"
+    },
+    {
+      "rom_offset": 28077,
+      "prg_offset": 28061,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WHAT",
+      "bytes": "FF 97 88 81 94"
+    },
+    {
+      "rom_offset": 28083,
+      "prg_offset": 28067,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WOULD",
+      "bytes": "97 8F 95 8C 84"
+    },
+    {
+      "rom_offset": 28093,
+      "prg_offset": 28077,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LIKE",
+      "bytes": "8C 89 8B 85"
+    },
+    {
+      "rom_offset": 28098,
+      "prg_offset": 28082,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "FF 99 8F 95 92"
+    },
+    {
+      "rom_offset": 28104,
+      "prg_offset": 28088,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "INVENTORY",
+      "bytes": "89 8E 96 85 8E 94 8F 92 99"
+    },
+    {
+      "rom_offset": 28117,
+      "prg_offset": 28101,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FULL",
+      "bytes": "86 95 8C 8C"
+    },
+    {
+      "rom_offset": 28122,
+      "prg_offset": 28106,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOU",
+      "bytes": "FF 99 8F 95"
+    },
+    {
+      "rom_offset": 28133,
+      "prg_offset": 28117,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAVE",
+      "bytes": "88 81 96 85"
+    },
+    {
+      "rom_offset": 28138,
+      "prg_offset": 28122,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ENOUGH",
+      "bytes": "85 8E 8F 95 87 88"
+    },
+    {
+      "rom_offset": 28145,
+      "prg_offset": 28129,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "MONEY",
+      "bytes": "8D 8F 8E 85 99"
+    },
+    {
+      "rom_offset": 28151,
+      "prg_offset": 28135,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ARE",
+      "bytes": "FF 81 92 85"
+    },
+    {
+      "rom_offset": 28160,
+      "prg_offset": 28144,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SURE",
+      "bytes": "93 95 92 85"
+    },
+    {
+      "rom_offset": 28176,
+      "prg_offset": 28160,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DRANK",
+      "bytes": "84 92 81 8E 8B"
+    },
+    {
+      "rom_offset": 28194,
+      "prg_offset": 28178,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "EQUIPPED",
+      "bytes": "85 91 95 89 90 90 85 84"
+    },
+    {
+      "rom_offset": 28204,
+      "prg_offset": 28188,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 0.889,
+      "text": "ANYTHING",
+      "bytes": "FF 81 8E 99 94 88 89 8E 87"
+    },
+    {
+      "rom_offset": 28214,
+      "prg_offset": 28198,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ELSE",
+      "bytes": "85 8C 93 85"
+    },
+    {
+      "rom_offset": 28219,
+      "prg_offset": 28203,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "THANKS",
+      "bytes": "FF 94 88 81 8E 8B 93"
+    },
+    {
+      "rom_offset": 28228,
+      "prg_offset": 28212,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "COME",
+      "bytes": "83 8F 8D 85"
+    },
+    {
+      "rom_offset": 28233,
+      "prg_offset": 28217,
+      "prg_bank": 1,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "AGAIN WILL",
+      "bytes": "81 87 81 89 8E FF 97 89 8C 8C"
+    },
+    {
+      "rom_offset": 28248,
+      "prg_offset": 28232,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "STAY",
+      "bytes": "93 94 81 99"
+    },
+    {
+      "rom_offset": 28253,
+      "prg_offset": 28237,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "PLEASE",
+      "bytes": "FF 90 8C 85 81 93 85"
+    },
+    {
+      "rom_offset": 28261,
+      "prg_offset": 28245,
+      "prg_bank": 1,
+      "length": 12,
+      "changed_ratio": 1.0,
+      "text": "RELAX RESTED",
+      "bytes": "92 85 8C 81 98 FF 92 85 93 94 85 84"
+    },
+    {
+      "rom_offset": 28274,
+      "prg_offset": 28258,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "WANNA",
+      "bytes": "FF 97 81 8E 8E 81"
+    },
+    {
+      "rom_offset": 28281,
+      "prg_offset": 28265,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "GAMBLE",
+      "bytes": "87 81 8D 82 8C 85"
+    },
+    {
+      "rom_offset": 28288,
+      "prg_offset": 28272,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "READY",
+      "bytes": "FF 92 85 81 84 99"
+    },
+    {
+      "rom_offset": 28307,
+      "prg_offset": 28291,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAVE",
+      "bytes": "88 81 96 85"
+    },
+    {
+      "rom_offset": 28323,
+      "prg_offset": 28307,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOU",
+      "bytes": "FF 99 8F 95"
+    },
+    {
+      "rom_offset": 28332,
+      "prg_offset": 28316,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOU",
+      "bytes": "FF 99 8F 95"
+    },
+    {
+      "rom_offset": 28337,
+      "prg_offset": 28321,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LOST",
+      "bytes": "8C 8F 93 94"
+    },
+    {
+      "rom_offset": 28342,
+      "prg_offset": 28326,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "WELL",
+      "bytes": "FF 97 85 8C 8C"
+    },
+    {
+      "rom_offset": 28348,
+      "prg_offset": 28332,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SANKI",
+      "bytes": "FF 93 81 8E 8B 89"
+    },
+    {
+      "rom_offset": 28356,
+      "prg_offset": 28340,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "WELCOME",
+      "bytes": "97 85 8C 83 8F 8D 85"
+    },
+    {
+      "rom_offset": 28364,
+      "prg_offset": 28348,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BACK",
+      "bytes": "82 81 83 8B"
+    },
+    {
+      "rom_offset": 28373,
+      "prg_offset": 28357,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NEED",
+      "bytes": "8E 85 85 84"
+    },
+    {
+      "rom_offset": 28378,
+      "prg_offset": 28362,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "SOMETHING",
+      "bytes": "93 8F 8D 85 94 88 89 8E 87"
+    },
+    {
+      "rom_offset": 28395,
+      "prg_offset": 28379,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "CAREFUL",
+      "bytes": "83 81 92 85 86 95 8C"
+    },
+    {
+      "rom_offset": 28403,
+      "prg_offset": 28387,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "CHOOSE",
+      "bytes": "FF 83 88 8F 8F 93 85"
+    },
+    {
+      "rom_offset": 28411,
+      "prg_offset": 28395,
+      "prg_bank": 1,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "ALLY SANKI",
+      "bytes": "81 8C 8C 99 FF 93 81 8E 8B 89"
+    },
+    {
+      "rom_offset": 28426,
+      "prg_offset": 28410,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 28437,
+      "prg_offset": 28421,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SANKI",
+      "bytes": "FF 93 81 8E 8B 89"
+    },
+    {
+      "rom_offset": 28449,
+      "prg_offset": 28433,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GUYS",
+      "bytes": "87 95 99 93"
+    },
+    {
+      "rom_offset": 28454,
+      "prg_offset": 28438,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "STRUCK",
+      "bytes": "93 94 92 95 83 8B"
+    },
+    {
+      "rom_offset": 28461,
+      "prg_offset": 28445,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LIKE",
+      "bytes": "8C 89 8B 85"
+    },
+    {
+      "rom_offset": 28466,
+      "prg_offset": 28450,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 0.889,
+      "text": "LIGHTNING",
+      "bytes": "8C 89 87 88 94 8E 89 8E 87"
+    },
+    {
+      "rom_offset": 28476,
+      "prg_offset": 28460,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SANKI",
+      "bytes": "FF 93 81 8E 8B 89"
+    },
+    {
+      "rom_offset": 28490,
+      "prg_offset": 28474,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "HELPLESS",
+      "bytes": "88 85 8C 90 8C 85 93 93"
+    },
+    {
+      "rom_offset": 28499,
+      "prg_offset": 28483,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "SORRY",
+      "bytes": "93 8F 92 92 99 FF"
+    },
+    {
+      "rom_offset": 28508,
+      "prg_offset": 28492,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "IDIOTS",
+      "bytes": "89 84 89 8F 94 93"
+    },
+    {
+      "rom_offset": 28522,
+      "prg_offset": 28506,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIND",
+      "bytes": "86 89 8E 84"
+    },
+    {
+      "rom_offset": 28527,
+      "prg_offset": 28511,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THEM",
+      "bytes": "94 88 85 8D"
+    },
+    {
+      "rom_offset": 28539,
+      "prg_offset": 28523,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LAST",
+      "bytes": "8C 81 93 94"
+    },
+    {
+      "rom_offset": 28551,
+      "prg_offset": 28535,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "JOIN",
+      "bytes": "8A 8F 89 8E"
+    },
+    {
+      "rom_offset": 28564,
+      "prg_offset": 28548,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "AGAINST",
+      "bytes": "81 87 81 89 8E 93 94"
+    },
+    {
+      "rom_offset": 28572,
+      "prg_offset": 28556,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 28584,
+      "prg_offset": 28568,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 28589,
+      "prg_offset": 28573,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CHARM",
+      "bytes": "83 88 81 92 8D"
+    },
+    {
+      "rom_offset": 28595,
+      "prg_offset": 28579,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 28600,
+      "prg_offset": 28584,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "PROTECT",
+      "bytes": "90 92 8F 94 85 83 94"
+    },
+    {
+      "rom_offset": 28621,
+      "prg_offset": 28605,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WAIT",
+      "bytes": "97 81 89 94"
+    },
+    {
+      "rom_offset": 28626,
+      "prg_offset": 28610,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HERE",
+      "bytes": "88 85 92 85"
+    },
+    {
+      "rom_offset": 28635,
+      "prg_offset": 28619,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAVE",
+      "bytes": "93 81 96 85"
+    },
+    {
+      "rom_offset": 28640,
+      "prg_offset": 28624,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 28650,
+      "prg_offset": 28634,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YEAH",
+      "bytes": "99 85 81 88"
+    },
+    {
+      "rom_offset": 28655,
+      "prg_offset": 28639,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 28687,
+      "prg_offset": 28671,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "BETTER",
+      "bytes": "82 85 94 94 85 92"
+    },
+    {
+      "rom_offset": 28697,
+      "prg_offset": 28681,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CHECK",
+      "bytes": "83 88 85 83 8B"
+    },
+    {
+      "rom_offset": 28703,
+      "prg_offset": 28687,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WITH",
+      "bytes": "97 89 94 88"
+    },
+    {
+      "rom_offset": 28708,
+      "prg_offset": 28692,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEG",
+      "bytes": "82 85 85 87"
+    },
+    {
+      "rom_offset": 28713,
+      "prg_offset": 28697,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 28726,
+      "prg_offset": 28710,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KANPOU",
+      "bytes": "8B 81 8E 90 8F 95"
+    },
+    {
+      "rom_offset": 28733,
+      "prg_offset": 28717,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "WORKED",
+      "bytes": "97 8F 92 8B 85 84"
+    },
+    {
+      "rom_offset": 28745,
+      "prg_offset": 28729,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CURED",
+      "bytes": "83 95 92 85 84"
+    },
+    {
+      "rom_offset": 28774,
+      "prg_offset": 28758,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MUST",
+      "bytes": "8D 95 93 94"
+    },
+    {
+      "rom_offset": 28788,
+      "prg_offset": 28772,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MUST",
+      "bytes": "8D 95 93 94"
+    },
+    {
+      "rom_offset": 28793,
+      "prg_offset": 28777,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LEAVE",
+      "bytes": "8C 85 81 96 85"
+    },
+    {
+      "rom_offset": 28807,
+      "prg_offset": 28791,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THEY",
+      "bytes": "94 88 85 99"
+    },
+    {
+      "rom_offset": 28815,
+      "prg_offset": 28799,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BACK",
+      "bytes": "82 81 83 8B"
+    },
+    {
+      "rom_offset": 28823,
+      "prg_offset": 28807,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAVE",
+      "bytes": "88 81 96 85"
+    },
+    {
+      "rom_offset": 28828,
+      "prg_offset": 28812,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THEIR",
+      "bytes": "94 88 85 89 92"
+    },
+    {
+      "rom_offset": 28834,
+      "prg_offset": 28818,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ASSES",
+      "bytes": "81 93 93 85 93"
+    },
+    {
+      "rom_offset": 28840,
+      "prg_offset": 28824,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KICKED",
+      "bytes": "8B 89 83 8B 85 84"
+    },
+    {
+      "rom_offset": 28847,
+      "prg_offset": 28831,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AGAIN",
+      "bytes": "81 87 81 89 8E"
+    },
+    {
+      "rom_offset": 28853,
+      "prg_offset": 28837,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "STATUS",
+      "bytes": "FF 93 94 81 94 95 93"
+    },
+    {
+      "rom_offset": 28861,
+      "prg_offset": 28845,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "LEVELS",
+      "bytes": "8C 85 96 85 8C 93"
+    },
+    {
+      "rom_offset": 28875,
+      "prg_offset": 28859,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "DOUBLE",
+      "bytes": "84 8F 95 82 8C 85"
+    },
+    {
+      "rom_offset": 28882,
+      "prg_offset": 28866,
+      "prg_bank": 1,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "EQUIPMENT",
+      "bytes": "FF 85 91 95 89 90 8D 85 8E 94"
+    },
+    {
+      "rom_offset": 28893,
+      "prg_offset": 28877,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "STATS",
+      "bytes": "93 94 81 94 93"
+    },
+    {
+      "rom_offset": 28903,
+      "prg_offset": 28887,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "DOUBLE",
+      "bytes": "84 8F 95 82 8C 85"
+    },
+    {
+      "rom_offset": 28927,
+      "prg_offset": 28911,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "FIGHT",
+      "bytes": "86 89 87 88 94"
+    },
+    {
+      "rom_offset": 28942,
+      "prg_offset": 28926,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAVE",
+      "bytes": "88 81 96 85"
+    },
+    {
+      "rom_offset": 28947,
+      "prg_offset": 28931,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEEN",
+      "bytes": "82 85 85 8E"
+    },
+    {
+      "rom_offset": 28952,
+      "prg_offset": 28936,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "USED",
+      "bytes": "95 93 85 84"
+    },
+    {
+      "rom_offset": 28961,
+      "prg_offset": 28945,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 28966,
+      "prg_offset": 28950,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TIME",
+      "bytes": "94 89 8D 85"
+    },
+    {
+      "rom_offset": 28975,
+      "prg_offset": 28959,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLEASE",
+      "bytes": "90 8C 85 81 93 85"
+    },
+    {
+      "rom_offset": 29002,
+      "prg_offset": 28986,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "SOMEONE",
+      "bytes": "93 8F 8D 85 8F 8E 85"
+    },
+    {
+      "rom_offset": 29015,
+      "prg_offset": 28999,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 29027,
+      "prg_offset": 29011,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DOOR",
+      "bytes": "84 8F 8F 92"
+    },
+    {
+      "rom_offset": 29032,
+      "prg_offset": 29016,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29045,
+      "prg_offset": 29029,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "ASAJI",
+      "bytes": "81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 29051,
+      "prg_offset": 29035,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "KIDNAPPED",
+      "bytes": "8B 89 84 8E 81 90 90 85 84"
+    },
+    {
+      "rom_offset": 29071,
+      "prg_offset": 29055,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HOME",
+      "bytes": "88 8F 8D 85"
+    },
+    {
+      "rom_offset": 29077,
+      "prg_offset": 29061,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 0.875,
+      "text": "EVERYONE",
+      "bytes": "85 96 85 92 99 8F 8E 85"
+    },
+    {
+      "rom_offset": 29088,
+      "prg_offset": 29072,
+      "prg_bank": 1,
+      "length": 13,
+      "changed_ratio": 1.0,
+      "text": "WORRIED OKOTO",
+      "bytes": "97 8F 92 92 89 85 84 FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29108,
+      "prg_offset": 29092,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THANK",
+      "bytes": "94 88 81 8E 8B"
+    },
+    {
+      "rom_offset": 29119,
+      "prg_offset": 29103,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "PLEASE",
+      "bytes": "90 8C 85 81 93 85"
+    },
+    {
+      "rom_offset": 29129,
+      "prg_offset": 29113,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "CAREFUL",
+      "bytes": "83 81 92 85 86 95 8C"
+    },
+    {
+      "rom_offset": 29144,
+      "prg_offset": 29128,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 29154,
+      "prg_offset": 29138,
+      "prg_bank": 1,
+      "length": 11,
+      "changed_ratio": 1.0,
+      "text": "DISAPPEARED",
+      "bytes": "84 89 93 81 90 90 85 81 92 85 84"
+    },
+    {
+      "rom_offset": 29166,
+      "prg_offset": 29150,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TSUU",
+      "bytes": "FF 94 93 95 95"
+    },
+    {
+      "rom_offset": 29173,
+      "prg_offset": 29157,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BROTHER",
+      "bytes": "82 92 8F 94 88 85 92"
+    },
+    {
+      "rom_offset": 29182,
+      "prg_offset": 29166,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WAIT",
+      "bytes": "97 81 89 94"
+    },
+    {
+      "rom_offset": 29187,
+      "prg_offset": 29171,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "FF 8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29195,
+      "prg_offset": 29179,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HURRY",
+      "bytes": "88 95 92 92 99"
+    },
+    {
+      "rom_offset": 29202,
+      "prg_offset": 29186,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SLUG",
+      "bytes": "93 8C 95 87"
+    },
+    {
+      "rom_offset": 29212,
+      "prg_offset": 29196,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "BUNZO",
+      "bytes": "82 95 8E 9A 8F"
+    },
+    {
+      "rom_offset": 29223,
+      "prg_offset": 29207,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "TROUBLE",
+      "bytes": "94 92 8F 95 82 8C 85"
+    },
+    {
+      "rom_offset": 29231,
+      "prg_offset": 29215,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29239,
+      "prg_offset": 29223,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29245,
+      "prg_offset": 29229,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "FF 8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29255,
+      "prg_offset": 29239,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "TRIED",
+      "bytes": "94 92 89 85 84"
+    },
+    {
+      "rom_offset": 29264,
+      "prg_offset": 29248,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "HURRY",
+      "bytes": "88 95 92 92 99"
+    },
+    {
+      "rom_offset": 29270,
+      "prg_offset": 29254,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BACK",
+      "bytes": "82 81 83 8B"
+    },
+    {
+      "rom_offset": 29275,
+      "prg_offset": 29259,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29283,
+      "prg_offset": 29267,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 29295,
+      "prg_offset": 29279,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 29311,
+      "prg_offset": 29295,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29319,
+      "prg_offset": 29303,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "FIANCE",
+      "bytes": "86 89 81 8E 83 85"
+    },
+    {
+      "rom_offset": 29326,
+      "prg_offset": 29310,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "FF 8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29344,
+      "prg_offset": 29328,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ABOUT",
+      "bytes": "81 82 8F 95 94"
+    },
+    {
+      "rom_offset": 29350,
+      "prg_offset": 29334,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THAT",
+      "bytes": "94 88 81 94"
+    },
+    {
+      "rom_offset": 29355,
+      "prg_offset": 29339,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "ASAJI",
+      "bytes": "FF 81 93 81 8A 89"
+    },
+    {
+      "rom_offset": 29363,
+      "prg_offset": 29347,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SHUT",
+      "bytes": "93 88 95 94"
+    },
+    {
+      "rom_offset": 29372,
+      "prg_offset": 29356,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "LOSER",
+      "bytes": "8C 8F 93 85 92"
+    },
+    {
+      "rom_offset": 29383,
+      "prg_offset": 29367,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BOSS",
+      "bytes": "82 8F 93 93"
+    },
+    {
+      "rom_offset": 29391,
+      "prg_offset": 29375,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "WAITING",
+      "bytes": "97 81 89 94 89 8E 87"
+    },
+    {
+      "rom_offset": 29399,
+      "prg_offset": 29383,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "FF 8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29411,
+      "prg_offset": 29395,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MASTER",
+      "bytes": "8D 81 93 94 85 92"
+    },
+    {
+      "rom_offset": 29419,
+      "prg_offset": 29403,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "FORGIVE",
+      "bytes": "86 8F 92 87 89 96 85"
+    },
+    {
+      "rom_offset": 29430,
+      "prg_offset": 29414,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DELAY",
+      "bytes": "84 85 8C 81 99"
+    },
+    {
+      "rom_offset": 29436,
+      "prg_offset": 29420,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "BUNZO",
+      "bytes": "FF 82 95 8E 9A 8F"
+    },
+    {
+      "rom_offset": 29448,
+      "prg_offset": 29432,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29459,
+      "prg_offset": 29443,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "FINALLY",
+      "bytes": "86 89 8E 81 8C 8C 99"
+    },
+    {
+      "rom_offset": 29471,
+      "prg_offset": 29455,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HERE",
+      "bytes": "88 85 92 85"
+    },
+    {
+      "rom_offset": 29476,
+      "prg_offset": 29460,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "BUNZO",
+      "bytes": "FF 82 95 8E 9A 8F"
+    },
+    {
+      "rom_offset": 29484,
+      "prg_offset": 29468,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORA",
+      "bytes": "94 8F 92 81"
+    },
+    {
+      "rom_offset": 29493,
+      "prg_offset": 29477,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "CURSED",
+      "bytes": "83 95 92 93 85 84"
+    },
+    {
+      "rom_offset": 29503,
+      "prg_offset": 29487,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "BUNZO",
+      "bytes": "FF 82 95 8E 9A 8F"
+    },
+    {
+      "rom_offset": 29514,
+      "prg_offset": 29498,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIND",
+      "bytes": "86 89 8E 84"
+    },
+    {
+      "rom_offset": 29521,
+      "prg_offset": 29505,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "HEALER",
+      "bytes": "88 85 81 8C 85 92"
+    },
+    {
+      "rom_offset": 29528,
+      "prg_offset": 29512,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "BUNZO",
+      "bytes": "FF 82 95 8E 9A 8F"
+    },
+    {
+      "rom_offset": 29545,
+      "prg_offset": 29529,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KANPOU",
+      "bytes": "8B 81 8E 90 8F 95"
+    },
+    {
+      "rom_offset": 29552,
+      "prg_offset": 29536,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "FF 8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 29568,
+      "prg_offset": 29552,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "COUNT",
+      "bytes": "83 8F 95 8E 94"
+    },
+    {
+      "rom_offset": 29588,
+      "prg_offset": 29572,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SAVED",
+      "bytes": "93 81 96 85 84"
+    },
+    {
+      "rom_offset": 29624,
+      "prg_offset": 29608,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29638,
+      "prg_offset": 29622,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 29643,
+      "prg_offset": 29627,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MAKE",
+      "bytes": "8D 81 8B 85"
+    },
+    {
+      "rom_offset": 29650,
+      "prg_offset": 29634,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FINE",
+      "bytes": "86 89 8E 85"
+    },
+    {
+      "rom_offset": 29655,
+      "prg_offset": 29639,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "FAMILY",
+      "bytes": "86 81 8D 89 8C 99"
+    },
+    {
+      "rom_offset": 29666,
+      "prg_offset": 29650,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "RIGHT",
+      "bytes": "92 89 87 88 94"
+    },
+    {
+      "rom_offset": 29673,
+      "prg_offset": 29657,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29679,
+      "prg_offset": 29663,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29718,
+      "prg_offset": 29702,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GREAT",
+      "bytes": "87 92 85 81 94"
+    },
+    {
+      "rom_offset": 29727,
+      "prg_offset": 29711,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MOMENT",
+      "bytes": "8D 8F 8D 85 8E 94"
+    },
+    {
+      "rom_offset": 29737,
+      "prg_offset": 29721,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "ULTIMATE",
+      "bytes": "95 8C 94 89 8D 81 94 85"
+    },
+    {
+      "rom_offset": 29746,
+      "prg_offset": 29730,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 0.889,
+      "text": "HAPPINESS",
+      "bytes": "88 81 90 90 89 8E 85 93 93"
+    },
+    {
+      "rom_offset": 29765,
+      "prg_offset": 29749,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ORDER",
+      "bytes": "8F 92 84 85 92"
+    },
+    {
+      "rom_offset": 29771,
+      "prg_offset": 29755,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAKE",
+      "bytes": "93 81 8B 85"
+    },
+    {
+      "rom_offset": 29779,
+      "prg_offset": 29763,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "CELEBRATE",
+      "bytes": "83 85 8C 85 82 92 81 94 85"
+    },
+    {
+      "rom_offset": 29799,
+      "prg_offset": 29783,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "VAGABOND",
+      "bytes": "96 81 87 81 82 8F 8E 84"
+    },
+    {
+      "rom_offset": 29809,
+      "prg_offset": 29793,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "DRIFTING",
+      "bytes": "84 92 89 86 94 89 8E 87"
+    },
+    {
+      "rom_offset": 29818,
+      "prg_offset": 29802,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FROM",
+      "bytes": "86 92 8F 8D"
+    },
+    {
+      "rom_offset": 29823,
+      "prg_offset": 29807,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TOWN",
+      "bytes": "94 8F 97 8E"
+    },
+    {
+      "rom_offset": 29831,
+      "prg_offset": 29815,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TOWN",
+      "bytes": "94 8F 97 8E"
+    },
+    {
+      "rom_offset": 29840,
+      "prg_offset": 29824,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29846,
+      "prg_offset": 29830,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "DESERVES",
+      "bytes": "84 85 93 85 92 96 85 93"
+    },
+    {
+      "rom_offset": 29855,
+      "prg_offset": 29839,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "SOMETHING",
+      "bytes": "93 8F 8D 85 94 88 89 8E 87"
+    },
+    {
+      "rom_offset": 29865,
+      "prg_offset": 29849,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MUCH",
+      "bytes": "8D 95 83 88"
+    },
+    {
+      "rom_offset": 29870,
+      "prg_offset": 29854,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "BETTER",
+      "bytes": "82 85 94 94 85 92"
+    },
+    {
+      "rom_offset": 29881,
+      "prg_offset": 29865,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SORRY",
+      "bytes": "93 8F 92 92 99"
+    },
+    {
+      "rom_offset": 29891,
+      "prg_offset": 29875,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FEEL",
+      "bytes": "86 85 85 8C"
+    },
+    {
+      "rom_offset": 29896,
+      "prg_offset": 29880,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "THAT",
+      "bytes": "94 88 81 94"
+    },
+    {
+      "rom_offset": 29914,
+      "prg_offset": 29898,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "COME",
+      "bytes": "83 8F 8D 85"
+    },
+    {
+      "rom_offset": 29930,
+      "prg_offset": 29914,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "WHENEVER",
+      "bytes": "97 88 85 8E 85 96 85 92"
+    },
+    {
+      "rom_offset": 29949,
+      "prg_offset": 29933,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TOWN",
+      "bytes": "94 8F 97 8E"
+    },
+    {
+      "rom_offset": 29958,
+      "prg_offset": 29942,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 0.875,
+      "text": "FAREWELL",
+      "bytes": "86 81 92 85 97 85 8C 8C"
+    },
+    {
+      "rom_offset": 29967,
+      "prg_offset": 29951,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29977,
+      "prg_offset": 29961,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "OKOTO",
+      "bytes": "FF 8F 8B 8F 94 8F"
+    },
+    {
+      "rom_offset": 29993,
+      "prg_offset": 29977,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DUM",
+      "bytes": "FF 84 95 8D"
+    },
+    {
+      "rom_offset": 30005,
+      "prg_offset": 29989,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DOESN",
+      "bytes": "84 8F 85 93 8E"
+    },
+    {
+      "rom_offset": 30013,
+      "prg_offset": 29997,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 30018,
+      "prg_offset": 30002,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "STORY",
+      "bytes": "93 94 8F 92 99"
+    },
+    {
+      "rom_offset": 30024,
+      "prg_offset": 30008,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GRAB",
+      "bytes": "87 92 81 82"
+    },
+    {
+      "rom_offset": 30033,
+      "prg_offset": 30017,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOU",
+      "bytes": "FF 99 8F 95"
+    },
+    {
+      "rom_offset": 30038,
+      "prg_offset": 30022,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "FINISHED",
+      "bytes": "86 89 8E 89 93 88 85 84"
+    },
+    {
+      "rom_offset": 30061,
+      "prg_offset": 30045,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAVE",
+      "bytes": "88 81 96 85"
+    },
+    {
+      "rom_offset": 30068,
+      "prg_offset": 30052,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LIFE",
+      "bytes": "8C 89 86 85"
+    },
+    {
+      "rom_offset": 30073,
+      "prg_offset": 30057,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MAYBE",
+      "bytes": "FF 8D 81 99 82 85"
+    },
+    {
+      "rom_offset": 30086,
+      "prg_offset": 30070,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MEET",
+      "bytes": "8D 85 85 94"
+    },
+    {
+      "rom_offset": 30091,
+      "prg_offset": 30075,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "AGAIN",
+      "bytes": "81 87 81 89 8E"
+    },
+    {
+      "rom_offset": 30102,
+      "prg_offset": 30086,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 30107,
+      "prg_offset": 30091,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YOUR",
+      "bytes": "99 8F 95 92"
+    },
+    {
+      "rom_offset": 30116,
+      "prg_offset": 30100,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "THE",
+      "bytes": "FF FF FF FF FF FF 94 88 85"
+    },
+    {
+      "rom_offset": 30134,
+      "prg_offset": 30118,
+      "prg_bank": 1,
+      "length": 9,
+      "changed_ratio": 1.0,
+      "text": "ADVENTURE",
+      "bytes": "81 84 96 85 8E 94 95 92 85"
+    },
+    {
+      "rom_offset": 30144,
+      "prg_offset": 30128,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "BEGINS",
+      "bytes": "82 85 87 89 8E 93"
+    },
+    {
+      "rom_offset": 30155,
+      "prg_offset": 30139,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "WELCOME",
+      "bytes": "FF 97 85 8C 83 8F 8D 85"
+    },
+    {
+      "rom_offset": 30164,
+      "prg_offset": 30148,
+      "prg_bank": 1,
+      "length": 11,
+      "changed_ratio": 1.0,
+      "text": "TO DOWNTOWN",
+      "bytes": "94 8F FF 84 8F 97 8E 94 8F 97 8E"
+    },
+    {
+      "rom_offset": 30176,
+      "prg_offset": 30160,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "SPECIAL",
+      "bytes": "93 90 85 83 89 81 8C"
+    },
+    {
+      "rom_offset": 30185,
+      "prg_offset": 30169,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HAIL",
+      "bytes": "88 81 89 8C"
+    },
+    {
+      "rom_offset": 30191,
+      "prg_offset": 30175,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "FIGHTERS",
+      "bytes": "86 89 87 88 94 85 92 93"
+    },
+    {
+      "rom_offset": 30200,
+      "prg_offset": 30184,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "MEET",
+      "bytes": "FF 8D 85 85 94"
+    },
+    {
+      "rom_offset": 30212,
+      "prg_offset": 30196,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "SURUGA",
+      "bytes": "FF 93 95 92 95 87 81"
+    },
+    {
+      "rom_offset": 30220,
+      "prg_offset": 30204,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LAND",
+      "bytes": "8C 81 8E 84"
+    },
+    {
+      "rom_offset": 30228,
+      "prg_offset": 30212,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "MYSTERY",
+      "bytes": "8D 99 93 94 85 92 99"
+    },
+    {
+      "rom_offset": 30237,
+      "prg_offset": 30221,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HOME",
+      "bytes": "88 8F 8D 85"
+    },
+    {
+      "rom_offset": 30249,
+      "prg_offset": 30233,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FUJI",
+      "bytes": "86 95 8A 89"
+    },
+    {
+      "rom_offset": 30254,
+      "prg_offset": 30238,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "ACROSS",
+      "bytes": "FF 81 83 92 8F 93 93"
+    },
+    {
+      "rom_offset": 30266,
+      "prg_offset": 30250,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "RAGING",
+      "bytes": "92 81 87 89 8E 87"
+    },
+    {
+      "rom_offset": 30277,
+      "prg_offset": 30261,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DUTY",
+      "bytes": "FF 84 95 94 99"
+    },
+    {
+      "rom_offset": 30283,
+      "prg_offset": 30267,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "CALLS",
+      "bytes": "83 81 8C 8C 93"
+    },
+    {
+      "rom_offset": 30294,
+      "prg_offset": 30278,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "ROMANCE",
+      "bytes": "92 8F 8D 81 8E 83 85"
+    },
+    {
+      "rom_offset": 30302,
+      "prg_offset": 30286,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KUNIO",
+      "bytes": "FF 8B 95 8E 89 8F"
+    },
+    {
+      "rom_offset": 30311,
+      "prg_offset": 30295,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "LOVE",
+      "bytes": "8C 8F 96 85"
+    },
+    {
+      "rom_offset": 30316,
+      "prg_offset": 30300,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "AWAITS",
+      "bytes": "81 97 81 89 94 93"
+    },
+    {
+      "rom_offset": 30327,
+      "prg_offset": 30311,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "DOES",
+      "bytes": "84 8F 85 93"
+    },
+    {
+      "rom_offset": 30336,
+      "prg_offset": 30320,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "USED",
+      "bytes": "FF 95 93 85 84"
+    },
+    {
+      "rom_offset": 30344,
+      "prg_offset": 30328,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ARE",
+      "bytes": "FF 81 92 85"
+    },
+    {
+      "rom_offset": 30353,
+      "prg_offset": 30337,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "READY",
+      "bytes": "92 85 81 84 99"
+    },
+    {
+      "rom_offset": 30363,
+      "prg_offset": 30347,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "THIS",
+      "bytes": "94 88 89 93"
+    },
+    {
+      "rom_offset": 30372,
+      "prg_offset": 30356,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "AREA",
+      "bytes": "81 92 85 81"
+    },
+    {
+      "rom_offset": 30378,
+      "prg_offset": 30362,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "YEAH",
+      "bytes": "99 85 81 88"
+    },
+    {
+      "rom_offset": 30386,
+      "prg_offset": 30370,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GAVE",
+      "bytes": "87 81 96 85"
+    },
+    {
+      "rom_offset": 30395,
+      "prg_offset": 30379,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "DROPPED",
+      "bytes": "84 92 8F 90 90 85 84"
+    },
+    {
+      "rom_offset": 30409,
+      "prg_offset": 30393,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "STATUS",
+      "bytes": "93 94 81 94 95 93"
+    },
+    {
+      "rom_offset": 30462,
+      "prg_offset": 30446,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MAXXED",
+      "bytes": "8D 81 98 98 85 84"
+    },
+    {
+      "rom_offset": 30473,
+      "prg_offset": 30457,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GOOD",
+      "bytes": "87 8F 8F 84"
+    },
+    {
+      "rom_offset": 30482,
+      "prg_offset": 30466,
+      "prg_bank": 1,
+      "length": 11,
+      "changed_ratio": 1.0,
+      "text": "USE",
+      "bytes": "FF FF FF FF FF FF FF FF 95 93 85"
+    },
+    {
+      "rom_offset": 30498,
+      "prg_offset": 30482,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "CURSOR",
+      "bytes": "83 95 92 93 8F 92"
+    },
+    {
+      "rom_offset": 30508,
+      "prg_offset": 30492,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "TRAVEL",
+      "bytes": "94 92 81 96 85 8C FF"
+    },
+    {
+      "rom_offset": 30517,
+      "prg_offset": 30501,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "REMOVED",
+      "bytes": "92 85 8D 8F 96 85 84"
+    },
+    {
+      "rom_offset": 30529,
+      "prg_offset": 30513,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SMILES",
+      "bytes": "93 8D 89 8C 85 93"
+    },
+    {
+      "rom_offset": 30539,
+      "prg_offset": 30523,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GREAT",
+      "bytes": "87 92 85 81 94"
+    },
+    {
+      "rom_offset": 30545,
+      "prg_offset": 30529,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "MOMENT",
+      "bytes": "8D 8F 8D 85 8E 94"
+    },
+    {
+      "rom_offset": 30559,
+      "prg_offset": 30543,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "PLEASURE",
+      "bytes": "90 8C 85 81 93 95 92 85"
+    },
+    {
+      "rom_offset": 32697,
+      "prg_offset": 32681,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "MAYBE",
+      "bytes": "8D 81 99 82 85"
+    },
+    {
+      "rom_offset": 32711,
+      "prg_offset": 32695,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "BEAT",
+      "bytes": "82 85 81 94"
+    },
+    {
+      "rom_offset": 32720,
+      "prg_offset": 32704,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "NOW",
+      "bytes": "8E 8F 97 FF"
+    },
+    {
+      "rom_offset": 32731,
+      "prg_offset": 32715,
+      "prg_bank": 1,
+      "length": 7,
+      "changed_ratio": 0.857,
+      "text": "THANKS",
+      "bytes": "FF 94 88 81 8E 8B 93"
+    },
+    {
+      "rom_offset": 32742,
+      "prg_offset": 32726,
+      "prg_bank": 1,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "FAMILY",
+      "bytes": "86 81 8D 89 8C 99"
+    },
+    {
+      "rom_offset": 32761,
+      "prg_offset": 32745,
+      "prg_bank": 1,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FELT",
+      "bytes": "86 85 8C 94"
+    },
+    {
+      "rom_offset": 32766,
+      "prg_offset": 32750,
+      "prg_bank": 1,
+      "length": 8,
+      "changed_ratio": 0.875,
+      "text": "LIGHTER",
+      "bytes": "8C 89 87 88 94 85 92 FF"
+    },
+    {
+      "rom_offset": 32779,
+      "prg_offset": 32763,
+      "prg_bank": 1,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "FELL",
+      "bytes": "86 85 8C 8C FF"
+    },
+    {
+      "rom_offset": 79544,
+      "prg_offset": 79528,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "STARTN",
+      "bytes": "93 94 81 92 94 8E"
+    },
+    {
+      "rom_offset": 79607,
+      "prg_offset": 79591,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ITEMS",
+      "bytes": "89 94 85 8D 93"
+    },
+    {
+      "rom_offset": 79667,
+      "prg_offset": 79651,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "REMOVE",
+      "bytes": "92 85 8D 8F 96 85"
+    },
+    {
+      "rom_offset": 79675,
+      "prg_offset": 79659,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GIVE",
+      "bytes": "87 89 96 85"
+    },
+    {
+      "rom_offset": 79696,
+      "prg_offset": 79680,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIST",
+      "bytes": "86 89 93 94"
+    },
+    {
+      "rom_offset": 79705,
+      "prg_offset": 79689,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 79722,
+      "prg_offset": 79706,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "KIUKIU",
+      "bytes": "8B 89 95 8B 89 95"
+    },
+    {
+      "rom_offset": 79733,
+      "prg_offset": 79717,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SWING",
+      "bytes": "93 97 89 8E 87"
+    },
+    {
+      "rom_offset": 79743,
+      "prg_offset": 79727,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FUMI",
+      "bytes": "86 95 8D 89"
+    },
+    {
+      "rom_offset": 79750,
+      "prg_offset": 79734,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SCREW",
+      "bytes": "93 83 92 85 97"
+    },
+    {
+      "rom_offset": 79760,
+      "prg_offset": 79744,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ATTACK",
+      "bytes": "81 94 94 81 83 8B"
+    },
+    {
+      "rom_offset": 79771,
+      "prg_offset": 79755,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "GUARD",
+      "bytes": "87 95 81 92 84"
+    },
+    {
+      "rom_offset": 79779,
+      "prg_offset": 79763,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "TORNADO",
+      "bytes": "94 8F 92 8E 81 84 8F"
+    },
+    {
+      "rom_offset": 79789,
+      "prg_offset": 79773,
+      "prg_bank": 4,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "WARPSHOT",
+      "bytes": "97 81 92 90 93 88 8F 94"
+    },
+    {
+      "rom_offset": 79800,
+      "prg_offset": 79784,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DRILL",
+      "bytes": "84 92 89 8C 8C"
+    },
+    {
+      "rom_offset": 79808,
+      "prg_offset": 79792,
+      "prg_bank": 4,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "HELICPTR",
+      "bytes": "88 85 8C 89 83 90 94 92"
+    },
+    {
+      "rom_offset": 79821,
+      "prg_offset": 79805,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORP",
+      "bytes": "94 8F 92 90"
+    },
+    {
+      "rom_offset": 79830,
+      "prg_offset": 79814,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TORP",
+      "bytes": "94 8F 92 90"
+    },
+    {
+      "rom_offset": 79839,
+      "prg_offset": 79823,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FIST",
+      "bytes": "86 89 93 94"
+    },
+    {
+      "rom_offset": 79849,
+      "prg_offset": 79833,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 79857,
+      "prg_offset": 79841,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SCREW",
+      "bytes": "93 83 92 85 97"
+    },
+    {
+      "rom_offset": 79866,
+      "prg_offset": 79850,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SLAP",
+      "bytes": "93 8C 81 90"
+    },
+    {
+      "rom_offset": 79876,
+      "prg_offset": 79860,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "DAGGR",
+      "bytes": "84 81 87 87 92"
+    },
+    {
+      "rom_offset": 79887,
+      "prg_offset": 79871,
+      "prg_bank": 4,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "HEADBUTT",
+      "bytes": "88 85 81 84 82 95 94 94"
+    },
+    {
+      "rom_offset": 79898,
+      "prg_offset": 79882,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "MASSAGE",
+      "bytes": "8D 81 93 93 81 87 85"
+    },
+    {
+      "rom_offset": 79908,
+      "prg_offset": 79892,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "DEFLECT",
+      "bytes": "84 85 86 8C 85 83 94"
+    },
+    {
+      "rom_offset": 79918,
+      "prg_offset": 79902,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BIGBANG",
+      "bytes": "82 89 87 82 81 8E 87"
+    },
+    {
+      "rom_offset": 79928,
+      "prg_offset": 79912,
+      "prg_bank": 4,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "BMPKNART",
+      "bytes": "82 8D 90 8B 8E 81 92 94"
+    },
+    {
+      "rom_offset": 79946,
+      "prg_offset": 79930,
+      "prg_bank": 4,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "TECHNIQUES",
+      "bytes": "94 85 83 88 8E 89 91 95 85 93"
+    },
+    {
+      "rom_offset": 80042,
+      "prg_offset": 80026,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 0.833,
+      "text": "SELECT",
+      "bytes": "93 85 8C 85 83 94"
+    },
+    {
+      "rom_offset": 80062,
+      "prg_offset": 80046,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "STATS",
+      "bytes": "93 94 81 94 93"
+    },
+    {
+      "rom_offset": 80071,
+      "prg_offset": 80055,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "PUNCH",
+      "bytes": "90 95 8E 83 88"
+    },
+    {
+      "rom_offset": 80079,
+      "prg_offset": 80063,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "KICK",
+      "bytes": "8B 89 83 8B"
+    },
+    {
+      "rom_offset": 80092,
+      "prg_offset": 80076,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THROW",
+      "bytes": "94 88 92 8F 97"
+    },
+    {
+      "rom_offset": 80100,
+      "prg_offset": 80084,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "VITC",
+      "bytes": "96 89 94 83"
+    },
+    {
+      "rom_offset": 80106,
+      "prg_offset": 80090,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "STAM",
+      "bytes": "93 94 81 8D"
+    },
+    {
+      "rom_offset": 80127,
+      "prg_offset": 80111,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WILL",
+      "bytes": "97 89 8C 8C"
+    },
+    {
+      "rom_offset": 80172,
+      "prg_offset": 80156,
+      "prg_bank": 4,
+      "length": 10,
+      "changed_ratio": 1.0,
+      "text": "DIFFICULTY",
+      "bytes": "84 89 86 86 89 83 95 8C 94 99"
+    },
+    {
+      "rom_offset": 80185,
+      "prg_offset": 80169,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "EASY",
+      "bytes": "85 81 93 99"
+    },
+    {
+      "rom_offset": 80209,
+      "prg_offset": 80193,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HARD",
+      "bytes": "88 81 92 84"
+    },
+    {
+      "rom_offset": 80216,
+      "prg_offset": 80200,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "MESSAGE",
+      "bytes": "8D 85 93 93 81 87 85"
+    },
+    {
+      "rom_offset": 80224,
+      "prg_offset": 80208,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SPEEDB",
+      "bytes": "93 90 85 85 84 82"
+    },
+    {
+      "rom_offset": 80232,
+      "prg_offset": 80216,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 0.75,
+      "text": "SLOW",
+      "bytes": "93 8C 8F 97"
+    },
+    {
+      "rom_offset": 80256,
+      "prg_offset": 80240,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FAST",
+      "bytes": "86 81 93 94"
+    },
+    {
+      "rom_offset": 80263,
+      "prg_offset": 80247,
+      "prg_bank": 4,
+      "length": 8,
+      "changed_ratio": 1.0,
+      "text": "CURRENTS",
+      "bytes": "83 95 92 92 85 8E 94 93"
+    },
+    {
+      "rom_offset": 80274,
+      "prg_offset": 80258,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "NONEH",
+      "bytes": "8E 8F 8E 85 88"
+    },
+    {
+      "rom_offset": 80281,
+      "prg_offset": 80265,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "WATER",
+      "bytes": "97 81 94 85 92"
+    },
+    {
+      "rom_offset": 80287,
+      "prg_offset": 80271,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "EFFECTS",
+      "bytes": "85 86 86 85 83 94 93"
+    },
+    {
+      "rom_offset": 80303,
+      "prg_offset": 80287,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SMLL",
+      "bytes": "93 8D 8C 8C"
+    },
+    {
+      "rom_offset": 80318,
+      "prg_offset": 80302,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ATTACK",
+      "bytes": "81 94 94 81 83 8B"
+    },
+    {
+      "rom_offset": 80325,
+      "prg_offset": 80309,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "BALANCE",
+      "bytes": "82 81 8C 81 8E 83 85"
+    },
+    {
+      "rom_offset": 80363,
+      "prg_offset": 80347,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HIGH",
+      "bytes": "88 89 87 88"
+    },
+    {
+      "rom_offset": 80371,
+      "prg_offset": 80355,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "DEFENSE",
+      "bytes": "84 85 86 85 8E 93 85"
+    },
+    {
+      "rom_offset": 80382,
+      "prg_offset": 80366,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "STAMG",
+      "bytes": "93 94 81 8D 87"
+    },
+    {
+      "rom_offset": 80395,
+      "prg_offset": 80379,
+      "prg_bank": 4,
+      "length": 7,
+      "changed_ratio": 1.0,
+      "text": "ENEMIES",
+      "bytes": "85 8E 85 8D 89 85 93"
+    },
+    {
+      "rom_offset": 80413,
+      "prg_offset": 80397,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SOME",
+      "bytes": "93 8F 8D 85"
+    },
+    {
+      "rom_offset": 80423,
+      "prg_offset": 80407,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "TARGET",
+      "bytes": "94 81 92 87 85 94"
+    },
+    {
+      "rom_offset": 80432,
+      "prg_offset": 80416,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NEAR",
+      "bytes": "8E 85 81 92"
+    },
+    {
+      "rom_offset": 80439,
+      "prg_offset": 80423,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "WEAK",
+      "bytes": "97 85 81 8B"
+    },
+    {
+      "rom_offset": 80446,
+      "prg_offset": 80430,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAME",
+      "bytes": "93 81 8D 85"
+    },
+    {
+      "rom_offset": 80454,
+      "prg_offset": 80438,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "AUTO",
+      "bytes": "81 95 94 8F"
+    },
+    {
+      "rom_offset": 80461,
+      "prg_offset": 80445,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "ATTACK",
+      "bytes": "81 94 94 81 83 8B"
+    },
+    {
+      "rom_offset": 80468,
+      "prg_offset": 80452,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "STYLE",
+      "bytes": "93 94 99 8C 85"
+    },
+    {
+      "rom_offset": 80477,
+      "prg_offset": 80461,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "APPRCH",
+      "bytes": "81 90 90 92 83 88"
+    },
+    {
+      "rom_offset": 80484,
+      "prg_offset": 80468,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "GUARD",
+      "bytes": "87 95 81 92 84"
+    },
+    {
+      "rom_offset": 80491,
+      "prg_offset": 80475,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NORM",
+      "bytes": "8E 8F 92 8D"
+    },
+    {
+      "rom_offset": 80499,
+      "prg_offset": 80483,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SPEED",
+      "bytes": "93 90 85 85 84"
+    },
+    {
+      "rom_offset": 80509,
+      "prg_offset": 80493,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "FAST",
+      "bytes": "86 81 93 94"
+    },
+    {
+      "rom_offset": 80516,
+      "prg_offset": 80500,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SLOW",
+      "bytes": "93 8C 8F 97"
+    },
+    {
+      "rom_offset": 80523,
+      "prg_offset": 80507,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NORM",
+      "bytes": "8E 8F 92 8D"
+    },
+    {
+      "rom_offset": 80531,
+      "prg_offset": 80515,
+      "prg_bank": 4,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "WEAPON",
+      "bytes": "97 85 81 90 8F 8E"
+    },
+    {
+      "rom_offset": 80540,
+      "prg_offset": 80524,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "THROW",
+      "bytes": "94 88 92 8F 97"
+    },
+    {
+      "rom_offset": 80553,
+      "prg_offset": 80537,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "NONE",
+      "bytes": "8E 8F 8E 85"
+    },
+    {
+      "rom_offset": 80565,
+      "prg_offset": 80549,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SETUP",
+      "bytes": "93 85 94 95 90"
+    },
+    {
+      "rom_offset": 80576,
+      "prg_offset": 80560,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MODE",
+      "bytes": "8D 8F 84 85"
+    },
+    {
+      "rom_offset": 80584,
+      "prg_offset": 80568,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "MODE",
+      "bytes": "8D 8F 84 85"
+    },
+    {
+      "rom_offset": 80631,
+      "prg_offset": 80615,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "GAME",
+      "bytes": "87 81 8D 85"
+    },
+    {
+      "rom_offset": 80636,
+      "prg_offset": 80620,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAVE",
+      "bytes": "93 81 96 85"
+    },
+    {
+      "rom_offset": 80647,
+      "prg_offset": 80631,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAVE",
+      "bytes": "93 81 96 85"
+    },
+    {
+      "rom_offset": 80655,
+      "prg_offset": 80639,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "EXIT",
+      "bytes": "85 98 89 94"
+    },
+    {
+      "rom_offset": 80664,
+      "prg_offset": 80648,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "HOLD",
+      "bytes": "88 8F 8C 84"
+    },
+    {
+      "rom_offset": 80669,
+      "prg_offset": 80653,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 0.8,
+      "text": "RESET",
+      "bytes": "92 85 93 85 94"
+    },
+    {
+      "rom_offset": 80677,
+      "prg_offset": 80661,
+      "prg_bank": 4,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TURN",
+      "bytes": "94 95 92 8E"
+    },
+    {
+      "rom_offset": 80682,
+      "prg_offset": 80666,
+      "prg_bank": 4,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "POWER",
+      "bytes": "90 8F 97 85 92"
+    },
+    {
+      "rom_offset": 127715,
+      "prg_offset": 127699,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "ITEMS",
+      "bytes": "89 94 85 8D 93"
+    },
+    {
+      "rom_offset": 127722,
+      "prg_offset": 127706,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "STATUS",
+      "bytes": "93 94 81 94 95 93"
+    },
+    {
+      "rom_offset": 127729,
+      "prg_offset": 127713,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "GROWTH",
+      "bytes": "87 92 8F 97 94 88"
+    },
+    {
+      "rom_offset": 127736,
+      "prg_offset": 127720,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "TECH",
+      "bytes": "94 85 83 88"
+    },
+    {
+      "rom_offset": 127779,
+      "prg_offset": 127763,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "SAVE",
+      "bytes": "93 81 96 85"
+    },
+    {
+      "rom_offset": 127786,
+      "prg_offset": 127770,
+      "prg_bank": 7,
+      "length": 4,
+      "changed_ratio": 1.0,
+      "text": "ALLY",
+      "bytes": "81 8C 8C 99"
+    },
+    {
+      "rom_offset": 127793,
+      "prg_offset": 127777,
+      "prg_bank": 7,
+      "length": 6,
+      "changed_ratio": 1.0,
+      "text": "SETTNG",
+      "bytes": "93 85 94 94 8E 87"
+    },
+    {
+      "rom_offset": 127800,
+      "prg_offset": 127784,
+      "prg_bank": 7,
+      "length": 5,
+      "changed_ratio": 1.0,
+      "text": "SETUP",
+      "bytes": "93 85 94 95 90"
+    }
+  ]
+}
