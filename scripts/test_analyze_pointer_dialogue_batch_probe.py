@@ -15,6 +15,7 @@ def main() -> int:
         root = Path(raw)
         probe = root / "probe.tsv"
         boot = root / "boot.tsv"
+        route = root / "route.tsv"
         candidate = root / "candidate.json"
         probe.write_text(
             "frame\treason\ttarget\tscreenshot\ttarget_match\n"
@@ -27,11 +28,18 @@ def main() -> int:
             "1095\tcapture\t21\t21\tscreenshot=true;target_match=true\n",
             encoding="utf-8",
         )
+        route.write_text(
+            "frame\treason\ttarget\tscreenshot\ttarget_match\tphase\thits\tscreen_fingerprint\n"
+            "5000\ttarget_not_seen\tpointer_002_003\tfalse\tfalse\t3\t266\t8507662:16320\n",
+            encoding="utf-8",
+        )
         candidate.write_text(json.dumps({"candidate": {"patched_md5": "test-md5"}}), encoding="utf-8")
-        payload = classify(probe, boot, candidate)
+        payload = classify(probe, boot, candidate, route)
         assert payload["status"] == "SOFT_GATE_BOOT_PASS_BOSS_TARGET_UNKNOWN"
         assert payload["probe"]["registered_watchers"] == 63
         assert payload["boot_regression"]["verdict"] == "PASS"
+        assert payload["route_probe"]["hits"] == 266
+        assert payload["route_probe"]["phase"] == 3
         assert "bounded" in render_markdown(payload)
     print("Pointer dialogue runtime analyzer tests passed.")
     return 0

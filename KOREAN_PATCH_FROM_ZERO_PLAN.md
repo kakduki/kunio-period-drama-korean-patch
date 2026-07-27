@@ -90,7 +90,9 @@ The first non-opening implementation batch is `pointer_dialogue_ptr_002_003`.
 It exercises one unchanged record and one relocated record, so the compiler
 follows the English patch's pointer movement model before more translations
 are added. Its runtime status remains `UNKNOWN` until a bounded route reaches
-the early-boss dialogue.
+the early-boss dialogue. The current 5000-frame route reaches phase 3 and
+records read activity, but its screen fingerprint stabilizes before pointer 2/3
+appears; this is a route/state gap, not a text-build failure.
 
 ### Phase 4: Bounded Verification
 

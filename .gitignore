@@ -101,6 +101,8 @@ rom_analysis/opening_mapper_trace*/mapper_writes.tsv
 rom_analysis/opening_mapper_trace_speaker_separator_candidate/
 rom_analysis/fceux_bank1_watch*/
 rom_analysis/fceux_v04_equal_length_watch_long/
+rom_analysis/pointer_dialogue_batch_002_003_route_explorer/
+rom_analysis/pointer_dialogue_batch_002_003_route_probe/*.gd
 rom_analysis/disasm_6502_output.txt
 __pycache__/
 .DS_Store

@@ -17,7 +17,7 @@ Current release verdict: **UNKNOWN**
 | Other R1 raster contexts | UNKNOWN | Shared split needs per-screen audit. |
 | Release-wide Korean glyph capacity | UNKNOWN | Current allocations remain context-scoped. |
 | Full translated script | NOT_STARTED | Deliberately blocked until renderer-family evidence exists. |
-| Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; early-boss screen context is not yet captured. |
+| Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; the bounded opening/extended routes reached no target capture, so early-boss screen context is not yet captured. |
 | Release package | BLOCKED | Requires high-risk families and release checks to pass. |
 
 ## Required Before Release

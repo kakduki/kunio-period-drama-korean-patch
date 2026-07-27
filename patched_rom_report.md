@@ -66,5 +66,8 @@ translation.
   `21/21` target reads, terminal reason `lua_done`.
 - Boss target probe: **UNKNOWN(route)**. `63` CPU read watchers were registered;
   the known opening route ended at frame `1200` with `target_not_seen`.
+- Extended route probe: **UNKNOWN(route)**. The bounded 5000-frame route entered
+  phase 3 and produced `266` watched reads, but its screen fingerprint stabilized
+  at `8507662:16320`; neither pointer 2 nor 3 matched.
 - Runtime report: `rom_analysis/pointer_dialogue_batch_002_003_runtime.md`.
 - No visual PASS is claimed for these boss-dialogue records.

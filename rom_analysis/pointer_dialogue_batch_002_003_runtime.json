@@ -14,5 +14,14 @@
     "capture_frame": 1095,
     "detail": "screenshot=true;target_match=true"
   },
-  "reason": "Known opening route did not reach pointer 2/3 before the hard frame cap."
+  "route_probe": {
+    "path": "rom_analysis/pointer_dialogue_batch_002_003_route_probe/summary.tsv",
+    "verdict": "UNKNOWN",
+    "final_frame": 5000,
+    "final_reason": "target_not_seen",
+    "hits": 266,
+    "phase": 3,
+    "screen_fingerprint": "8507662:16320"
+  },
+  "reason": "The extended route entered phase 3 and produced read activity, but the screen fingerprint stabilized and pointer 2/3 never matched."
 }

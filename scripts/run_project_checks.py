@@ -254,6 +254,7 @@ LUA_SCRIPTS = [
     "lua/kunio_manual_v042_screen_dump.lua",
     "lua/kunio_ppu_watch.lua",
     "lua/kunio_pointer_dialogue_batch_probe.lua",
+    "lua/kunio_pointer_dialogue_route_probe.lua",
 ]
 
 REGEN_COMMANDS = [

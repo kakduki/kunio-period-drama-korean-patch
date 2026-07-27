@@ -134,7 +134,7 @@ def summary_final_reason(summary: Path) -> str | None:
     if not summary.exists():
         return None
     text = summary.read_text(encoding="utf-8", errors="ignore")
-    for marker in ("lua_done", "target_not_seen", "stagnant_screen", "hit_limit"):
+    for marker in ("lua_done", "target_capture", "target_not_seen", "stagnant_screen", "hit_limit"):
         if marker in text:
             return marker
     return None

@@ -1,0 +1,12 @@
+frame	reason	target	screenshot	target_match	phase	hits	screen_fingerprint
+0	target_loaded	2	false	false	1	0	-
+0	lua_start	pointer_002_003	false	false	1	0	-
+600	periodic	pointer_002_003	false	false	2	0	468044305:16800
+1200	periodic	pointer_002_003	false	false	2	0	8507662:16320
+1800	periodic	pointer_002_003	false	false	2	0	8507662:16320
+2400	periodic	pointer_002_003	false	false	2	0	8507662:16320
+3000	periodic	pointer_002_003	false	false	2	0	8507662:16320
+3600	periodic	pointer_002_003	false	false	3	260	8507662:16320
+4200	periodic	pointer_002_003	false	false	3	266	8507662:16320
+4800	periodic	pointer_002_003	false	false	3	266	8507662:16320
+5000	target_not_seen	pointer_002_003	false	false	3	266	8507662:16320
