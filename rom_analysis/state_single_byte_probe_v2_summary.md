@@ -20,3 +20,13 @@ check-in evidence.
 
 The next state probe should use object/route addresses or a known save/debug
 state, not more writes to these four changing runtime flags.
+
+## Object Block Follow-Up
+
+The recommended `$04F0` paired write was also tested:
+
+`$04FA=30, $04F1=02, $04FB=31, $04FC=32`
+
+At the same 2,400-frame bound it produced the same route fingerprints and no
+boss/event transition. The block remains an object-state candidate only; it is
+not promoted as an enemy-clear or scene-warp cheat.
