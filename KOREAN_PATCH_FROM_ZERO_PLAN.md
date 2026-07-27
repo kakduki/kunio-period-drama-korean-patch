@@ -104,8 +104,10 @@ because its source record contains multiple messages while this first batch
 uses one compact draft message.
 
 The full draft audit is explicit: 244 active rows, 4 excluded rows, 378 unique
-non-space symbols, and only 26 currently proven direct source slots. The full
-script therefore remains capacity-blocked. Work proceeds as small
+non-space symbols, and 34 currently proven direct source slots in the opening
+context. A normal static R1 page now passes for a small 7-glyph sample, while
+the 17-glyph C0-C7 page variant fails its background/slot gate. The full script
+therefore remains capacity-blocked. Work proceeds as small
 font-capacity batches with independent runtime verdicts rather than as a
 single blind full-ROM translation.
 

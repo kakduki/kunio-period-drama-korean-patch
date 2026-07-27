@@ -24,8 +24,8 @@ def main() -> int:
     assert payload["status"] == "FULL_DRAFT_CAPACITY_BLOCKED"
     assert payload["draft"]["row_count"] == 248
     assert payload["draft"]["active_row_count"] == 244
-    assert payload["font_capacity"]["proven_source_code_count"] == 26
-    assert payload["font_capacity"]["unique_non_space_symbols"] > 26
+    assert payload["font_capacity"]["proven_source_code_count"] == 34
+    assert payload["font_capacity"]["unique_non_space_symbols"] > 34
     assert payload["space_estimate"]["estimated_compiled_bytes"] < payload["space_estimate"]["available_bytes"]
     assert payload["recommended_batches"]
     print("Pointer dialogue Korean draft audit tests passed.")

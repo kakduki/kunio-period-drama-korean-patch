@@ -1,10 +1,11 @@
 # Opening Dialogue Paired 16x16 Capacity Candidate
 
-Status: **CANDIDATE_BUILT_NOT_VISUALLY_VERIFIED_CAPACITY**
+Status: **SOFT_GATE_PASS_OPENING_CAPACITY_RUNTIME_AND_VISUAL**
 
 This bounded candidate reads all code-pair and helper-range decisions from
-its scene catalog. Passing it proves only the named opening record and the
-captured screen context; it does not promote its compact wording to release text.
+its scene catalog. The runtime probe now proves the named opening record and
+its captured screen context; it does not promote its compact wording or the
+additional source codes to a release-wide font contract.
 
 ## Scope
 
@@ -15,6 +16,8 @@ captured screen context; it does not promote its compact wording to release text
 - Unique glyphs: `17`; source slots: `34`.
 - Helper range: `0x81-0xC7`.
 - English-reference source slots: `26`.
+- Runtime-proven additional source slots: `0xC0-0xC7` (8 codes), giving this
+  opening route `34` observed source slots in total.
 
 ## Result
 
@@ -24,5 +27,17 @@ captured screen context; it does not promote its compact wording to release text
 - IPS: `output\opening_dialogue_16x16_capacity_tier2\kunio_period_drama_korean_opening_dialogue_16x16_capacity_tier2.ips`
 - ROM: `output\opening_dialogue_16x16_capacity_tier2\kunio_period_drama_korean_opening_dialogue_16x16_capacity_tier2.nes`
 
-Promotion requires the same bounded frame-883 capture, exact runtime
-record bytes, and a native screenshot with no visible background/UI damage.
+## Runtime Evidence
+
+- Bounded FCEUX route: frame `883`, terminal reason `lua_done`.
+- Target source record: CPU `$B1A6`, ROM `0x071B6`; `37/37` source reads
+  matched the catalog bytes, including `C0 C1 C2 C3 C4 C5 C6 C7`.
+- Emitted tile pairs: `C0/E0`, `C1/E1`, `C2/E2`, `C3/E3`, `C4/E4`,
+  `C5/E5`, `C6/E6`, `C7/E7`; mapper state remained `R0=3C, R1=3E`.
+- Native screenshot: `rom_analysis/opening_dialogue_16x16_capacity_tier2_capture/renderer_probe_frame_000883_screen.png`.
+- Detailed logs: `source_reads.tsv`, `emitted_tiles.tsv`, and
+  `renderer_probe_summary.tsv` in the same capture directory.
+
+This is a development soft-gate PASS for the opening capacity proof. Release
+promotion still requires a non-opening route, lifecycle-safe page strategy,
+and per-context evidence.

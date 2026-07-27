@@ -19,7 +19,10 @@ from rom_utils import REPO_ROOT
 
 
 POINTER_COUNT = 248
-PROVEN_SOURCE_CODES = tuple(range(0x81, 0x9B))
+# The English reference establishes 0x81-0x9A. The bounded opening p182
+# capacity proof also observed 0xC0-0xC7 through the same paired renderer.
+# This is an opening-context proof, not a release-wide guarantee.
+PROVEN_SOURCE_CODES = tuple(range(0x81, 0x9B)) + tuple(range(0xC0, 0xC8))
 POINTER_RECORD_START = 0x05FE7
 POINTER_RECORD_LIMIT = 0x08010
 DEFAULT_DRAFT = REPO_ROOT / "text_data" / "pointer_dialogue_korean_draft.tsv"
@@ -139,7 +142,7 @@ def build_payload(
             "basis_counts": dict(sorted(Counter(row["basis"] for row in draft_rows).items())),
         },
         "font_capacity": {
-            "proven_source_code_range": "0x81-0x9A",
+            "proven_source_code_range": "0x81-0x9A plus 0xC0-0xC7 (opening p182)",
             "proven_source_code_count": len(PROVEN_SOURCE_CODES),
             "unique_non_space_symbols": len(symbols),
             "capacity_gap": max(0, len(symbols) - len(PROVEN_SOURCE_CODES)),
@@ -214,7 +217,7 @@ def write_markdown(path: Path, payload: dict[str, object]) -> None:
         "",
         "## Suggested Batches",
         "",
-        "The batches below are greedy capacity groups using the currently proven 26-code pool; they are not automatically approved patch targets.",
+        "The batches below are greedy capacity groups using the currently proven 34-code opening pool; they are not automatically approved patch targets.",
         "",
         "| batch | pointer indices | records | unique symbols |",
         "| ---: | --- | ---: | ---: |",

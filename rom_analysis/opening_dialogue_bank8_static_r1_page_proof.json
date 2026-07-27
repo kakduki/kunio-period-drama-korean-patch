@@ -1,0 +1,343 @@
+{
+  "status": "CANDIDATE_BUILT_PENDING_STATIC_R1_PROOF",
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "mapper_setup_rom_offset": "0x1EE57",
+    "mapper_setup_cpu": "0xEE47",
+    "static_r1": "0x46",
+    "font_page": 8,
+    "glyph_code_pairs": {
+      "쿠": [
+        "0x81",
+        "0x82"
+      ],
+      "니": [
+        "0x83",
+        "0x84"
+      ],
+      "마": [
+        "0x85",
+        "0x86"
+      ],
+      "사": [
+        "0x87",
+        "0x88"
+      ],
+      ":": [
+        "0xC8",
+        "0xC9"
+      ],
+      "어": [
+        "0x89",
+        "0x8A"
+      ],
+      "서": [
+        "0x8B",
+        "0x8C"
+      ]
+    },
+    "record_hex": "81 82 83 84 85 86 87 88 c8 c9 00 89 8a 8b 8c ca 00 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+  },
+  "candidate": {
+    "patched_md5": "7b41d2b1dcd2449d667520ff78c80161",
+    "ips_path": "output\\opening_dialogue_bank8_static_r1_page_proof\\kunio_period_drama_korean_opening_bank8_static_r1_page_proof.ips",
+    "rom_path": "output\\opening_dialogue_bank8_static_r1_page_proof\\kunio_period_drama_korean_opening_bank8_static_r1_page_proof.nes",
+    "ips_record_count": 461,
+    "targets": [
+      {
+        "kind": "dialogue_record",
+        "rom_offset": 29110,
+        "length": 37,
+        "pointer_rom_offset": 24384
+      },
+      {
+        "kind": "chr_page_clone",
+        "rom_offset": 196624,
+        "length": 8192,
+        "source_chr_bank": 7,
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202784,
+        "length": 16,
+        "glyph": "쿠",
+        "code": "0x81",
+        "physical_tile": "0x181",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202800,
+        "length": 16,
+        "glyph": "쿠",
+        "code": "0x82",
+        "physical_tile": "0x182",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203296,
+        "length": 16,
+        "glyph": "쿠",
+        "code": "0xA1",
+        "physical_tile": "0x1A1",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203312,
+        "length": 16,
+        "glyph": "쿠",
+        "code": "0xA2",
+        "physical_tile": "0x1A2",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202816,
+        "length": 16,
+        "glyph": "니",
+        "code": "0x83",
+        "physical_tile": "0x183",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202832,
+        "length": 16,
+        "glyph": "니",
+        "code": "0x84",
+        "physical_tile": "0x184",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203328,
+        "length": 16,
+        "glyph": "니",
+        "code": "0xA3",
+        "physical_tile": "0x1A3",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203344,
+        "length": 16,
+        "glyph": "니",
+        "code": "0xA4",
+        "physical_tile": "0x1A4",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202848,
+        "length": 16,
+        "glyph": "마",
+        "code": "0x85",
+        "physical_tile": "0x185",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202864,
+        "length": 16,
+        "glyph": "마",
+        "code": "0x86",
+        "physical_tile": "0x186",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203360,
+        "length": 16,
+        "glyph": "마",
+        "code": "0xA5",
+        "physical_tile": "0x1A5",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203376,
+        "length": 16,
+        "glyph": "마",
+        "code": "0xA6",
+        "physical_tile": "0x1A6",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202880,
+        "length": 16,
+        "glyph": "사",
+        "code": "0x87",
+        "physical_tile": "0x187",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202896,
+        "length": 16,
+        "glyph": "사",
+        "code": "0x88",
+        "physical_tile": "0x188",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203392,
+        "length": 16,
+        "glyph": "사",
+        "code": "0xA7",
+        "physical_tile": "0x1A7",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203408,
+        "length": 16,
+        "glyph": "사",
+        "code": "0xA8",
+        "physical_tile": "0x1A8",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203920,
+        "length": 16,
+        "glyph": ":",
+        "code": "0xC8",
+        "physical_tile": "0x1C8",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203936,
+        "length": 16,
+        "glyph": ":",
+        "code": "0xC9",
+        "physical_tile": "0x1C9",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204432,
+        "length": 16,
+        "glyph": ":",
+        "code": "0xE8",
+        "physical_tile": "0x1E8",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 204448,
+        "length": 16,
+        "glyph": ":",
+        "code": "0xE9",
+        "physical_tile": "0x1E9",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202912,
+        "length": 16,
+        "glyph": "어",
+        "code": "0x89",
+        "physical_tile": "0x189",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202928,
+        "length": 16,
+        "glyph": "어",
+        "code": "0x8A",
+        "physical_tile": "0x18A",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203424,
+        "length": 16,
+        "glyph": "어",
+        "code": "0xA9",
+        "physical_tile": "0x1A9",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203440,
+        "length": 16,
+        "glyph": "어",
+        "code": "0xAA",
+        "physical_tile": "0x1AA",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202944,
+        "length": 16,
+        "glyph": "서",
+        "code": "0x8B",
+        "physical_tile": "0x18B",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202960,
+        "length": 16,
+        "glyph": "서",
+        "code": "0x8C",
+        "physical_tile": "0x18C",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203456,
+        "length": 16,
+        "glyph": "서",
+        "code": "0xAB",
+        "physical_tile": "0x1AB",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203472,
+        "length": 16,
+        "glyph": "서",
+        "code": "0xAC",
+        "physical_tile": "0x1AC",
+        "page_chr_bank": 8
+      },
+      {
+        "kind": "renderer_entry_hook",
+        "rom_offset": 21871,
+        "length": 3,
+        "cpu_address": "0x955F"
+      },
+      {
+        "kind": "renderer_marker_hook",
+        "rom_offset": 21894,
+        "length": 3,
+        "cpu_address": "0x9576",
+        "target_cpu_address": "0xBFD8"
+      },
+      {
+        "kind": "renderer_helper_and_page_switch",
+        "rom_offset": 32693,
+        "length": 75,
+        "cpu_address": "0xBFA5",
+        "page_r0": "0x40",
+        "page_r1": "0x42"
+      },
+      {
+        "kind": "static_normal_mapper_r1",
+        "rom_offset": 126557,
+        "length": 1,
+        "cpu_address": "0xEE4D",
+        "original": "0x3E",
+        "replacement": "0x46"
+      }
+    ]
+  }
+}

@@ -86,9 +86,40 @@ translation.
   final screen fingerprint `8507662:16320`, no complete p0/p1/p2 match.
 - Structural risk: p0 contains multiple source messages in the Japanese record;
   this first candidate compacts the Korean draft to one message, so it is not
-  eligible for release promotion.
+eligible for release promotion.
+
+## Opening Capacity Tier 2
+
+- Status: **SOFT_GATE_PASS_OPENING_CAPACITY_RUNTIME_AND_VISUAL**.
+- Candidate MD5: `6785f321c0fad8d08f4c929aba7c865d`.
+- Pointer 182 record: ROM `0x071B6` / CPU `$B1A6`, `37` bytes; helper at
+  ROM `0x07FB5`.
+- The existing English-derived `0x81-0x9A` pool plus `0xC0-0xC7` was read
+  and emitted through the native paired renderer. The bounded frame-883 run
+  matched `37/37` source reads and ended with `lua_done`.
+- `C0/E0` through `C7/E7` top/bottom tile pairs were observed with mapper
+  state `R0=3C, R1=3E`; the native screenshot is recorded in the tier-2
+  capture directory.
+- This proves a larger opening-context pool, not a whole-game font-page
+  strategy. Full draft capacity remains blocked until non-opening contexts
+  and mapper/page lifecycle are proven.
 
 The full Korean pointer draft is separately audited as `FULL_DRAFT_CAPACITY_BLOCKED`:
-244 active rows, 4 excluded rows, 378 unique non-space symbols, and only 26
-currently proven direct source slots. The next build must therefore remain a
-small, context-confirmed batch or introduce a new renderer/page strategy.
+244 active rows, 4 excluded rows, 378 unique non-space symbols, and 34
+currently proven direct source slots in the opening context. The next build
+must therefore remain a small, context-confirmed batch or introduce a new
+ renderer/page strategy.
+
+## Static R1 Page Lifecycle
+
+- Small-page candidate: **SOFT_GATE_PASS**; MD5 `7b41d2b1dcd2449d667520ff78c80161`.
+- It changes only the normal mapper setup immediate at ROM `0x1EE5D` from
+  `3E` to `46`, clones the relevant CHR page, and keeps the original fixed
+  mapper routine. The bounded opening run ends `lua_done` with `18/18` reads;
+  the runtime font audit passes `28/28` mappings and the native background is
+  intact.
+- Tier-2 static-page candidate: **FAIL**; MD5
+  `4246230abe23bbce7abae9affdf5bcdb`. It reaches `37/37` reads and `R1=46`,
+  but the runtime target audit fails for the Bank-7 declarations and the
+  native capture loses the opening background. Its `C0-C7` capacity is not
+  promoted to the cloned page.

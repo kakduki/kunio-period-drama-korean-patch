@@ -18,6 +18,17 @@ whole-game font allocation or release approval.
 | Pointer 183 preservation | STATIC PASS: original 21-byte record copied from `0x071DB` to `0x07FF6` / `$BFE6`; table entry 183 changes from `$B1CB` to `$BFE6` | `opening_dialogue_16x16_relocation_proof.json` |
 | Pointer 183 display | UNKNOWN: its own event context has not been captured | no claim beyond static preservation |
 
+## Static Page Lifecycle Evidence
+
+| candidate | mapper lifecycle | runtime mapping | visual result | verdict |
+| --- | --- | --- | --- | --- |
+| `opening_dialogue_bank8_static_r1_page_proof` | normal setup `R1=3E -> 46` | `28/28` | opening background and bounded Korean sample visible | SOFT_GATE_PASS |
+| `opening_dialogue_bank8_static_r1_capacity_tier2` | normal setup `R1=3E -> 46` | FAIL: declared Bank-7 targets differ from Bank-8 runtime slots | background lost; dialogue-only capture | FAIL |
+
+The small static page is the current reference for page lifecycle. The tier-2
+direct source pool remains proven on Bank 7, but its `C0-C7` extension is not
+yet a safe cloned-page allocation.
+
 The English IPS validates the ownership of source slots `0x81-0x9A` and shows
 that this dialogue family already uses pointer relocation. Korean glyph pixels,
 the code-cave helper, and Korean wording are generated locally; no English ROM

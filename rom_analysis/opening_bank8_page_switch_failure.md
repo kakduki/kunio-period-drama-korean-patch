@@ -47,3 +47,38 @@ Do not build another dynamic-page dialogue candidate until a harmless helper
 can execute from a verified fixed PRG location throughout the relevant mapper
 updates. That gate is independent of translation text and of gameplay route
 automation.
+
+## Static R1 Follow-Up
+
+The normal mapper setup at ROM `0x1EE57` writes the opening pair `R0=3C,
+R1=3E`. A bounded candidate changing only the immediate `3E -> 46` kept the
+original fixed mapper routine and normal `STA $FC` lifecycle intact.
+
+### Small Page Candidate
+
+- Build: `opening_dialogue_bank8_static_r1_page_proof`
+- Result: **SOFT_GATE_PASS**
+- Candidate MD5: `7b41d2b1dcd2449d667520ff78c80161`
+- Runtime: frame `883`, `lua_done`, `18/18` source reads, `34` emitted tile rows.
+- Mapper state: `R0=3C, R1=46`; runtime font mapping audit: **PASS** (`28/28`).
+- Native screenshot: `rom_analysis/opening_dialogue_bank8_static_r1_page_proof_capture/renderer_probe_frame_000883_screen.png`.
+
+This is the first page-lifecycle candidate that preserves the opening scene
+while displaying the bounded Korean sample. It is not yet a whole-game page
+allocation.
+
+### Tier-2 Page Candidate
+
+- Build: `opening_dialogue_bank8_static_r1_capacity_tier2`
+- Result: **FAIL** for the static-page gate.
+- Candidate MD5: `4246230abe23bbce7abae9affdf5bcdb`.
+- Runtime: frame `883`, `lua_done`, `37/37` source reads, `70` emitted tile rows,
+  and `R1=46`.
+- Runtime mapping audit: **FAIL** because the declared Bank-7 font targets
+  do not match the Bank-8 runtime slots; the native capture also loses the
+  opening background and shows only the dialogue text.
+- Native screenshot: `rom_analysis/opening_dialogue_bank8_static_r1_capacity_tier2_capture/renderer_probe_frame_000883_screen.png`.
+
+The direct Bank-7 tier-2 capacity proof remains useful for source-slot
+capacity. Its `C0-C7` expansion is not approved for a static cloned page until
+the page-specific slot ownership and visual context are re-established.
