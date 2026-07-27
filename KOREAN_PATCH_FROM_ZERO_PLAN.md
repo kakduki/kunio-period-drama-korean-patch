@@ -86,6 +86,12 @@ An English reference row alone is never enough to patch a Korean record.
 3. Relocate only declared records and update only their owned pointers.
 4. Build an ignored local ROM plus a committed byte-scope/report manifest.
 
+The first non-opening implementation batch is `pointer_dialogue_ptr_002_003`.
+It exercises one unchanged record and one relocated record, so the compiler
+follows the English patch's pointer movement model before more translations
+are added. Its runtime status remains `UNKNOWN` until a bounded route reaches
+the early-boss dialogue.
+
 ### Phase 4: Bounded Verification
 
 Each run must declare a ROM, route, hard frame budget, target bytes, capture

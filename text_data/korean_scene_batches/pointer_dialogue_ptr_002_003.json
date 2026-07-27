@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "batch_id": "pointer_dialogue_ptr_002_003",
+  "translation_basis": "The English patch supplies pointer ownership and a semantic reference only. These are compact Korean translations of the same two early-boss exchanges and remain pending Japanese screen-context verification.",
+  "renderer_profile": "record_scoped_paired_8x16_cells_for_pointer_dialogue",
+  "record_guard": {
+    "kind": "record_list",
+    "expected_pointer_indices": [2, 3],
+    "same_cpu_high_byte": "0xA0"
+  },
+  "capacity_profile": {
+    "source_ranges": [["81", "9B"], ["C0", "C4"]],
+    "english_reference_source_codes": [
+      "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D", "8E", "8F", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9A"
+    ],
+    "locally_proven_source_codes": ["C0", "C1", "C2", "C3"],
+    "glyph_code_pairs": {
+      "\uC544": ["81", "82"],
+      "\uB610": ["83", "84"],
+      "\uB9CC": ["85", "86"],
+      "\uB098": ["87", "88"],
+      "\uADF8": ["89", "8A"],
+      "\uB140": ["8B", "8C"],
+      "\uC11D": ["8D", "8E"],
+      "\uB4E4": ["8F", "90"],
+      "\uAE30": ["91", "92"],
+      "\uC5B5": ["93", "94"],
+      "\uD574": ["95", "96"],
+      "\uC800": ["97", "98"],
+      "\uB180": ["99", "9A"],
+      "\uC774": ["C0", "C1"],
+      "\uC57C": ["C2", "C3"]
+    }
+  },
+  "protected_pointers": [
+    {"pointer_index": 4, "expected_pointer_cpu": "0xA044"}
+  ],
+  "records": [
+    {
+      "id": "PTR-002-KR-EARLY-BOSS",
+      "pointer_index": 2,
+      "pointer_rom_offset": "0x05DD8",
+      "original_record_rom_offset": "0x06014",
+      "record_rom_offset": "0x06014",
+      "expected_original_bytes": "F0 BB 9F 90 00 81 82 8C A4 8C 90 98 CD FF",
+      "old_pointer_cpu": "0xA004",
+      "new_pointer_cpu": "0xA004",
+      "expected_encoded_bytes": "F0 BB 00 81 82 83 84 85 86 87 88 CA FF",
+      "japanese_context": "Pointer 2; English reference says the boss recognizes Kunio and says they meet again.",
+      "english_reference": "AH SO, WE MEET AGAIN",
+      "korean_text": "아 또 만나!",
+      "translation_status": "english_semantic_draft_pending_japanese_screen_verification",
+      "tokens": [
+        {"byte": "F0"}, {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "\uC544"}, {"glyph_pair": "\uB610"}, {"glyph_pair": "\uB9CC"}, {"glyph_pair": "\uB098"},
+        {"byte": "CA"}, {"byte": "FF"}
+      ]
+    },
+    {
+      "id": "PTR-003-KR-EARLY-BOSS",
+      "pointer_index": 3,
+      "pointer_rom_offset": "0x05DDA",
+      "original_record_rom_offset": "0x06022",
+      "record_rom_offset": "0x06021",
+      "expected_original_bytes": "F0 BB 8F 85 82 A4 AF 00 A0 B7 83 95 9C 90 A8 08 A0 06 82 A4 8C 90 98 F8 F9 00 85 A2 B2 8B AE 06 00 8B 06 8C 93 A9 A4 92 A7 96 00 91 09 B2 98 B2 A6 FF",
+      "old_pointer_cpu": "0xA012",
+      "new_pointer_cpu": "0xA011",
+      "expected_encoded_bytes": "F0 BB 00 89 8A 8B 8C 8D 8E 8F 90 00 91 92 93 94 95 96 CA F8 97 98 99 9A 8F 90 C0 C1 C2 C3 CA 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF",
+      "japanese_context": "Pointer 3; English reference says the speaker identifies the remembered group and points them out.",
+      "english_reference": "REMEMBER THOSE DUDES? THEY'RE THE ONES",
+      "korean_text": "그 녀석들 기억해? 저놈들이야!",
+      "translation_status": "english_semantic_draft_pending_japanese_screen_verification",
+      "tokens": [
+        {"byte": "F0"}, {"byte": "BB"}, {"byte": "00"},
+        {"glyph_pair": "\uADF8"}, {"glyph_pair": "\uB140"}, {"glyph_pair": "\uC11D"}, {"glyph_pair": "\uB4E4"},
+        {"byte": "00"},
+        {"glyph_pair": "\uAE30"}, {"glyph_pair": "\uC5B5"}, {"glyph_pair": "\uD574"},
+        {"byte": "CA"}, {"byte": "F8"},
+        {"glyph_pair": "\uC800"}, {"glyph_pair": "\uB180"}, {"glyph_pair": "\uB4E4"}, {"glyph_pair": "\uC774"}, {"glyph_pair": "\uC57C"},
+        {"byte": "CA"},
+        {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"}, {"byte": "00"},
+        {"byte": "FF"}
+      ]
+    }
+  ]
+}

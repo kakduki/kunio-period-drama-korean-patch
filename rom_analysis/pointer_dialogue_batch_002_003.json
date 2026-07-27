@@ -1,0 +1,780 @@
+{
+  "status": "CANDIDATE_BUILT_RUNTIME_UNKNOWN",
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "batch_id": "pointer_dialogue_ptr_002_003",
+    "catalog": "text_data/korean_scene_batches/pointer_dialogue_ptr_002_003.json",
+    "catalog_sha256": "c3cc1fb2c9bb014e17ddf60a9b6fc2a1d662c22f702d9ba4e298cf22513bd089",
+    "reference_ips": "tools/reference/TSe-v10.ips",
+    "reference_validation": {
+      "ips_sha256": "cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad",
+      "validated_source_slots": [
+        {
+          "code": "0x81",
+          "physical_tile": "0x181",
+          "rom_offset": "0x2F820"
+        },
+        {
+          "code": "0x82",
+          "physical_tile": "0x182",
+          "rom_offset": "0x2F830"
+        },
+        {
+          "code": "0x83",
+          "physical_tile": "0x183",
+          "rom_offset": "0x2F840"
+        },
+        {
+          "code": "0x84",
+          "physical_tile": "0x184",
+          "rom_offset": "0x2F850"
+        },
+        {
+          "code": "0x85",
+          "physical_tile": "0x185",
+          "rom_offset": "0x2F860"
+        },
+        {
+          "code": "0x86",
+          "physical_tile": "0x186",
+          "rom_offset": "0x2F870"
+        },
+        {
+          "code": "0x87",
+          "physical_tile": "0x187",
+          "rom_offset": "0x2F880"
+        },
+        {
+          "code": "0x88",
+          "physical_tile": "0x188",
+          "rom_offset": "0x2F890"
+        },
+        {
+          "code": "0x89",
+          "physical_tile": "0x189",
+          "rom_offset": "0x2F8A0"
+        },
+        {
+          "code": "0x8A",
+          "physical_tile": "0x18A",
+          "rom_offset": "0x2F8B0"
+        },
+        {
+          "code": "0x8B",
+          "physical_tile": "0x18B",
+          "rom_offset": "0x2F8C0"
+        },
+        {
+          "code": "0x8C",
+          "physical_tile": "0x18C",
+          "rom_offset": "0x2F8D0"
+        },
+        {
+          "code": "0x8D",
+          "physical_tile": "0x18D",
+          "rom_offset": "0x2F8E0"
+        },
+        {
+          "code": "0x8E",
+          "physical_tile": "0x18E",
+          "rom_offset": "0x2F8F0"
+        },
+        {
+          "code": "0x8F",
+          "physical_tile": "0x18F",
+          "rom_offset": "0x2F900"
+        },
+        {
+          "code": "0x90",
+          "physical_tile": "0x190",
+          "rom_offset": "0x2F910"
+        },
+        {
+          "code": "0x91",
+          "physical_tile": "0x191",
+          "rom_offset": "0x2F920"
+        },
+        {
+          "code": "0x92",
+          "physical_tile": "0x192",
+          "rom_offset": "0x2F930"
+        },
+        {
+          "code": "0x93",
+          "physical_tile": "0x193",
+          "rom_offset": "0x2F940"
+        },
+        {
+          "code": "0x94",
+          "physical_tile": "0x194",
+          "rom_offset": "0x2F950"
+        },
+        {
+          "code": "0x95",
+          "physical_tile": "0x195",
+          "rom_offset": "0x2F960"
+        },
+        {
+          "code": "0x96",
+          "physical_tile": "0x196",
+          "rom_offset": "0x2F970"
+        },
+        {
+          "code": "0x97",
+          "physical_tile": "0x197",
+          "rom_offset": "0x2F980"
+        },
+        {
+          "code": "0x98",
+          "physical_tile": "0x198",
+          "rom_offset": "0x2F990"
+        },
+        {
+          "code": "0x99",
+          "physical_tile": "0x199",
+          "rom_offset": "0x2F9A0"
+        },
+        {
+          "code": "0x9A",
+          "physical_tile": "0x19A",
+          "rom_offset": "0x2F9B0"
+        }
+      ],
+      "note": "Only source-slot ownership is validated from English. Korean pixels are generated locally."
+    },
+    "font": "C:\\Windows\\Fonts\\malgunbd.ttf",
+    "font_profile": "readable",
+    "font_preview": "rom_analysis/pointer_dialogue_batch_002_003_font_preview.png",
+    "glyph_code_pairs": {
+      "아": [
+        "0x81",
+        "0x82"
+      ],
+      "또": [
+        "0x83",
+        "0x84"
+      ],
+      "만": [
+        "0x85",
+        "0x86"
+      ],
+      "나": [
+        "0x87",
+        "0x88"
+      ],
+      "그": [
+        "0x89",
+        "0x8A"
+      ],
+      "녀": [
+        "0x8B",
+        "0x8C"
+      ],
+      "석": [
+        "0x8D",
+        "0x8E"
+      ],
+      "들": [
+        "0x8F",
+        "0x90"
+      ],
+      "기": [
+        "0x91",
+        "0x92"
+      ],
+      "억": [
+        "0x93",
+        "0x94"
+      ],
+      "해": [
+        "0x95",
+        "0x96"
+      ],
+      "저": [
+        "0x97",
+        "0x98"
+      ],
+      "놀": [
+        "0x99",
+        "0x9A"
+      ],
+      "이": [
+        "0xC0",
+        "0xC1"
+      ],
+      "야": [
+        "0xC2",
+        "0xC3"
+      ]
+    },
+    "source_ranges": [
+      "0x81-0x9A",
+      "0xC0-0xC3"
+    ],
+    "helper_length": 88,
+    "helper_cpu": "0xBFA5",
+    "records": [
+      {
+        "id": "PTR-002-KR-EARLY-BOSS",
+        "pointer_index": 2,
+        "old_pointer_cpu": "0xA004",
+        "new_pointer_cpu": "0xA004",
+        "record_rom_offset": "0x06014",
+        "encoded_length": 13,
+        "korean_text": "아 또 만나!",
+        "english_reference": "AH SO, WE MEET AGAIN",
+        "translation_status": "english_semantic_draft_pending_japanese_screen_verification"
+      },
+      {
+        "id": "PTR-003-KR-EARLY-BOSS",
+        "pointer_index": 3,
+        "old_pointer_cpu": "0xA012",
+        "new_pointer_cpu": "0xA011",
+        "record_rom_offset": "0x06021",
+        "encoded_length": 50,
+        "korean_text": "그 녀석들 기억해? 저놈들이야!",
+        "english_reference": "REMEMBER THOSE DUDES? THEY'RE THE ONES",
+        "translation_status": "english_semantic_draft_pending_japanese_screen_verification"
+      }
+    ]
+  },
+  "candidate": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "patched_md5": "863c62ba178973ee1a96cc7971512149",
+    "ips_path": "output/pointer_dialogue_batch_002_003/kunio_period_drama_korean_pointer_dialogue_batch_002_003.ips",
+    "rom_path": "output/pointer_dialogue_batch_002_003/kunio_period_drama_korean_pointer_dialogue_batch_002_003.nes",
+    "ips_record_count": 95,
+    "changed_span_count": 95,
+    "escaped_byte_count": 0,
+    "targets": [
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194592,
+        "length": 16,
+        "glyph": "아",
+        "code": "0x81",
+        "physical_tile": "0x181"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194608,
+        "length": 16,
+        "glyph": "아",
+        "code": "0x82",
+        "physical_tile": "0x182"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195104,
+        "length": 16,
+        "glyph": "아",
+        "code": "0xA1",
+        "physical_tile": "0x1A1"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195120,
+        "length": 16,
+        "glyph": "아",
+        "code": "0xA2",
+        "physical_tile": "0x1A2"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194624,
+        "length": 16,
+        "glyph": "또",
+        "code": "0x83",
+        "physical_tile": "0x183"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194640,
+        "length": 16,
+        "glyph": "또",
+        "code": "0x84",
+        "physical_tile": "0x184"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195136,
+        "length": 16,
+        "glyph": "또",
+        "code": "0xA3",
+        "physical_tile": "0x1A3"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195152,
+        "length": 16,
+        "glyph": "또",
+        "code": "0xA4",
+        "physical_tile": "0x1A4"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194656,
+        "length": 16,
+        "glyph": "만",
+        "code": "0x85",
+        "physical_tile": "0x185"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194672,
+        "length": 16,
+        "glyph": "만",
+        "code": "0x86",
+        "physical_tile": "0x186"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195168,
+        "length": 16,
+        "glyph": "만",
+        "code": "0xA5",
+        "physical_tile": "0x1A5"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195184,
+        "length": 16,
+        "glyph": "만",
+        "code": "0xA6",
+        "physical_tile": "0x1A6"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194688,
+        "length": 16,
+        "glyph": "나",
+        "code": "0x87",
+        "physical_tile": "0x187"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194704,
+        "length": 16,
+        "glyph": "나",
+        "code": "0x88",
+        "physical_tile": "0x188"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195200,
+        "length": 16,
+        "glyph": "나",
+        "code": "0xA7",
+        "physical_tile": "0x1A7"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195216,
+        "length": 16,
+        "glyph": "나",
+        "code": "0xA8",
+        "physical_tile": "0x1A8"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194720,
+        "length": 16,
+        "glyph": "그",
+        "code": "0x89",
+        "physical_tile": "0x189"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194736,
+        "length": 16,
+        "glyph": "그",
+        "code": "0x8A",
+        "physical_tile": "0x18A"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195232,
+        "length": 16,
+        "glyph": "그",
+        "code": "0xA9",
+        "physical_tile": "0x1A9"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195248,
+        "length": 16,
+        "glyph": "그",
+        "code": "0xAA",
+        "physical_tile": "0x1AA"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194752,
+        "length": 16,
+        "glyph": "녀",
+        "code": "0x8B",
+        "physical_tile": "0x18B"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194768,
+        "length": 16,
+        "glyph": "녀",
+        "code": "0x8C",
+        "physical_tile": "0x18C"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195264,
+        "length": 16,
+        "glyph": "녀",
+        "code": "0xAB",
+        "physical_tile": "0x1AB"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195280,
+        "length": 16,
+        "glyph": "녀",
+        "code": "0xAC",
+        "physical_tile": "0x1AC"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194784,
+        "length": 16,
+        "glyph": "석",
+        "code": "0x8D",
+        "physical_tile": "0x18D"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194800,
+        "length": 16,
+        "glyph": "석",
+        "code": "0x8E",
+        "physical_tile": "0x18E"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195296,
+        "length": 16,
+        "glyph": "석",
+        "code": "0xAD",
+        "physical_tile": "0x1AD"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195312,
+        "length": 16,
+        "glyph": "석",
+        "code": "0xAE",
+        "physical_tile": "0x1AE"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194816,
+        "length": 16,
+        "glyph": "들",
+        "code": "0x8F",
+        "physical_tile": "0x18F"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194832,
+        "length": 16,
+        "glyph": "들",
+        "code": "0x90",
+        "physical_tile": "0x190"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195328,
+        "length": 16,
+        "glyph": "들",
+        "code": "0xAF",
+        "physical_tile": "0x1AF"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195344,
+        "length": 16,
+        "glyph": "들",
+        "code": "0xB0",
+        "physical_tile": "0x1B0"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194848,
+        "length": 16,
+        "glyph": "기",
+        "code": "0x91",
+        "physical_tile": "0x191"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194864,
+        "length": 16,
+        "glyph": "기",
+        "code": "0x92",
+        "physical_tile": "0x192"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195360,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xB1",
+        "physical_tile": "0x1B1"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195376,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xB2",
+        "physical_tile": "0x1B2"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194880,
+        "length": 16,
+        "glyph": "억",
+        "code": "0x93",
+        "physical_tile": "0x193"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194896,
+        "length": 16,
+        "glyph": "억",
+        "code": "0x94",
+        "physical_tile": "0x194"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195392,
+        "length": 16,
+        "glyph": "억",
+        "code": "0xB3",
+        "physical_tile": "0x1B3"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195408,
+        "length": 16,
+        "glyph": "억",
+        "code": "0xB4",
+        "physical_tile": "0x1B4"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194912,
+        "length": 16,
+        "glyph": "해",
+        "code": "0x95",
+        "physical_tile": "0x195"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194928,
+        "length": 16,
+        "glyph": "해",
+        "code": "0x96",
+        "physical_tile": "0x196"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195424,
+        "length": 16,
+        "glyph": "해",
+        "code": "0xB5",
+        "physical_tile": "0x1B5"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195440,
+        "length": 16,
+        "glyph": "해",
+        "code": "0xB6",
+        "physical_tile": "0x1B6"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194944,
+        "length": 16,
+        "glyph": "저",
+        "code": "0x97",
+        "physical_tile": "0x197"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194960,
+        "length": 16,
+        "glyph": "저",
+        "code": "0x98",
+        "physical_tile": "0x198"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195456,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xB7",
+        "physical_tile": "0x1B7"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195472,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xB8",
+        "physical_tile": "0x1B8"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 194976,
+        "length": 16,
+        "glyph": "놀",
+        "code": "0x99",
+        "physical_tile": "0x199"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 194992,
+        "length": 16,
+        "glyph": "놀",
+        "code": "0x9A",
+        "physical_tile": "0x19A"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 195488,
+        "length": 16,
+        "glyph": "놀",
+        "code": "0xB9",
+        "physical_tile": "0x1B9"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 195504,
+        "length": 16,
+        "glyph": "놀",
+        "code": "0xBA",
+        "physical_tile": "0x1BA"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 195600,
+        "length": 16,
+        "glyph": "이",
+        "code": "0xC0",
+        "physical_tile": "0x1C0"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 195616,
+        "length": 16,
+        "glyph": "이",
+        "code": "0xC1",
+        "physical_tile": "0x1C1"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 196112,
+        "length": 16,
+        "glyph": "이",
+        "code": "0xE0",
+        "physical_tile": "0x1E0"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 196128,
+        "length": 16,
+        "glyph": "이",
+        "code": "0xE1",
+        "physical_tile": "0x1E1"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 195632,
+        "length": 16,
+        "glyph": "야",
+        "code": "0xC2",
+        "physical_tile": "0x1C2"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 195648,
+        "length": 16,
+        "glyph": "야",
+        "code": "0xC3",
+        "physical_tile": "0x1C3"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 196144,
+        "length": 16,
+        "glyph": "야",
+        "code": "0xE2",
+        "physical_tile": "0x1E2"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 196160,
+        "length": 16,
+        "glyph": "야",
+        "code": "0xE3",
+        "physical_tile": "0x1E3"
+      },
+      {
+        "kind": "renderer_entry_hook",
+        "rom_offset": 21871,
+        "length": 3,
+        "cpu_address": "0x955F"
+      },
+      {
+        "kind": "renderer_marker_hook",
+        "rom_offset": 21894,
+        "length": 3,
+        "cpu_address": "0x9576",
+        "helper_cpu_address": "0xBFDD"
+      },
+      {
+        "kind": "renderer_helper",
+        "rom_offset": 32693,
+        "length": 88,
+        "cpu_address": "0xBFA5"
+      },
+      {
+        "kind": "dialogue_record",
+        "rom_offset": 24596,
+        "length": 13,
+        "pointer_index": 2,
+        "cpu_address": "0xA004"
+      },
+      {
+        "kind": "dialogue_record",
+        "rom_offset": 24609,
+        "length": 50,
+        "pointer_index": 3,
+        "cpu_address": "0xA011"
+      },
+      {
+        "kind": "dialogue_pointer",
+        "rom_offset": 24026,
+        "length": 2,
+        "pointer_index": 3,
+        "original_cpu_address": "0xA012",
+        "new_cpu_address": "0xA011"
+      }
+    ]
+  },
+  "runtime_gate": {
+    "verdict": "UNKNOWN",
+    "reason": "No bounded early-boss route or save-state entry is proven yet.",
+    "opening_regression": "not_run",
+    "pointer_2_visible": "unknown",
+    "pointer_3_visible": "unknown"
+  }
+}

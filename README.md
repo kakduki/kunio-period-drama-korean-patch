@@ -108,3 +108,8 @@ The complete English-guided Bank 1 pointer worklist is generated into
 `rom_analysis/pointer_dialogue_catalog.tsv` (248 rows). English text in that
 catalog is structural reference only; Korean translation still requires
 Japanese context, renderer ownership, and bounded screen evidence.
+
+The first non-opening pointer batch is built by
+`scripts/build_pointer_dialogue_batch_candidate.py`. It covers pointer 2 and
+pointer 3, relocates pointer 3 from `$A012` to `$A011`, and keeps its runtime
+gate `UNKNOWN` until an early-boss state can be entered without blind autoplay.

@@ -49,4 +49,22 @@ translation.
 - All three opening routes ended with `lua_done`; no combat or unbounded
   autoplay was used.
 - Runtime status: `SOFT_GATE_PASS_COMBINED_CANDIDATE`; release verdict remains
-  `UNKNOWN`.
+`UNKNOWN`.
+
+## First Non-Opening Pointer Batch
+
+- Status: **CANDIDATE_BUILT_RUNTIME_UNKNOWN**.
+- Candidate MD5: `863c62ba178973ee1a96cc7971512149`.
+- Batch: pointers `2` and `3`, early-boss semantic draft.
+- Pointer 2 remains at `$A004`; pointer 3 moves `$A012` -> `$A011` and is
+  packed directly after the shorter Korean pointer-2 record.
+- Renderer: record-scoped paired 8x16 cells, 15 Korean glyph pairs, controls
+  `00/BB/CA/F8/FF` kept explicit.
+- Scope audit: `0` escaped changed bytes; candidate IPS and ROM are local and
+  ignored by Git.
+- Boot regression: **PASS** on the known opening-183 route, frame `1095`,
+  `21/21` target reads, terminal reason `lua_done`.
+- Boss target probe: **UNKNOWN(route)**. `63` CPU read watchers were registered;
+  the known opening route ended at frame `1200` with `target_not_seen`.
+- Runtime report: `rom_analysis/pointer_dialogue_batch_002_003_runtime.md`.
+- No visual PASS is claimed for these boss-dialogue records.

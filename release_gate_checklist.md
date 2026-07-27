@@ -17,6 +17,7 @@ Current release verdict: **UNKNOWN**
 | Other R1 raster contexts | UNKNOWN | Shared split needs per-screen audit. |
 | Release-wide Korean glyph capacity | UNKNOWN | Current allocations remain context-scoped. |
 | Full translated script | NOT_STARTED | Deliberately blocked until renderer-family evidence exists. |
+| Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; early-boss screen context is not yet captured. |
 | Release package | BLOCKED | Requires high-risk families and release checks to pass. |
 
 ## Required Before Release
@@ -29,3 +30,5 @@ Current release verdict: **UNKNOWN**
 - [ ] Check Korean glyph readability on every promoted screen.
 - [ ] Run cross-screen boot and gameplay smoke tests without untargeted autoplay.
 - [ ] Require manual visual evidence only for release or high-risk candidates.
+- [ ] Promote pointer-dialogue batches only after Japanese context and bounded
+  early-boss screen evidence agree with the English structural reference.

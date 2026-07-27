@@ -11,7 +11,12 @@ separate renderer family.
 | opening_ptr_182_184_16x16_readability | `0x071B6`, `0x071D6`, `0x071EF` / Bank 1 | pointer range, source-slot, CHR, and relocation structure checked | 182 `32/32`; 183 `25/25`; 184 `23/23`; all `lua_done` | PASS on all three native screens | PASS_FOR_THREE_OPENING_CONTEXTS |
 | main_menu_korean_16x16_candidate | `0x1F2C1` / Bank 7 | English slot layout and Bank 7 page evidence | menu frame 1906 PASS; Items frame 1960 proves isolated pool | PASS menu / PASS page isolation | SOFT_GATE_PASS_ISOLATED_R1_POOL |
 | korean_development_candidate | opening records + menu clone / Bank 1 + Bank 7 | complete 248-row pointer catalog; scoped opening/menu changes | p182 `32/32`; p183 `25/25`; p184 `23/23`; all `lua_done` | opening regression PASS; menu and Items isolation PASS | SOFT_GATE_PASS_COMBINED_CANDIDATE |
+| pointer_dialogue_batch_002_003 | `0x06014`, relocated `0x06021` / Bank 1 | English pointer ownership and source-slot subset checked | boot PASS; 63-watch target route UNKNOWN | UNKNOWN; no manual screen claim | CANDIDATE_BUILT_RUNTIME_UNKNOWN |
 
 The current menu candidate is MD5 `d425814e4f1249e2872c9eb09f7fb93d` and uses cloned R1 page `0x46`.
 The Items action source `0x13727` reaches PPU `0x2363` through the shared R1 page.
 The menu screenshot and Items page-isolation capture pass the development soft gate; other R1 contexts remain unaudited.
+
+The pointer batch candidate has MD5 `863c62ba178973ee1a96cc7971512149`.
+It is intentionally separate from the opening/menu candidate until a common
+multi-page renderer guard and early-boss screen route are proven.

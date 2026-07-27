@@ -46,6 +46,7 @@ KEY_PYTHON = [
     "scripts/build_opening_dialogue_16x16_proof.py",
     "scripts/build_opening_dialogue_16x16_capacity.py",
     "scripts/build_opening_dialogue_182_183_16x16.py",
+    "scripts/build_pointer_dialogue_batch_candidate.py",
     "scripts/build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/build_v041_conflict_safe_candidate.py",
@@ -115,9 +116,11 @@ KEY_PYTHON = [
     "scripts/test_analyze_main_menu_items_context.py",
     "scripts/test_analyze_main_menu_korean_candidate.py",
     "scripts/analyze_korean_development_candidate.py",
+    "scripts/analyze_pointer_dialogue_batch_probe.py",
     "scripts/build_korean_development_candidate.py",
     "scripts/test_build_main_menu_korean_candidate.py",
     "scripts/test_build_korean_development_candidate.py",
+    "scripts/test_analyze_pointer_dialogue_batch_probe.py",
     "scripts/test_generate_main_menu_pipeline_artifacts.py",
     "scripts/test_analyze_opening_dialogue_proof_capture.py",
     "scripts/test_analyze_opening_dialogue_renderer_probe.py",
@@ -143,6 +146,7 @@ KEY_PYTHON = [
     "scripts/test_build_opening_dialogue_16x16_proof.py",
     "scripts/test_build_opening_dialogue_16x16_capacity.py",
     "scripts/test_build_opening_dialogue_182_183_16x16.py",
+    "scripts/test_build_pointer_dialogue_batch_candidate.py",
     "scripts/test_build_opening_dialogue_182_184_16x16.py",
     "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
@@ -215,6 +219,7 @@ LUA_TARGETS = [
     "lua/kunio_opening_ptr_182_184_16x16_p182_target.lua",
     "lua/kunio_opening_ptr_182_184_16x16_p183_target.lua",
     "lua/kunio_opening_ptr_182_184_16x16_p184_target.lua",
+    "lua/kunio_pointer_dialogue_batch_002_003_target.lua",
     "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
 ]
@@ -248,6 +253,7 @@ LUA_SCRIPTS = [
     "lua/kunio_manual_v041_screen_dump.lua",
     "lua/kunio_manual_v042_screen_dump.lua",
     "lua/kunio_ppu_watch.lua",
+    "lua/kunio_pointer_dialogue_batch_probe.lua",
 ]
 
 REGEN_COMMANDS = [
@@ -374,6 +380,8 @@ def main() -> int:
     run("opening dialogue catalog-driven paired 16x16 capacity", ["scripts/test_build_opening_dialogue_16x16_capacity.py"])
     run("two-record opening Korean 16x16 candidate", ["scripts/test_build_opening_dialogue_182_183_16x16.py"])
     run("three-record range-scoped opening Korean 16x16 candidate", ["scripts/test_build_opening_dialogue_182_184_16x16.py"])
+    run("multi-record pointer dialogue Korean candidate", ["scripts/test_build_pointer_dialogue_batch_candidate.py"])
+    run("pointer dialogue bounded runtime analyzer", ["scripts/test_analyze_pointer_dialogue_batch_probe.py"])
     run("opening dialogue Bank 8 page-switch proof", ["scripts/test_build_opening_dialogue_bank8_page_switch_proof.py"])
     run("opening dialogue Bank 8 persistent page proof", ["scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py"])
     run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])

@@ -1,0 +1,5 @@
+frame	reason	target	screenshot	target_match
+0	target_loaded	2	false	false
+0	watchers_registered	63	false	false
+0	lua_start	pointer_002_003	false	false
+1200	target_not_seen	pointer_002_003	false	false

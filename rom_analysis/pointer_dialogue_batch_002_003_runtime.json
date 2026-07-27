@@ -1,0 +1,18 @@
+{
+  "status": "SOFT_GATE_BOOT_PASS_BOSS_TARGET_UNKNOWN",
+  "candidate_md5": "863c62ba178973ee1a96cc7971512149",
+  "probe": {
+    "path": "rom_analysis/pointer_dialogue_batch_002_003_probe/summary.tsv",
+    "registered_watchers": 63,
+    "final_frame": 1200,
+    "final_reason": "target_not_seen",
+    "target_verdict": "UNKNOWN"
+  },
+  "boot_regression": {
+    "path": "rom_analysis/pointer_dialogue_batch_002_003_boot_smoke/summary.tsv",
+    "verdict": "PASS",
+    "capture_frame": 1095,
+    "detail": "screenshot=true;target_match=true"
+  },
+  "reason": "Known opening route did not reach pointer 2/3 before the hard frame cap."
+}
