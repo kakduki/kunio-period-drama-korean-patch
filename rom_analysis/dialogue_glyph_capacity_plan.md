@@ -22,12 +22,14 @@ whole-game font allocation or release approval.
 
 | candidate | mapper lifecycle | runtime mapping | visual result | verdict |
 | --- | --- | --- | --- | --- |
-| `opening_dialogue_bank8_static_r1_page_proof` | normal setup `R1=3E -> 46` | `28/28` | opening background and bounded Korean sample visible | SOFT_GATE_PASS |
+| `opening_dialogue_bank8_static_r1_page_proof` | normal setup `R1=3E -> 46` | `28/28` | dialogue-only black frame | FAIL_STATIC_R1_VISUAL_BACKGROUND |
 | `opening_dialogue_bank8_static_r1_capacity_tier2` | normal setup `R1=3E -> 46` | FAIL: declared Bank-7 targets differ from Bank-8 runtime slots | background lost; dialogue-only capture | FAIL |
+| `opening_dialogue_bank8_static_r1_safe_capacity_tier2` | normal setup `R1=3E -> 46`; actual R1 `0x800`-byte window clone | `67/67` | opening background and expanded Korean-looking dialogue visible | SOFT_GATE_PASS |
 
-The small static page is the current reference for page lifecycle. The tier-2
-direct source pool remains proven on Bank 7, but its `C0-C7` extension is not
-yet a safe cloned-page allocation.
+The small static page's mapping audit was useful but its visual gate failed.
+The safe tier-2 candidate is the current page-lifecycle reference: it clones
+the actual R1 window, preserves Bank 7, and writes the expanded glyphs to the
+runtime Bank 8 slots. This remains an opening-context proof only.
 
 The English IPS validates the ownership of source slots `0x81-0x9A` and shows
 that this dialogue family already uses pointer relocation. Korean glyph pixels,

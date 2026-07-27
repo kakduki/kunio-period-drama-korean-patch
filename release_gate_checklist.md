@@ -21,7 +21,7 @@ Current release verdict: **UNKNOWN**
 | Direct 8x16 pointer batch | UNKNOWN | Pointers 0-2 compile with 24 glyphs and 0 escaped bytes; boot passes at frame 883, but the frame-5000 route has no complete target match and p0 has a multi-message structural risk. |
 | Opening-context Korean glyph capacity | SOFT_GATE_PASS | Pointer 182 proves 34 paired source slots (`0x81-0x9A` plus `0xC0-0xC7`) at frame 883; this is not global coverage. |
 | Full Korean pointer draft capacity | BLOCKED | 244 active rows require 378 unique non-space symbols while only 34 direct source slots are proven in one opening context. |
-| Static cloned-page lifecycle | SOFT_GATE_PASS | Small 7-glyph page candidate keeps the opening scene and passes `28/28` runtime tile mappings; tier-2 `C0-C7` page candidate remains FAIL. |
+| Static cloned-page lifecycle | SOFT_GATE_PASS | Small page mapping passes but its native visual gate fails; corrected tier-2 R1-window candidate passes `67/67` mappings with the opening background intact. |
 | Release package | BLOCKED | Requires high-risk families and release checks to pass. |
 
 ## Required Before Release

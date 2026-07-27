@@ -112,14 +112,16 @@ must therefore remain a small, context-confirmed batch or introduce a new
 
 ## Static R1 Page Lifecycle
 
-- Small-page candidate: **SOFT_GATE_PASS**; MD5 `7b41d2b1dcd2449d667520ff78c80161`.
-- It changes only the normal mapper setup immediate at ROM `0x1EE5D` from
-  `3E` to `46`, clones the relevant CHR page, and keeps the original fixed
-  mapper routine. The bounded opening run ends `lua_done` with `18/18` reads;
-  the runtime font audit passes `28/28` mappings and the native background is
-  intact.
+- Small-page candidate: **FAIL_STATIC_R1_VISUAL_BACKGROUND**; MD5
+  `7b41d2b1dcd2449d667520ff78c80161`. Its runtime font mapping audit passes
+  `28/28`, but the native frame is dialogue-only with a black background.
 - Tier-2 static-page candidate: **FAIL**; MD5
   `4246230abe23bbce7abae9affdf5bcdb`. It reaches `37/37` reads and `R1=46`,
   but the runtime target audit fails for the Bank-7 declarations and the
   native capture loses the opening background. Its `C0-C7` capacity is not
   promoted to the cloned page.
+- Safe tier-2 static-page candidate: **SOFT_GATE_PASS**; MD5
+  `7b7e4ff92c69cc256148a9c5b6fbdfde`. It clones the actual original R1
+  `0x800`-byte window to the new R1 window, preserves source Bank 7, reaches
+  `37/37` reads, passes `67/67` runtime mappings, and keeps the native opening
+  background visible. This proves only the opening-context 17-glyph pool.

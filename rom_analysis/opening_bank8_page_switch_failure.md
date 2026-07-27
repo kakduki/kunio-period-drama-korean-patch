@@ -82,3 +82,18 @@ allocation.
 The direct Bank-7 tier-2 capacity proof remains useful for source-slot
 capacity. Its `C0-C7` expansion is not approved for a static cloned page until
 the page-specific slot ownership and visual context are re-established.
+
+### Safe R1-Window Tier-2 Candidate
+
+- Build: `opening_dialogue_bank8_static_r1_safe_capacity_tier2`
+- Result: **SOFT_GATE_PASS** for the bounded opening context.
+- Candidate MD5: `7b7e4ff92c69cc256148a9c5b6fbdfde`.
+- Runtime: frame `883`, `lua_done`, `37/37` source reads, `70` emitted rows,
+  `R1=46`, and `67/67` runtime font mappings.
+- Fix: clone the actual original R1 `0x800`-byte window into the new R1 window,
+  then write the expanded glyphs only at the runtime Bank 8 slots.
+- Native screenshot: `rom_analysis/opening_dialogue_bank8_static_r1_safe_capacity_tier2_capture/renderer_probe_frame_000883_screen.png`.
+
+The opening background and dialogue remain visible. This is still a
+scene-local capacity proof and does not authorize the same font page in other
+menus, stages, or boss/event contexts.

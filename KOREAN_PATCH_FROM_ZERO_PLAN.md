@@ -105,9 +105,10 @@ uses one compact draft message.
 
 The full draft audit is explicit: 244 active rows, 4 excluded rows, 378 unique
 non-space symbols, and 34 currently proven direct source slots in the opening
-context. A normal static R1 page now passes for a small 7-glyph sample, while
-the 17-glyph C0-C7 page variant fails its background/slot gate. The full script
-therefore remains capacity-blocked. Work proceeds as small
+context. A small static R1 page has a mapping-only pass but fails its native
+visual background gate. A corrected R1-window clone now passes the 17-glyph
+C0-C7 opening candidate with `67/67` runtime mappings and visible background.
+The full script therefore remains capacity-blocked. Work proceeds as small
 font-capacity batches with independent runtime verdicts rather than as a
 single blind full-ROM translation.
 
