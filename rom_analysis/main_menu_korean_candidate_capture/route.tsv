@@ -1,0 +1,29 @@
+start	end	button	purpose
+40	49	start	title
+130	139	A	title
+220	229	start	opening setup
+300	309	down	opening setup
+360	369	A	opening setup
+480	489	down	opening setup
+540	549	A	opening setup
+700	711	B	opening setup
+880	891	A	opening setup
+940	951	A	opening setup
+1040	1051	start	menu state setup
+1082	1093	down	menu state setup
+1124	1135	A	menu state setup
+1166	1177	down	menu state setup
+1208	1219	A	menu state setup
+1250	1261	B	menu state setup
+1340	1351	select	menu state setup
+1382	1393	down	menu state setup
+1424	1435	A	menu state setup
+1466	1477	right	menu state setup
+1508	1519	A	menu state setup
+1550	1561	B	menu state setup
+1640	1651	start	menu open
+1682	1693	right	menu select
+1724	1735	A	menu confirm
+1766	1777	down	menu select
+1808	1819	A	menu confirm
+1850	1861	B	menu return

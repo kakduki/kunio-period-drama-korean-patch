@@ -1,0 +1,4 @@
+frame	reason	detail_a	detail_b	detail_c	detail_d	detail_e
+0	lua_start	capture_frame=1906	max_frames=1920	ppu_trace_start=1600	callbacks=true
+1906	capture	screen=true	nametable0=558434507:24951	nametables=985025557:42656	ppu_read=true	ppu_writes=3120
+1906	lua_done	captured=true	capture_frame=1906	ppu_write_limit_reached=false	mapper_callbacks=64164	menu_source_callbacks=330	mapper_config_callbacks=11740	mapper_loader_callbacks=4397

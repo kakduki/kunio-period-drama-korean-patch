@@ -30,3 +30,12 @@ pointer_184_nametable_capture=PASS
 pointer_184_visual_korean_glyph_review=PASS
 overall_smoke=PASS
 overall_proof=PASS_FOR_THREE_OPENING_CONTEXTS
+
+candidate=main_menu_korean_16x16_candidate
+PASS | bounded main-menu route | capture=1906 | result=lua_done
+PASS | candidate template rendered from PPU dump | result=True
+PASS | clone-page mapper state | final_r1=46
+PASS | source Bank 7 preserved | result=True
+PASS | candidate screen evidence | C:\Users\kakdu\OneDrive\문서\자산관리\kunio-period-drama-korean-patch\rom_analysis\main_menu_korean_candidate_capture\main_menu_frame_001906_screen.png
+UNKNOWN | cursor probe | post-template right input cleared the prior background selector cell, but no stable replacement position was proven
+UNKNOWN | release compatibility | the R1 raster split is shared beyond this one screen

@@ -9,6 +9,7 @@ from pathlib import Path
 from run_fceux_lua_analysis import (
     BLIND_AUTOPLAY_FRAME_CAP,
     BLIND_AUTOPLAY_TIMEOUT_CAP,
+    apply_lua_env_overrides,
     apply_blind_autoplay_budget,
     find_lua_script,
     latest_manual_dump_record,
@@ -62,6 +63,16 @@ def check_retired_long_autoplay_option_is_refused() -> None:
     expect_value_error(lambda: validate_run_intent(args, Path("kunio_auto_dump.lua")))
 
 
+def check_targeted_lua_env_is_bounded_and_reserved_values_are_rejected() -> None:
+    env: dict[str, str] = {}
+    args = parse_args(["--lua-env", "KUNIO_MENU_CAPTURE_FRAME=1700"])
+    apply_lua_env_overrides(env, args.lua_env)
+    assert env["KUNIO_MENU_CAPTURE_FRAME"] == "1700"
+    expect_value_error(lambda: apply_lua_env_overrides({}, ["MENU_CAPTURE_FRAME=1700"]))
+    expect_value_error(lambda: apply_lua_env_overrides({}, ["KUNIO_MAX_FRAMES=999999"]))
+    expect_value_error(lambda: apply_lua_env_overrides({}, ["KUNIO_MENU_CAPTURE_FRAME"]))
+
+
 def check_staged_manual_outputs_are_mirrored() -> None:
     with tempfile.TemporaryDirectory() as raw_tmp:
         tmp = Path(raw_tmp)
@@ -103,6 +114,7 @@ def main() -> int:
     check_explicit_blind_autoplay_is_hard_capped()
     check_targeted_watch_is_not_capped()
     check_retired_long_autoplay_option_is_refused()
+    check_targeted_lua_env_is_bounded_and_reserved_values_are_rejected()
     check_staged_manual_outputs_are_mirrored()
     check_latest_manual_dump_record()
     check_bounded_target_miss_is_a_terminal_reason()

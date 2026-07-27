@@ -1,0 +1,2 @@
+frame	mapper_control	mapper_select	ppu_control	r0	r1	r2	r3	r4	r5	r6	r7	mapper_select_callbacks	mapper_data_callbacks	ppu_control_callbacks	ppu_status_callbacks	ppu_addr_callbacks	ppu_data_callbacks	menu_source_callbacks
+1906	07	7	88	3C	46	42	47	35	40	0C	0D	64164	64164	9458	19465	20300	47927	330

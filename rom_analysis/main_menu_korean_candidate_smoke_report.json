@@ -1,0 +1,58 @@
+{
+  "status": "SOFT_GATE_PASS",
+  "release_verdict": "UNKNOWN",
+  "checks": {
+    "candidate_template_matches_declared_layout": true,
+    "source_bank7_chr_pair_unchanged": true,
+    "clone_chr_pair_changed": true,
+    "lua_done": true,
+    "captured_template_matches_candidate": true,
+    "captured_mirror_matches_candidate": true,
+    "final_mapper_r1_is_clone": true,
+    "raster_trace_contains_clone_r1": true,
+    "screen_capture_available": true
+  },
+  "source": {
+    "base_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\main_menu_korean_candidate\\kunio_period_drama_korean_main_menu_16x16_candidate.nes",
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "candidate_md5": "de688d4bf18760cc4fa0682fee5571df",
+    "template_rom_offset": "0x1F2C1",
+    "source_chr_1k_pair": "0x3E",
+    "clone_chr_1k_pair": "0x46",
+    "expected_final_r1": "0x46"
+  },
+  "capture": {
+    "dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_korean_candidate_capture",
+    "final_reason": "lua_done",
+    "screen": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_korean_candidate_capture\\main_menu_frame_001906_screen.png",
+    "nametables": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_korean_candidate_capture\\main_menu_frame_001906_nametables_2000_2fff.bin",
+    "final_mapper_snapshot": {
+      "frame": "1906",
+      "mapper_control": "07",
+      "mapper_select": "7",
+      "ppu_control": "88",
+      "r0": "3C",
+      "r1": "46",
+      "r2": "42",
+      "r3": "47",
+      "r4": "35",
+      "r5": "40",
+      "r6": "0C",
+      "r7": "0D",
+      "mapper_select_callbacks": "64164",
+      "mapper_data_callbacks": "64164",
+      "ppu_control_callbacks": "9458",
+      "ppu_status_callbacks": "19465",
+      "ppu_addr_callbacks": "20300",
+      "ppu_data_callbacks": "47927",
+      "menu_source_callbacks": "330"
+    },
+    "raster_r1_write_count": 517
+  },
+  "limits": [
+    "This is one fixed menu context, not a broad screen-compatibility audit.",
+    "The R1 raster split is shared outside this context; release approval remains UNKNOWN.",
+    "Cursor motion and menu return need separate bounded screen captures."
+  ]
+}

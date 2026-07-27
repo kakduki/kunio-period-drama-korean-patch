@@ -1,0 +1,492 @@
+{
+  "overall_verdict": "PASS",
+  "checks": {
+    "base_lua_done": true,
+    "reference_lua_done": true,
+    "base_template_matches_display": true,
+    "base_mirror_matches_display": true,
+    "reference_template_matches_display": true,
+    "reference_mirror_matches_display": true,
+    "english_labels_match_reference": true,
+    "base_mapper_resolves_visible_label_page": true
+  },
+  "source": {
+    "base_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "reference_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\technos_samurai_reference_menu_probe.nes",
+    "template_rom_offset": "0x1F2C1",
+    "template_length": 128,
+    "cpu_source": "0xF2B1-0xF330",
+    "ppu_destination": "0x2700-0x277F",
+    "display_nametable": 1,
+    "display_rows": [
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  "captures": {
+    "base": {
+      "dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_base_context_capture",
+      "reason": "lua_done",
+      "screenshot": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_base_context_capture\\main_menu_frame_001906_screen.png"
+    },
+    "reference": {
+      "dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_english_context_capture",
+      "reason": "lua_done",
+      "screenshot": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_english_context_capture\\main_menu_frame_001906_screen.png"
+    }
+  },
+  "labels": [
+    {
+      "id": "items",
+      "legacy_row": 25,
+      "legacy_column": 2,
+      "legacy_width": 5,
+      "rom_offset": "0x1F2E3",
+      "base_bytes": "A3 91 A3 99",
+      "english_reference": "ITEMS",
+      "korean_candidate": "물건"
+    },
+    {
+      "id": "status",
+      "legacy_row": 25,
+      "legacy_column": 9,
+      "legacy_width": 6,
+      "rom_offset": "0x1F2EA",
+      "base_bytes": "8D 93 71 90 8D",
+      "english_reference": "STATUS",
+      "korean_candidate": "상태"
+    },
+    {
+      "id": "growth",
+      "legacy_row": 25,
+      "legacy_column": 16,
+      "legacy_width": 6,
+      "rom_offset": "0x1F2F1",
+      "base_bytes": "AC A8 9C A8",
+      "english_reference": "GROWTH",
+      "korean_candidate": "성장"
+    },
+    {
+      "id": "tech",
+      "legacy_row": 25,
+      "legacy_column": 23,
+      "legacy_width": 7,
+      "rom_offset": "0x1F2F8",
+      "base_bytes": "9B B4 8B 92 AC 8B",
+      "english_reference": "TECH",
+      "korean_candidate": "기술"
+    },
+    {
+      "id": "record",
+      "legacy_row": 27,
+      "legacy_column": 2,
+      "legacy_width": 5,
+      "rom_offset": "0x1F323",
+      "base_bytes": "87 AB 88",
+      "english_reference": "SAVE",
+      "korean_candidate": "기록"
+    },
+    {
+      "id": "ally",
+      "legacy_row": 27,
+      "legacy_column": 9,
+      "legacy_width": 6,
+      "rom_offset": "0x1F32A",
+      "base_bytes": "8B 88 8E AE",
+      "english_reference": "ALLY",
+      "korean_candidate": "동료"
+    },
+    {
+      "id": "setting",
+      "legacy_row": 27,
+      "legacy_column": 16,
+      "legacy_width": 6,
+      "rom_offset": "0x1F331",
+      "base_bytes": "8E B4 93 82",
+      "english_reference": "SETTNG",
+      "korean_candidate": "설정"
+    },
+    {
+      "id": "save",
+      "legacy_row": 27,
+      "legacy_column": 23,
+      "legacy_width": 7,
+      "rom_offset": "0x1F338",
+      "base_bytes": "89 71 A1 A3 71 94",
+      "english_reference": "SETUP",
+      "korean_candidate": "저장"
+    }
+  ],
+  "readability_layout": [
+    {
+      "id": "items",
+      "korean": "물건",
+      "column": 2,
+      "top_row": 24,
+      "bottom_row": 25,
+      "top_template_offsets": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "bottom_template_offsets": [
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    {
+      "id": "status",
+      "korean": "상태",
+      "column": 9,
+      "top_row": 24,
+      "bottom_row": 25,
+      "top_template_offsets": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "bottom_template_offsets": [
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "id": "growth",
+      "korean": "성장",
+      "column": 16,
+      "top_row": 24,
+      "bottom_row": 25,
+      "top_template_offsets": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "bottom_template_offsets": [
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    {
+      "id": "tech",
+      "korean": "기술",
+      "column": 23,
+      "top_row": 24,
+      "bottom_row": 25,
+      "top_template_offsets": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "bottom_template_offsets": [
+        55,
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "id": "record",
+      "korean": "기록",
+      "column": 2,
+      "top_row": 26,
+      "bottom_row": 27,
+      "top_template_offsets": [
+        66,
+        67,
+        68,
+        69
+      ],
+      "bottom_template_offsets": [
+        98,
+        99,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "ally",
+      "korean": "동료",
+      "column": 9,
+      "top_row": 26,
+      "bottom_row": 27,
+      "top_template_offsets": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "bottom_template_offsets": [
+        105,
+        106,
+        107,
+        108
+      ]
+    },
+    {
+      "id": "setting",
+      "korean": "설정",
+      "column": 16,
+      "top_row": 26,
+      "bottom_row": 27,
+      "top_template_offsets": [
+        80,
+        81,
+        82,
+        83
+      ],
+      "bottom_template_offsets": [
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    {
+      "id": "save",
+      "korean": "저장",
+      "column": 23,
+      "top_row": 26,
+      "bottom_row": 27,
+      "top_template_offsets": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "bottom_template_offsets": [
+        119,
+        120,
+        121,
+        122
+      ]
+    }
+  ],
+  "visible_label_mapper_mapping": {
+    "verdict": "PASS",
+    "reason": "background tile codes 0x80-0xBF map through the captured R1 page",
+    "mapper_control": "0x07",
+    "ppu_control": "0x88",
+    "r1": "0x3E",
+    "visible_chr_1k_page": "0x3E",
+    "physical_chr_8k_bank": 7,
+    "tile_code_range": "0x80-0xBF"
+  },
+  "visible_window2_pixel_mapping": {
+    "verdict": "UNKNOWN",
+    "reason": "no single CHR page matches the captured glyph masks",
+    "observed_tiles": [
+      {
+        "row": 25,
+        "column": 2,
+        "code": "0xA3",
+        "ink_pixels": 19
+      },
+      {
+        "row": 25,
+        "column": 3,
+        "code": "0x91",
+        "ink_pixels": 18
+      },
+      {
+        "row": 25,
+        "column": 4,
+        "code": "0xA3",
+        "ink_pixels": 19
+      },
+      {
+        "row": 25,
+        "column": 5,
+        "code": "0x99",
+        "ink_pixels": 18
+      },
+      {
+        "row": 25,
+        "column": 9,
+        "code": "0x8D",
+        "ink_pixels": 19
+      },
+      {
+        "row": 25,
+        "column": 10,
+        "code": "0x93",
+        "ink_pixels": 15
+      },
+      {
+        "row": 25,
+        "column": 12,
+        "code": "0x90",
+        "ink_pixels": 17
+      },
+      {
+        "row": 25,
+        "column": 13,
+        "code": "0x8D",
+        "ink_pixels": 19
+      },
+      {
+        "row": 25,
+        "column": 16,
+        "code": "0xAC",
+        "ink_pixels": 19
+      },
+      {
+        "row": 25,
+        "column": 17,
+        "code": "0xA8",
+        "ink_pixels": 13
+      },
+      {
+        "row": 25,
+        "column": 18,
+        "code": "0x9C",
+        "ink_pixels": 14
+      },
+      {
+        "row": 25,
+        "column": 19,
+        "code": "0xA8",
+        "ink_pixels": 13
+      },
+      {
+        "row": 25,
+        "column": 23,
+        "code": "0x9B",
+        "ink_pixels": 17
+      },
+      {
+        "row": 25,
+        "column": 24,
+        "code": "0xB4",
+        "ink_pixels": 9
+      },
+      {
+        "row": 25,
+        "column": 25,
+        "code": "0x8B",
+        "ink_pixels": 16
+      },
+      {
+        "row": 25,
+        "column": 26,
+        "code": "0x92",
+        "ink_pixels": 13
+      },
+      {
+        "row": 25,
+        "column": 27,
+        "code": "0xAC",
+        "ink_pixels": 19
+      },
+      {
+        "row": 25,
+        "column": 28,
+        "code": "0x8B",
+        "ink_pixels": 16
+      },
+      {
+        "row": 27,
+        "column": 2,
+        "code": "0x87",
+        "ink_pixels": 21
+      },
+      {
+        "row": 27,
+        "column": 3,
+        "code": "0xAB",
+        "ink_pixels": 18
+      },
+      {
+        "row": 27,
+        "column": 4,
+        "code": "0x88",
+        "ink_pixels": 7
+      },
+      {
+        "row": 27,
+        "column": 9,
+        "code": "0x8B",
+        "ink_pixels": 16
+      },
+      {
+        "row": 27,
+        "column": 10,
+        "code": "0x88",
+        "ink_pixels": 7
+      },
+      {
+        "row": 27,
+        "column": 11,
+        "code": "0x8E",
+        "ink_pixels": 20
+      },
+      {
+        "row": 27,
+        "column": 12,
+        "code": "0xAE",
+        "ink_pixels": 14
+      },
+      {
+        "row": 27,
+        "column": 16,
+        "code": "0x8E",
+        "ink_pixels": 20
+      },
+      {
+        "row": 27,
+        "column": 17,
+        "code": "0xB4",
+        "ink_pixels": 9
+      },
+      {
+        "row": 27,
+        "column": 18,
+        "code": "0x93",
+        "ink_pixels": 15
+      },
+      {
+        "row": 27,
+        "column": 19,
+        "code": "0x82",
+        "ink_pixels": 12
+      },
+      {
+        "row": 27,
+        "column": 23,
+        "code": "0x89",
+        "ink_pixels": 19
+      },
+      {
+        "row": 27,
+        "column": 25,
+        "code": "0xA1",
+        "ink_pixels": 20
+      },
+      {
+        "row": 27,
+        "column": 26,
+        "code": "0xA3",
+        "ink_pixels": 19
+      },
+      {
+        "row": 27,
+        "column": 28,
+        "code": "0x94",
+        "ink_pixels": 15
+      }
+    ],
+    "matching_chr_1k_banks": [],
+    "physical_chr_8k_banks": []
+  }
+}

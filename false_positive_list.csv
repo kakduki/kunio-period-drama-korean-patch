@@ -1,6 +1,10 @@
 candidate,reason,classification,disposition
-Raw 0xBB outside verified records,"0xBB is a renderer-special speaker separator, not a Korean glyph slot. The three-record candidate preserves it unchanged.",control_token,"Preserve it exactly; require a context capture before using it in another record."
+Raw 0xBB outside verified records,"0xBB is a renderer-special speaker separator, not a Korean glyph slot. The three-record candidate preserves it unchanged.",control_token,Preserve it exactly; require a context capture before using it in another record.
 Other Bank 1 pointer rows,"Pointer correspondence proves structure, not the active screen or Korean rendering route.",structural_only,"Keep as catalog candidates, not patch bytes."
-Base-ROM Japanese glyph-looking bytes,"The base Japanese dialogue glyph map is not fully decoded.",encoding_unknown,"Do not treat byte resemblance as translatable text."
-Dynamic CHR Bank 8 paging,"The recorded page-switch and persistent-page probes failed at runtime.",failed_renderer_experiment,"Excluded from the current fixed-Bank-7 path."
-Opening autoplay route,"A looping opening route proves neither later dialogue context nor combat progression.",invalid_discovery_method,"Use it only as a bounded regression route for explicitly named opening records."
+Base-ROM Japanese glyph-looking bytes,The base Japanese dialogue glyph map is not fully decoded.,encoding_unknown,Do not treat byte resemblance as translatable text.
+Dynamic CHR Bank 8 paging,The recorded opening page-switch and persistent-page probes failed at runtime.,failed_renderer_experiment,Excluded from the current fixed-Bank-7 opening path.
+Opening autoplay route,A looping opening route proves neither later dialogue context nor combat progression.,invalid_discovery_method,Use it only as a bounded regression route for explicitly named opening records.
+Dynamic menu selector,Template +0x21 / tile 0x7E changes independently of the static menu labels.,runtime_selector,Exclude from translation; prove cursor lifecycle separately.
+Main-menu edge tile,Tile 0xB8 at template rows 24/26 column 28 is layout decoration beside the label grid.,layout_tile,Preserve it.
+Unproven global Shift-JIS candidates,"No screen, pointer, or renderer context has been proven.",context_missing,Do not patch.
+English reference SETTNG typo,"The reference spelling is a structural clue, not source text to copy.",reference_text,Do not copy it.

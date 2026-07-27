@@ -1,4 +1,12 @@
 id,context,base_rom_offset,candidate_rom_offset,prg_bank,base_cpu,candidate_cpu,japanese_context,korean_text,font_profile,runtime_status,visual_status,decision
-PTR-182-OPENING-COMPACT-16X16,opening dialogue,0x071B6,0x071B6,1,0xB1A6,0xB1A6,"Kunio urgently says to hurry because Mr. Bunzo is in danger.","쿠니오: 서둘러! 분조목 위험!",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
-PTR-183-OPENING-OKOTO-16X16,opening dialogue,0x071DB,0x071D6,1,0xB1CB,0xB1C6,"Okoto welcomes Kunio and says that she has been waiting for him.","오코토: 쿠니오! 기다렸어!",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
-PTR-184-OPENING-REUNION-16X16,opening dialogue,0x071F0,0x071EF,1,0xB1E0,0xB1DF,"Kunio addresses Okoto and politely says that it has been a long time.","쿠니오: 오코토, 오랜만.",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
+PTR-182-OPENING-COMPACT-16X16,opening dialogue,0x071B6,0x071B6,1,0xB1A6,0xB1A6,Kunio urgently says to hurry because Mr. Bunzo is in danger.,쿠니오: 서둘러! 분조목 위험!,readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
+PTR-183-OPENING-OKOTO-16X16,opening dialogue,0x071DB,0x071D6,1,0xB1CB,0xB1C6,Okoto welcomes Kunio and says that she has been waiting for him.,오코토: 쿠니오! 기다렸어!,readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
+PTR-184-OPENING-REUNION-16X16,opening dialogue,0x071F0,0x071EF,1,0xB1E0,0xB1DF,Kunio addresses Okoto and politely says that it has been a long time.,"쿠니오: 오코토, 오랜만.",readable_16x16,PASS,PASS,PASS_FOR_THREE_OPENING_CONTEXTS
+MENU-ITEMS,reachable main menu,0x1F2E3,0x1F2E3,7,0xF2D3,0xF2D3,menu label; base tiles A3 91 A3 99; English structural reference ITEMS,물건,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-STATUS,reachable main menu,0x1F2EA,0x1F2EA,7,0xF2DA,0xF2DA,menu label; base tiles 8D 93 71 90 8D; English structural reference STATUS,상태,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-GROWTH,reachable main menu,0x1F2F1,0x1F2F1,7,0xF2E1,0xF2E1,menu label; base tiles AC A8 9C A8; English structural reference GROWTH,성장,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-TECH,reachable main menu,0x1F2F8,0x1F2F8,7,0xF2E8,0xF2E8,menu label; base tiles 9B B4 8B 92 AC 8B; English structural reference TECH,기술,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-RECORD,reachable main menu,0x1F323,0x1F323,7,0xF313,0xF313,menu label; base tiles 87 AB 88; English structural reference SAVE,기록,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-ALLY,reachable main menu,0x1F32A,0x1F32A,7,0xF31A,0xF31A,menu label; base tiles 8B 88 8E AE; English structural reference ALLY,동료,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-SETTING,reachable main menu,0x1F331,0x1F331,7,0xF321,0xF321,menu label; base tiles 8E B4 93 82; English structural reference SETTNG,설정,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS
+MENU-SAVE,reachable main menu,0x1F338,0x1F338,7,0xF328,0xF328,menu label; base tiles 89 71 A1 A3 71 94; English structural reference SETUP,저장,readable_16x16_bank8_clone,SOFT_GATE_PASS,PASS,SOFT_GATE_PASS

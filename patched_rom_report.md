@@ -1,10 +1,11 @@
 # Patched ROM Report
 
-Status: **PASS_FOR_THREE_OPENING_CONTEXTS**
+## Historical Opening Candidate
 
-- Base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`
-- Candidate ROM MD5: `46cedd1da6d49643f5dd6bc4895ce706`
-- English reference IPS SHA-256: `cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad`
+- Status: **PASS_FOR_THREE_OPENING_CONTEXTS**.
+- Base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
+- Candidate MD5: `46cedd1da6d49643f5dd6bc4895ce706`.
+- English reference IPS SHA-256: `cb6ea2fdbf82e974c474f4ea0d489f7c65647c94de899caf2a6b8c089f202dad`.
 - Pointer 182: `0x05F40` -> `0x071B6` / `$B1A6`, 32 bytes.
 - Pointer 183: `0x05F42` moves `$B1CB` -> `0x071D6` / `$B1C6`, 25 bytes.
 - Pointer 184: `0x05F44` moves `$B1E0` -> `0x071EF` / `$B1DF`, 23 bytes.
@@ -16,6 +17,19 @@ Status: **PASS_FOR_THREE_OPENING_CONTEXTS**
   `25/25`; pointer 184 frame 1399 `23/23`; all bounded runs ended `lua_done`.
 - Native visual review: PASS for all three screens.
 
+## Main Menu Candidate
+
+- Candidate status: **SOFT_GATE_PASS**; release verdict: **UNKNOWN**.
+- Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
+- Candidate MD5: `de688d4bf18760cc4fa0682fee5571df`.
+- Static menu template: `0x1F2C1`.
+- Raster R1 clone switch: `0x3E` -> `0x46` at `0xEE4D`.
+- CHR page pair: `0x3E` -> `0x46`.
+- Source Bank 7 CHR pages are preserved; Korean tiles exist only in the cloned Bank 8 pair.
+- Declared changed spans: `129`.
+
+The generated ROM and IPS remain local build products. This report records the
+reproducible candidate identity without placing copyrighted ROM content in Git.
 The English patch validates structure only. Pointer 184's Japanese source was
-captured from the base ROM before translation. Generated ROM and IPS artifacts
-remain local/ignored. This is not a release-ready full translation.
+captured from the base ROM before translation. This is not a release-ready full
+translation.

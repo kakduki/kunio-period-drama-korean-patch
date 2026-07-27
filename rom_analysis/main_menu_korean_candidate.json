@@ -1,0 +1,1146 @@
+{
+  "status": "CANDIDATE_BUILT_PENDING_BOUNDED_MENU_SMOKE",
+  "source": {
+    "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "template_rom_offset": "0x1F2C1",
+    "template_length": 128,
+    "template_cpu_source": "0xF2B1",
+    "ppu_destination": "0x2700",
+    "english_reference_use": "menu slot layout and Bank 7 tile-page evidence only",
+    "raster_r1_cpu_address": "0xEE4D",
+    "raster_r1_rom_offset": "0x1EE5D",
+    "raster_r1_original": "0x3E",
+    "raster_r1_clone": "0x46",
+    "source_chr_1k_pair": "0x3E",
+    "clone_chr_1k_pair": "0x46",
+    "source_chr_rom_range": [
+      "0x2F810",
+      "0x3000F"
+    ],
+    "clone_chr_rom_range": [
+      "0x31810",
+      "0x3200F"
+    ],
+    "source_bank7_pair_unchanged": true,
+    "font_profile": "readable",
+    "font_path": "C:\\Windows\\Fonts\\malgunbd.ttf",
+    "labels": [
+      {
+        "id": "items",
+        "korean": "물건",
+        "column": 2,
+        "top_row": 24,
+        "bottom_row": 25
+      },
+      {
+        "id": "status",
+        "korean": "상태",
+        "column": 9,
+        "top_row": 24,
+        "bottom_row": 25
+      },
+      {
+        "id": "growth",
+        "korean": "성장",
+        "column": 16,
+        "top_row": 24,
+        "bottom_row": 25
+      },
+      {
+        "id": "tech",
+        "korean": "기술",
+        "column": 23,
+        "top_row": 24,
+        "bottom_row": 25
+      },
+      {
+        "id": "record",
+        "korean": "기록",
+        "column": 2,
+        "top_row": 26,
+        "bottom_row": 27
+      },
+      {
+        "id": "ally",
+        "korean": "동료",
+        "column": 9,
+        "top_row": 26,
+        "bottom_row": 27
+      },
+      {
+        "id": "setting",
+        "korean": "설정",
+        "column": 16,
+        "top_row": 26,
+        "bottom_row": 27
+      },
+      {
+        "id": "save",
+        "korean": "저장",
+        "column": 23,
+        "top_row": 26,
+        "bottom_row": 27
+      }
+    ],
+    "glyph_code_pairs": {
+      "물": [
+        "0x80",
+        "0x81"
+      ],
+      "건": [
+        "0x82",
+        "0x83"
+      ],
+      "상": [
+        "0x84",
+        "0x85"
+      ],
+      "태": [
+        "0x86",
+        "0x87"
+      ],
+      "성": [
+        "0x88",
+        "0x89"
+      ],
+      "장": [
+        "0x8A",
+        "0x8B"
+      ],
+      "기": [
+        "0x8C",
+        "0x8D"
+      ],
+      "술": [
+        "0x8E",
+        "0x8F"
+      ],
+      "록": [
+        "0x90",
+        "0x91"
+      ],
+      "동": [
+        "0x92",
+        "0x93"
+      ],
+      "료": [
+        "0x94",
+        "0x95"
+      ],
+      "설": [
+        "0x96",
+        "0x97"
+      ],
+      "정": [
+        "0x98",
+        "0x99"
+      ],
+      "저": [
+        "0x9A",
+        "0x9B"
+      ]
+    }
+  },
+  "candidate": {
+    "patched_md5": "de688d4bf18760cc4fa0682fee5571df",
+    "out_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\main_menu_korean_candidate",
+    "ips_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\main_menu_korean_candidate\\kunio_period_drama_korean_main_menu_16x16_candidate.ips",
+    "rom_path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\main_menu_korean_candidate\\kunio_period_drama_korean_main_menu_16x16_candidate.nes",
+    "changed_span_count": 129,
+    "changed_spans": [
+      {
+        "start": "0x1EE5D",
+        "end_exclusive": "0x1EE5E"
+      },
+      {
+        "start": "0x1F2C3",
+        "end_exclusive": "0x1F2C7"
+      },
+      {
+        "start": "0x1F2CA",
+        "end_exclusive": "0x1F2CE"
+      },
+      {
+        "start": "0x1F2D1",
+        "end_exclusive": "0x1F2D5"
+      },
+      {
+        "start": "0x1F2D8",
+        "end_exclusive": "0x1F2DC"
+      },
+      {
+        "start": "0x1F2E3",
+        "end_exclusive": "0x1F2E7"
+      },
+      {
+        "start": "0x1F2EA",
+        "end_exclusive": "0x1F2EF"
+      },
+      {
+        "start": "0x1F2F1",
+        "end_exclusive": "0x1F2F5"
+      },
+      {
+        "start": "0x1F2F8",
+        "end_exclusive": "0x1F2FE"
+      },
+      {
+        "start": "0x1F303",
+        "end_exclusive": "0x1F307"
+      },
+      {
+        "start": "0x1F30A",
+        "end_exclusive": "0x1F30E"
+      },
+      {
+        "start": "0x1F311",
+        "end_exclusive": "0x1F315"
+      },
+      {
+        "start": "0x1F318",
+        "end_exclusive": "0x1F31C"
+      },
+      {
+        "start": "0x1F323",
+        "end_exclusive": "0x1F327"
+      },
+      {
+        "start": "0x1F32A",
+        "end_exclusive": "0x1F32E"
+      },
+      {
+        "start": "0x1F331",
+        "end_exclusive": "0x1F335"
+      },
+      {
+        "start": "0x1F338",
+        "end_exclusive": "0x1F33E"
+      },
+      {
+        "start": "0x31810",
+        "end_exclusive": "0x31828"
+      },
+      {
+        "start": "0x31829",
+        "end_exclusive": "0x31838"
+      },
+      {
+        "start": "0x3183A",
+        "end_exclusive": "0x31840"
+      },
+      {
+        "start": "0x31841",
+        "end_exclusive": "0x31848"
+      },
+      {
+        "start": "0x31849",
+        "end_exclusive": "0x31850"
+      },
+      {
+        "start": "0x31852",
+        "end_exclusive": "0x31858"
+      },
+      {
+        "start": "0x3185A",
+        "end_exclusive": "0x31860"
+      },
+      {
+        "start": "0x31861",
+        "end_exclusive": "0x31868"
+      },
+      {
+        "start": "0x31869",
+        "end_exclusive": "0x31870"
+      },
+      {
+        "start": "0x31872",
+        "end_exclusive": "0x31878"
+      },
+      {
+        "start": "0x3187A",
+        "end_exclusive": "0x318A8"
+      },
+      {
+        "start": "0x318A9",
+        "end_exclusive": "0x318B0"
+      },
+      {
+        "start": "0x318B2",
+        "end_exclusive": "0x318B8"
+      },
+      {
+        "start": "0x318BA",
+        "end_exclusive": "0x318D0"
+      },
+      {
+        "start": "0x318D2",
+        "end_exclusive": "0x318D4"
+      },
+      {
+        "start": "0x318D6",
+        "end_exclusive": "0x318E0"
+      },
+      {
+        "start": "0x318E1",
+        "end_exclusive": "0x318E8"
+      },
+      {
+        "start": "0x318E9",
+        "end_exclusive": "0x318F7"
+      },
+      {
+        "start": "0x318F9",
+        "end_exclusive": "0x31908"
+      },
+      {
+        "start": "0x31909",
+        "end_exclusive": "0x3190D"
+      },
+      {
+        "start": "0x3190E",
+        "end_exclusive": "0x31928"
+      },
+      {
+        "start": "0x31929",
+        "end_exclusive": "0x31930"
+      },
+      {
+        "start": "0x31931",
+        "end_exclusive": "0x31938"
+      },
+      {
+        "start": "0x31939",
+        "end_exclusive": "0x31950"
+      },
+      {
+        "start": "0x31952",
+        "end_exclusive": "0x31958"
+      },
+      {
+        "start": "0x3195A",
+        "end_exclusive": "0x3195B"
+      },
+      {
+        "start": "0x3195C",
+        "end_exclusive": "0x31960"
+      },
+      {
+        "start": "0x31962",
+        "end_exclusive": "0x31967"
+      },
+      {
+        "start": "0x3196A",
+        "end_exclusive": "0x3196F"
+      },
+      {
+        "start": "0x31970",
+        "end_exclusive": "0x31978"
+      },
+      {
+        "start": "0x31979",
+        "end_exclusive": "0x319A8"
+      },
+      {
+        "start": "0x319A9",
+        "end_exclusive": "0x319C0"
+      },
+      {
+        "start": "0x319C1",
+        "end_exclusive": "0x319C8"
+      },
+      {
+        "start": "0x319C9",
+        "end_exclusive": "0x31A1F"
+      },
+      {
+        "start": "0x31A20",
+        "end_exclusive": "0x31A2A"
+      },
+      {
+        "start": "0x31A2B",
+        "end_exclusive": "0x31A2F"
+      },
+      {
+        "start": "0x31A30",
+        "end_exclusive": "0x31A37"
+      },
+      {
+        "start": "0x31A38",
+        "end_exclusive": "0x31A3F"
+      },
+      {
+        "start": "0x31A40",
+        "end_exclusive": "0x31A43"
+      },
+      {
+        "start": "0x31A45",
+        "end_exclusive": "0x31A47"
+      },
+      {
+        "start": "0x31A48",
+        "end_exclusive": "0x31A4B"
+      },
+      {
+        "start": "0x31A4D",
+        "end_exclusive": "0x31A4F"
+      },
+      {
+        "start": "0x31A50",
+        "end_exclusive": "0x31A5F"
+      },
+      {
+        "start": "0x31A60",
+        "end_exclusive": "0x31A6B"
+      },
+      {
+        "start": "0x31A6D",
+        "end_exclusive": "0x31A6F"
+      },
+      {
+        "start": "0x31A70",
+        "end_exclusive": "0x31A7F"
+      },
+      {
+        "start": "0x31A80",
+        "end_exclusive": "0x31A8F"
+      },
+      {
+        "start": "0x31A90",
+        "end_exclusive": "0x31A9F"
+      },
+      {
+        "start": "0x31AA0",
+        "end_exclusive": "0x31AAF"
+      },
+      {
+        "start": "0x31AB0",
+        "end_exclusive": "0x31ABF"
+      },
+      {
+        "start": "0x31AC0",
+        "end_exclusive": "0x31ACC"
+      },
+      {
+        "start": "0x31ACD",
+        "end_exclusive": "0x31ACF"
+      },
+      {
+        "start": "0x31AD0",
+        "end_exclusive": "0x31ADF"
+      },
+      {
+        "start": "0x31AE0",
+        "end_exclusive": "0x31AED"
+      },
+      {
+        "start": "0x31AF0",
+        "end_exclusive": "0x31AFC"
+      },
+      {
+        "start": "0x31AFD",
+        "end_exclusive": "0x31B0F"
+      },
+      {
+        "start": "0x31B10",
+        "end_exclusive": "0x31B19"
+      },
+      {
+        "start": "0x31B1A",
+        "end_exclusive": "0x31B1F"
+      },
+      {
+        "start": "0x31B20",
+        "end_exclusive": "0x31B27"
+      },
+      {
+        "start": "0x31B28",
+        "end_exclusive": "0x31B2F"
+      },
+      {
+        "start": "0x31B30",
+        "end_exclusive": "0x31B4A"
+      },
+      {
+        "start": "0x31B4B",
+        "end_exclusive": "0x31B55"
+      },
+      {
+        "start": "0x31B56",
+        "end_exclusive": "0x31B5F"
+      },
+      {
+        "start": "0x31B60",
+        "end_exclusive": "0x31B6E"
+      },
+      {
+        "start": "0x31B70",
+        "end_exclusive": "0x31B78"
+      },
+      {
+        "start": "0x31B79",
+        "end_exclusive": "0x31B8F"
+      },
+      {
+        "start": "0x31B90",
+        "end_exclusive": "0x31BBB"
+      },
+      {
+        "start": "0x31BBC",
+        "end_exclusive": "0x31BFF"
+      },
+      {
+        "start": "0x31C00",
+        "end_exclusive": "0x31C15"
+      },
+      {
+        "start": "0x31C16",
+        "end_exclusive": "0x31C3F"
+      },
+      {
+        "start": "0x31C40",
+        "end_exclusive": "0x31C4B"
+      },
+      {
+        "start": "0x31C4C",
+        "end_exclusive": "0x31C4F"
+      },
+      {
+        "start": "0x31C50",
+        "end_exclusive": "0x31C5F"
+      },
+      {
+        "start": "0x31C60",
+        "end_exclusive": "0x31C6F"
+      },
+      {
+        "start": "0x31C70",
+        "end_exclusive": "0x31C7F"
+      },
+      {
+        "start": "0x31C80",
+        "end_exclusive": "0x31C9F"
+      },
+      {
+        "start": "0x31CA0",
+        "end_exclusive": "0x31CAF"
+      },
+      {
+        "start": "0x31CB0",
+        "end_exclusive": "0x31CBD"
+      },
+      {
+        "start": "0x31CBE",
+        "end_exclusive": "0x31CBF"
+      },
+      {
+        "start": "0x31CC0",
+        "end_exclusive": "0x31CE8"
+      },
+      {
+        "start": "0x31CE9",
+        "end_exclusive": "0x31D01"
+      },
+      {
+        "start": "0x31D02",
+        "end_exclusive": "0x31D13"
+      },
+      {
+        "start": "0x31D14",
+        "end_exclusive": "0x31D15"
+      },
+      {
+        "start": "0x31D18",
+        "end_exclusive": "0x31D33"
+      },
+      {
+        "start": "0x31D34",
+        "end_exclusive": "0x31D3F"
+      },
+      {
+        "start": "0x31D40",
+        "end_exclusive": "0x31D43"
+      },
+      {
+        "start": "0x31D46",
+        "end_exclusive": "0x31D48"
+      },
+      {
+        "start": "0x31D49",
+        "end_exclusive": "0x31D4E"
+      },
+      {
+        "start": "0x31D50",
+        "end_exclusive": "0x31D87"
+      },
+      {
+        "start": "0x31D88",
+        "end_exclusive": "0x31D8A"
+      },
+      {
+        "start": "0x31D8C",
+        "end_exclusive": "0x31D8F"
+      },
+      {
+        "start": "0x31D90",
+        "end_exclusive": "0x31D98"
+      },
+      {
+        "start": "0x31D99",
+        "end_exclusive": "0x31E3F"
+      },
+      {
+        "start": "0x31E40",
+        "end_exclusive": "0x31E4F"
+      },
+      {
+        "start": "0x31E50",
+        "end_exclusive": "0x31E5F"
+      },
+      {
+        "start": "0x31E60",
+        "end_exclusive": "0x31E6F"
+      },
+      {
+        "start": "0x31E70",
+        "end_exclusive": "0x31E9B"
+      },
+      {
+        "start": "0x31E9C",
+        "end_exclusive": "0x31EC7"
+      },
+      {
+        "start": "0x31EC8",
+        "end_exclusive": "0x31ECF"
+      },
+      {
+        "start": "0x31ED1",
+        "end_exclusive": "0x31ED9"
+      },
+      {
+        "start": "0x31EDA",
+        "end_exclusive": "0x31EDF"
+      },
+      {
+        "start": "0x31EE0",
+        "end_exclusive": "0x31F1F"
+      },
+      {
+        "start": "0x31F20",
+        "end_exclusive": "0x31F2F"
+      },
+      {
+        "start": "0x31F30",
+        "end_exclusive": "0x31F6F"
+      },
+      {
+        "start": "0x31F70",
+        "end_exclusive": "0x31F9F"
+      },
+      {
+        "start": "0x31FA0",
+        "end_exclusive": "0x31FAF"
+      },
+      {
+        "start": "0x31FB0",
+        "end_exclusive": "0x31FBF"
+      },
+      {
+        "start": "0x31FC0",
+        "end_exclusive": "0x31FEF"
+      },
+      {
+        "start": "0x31FF0",
+        "end_exclusive": "0x31FFF"
+      },
+      {
+        "start": "0x32000",
+        "end_exclusive": "0x32002"
+      },
+      {
+        "start": "0x32004",
+        "end_exclusive": "0x32006"
+      },
+      {
+        "start": "0x32009",
+        "end_exclusive": "0x32010"
+      }
+    ],
+    "targets": [
+      {
+        "kind": "main_menu_template",
+        "rom_offset": 127681,
+        "length": 128,
+        "cpu_source": "0xF2B1",
+        "ppu_destination": "0x2700"
+      },
+      {
+        "kind": "chr_pair_clone",
+        "rom_offset": 202768,
+        "length": 2048,
+        "source_chr_1k_pair": "0x3E",
+        "clone_chr_1k_pair": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202768,
+        "length": 16,
+        "glyph": "물",
+        "code": "0x80",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202784,
+        "length": 16,
+        "glyph": "물",
+        "code": "0x81",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203280,
+        "length": 16,
+        "glyph": "물",
+        "code": "0xA0",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203296,
+        "length": 16,
+        "glyph": "물",
+        "code": "0xA1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202800,
+        "length": 16,
+        "glyph": "건",
+        "code": "0x82",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202816,
+        "length": 16,
+        "glyph": "건",
+        "code": "0x83",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203312,
+        "length": 16,
+        "glyph": "건",
+        "code": "0xA2",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203328,
+        "length": 16,
+        "glyph": "건",
+        "code": "0xA3",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202832,
+        "length": 16,
+        "glyph": "상",
+        "code": "0x84",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202848,
+        "length": 16,
+        "glyph": "상",
+        "code": "0x85",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203344,
+        "length": 16,
+        "glyph": "상",
+        "code": "0xA4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203360,
+        "length": 16,
+        "glyph": "상",
+        "code": "0xA5",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202864,
+        "length": 16,
+        "glyph": "태",
+        "code": "0x86",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202880,
+        "length": 16,
+        "glyph": "태",
+        "code": "0x87",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203376,
+        "length": 16,
+        "glyph": "태",
+        "code": "0xA6",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203392,
+        "length": 16,
+        "glyph": "태",
+        "code": "0xA7",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202896,
+        "length": 16,
+        "glyph": "성",
+        "code": "0x88",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202912,
+        "length": 16,
+        "glyph": "성",
+        "code": "0x89",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203408,
+        "length": 16,
+        "glyph": "성",
+        "code": "0xA8",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203424,
+        "length": 16,
+        "glyph": "성",
+        "code": "0xA9",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202928,
+        "length": 16,
+        "glyph": "장",
+        "code": "0x8A",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202944,
+        "length": 16,
+        "glyph": "장",
+        "code": "0x8B",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203440,
+        "length": 16,
+        "glyph": "장",
+        "code": "0xAA",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203456,
+        "length": 16,
+        "glyph": "장",
+        "code": "0xAB",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202960,
+        "length": 16,
+        "glyph": "기",
+        "code": "0x8C",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202976,
+        "length": 16,
+        "glyph": "기",
+        "code": "0x8D",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203472,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xAC",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203488,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xAD",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202992,
+        "length": 16,
+        "glyph": "술",
+        "code": "0x8E",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203008,
+        "length": 16,
+        "glyph": "술",
+        "code": "0x8F",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203504,
+        "length": 16,
+        "glyph": "술",
+        "code": "0xAE",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203520,
+        "length": 16,
+        "glyph": "술",
+        "code": "0xAF",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203024,
+        "length": 16,
+        "glyph": "록",
+        "code": "0x90",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203040,
+        "length": 16,
+        "glyph": "록",
+        "code": "0x91",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203536,
+        "length": 16,
+        "glyph": "록",
+        "code": "0xB0",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203552,
+        "length": 16,
+        "glyph": "록",
+        "code": "0xB1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203056,
+        "length": 16,
+        "glyph": "동",
+        "code": "0x92",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203072,
+        "length": 16,
+        "glyph": "동",
+        "code": "0x93",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203568,
+        "length": 16,
+        "glyph": "동",
+        "code": "0xB2",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203584,
+        "length": 16,
+        "glyph": "동",
+        "code": "0xB3",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203088,
+        "length": 16,
+        "glyph": "료",
+        "code": "0x94",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203104,
+        "length": 16,
+        "glyph": "료",
+        "code": "0x95",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203600,
+        "length": 16,
+        "glyph": "료",
+        "code": "0xB4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203616,
+        "length": 16,
+        "glyph": "료",
+        "code": "0xB5",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203120,
+        "length": 16,
+        "glyph": "설",
+        "code": "0x96",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203136,
+        "length": 16,
+        "glyph": "설",
+        "code": "0x97",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203632,
+        "length": 16,
+        "glyph": "설",
+        "code": "0xB6",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203648,
+        "length": 16,
+        "glyph": "설",
+        "code": "0xB7",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203152,
+        "length": 16,
+        "glyph": "정",
+        "code": "0x98",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203168,
+        "length": 16,
+        "glyph": "정",
+        "code": "0x99",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203664,
+        "length": 16,
+        "glyph": "정",
+        "code": "0xB8",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203680,
+        "length": 16,
+        "glyph": "정",
+        "code": "0xB9",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203184,
+        "length": 16,
+        "glyph": "저",
+        "code": "0x9A",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203200,
+        "length": 16,
+        "glyph": "저",
+        "code": "0x9B",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203696,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xBA",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203712,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xBB",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "fixed_raster_r1_clone_page",
+        "rom_offset": 126557,
+        "length": 1,
+        "cpu_address": "0xEE4D",
+        "original": "0x3E",
+        "replacement": "0x46"
+      }
+    ]
+  },
+  "known_limits": [
+    "The fixed raster split is shared outside the menu, so other screens remain UNKNOWN.",
+    "Only the bounded menu route is eligible for this candidate's initial smoke test.",
+    "Menu cursor movement and return lifecycle need separate screen-context checks."
+  ]
+}

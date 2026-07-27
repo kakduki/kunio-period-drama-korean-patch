@@ -16,6 +16,10 @@ KEY_PYTHON = [
     "scripts/analyze_reference_ips.py",
     "scripts/analyze_dialogue_renderer.py",
     "scripts/analyze_english_font_slots.py",
+    "scripts/analyze_main_menu_context.py",
+    "scripts/analyze_main_menu_korean_candidate.py",
+    "scripts/build_main_menu_korean_candidate.py",
+    "scripts/generate_main_menu_pipeline_artifacts.py",
     "scripts/analyze_opening_dialogue_proof_capture.py",
     "scripts/analyze_opening_dialogue_renderer_probe.py",
     "scripts/analyze_opening_mapper_trace.py",
@@ -104,6 +108,10 @@ KEY_PYTHON = [
     "scripts/test_analyze_manual_screen_dump.py",
     "scripts/test_analyze_dialogue_renderer.py",
     "scripts/test_analyze_english_font_slots.py",
+    "scripts/test_analyze_main_menu_context.py",
+    "scripts/test_analyze_main_menu_korean_candidate.py",
+    "scripts/test_build_main_menu_korean_candidate.py",
+    "scripts/test_generate_main_menu_pipeline_artifacts.py",
     "scripts/test_analyze_opening_dialogue_proof_capture.py",
     "scripts/test_analyze_opening_dialogue_renderer_probe.py",
     "scripts/test_analyze_opening_mapper_trace.py",
@@ -207,6 +215,7 @@ LUA_SCRIPTS = [
     "lua/kunio_opening_dialogue_proof.lua",
     "lua/kunio_opening_ptr_183_probe.lua",
     "lua/kunio_opening_ptr_184_base_probe.lua",
+    "lua/kunio_main_menu_context_probe.lua",
     "lua/kunio_opening_mapper_trace.lua",
     "lua/kunio_opening_dialogue_renderer_probe.lua",
     "lua/kunio_autoplay_watch.lua",
@@ -335,6 +344,10 @@ def main() -> int:
     run("manual screen dump analyzer", ["scripts/test_analyze_manual_screen_dump.py"])
     run("dialogue renderer analyzer", ["scripts/test_analyze_dialogue_renderer.py"])
     run("English reference font slot mapper", ["scripts/test_analyze_english_font_slots.py"])
+    run("main-menu context analyzer", ["scripts/test_analyze_main_menu_context.py"])
+    run("main-menu Korean candidate smoke analyzer", ["scripts/test_analyze_main_menu_korean_candidate.py"])
+    run("main-menu Korean 16x16 candidate", ["scripts/test_build_main_menu_korean_candidate.py"])
+    run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])
     run("opening dialogue renderer probe analyzer", ["scripts/test_analyze_opening_dialogue_renderer_probe.py"])
     run("opening MMC3 mapper trace analyzer", ["scripts/test_analyze_opening_mapper_trace.py"])

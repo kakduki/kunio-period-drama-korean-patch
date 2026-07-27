@@ -25,6 +25,19 @@ STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
 BLIND_AUTOPLAY_FRAME_CAP = 900
 BLIND_AUTOPLAY_TIMEOUT_CAP = 45
 BLIND_AUTOPLAY_SCRIPT_NAMES = {"kunio_auto_dump.lua", "kunio_autoplay_watch.lua"}
+RESERVED_LUA_ENV = {
+    "KUNIO_ANALYSIS_OUTPUT",
+    "KUNIO_MAX_FRAMES",
+    "KUNIO_SNAPSHOT_EVERY",
+    "KUNIO_PPU_BURST_THRESHOLD",
+    "KUNIO_DUMP_HEX",
+    "KUNIO_DUMP_BIN",
+    "KUNIO_HIT_LIMIT",
+    "KUNIO_STAGNATION_ABORT",
+    "KUNIO_STAGNATION_MIN_FRAMES",
+    "KUNIO_STAGNATION_SAMPLES",
+    "KUNIO_TARGETS_LUA",
+}
 
 
 def find_rom() -> Path:
@@ -166,6 +179,20 @@ def validate_run_intent(args: argparse.Namespace, lua_script: Path) -> None:
         )
 
 
+def apply_lua_env_overrides(env: dict[str, str], overrides: list[str]) -> None:
+    """Apply only non-reserved KUNIO_* values for a bounded target script."""
+
+    for raw in overrides:
+        key, separator, value = raw.partition("=")
+        if not separator or not key or not value:
+            raise ValueError("--lua-env must use NAME=VALUE")
+        if not key.startswith("KUNIO_"):
+            raise ValueError("--lua-env names must begin with KUNIO_")
+        if key in RESERVED_LUA_ENV:
+            raise ValueError(f"--lua-env cannot override launcher-managed {key}")
+        env[key] = value
+
+
 def print_manual_capture_hint(reason: str) -> None:
     if reason == "stagnant_screen":
         print(
@@ -292,6 +319,7 @@ def launch(args: argparse.Namespace) -> int:
     env["KUNIO_STAGNATION_SAMPLES"] = str(args.stagnation_samples)
     if target_lua:
         env["KUNIO_TARGETS_LUA"] = target_lua.name
+    apply_lua_env_overrides(env, args.lua_env)
 
     cmd = [str(exe), "--loadlua", ascii_lua.name, "--sound", "0", ascii_rom.name]
     print("Launching:", " ".join(cmd))
@@ -351,6 +379,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--fceux", help="Path to qfceux.exe or fceux64.exe.")
     parser.add_argument("--lua-script", help="Dedicated, bounded Lua script to stage and run inside FCEUX.")
     parser.add_argument("--target-lua", help="Optional Lua target table copied beside the Lua script and exposed as KUNIO_TARGETS_LUA.")
+    parser.add_argument("--lua-env", action="append", default=[], metavar="NAME=VALUE", help="Pass one non-reserved KUNIO_* value to the bounded Lua script; repeat as needed.")
     parser.add_argument("--frames", type=int, default=1200, help="Hard frame ceiling for the selected Lua run.")
     parser.add_argument("--timeout", type=int, default=90, help="Hard wall-clock ceiling before stopping FCEUX.")
     parser.add_argument("--allow-blind-autoplay", action="store_true", help="Allow one diagnostic run of a legacy autoplay Lua script; it remains hard-capped at 900 frames and 45 seconds.")
