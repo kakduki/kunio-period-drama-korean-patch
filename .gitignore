@@ -69,6 +69,7 @@ rom_analysis/main_menu_korean_candidate_cursor_right_capture/
 rom_analysis/main_menu_korean_candidate_cursor_right_posttemplate_capture/
 rom_analysis/main_menu_items_*/
 rom_analysis/state_page_probe_raw/
+rom_analysis/state_single_byte_probe_v2_*/
 output/main_menu_korean_candidate/
 output/korean_development_candidate/
 output/pointer_dialogue_batch_002_003/
