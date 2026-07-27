@@ -18,6 +18,8 @@ Current release verdict: **UNKNOWN**
 | Release-wide Korean glyph capacity | UNKNOWN | Current allocations remain context-scoped. |
 | Full translated script | NOT_STARTED | Deliberately blocked until renderer-family evidence exists. |
 | Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; the bounded opening/extended routes reached no target capture, so early-boss screen context is not yet captured. |
+| Direct 8x16 pointer batch | UNKNOWN | Pointers 0-2 compile with 24 glyphs and 0 escaped bytes; boot passes at frame 883, but the frame-5000 route has no complete target match and p0 has a multi-message structural risk. |
+| Full Korean pointer draft capacity | BLOCKED | 244 active rows require 378 unique non-space symbols while only 26 direct source slots are proven. |
 | Release package | BLOCKED | Requires high-risk families and release checks to pass. |
 
 ## Required Before Release

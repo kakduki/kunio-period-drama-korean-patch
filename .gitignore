@@ -72,6 +72,12 @@ rom_analysis/state_page_probe_raw/
 output/main_menu_korean_candidate/
 output/korean_development_candidate/
 output/pointer_dialogue_batch_002_003/
+output/pointer_dialogue_batch_000_002_8x16/
+rom_analysis/pointer_dialogue_batch_000_002_8x16_boot_smoke/*.gd
+rom_analysis/pointer_dialogue_batch_000_002_8x16_boot_smoke/*.bin
+rom_analysis/pointer_dialogue_batch_000_002_8x16_boot_smoke/*.tsv
+rom_analysis/pointer_dialogue_batch_000_002_8x16_route_probe/*.gd
+rom_analysis/pointer_dialogue_batch_000_002_8x16_route_probe/*.bin
 rom_analysis/pointer_dialogue_batch_002_003_boot_smoke/*.bin
 rom_analysis/pointer_dialogue_batch_002_003_boot_smoke/*.gd
 rom_analysis/pointer_dialogue_batch_002_003_probe/*.gd

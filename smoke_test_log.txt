@@ -78,3 +78,22 @@ PASS | bounded Items frame 1960 | isolated R1 pool result=PASS
 SOFT_GATE_PASS | menu + Items page isolation | full Items Korean text remains a separate build
 UNKNOWN | cursor probe | post-template right input cleared the prior background selector cell, but no stable replacement position was proven
 UNKNOWN | other shared R1 contexts | only the Items conflict is proven so far
+
+candidate=pointer_dialogue_batch_000_002_8x16
+candidate_md5=ba3ef60856e1d2b5aa4dba40bcf1ff41
+pointer_indices=0,1,2
+pointer_0_record=0x05FE7->0x05FE7
+pointer_1_record=0x06009->0x06005
+pointer_2_record=0x06014->0x0600D
+pointer_batch_scope_escaped_bytes=0
+pointer_batch_runtime=UNKNOWN
+pointer_batch_boot_smoke=PASS
+pointer_batch_boot_smoke_frame=883
+pointer_batch_boot_smoke_final_reason=lua_done
+pointer_batch_target_route=UNKNOWN
+pointer_batch_target_route_frame=5000
+pointer_batch_target_route_phase=3
+pointer_batch_target_route_hits=216
+pointer_batch_target_route_final_reason=target_not_seen
+pointer_batch_target_route_screen_fingerprint=8507662:16320
+pointer_batch_structural_risk=p0_original_record_has_multiple_messages_but_candidate_compacts_to_one

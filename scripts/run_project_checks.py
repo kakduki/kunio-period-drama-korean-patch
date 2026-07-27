@@ -47,6 +47,9 @@ KEY_PYTHON = [
     "scripts/build_opening_dialogue_16x16_capacity.py",
     "scripts/build_opening_dialogue_182_183_16x16.py",
     "scripts/build_pointer_dialogue_batch_candidate.py",
+    "scripts/build_pointer_dialogue_8x16_candidate.py",
+    "scripts/analyze_pointer_dialogue_korean_draft.py",
+    "scripts/update_pointer_dialogue_8x16_runtime_report.py",
     "scripts/build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/build_opening_dialogue_bank8_persistent_page_proof.py",
     "scripts/build_v041_conflict_safe_candidate.py",
@@ -147,6 +150,8 @@ KEY_PYTHON = [
     "scripts/test_build_opening_dialogue_16x16_capacity.py",
     "scripts/test_build_opening_dialogue_182_183_16x16.py",
     "scripts/test_build_pointer_dialogue_batch_candidate.py",
+    "scripts/test_build_pointer_dialogue_8x16_candidate.py",
+    "scripts/test_analyze_pointer_dialogue_korean_draft.py",
     "scripts/test_build_opening_dialogue_182_184_16x16.py",
     "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
@@ -255,6 +260,7 @@ LUA_SCRIPTS = [
     "lua/kunio_ppu_watch.lua",
     "lua/kunio_pointer_dialogue_batch_probe.lua",
     "lua/kunio_pointer_dialogue_route_probe.lua",
+    "lua/kunio_pointer_dialogue_batch_000_002_8x16_probe.lua",
 ]
 
 REGEN_COMMANDS = [

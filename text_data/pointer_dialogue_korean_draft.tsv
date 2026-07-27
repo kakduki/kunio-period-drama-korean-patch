@@ -1,0 +1,249 @@
+pointer_index	translation_status	korean_text	basis	notes
+000	english_semantic_draft	그래 싸워라! 나와 싸우지 않으면 못 지나간다	english_reference	일본어 문맥 확인 필요
+001	english_semantic_draft	젠장!	english_reference	일본어 문맥 확인 필요
+002	english_semantic_draft	아, 또 만났군!	english_reference	초기 보스 대사 후보
+003	english_semantic_draft	그 녀석들 기억나? 저놈들이야!	english_reference	초기 보스 대사 후보
+004	english_semantic_draft	내 부하들을 어떻게 이긴 거냐?	english_reference	초기 보스 대사 후보
+005	english_semantic_draft	싸움 좀 하는군	english_reference	일본어 문맥 확인 필요
+006	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
+007	english_semantic_draft	그 녀석은 아무것도 아니야	english_reference	일본어 문맥 확인 필요
+008	english_semantic_draft	나도 같이 가자	english_reference	일본어 문맥 확인 필요
+009	english_semantic_draft	좋아, 우리도 싸우자	english_reference	일본어 문맥 확인 필요
+010	english_semantic_draft	항복이다! 네가 너무 강해	english_reference	일본어 문맥 확인 필요
+011	english_semantic_draft	아직 진짜 실력을 못 봤다	english_reference	일본어 문맥 확인 필요
+012	english_semantic_draft	좋아	english_reference	일본어 문맥 확인 필요
+013	english_semantic_draft	내가 저 녀석을 해치우지	english_reference	일본어 문맥 확인 필요
+014	english_semantic_draft	정말 고맙다	english_reference	일본어 문맥 확인 필요
+015	english_semantic_draft	너희는 대체 누구냐?	english_reference	일본어 문맥 확인 필요
+016	english_semantic_draft	녀석들을 잡아!	english_reference	일본어 문맥 확인 필요
+017	english_semantic_draft	아악! 내가 졌다	english_reference	일본어 문맥 확인 필요
+018	english_semantic_draft	우린 나쁜 놈일지 몰라도 여자는 괴롭히지 않아	english_reference	일본어 문맥 확인 필요
+019	english_semantic_draft	뭐라고? 내가 이겼다고?	english_reference	일본어 문맥 확인 필요
+020	english_semantic_draft	진로 큰두목이 네놈들을 혼내라고 나를 보냈다	english_reference	이름 표기 문맥 확인 필요
+021	english_semantic_draft	네놈들을 중국 끝까지 날려 주마	english_reference	일본어 문맥 확인 필요
+022	english_semantic_draft	좋아	english_reference	일본어 문맥 확인 필요
+023	english_semantic_draft	이제 진로가 상대해 주마	english_reference	이름 표기 문맥 확인 필요
+024	english_semantic_draft	그래, 네가 큰두목이군	english_reference	이름 표기 문맥 확인 필요
+025	english_semantic_draft	이 패배자들에게 본때를 보여 주지	english_reference	일본어 문맥 확인 필요
+026	english_semantic_draft	정말 질기군! 하지만 헤이시가 널 쓰러뜨린다	english_reference	이름 표기 문맥 확인 필요
+027	english_semantic_draft	쳇, 나중에 보자	english_reference	일본어 문맥 확인 필요
+028	english_semantic_draft	이봐! 너희 둘이 그 악당들이군	english_reference	일본어 문맥 확인 필요
+029	english_semantic_draft	나는 긴수다! 시작해 보자	english_reference	이름 표기 문맥 확인 필요
+030	english_semantic_draft	젠장! 안타깝지만 넌 반대편이야	english_reference	일본어 문맥 확인 필요
+031	english_semantic_draft	내 동생 헤이시에게 말해 주마	english_reference	이름 표기 문맥 확인 필요
+032	english_semantic_draft	잡을 수 있으면 잡아 봐	english_reference	일본어 문맥 확인 필요
+033	english_semantic_draft	이봐! 나는 헤이시다	english_reference	이름 표기 문맥 확인 필요
+034	english_semantic_draft	이런, 정말 세군	english_reference	일본어 문맥 확인 필요
+035	english_semantic_draft	진로 큰두목이 널 손봐 주마	english_reference	이름 표기 문맥 확인 필요
+036	english_semantic_draft	도망치지 않겠다	english_reference	일본어 문맥 확인 필요
+037	english_semantic_draft	지금 나와 싸워라	english_reference	일본어 문맥 확인 필요
+038	english_semantic_draft	넌 누구 밑에서 일하지? 토라를 섬긴다고 들었다	english_reference	이름 표기 문맥 확인 필요
+039	english_semantic_draft	미안하군 친구! 한 번만 봐 줘	english_reference	일본어 문맥 확인 필요
+040	english_semantic_draft	이것을 가져가라	english_reference	아이템 문맥 확인 필요
+041	english_semantic_draft	휴, 목욕이 필요하겠군	english_reference	일본어 문맥 확인 필요
+042	english_semantic_draft	신세를 졌다	english_reference	일본어 문맥 확인 필요
+043	english_semantic_draft	여기 있다! 이 한방약을 가져가라	english_reference	아이템 문맥 확인 필요
+044	english_semantic_draft	그 약으로 상처를 치료해	english_reference	아이템 문맥 확인 필요
+045	english_semantic_draft	나는 토라의 성스러운 수호자다! 천벌을 받아라	english_reference	이름 표기 문맥 확인 필요
+046	english_semantic_draft	허허, 뭐라고?	english_reference	일본어 문맥 확인 필요
+047	english_semantic_draft	형편없는 외지인들, 너희 영어는 엉망이군	english_reference	일본어 문맥 확인 필요
+048	english_semantic_draft	이봐! 한 번만 봐 줘, 지난 일은 잊자	english_reference	일본어 문맥 확인 필요
+049	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
+050	english_semantic_draft	나중에 보자, 친구	english_reference	일본어 문맥 확인 필요
+051	english_semantic_draft	히히	english_reference	일본어 문맥 확인 필요
+052	english_semantic_draft	개인적인 감정은 없어, 미안하다	english_reference	일본어 문맥 확인 필요
+053	english_semantic_draft	넌 누구 밑에서 일하지? 좋은 소식이 있다	english_reference	일본어 문맥 확인 필요
+054	english_semantic_draft	토라가 그 소녀를 데려갔다	english_reference	이름 표기 문맥 확인 필요
+055	english_semantic_draft	너와 함께 갈 수 없어. 대신 내가 가르쳐 주지	english_reference	일본어 문맥 확인 필요
+056	english_semantic_draft	나의 유명한 단검 공격이다	english_reference	기술 문맥 확인 필요
+057	english_semantic_draft	이제 떠나야 한다	english_reference	일본어 문맥 확인 필요
+058	english_semantic_draft	나중에 보자	english_reference	일본어 문맥 확인 필요
+059	english_semantic_draft	토라를 찾고 있다면 조심해라	english_reference	이름 표기 문맥 확인 필요
+060	english_semantic_draft	토라가 소녀를 납치했을 리 없어, 그렇지?	english_reference	이름 표기 문맥 확인 필요
+061	english_semantic_draft	말해 두지. 토라와 부하가 그녀를 붙잡았다	english_reference	이름 표기 문맥 확인 필요
+062	english_semantic_draft	그들은 위험하다	english_reference	일본어 문맥 확인 필요
+063	english_semantic_draft	너는 아사지와 관련 있군. 꽤 강하다고 들었다	english_reference	이름 표기 문맥 확인 필요
+064	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
+065	english_semantic_draft	부탁한다	english_reference	일본어 문맥 확인 필요
+066	english_semantic_draft	다시 돌아오겠다	english_reference	일본어 문맥 확인 필요
+067	english_semantic_draft	그래, 우리가 소녀를 잡았다. 위대한 분을 위해서다	english_reference	이름 표기 문맥 확인 필요
+068	english_semantic_draft	그녀를 되찾고 싶다면 우리를 이겨라	english_reference	일본어 문맥 확인 필요
+069	english_semantic_draft	그 얼간이가 도망갔다. 믿을 수 없군	english_reference	일본어 문맥 확인 필요
+070	english_semantic_draft	끝장을 내라, 이 자식아	english_reference	일본어 문맥 확인 필요
+071	english_semantic_draft	날 놓아준 걸 후회하게 될 거다	english_reference	일본어 문맥 확인 필요
+072	english_semantic_draft	너희가 누구를 데려와도 우리를 막을 수 없다	english_reference	일본어 문맥 확인 필요
+073	english_semantic_draft	도망칠 수 있을 때 도망쳐라	english_reference	일본어 문맥 확인 필요
+074	english_semantic_draft	또 너냐? 젠장	english_reference	일본어 문맥 확인 필요
+075	english_semantic_draft	너는 정말 웃기는군	english_reference	일본어 문맥 확인 필요
+076	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
+077	english_semantic_draft	대장님, 이 일의 배후에는 큰두목이 있다	english_reference	이름 표기 문맥 확인 필요
+078	english_semantic_draft	조심해라. 토라가 아사지라는 깡패를 고용했다	english_reference	이름 표기 문맥 확인 필요
+079	english_semantic_draft	큰두목이 고맙다고 전하더군	english_reference	이름 표기 문맥 확인 필요
+080	english_semantic_draft	아사지가 정말 누구를 섬기는지 알아내야 한다	english_reference	이름 표기 문맥 확인 필요
+081	english_semantic_draft	내가 큰두목이다. 난 나쁘고 강하다	english_reference	이름 표기 문맥 확인 필요
+082	english_semantic_draft	용서해 줘, 형제여. 내가 잘못했다	english_reference	일본어 문맥 확인 필요
+083	english_semantic_draft	형제여	english_reference	일본어 문맥 확인 필요
+084	english_semantic_draft	허허, 내 기막힌 계획은 어떤가?	english_reference	일본어 문맥 확인 필요
+085	english_semantic_draft	해야 할 일은 저자를 없애는 것뿐이다	english_reference	영어 원문의 대상 토큰 확인 필요
+086	english_semantic_draft	뒤를 조심해라. 히히	english_reference	일본어 문맥 확인 필요
+087	english_semantic_draft	토라, 이 멍청이들이 여기까지 왔다니 믿을 수 없군	english_reference	이름 표기 문맥 확인 필요
+088	english_semantic_draft	아사지, 너희 둘은 골칫거리가 되어 가는군	english_reference	이름 표기 문맥 확인 필요
+089	english_semantic_draft	아사지, 저들을 어떻게 처리할까?	english_reference	이름 표기 문맥 확인 필요
+090	english_semantic_draft	토라, 내가 직접 처리하겠다	english_reference	이름 표기 문맥 확인 필요
+091	english_semantic_draft	이런, 너희 꽤 나쁘군	english_reference	일본어 문맥 확인 필요
+092	english_semantic_draft	배짱은 있군	english_reference	일본어 문맥 확인 필요
+093	english_semantic_draft	아직 살아 있었군	english_reference	일본어 문맥 확인 필요
+094	english_semantic_draft	아사지, 이 쓸모없는 자식	english_reference	이름 표기 문맥 확인 필요
+095	english_semantic_draft	그래, 또 만났군. 토라를 이겼다고? 대단하군	english_reference	이름 표기 문맥 확인 필요
+096	english_semantic_draft	여기 있다, 이 부적을 받아라	english_reference	아이템 문맥 확인 필요
+097	english_semantic_draft	지금 나를 놀리는 거냐?	english_reference	일본어 문맥 확인 필요
+098	english_semantic_draft	이제라면 그를 이길 수 있을지도 모른다	english_reference	일본어 문맥 확인 필요
+099	english_semantic_draft	배짱이 있다면 나와 싸워라, 아사지	english_reference	이름 표기 문맥 확인 필요
+100	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
+101	english_semantic_draft	큰두목이 이것을 주셨다	english_reference	일본어 문맥 확인 필요
+102	english_semantic_draft	안 돼! 큰두목님	english_reference	일본어 문맥 확인 필요
+103	english_semantic_draft	이 일은 나중에 결판내자	english_reference	일본어 문맥 확인 필요
+104	english_semantic_draft	아사지, 너희를 박살내 주마	english_reference	이름 표기 문맥 확인 필요
+105	english_semantic_draft	하지만 먼저 너희에게 진실을 알려 주지	english_reference	일본어 문맥 확인 필요
+106	english_semantic_draft	너희는 그저 말에 불과했다	english_reference	일본어 문맥 확인 필요
+107	english_semantic_draft	아사지, 할 수 있을 때 기도해라	english_reference	이름 표기 문맥 확인 필요
+108	english_semantic_draft	허허, 이 멍청한 자식들	english_reference	일본어 문맥 확인 필요
+109	english_semantic_draft	이 비디오 게임의 음악은 정말 멋지지 않나?	english_reference	일본어 문맥 확인 필요
+110	english_semantic_draft	또 얻어맞으러 돌아왔군	english_reference	일본어 문맥 확인 필요
+111	english_semantic_draft	어?	english_reference	일본어 문맥 확인 필요
+112	english_semantic_draft	받아라! 뭐라고?	english_reference	일본어 문맥 확인 필요
+113	english_semantic_draft	이제 정말 화났다	english_reference	일본어 문맥 확인 필요
+114	english_semantic_draft	꺄악!	english_reference	일본어 문맥 확인 필요
+115	english_semantic_draft	둠디둠	english_reference	의성어 문맥 확인 필요
+116	english_semantic_draft	이봐, 풋내기!	english_reference	일본어 문맥 확인 필요
+117	english_semantic_draft	한 번만 더!	english_reference	일본어 문맥 확인 필요
+118	english_semantic_draft	락 앤 롤!	english_reference	일본어 문맥 확인 필요
+119	english_semantic_draft	이런, 정말 별로군	english_reference	일본어 문맥 확인 필요
+120	english_semantic_draft	이런!	english_reference	일본어 문맥 확인 필요
+121	english_semantic_draft	이게 대체 뭐야?	english_reference	특수 토큰 문맥 확인 필요
+122	english_semantic_draft	내가 녀석들을 때려 주지	english_reference	일본어 문맥 확인 필요
+123	english_semantic_draft	네놈을 박살내 주마	english_reference	일본어 문맥 확인 필요
+124	english_semantic_draft	이봐, 겁쟁이!	english_reference	일본어 문맥 확인 필요
+125	english_semantic_draft	이거나 먹어라!	english_reference	일본어 문맥 확인 필요
+126	english_semantic_draft	널 기억해 두겠다	english_reference	일본어 문맥 확인 필요
+127	english_semantic_draft	으에!	english_reference	일본어 문맥 확인 필요
+128	english_semantic_draft	으악!	english_reference	일본어 문맥 확인 필요
+129	english_semantic_draft	이 자식!	english_reference	일본어 문맥 확인 필요
+130	english_semantic_draft	으아!	english_reference	일본어 문맥 확인 필요
+131	english_semantic_draft	꺄!	english_reference	일본어 문맥 확인 필요
+132	english_semantic_draft	꺄악!	english_reference	일본어 문맥 확인 필요
+133	english_semantic_draft	으악!	english_reference	일본어 문맥 확인 필요
+134	english_semantic_draft	아야야야!	english_reference	일본어 문맥 확인 필요
+135	english_semantic_draft	어서 오세요	english_reference	상점/UI 문맥 확인 필요
+136	english_semantic_draft	무엇을 원하시나요?	english_reference	상점/UI 문맥 확인 필요
+137	english_semantic_draft	소지품이 가득 찼습니다	english_reference	상점/UI 문맥 확인 필요
+138	english_semantic_draft	돈이 부족합니다	english_reference	상점/UI 문맥 확인 필요
+139	english_semantic_draft	정말 확실한가요?	english_reference	상점/UI 문맥 확인 필요
+140	english_semantic_draft	고맙습니다	english_reference	상점/UI 문맥 확인 필요
+141	english_semantic_draft	먹었습니다	english_reference	상점/UI 문맥 확인 필요
+142	english_semantic_draft	마셨습니다	english_reference	상점/UI 문맥 확인 필요
+143	english_semantic_draft	얻었습니다	english_reference	상점/UI 문맥 확인 필요
+144	english_semantic_draft	장착했습니다	english_reference	상점/UI 문맥 확인 필요
+145	english_semantic_draft	다른 것은 더 없나요?	english_reference	상점/UI 문맥 확인 필요
+146	english_semantic_draft	고맙습니다. 또 오세요	english_reference	상점/UI 문맥 확인 필요
+147	english_semantic_draft	여기 머무르시겠어요?	english_reference	숙박/UI 문맥 확인 필요
+148	english_semantic_draft	편히 쉬세요	english_reference	숙박/UI 문맥 확인 필요
+149	english_semantic_draft	회복했습니다	english_reference	숙박/UI 문맥 확인 필요
+150	english_semantic_draft	도박을 해 볼래요?	english_reference	도박/UI 문맥 확인 필요
+151	english_semantic_draft	준비됐습니다	english_reference	도박/UI 문맥 확인 필요
+152	english_semantic_draft	지금 가세요	english_reference	도박/UI 문맥 확인 필요
+153	english_semantic_draft	우리는 이것과 저것을 가지고 있습니다	english_reference	아이템 변수 토큰 확인 필요
+154	english_semantic_draft	이겼습니다	english_reference	결과/UI 문맥 확인 필요
+155	english_semantic_draft	졌습니다	english_reference	결과/UI 문맥 확인 필요
+156	english_semantic_draft	그렇군요	english_reference	상점/UI 문맥 확인 필요
+157	english_semantic_draft	산키, 다시 오셨군요	english_reference	이름 표기 문맥 확인 필요
+158	english_semantic_draft	무언가 필요하신가요?	english_reference	상점/UI 문맥 확인 필요
+159	english_semantic_draft	천만에요	english_reference	상점/UI 문맥 확인 필요
+160	english_semantic_draft	무언가 필요하신가요?	english_reference	상점/UI 문맥 확인 필요
+161	english_semantic_draft	조심하세요	english_reference	상점/UI 문맥 확인 필요
+162	excluded_non_dialogue		english_reference	단독 종료 바이트라 번역하지 않음
+163	english_semantic_draft	동료를 선택하세요	english_reference	메뉴/UI 문맥 확인 필요
+164	english_semantic_draft	산키, 오코토는 괜찮습니다	english_reference	이름 표기 문맥 확인 필요
+165	english_semantic_draft	산키, 두 사람이 번개처럼 나타났습니다	english_reference	이름 표기 문맥 확인 필요
+166	english_semantic_draft	산키, 저는 아무것도 못 했습니다. 미안합니다	english_reference	이름 표기 문맥 확인 필요
+167	english_semantic_draft	바보들! 우리가 그들을 찾을 것이다	english_reference	일본어 문맥 확인 필요
+168	english_semantic_draft	그 한방약이 효과가 있었어! 나았어	english_reference	이름 표기 문맥 확인 필요
+169	english_semantic_draft	드디어 토라와 싸울 수 있어	english_reference	이름 표기 문맥 확인 필요
+170	english_semantic_draft	이 부적이 너를 지켜 줄 거야	english_reference	아이템 문맥 확인 필요
+171	english_semantic_draft	여기서 기다릴게. 오코토를 구해 줘	english_reference	이름 표기 문맥 확인 필요
+172	english_semantic_draft	그래	english_reference	일본어 문맥 확인 필요
+173	english_semantic_draft	아사지, 후지로 가는 게 어때?	english_reference	이름 표기 문맥 확인 필요
+174	english_semantic_draft	큰두목에게 확인하고 가야겠어	english_reference	일본어 문맥 확인 필요
+175	english_semantic_draft	부탁이야, 나를 보내 줘	english_reference	일본어 문맥 확인 필요
+176	english_semantic_draft	누군가 이것을 문 앞에 두고 갔어	english_reference	일본어 문맥 확인 필요
+177	english_semantic_draft	오코토, 아사지가 나를 납치했어	english_reference	이름 표기 문맥 확인 필요
+178	english_semantic_draft	집에 가. 모두가 걱정하고 있어	english_reference	일본어 문맥 확인 필요
+179	english_semantic_draft	오코토, 흐느낌. 고마워. 조심해	english_reference	이름 표기 문맥 확인 필요
+180	english_semantic_draft	아사지가 사라졌어	english_reference	이름 표기 문맥 확인 필요
+181	english_semantic_draft	츠우, 오빠! 기다려!	english_reference	이름 표기 문맥 확인 필요
+182	english_semantic_draft	쿠니오, 서둘러! 분조가 곤경에 빠졌어!	english_reference	opening_context	기존 오프닝 의미 초안
+183	english_semantic_draft	오코토, 쿠니오!	english_reference	opening_context	기존 오프닝 의미 초안
+184	english_semantic_draft	쿠니오, 서둘러 돌아오려고 했어	english_reference	opening_context	기존 오프닝 의미 초안
+185	english_semantic_draft	오코토, 이 사람은	english_reference	일본어 문맥 확인 필요
+186	english_semantic_draft	아사지, 나는 오코토의 약혼자야	english_reference	이름 표기 문맥 확인 필요
+187	english_semantic_draft	그건 두고 보자	english_reference	일본어 문맥 확인 필요
+188	english_semantic_draft	아사지, 조용히 해. 두목님이 기다리신다	english_reference	이름 표기 문맥 확인 필요
+189	english_semantic_draft	오, 스승님! 늦어서 죄송합니다	english_reference	일본어 문맥 확인 필요
+190	english_semantic_draft	아, 쿠니오! 드디어 왔구나	english_reference	이름 표기 문맥 확인 필요
+191	english_semantic_draft	토라가 나에게 저주를 걸었다	english_reference	이름 표기 문맥 확인 필요
+192	english_semantic_draft	치료사를 찾아가라	english_reference	일본어 문맥 확인 필요
+193	english_semantic_draft	한방약을 가진 사람은 누구냐?	english_reference	아이템 문맥 확인 필요
+194	english_semantic_draft	나만 믿어	english_reference	일본어 문맥 확인 필요
+195	english_semantic_draft	부디 서둘러라	english_reference	일본어 문맥 확인 필요
+196	english_semantic_draft	잘했다	english_reference	일본어 문맥 확인 필요
+197	english_semantic_draft	오늘을 구했다	english_reference	일본어 문맥 확인 필요
+198	english_semantic_draft	그런데, 그건 뭐지?	english_reference	일본어 문맥 확인 필요
+199	english_semantic_draft	오코토와 너라면 훌륭한 가족이 되겠군	english_reference	이름 표기 문맥 확인 필요
+200	english_semantic_draft	그렇지, 오코토?	english_reference	이름 표기 문맥 확인 필요
+201	english_semantic_draft	오코토, 아 맞다	english_reference	이름 표기 문맥 확인 필요
+202	english_semantic_draft	제발 부탁합니다	english_reference	일본어 문맥 확인 필요
+203	english_semantic_draft	좋아! 최고의 행복을 느끼는 순간이군	english_reference	일본어 문맥 확인 필요
+204	english_semantic_draft	축하주를 주문해야겠어	english_reference	일본어 문맥 확인 필요
+205	english_semantic_draft	나는 떠돌이야. 마을에서 마을로 떠돌지	english_reference	일본어 문맥 확인 필요
+206	english_semantic_draft	오코토에게는 훨씬 더 좋은 사람이 어울려	english_reference	이름 표기 문맥 확인 필요
+207	english_semantic_draft	그렇게 느꼈다면 미안해. 하지만	english_reference	일본어 문맥 확인 필요
+208	english_semantic_draft	언제든 우리를 만나러 와	english_reference	일본어 문맥 확인 필요
+209	english_semantic_draft	마을에 오면 언제든 들러	english_reference	일본어 문맥 확인 필요
+210	english_semantic_draft	알겠어. 이제 가야 해	english_reference	일본어 문맥 확인 필요
+211	english_semantic_draft	잘 가	english_reference	일본어 문맥 확인 필요
+212	english_semantic_draft	오코토, 아쉬워	english_reference	이름 표기 문맥 확인 필요
+213	english_semantic_draft	오코토, 아쉬워. 흐느낌	english_reference	이름 표기 문맥 확인 필요
+214	english_semantic_draft	둠디둠, 이 이야기가 재미있지 않나?	english_reference	엔딩 문맥 확인 필요
+215	english_semantic_draft	끝냈구나. 이제 할 일이 없나?	english_reference	엔딩 문맥 확인 필요
+216	english_semantic_draft	다시 만날지도 모르지. 그때 혼내 주마	english_reference	엔딩 문맥 확인 필요
+217	english_semantic_draft	끝	english_reference	엔딩 문맥 확인 필요
+218	english_semantic_draft	모험은 지금 시작된다	english_reference	인트로 문맥 확인 필요
+219	english_semantic_draft	어서 오세요	english_reference	인트로 문맥 확인 필요
+220	english_semantic_draft	다운타운 스페셜! 싸움꾼들이여, 환영한다	english_reference	인트로 문맥 확인 필요
+221	english_semantic_draft	우리와 만나자	english_reference	인트로 문맥 확인 필요
+222	english_semantic_draft	수수께끼의 땅 스루가, 후지산의 고향	english_reference	인트로 문맥 확인 필요
+223	english_semantic_draft	거친 바다를 건너	english_reference	인트로 문맥 확인 필요
+224	english_semantic_draft	의무가 부른다, 그리고 로맨스도	english_reference	인트로 문맥 확인 필요
+225	english_semantic_draft	쿠니오의 사랑이 기다린다	english_reference	인트로 문맥 확인 필요
+226	english_semantic_draft	정말 그녀일까?	english_reference	인트로 문맥 확인 필요
+227	english_semantic_draft	사용했습니다	english_reference	아이템/UI 문맥 확인 필요
+228	english_semantic_draft	새 지역으로 갈 준비가 됐나요? 그래	english_reference	이벤트/UI 문맥 확인 필요
+229	english_semantic_draft	받았습니다	english_reference	아이템/UI 문맥 확인 필요
+230	english_semantic_draft	떨어뜨렸습니다	english_reference	아이템/UI 문맥 확인 필요
+231	english_semantic_draft	상태가 올랐습니다	english_reference	성장/UI 문맥 확인 필요
+232	english_semantic_draft	능력치가 올랐습니다	english_reference	성장/UI 문맥 확인 필요
+233	english_semantic_draft	능력치가 올랐습니다	english_reference	성장/UI 문맥 확인 필요
+234	english_semantic_draft	능력치가 최대입니다	english_reference	성장/UI 문맥 확인 필요
+235	english_semantic_draft	기술을 배웠습니다	english_reference	성장/UI 문맥 확인 필요
+236	english_semantic_draft	상태 레벨이 올랐습니다. 이제 두 배입니다	english_reference	성장/UI 문맥 확인 필요
+237	english_semantic_draft	지도 커서로 이동하세요	english_reference	지도/UI 문맥 확인 필요
+238	english_semantic_draft	버렸습니다	english_reference	아이템/UI 문맥 확인 필요
+239	english_semantic_draft	미소 지었습니다	english_reference	이벤트/UI 문맥 확인 필요
+240	english_semantic_draft	몸이 가벼워졌습니다	english_reference	이벤트/UI 문맥 확인 필요
+241	english_semantic_draft	멋진 순간입니다	english_reference	이벤트/UI 문맥 확인 필요
+242	english_semantic_draft	장비와 능력치가 이제 두 배입니다	english_reference	성장/UI 문맥 확인 필요
+243	english_semantic_draft	넘어졌습니다	english_reference	이벤트/UI 문맥 확인 필요
+244	excluded_non_dialogue		english_reference	단독 변수 종료 레코드라 번역하지 않음
+245	english_semantic_draft	가족	english_reference	엔딩/UI 문맥 확인 필요
+246	excluded_non_dialogue		english_reference	코드/데이터 블록으로 보이며 대사 패치에서 제외
+247	excluded_non_dialogue		english_reference	포인터 테이블 외부 소유자이며 대사 레코드 아님

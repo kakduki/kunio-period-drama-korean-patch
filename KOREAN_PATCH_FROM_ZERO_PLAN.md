@@ -94,6 +94,21 @@ the early-boss dialogue. The current 5000-frame route reaches phase 3 and
 records read activity, but its screen fingerprint stabilizes before pointer 2/3
 appears; this is a route/state gap, not a text-build failure.
 
+The next controlled batch is `pointer_dialogue_batch_000_002_8x16`. It consumes
+the full 248-row Korean draft but compiles only pointers 0, 1, and 2. The
+records are repacked before protected pointer 3, and the already-proven direct
+8x16 renderer is guarded by the new pointer bases. Its bounded result is
+boot `PASS`, pointer route `UNKNOWN` at frame 5000 with 216 watcher hits, and
+no complete target match. Pointer 0 is intentionally marked structurally risky
+because its source record contains multiple messages while this first batch
+uses one compact draft message.
+
+The full draft audit is explicit: 244 active rows, 4 excluded rows, 378 unique
+non-space symbols, and only 26 currently proven direct source slots. The full
+script therefore remains capacity-blocked. Work proceeds as small
+font-capacity batches with independent runtime verdicts rather than as a
+single blind full-ROM translation.
+
 ### Phase 4: Bounded Verification
 
 Each run must declare a ROM, route, hard frame budget, target bytes, capture
@@ -108,13 +123,14 @@ target reads, and readable native output enter a release candidate.
 
 ## Immediate Next Targets
 
-1. Use the complete catalog to choose the first non-opening record with a
-   recoverable route and a known Japanese context.
-2. Extend the fixed opening regression route so it proves the combined
-   development candidate without returning to blind autoplay.
-3. Resolve one separate renderer family, starting with a direct menu/item
-   context before attempting combat dialogue.
-4. Build boss/event work only after a reusable targeted state exists.
+1. Obtain a save/debug/cheat state or a verified route for one non-opening
+   pointer, then rerun a target-only bounded capture.
+2. Preserve the direct 8x16 path as a development renderer and add the next
+   batch only when its source glyph count fits the proven pool.
+3. Keep the 248-row draft in semantic-review status until Japanese/video
+   context confirms each line.
+4. Resolve separate menu/item and boss/event renderer families with their own
+   target definitions; do not merge them into the opening candidate early.
 
 ## Release Gate
 

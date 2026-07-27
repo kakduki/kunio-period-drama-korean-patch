@@ -71,3 +71,24 @@ translation.
   at `8507662:16320`; neither pointer 2 nor 3 matched.
 - Runtime report: `rom_analysis/pointer_dialogue_batch_002_003_runtime.md`.
 - No visual PASS is claimed for these boss-dialogue records.
+
+## Direct 8x16 Pointer Batch 000-002
+
+- Status: **CANDIDATE_BUILT_RUNTIME_UNKNOWN**.
+- Candidate MD5: `ba3ef60856e1d2b5aa4dba40bcf1ff41`.
+- Batch: pointers `0`, `1`, and `2`; p1 and p2 are relocated before protected
+  pointer 3, while p0 retains its original Bank-1 address.
+- Direct source range: `0x81-0x98`, 24 glyphs; helper length: 76 bytes.
+- Scope audit: 0 escaped changed bytes. The ROM and IPS are ignored local
+  build products; the JSON/Markdown report and font preview are committed.
+- Boot smoke: **PASS**, frame `883`, terminal reason `lua_done`.
+- Bounded pointer route: **UNKNOWN**, frame `5000`, phase 3, 216 watcher hits,
+  final screen fingerprint `8507662:16320`, no complete p0/p1/p2 match.
+- Structural risk: p0 contains multiple source messages in the Japanese record;
+  this first candidate compacts the Korean draft to one message, so it is not
+  eligible for release promotion.
+
+The full Korean pointer draft is separately audited as `FULL_DRAFT_CAPACITY_BLOCKED`:
+244 active rows, 4 excluded rows, 378 unique non-space symbols, and only 26
+currently proven direct source slots. The next build must therefore remain a
+small, context-confirmed batch or introduce a new renderer/page strategy.

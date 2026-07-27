@@ -12,11 +12,13 @@ separate renderer family.
 | main_menu_korean_16x16_candidate | `0x1F2C1` / Bank 7 | English slot layout and Bank 7 page evidence | menu frame 1906 PASS; Items frame 1960 proves isolated pool | PASS menu / PASS page isolation | SOFT_GATE_PASS_ISOLATED_R1_POOL |
 | korean_development_candidate | opening records + menu clone / Bank 1 + Bank 7 | complete 248-row pointer catalog; scoped opening/menu changes | p182 `32/32`; p183 `25/25`; p184 `23/23`; all `lua_done` | opening regression PASS; menu and Items isolation PASS | SOFT_GATE_PASS_COMBINED_CANDIDATE |
 | pointer_dialogue_batch_002_003 | `0x06014`, relocated `0x06021` / Bank 1 | English pointer ownership and source-slot subset checked | boot PASS; opening route UNKNOWN; extended route phase 3/266 reads, target UNKNOWN | UNKNOWN; screen fingerprint stabilized, no manual screen claim | CANDIDATE_BUILT_RUNTIME_UNKNOWN |
+| pointer_dialogue_batch_000_002_8x16 | `0x05FE7-0x0601A`, relocated p1/p2 / Bank 1 | English pointer ownership, source-slot subset, and protected p3 boundary checked | boot PASS at frame 883; bounded route frame 5000, phase 3/216 hits, target UNKNOWN | Font preview only; no native target capture | CANDIDATE_BUILT_RUNTIME_UNKNOWN |
 
 The current menu candidate is MD5 `d425814e4f1249e2872c9eb09f7fb93d` and uses cloned R1 page `0x46`.
 The Items action source `0x13727` reaches PPU `0x2363` through the shared R1 page.
 The menu screenshot and Items page-isolation capture pass the development soft gate; other R1 contexts remain unaudited.
 
-The pointer batch candidate has MD5 `863c62ba178973ee1a96cc7971512149`.
-It is intentionally separate from the opening/menu candidate until a common
-multi-page renderer guard and early-boss screen route are proven.
+The pointer batch 002/003 candidate has MD5 `863c62ba178973ee1a96cc7971512149`.
+The direct 8x16 p0/p1/p2 candidate has MD5 `ba3ef60856e1d2b5aa4dba40bcf1ff41`.
+Both remain separate from the opening/menu candidate until a common renderer
+guard and a non-opening target route are proven.
