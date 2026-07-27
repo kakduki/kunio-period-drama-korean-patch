@@ -35,6 +35,8 @@ DEFAULT_MENU_CAPTURE = REPO_ROOT / "rom_analysis" / "state_page_probe_raw" / "de
 DEFAULT_ITEMS_CAPTURE = REPO_ROOT / "rom_analysis" / "state_page_probe_raw" / "development_candidate_items"
 DEFAULT_BASE_ITEMS_CAPTURE = REPO_ROOT / "rom_analysis" / "state_page_probe_raw" / "guard_items_base"
 DEFAULT_OPENING_CAPTURE = REPO_ROOT / "rom_analysis" / "opening_development_candidate_p182"
+DEFAULT_OPENING_P183_CAPTURE = REPO_ROOT / "rom_analysis" / "opening_development_candidate_p183"
+DEFAULT_OPENING_P184_CAPTURE = REPO_ROOT / "rom_analysis" / "opening_development_candidate_p184"
 DEFAULT_REPORT_JSON = REPO_ROOT / "rom_analysis" / "korean_development_candidate_runtime.json"
 DEFAULT_REPORT_MARKDOWN = REPO_ROOT / "rom_analysis" / "korean_development_candidate_runtime.md"
 DYNAMIC_TEMPLATE_OFFSETS = frozenset({0x21})
@@ -91,6 +93,12 @@ def clone_non_font_bytes_unchanged(candidate: bytes, base: bytes, *, clone_start
     )
 
 
+def opening_target_matches(capture: Path) -> bool:
+    opening_record = exactly_one(capture, "opening_target_record.tsv")
+    opening_rows = read_tsv(opening_record)
+    return bool(opening_rows) and opening_rows[-1].get("active_expected_match") == "true"
+
+
 def analyze(
     *,
     base_rom: Path,
@@ -99,6 +107,8 @@ def analyze(
     items_capture: Path,
     base_items_capture: Path,
     opening_capture: Path,
+    opening_p183_capture: Path,
+    opening_p184_capture: Path,
 ) -> dict[str, Any]:
     base = base_rom.read_bytes()
     candidate = candidate_rom.read_bytes()
@@ -114,10 +124,6 @@ def analyze(
     menu_snapshot = read_tsv(menu_capture / "mapper_snapshot.tsv")[-1]
     items_screen = exactly_one(items_capture, "*_screen.png")
     base_items_screen = exactly_one(base_items_capture, "*_screen.png")
-    opening_record = exactly_one(opening_capture, "opening_target_record.tsv")
-    opening_rows = read_tsv(opening_record)
-    opening_match = bool(opening_rows) and opening_rows[-1].get("active_expected_match") == "true"
-
     checks = {
         "candidate_base_md5": hashlib.md5(base).hexdigest() == "0d406a85285b4de8468f0dab6aad5fe5",
         "menu_lua_done": lua_done(menu_capture),
@@ -130,7 +136,11 @@ def analyze(
         "items_lua_done": lua_done(items_capture),
         "items_screen_pixel_equal_to_base": screenshot_pixel_equal(items_screen, base_items_screen),
         "opening_lua_done": lua_done(opening_capture),
-        "opening_target_match": opening_match,
+        "opening_p182_target_match": opening_target_matches(opening_capture),
+        "opening_p183_lua_done": lua_done(opening_p183_capture),
+        "opening_p183_target_match": opening_target_matches(opening_p183_capture),
+        "opening_p184_lua_done": lua_done(opening_p184_capture),
+        "opening_p184_target_match": opening_target_matches(opening_p184_capture),
     }
     return {
         "status": "SOFT_GATE_PASS_COMBINED_CANDIDATE" if all(checks.values()) else "SOFT_GATE_FAIL_COMBINED_CANDIDATE",
@@ -145,7 +155,8 @@ def analyze(
             "menu": str(menu_capture),
             "items": str(items_capture),
             "opening_p182": str(opening_capture),
-            "opening_target_record": str(opening_record),
+            "opening_p183": str(opening_p183_capture),
+            "opening_p184": str(opening_p184_capture),
         },
         "limits": [
             "This is a development candidate for three opening records and the main-menu labels.",
@@ -163,7 +174,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
         f"Release verdict: **{payload['release_verdict']}**",
         "",
         f"- Candidate MD5: `{payload['candidate']['md5']}`.",
-        "- The menu route, Items page-isolation route, and opening pointer-182 route all use fixed frame caps and ended with `lua_done`.",
+        "- The menu route, Items page-isolation route, and all three opening pointer routes use fixed frame caps and ended with `lua_done`.",
         "",
         "## Checks",
         "",
@@ -185,6 +196,8 @@ def main() -> int:
     parser.add_argument("--items-capture", type=Path, default=DEFAULT_ITEMS_CAPTURE)
     parser.add_argument("--base-items-capture", type=Path, default=DEFAULT_BASE_ITEMS_CAPTURE)
     parser.add_argument("--opening-capture", type=Path, default=DEFAULT_OPENING_CAPTURE)
+    parser.add_argument("--opening-p183-capture", type=Path, default=DEFAULT_OPENING_P183_CAPTURE)
+    parser.add_argument("--opening-p184-capture", type=Path, default=DEFAULT_OPENING_P184_CAPTURE)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
     args = parser.parse_args()
@@ -195,6 +208,8 @@ def main() -> int:
         items_capture=args.items_capture,
         base_items_capture=args.base_items_capture,
         opening_capture=args.opening_capture,
+        opening_p183_capture=args.opening_p183_capture,
+        opening_p184_capture=args.opening_p184_capture,
     )
     args.report_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     args.report_markdown.write_text(render_markdown(payload), encoding="utf-8")

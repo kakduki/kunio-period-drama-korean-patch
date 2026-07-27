@@ -16,13 +16,18 @@
     "items_lua_done": true,
     "items_screen_pixel_equal_to_base": true,
     "opening_lua_done": true,
-    "opening_target_match": true
+    "opening_p182_target_match": true,
+    "opening_p183_lua_done": true,
+    "opening_p183_target_match": true,
+    "opening_p184_lua_done": true,
+    "opening_p184_target_match": true
   },
   "captures": {
     "menu": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\state_page_probe_raw\\development_candidate_menu",
     "items": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\state_page_probe_raw\\development_candidate_items",
     "opening_p182": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_development_candidate_p182",
-    "opening_target_record": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_development_candidate_p182\\opening_target_record.tsv"
+    "opening_p183": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_development_candidate_p183",
+    "opening_p184": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\opening_development_candidate_p184"
   },
   "limits": [
     "This is a development candidate for three opening records and the main-menu labels.",

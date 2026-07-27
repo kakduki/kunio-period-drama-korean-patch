@@ -102,3 +102,9 @@ Runtime evidence is recorded in
 `rom_analysis/korean_development_candidate_runtime.md`. This is a development
 soft-gate candidate, not a final release: Items text, later dialogue, combat
 progression, and release-wide CHR sharing still require separate proof.
+
+The from-zero work order is documented in `KOREAN_PATCH_FROM_ZERO_PLAN.md`.
+The complete English-guided Bank 1 pointer worklist is generated into
+`rom_analysis/pointer_dialogue_catalog.tsv` (248 rows). English text in that
+catalog is structural reference only; Korean translation still requires
+Japanese context, renderer ownership, and bounded screen evidence.

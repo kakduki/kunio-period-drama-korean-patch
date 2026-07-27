@@ -29,6 +29,7 @@ KEY_PYTHON = [
     "scripts/generate_readability_proof_artifacts.py",
     "scripts/audit_opening_font_runtime_mapping.py",
     "scripts/compile_korean_scene_batch.py",
+    "scripts/build_pointer_dialogue_catalog.py",
     "scripts/extract_english_reference_script.py",
     "scripts/analyze_broad_scan_manual_dump.py",
     "scripts/analyze_manual_screen_dump.py",
@@ -126,6 +127,7 @@ KEY_PYTHON = [
     "scripts/test_generate_readability_proof_artifacts.py",
     "scripts/test_audit_opening_font_runtime_mapping.py",
     "scripts/test_compile_korean_scene_batch.py",
+    "scripts/test_build_pointer_dialogue_catalog.py",
     "scripts/test_analyze_reference_ips.py",
     "scripts/test_extract_english_reference_script.py",
     "scripts/test_auto_input_evidence_report.py",
@@ -365,6 +367,7 @@ def main() -> int:
     run("readability proof pipeline artifacts", ["scripts/test_generate_readability_proof_artifacts.py"])
     run("opening font runtime mapping audit", ["scripts/test_audit_opening_font_runtime_mapping.py"])
     run("Korean scene-batch compiler", ["scripts/test_compile_korean_scene_batch.py"])
+    run("complete pointer dialogue catalog", ["scripts/test_build_pointer_dialogue_catalog.py"])
     run("opening dialogue proof patch", ["scripts/test_build_opening_dialogue_proof.py"])
     run("opening dialogue 8x16 proof patch", ["scripts/test_build_opening_dialogue_8x16_proof.py"])
     run("opening dialogue paired 16x16 proof patch", ["scripts/test_build_opening_dialogue_16x16_proof.py"])

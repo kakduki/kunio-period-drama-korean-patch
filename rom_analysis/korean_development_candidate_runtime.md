@@ -4,7 +4,7 @@ Status: **SOFT_GATE_PASS_COMBINED_CANDIDATE**
 Release verdict: **UNKNOWN**
 
 - Candidate MD5: `6474e2d857dbbcbf1ce8f1e5d8201c08`.
-- The menu route, Items page-isolation route, and opening pointer-182 route all use fixed frame caps and ended with `lua_done`.
+- The menu route, Items page-isolation route, and all three opening pointer routes use fixed frame caps and ended with `lua_done`.
 
 ## Checks
 
@@ -17,7 +17,11 @@ Release verdict: **UNKNOWN**
 - `items_lua_done`: PASS
 - `items_screen_pixel_equal_to_base`: PASS
 - `opening_lua_done`: PASS
-- `opening_target_match`: PASS
+- `opening_p182_target_match`: PASS
+- `opening_p183_lua_done`: PASS
+- `opening_p183_target_match`: PASS
+- `opening_p184_lua_done`: PASS
+- `opening_p184_target_match`: PASS
 
 ## Limits
 

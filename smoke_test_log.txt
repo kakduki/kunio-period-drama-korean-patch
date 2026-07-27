@@ -31,6 +31,19 @@ pointer_184_visual_korean_glyph_review=PASS
 overall_smoke=PASS
 overall_proof=PASS_FOR_THREE_OPENING_CONTEXTS
 
+candidate=korean_development_candidate
+candidate_md5=6474e2d857dbbcbf1ce8f1e5d8201c08
+pointer_catalog_rows=248
+opening_p182_frame=883
+opening_p182_reads=32/32
+opening_p183_frame=1093
+opening_p183_reads=25/25
+opening_p184_frame=1399
+opening_p184_reads=23/23
+opening_routes=bounded_fixed_input_no_combat
+opening_routes_final_reason=lua_done
+combined_runtime=SOFT_GATE_PASS_COMBINED_CANDIDATE
+
 candidate=main_menu_korean_16x16_candidate
 PASS | bounded main-menu route | capture=1906 | result=lua_done
 PASS | candidate template rendered from PPU dump | result=True

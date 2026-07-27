@@ -8,6 +8,7 @@ Current release verdict: **UNKNOWN**
 | English structural reference | PASS | Recorded IPS SHA-256; used only for structure. |
 | Scoped three-record opening build | PASS | 129 declared changed spans; 0 escaped bytes; range guard protects pointer 185. |
 | Bounded boot and target reads | PASS | 182 frame 883 `32/32`; 183 frame 1093 `25/25`; 184 frame 1399 `23/23`; all `lua_done`. |
+| Complete pointer ownership catalog | PASS | English-guided Bank 1 catalog contains all 248 pointer rows; five missing conservative rows are explicitly listed for investigation. |
 | Native Korean readability | PASS | Three native 16x16 opening screenshots reviewed. |
 | Japanese source context | PASS | Pointer 184 base-ROM capture is recorded; prior opening records already had context evidence. |
 | Scoped main-menu build | SOFT_GATE_PASS_ISOLATED_R1_POOL | Menu capture and the bounded Items page-isolation smoke both pass. |

@@ -35,3 +35,18 @@ reproducible candidate identity without placing copyrighted ROM content in Git.
 The English patch validates structure only. Pointer 184's Japanese source was
 captured from the base ROM before translation. This is not a release-ready full
 translation.
+
+## Combined Development Candidate
+
+- Candidate MD5: `6474e2d857dbbcbf1ce8f1e5d8201c08`.
+- Combines the three opening records with the scoped main-menu clone-page
+  candidate.
+- Complete English-guided pointer catalog: `248` rows; Korean work status is
+  `development_verified_opening` for 182-184 and `structural_unknown` for the
+  remaining records.
+- Bounded opening regression on this exact candidate: pointer 182 frame 883
+  `32/32`, pointer 183 frame 1093 `25/25`, pointer 184 frame 1399 `23/23`.
+- All three opening routes ended with `lua_done`; no combat or unbounded
+  autoplay was used.
+- Runtime status: `SOFT_GATE_PASS_COMBINED_CANDIDATE`; release verdict remains
+  `UNKNOWN`.
