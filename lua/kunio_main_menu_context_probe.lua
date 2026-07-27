@@ -12,6 +12,18 @@ local PPU_WRITE_LIMIT = tonumber(os.getenv("KUNIO_PPU_WRITE_LIMIT") or "120000")
 local EXTRA_BUTTON = os.getenv("KUNIO_MENU_EXTRA_BUTTON") or ""
 local EXTRA_START = tonumber(os.getenv("KUNIO_MENU_EXTRA_START") or "")
 local EXTRA_DURATION = tonumber(os.getenv("KUNIO_MENU_EXTRA_DURATION") or "12")
+-- Optional, bounded source windows for a named menu sub-screen.  This keeps
+-- source proof narrow: callers provide comma-separated CPU ranges such as
+-- B600-B7FF,BC00-BC3F rather than tracing gameplay or the full PRG space.
+local EXTRA_SOURCE_RANGES_RAW = os.getenv("KUNIO_EXTRA_SOURCE_RANGES") or ""
+local EXTRA_SOURCE_READ_LIMIT = tonumber(os.getenv("KUNIO_EXTRA_SOURCE_READ_LIMIT") or "4000")
+local EXTRA_SOURCE_TRACE_START = tonumber(os.getenv("KUNIO_EXTRA_SOURCE_TRACE_START") or tostring(PPU_TRACE_START))
+local DUMP_SRAM = os.getenv("KUNIO_DUMP_SRAM") == "1"
+-- Queue buffers are RAM-backed and can be watched independently of the
+-- switchable PRG source.  They expose the final tile bytes before PPUDATA.
+local QUEUE_WRITE_RANGES_RAW = os.getenv("KUNIO_QUEUE_WRITE_RANGES") or ""
+local QUEUE_WRITE_LIMIT = tonumber(os.getenv("KUNIO_QUEUE_WRITE_LIMIT") or "1000")
+local QUEUE_WRITE_TRACE_START = tonumber(os.getenv("KUNIO_QUEUE_WRITE_TRACE_START") or tostring(EXTRA_SOURCE_TRACE_START))
 -- Fixed PRG Bank 7 menu-template span: ROM 0x1F2D0-0x1F33D maps to CPU
 -- $F2C0-$F32D. The English reference changes the eight visible labels here.
 local MENU_SOURCE_CPU_START = 0xF2C0
@@ -24,6 +36,8 @@ local mapper_snapshot_path = OUT_DIR .. "/mapper_snapshot.tsv"
 local ppu_writes_path = OUT_DIR .. "/ppu_writes.tsv"
 local ppu_rows_path = OUT_DIR .. "/ppu_rows.tsv"
 local source_reads_path = OUT_DIR .. "/menu_source_reads.tsv"
+local extra_source_reads_path = OUT_DIR .. "/extra_source_reads.tsv"
+local queue_writes_path = OUT_DIR .. "/queue_writes.tsv"
 local mapper_config_writes_path = OUT_DIR .. "/mapper_config_writes.tsv"
 local mapper_loader_exec_path = OUT_DIR .. "/mapper_loader_exec.tsv"
 
@@ -40,6 +54,8 @@ local callback_counts = {
     ppu_addr = 0,
     ppu_data = 0,
     menu_source = 0,
+    extra_source = 0,
+    queue_write = 0,
     mapper_config = 0,
     mapper_loader = 0,
 }
@@ -51,6 +67,8 @@ local registered = {
     ppu_addr = false,
     ppu_data = false,
     menu_source = false,
+    extra_source = false,
+    queue_write = false,
     mapper_config = false,
     mapper_loader = false,
 }
@@ -59,6 +77,10 @@ local ppu_addr = 0
 local ppu_increment = 1
 local ppu_write_count = 0
 local ppu_write_limit_reached = false
+local extra_source_read_count = 0
+local extra_source_read_limit_reached = false
+local queue_write_count = 0
+local queue_write_limit_reached = false
 local valid_buttons = {
     A = true,
     B = true,
@@ -76,6 +98,48 @@ end
 if EXTRA_BUTTON ~= "" and (EXTRA_START == nil or EXTRA_DURATION == nil or EXTRA_DURATION <= 0) then
     error("KUNIO_MENU_EXTRA_BUTTON requires a positive start and duration")
 end
+if EXTRA_SOURCE_READ_LIMIT == nil or EXTRA_SOURCE_READ_LIMIT <= 0 then
+    error("KUNIO_EXTRA_SOURCE_READ_LIMIT must be positive")
+end
+if EXTRA_SOURCE_TRACE_START == nil or EXTRA_SOURCE_TRACE_START < 0 then
+    error("KUNIO_EXTRA_SOURCE_TRACE_START must be non-negative")
+end
+if QUEUE_WRITE_LIMIT == nil or QUEUE_WRITE_LIMIT <= 0 then
+    error("KUNIO_QUEUE_WRITE_LIMIT must be positive")
+end
+if QUEUE_WRITE_TRACE_START == nil or QUEUE_WRITE_TRACE_START < 0 then
+    error("KUNIO_QUEUE_WRITE_TRACE_START must be non-negative")
+end
+
+local function parse_hex_ranges(raw, lower_bound, upper_bound, env_name, example)
+    local ranges = {}
+    if raw == "" then return ranges end
+    for token in string.gmatch(raw, "[^,]+") do
+        local start_text, end_text = string.match(token, "^%s*([%x]+)%s*%-%s*([%x]+)%s*$")
+        if start_text == nil or end_text == nil then
+            error(env_name .. " must use hex ranges such as " .. example)
+        end
+        local start_address = tonumber(start_text, 16)
+        local end_address = tonumber(end_text, 16)
+        if start_address == nil or end_address == nil or start_address > end_address then
+            error(env_name .. " contains an invalid range")
+        end
+        if start_address < lower_bound or end_address > upper_bound then
+            error(env_name .. " contains an address outside its allowed window")
+        end
+        ranges[#ranges + 1] = { start_address = start_address, end_address = end_address }
+    end
+    return ranges
+end
+
+local EXTRA_SOURCE_RANGES = parse_hex_ranges(
+    EXTRA_SOURCE_RANGES_RAW, 0x8000, 0xBFFF,
+    "KUNIO_EXTRA_SOURCE_RANGES", "B600-B7FF"
+)
+local QUEUE_WRITE_RANGES = parse_hex_ranges(
+    QUEUE_WRITE_RANGES_RAW, 0x0000, 0x7FFF,
+    "KUNIO_QUEUE_WRITE_RANGES", "6360-6380"
+)
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -272,6 +336,52 @@ local function on_menu_source_read(addr, size, value)
     }, "\t"))
 end
 
+local function on_extra_source_read(addr, size, value)
+    callback_counts.extra_source = callback_counts.extra_source + 1
+    local frame = emu.framecount()
+    if frame < EXTRA_SOURCE_TRACE_START or extra_source_read_limit_reached then return end
+    if extra_source_read_count >= EXTRA_SOURCE_READ_LIMIT then
+        extra_source_read_limit_reached = true
+        return
+    end
+    append(extra_source_reads_path, table.concat({
+        frame,
+        hex4(addr),
+        hex2(value or 0),
+        hex4(read_register("pc")),
+        hex2(read_register("a")),
+        hex2(read_register("x")),
+        hex2(read_register("y")),
+        hex2(mapper_control),
+        hex2(mapper_registers[6]),
+        hex2(mapper_registers[7]),
+    }, "\t"))
+    extra_source_read_count = extra_source_read_count + 1
+end
+
+local function on_queue_write(addr, size, value)
+    callback_counts.queue_write = callback_counts.queue_write + 1
+    local frame = emu.framecount()
+    if frame < QUEUE_WRITE_TRACE_START or queue_write_limit_reached then return end
+    if queue_write_count >= QUEUE_WRITE_LIMIT then
+        queue_write_limit_reached = true
+        return
+    end
+    append(queue_writes_path, table.concat({
+        frame,
+        hex4(addr),
+        hex2(value or 0),
+        hex4(read_register("pc")),
+        hex2(read_register("a")),
+        hex2(read_register("x")),
+        hex2(read_register("y")),
+        hex2(mapper_control),
+        hex2(mapper_registers[6]),
+        hex2(mapper_registers[7]),
+    }, "\t"))
+    queue_write_count = queue_write_count + 1
+end
+
 local function on_mapper_config_write(addr, size, value)
     callback_counts.mapper_config = callback_counts.mapper_config + 1
     if emu.framecount() < PPU_TRACE_START then return end
@@ -293,16 +403,31 @@ local function on_mapper_loader_exec()
     if emu.framecount() < PPU_TRACE_START then return end
     local stack = read_register("s")
     local return_address = nil
+    local caller_return_address = nil
+    local saved_r0 = nil
+    local saved_r1 = nil
     if stack ~= nil then
         local low = read_cpu_byte(0x0100 + ((stack + 1) % 0x100))
         local high = read_cpu_byte(0x0100 + ((stack + 2) % 0x100))
         return_address = (low + high * 0x100 + 1) % 0x10000
+        saved_r1 = read_cpu_byte(0x0100 + ((stack + 3) % 0x100))
+        saved_r0 = read_cpu_byte(0x0100 + ((stack + 4) % 0x100))
+        -- $EE3F saves the prior R0/R1 values with two PHA instructions before
+        -- it calls the mapper loader. Skip those two bytes to reach its caller.
+        local caller_low = read_cpu_byte(0x0100 + ((stack + 5) % 0x100))
+        local caller_high = read_cpu_byte(0x0100 + ((stack + 6) % 0x100))
+        caller_return_address = (caller_low + caller_high * 0x100 + 1) % 0x10000
     end
     append(mapper_loader_exec_path, table.concat({
         emu.framecount(),
         hex4(read_register("pc")),
         hex2(stack),
         hex4(return_address),
+        hex4(caller_return_address),
+        hex2(saved_r0),
+        hex2(saved_r1),
+        hex2(read_cpu_byte(0x0028)),
+        hex2(read_cpu_byte(0x0700)),
         hex2(read_cpu_byte(0x0502)),
         hex2(read_cpu_byte(0x0503)),
         hex2(read_register("a")),
@@ -383,6 +508,9 @@ local function capture()
         handle:close()
     end
     dump_cpu_range(stem .. "_cpu_ram.bin", 0x0000, 0x0800)
+    if DUMP_SRAM then
+        dump_cpu_range(stem .. "_sram_6000_7fff.bin", 0x6000, 0x2000)
+    end
     local nametable_ok = dump_ppu_range(stem .. "_nametable_2000_23bf.bin", 0x2000, 0x03C0)
     local all_nametables_ok = dump_ppu_range(stem .. "_nametables_2000_2fff.bin", 0x2000, 0x1000)
     local palette_ok = dump_ppu_range(stem .. "_palette_3f00_3f1f.bin", 0x3F00, 0x20)
@@ -396,6 +524,7 @@ local function capture()
         "nametables=" .. nametable_fingerprint(0x2000, 0x1000),
         "ppu_read=" .. tostring(nametable_ok and all_nametables_ok and palette_ok),
         "ppu_writes=" .. tostring(ppu_write_count),
+        "sram_dump=" .. tostring(DUMP_SRAM),
     }, "\t"))
 end
 
@@ -407,8 +536,10 @@ append(mapper_snapshot_path, "frame\tmapper_control\tmapper_select\tppu_control\
 append(ppu_writes_path, "frame\tppu_address\tvalue\tpc")
 append(ppu_rows_path, "nametable\trow\tvalues")
 append(source_reads_path, "frame\tcpu_address\tvalue\tpc\ta\tx\ty")
+append(extra_source_reads_path, "frame\tcpu_address\tvalue\tpc\ta\tx\ty\tmapper_control\tr6\tr7")
+append(queue_writes_path, "frame\tcpu_address\tvalue\tpc\ta\tx\ty\tmapper_control\tr6\tr7")
 append(mapper_config_writes_path, "frame\taddress\tvalue\tpc\ta\tx\ty\tcurrent_r0\tcurrent_r1")
-append(mapper_loader_exec_path, "frame\tpc\tstack\treturn_address\tr0_source\tr1_source\ta\tx\ty")
+append(mapper_loader_exec_path, "frame\tpc\tstack\treturn_address\tcaller_return_address\tsaved_r0\tsaved_r1\tzp28\tscreen_state\tr0_source\tr1_source\ta\tx\ty")
 
 append(route_path, "40\t49\tstart\ttitle")
 append(route_path, "130\t139\tA\ttitle")
@@ -457,6 +588,18 @@ registered.menu_source = true
 for address = MENU_SOURCE_CPU_START, MENU_SOURCE_CPU_END - 1 do
     registered.menu_source = register_read(address, on_menu_source_read) and registered.menu_source
 end
+registered.extra_source = true
+for _, range in ipairs(EXTRA_SOURCE_RANGES) do
+    for address = range.start_address, range.end_address do
+        registered.extra_source = register_read(address, on_extra_source_read) and registered.extra_source
+    end
+end
+registered.queue_write = true
+for _, range in ipairs(QUEUE_WRITE_RANGES) do
+    for address = range.start_address, range.end_address do
+        registered.queue_write = register_write(address, 1, on_queue_write) and registered.queue_write
+    end
+end
 registered.mapper_config = register_write(0x0502, 1, on_mapper_config_write)
 registered.mapper_config = register_write(0x0503, 1, on_mapper_config_write) and registered.mapper_config
 registered.mapper_loader = register_exec(0xFEDD, on_mapper_loader_exec)
@@ -468,7 +611,11 @@ append(summary_path, table.concat({
     "max_frames=" .. tostring(MAX_FRAMES),
     "ppu_trace_start=" .. tostring(PPU_TRACE_START),
     "extra_button=" .. EXTRA_BUTTON,
-    "callbacks=" .. tostring(registered.mapper_select and registered.mapper_data and registered.ppu_control and registered.ppu_addr and registered.ppu_data and registered.menu_source and registered.mapper_config and registered.mapper_loader),
+    "extra_source_ranges=" .. EXTRA_SOURCE_RANGES_RAW,
+    "extra_source_trace_start=" .. tostring(EXTRA_SOURCE_TRACE_START),
+    "queue_write_ranges=" .. QUEUE_WRITE_RANGES_RAW,
+    "queue_write_trace_start=" .. tostring(QUEUE_WRITE_TRACE_START),
+    "callbacks=" .. tostring(registered.mapper_select and registered.mapper_data and registered.ppu_control and registered.ppu_addr and registered.ppu_data and registered.menu_source and registered.extra_source and registered.queue_write and registered.mapper_config and registered.mapper_loader),
 }, "\t"))
 
 pcall(function() FCEU.speedmode("turbo") end)
@@ -493,6 +640,12 @@ append(summary_path, table.concat({
     "ppu_write_limit_reached=" .. tostring(ppu_write_limit_reached),
     "mapper_callbacks=" .. tostring(callback_counts.mapper_data),
     "menu_source_callbacks=" .. tostring(callback_counts.menu_source),
+    "extra_source_callbacks=" .. tostring(callback_counts.extra_source),
+    "extra_source_reads=" .. tostring(extra_source_read_count),
+    "extra_source_limit_reached=" .. tostring(extra_source_read_limit_reached),
+    "queue_write_callbacks=" .. tostring(callback_counts.queue_write),
+    "queue_writes=" .. tostring(queue_write_count),
+    "queue_write_limit_reached=" .. tostring(queue_write_limit_reached),
     "mapper_config_callbacks=" .. tostring(callback_counts.mapper_config),
     "mapper_loader_callbacks=" .. tostring(callback_counts.mapper_loader),
 }, "\t"))

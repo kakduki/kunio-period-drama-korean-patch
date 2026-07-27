@@ -1,0 +1,4 @@
+id,context,rom_offset,prg_16k_bank,mmc3_8k_bank,english_reference,korean_candidate,source_confidence,build_status
+ITEM-ACTIONS,"reachable main-menu Items screen, row 27",0x13727,4,9,USE / REMOVE / GIVE / DRP,사용 / 버리기 / 주기 / 버림,runtime-proven,BLOCKED_BY_TWO_ROW_QUEUE_AND_STATE_GUARD
+ITEM-NONE,"reachable main-menu Items screen, row 8",0x0FC31,3,7,NONE,없음,English-reference structural evidence,PENDING_RUNTIME_SOURCE_TRACE_AND_TWO_ROW_QUEUE
+ITEM-TITLE,"reachable main-menu Items screen, row 5",UNKNOWN,UNKNOWN,UNKNOWN,KUNIO'S ITEMS,쿠니오의 물건,screen-only,PENDING_DYNAMIC_TITLE_SOURCE_TRACE

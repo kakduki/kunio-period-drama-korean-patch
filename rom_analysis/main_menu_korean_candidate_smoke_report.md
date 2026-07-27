@@ -5,11 +5,11 @@ Release verdict: **UNKNOWN**
 
 ## Evidence
 
-- Candidate MD5: `de688d4bf18760cc4fa0682fee5571df`.
+- Candidate MD5: `d425814e4f1249e2872c9eb09f7fb93d`.
 - Menu capture completion: `lua_done`.
 - Final MMC3 R1: `46`; expected `0x46`.
 - Raster R1 clone writes: `517`.
-- Screen evidence: `C:\Users\kakdu\OneDrive\문서\자산관리\kunio-period-drama-korean-patch\rom_analysis\main_menu_korean_candidate_capture\main_menu_frame_001906_screen.png`.
+- Screen evidence: `rom_analysis\state_page_probe_raw\candidate_pool_menu\main_menu_frame_001906_screen.png`.
 
 ## Checks
 

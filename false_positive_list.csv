@@ -8,3 +8,4 @@ Dynamic menu selector,Template +0x21 / tile 0x7E changes independently of the st
 Main-menu edge tile,Tile 0xB8 at template rows 24/26 column 28 is layout decoration beside the label grid.,layout_tile,Preserve it.
 Unproven global Shift-JIS candidates,"No screen, pointer, or renderer context has been proven.",context_missing,Do not patch.
 English reference SETTNG typo,"The reference spelling is a structural clue, not source text to copy.",reference_text,Do not copy it.
+Historical 0x80-$9B main-menu R1 clone allocation,The first menu candidate reused code values present in the verified Items action row.,shared_mapper_page_conflict,Keep as a failed historical candidate; use the isolated code-pool allocation for the current soft-gated build.

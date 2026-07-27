@@ -19,14 +19,16 @@
 
 ## Main Menu Candidate
 
-- Candidate status: **SOFT_GATE_PASS**; release verdict: **UNKNOWN**.
+- Isolated menu smoke: **SOFT_GATE_PASS**; cross-screen page-isolation status: **SOFT_GATE_PASS_ISOLATED_R1_POOL**.
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
-- Candidate MD5: `de688d4bf18760cc4fa0682fee5571df`.
+- Candidate MD5: `d425814e4f1249e2872c9eb09f7fb93d`.
 - Static menu template: `0x1F2C1`.
 - Raster R1 clone switch: `0x3E` -> `0x46` at `0xEE4D`.
 - CHR page pair: `0x3E` -> `0x46`.
 - Source Bank 7 CHR pages are preserved; Korean tiles exist only in the cloned Bank 8 pair.
-- Declared changed spans: `129`.
+- Declared changed spans: `137`.
+- Bounded Items probe: **PASS** source-chain proof; current candidate **PASS**.
+- Page-isolation result: isolated Korean menu code pool is active without overlapping Items action codes
 
 The generated ROM and IPS remain local build products. This report records the
 reproducible candidate identity without placing copyrighted ROM content in Git.

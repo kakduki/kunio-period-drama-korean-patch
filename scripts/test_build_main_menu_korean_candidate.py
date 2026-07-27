@@ -12,6 +12,7 @@ from build_main_menu_korean_candidate import (
     CLONE_CHR_1K_PAIR,
     FONT_PROFILE,
     GLYPH_CODE_PAIRS,
+    KNOWN_ACTIVE_HIGH_CODES,
     MENU_SLOTS,
     RASTER_R1_VALUE_CLONE,
     RASTER_R1_VALUE_ORIGINAL,
@@ -24,18 +25,30 @@ from build_main_menu_korean_candidate import (
     chr_page_offset,
     default_square_font,
     build_square_glyph_tiles,
+    GLYPH_ORDER,
     resolve_base_rom,
+    validate_code_pool,
 )
+from korean_font_quality import evaluate_release_square_font, render_square_glyph_bitmaps
 
 
 def main() -> int:
     base = resolve_base_rom(None).read_bytes()
+    validate_code_pool()
     assert hashlib.md5(base).hexdigest() == BASE_MD5
     glyph_tiles = build_square_glyph_tiles(
         default_square_font(None),
         GLYPH_CODE_PAIRS,
         font_profile=FONT_PROFILE,
     )
+    font_quality = evaluate_release_square_font(
+        font_path=default_square_font(None),
+        font_profile=FONT_PROFILE,
+        bitmaps=render_square_glyph_bitmaps(
+            default_square_font(None), GLYPH_ORDER, font_profile=FONT_PROFILE
+        ),
+    )
+    assert font_quality["verdict"] == "PASS"
     patched, targets = apply_main_menu_candidate(base, glyph_tiles)
     layout = parse_ines_layout(base)
     source_start = chr_page_offset(layout, SOURCE_CHR_1K_PAIR)
@@ -53,7 +66,9 @@ def main() -> int:
     for index, (label_id, _legacy_row, column, _width) in enumerate(MENU_SLOTS):
         top_row = 24 if index < 4 else 26
         top_offset = (top_row - 24) * 32 + column
-        assert all(0x80 <= code < 0xA0 for code in template[top_offset : top_offset + 4])
+        label_codes = template[top_offset : top_offset + 4]
+        assert all(code in {code for pair in GLYPH_CODE_PAIRS.values() for code in pair} for code in label_codes)
+        assert not set(label_codes) & KNOWN_ACTIVE_HIGH_CODES
 
     target_ranges = [
         (int(target["rom_offset"]), int(target["rom_offset"]) + int(target["length"]))

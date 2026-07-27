@@ -14,19 +14,19 @@
   },
   "source": {
     "base_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
-    "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\main_menu_korean_candidate\\kunio_period_drama_korean_main_menu_16x16_candidate.nes",
+    "candidate_rom": "output\\main_menu_korean_candidate\\kunio_period_drama_korean_main_menu_16x16_candidate.nes",
     "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
-    "candidate_md5": "de688d4bf18760cc4fa0682fee5571df",
+    "candidate_md5": "d425814e4f1249e2872c9eb09f7fb93d",
     "template_rom_offset": "0x1F2C1",
     "source_chr_1k_pair": "0x3E",
     "clone_chr_1k_pair": "0x46",
     "expected_final_r1": "0x46"
   },
   "capture": {
-    "dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_korean_candidate_capture",
+    "dir": "rom_analysis\\state_page_probe_raw\\candidate_pool_menu",
     "final_reason": "lua_done",
-    "screen": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_korean_candidate_capture\\main_menu_frame_001906_screen.png",
-    "nametables": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_korean_candidate_capture\\main_menu_frame_001906_nametables_2000_2fff.bin",
+    "screen": "rom_analysis\\state_page_probe_raw\\candidate_pool_menu\\main_menu_frame_001906_screen.png",
+    "nametables": "rom_analysis\\state_page_probe_raw\\candidate_pool_menu\\main_menu_frame_001906_nametables_2000_2fff.bin",
     "final_mapper_snapshot": {
       "frame": "1906",
       "mapper_control": "07",

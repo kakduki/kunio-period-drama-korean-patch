@@ -67,7 +67,11 @@ rom_analysis/main_menu_korean_candidate_capture/mapper_config_writes.tsv
 rom_analysis/main_menu_korean_candidate_capture/mapper_loader_exec.tsv
 rom_analysis/main_menu_korean_candidate_cursor_right_capture/
 rom_analysis/main_menu_korean_candidate_cursor_right_posttemplate_capture/
+rom_analysis/main_menu_items_*/
+rom_analysis/state_page_probe_raw/
 output/main_menu_korean_candidate/
+output/korean_development_candidate/
+rom_analysis/opening_development_candidate_p182/
 rom_analysis/opening_dialogue_renderer_probe/*.bin
 rom_analysis/opening_dialogue_renderer_probe/*.gd
 rom_analysis/opening_dialogue_renderer_probe/dma.tsv

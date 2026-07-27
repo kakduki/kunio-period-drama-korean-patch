@@ -4,8 +4,11 @@
 The reachable menu's 128-byte template is copied to PPU $2700-$277F.  Its
 background text tiles are selected by a fixed raster split that temporarily
 maps MMC3 R1 to CHR page pair $3E/$3F.  This builder clones that pair into
-Bank 8 ($46/$47), replaces only declared Korean glyph tiles in the clone, and
-changes the raster split's immediate page value from $3E to $46.
+Bank 8 ($46/$47), replaces only declared Korean glyph tiles in an isolated
+code pool, and changes the raster split's immediate page value from $3E to
+$46.  The pool was selected against the captured Japanese/English menu and
+Items nametables so the first cross-screen candidate does not overwrite the
+Items action row.
 
 The source Bank 7 CHR pages remain byte-for-byte intact.  This is a bounded
 candidate for one known menu screen, not a release patch for all contexts.
@@ -25,6 +28,7 @@ from build_opening_dialogue_16x16_proof import (
 )
 from build_opening_dialogue_proof import BASE_MD5, resolve_base_rom
 from build_patch import make_records, write_ips
+from korean_font_quality import evaluate_release_square_font, render_square_glyph_bitmaps
 from korean_tile_font import square_font_profile, write_square_preview
 from rom_utils import REPO_ROOT
 
@@ -92,10 +96,70 @@ GLYPH_ORDER = (
     "\uc815",
     "\uc800",
 )
-GLYPH_CODE_PAIRS = {
-    glyph: (0x80 + index * 2, 0x81 + index * 2)
-    for index, glyph in enumerate(GLYPH_ORDER)
-}
+# These are deliberately non-contiguous pairs.  The old 0x80-$9B allocation
+# overlapped the verified Items action bytes (0x83, 0x86, 0x8D, 0x90, ...).
+# Every selected code and its 0x20 lower-half partner is absent from the
+# bounded Japanese/English menu and Items nametables captured in this repo.
+ISOLATED_GLYPH_CODE_PAIRS = (
+    (0x80, 0x81),
+    (0xC1, 0x82),
+    (0x84, 0xC4),
+    (0x85, 0xC5),
+    (0xA6, 0x87),
+    (0xC7, 0xA8),
+    (0xC9, 0x8A),
+    (0xCA, 0xAB),
+    (0xCC, 0xAD),
+    (0x8E, 0x8F),
+    (0xB0, 0x91),
+    (0xD1, 0x94),
+    (0xD4, 0x95),
+    (0xB6, 0x97),
+)
+GLYPH_CODE_PAIRS = dict(zip(GLYPH_ORDER, ISOLATED_GLYPH_CODE_PAIRS))
+
+# The union is the runtime-visible high-code set from the bounded base and
+# English menu plus the base/English Items screen.  It is an evidence gate,
+# not a claim that the whole game has been audited.
+KNOWN_ACTIVE_HIGH_CODES = frozenset(
+    {
+        0x83,
+        0x86,
+        0x88,
+        0x8B,
+        0x8D,
+        0x90,
+        0x92,
+        0x93,
+        0x96,
+        0x9A,
+        0x9D,
+        0x9F,
+        0xA9,
+        0xAC,
+        0xB8,
+        0xC2,
+        0xC3,
+        0xCF,
+        0xD2,
+        0xD3,
+        0xD5,
+        0xD8,
+        0xDF,
+        0xE0,
+        0xE2,
+        0xE3,
+        0xED,
+        0xEE,
+        0xEF,
+        0xF0,
+        0xF2,
+        0xF3,
+        0xFD,
+        0xFE,
+        0xFF,
+    }
+)
 
 
 def add_target(
@@ -132,9 +196,24 @@ def chr_page_offset(layout, page: int) -> int:
 
 
 def clone_tile_offset(layout, code: int) -> int:
-    if not 0x80 <= code < 0xC0:
-        raise ValueError(f"menu glyph code must use clone page $80-$BF: 0x{code:02X}")
-    return chr_page_offset(layout, CLONE_CHR_1K_PAIR) + (code & 0x3F) * CHR_TILE_SIZE
+    if not 0x80 <= code < 0x100:
+        raise ValueError(f"menu glyph code must use clone page $80-$FF: 0x{code:02X}")
+    return chr_page_offset(layout, CLONE_CHR_1K_PAIR) + (code & 0x7F) * CHR_TILE_SIZE
+
+
+def validate_code_pool() -> None:
+    allocated = {
+        code
+        for left, right in GLYPH_CODE_PAIRS.values()
+        for code in (left, right, left + 0x20, right + 0x20)
+    }
+    if len(allocated) != len(GLYPH_CODE_PAIRS) * 4:
+        raise AssertionError("Korean menu glyph code pool contains duplicate tiles")
+    if allocated & KNOWN_ACTIVE_HIGH_CODES:
+        overlap = ", ".join(f"0x{code:02X}" for code in sorted(allocated & KNOWN_ACTIVE_HIGH_CODES))
+        raise AssertionError(f"Korean menu pool overlaps bounded active codes: {overlap}")
+    if any(code >= 0x100 for code in allocated):
+        raise AssertionError("Korean menu lower-half code exceeds one-byte tile range")
 
 
 def label_tile_rows(label: str) -> tuple[bytes, bytes]:
@@ -195,7 +274,12 @@ def _assert_declared_scope(
 def apply_main_menu_candidate(
     base: bytes,
     glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
+    *,
+    clone_source: bytes | None = None,
 ) -> tuple[bytes, list[dict[str, object]]]:
+    validate_code_pool()
+    if clone_source is not None and len(clone_source) != len(base):
+        raise ValueError("menu clone-source ROM length differs from the target ROM")
     if base[RASTER_R1_VALUE_ROM_OFFSET] != RASTER_R1_VALUE_ORIGINAL:
         actual = base[RASTER_R1_VALUE_ROM_OFFSET]
         raise ValueError(
@@ -226,7 +310,8 @@ def apply_main_menu_candidate(
         ppu_destination=f"0x{PPU_DESTINATION:04X}",
     )
 
-    patched[clone_start:clone_end] = base[source_start:source_end]
+    clone_bytes = (clone_source or base)[source_start:source_end]
+    patched[clone_start:clone_end] = clone_bytes
     add_target(
         targets,
         kind="chr_pair_clone",
@@ -234,6 +319,7 @@ def apply_main_menu_candidate(
         length=CHR_PAIR_SIZE,
         source_chr_1k_pair=f"0x{SOURCE_CHR_1K_PAIR:02X}",
         clone_chr_1k_pair=f"0x{CLONE_CHR_1K_PAIR:02X}",
+        clone_source="external_base_rom" if clone_source is not None else "target_rom",
     )
 
     for glyph, (left_code, right_code) in GLYPH_CODE_PAIRS.items():
@@ -271,7 +357,7 @@ def apply_main_menu_candidate(
     )
 
     _assert_declared_scope(base, bytes(patched), targets)
-    if patched[source_start:source_end] != base[source_start:source_end]:
+    if clone_source is None and patched[source_start:source_end] != base[source_start:source_end]:
         raise AssertionError("source Bank 7 CHR pair was modified")
     return bytes(patched), targets
 
@@ -285,13 +371,14 @@ def build_report(
     ips_path: Path,
     rom_path: Path,
     font_path: Path,
+    font_quality: dict[str, object],
 ) -> dict[str, object]:
     layout = parse_ines_layout(base)
     source_start = chr_page_offset(layout, SOURCE_CHR_1K_PAIR)
     clone_start = chr_page_offset(layout, CLONE_CHR_1K_PAIR)
     spans = changed_spans(base, patched)
     return {
-        "status": "CANDIDATE_BUILT_PENDING_BOUNDED_MENU_SMOKE",
+        "status": "CANDIDATE_BUILT_PENDING_BOUNDED_CROSS_SCREEN_SMOKE",
         "source": {
             "base_md5": hashlib.md5(base).hexdigest(),
             "template_rom_offset": f"0x{TEMPLATE_ROM_OFFSET:05X}",
@@ -305,6 +392,10 @@ def build_report(
             "raster_r1_clone": f"0x{RASTER_R1_VALUE_CLONE:02X}",
             "source_chr_1k_pair": f"0x{SOURCE_CHR_1K_PAIR:02X}",
             "clone_chr_1k_pair": f"0x{CLONE_CHR_1K_PAIR:02X}",
+            "glyph_code_pool": "isolated_noncontiguous_0x80_to_0xD4",
+            "known_active_high_codes_excluded": [
+                f"0x{code:02X}" for code in sorted(KNOWN_ACTIVE_HIGH_CODES)
+            ],
             "source_chr_rom_range": [
                 f"0x{source_start:05X}",
                 f"0x{source_start + CHR_PAIR_SIZE - 1:05X}",
@@ -316,6 +407,7 @@ def build_report(
             "source_bank7_pair_unchanged": True,
             "font_profile": FONT_PROFILE,
             "font_path": str(font_path),
+            "font_quality": font_quality,
             "labels": [
                 {
                     "id": label_id,
@@ -344,9 +436,9 @@ def build_report(
             "targets": targets,
         },
         "known_limits": [
-            "The fixed raster split is shared outside the menu, so other screens remain UNKNOWN.",
-            "Only the bounded menu route is eligible for this candidate's initial smoke test.",
-            "Menu cursor movement and return lifecycle need separate screen-context checks.",
+            "The isolated pool is proven only against the bounded Japanese/English menu and Items nametables.",
+            "The fixed R1 clone remains a soft-gated shared renderer change; dialogue, status, and gameplay contexts are not audited.",
+            "This ROM is a bounded candidate until both menu and Items captures pass with lua_done.",
         ],
     }
 
@@ -368,7 +460,9 @@ def render_markdown(payload: dict[str, object]) -> str:
         f"- Fixed raster R1: `{source['raster_r1_original']}` -> `{source['raster_r1_clone']}` at `{source['raster_r1_cpu_address']}`.",
         f"- CHR pair clone: `{source['source_chr_1k_pair']}` -> `{source['clone_chr_1k_pair']}`.",
         "- The original Bank 7 CHR pair is preserved; only the cloned Bank 8 pair receives Korean tiles.",
+        "- Korean tiles use an isolated non-contiguous code pool; the bounded Items high-code set is excluded.",
         "- English patch use: structural menu-slot and font-page evidence, not text or artwork reuse.",
+        f"- Korean font quality gate: **{source['font_quality']['verdict']}**.",
         "",
         "## Labels",
         "",
@@ -417,6 +511,18 @@ def main() -> int:
         raise ValueError(f"unsupported base ROM MD5: {actual_md5}")
 
     font_path = default_square_font(args.font)
+    glyph_bitmaps = render_square_glyph_bitmaps(
+        font_path,
+        GLYPH_ORDER,
+        font_profile=FONT_PROFILE,
+    )
+    font_quality = evaluate_release_square_font(
+        font_path=font_path,
+        font_profile=FONT_PROFILE,
+        bitmaps=glyph_bitmaps,
+    )
+    if font_quality["verdict"] != "PASS":
+        raise ValueError(f"Korean font quality gate failed: {font_quality['checks']}")
     glyph_tiles = build_square_glyph_tiles(
         font_path,
         GLYPH_CODE_PAIRS,
@@ -448,6 +554,7 @@ def main() -> int:
         ips_path=ips_path,
         rom_path=rom_path,
         font_path=font_path,
+        font_quality=font_quality,
     )
     args.report_json.parent.mkdir(parents=True, exist_ok=True)
     args.report_markdown.parent.mkdir(parents=True, exist_ok=True)

@@ -15,6 +15,7 @@ from rom_utils import REPO_ROOT
 DEFAULT_CONTEXT_REPORT = REPO_ROOT / "rom_analysis" / "main_menu_context_report.json"
 DEFAULT_CANDIDATE_REPORT = REPO_ROOT / "rom_analysis" / "main_menu_korean_candidate.json"
 DEFAULT_SMOKE_REPORT = REPO_ROOT / "rom_analysis" / "main_menu_korean_candidate_smoke_report.json"
+DEFAULT_ITEMS_CONTEXT_REPORT = REPO_ROOT / "rom_analysis" / "items_context" / "report.json"
 
 HISTORICAL_OPENING_ROWS = (
     (
@@ -102,9 +103,26 @@ def write_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def markdown_matrix(context: dict[str, Any], candidate: dict[str, Any], smoke: dict[str, Any]) -> str:
+def main_menu_integration_status(items_context: dict[str, Any]) -> str:
+    if items_context.get("candidate_page_verdict") == "FAIL":
+        return "QUARANTINED_SHARED_R1_CONFLICT"
+    if items_context.get("candidate_page_verdict") == "UNKNOWN":
+        return "UNKNOWN_SHARED_R1_CONTEXT"
+    if items_context.get("candidate_page_verdict") == "PASS":
+        return "SOFT_GATE_PASS_ISOLATED_R1_POOL"
+    return "PENDING_ITEMS_CONTEXT_PROOF"
+
+
+def markdown_matrix(
+    context: dict[str, Any],
+    candidate: dict[str, Any],
+    smoke: dict[str, Any],
+    items_context: dict[str, Any],
+) -> str:
     source = candidate["source"]
     candidate_info = candidate["candidate"]
+    integration_status = main_menu_integration_status(items_context)
+    items_source = items_context["source_chain"]
     return "\n".join(
         [
             "# Build Matrix",
@@ -121,16 +139,22 @@ def markdown_matrix(context: dict[str, Any], candidate: dict[str, Any], smoke: d
             for build, offset, reference, runtime, visual, result in HISTORICAL_OPENING_ROWS
         ]
         + [
-            f"| main_menu_korean_16x16_candidate | `{context['source']['template_rom_offset']}` / Bank 7 | English slot layout and Bank 7 page evidence | frame 1906 `lua_done` | PASS | {smoke['status']} |",
+            f"| main_menu_korean_16x16_candidate | `{context['source']['template_rom_offset']}` / Bank 7 | English slot layout and Bank 7 page evidence | menu frame 1906 PASS; Items frame 1960 proves isolated pool | PASS menu / PASS page isolation | {integration_status} |",
             "",
             f"The current menu candidate is MD5 `{candidate_info['patched_md5']}` and uses cloned R1 page `{source['raster_r1_clone']}`.",
-            "Release verdict remains `UNKNOWN` until shared-raster contexts and menu lifecycle are checked.",
+            f"The Items action source `{items_source['rom_offset']}` reaches PPU `{items_source['ppu_start']}` through the shared R1 page.",
+            "The menu screenshot and Items page-isolation capture pass the development soft gate; other R1 contexts remain unaudited.",
             "",
         ]
     )
 
 
-def write_string_candidates(path: Path, context: dict[str, Any], smoke: dict[str, Any]) -> None:
+def write_string_candidates(
+    path: Path,
+    context: dict[str, Any],
+    smoke: dict[str, Any],
+    items_context: dict[str, Any],
+) -> None:
     fields = [
         "id",
         "context",
@@ -150,6 +174,7 @@ def write_string_candidates(path: Path, context: dict[str, Any], smoke: dict[str
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
         writer.writerows(HISTORICAL_STRING_ROWS)
+        integration_status = main_menu_integration_status(items_context)
         for row in context["labels"]:
             rom_offset = int(row["rom_offset"], 16)
             cpu = 0xF2B1 + rom_offset - int(context["source"]["template_rom_offset"], 16)
@@ -168,11 +193,32 @@ def write_string_candidates(path: Path, context: dict[str, Any], smoke: dict[str
                     ),
                     "korean_text": row["korean_candidate"],
                     "font_profile": "readable_16x16_bank8_clone",
-                    "runtime_status": smoke["status"],
-                    "visual_status": "PASS",
-                    "decision": "SOFT_GATE_PASS",
+                    "runtime_status": f"{smoke['status']}; Items isolation {items_context['candidate_page_verdict']}",
+                    "visual_status": "PASS_MENU_AND_ITEMS_PAGE_ISOLATION",
+                    "decision": integration_status,
                 }
             )
+        source = items_context["source_chain"]
+        translation = items_context["candidate_translation"]
+        reference = items_context["english_reference"]
+        writer.writerow(
+            {
+                "id": "ITEM-ACTIONS",
+                "context": "reachable main-menu Items screen, row 27",
+                "base_rom_offset": source["rom_offset"],
+                "candidate_rom_offset": "UNPATCHED",
+                "prg_bank": source["prg_16k_bank"],
+                "base_cpu": source["cpu_start"],
+                "candidate_cpu": "UNPATCHED",
+                "japanese_context": "runtime-proven action template; English reference "
+                + " / ".join(reference["actions"]),
+                "korean_text": translation["actions"],
+                "font_profile": "ISOLATED_R1_POOL_UNPATCHED_ITEMS_TEXT",
+                "runtime_status": items_context["context_verdict"],
+                "visual_status": "PASS_PAGE_ISOLATION_NOT_TRANSLATED",
+                "decision": translation["status"],
+            }
+        )
 
 
 def write_false_positive_list(path: Path) -> None:
@@ -232,6 +278,12 @@ def write_false_positive_list(path: Path) -> None:
             "classification": "reference_text",
             "disposition": "Do not copy it.",
         },
+        {
+            "candidate": "Historical 0x80-$9B main-menu R1 clone allocation",
+            "reason": "The first menu candidate reused code values present in the verified Items action row.",
+            "classification": "shared_mapper_page_conflict",
+            "disposition": "Keep as a failed historical candidate; use the isolated code-pool allocation for the current soft-gated build.",
+        },
     ]
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -239,9 +291,13 @@ def write_false_positive_list(path: Path) -> None:
         writer.writerows(rows)
 
 
-def patched_rom_report(candidate: dict[str, Any], smoke: dict[str, Any]) -> str:
+def patched_rom_report(
+    candidate: dict[str, Any], smoke: dict[str, Any], items_context: dict[str, Any]
+) -> str:
     source = candidate["source"]
     info = candidate["candidate"]
+    conflict = items_context["candidate_page_conflict"]
+    integration_status = main_menu_integration_status(items_context)
     return "\n".join(
         [
             "# Patched ROM Report",
@@ -265,7 +321,7 @@ def patched_rom_report(candidate: dict[str, Any], smoke: dict[str, Any]) -> str:
             "",
             "## Main Menu Candidate",
             "",
-            f"- Candidate status: **{smoke['status']}**; release verdict: **{smoke['release_verdict']}**.",
+            f"- Isolated menu smoke: **{smoke['status']}**; cross-screen page-isolation status: **{integration_status}**.",
             f"- Base MD5: `{source['base_md5']}`.",
             f"- Candidate MD5: `{info['patched_md5']}`.",
             f"- Static menu template: `{source['template_rom_offset']}`.",
@@ -273,6 +329,8 @@ def patched_rom_report(candidate: dict[str, Any], smoke: dict[str, Any]) -> str:
             f"- CHR page pair: `{source['source_chr_1k_pair']}` -> `{source['clone_chr_1k_pair']}`.",
             "- Source Bank 7 CHR pages are preserved; Korean tiles exist only in the cloned Bank 8 pair.",
             f"- Declared changed spans: `{info['changed_span_count']}`.",
+            f"- Bounded Items probe: **{items_context['context_verdict']}** source-chain proof; current candidate **{conflict['verdict']}**.",
+            f"- Page-isolation result: {conflict['reason']}",
             "",
             "The generated ROM and IPS remain local build products. This report records the",
             "reproducible candidate identity without placing copyrighted ROM content in Git.",
@@ -284,7 +342,7 @@ def patched_rom_report(candidate: dict[str, Any], smoke: dict[str, Any]) -> str:
     )
 
 
-def smoke_log(smoke: dict[str, Any]) -> str:
+def smoke_log(smoke: dict[str, Any], items_context: dict[str, Any]) -> str:
     capture = smoke["capture"]
     checks = smoke["checks"]
     lines = [
@@ -327,14 +385,17 @@ def smoke_log(smoke: dict[str, Any]) -> str:
         f"PASS | clone-page mapper state | final_r1={capture['final_mapper_snapshot'].get('r1', '')}",
         f"PASS | source Bank 7 preserved | result={checks['source_bank7_chr_pair_unchanged']}",
         f"PASS | candidate screen evidence | {capture['screen']}",
+        f"PASS | bounded Items frame 1960 | isolated R1 pool result={items_context['candidate_page_verdict']}",
+        "SOFT_GATE_PASS | menu + Items page isolation | full Items Korean text remains a separate build",
         "UNKNOWN | cursor probe | post-template right input cleared the prior background selector cell, but no stable replacement position was proven",
-        "UNKNOWN | release compatibility | the R1 raster split is shared beyond this one screen",
+        "UNKNOWN | other shared R1 contexts | only the Items conflict is proven so far",
         "",
     ]
     return "\n".join(lines)
 
 
-def release_gate_checklist(smoke: dict[str, Any]) -> str:
+def release_gate_checklist(smoke: dict[str, Any], items_context: dict[str, Any]) -> str:
+    integration_status = main_menu_integration_status(items_context)
     return "\n".join(
         [
             "# Release Gate Checklist",
@@ -349,7 +410,8 @@ def release_gate_checklist(smoke: dict[str, Any]) -> str:
             "| Bounded boot and target reads | PASS | 182 frame 883 `32/32`; 183 frame 1093 `25/25`; 184 frame 1399 `23/23`; all `lua_done`. |",
             "| Native Korean readability | PASS | Three native 16x16 opening screenshots reviewed. |",
             "| Japanese source context | PASS | Pointer 184 base-ROM capture is recorded; prior opening records already had context evidence. |",
-            f"| Scoped main-menu build | {smoke['status']} | One real menu template and clone-page capture passed. |",
+            f"| Scoped main-menu build | {integration_status} | Menu capture and the bounded Items page-isolation smoke both pass. |",
+            f"| Items shared-page probe | {items_context['candidate_page_verdict']} | ROM -> CPU -> SRAM -> PPU chain is proven; current Korean pool does not overlap the action codes. |",
             "| Menu cursor lifecycle | UNKNOWN | A post-template probe was inconclusive. |",
             "| Other R1 raster contexts | UNKNOWN | Shared split needs per-screen audit. |",
             "| Release-wide Korean glyph capacity | UNKNOWN | Current allocations remain context-scoped. |",
@@ -359,6 +421,8 @@ def release_gate_checklist(smoke: dict[str, Any]) -> str:
             "## Required Before Release",
             "",
             "- [ ] Prove menu cursor movement and exit lifecycle with bounded state captures.",
+            "- [ ] Audit every other context that shares the cloned R1 page before release.",
+            "- [ ] Build an Items-specific second PPU queue row before writing 16x16 Korean action text.",
             "- [ ] Audit each other context that shares the R1 raster split.",
             "- [ ] Add context-proven dialogue/UI strings one screen at a time.",
             "- [ ] Check Korean glyph readability on every promoted screen.",
@@ -374,26 +438,42 @@ def recovery_plan() -> str:
         [
             "# Korean Patch Recovery Plan",
             "",
-            "## Working Rule",
+            "## Reset Rule",
             "",
             "Do not use free-running autoplay as a discovery method. Every emulator run needs",
-            "a named screen target, a fixed input route, a hard frame cap, and a captured result.",
+            "a named screen target, a fixed input route, a hard frame cap, a capture frame, and an explicit stop reason.",
             "",
-            "## Sequence",
+            "## Reference Model",
             "",
-            "1. Prove a screen context from the base ROM and use the English patch only for structure.",
-            "2. Record ROM offset, PRG/CHR bank, renderer or nametable route, and screen evidence.",
-            "3. Build one isolated Korean candidate with 16x16 glyphs where readability needs it.",
-            "4. Run a bounded boot/screen smoke test and classify PASS, FAIL, or UNKNOWN.",
-            "5. Promote only PASS contexts; keep UNKNOWN context work out of release builds.",
+            "The English patch is structural evidence only: screen labels, code ranges, active CHR pages, and pointer or queue layout.",
+            "It is never a source for Korean text or artwork. The Japanese base ROM remains the source of every candidate's runtime path.",
             "",
-            "## Current Position",
+            "## Per-Screen Pipeline",
             "",
-            "- Main menu labels: soft-gate PASS.",
-            "- Opening dialogue pointers 182-184: historical PASS for three native contexts.",
-            "- Menu cursor lifecycle: UNKNOWN.",
-            "- Other screens using the shared R1 split: UNKNOWN.",
-            "- Dialogue work: continue only from verified renderer contexts, not broad byte scans.",
+            "1. Capture the base and English reference at the same bounded screen route.",
+            "2. Record ROM offset, PRG bank, CPU address, mapper page, work buffer, PPU destination, and screenshot.",
+            "3. Classify the string as runtime-proven, structural-only, or screen-only before translating it.",
+            "4. Allocate a screen-owned 16x16 Korean glyph page that passes the Malgun Gothic Bold quality gate.",
+            "5. Patch exactly one screen context and smoke it with the same bounded route plus all known sharing contexts.",
+            "6. Mark PASS, FAIL, or UNKNOWN. Only PASS contexts can enter a development build; a shared-page FAIL quarantines the ROM.",
+            "",
+            "## Renderer Families",
+            "",
+            "- Opening dialogue: three native pointer contexts are historical PASS and remain regression-only evidence.",
+            "- Main menu labels: the isolated screenshot and bounded Items page-isolation smoke pass the development soft gate.",
+            "- Items actions: ROM 0x13727 -> CPU B717 -> SRAM 6360 -> PPU 2363 is runtime-proven. Korean Items text still needs its own source owner and second queue row.",
+            "- Combined development candidate: three opening records plus main-menu labels; runtime report `rom_analysis/korean_development_candidate_runtime.md` is SOFT_GATE_PASS.",
+            "- Dynamic titles, combat dialogue, and later menus: do not patch until they each have an equivalent bounded source-chain record.",
+            "",
+            "## Controlled Game Progress",
+            "",
+            "Do not try to discover late dialogue by looping the opening or clearing combat automatically. When a later screen matters, first identify a save state, a verified RAM state, or a documented cheat that enters that named screen. The resulting probe still needs a fixed input route and hard cap.",
+            "",
+            "## Promotion Rules",
+            "",
+            "- Development soft gate: runtime source chain and bounded boot/screen smoke are required.",
+            "- High-risk candidate: require a native screenshot and every known shared-context smoke.",
+            "- Release gate: require full screen-family coverage, Korean readability review, cross-screen regression, and a clean IPS scope audit.",
             "",
         ]
     )
@@ -411,8 +491,8 @@ def cursor_probe_report() -> str:
             "was absent in that capture, but the OAM dump did not expose a stable replacement",
             "cursor position. The change may include selector blinking or a state transition.",
             "",
-            "This result does not alter the candidate ROM or invalidate the main-menu soft-gate",
-            "PASS. Cursor movement and menu return remain release-gate work, to be tested with",
+            "This result does not mitigate the independently proven Items shared-page failure.",
+            "Cursor movement and menu return remain release-gate work, to be tested with",
             "another explicitly targeted state capture rather than repeated gameplay automation.",
             "",
         ]
@@ -424,6 +504,7 @@ def write_artifacts(
     context: dict[str, Any],
     candidate: dict[str, Any],
     smoke: dict[str, Any],
+    items_context: dict[str, Any],
 ) -> list[Path]:
     output_root.mkdir(parents=True, exist_ok=True)
     paths = {
@@ -437,12 +518,12 @@ def write_artifacts(
         "cursor": output_root / "rom_analysis" / "main_menu_cursor_probe.md",
     }
     paths["cursor"].parent.mkdir(parents=True, exist_ok=True)
-    write_text(paths["matrix"], markdown_matrix(context, candidate, smoke))
-    write_string_candidates(paths["strings"], context, smoke)
+    write_text(paths["matrix"], markdown_matrix(context, candidate, smoke, items_context))
+    write_string_candidates(paths["strings"], context, smoke, items_context)
     write_false_positive_list(paths["false_positives"])
-    write_text(paths["patched"], patched_rom_report(candidate, smoke))
-    write_text(paths["smoke"], smoke_log(smoke))
-    write_text(paths["release"], release_gate_checklist(smoke))
+    write_text(paths["patched"], patched_rom_report(candidate, smoke, items_context))
+    write_text(paths["smoke"], smoke_log(smoke, items_context))
+    write_text(paths["release"], release_gate_checklist(smoke, items_context))
     write_text(paths["plan"], recovery_plan())
     write_text(paths["cursor"], cursor_probe_report())
     return list(paths.values())
@@ -453,6 +534,7 @@ def main() -> int:
     parser.add_argument("--context-report", type=Path, default=DEFAULT_CONTEXT_REPORT)
     parser.add_argument("--candidate-report", type=Path, default=DEFAULT_CANDIDATE_REPORT)
     parser.add_argument("--smoke-report", type=Path, default=DEFAULT_SMOKE_REPORT)
+    parser.add_argument("--items-context-report", type=Path, default=DEFAULT_ITEMS_CONTEXT_REPORT)
     parser.add_argument("--output-root", type=Path, default=REPO_ROOT)
     args = parser.parse_args()
 
@@ -461,6 +543,7 @@ def main() -> int:
         read_json(args.context_report),
         read_json(args.candidate_report),
         read_json(args.smoke_report),
+        read_json(args.items_context_report),
     )
     for path in paths:
         print(path)

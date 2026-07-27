@@ -1,0 +1,128 @@
+{
+  "context_verdict": "PASS",
+  "candidate_page_verdict": "PASS",
+  "release_verdict": "UNKNOWN",
+  "checks": {
+    "base_lua_done": true,
+    "english_lua_done": true,
+    "base_screen_available": true,
+    "english_screen_available": true,
+    "base_source_rom_offset": true,
+    "english_source_rom_offset": true,
+    "base_source_reads_match_rom": true,
+    "english_source_reads_match_rom": true,
+    "base_queue_matches_source": true,
+    "english_queue_matches_source": true,
+    "base_ppu_matches_action_bytes": true,
+    "english_ppu_matches_action_bytes": true,
+    "english_title_matches_reference": true,
+    "english_none_matches_reference": true,
+    "english_actions_match_reference": true,
+    "base_r0_page_is_3c": true,
+    "english_r0_page_is_3c": true,
+    "base_r1_page_is_3e": true,
+    "english_r1_page_is_3e": true
+  },
+  "source_chain": {
+    "rom_offset": "0x13727",
+    "prg_16k_bank": 4,
+    "mmc3_8k_bank": 9,
+    "cpu_start": "0xB717",
+    "cpu_end": "0xB737",
+    "runtime_copy_pc": "0xB707",
+    "queue_copy_pc": "0xB70D",
+    "queue_ram_start": "0x6360",
+    "ppu_start": "0x2363",
+    "length": 33,
+    "base_hex": "23 63 00 1B 92 86 83 00 00 00 00 00 9A 8D 8D 00 00 00 00 00 AC 90 8D 00 00 00 00 00 8D 93 A9 23 4C",
+    "english_hex": "23 63 00 1B 95 93 85 00 00 00 00 00 92 85 8D 8F 96 85 00 00 87 89 96 85 00 00 00 00 84 92 90 23 4C"
+  },
+  "english_reference": {
+    "title": "KUNIO'S ITEMS",
+    "empty_label": "NONE",
+    "actions": [
+      "USE",
+      "REMOVE",
+      "GIVE",
+      "DRP"
+    ],
+    "title_row": 5,
+    "empty_label_row": 8,
+    "action_row": 27
+  },
+  "candidate_translation": {
+    "actions": "사용 / 버리기 / 주기 / 버림",
+    "status": "MENU_POOL_ITEMS_SOFT_GATE_PASS",
+    "reason": "The bounded candidate keeps the original Items action bytes and uses an isolated R1 code pool; full Items translation remains a separate two-row queue task."
+  },
+  "mapper": {
+    "base_final": {
+      "frame": "1960",
+      "mapper_control": "07",
+      "mapper_select": "7",
+      "ppu_control": "88",
+      "r0": "3C",
+      "r1": "3E",
+      "r2": "3C",
+      "r3": "3D",
+      "r4": "3E",
+      "r5": "3F",
+      "r6": "06",
+      "r7": "07",
+      "mapper_select_callbacks": "64872",
+      "mapper_data_callbacks": "64872",
+      "ppu_control_callbacks": "9836",
+      "ppu_status_callbacks": "19770",
+      "ppu_addr_callbacks": "20908",
+      "ppu_data_callbacks": "52481",
+      "menu_source_callbacks": "330"
+    },
+    "english_final": {
+      "frame": "1960",
+      "mapper_control": "07",
+      "mapper_select": "7",
+      "ppu_control": "88",
+      "r0": "3C",
+      "r1": "3E",
+      "r2": "3C",
+      "r3": "3D",
+      "r4": "3E",
+      "r5": "3F",
+      "r6": "06",
+      "r7": "07",
+      "mapper_select_callbacks": "64872",
+      "mapper_data_callbacks": "64872",
+      "ppu_control_callbacks": "9835",
+      "ppu_status_callbacks": "19769",
+      "ppu_addr_callbacks": "20906",
+      "ppu_data_callbacks": "52421",
+      "menu_source_callbacks": "330"
+    },
+    "visible_low_code_page": "R0=0x3C",
+    "visible_action_code_page": "R1=0x3E"
+  },
+  "candidate_page_conflict": {
+    "verdict": "PASS",
+    "reason": "isolated Korean menu code pool is active without overlapping Items action codes",
+    "lua_done": true,
+    "final_r1": "46",
+    "clone_active": true,
+    "conflicting_codes": [],
+    "screen": "rom_analysis\\state_page_probe_raw\\candidate_pool_items\\main_menu_frame_001960_screen.png"
+  },
+  "captures": {
+    "base": {
+      "lua_done": true,
+      "screen_available": true,
+      "screen": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_items_queue_base\\main_menu_frame_001960_screen.gd"
+    },
+    "english": {
+      "lua_done": true,
+      "screen_available": true,
+      "screen": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\main_menu_items_queue_english\\main_menu_frame_001960_screen.gd"
+    },
+    "korean_candidate": {
+      "screen": "rom_analysis\\state_page_probe_raw\\candidate_pool_items\\main_menu_frame_001960_screen.png"
+    }
+  }
+}

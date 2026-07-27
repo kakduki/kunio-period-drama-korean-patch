@@ -88,3 +88,17 @@ FCEUX 실행 규칙과 전용 검증 명령은 FCEUX_LUA_AUTOMATION.md를 따른
     rom_analysis/  분석 결과, 증거, 구현 지도
     scripts/       분석/빌드/검증 도구
     text_data/     원문 토큰, 전사, 한국어 번역 입력
+
+## Current Development Candidate
+
+The current bounded candidate combines the three verified opening records with
+the Korean main-menu labels. ROM and IPS files stay local and are ignored by Git.
+
+    python scripts/build_korean_development_candidate.py
+    python scripts/analyze_korean_development_candidate.py
+    python scripts/run_project_checks.py
+
+Runtime evidence is recorded in
+`rom_analysis/korean_development_candidate_runtime.md`. This is a development
+soft-gate candidate, not a final release: Items text, later dialogue, combat
+progression, and release-wide CHR sharing still require separate proof.

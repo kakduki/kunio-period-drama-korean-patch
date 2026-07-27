@@ -5,10 +5,10 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import asdict, dataclass
-import itertools
 import json
 from pathlib import Path
 
+from korean_font_quality import evaluate_square_bitmaps
 from korean_tile_font import SQUARE_TILE_HEIGHT, SQUARE_TILE_WIDTH, normalize_glyph_to_square_bitmap
 from rom_utils import REPO_ROOT
 
@@ -41,96 +41,8 @@ DEFAULT_PROFILES = (
 )
 
 
-def bitmap_bounds(bitmap: list[list[int]]) -> tuple[int, int, int, int] | None:
-    points = [
-        (x, y)
-        for y, row in enumerate(bitmap)
-        for x, pixel in enumerate(row)
-        if pixel
-    ]
-    if not points:
-        return None
-    return (
-        min(x for x, _ in points),
-        min(y for _, y in points),
-        max(x for x, _ in points),
-        max(y for _, y in points),
-    )
-
-
-def connected_components(bitmap: list[list[int]]) -> int:
-    pending = {
-        (x, y)
-        for y, row in enumerate(bitmap)
-        for x, pixel in enumerate(row)
-        if pixel
-    }
-    count = 0
-    while pending:
-        count += 1
-        frontier = [pending.pop()]
-        while frontier:
-            x, y = frontier.pop()
-            for next_y in range(max(0, y - 1), min(SQUARE_TILE_HEIGHT, y + 2)):
-                for next_x in range(max(0, x - 1), min(SQUARE_TILE_WIDTH, x + 2)):
-                    point = (next_x, next_y)
-                    if point in pending:
-                        pending.remove(point)
-                        frontier.append(point)
-    return count
-
-
-def bitmap_hamming(left: list[list[int]], right: list[list[int]]) -> int:
-    return sum(
-        left_pixel != right_pixel
-        for left_row, right_row in zip(left, right)
-        for left_pixel, right_pixel in zip(left_row, right_row)
-    )
-
-
 def evaluate_bitmaps(bitmaps: dict[str, list[list[int]]]) -> dict[str, object]:
-    if not bitmaps:
-        raise ValueError("font comparison needs at least one glyph")
-    glyph_rows = []
-    for glyph, bitmap in bitmaps.items():
-        bounds = bitmap_bounds(bitmap)
-        ink_pixels = sum(sum(row) for row in bitmap)
-        glyph_rows.append(
-            {
-                "glyph": glyph,
-                "ink_pixels": ink_pixels,
-                "ink_density": round(ink_pixels / (SQUARE_TILE_WIDTH * SQUARE_TILE_HEIGHT), 4),
-                "bounds": bounds,
-                "components": connected_components(bitmap),
-                "touches_edge": bool(bounds and (0 in bounds or 15 in bounds)),
-            }
-        )
-    pairs = list(itertools.combinations(bitmaps.items(), 2))
-    distances = [bitmap_hamming(left, right) for (_, left), (_, right) in pairs]
-    duplicate_pairs = [
-        f"{left_name}/{right_name}"
-        for (left_name, left), (right_name, right) in pairs
-        if left == right
-    ]
-    densities = [float(row["ink_density"]) for row in glyph_rows]
-    edge_count = sum(1 for row in glyph_rows if row["touches_edge"])
-    min_distance = min(distances) if distances else 0
-    return {
-        "glyph_count": len(glyph_rows),
-        "glyphs": glyph_rows,
-        "average_ink_density": round(sum(densities) / len(densities), 4),
-        "minimum_ink_density": min(densities),
-        "maximum_ink_density": max(densities),
-        "minimum_pairwise_hamming": min_distance,
-        "duplicate_pairs": duplicate_pairs,
-        "edge_touching_glyph_count": edge_count,
-        "triage_pass": not duplicate_pairs
-        and edge_count == 0
-        and min_distance >= 10
-        # The colon is intentionally a light two-dot glyph at 16x16.
-        and min(densities) >= 0.08
-        and max(densities) <= 0.55,
-    }
+    return evaluate_square_bitmaps(bitmaps)
 
 
 def profile_bitmaps(profile: FontProfile, glyphs: tuple[str, ...]) -> dict[str, list[list[int]]]:

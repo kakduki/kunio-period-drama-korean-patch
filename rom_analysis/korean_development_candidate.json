@@ -1,0 +1,716 @@
+{
+  "status": "CANDIDATE_BUILT_PENDING_COMBINED_RUNTIME_SMOKE",
+  "base": {
+    "md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
+  },
+  "components": {
+    "opening_candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\opening_ptr_182_184_16x16_readability\\kunio_period_drama_korean_opening_ptr_182_184_16x16_readability.nes",
+    "opening_candidate_md5": "46cedd1da6d49643f5dd6bc4895ce706",
+    "menu_candidate_targets": [
+      {
+        "kind": "main_menu_template",
+        "rom_offset": 127681,
+        "length": 128,
+        "cpu_source": "0xF2B1",
+        "ppu_destination": "0x2700"
+      },
+      {
+        "kind": "chr_pair_clone",
+        "rom_offset": 202768,
+        "length": 2048,
+        "source_chr_1k_pair": "0x3E",
+        "clone_chr_1k_pair": "0x46",
+        "clone_source": "external_base_rom"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202768,
+        "length": 16,
+        "glyph": "물",
+        "code": "0x80",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202784,
+        "length": 16,
+        "glyph": "물",
+        "code": "0x81",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203280,
+        "length": 16,
+        "glyph": "물",
+        "code": "0xA0",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203296,
+        "length": 16,
+        "glyph": "물",
+        "code": "0xA1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203808,
+        "length": 16,
+        "glyph": "건",
+        "code": "0xC1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202800,
+        "length": 16,
+        "glyph": "건",
+        "code": "0x82",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204320,
+        "length": 16,
+        "glyph": "건",
+        "code": "0xE1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203312,
+        "length": 16,
+        "glyph": "건",
+        "code": "0xA2",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202832,
+        "length": 16,
+        "glyph": "상",
+        "code": "0x84",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203856,
+        "length": 16,
+        "glyph": "상",
+        "code": "0xC4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203344,
+        "length": 16,
+        "glyph": "상",
+        "code": "0xA4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 204368,
+        "length": 16,
+        "glyph": "상",
+        "code": "0xE4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202848,
+        "length": 16,
+        "glyph": "태",
+        "code": "0x85",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203872,
+        "length": 16,
+        "glyph": "태",
+        "code": "0xC5",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203360,
+        "length": 16,
+        "glyph": "태",
+        "code": "0xA5",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 204384,
+        "length": 16,
+        "glyph": "태",
+        "code": "0xE5",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203376,
+        "length": 16,
+        "glyph": "성",
+        "code": "0xA6",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202880,
+        "length": 16,
+        "glyph": "성",
+        "code": "0x87",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203888,
+        "length": 16,
+        "glyph": "성",
+        "code": "0xC6",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203392,
+        "length": 16,
+        "glyph": "성",
+        "code": "0xA7",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203904,
+        "length": 16,
+        "glyph": "장",
+        "code": "0xC7",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203408,
+        "length": 16,
+        "glyph": "장",
+        "code": "0xA8",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204416,
+        "length": 16,
+        "glyph": "장",
+        "code": "0xE7",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203920,
+        "length": 16,
+        "glyph": "장",
+        "code": "0xC8",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203936,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xC9",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 202928,
+        "length": 16,
+        "glyph": "기",
+        "code": "0x8A",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204448,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xE9",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203440,
+        "length": 16,
+        "glyph": "기",
+        "code": "0xAA",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203952,
+        "length": 16,
+        "glyph": "술",
+        "code": "0xCA",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203456,
+        "length": 16,
+        "glyph": "술",
+        "code": "0xAB",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204464,
+        "length": 16,
+        "glyph": "술",
+        "code": "0xEA",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203968,
+        "length": 16,
+        "glyph": "술",
+        "code": "0xCB",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203984,
+        "length": 16,
+        "glyph": "록",
+        "code": "0xCC",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203488,
+        "length": 16,
+        "glyph": "록",
+        "code": "0xAD",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204496,
+        "length": 16,
+        "glyph": "록",
+        "code": "0xEC",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 204000,
+        "length": 16,
+        "glyph": "록",
+        "code": "0xCD",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 202992,
+        "length": 16,
+        "glyph": "동",
+        "code": "0x8E",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203008,
+        "length": 16,
+        "glyph": "동",
+        "code": "0x8F",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 203504,
+        "length": 16,
+        "glyph": "동",
+        "code": "0xAE",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203520,
+        "length": 16,
+        "glyph": "동",
+        "code": "0xAF",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203536,
+        "length": 16,
+        "glyph": "료",
+        "code": "0xB0",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203040,
+        "length": 16,
+        "glyph": "료",
+        "code": "0x91",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204048,
+        "length": 16,
+        "glyph": "료",
+        "code": "0xD0",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203552,
+        "length": 16,
+        "glyph": "료",
+        "code": "0xB1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 204064,
+        "length": 16,
+        "glyph": "설",
+        "code": "0xD1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203088,
+        "length": 16,
+        "glyph": "설",
+        "code": "0x94",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204576,
+        "length": 16,
+        "glyph": "설",
+        "code": "0xF1",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203600,
+        "length": 16,
+        "glyph": "설",
+        "code": "0xB4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 204112,
+        "length": 16,
+        "glyph": "정",
+        "code": "0xD4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203104,
+        "length": 16,
+        "glyph": "정",
+        "code": "0x95",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204624,
+        "length": 16,
+        "glyph": "정",
+        "code": "0xF4",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203616,
+        "length": 16,
+        "glyph": "정",
+        "code": "0xB5",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_left",
+        "rom_offset": 203632,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xB6",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_top_right",
+        "rom_offset": 203136,
+        "length": 16,
+        "glyph": "저",
+        "code": "0x97",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_left",
+        "rom_offset": 204144,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xD6",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "font_tile_bottom_right",
+        "rom_offset": 203648,
+        "length": 16,
+        "glyph": "저",
+        "code": "0xB7",
+        "clone_chr_1k_page": "0x46"
+      },
+      {
+        "kind": "fixed_raster_r1_clone_page",
+        "rom_offset": 126557,
+        "length": 1,
+        "cpu_address": "0xEE4D",
+        "original": "0x3E",
+        "replacement": "0x46"
+      }
+    ],
+    "menu_clone_source": "original Japanese base ROM",
+    "font_path": "C:\\Windows\\Fonts\\malgunbd.ttf",
+    "font_profile": "readable",
+    "font_quality": {
+      "verdict": "PASS",
+      "font_path": "C:\\Windows\\Fonts\\malgunbd.ttf",
+      "font_profile": "readable",
+      "requirements": {
+        "font_basename": "malgunbd.ttf",
+        "font_profile": "readable",
+        "minimum_ink_density": 0.08,
+        "maximum_ink_density": 0.55,
+        "minimum_pairwise_hamming": 10,
+        "edge_touching_glyph_count": 0
+      },
+      "checks": {
+        "profile_is_readable": true,
+        "font_is_malgun_bold": true,
+        "no_duplicate_glyphs": true,
+        "no_edge_touching_glyphs": true,
+        "minimum_pairwise_hamming": true,
+        "minimum_ink_density": true,
+        "maximum_ink_density": true
+      },
+      "metrics": {
+        "glyph_count": 14,
+        "glyphs": [
+          {
+            "glyph": "물",
+            "ink_pixels": 88,
+            "ink_density": 0.3438,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "건",
+            "ink_pixels": 79,
+            "ink_density": 0.3086,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "상",
+            "ink_pixels": 72,
+            "ink_density": 0.2812,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "태",
+            "ink_pixels": 86,
+            "ink_density": 0.3359,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "성",
+            "ink_pixels": 66,
+            "ink_density": 0.2578,
+            "bounds": [
+              2,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "장",
+            "ink_pixels": 74,
+            "ink_density": 0.2891,
+            "bounds": [
+              2,
+              1,
+              14,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "기",
+            "ink_pixels": 58,
+            "ink_density": 0.2266,
+            "bounds": [
+              3,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "술",
+            "ink_pixels": 87,
+            "ink_density": 0.3398,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "록",
+            "ink_pixels": 73,
+            "ink_density": 0.2852,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "동",
+            "ink_pixels": 100,
+            "ink_density": 0.3906,
+            "bounds": [
+              1,
+              1,
+              14,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "료",
+            "ink_pixels": 84,
+            "ink_density": 0.3281,
+            "bounds": [
+              1,
+              2,
+              14,
+              13
+            ],
+            "components": 1,
+            "touches_edge": false
+          },
+          {
+            "glyph": "설",
+            "ink_pixels": 72,
+            "ink_density": 0.2812,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 3,
+            "touches_edge": false
+          },
+          {
+            "glyph": "정",
+            "ink_pixels": 78,
+            "ink_density": 0.3047,
+            "bounds": [
+              1,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          },
+          {
+            "glyph": "저",
+            "ink_pixels": 63,
+            "ink_density": 0.2461,
+            "bounds": [
+              3,
+              1,
+              13,
+              14
+            ],
+            "components": 2,
+            "touches_edge": false
+          }
+        ],
+        "average_ink_density": 0.3013,
+        "minimum_ink_density": 0.2266,
+        "maximum_ink_density": 0.3906,
+        "minimum_pairwise_hamming": 18,
+        "duplicate_pairs": [],
+        "edge_touching_glyph_count": 0,
+        "triage_pass": true
+      }
+    }
+  },
+  "candidate": {
+    "rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\korean_development_candidate\\kunio_period_drama_korean_development_candidate.nes",
+    "ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\korean_development_candidate\\kunio_period_drama_korean_development_candidate.ips",
+    "md5": "6474e2d857dbbcbf1ce8f1e5d8201c08",
+    "opening_change_count": 1325,
+    "menu_change_count": 1970,
+    "total_change_count": 3295
+  },
+  "known_limits": [
+    "This combines three opening records and the main-menu label candidate only.",
+    "The menu clone is based on the original CHR page so opening glyphs do not leak into Items.",
+    "Other dialogue records, gameplay text, cursor lifecycle, and full Items Korean text remain unpromoted."
+  ]
+}

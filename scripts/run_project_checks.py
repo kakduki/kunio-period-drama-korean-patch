@@ -17,6 +17,7 @@ KEY_PYTHON = [
     "scripts/analyze_dialogue_renderer.py",
     "scripts/analyze_english_font_slots.py",
     "scripts/analyze_main_menu_context.py",
+    "scripts/analyze_main_menu_items_context.py",
     "scripts/analyze_main_menu_korean_candidate.py",
     "scripts/build_main_menu_korean_candidate.py",
     "scripts/generate_main_menu_pipeline_artifacts.py",
@@ -24,6 +25,7 @@ KEY_PYTHON = [
     "scripts/analyze_opening_dialogue_renderer_probe.py",
     "scripts/analyze_opening_mapper_trace.py",
     "scripts/audit_korean_square_font.py",
+    "scripts/korean_font_quality.py",
     "scripts/generate_readability_proof_artifacts.py",
     "scripts/audit_opening_font_runtime_mapping.py",
     "scripts/compile_korean_scene_batch.py",
@@ -109,13 +111,18 @@ KEY_PYTHON = [
     "scripts/test_analyze_dialogue_renderer.py",
     "scripts/test_analyze_english_font_slots.py",
     "scripts/test_analyze_main_menu_context.py",
+    "scripts/test_analyze_main_menu_items_context.py",
     "scripts/test_analyze_main_menu_korean_candidate.py",
+    "scripts/analyze_korean_development_candidate.py",
+    "scripts/build_korean_development_candidate.py",
     "scripts/test_build_main_menu_korean_candidate.py",
+    "scripts/test_build_korean_development_candidate.py",
     "scripts/test_generate_main_menu_pipeline_artifacts.py",
     "scripts/test_analyze_opening_dialogue_proof_capture.py",
     "scripts/test_analyze_opening_dialogue_renderer_probe.py",
     "scripts/test_analyze_opening_mapper_trace.py",
     "scripts/test_audit_korean_square_font.py",
+    "scripts/test_korean_font_quality.py",
     "scripts/test_generate_readability_proof_artifacts.py",
     "scripts/test_audit_opening_font_runtime_mapping.py",
     "scripts/test_compile_korean_scene_batch.py",
@@ -345,13 +352,16 @@ def main() -> int:
     run("dialogue renderer analyzer", ["scripts/test_analyze_dialogue_renderer.py"])
     run("English reference font slot mapper", ["scripts/test_analyze_english_font_slots.py"])
     run("main-menu context analyzer", ["scripts/test_analyze_main_menu_context.py"])
+    run("main-menu Items context analyzer", ["scripts/test_analyze_main_menu_items_context.py"])
     run("main-menu Korean candidate smoke analyzer", ["scripts/test_analyze_main_menu_korean_candidate.py"])
     run("main-menu Korean 16x16 candidate", ["scripts/test_build_main_menu_korean_candidate.py"])
+    run("combined Korean development candidate", ["scripts/test_build_korean_development_candidate.py"])
     run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])
     run("opening dialogue renderer probe analyzer", ["scripts/test_analyze_opening_dialogue_renderer_probe.py"])
     run("opening MMC3 mapper trace analyzer", ["scripts/test_analyze_opening_mapper_trace.py"])
     run("Korean 16x16 font comparison", ["scripts/test_audit_korean_square_font.py"])
+    run("Korean 16x16 font-quality gate", ["scripts/test_korean_font_quality.py"])
     run("readability proof pipeline artifacts", ["scripts/test_generate_readability_proof_artifacts.py"])
     run("opening font runtime mapping audit", ["scripts/test_audit_opening_font_runtime_mapping.py"])
     run("Korean scene-batch compiler", ["scripts/test_compile_korean_scene_batch.py"])

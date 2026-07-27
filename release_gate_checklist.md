@@ -10,7 +10,8 @@ Current release verdict: **UNKNOWN**
 | Bounded boot and target reads | PASS | 182 frame 883 `32/32`; 183 frame 1093 `25/25`; 184 frame 1399 `23/23`; all `lua_done`. |
 | Native Korean readability | PASS | Three native 16x16 opening screenshots reviewed. |
 | Japanese source context | PASS | Pointer 184 base-ROM capture is recorded; prior opening records already had context evidence. |
-| Scoped main-menu build | SOFT_GATE_PASS | One real menu template and clone-page capture passed. |
+| Scoped main-menu build | SOFT_GATE_PASS_ISOLATED_R1_POOL | Menu capture and the bounded Items page-isolation smoke both pass. |
+| Items shared-page probe | PASS | ROM -> CPU -> SRAM -> PPU chain is proven; current Korean pool does not overlap the action codes. |
 | Menu cursor lifecycle | UNKNOWN | A post-template probe was inconclusive. |
 | Other R1 raster contexts | UNKNOWN | Shared split needs per-screen audit. |
 | Release-wide Korean glyph capacity | UNKNOWN | Current allocations remain context-scoped. |
@@ -20,6 +21,8 @@ Current release verdict: **UNKNOWN**
 ## Required Before Release
 
 - [ ] Prove menu cursor movement and exit lifecycle with bounded state captures.
+- [ ] Audit every other context that shares the cloned R1 page before release.
+- [ ] Build an Items-specific second PPU queue row before writing 16x16 Korean action text.
 - [ ] Audit each other context that shares the R1 raster split.
 - [ ] Add context-proven dialogue/UI strings one screen at a time.
 - [ ] Check Korean glyph readability on every promoted screen.

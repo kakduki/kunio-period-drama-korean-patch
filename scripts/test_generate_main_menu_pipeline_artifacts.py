@@ -49,15 +49,35 @@ def main() -> int:
             "final_mapper_snapshot": {"r1": "46"},
         },
     }
+    items_context = {
+        "context_verdict": "PASS",
+        "candidate_page_verdict": "PASS",
+        "source_chain": {
+            "rom_offset": "0x13727",
+            "prg_16k_bank": 4,
+            "cpu_start": "0xB717",
+            "ppu_start": "0x2363",
+        },
+        "candidate_translation": {
+            "actions": "actions",
+            "status": "MENU_POOL_ITEMS_SOFT_GATE_PASS",
+        },
+        "english_reference": {"actions": ["USE", "REMOVE", "GIVE", "DRP"]},
+        "candidate_page_conflict": {
+            "verdict": "PASS",
+            "reason": "isolated code pool",
+        },
+    }
     with tempfile.TemporaryDirectory() as temporary:
         root = Path(temporary)
-        paths = write_artifacts(root, context, candidate, smoke)
+        paths = write_artifacts(root, context, candidate, smoke, items_context)
         assert len(paths) == 8
         assert (root / "build_matrix.md").is_file()
         strings = (root / "string_candidates.csv").read_text(encoding="utf-8")
         assert "PTR-182-OPENING-COMPACT-16X16" in strings
         assert "MENU-ITEMS" in strings
-        assert "SOFT_GATE_PASS" in (root / "patched_rom_report.md").read_text(encoding="utf-8")
+        assert "ITEM-ACTIONS" in strings
+        assert "SOFT_GATE_PASS_ISOLATED_R1_POOL" in (root / "patched_rom_report.md").read_text(encoding="utf-8")
         assert "UNKNOWN" in (root / "release_gate_checklist.md").read_text(encoding="utf-8")
         assert (root / "rom_analysis" / "main_menu_cursor_probe.md").is_file()
     print("Main-menu pipeline artifact generator tests passed.")

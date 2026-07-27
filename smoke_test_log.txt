@@ -36,6 +36,8 @@ PASS | bounded main-menu route | capture=1906 | result=lua_done
 PASS | candidate template rendered from PPU dump | result=True
 PASS | clone-page mapper state | final_r1=46
 PASS | source Bank 7 preserved | result=True
-PASS | candidate screen evidence | C:\Users\kakdu\OneDrive\문서\자산관리\kunio-period-drama-korean-patch\rom_analysis\main_menu_korean_candidate_capture\main_menu_frame_001906_screen.png
+PASS | candidate screen evidence | rom_analysis\state_page_probe_raw\candidate_pool_menu\main_menu_frame_001906_screen.png
+PASS | bounded Items frame 1960 | isolated R1 pool result=PASS
+SOFT_GATE_PASS | menu + Items page isolation | full Items Korean text remains a separate build
 UNKNOWN | cursor probe | post-template right input cleared the prior background selector cell, but no stable replacement position was proven
-UNKNOWN | release compatibility | the R1 raster split is shared beyond this one screen
+UNKNOWN | other shared R1 contexts | only the Items conflict is proven so far
