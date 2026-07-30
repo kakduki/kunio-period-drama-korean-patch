@@ -114,7 +114,8 @@ supersedes that capacity conclusion while retaining it as historical evidence.
 - Candidate MD5: `f6bbe666cc6e976b448c1713e85da65e`.
 - All 248 pointer rows are represented; 244 rows compile Korean text and four
   excluded non-dialogue rows retain Japanese bytes.
-- Packed records occupy ROM `0x05FC4-0x06EF1` (3,886 bytes), leaving 270 bytes
+- Packed records occupy ROM `0x05FC4-0x06EF1` end-exclusive (3,885 bytes),
+  leaving 271 bytes
   before the loader at `0x07000`.
 - Every active record preserves the English reference's non-letter control
   skeleton while replacing its letter/space runs.
@@ -126,8 +127,9 @@ supersedes that capacity conclusion while retaining it as historical evidence.
   and field-background checks.
 - Pointers 25, 50, and 100 bypass their initial event-dependent `F0` only in
   the visual harness, so this evidence does not promote natural event control.
-- Translation QA found no structural failures. Fifteen clear English-reference
-  mistranslations were corrected and reviewed; 229 semantic drafts remain.
+- Translation QA found no structural failures. Thirty-eight rows have direct
+  English-reference review; 206 semantic drafts remain. Twenty-seven records
+  with dynamic name/item controls are separately flagged for context review.
 - IPS apply round trip: PASS.
 - Broad runtime and translation review remain required for release.
 

@@ -1,29 +1,29 @@
 pointer_index	translation_status	korean_text	basis	notes
-000	english_semantic_draft	그래 싸워라! 나와 싸우지 않으면 못 지나간다	english_reference	일본어 문맥 확인 필요
-001	english_semantic_draft	젠장!	english_reference	일본어 문맥 확인 필요
-002	english_semantic_draft	아, 또 만났군!	english_reference	초기 보스 대사 후보
-003	english_semantic_draft	그 녀석들 기억나? 저놈들이야!	english_reference	초기 보스 대사 후보
-004	english_semantic_draft	내 부하들을 어떻게 이긴 거냐?	english_reference	초기 보스 대사 후보
+000	english_reference_reviewed	그래 싸워라! 나와 싸우지 않으면 못 지나간다	english_reference	영어 참조 의미 대조 완료
+001	english_reference_reviewed	젠장!	english_reference	영어 참조 의미 대조 완료
+002	english_reference_reviewed	아, 또 만났군!	english_reference	영어 참조 의미 대조 완료
+003	english_reference_reviewed	그 녀석들 기억나? 저놈들이야!	english_reference	영어 참조 의미 대조 완료
+004	english_reference_reviewed	내 부하들을 어떻게 이긴 거냐?	english_reference	영어 참조 의미 대조 완료
 005	english_reference_reviewed	겁쟁이처럼 싸우는군	english_reference	영어 참조 의미 대조 완료
-006	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
-007	english_semantic_draft	그 녀석은 아무것도 아니야	english_reference	일본어 문맥 확인 필요
-008	english_semantic_draft	나도 같이 가자	english_reference	일본어 문맥 확인 필요
+006	english_reference_reviewed	나도 끼워 줘	english_reference	영어 참조 의미 대조 완료
+007	english_reference_reviewed	그 녀석은 아무것도 아니야	english_reference	영어 참조 의미 대조 완료
+008	english_reference_reviewed	나도 같이 가자	english_reference	영어 참조 의미 대조 완료
 009	english_semantic_draft	좋아, 우리도 싸우자	english_reference	일본어 문맥 확인 필요
-010	english_semantic_draft	항복이다! 네가 너무 강해	english_reference	일본어 문맥 확인 필요
-011	english_semantic_draft	아직 진짜 실력을 못 봤다	english_reference	일본어 문맥 확인 필요
-012	english_semantic_draft	좋아	english_reference	일본어 문맥 확인 필요
-013	english_semantic_draft	내가 저 녀석을 해치우지	english_reference	일본어 문맥 확인 필요
-014	english_semantic_draft	정말 고맙다	english_reference	일본어 문맥 확인 필요
-015	english_semantic_draft	너희는 대체 누구냐?	english_reference	일본어 문맥 확인 필요
-016	english_semantic_draft	녀석들을 잡아!	english_reference	일본어 문맥 확인 필요
-017	english_semantic_draft	아악! 내가 졌다	english_reference	일본어 문맥 확인 필요
-018	english_semantic_draft	우린 나쁜 놈일지 몰라도 여자는 괴롭히지 않아	english_reference	일본어 문맥 확인 필요
-019	english_semantic_draft	뭐라고? 내가 이겼다고?	english_reference	일본어 문맥 확인 필요
-020	english_semantic_draft	진로 큰두목이 네놈들을 혼내라고 나를 보냈다	english_reference	이름 표기 문맥 확인 필요
-021	english_semantic_draft	네놈들을 중국 끝까지 날려 주마	english_reference	일본어 문맥 확인 필요
-022	english_semantic_draft	좋아	english_reference	일본어 문맥 확인 필요
-023	english_semantic_draft	이제 진로가 상대해 주마	english_reference	이름 표기 문맥 확인 필요
-024	english_semantic_draft	그래, 네가 큰두목이군	english_reference	이름 표기 문맥 확인 필요
+010	english_reference_reviewed	항복이다! 네가 너무 강해	english_reference	영어 참조 의미 대조 완료
+011	english_reference_reviewed	아직 진짜 실력을 못 봤다	english_reference	영어 참조 의미 대조 완료
+012	english_reference_reviewed	좋아	english_reference	영어 참조 의미 대조 완료
+013	english_reference_reviewed	내가 저 녀석을 해치우지	english_reference	영어 참조 의미 대조 완료
+014	english_reference_reviewed	정말 고맙다	english_reference	영어 참조 의미 대조 완료
+015	english_reference_reviewed	너희는 대체 누구냐?	english_reference	영어 참조 의미 대조 완료
+016	english_reference_reviewed	녀석들을 잡아!	english_reference	영어 참조 의미 대조 완료
+017	english_reference_reviewed	아악! 내가 졌다	english_reference	영어 참조 의미 대조 완료
+018	english_reference_reviewed	우린 나쁜 놈일지 몰라도 여자는 괴롭히지 않아	english_reference	영어 참조 의미 대조 완료
+019	english_reference_reviewed	뭐라고? 내가 이겼다고?	english_reference	영어 참조 의미 대조 완료
+020	english_reference_reviewed	진로 큰두목이 네놈들을 혼내라고 나를 보냈다	english_reference	영어 참조 의미 대조 완료
+021	english_reference_reviewed	네놈들을 중국 끝까지 날려 주마	english_reference	영어 참조 의미 대조 완료
+022	english_reference_reviewed	좋아	english_reference	영어 참조 의미 대조 완료
+023	english_reference_reviewed	이제 진로가 상대해 주마	english_reference	영어 참조 의미 대조 완료
+024	english_reference_reviewed	그래, 네가 큰두목이군	english_reference	영어 참조 의미 대조 완료
 025	english_semantic_draft	이 패배자들에게 본때를 보여 주지	english_reference	일본어 문맥 확인 필요
 026	english_semantic_draft	정말 질기군! 하지만 헤이시가 널 쓰러뜨린다	english_reference	이름 표기 문맥 확인 필요
 027	english_semantic_draft	쳇, 나중에 보자	english_reference	일본어 문맥 확인 필요
