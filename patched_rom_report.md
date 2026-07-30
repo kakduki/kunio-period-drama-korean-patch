@@ -111,21 +111,23 @@ supersedes that capacity conclusion while retaining it as historical evidence.
 ## Full Pointer Korean Development Candidate
 
 - Status: **WHOLE_SCRIPT_RUNTIME_PASS_5_PAGES**.
-- Candidate MD5: `2f706986e429a1acba9238d551f640d0`.
+- Candidate MD5: `f6bbe666cc6e976b448c1713e85da65e`.
 - All 248 pointer rows are represented; 244 rows compile Korean text and four
   excluded non-dialogue rows retain Japanese bytes.
-- Packed records occupy ROM `0x05FC4-0x06EF9` (3,894 bytes), leaving 262 bytes
+- Packed records occupy ROM `0x05FC4-0x06EF1` (3,886 bytes), leaving 270 bytes
   before the loader at `0x07000`.
 - Every active record preserves the English reference's non-letter control
   skeleton while replacing its letter/space runs.
 - The optimized 49-page plan is compiled into 13 appended CHR banks.
-- PTR-181 relocates to `$AAF4` and passes the bounded runtime route with
-  `$07FF=2C`, `R1=D6`, visible Korean text, and preserved field background.
+- PTR-181 relocates to `$AAF5` and passes the bounded runtime route with
+  `$07FF=2B`, `R1=D4`, visible Korean text, and preserved field background.
 - Forced pointers 0, 25, 50, 100, and 181 cover five optimized pages; all pass
   page state, R1 mapping, source progression, terminator, Korean text-pixel,
   and field-background checks.
 - Pointers 25, 50, and 100 bypass their initial event-dependent `F0` only in
   the visual harness, so this evidence does not promote natural event control.
+- Translation QA found no structural failures. Fifteen clear English-reference
+  mistranslations were corrected and reviewed; 229 semantic drafts remain.
 - IPS apply round trip: PASS.
 - Broad runtime and translation review remain required for release.
 

@@ -1,28 +1,21 @@
 {
-  "status": "WHOLE_SCRIPT_RUNTIME_PASS_PTR181",
+  "status": "WHOLE_SCRIPT_CANDIDATE_BUILT_RUNTIME_UNKNOWN",
   "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
-  "candidate_md5": "2f706986e429a1acba9238d551f640d0",
+  "candidate_md5": "f6bbe666cc6e976b448c1713e85da65e",
   "rom_path": "output\\full_pointer_korean_candidate\\kunio_period_drama_korean_full_pointer_candidate.nes",
   "ips_path": "output\\full_pointer_korean_candidate\\kunio_period_drama_korean_full_pointer_candidate.ips",
   "compiled_records": 247,
-  "record_bytes": 3894,
+  "record_bytes": 3885,
   "record_start": "0x05FC4",
-  "record_end": "0x06EFA",
-  "record_loader_gap": 262,
+  "record_end": "0x06EF1",
+  "record_loader_gap": 271,
   "font_pages": 49,
   "chr_banks": 29,
-  "layout_audit": {
-    "status": "PASS",
-    "maximum_segment_cells": 24,
-    "hard_cell_limit": 24,
-    "warning_count": 2,
-    "failure_count": 0
-  },
   "targets": [
     {
       "kind": "full_dialogue_records",
       "rom_offset": 24516,
-      "length": 3894
+      "length": 3885
     },
     {
       "kind": "full_dialogue_pointer_table",

@@ -11,7 +11,7 @@ def main() -> int:
     assert payload["status"] == "PASS"
     assert payload["coverage"]["sample_count"] == 5
     assert payload["coverage"]["distinct_page_count"] == 5
-    assert payload["coverage"]["page_indices"] == [11, 16, 41, 43, 46]
+    assert payload["coverage"]["page_indices"] == [11, 16, 39, 42, 46]
     assert all(sample["checks"]["mapper_r1_matches"] for sample in payload["samples"])
     assert all(sample["checks"]["source_reached_terminator"] for sample in payload["samples"])
     assert all(sample["checks"]["field_background_present"] for sample in payload["samples"])

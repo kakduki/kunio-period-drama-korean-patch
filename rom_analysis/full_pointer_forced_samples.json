@@ -6,8 +6,8 @@
     "page_indices": [
       11,
       16,
-      41,
-      43,
+      39,
+      42,
       46
     ],
     "forced_context_samples": 3
@@ -32,7 +32,7 @@
       "image": {
         "field_unique_colors": 14,
         "field_nonblack_pixels": 26581,
-        "bottom_nonblack_pixels": 3056,
+        "bottom_nonblack_pixels": 3049,
         "text_pixels_present": true,
         "field_background_present": true
       },
@@ -53,7 +53,7 @@
     {
       "pointer_index": 25,
       "page_index": 16,
-      "cpu": "A13E",
+      "cpu": "A140",
       "skip_f0": true,
       "directory": "rom_analysis/full_pointer_forced_samples/ptr025",
       "expected_page_state": "0x11",
@@ -84,19 +84,19 @@
     },
     {
       "pointer_index": 50,
-      "page_index": 41,
-      "cpu": "A30B",
+      "page_index": 39,
+      "cpu": "A311",
       "skip_f0": true,
       "directory": "rom_analysis/full_pointer_forced_samples/ptr050",
-      "expected_page_state": "0x2A",
-      "actual_page_state": "0x2A",
-      "expected_r1": "0xD2",
-      "actual_r1": "0xD2",
+      "expected_page_state": "0x28",
+      "actual_page_state": "0x28",
+      "expected_r1": "0xCE",
+      "actual_r1": "0xCE",
       "source_address_count": 13,
       "image": {
         "field_unique_colors": 14,
         "field_nonblack_pixels": 26575,
-        "bottom_nonblack_pixels": 2371,
+        "bottom_nonblack_pixels": 2370,
         "text_pixels_present": true,
         "field_background_present": true
       },
@@ -117,7 +117,7 @@
     {
       "pointer_index": 100,
       "page_index": 46,
-      "cpu": "A6D0",
+      "cpu": "A6D2",
       "skip_f0": true,
       "directory": "rom_analysis/full_pointer_forced_samples/ptr100",
       "expected_page_state": "0x2F",
@@ -128,7 +128,7 @@
       "image": {
         "field_unique_colors": 14,
         "field_nonblack_pixels": 26575,
-        "bottom_nonblack_pixels": 2196,
+        "bottom_nonblack_pixels": 2197,
         "text_pixels_present": true,
         "field_background_present": true
       },
@@ -148,19 +148,19 @@
     },
     {
       "pointer_index": 181,
-      "page_index": 43,
-      "cpu": "AAF4",
+      "page_index": 42,
+      "cpu": "AAF5",
       "skip_f0": false,
       "directory": "rom_analysis/full_pointer_forced_samples/ptr181",
-      "expected_page_state": "0x2C",
-      "actual_page_state": "0x2C",
-      "expected_r1": "0xD6",
-      "actual_r1": "0xD6",
+      "expected_page_state": "0x2B",
+      "actual_page_state": "0x2B",
+      "expected_r1": "0xD4",
+      "actual_r1": "0xD4",
       "source_address_count": 11,
       "image": {
         "field_unique_colors": 14,
         "field_nonblack_pixels": 26575,
-        "bottom_nonblack_pixels": 2307,
+        "bottom_nonblack_pixels": 2306,
         "text_pixels_present": true,
         "field_background_present": true
       },

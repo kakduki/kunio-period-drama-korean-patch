@@ -15,8 +15,8 @@ Current release verdict: **UNKNOWN**
 | Items shared-page probe | PASS | ROM -> CPU -> SRAM -> PPU chain is proven; current Korean pool does not overlap the action codes. |
 | Menu cursor lifecycle | UNKNOWN | A post-template probe was inconclusive. |
 | Other R1 raster contexts | UNKNOWN | Shared split needs per-screen audit. |
-| Release-wide Korean glyph capacity | SOFT_GATE_PASS | The optimized 49-page build fits 13 appended CHR banks; forced pointers 0/25/50/100/181 prove five distinct dynamic pages with matching state/R1 and preserved backgrounds. Natural event control and broad scene auditing remain open. |
-| Full translated script | CANDIDATE_BUILT | 244 Korean rows compile with preserved English non-letter control skeletons; four excluded rows retain Japanese bytes. Translation review remains open. |
+| Release-wide Korean glyph capacity | SOFT_GATE_PASS | The optimized 49-page build fits 13 appended CHR banks; forced pointers 0/25/50/100/181 prove pages 11/16/39/46/42 with matching state/R1 and preserved backgrounds. Natural event control and broad scene auditing remain open. |
+| Full translated script | CANDIDATE_BUILT | 244 Korean rows compile with preserved English non-letter control skeletons; 15 clear mistranslations are corrected/reviewed, 229 semantic drafts remain, and four excluded rows retain Japanese bytes. |
 | Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; the bounded opening/extended routes reached no target capture, so early-boss screen context is not yet captured. |
 | Direct 8x16 pointer batch | UNKNOWN | Pointers 0-2 compile with 24 glyphs and 0 escaped bytes; boot passes at frame 883, but the frame-5000 route has no complete target match and p0 has a multi-message structural risk. |
 | Opening-context Korean glyph capacity | SOFT_GATE_PASS | Pointer 182 proves 34 paired source slots (`0x81-0x9A` plus `0xC0-0xC7`) at frame 883; this is not global coverage. |
