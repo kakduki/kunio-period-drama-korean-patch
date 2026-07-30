@@ -134,33 +134,33 @@ pointer_index	translation_status	korean_text	basis	notes
 132	english_reference_reviewed	꺄악!	english_reference	영어 참조 의미 대조 완료
 133	english_reference_reviewed	으악!	english_reference	영어 참조 의미 대조 완료
 134	english_reference_reviewed	아야야야!	english_reference	영어 참조 의미 대조 완료
-135	english_semantic_draft	어서 오세요	english_reference	상점/UI 문맥 확인 필요
-136	english_semantic_draft	무엇을 원하시나요?	english_reference	상점/UI 문맥 확인 필요
-137	english_semantic_draft	소지품이 가득 찼습니다	english_reference	상점/UI 문맥 확인 필요
-138	english_semantic_draft	돈이 부족합니다	english_reference	상점/UI 문맥 확인 필요
-139	english_semantic_draft	정말 확실한가요?	english_reference	상점/UI 문맥 확인 필요
-140	english_semantic_draft	고맙습니다	english_reference	상점/UI 문맥 확인 필요
+135	english_reference_reviewed	어서 오세요	english_reference	영어 참조 의미 대조 완료
+136	english_reference_reviewed	무엇을 원하시나요?	english_reference	영어 참조 의미 대조 완료
+137	english_reference_reviewed	소지품이 가득 찼습니다	english_reference	영어 참조 의미 대조 완료
+138	english_reference_reviewed	돈이 부족합니다	english_reference	영어 참조 의미 대조 완료
+139	english_reference_reviewed	정말 확실한가요?	english_reference	영어 참조 의미 대조 완료
+140	english_reference_reviewed	고맙습니다	english_reference	영어 참조 의미 대조 완료
 141	english_semantic_draft	먹었습니다	english_reference	상점/UI 문맥 확인 필요
 142	english_semantic_draft	마셨습니다	english_reference	상점/UI 문맥 확인 필요
 143	english_semantic_draft	얻었습니다	english_reference	상점/UI 문맥 확인 필요
 144	english_semantic_draft	장착했습니다	english_reference	상점/UI 문맥 확인 필요
-145	english_semantic_draft	다른 것은 더 없나요?	english_reference	상점/UI 문맥 확인 필요
-146	english_semantic_draft	고맙습니다. 또 오세요	english_reference	상점/UI 문맥 확인 필요
-147	english_semantic_draft	여기 머무르시겠어요?	english_reference	숙박/UI 문맥 확인 필요
-148	english_semantic_draft	편히 쉬세요	english_reference	숙박/UI 문맥 확인 필요
-149	english_semantic_draft	회복했습니다	english_reference	숙박/UI 문맥 확인 필요
-150	english_semantic_draft	도박을 해 볼래요?	english_reference	도박/UI 문맥 확인 필요
-151	english_semantic_draft	준비됐습니다	english_reference	도박/UI 문맥 확인 필요
-152	english_semantic_draft	지금 가세요	english_reference	도박/UI 문맥 확인 필요
+145	english_reference_reviewed	다른 것은 더 없나요?	english_reference	영어 참조 의미 대조 완료
+146	english_reference_reviewed	고맙습니다. 또 오세요	english_reference	영어 참조 의미 대조 완료
+147	english_reference_reviewed	여기 머무르시겠어요?	english_reference	영어 참조 의미 대조 완료
+148	english_reference_reviewed	편히 쉬세요	english_reference	영어 참조 의미 대조 완료
+149	english_reference_reviewed	회복했습니다	english_reference	영어 참조 의미 대조 완료
+150	english_reference_reviewed	도박을 해 볼래요?	english_reference	영어 참조 의미 대조 완료
+151	english_reference_reviewed	준비됐습니다	english_reference	영어 참조 의미 대조 완료
+152	english_reference_reviewed	지금 가세요	english_reference	영어 참조 의미 대조 완료
 153	english_semantic_draft	우리는 이것과 저것을 가지고 있습니다	english_reference	아이템 변수 토큰 확인 필요
-154	english_semantic_draft	이겼습니다	english_reference	결과/UI 문맥 확인 필요
-155	english_semantic_draft	졌습니다	english_reference	결과/UI 문맥 확인 필요
-156	english_semantic_draft	그렇군요	english_reference	상점/UI 문맥 확인 필요
-157	english_semantic_draft	산키, 다시 오셨군요	english_reference	이름 표기 문맥 확인 필요
-158	english_semantic_draft	무언가 필요하신가요?	english_reference	상점/UI 문맥 확인 필요
-159	english_semantic_draft	천만에요	english_reference	상점/UI 문맥 확인 필요
-160	english_semantic_draft	무언가 필요하신가요?	english_reference	상점/UI 문맥 확인 필요
-161	english_semantic_draft	조심하세요	english_reference	상점/UI 문맥 확인 필요
+154	english_reference_reviewed	이겼습니다	english_reference	영어 참조 의미 대조 완료
+155	english_reference_reviewed	졌습니다	english_reference	영어 참조 의미 대조 완료
+156	english_reference_reviewed	그렇군요	english_reference	영어 참조 의미 대조 완료
+157	english_reference_reviewed	산키, 다시 오셨군요	english_reference	영어 참조 의미 대조 완료
+158	english_reference_reviewed	무언가 필요하신가요?	english_reference	영어 참조 의미 대조 완료
+159	english_reference_reviewed	천만에요	english_reference	영어 참조 의미 대조 완료
+160	english_reference_reviewed	무언가 필요하신가요?	english_reference	영어 참조 의미 대조 완료
+161	english_reference_reviewed	조심하세요	english_reference	영어 참조 의미 대조 완료
 162	excluded_non_dialogue		english_reference	단독 종료 바이트라 번역하지 않음
 163	english_semantic_draft	동료를 선택하세요	english_reference	메뉴/UI 문맥 확인 필요
 164	english_semantic_draft	산키, 오코토는 괜찮습니다	english_reference	이름 표기 문맥 확인 필요

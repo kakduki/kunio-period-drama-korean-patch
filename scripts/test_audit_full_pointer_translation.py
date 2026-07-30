@@ -24,10 +24,10 @@ def main() -> int:
     assert coverage["row_count"] == 248
     assert coverage["active_count"] == 244
     assert coverage["excluded_count"] == 4
-    assert coverage["reviewed_count"] == 128
+    assert coverage["reviewed_count"] == 150
     assert coverage["failure_counts"] == {}
-    assert coverage["warning_counts"]["semantic_draft_not_reviewed"] == 116
-    assert coverage["warning_counts"]["dynamic_control_context"] == 27
+    assert coverage["warning_counts"]["semantic_draft_not_reviewed"] == 94
+    assert coverage["warning_counts"]["dynamic_control_context"] == 36
     assert len(payload["rows"]) == 248
     print("Full pointer translation audit tests passed.")
     return 0

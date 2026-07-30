@@ -6,17 +6,17 @@
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 128,
+    "reviewed_count": 150,
     "status_counts": {
-      "english_reference_reviewed": 128,
-      "english_semantic_draft": 116,
+      "english_reference_reviewed": 150,
+      "english_semantic_draft": 94,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 113,
-      "dynamic_control_context": 27,
-      "semantic_draft_not_reviewed": 116
+      "context_confirmation_required": 91,
+      "dynamic_control_context": 36,
+      "semantic_draft_not_reviewed": 94
     },
     "duplicate_display_groups": 7
   },
@@ -1627,87 +1627,69 @@
     },
     {
       "pointer_index": 135,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WELCOME",
       "korean_draft": "어서 오세요",
       "compiled_display_text": "어서 오세요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 136,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WHAT WOULD YOU LIKE",
       "korean_draft": "무엇을 원하시나요?",
       "compiled_display_text": "무엇을 원하시나요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 137,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOUR INVENTORY IS FULL",
       "korean_draft": "소지품이 가득 찼습니다",
       "compiled_display_text": "소지품이 가득 찼습니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 138,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU DON T HAVE ENOUGH MONEY",
       "korean_draft": "돈이 부족합니다",
       "compiled_display_text": "돈이 부족합니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 139,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ARE YOU SURE",
       "korean_draft": "정말 확실한가요?",
       "compiled_display_text": "정말 확실한가요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 140,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THANKS",
       "korean_draft": "고맙습니다",
       "compiled_display_text": "고맙습니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 141,
@@ -1720,7 +1702,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -1734,7 +1717,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -1748,7 +1732,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -1762,120 +1747,97 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 145,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ANYTHING ELSE",
       "korean_draft": "다른 것은 더 없나요?",
       "compiled_display_text": "다른 것은 더 없나요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 146,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THANKS COME AGAIN",
       "korean_draft": "고맙습니다. 또 오세요",
       "compiled_display_text": "고맙습니다 또 오세요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 147,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WILL YOU STAY",
       "korean_draft": "여기 머무르시겠어요?",
       "compiled_display_text": "여기 머무르시겠어요",
       "basis": "english_reference",
-      "notes": "숙박/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 148,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE RELAX",
       "korean_draft": "편히 쉬세요",
       "compiled_display_text": "편히 쉬세요",
       "basis": "english_reference",
-      "notes": "숙박/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 149,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "RESTED",
       "korean_draft": "회복했습니다",
       "compiled_display_text": "회복했습니다",
       "basis": "english_reference",
-      "notes": "숙박/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 150,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WANNA GAMBLE",
       "korean_draft": "도박을 해 볼래요?",
       "compiled_display_text": "도박을 해 볼래요",
       "basis": "english_reference",
-      "notes": "도박/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 151,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "READY",
       "korean_draft": "준비됐습니다",
       "compiled_display_text": "준비됐습니다",
       "basis": "english_reference",
-      "notes": "도박/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 152,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GO NOW",
       "korean_draft": "지금 가세요",
       "compiled_display_text": "지금 가세요",
       "basis": "english_reference",
-      "notes": "도박/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 153,
@@ -1888,120 +1850,97 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 154,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU WON",
       "korean_draft": "이겼습니다",
       "compiled_display_text": "이겼습니다",
       "basis": "english_reference",
-      "notes": "결과/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 155,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU LOST",
       "korean_draft": "졌습니다",
       "compiled_display_text": "졌습니다",
       "basis": "english_reference",
-      "notes": "결과/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 156,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WELL",
       "korean_draft": "그렇군요",
       "compiled_display_text": "그렇군요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 157,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SANKI WELCOME BACK",
       "korean_draft": "산키, 다시 오셨군요",
       "compiled_display_text": "산키 다시 오셨군요",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 158,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "NEED SOMETHING",
       "korean_draft": "무언가 필요하신가요?",
       "compiled_display_text": "무언가 필요하신가요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 159,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "MY PLEASURE",
       "korean_draft": "천만에요",
       "compiled_display_text": "천만에요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 160,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "NEED SOMETHING",
       "korean_draft": "무언가 필요하신가요?",
       "compiled_display_text": "무언가 필요하신가요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 161,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BE CAREFUL",
       "korean_draft": "조심하세요",
       "compiled_display_text": "조심하세요",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 162,
@@ -2916,7 +2855,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2942,7 +2882,9 @@
       "basis": "english_reference",
       "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": []
+      "warnings": [
+        "dynamic_control_context"
+      ]
     },
     {
       "pointer_index": 230,
@@ -2955,7 +2897,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -3065,7 +3008,9 @@
       "basis": "english_reference",
       "notes": "장비 제거 의미로 영어 참조 대조 완료",
       "failures": [],
-      "warnings": []
+      "warnings": [
+        "dynamic_control_context"
+      ]
     },
     {
       "pointer_index": 239,

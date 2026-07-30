@@ -134,33 +134,33 @@
 132,english_reference_reviewed,AIYEE,꺄악!,꺄악,english_reference,영어 참조 의미 대조 완료,,
 133,english_reference_reviewed,ARGH,으악!,으악,english_reference,영어 참조 의미 대조 완료,,
 134,english_reference_reviewed,AI YAI YAI,아야야야!,아야야야,english_reference,영어 참조 의미 대조 완료,,
-135,english_semantic_draft,WELCOME,어서 오세요,어서 오세요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-136,english_semantic_draft,WHAT WOULD YOU LIKE,무엇을 원하시나요?,무엇을 원하시나요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-137,english_semantic_draft,YOUR INVENTORY IS FULL,소지품이 가득 찼습니다,소지품이 가득 찼습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-138,english_semantic_draft,YOU DON T HAVE ENOUGH MONEY,돈이 부족합니다,돈이 부족합니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-139,english_semantic_draft,ARE YOU SURE,정말 확실한가요?,정말 확실한가요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-140,english_semantic_draft,THANKS,고맙습니다,고맙습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-141,english_semantic_draft,ATE,먹었습니다,먹었습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-142,english_semantic_draft,DRANK,마셨습니다,마셨습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-143,english_semantic_draft,GOT,얻었습니다,얻었습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-144,english_semantic_draft,EQUIPPED,장착했습니다,장착했습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-145,english_semantic_draft,ANYTHING ELSE,다른 것은 더 없나요?,다른 것은 더 없나요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-146,english_semantic_draft,THANKS COME AGAIN,고맙습니다. 또 오세요,고맙습니다 또 오세요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-147,english_semantic_draft,WILL YOU STAY,여기 머무르시겠어요?,여기 머무르시겠어요,english_reference,숙박/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-148,english_semantic_draft,PLEASE RELAX,편히 쉬세요,편히 쉬세요,english_reference,숙박/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-149,english_semantic_draft,RESTED,회복했습니다,회복했습니다,english_reference,숙박/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-150,english_semantic_draft,WANNA GAMBLE,도박을 해 볼래요?,도박을 해 볼래요,english_reference,도박/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-151,english_semantic_draft,READY,준비됐습니다,준비됐습니다,english_reference,도박/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-152,english_semantic_draft,GO NOW,지금 가세요,지금 가세요,english_reference,도박/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-153,english_semantic_draft,WE HAVE AND,우리는 이것과 저것을 가지고 있습니다,우리는 이것과 저것을 가지고 있습니다,english_reference,아이템 변수 토큰 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-154,english_semantic_draft,YOU WON,이겼습니다,이겼습니다,english_reference,결과/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-155,english_semantic_draft,YOU LOST,졌습니다,졌습니다,english_reference,결과/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-156,english_semantic_draft,WELL,그렇군요,그렇군요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-157,english_semantic_draft,SANKI WELCOME BACK,"산키, 다시 오셨군요",산키 다시 오셨군요,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-158,english_semantic_draft,NEED SOMETHING,무언가 필요하신가요?,무언가 필요하신가요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-159,english_semantic_draft,MY PLEASURE,천만에요,천만에요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-160,english_semantic_draft,NEED SOMETHING,무언가 필요하신가요?,무언가 필요하신가요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-161,english_semantic_draft,BE CAREFUL,조심하세요,조심하세요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+135,english_reference_reviewed,WELCOME,어서 오세요,어서 오세요,english_reference,영어 참조 의미 대조 완료,,
+136,english_reference_reviewed,WHAT WOULD YOU LIKE,무엇을 원하시나요?,무엇을 원하시나요,english_reference,영어 참조 의미 대조 완료,,
+137,english_reference_reviewed,YOUR INVENTORY IS FULL,소지품이 가득 찼습니다,소지품이 가득 찼습니다,english_reference,영어 참조 의미 대조 완료,,
+138,english_reference_reviewed,YOU DON T HAVE ENOUGH MONEY,돈이 부족합니다,돈이 부족합니다,english_reference,영어 참조 의미 대조 완료,,
+139,english_reference_reviewed,ARE YOU SURE,정말 확실한가요?,정말 확실한가요,english_reference,영어 참조 의미 대조 완료,,
+140,english_reference_reviewed,THANKS,고맙습니다,고맙습니다,english_reference,영어 참조 의미 대조 완료,,
+141,english_semantic_draft,ATE,먹었습니다,먹었습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+142,english_semantic_draft,DRANK,마셨습니다,마셨습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+143,english_semantic_draft,GOT,얻었습니다,얻었습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+144,english_semantic_draft,EQUIPPED,장착했습니다,장착했습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+145,english_reference_reviewed,ANYTHING ELSE,다른 것은 더 없나요?,다른 것은 더 없나요,english_reference,영어 참조 의미 대조 완료,,
+146,english_reference_reviewed,THANKS COME AGAIN,고맙습니다. 또 오세요,고맙습니다 또 오세요,english_reference,영어 참조 의미 대조 완료,,
+147,english_reference_reviewed,WILL YOU STAY,여기 머무르시겠어요?,여기 머무르시겠어요,english_reference,영어 참조 의미 대조 완료,,
+148,english_reference_reviewed,PLEASE RELAX,편히 쉬세요,편히 쉬세요,english_reference,영어 참조 의미 대조 완료,,
+149,english_reference_reviewed,RESTED,회복했습니다,회복했습니다,english_reference,영어 참조 의미 대조 완료,,
+150,english_reference_reviewed,WANNA GAMBLE,도박을 해 볼래요?,도박을 해 볼래요,english_reference,영어 참조 의미 대조 완료,,
+151,english_reference_reviewed,READY,준비됐습니다,준비됐습니다,english_reference,영어 참조 의미 대조 완료,,
+152,english_reference_reviewed,GO NOW,지금 가세요,지금 가세요,english_reference,영어 참조 의미 대조 완료,,
+153,english_semantic_draft,WE HAVE AND,우리는 이것과 저것을 가지고 있습니다,우리는 이것과 저것을 가지고 있습니다,english_reference,아이템 변수 토큰 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+154,english_reference_reviewed,YOU WON,이겼습니다,이겼습니다,english_reference,영어 참조 의미 대조 완료,,
+155,english_reference_reviewed,YOU LOST,졌습니다,졌습니다,english_reference,영어 참조 의미 대조 완료,,
+156,english_reference_reviewed,WELL,그렇군요,그렇군요,english_reference,영어 참조 의미 대조 완료,,
+157,english_reference_reviewed,SANKI WELCOME BACK,"산키, 다시 오셨군요",산키 다시 오셨군요,english_reference,영어 참조 의미 대조 완료,,
+158,english_reference_reviewed,NEED SOMETHING,무언가 필요하신가요?,무언가 필요하신가요,english_reference,영어 참조 의미 대조 완료,,
+159,english_reference_reviewed,MY PLEASURE,천만에요,천만에요,english_reference,영어 참조 의미 대조 완료,,
+160,english_reference_reviewed,NEED SOMETHING,무언가 필요하신가요?,무언가 필요하신가요,english_reference,영어 참조 의미 대조 완료,,
+161,english_reference_reviewed,BE CAREFUL,조심하세요,조심하세요,english_reference,영어 참조 의미 대조 완료,,
 162,excluded_non_dialogue,,,,english_reference,단독 종료 바이트라 번역하지 않음,,
 163,english_semantic_draft,CHOOSE ALLY,동료를 선택하세요,동료를 선택하세요,english_reference,메뉴/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 164,english_semantic_draft,SANKI OKOTO HAS,"산키, 오코토는 괜찮습니다",산키 오코토는 괜찮습니다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
@@ -226,10 +226,10 @@
 224,english_reference_reviewed,DUTY CALLS AND ROMANCE,의무와 사랑이 기다린다,의무와 사랑이 기다린다,english_reference,영어 참조 의미 대조 완료,,
 225,english_semantic_draft,KUNIO S LOVE AWAITS,쿠니오의 사랑이 기다린다,쿠니오의 사랑이 기다린다,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 226,english_semantic_draft,OR DOES SHE,정말 그녀일까?,정말 그녀일까,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-227,english_semantic_draft,USED,사용했습니다,사용했습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+227,english_semantic_draft,USED,사용했습니다,사용했습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 228,english_semantic_draft,ARE YOU READY FOR THIS NEW AREA YEAH,새 지역으로 갈 준비가 됐나요? 그래,새 지역으로 갈 준비가 됐나요 그래,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-229,english_reference_reviewed,GAVE,주었습니다,주었습니다,english_reference,영어 참조 의미 대조 완료,,
-230,english_semantic_draft,DROPPED,떨어뜨렸습니다,떨어뜨렸습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+229,english_reference_reviewed,GAVE,주었습니다,주었습니다,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
+230,english_semantic_draft,DROPPED,떨어뜨렸습니다,떨어뜨렸습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 231,english_semantic_draft,S STATUS IS UP,상태가 올랐습니다,상태가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 232,english_semantic_draft,S IS UP,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 233,english_semantic_draft,S UP BY,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
@@ -237,7 +237,7 @@
 235,english_semantic_draft,LEARNED A TECHNIQUE,기술을 배웠습니다,기술을 배웠습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 236,english_semantic_draft,STATUS LEVELS UP NOW DOUBLE,상태 레벨이 올랐습니다. 이제 두 배입니다,상태 레벨이 올랐습니다 이제 두 배입니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 237,english_semantic_draft,USE MAP CURSOR TO TRAVEL,지도 커서로 이동하세요,지도 커서로 이동하세요,english_reference,지도/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-238,english_reference_reviewed,REMOVED,해제했습니다,해제했습니다,english_reference,장비 제거 의미로 영어 참조 대조 완료,,
+238,english_reference_reviewed,REMOVED,해제했습니다,해제했습니다,english_reference,장비 제거 의미로 영어 참조 대조 완료,,dynamic_control_context
 239,english_semantic_draft,SMILES,미소 지었습니다,미소 지었습니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 240,english_semantic_draft,FELT LIGHTER,몸이 가벼워졌습니다,몸이 가벼워졌습니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 241,english_semantic_draft,A GREAT MOMENT,멋진 순간입니다,멋진 순간입니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"

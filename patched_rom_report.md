@@ -127,8 +127,8 @@ supersedes that capacity conclusion while retaining it as historical evidence.
   and field-background checks.
 - Pointers 25, 50, and 110 bypass their initial event-dependent `F0` only in
   the visual harness, so this evidence does not promote natural event control.
-- Translation QA found no structural failures. One hundred twenty-eight rows
-  have direct English-reference review; 116 semantic drafts remain. Twenty-seven records
+- Translation QA found no structural failures. One hundred fifty rows have
+  direct English-reference review; 94 semantic drafts remain. Thirty-six records
   with dynamic name/item controls are separately flagged for context review.
 - IPS apply round trip: PASS.
 - Broad runtime and translation review remain required for release.

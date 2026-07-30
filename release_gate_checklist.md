@@ -16,7 +16,7 @@ Current release verdict: **UNKNOWN**
 | Menu cursor lifecycle | UNKNOWN | A post-template probe was inconclusive. |
 | Other R1 raster contexts | UNKNOWN | Shared split needs per-screen audit. |
 | Release-wide Korean glyph capacity | SOFT_GATE_PASS | The optimized 49-page build fits 13 appended CHR banks; forced pointers 0/25/50/110/181 prove pages 11/16/41/33/43 with matching state/R1 and preserved backgrounds. Natural event control and broad scene auditing remain open. |
-| Full translated script | CANDIDATE_BUILT | 244 Korean rows compile with preserved English non-letter control skeletons; 128 rows are English-reference reviewed, 116 semantic drafts remain, 27 dynamic-control records need context review, and four excluded rows retain Japanese bytes. |
+| Full translated script | CANDIDATE_BUILT | 244 Korean rows compile with preserved English non-letter control skeletons; 150 rows are English-reference reviewed, 94 semantic drafts remain, 36 dynamic-control records need context review, and four excluded rows retain Japanese bytes. |
 | Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; the bounded opening/extended routes reached no target capture, so early-boss screen context is not yet captured. |
 | Direct 8x16 pointer batch | UNKNOWN | Pointers 0-2 compile with 24 glyphs and 0 escaped bytes; boot passes at frame 883, but the frame-5000 route has no complete target match and p0 has a multi-message structural risk. |
 | Opening-context Korean glyph capacity | SOFT_GATE_PASS | Pointer 182 proves 34 paired source slots (`0x81-0x9A` plus `0xC0-0xC7`) at frame 883; this is not global coverage. |
