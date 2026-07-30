@@ -1,0 +1,318 @@
+{
+  "status": "CANDIDATE_BUILT_PENDING_PTR181_RUNTIME_PROOF",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "pointer_index": 181,
+  "pointer_rom_offset": "0x05F3E",
+  "record_rom_offset": "0x07198",
+  "record_length": 30,
+  "test_record": "81 8C 82 8D 83 8E 84 8F 85 90 86 91 87 92 88 93 CA 00 FF 00 00 00 00 00 00 00 00 00 00 00",
+  "candidate": {
+    "patched_md5": "fdcfcf4504b05185fe616518a8cc89cd",
+    "ips_path": "output\\ptr181_bank8_page_probe\\kunio_period_drama_korean_ptr181_bank8_page_probe.ips",
+    "rom_path": "output\\ptr181_bank8_page_probe\\kunio_period_drama_korean_ptr181_bank8_page_probe.nes",
+    "ips_record_count": 102,
+    "changed_span_count": 102,
+    "target_count": 38,
+    "targets": [
+      {
+        "kind": "renderer_entry_hook",
+        "rom_offset": 21871,
+        "length": 3,
+        "cpu_address": "0x955F"
+      },
+      {
+        "kind": "renderer_marker_hook",
+        "rom_offset": 21894,
+        "length": 3,
+        "cpu_address": "0x9576",
+        "helper_cpu_address": "0xBFCE"
+      },
+      {
+        "kind": "renderer_helper",
+        "rom_offset": 32693,
+        "length": 65,
+        "cpu_address": "0xBFA5"
+      },
+      {
+        "kind": "chr_page_clone_from_bank7",
+        "rom_offset": 202768,
+        "length": 2048,
+        "source_window": "0x2F810",
+        "target_window": "0x31810",
+        "source_chr_bank": 7,
+        "target_chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202784,
+        "length": 16,
+        "glyph": "\ucfe0",
+        "code": "0x81",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202960,
+        "length": 16,
+        "glyph": "\ucfe0",
+        "code": "0x8C",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203296,
+        "length": 16,
+        "glyph": "\ucfe0",
+        "code": "0xA1",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203472,
+        "length": 16,
+        "glyph": "\ucfe0",
+        "code": "0xAC",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202800,
+        "length": 16,
+        "glyph": "\ub2c8",
+        "code": "0x82",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202976,
+        "length": 16,
+        "glyph": "\ub2c8",
+        "code": "0x8D",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203312,
+        "length": 16,
+        "glyph": "\ub2c8",
+        "code": "0xA2",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203488,
+        "length": 16,
+        "glyph": "\ub2c8",
+        "code": "0xAD",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202816,
+        "length": 16,
+        "glyph": "\ub9c8",
+        "code": "0x83",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202992,
+        "length": 16,
+        "glyph": "\ub9c8",
+        "code": "0x8E",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203328,
+        "length": 16,
+        "glyph": "\ub9c8",
+        "code": "0xA3",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203504,
+        "length": 16,
+        "glyph": "\ub9c8",
+        "code": "0xAE",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202832,
+        "length": 16,
+        "glyph": "\uc0ac",
+        "code": "0x84",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203008,
+        "length": 16,
+        "glyph": "\uc0ac",
+        "code": "0x8F",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203344,
+        "length": 16,
+        "glyph": "\uc0ac",
+        "code": "0xA4",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203520,
+        "length": 16,
+        "glyph": "\uc0ac",
+        "code": "0xAF",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202848,
+        "length": 16,
+        "glyph": "\uc5b4",
+        "code": "0x85",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203024,
+        "length": 16,
+        "glyph": "\uc5b4",
+        "code": "0x90",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203360,
+        "length": 16,
+        "glyph": "\uc5b4",
+        "code": "0xA5",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203536,
+        "length": 16,
+        "glyph": "\uc5b4",
+        "code": "0xB0",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202864,
+        "length": 16,
+        "glyph": "\uc11c",
+        "code": "0x86",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203040,
+        "length": 16,
+        "glyph": "\uc11c",
+        "code": "0x91",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203376,
+        "length": 16,
+        "glyph": "\uc11c",
+        "code": "0xA6",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203552,
+        "length": 16,
+        "glyph": "\uc11c",
+        "code": "0xB1",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202880,
+        "length": 16,
+        "glyph": "\ubd84",
+        "code": "0x87",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203056,
+        "length": 16,
+        "glyph": "\ubd84",
+        "code": "0x92",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203392,
+        "length": 16,
+        "glyph": "\ubd84",
+        "code": "0xA7",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203568,
+        "length": 16,
+        "glyph": "\ubd84",
+        "code": "0xB2",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 202896,
+        "length": 16,
+        "glyph": "\uc870",
+        "code": "0x88",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203072,
+        "length": 16,
+        "glyph": "\uc870",
+        "code": "0x93",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203408,
+        "length": 16,
+        "glyph": "\uc870",
+        "code": "0xA8",
+        "chr_bank": 8
+      },
+      {
+        "kind": "font_tile_page",
+        "rom_offset": 203584,
+        "length": 16,
+        "glyph": "\uc870",
+        "code": "0xB3",
+        "chr_bank": 8
+      },
+      {
+        "kind": "static_normal_mapper_r1",
+        "rom_offset": 126557,
+        "length": 1,
+        "original": "0x3E",
+        "replacement": "0x46"
+      },
+      {
+        "kind": "ptr181_dialogue_record",
+        "rom_offset": 29080,
+        "length": 30,
+        "pointer_index": 181,
+        "pointer_rom_offset": 24382,
+        "cpu_address": "0xB188"
+      }
+    ]
+  }
+}

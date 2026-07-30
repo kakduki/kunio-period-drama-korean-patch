@@ -1,0 +1,5229 @@
+{
+  "inputs": {
+    "translation_rows": 144,
+    "unique_hangul": 220,
+    "english_bank7_changed_tiles": 181,
+    "tiles_per_korean_syllable": 4,
+    "source_codes_per_korean_syllable": 2,
+    "proven_source_codes_per_page": 34
+  },
+  "capacity": {
+    "proven_syllables_per_page": 17,
+    "theoretical_syllables_from_english_changed_tiles": 45,
+    "minimum_pages_by_unique_count_proven": 13,
+    "minimum_pages_by_unique_count_theoretical": 5
+  },
+  "top_hangul": [
+    [
+      "이",
+      14
+    ],
+    [
+      "마",
+      14
+    ],
+    [
+      "다",
+      13
+    ],
+    [
+      "하",
+      11
+    ],
+    [
+      "구",
+      11
+    ],
+    [
+      "기",
+      11
+    ],
+    [
+      "치",
+      10
+    ],
+    [
+      "리",
+      10
+    ],
+    [
+      "로",
+      10
+    ],
+    [
+      "의",
+      9
+    ],
+    [
+      "스",
+      8
+    ],
+    [
+      "타",
+      7
+    ],
+    [
+      "시",
+      7
+    ],
+    [
+      "강",
+      7
+    ],
+    [
+      "가",
+      7
+    ],
+    [
+      "츠",
+      6
+    ],
+    [
+      "지",
+      6
+    ],
+    [
+      "인",
+      6
+    ],
+    [
+      "약",
+      6
+    ],
+    [
+      "에",
+      6
+    ],
+    [
+      "쿠",
+      5
+    ],
+    [
+      "니",
+      5
+    ],
+    [
+      "쇠",
+      5
+    ],
+    [
+      "철",
+      5
+    ],
+    [
+      "옷",
+      5
+    ],
+    [
+      "고",
+      5
+    ],
+    [
+      "간",
+      5
+    ],
+    [
+      "술",
+      5
+    ],
+    [
+      "비",
+      4
+    ],
+    [
+      "방",
+      4
+    ],
+    [
+      "어",
+      4
+    ],
+    [
+      "장",
+      4
+    ],
+    [
+      "몽",
+      4
+    ],
+    [
+      "둥",
+      4
+    ],
+    [
+      "창",
+      4
+    ],
+    [
+      "파",
+      4
+    ],
+    [
+      "슬",
+      4
+    ],
+    [
+      "도",
+      4
+    ],
+    [
+      "신",
+      4
+    ],
+    [
+      "야",
+      4
+    ]
+  ],
+  "sections": [
+    {
+      "section": "5. 회복 / 보조 아이템",
+      "row_count": 21,
+      "unique_glyph_count": 53,
+      "minimum_proven_pages": 4,
+      "minimum_theoretical_pages": 2
+    },
+    {
+      "section": "6. 필살기 / 기술",
+      "row_count": 24,
+      "unique_glyph_count": 47,
+      "minimum_proven_pages": 3,
+      "minimum_theoretical_pages": 2
+    },
+    {
+      "section": "12. 기타",
+      "row_count": 7,
+      "unique_glyph_count": 46,
+      "minimum_proven_pages": 3,
+      "minimum_theoretical_pages": 2
+    },
+    {
+      "section": "7. 보스 / 적",
+      "row_count": 17,
+      "unique_glyph_count": 36,
+      "minimum_proven_pages": 3,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "3. 스테이터스 / UI",
+      "row_count": 13,
+      "unique_glyph_count": 30,
+      "minimum_proven_pages": 2,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "8. 스테이지",
+      "row_count": 15,
+      "unique_glyph_count": 27,
+      "minimum_proven_pages": 2,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "9. 이벤트 대사",
+      "row_count": 9,
+      "unique_glyph_count": 27,
+      "minimum_proven_pages": 2,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "1. 타이틀 / 메뉴",
+      "row_count": 4,
+      "unique_glyph_count": 26,
+      "minimum_proven_pages": 2,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "4. 무기 / 장비",
+      "row_count": 21,
+      "unique_glyph_count": 24,
+      "minimum_proven_pages": 2,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "2. 메뉴",
+      "row_count": 5,
+      "unique_glyph_count": 18,
+      "minimum_proven_pages": 2,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "11. 특수",
+      "row_count": 3,
+      "unique_glyph_count": 12,
+      "minimum_proven_pages": 1,
+      "minimum_theoretical_pages": 1
+    },
+    {
+      "section": "10. 엔딩",
+      "row_count": 5,
+      "unique_glyph_count": 11,
+      "minimum_proven_pages": 1,
+      "minimum_theoretical_pages": 1
+    }
+  ],
+  "proven_page_pack": {
+    "capacity": 17,
+    "page_count": 23,
+    "oversize_rows": [],
+    "pages": [
+      {
+        "glyphs": [
+          "겼",
+          "군",
+          "극",
+          "니",
+          "다",
+          "대",
+          "시",
+          "오",
+          "원",
+          "의",
+          "이",
+          "전",
+          "집",
+          "축",
+          "쿠",
+          "하",
+          "합"
+        ],
+        "rows": [
+          {
+            "row_index": 1,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "くにおくんの時代劇だよ全員集合！",
+            "korean": "쿠니오군의 시대극이다 전원집합!",
+            "glyphs": [
+              "군",
+              "극",
+              "니",
+              "다",
+              "대",
+              "시",
+              "오",
+              "원",
+              "의",
+              "이",
+              "전",
+              "집",
+              "쿠",
+              "합"
+            ],
+            "unique_glyph_count": 14
+          },
+          {
+            "row_index": 133,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "おめでとう！",
+            "korean": "축하합니다!",
+            "glyphs": [
+              "니",
+              "다",
+              "축",
+              "하",
+              "합"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 120,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "やったー！",
+            "korean": "이겼다!",
+            "glyphs": [
+              "겼",
+              "다",
+              "이"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 0,
+        "unique_glyph_count": 17,
+        "row_count": 3
+      },
+      {
+        "glyphs": [
+          "고",
+          "굴",
+          "동",
+          "뜨",
+          "러",
+          "로",
+          "료",
+          "리",
+          "면",
+          "서",
+          "쓰",
+          "야",
+          "와",
+          "용",
+          "재",
+          "하",
+          "회"
+        ],
+        "rows": [
+          {
+            "row_index": 141,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "倒して許すと仲間に",
+            "korean": "쓰러뜨리고 용서하면 동료로",
+            "glyphs": [
+              "고",
+              "동",
+              "뜨",
+              "러",
+              "로",
+              "료",
+              "리",
+              "면",
+              "서",
+              "쓰",
+              "용",
+              "하"
+            ],
+            "unique_glyph_count": 12
+          },
+          {
+            "row_index": 138,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "やごろうと再会",
+            "korean": "야고로와 재회",
+            "glyphs": [
+              "고",
+              "로",
+              "야",
+              "와",
+              "재",
+              "회"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 97,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "やごろう",
+            "korean": "야고로",
+            "glyphs": [
+              "고",
+              "로",
+              "야"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 109,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "どうくつ",
+            "korean": "동굴",
+            "glyphs": [
+              "굴",
+              "동"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 1,
+        "unique_glyph_count": 17,
+        "row_count": 4
+      },
+      {
+        "glyphs": [
+          "게",
+          "노",
+          "도",
+          "돈",
+          "박",
+          "받",
+          "벌",
+          "서",
+          "스",
+          "약",
+          "에",
+          "요",
+          "을",
+          "음",
+          "이",
+          "장",
+          "케"
+        ],
+        "rows": [
+          {
+            "row_index": 140,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "よのすけから薬をもらい",
+            "korean": "요노스케에게 약을 받음",
+            "glyphs": [
+              "게",
+              "노",
+              "받",
+              "스",
+              "약",
+              "에",
+              "요",
+              "을",
+              "음",
+              "케"
+            ],
+            "unique_glyph_count": 10
+          },
+          {
+            "row_index": 142,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "賭場でお金稼ぎ",
+            "korean": "도박장에서 돈벌이",
+            "glyphs": [
+              "도",
+              "돈",
+              "박",
+              "벌",
+              "서",
+              "에",
+              "이",
+              "장"
+            ],
+            "unique_glyph_count": 8
+          },
+          {
+            "row_index": 17,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "おかね",
+            "korean": "돈",
+            "glyphs": [
+              "돈"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 2,
+        "unique_glyph_count": 17,
+        "row_count": 3
+      },
+      {
+        "glyphs": [
+          "다",
+          "력",
+          "를",
+          "먹",
+          "밀",
+          "번",
+          "비",
+          "세",
+          "셜",
+          "스",
+          "요",
+          "운",
+          "입",
+          "타",
+          "페",
+          "하",
+          "호"
+        ],
+        "rows": [
+          {
+            "row_index": 6,
+            "section": "2. 메뉴",
+            "category": "메뉴",
+            "source": "パスワードを入力してください",
+            "korean": "비밀번호를 입력하세요",
+            "glyphs": [
+              "력",
+              "를",
+              "밀",
+              "번",
+              "비",
+              "세",
+              "요",
+              "입",
+              "하",
+              "호"
+            ],
+            "unique_glyph_count": 10
+          },
+          {
+            "row_index": 0,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "ダウンタウンスペシャル",
+            "korean": "다운타운 스페셜",
+            "glyphs": [
+              "다",
+              "셜",
+              "스",
+              "운",
+              "타",
+              "페"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 5,
+            "section": "2. 메뉴",
+            "category": "메뉴",
+            "source": "パスワード",
+            "korean": "비밀번호",
+            "glyphs": [
+              "밀",
+              "번",
+              "비",
+              "호"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 20,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "たべる",
+            "korean": "먹다",
+            "glyphs": [
+              "다",
+              "먹"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 3,
+        "unique_glyph_count": 17,
+        "row_count": 4
+      },
+      {
+        "glyphs": [
+          "너",
+          "노",
+          "루",
+          "마",
+          "배",
+          "스",
+          "신",
+          "윙",
+          "의",
+          "재",
+          "츠",
+          "크",
+          "테",
+          "트",
+          "파",
+          "팬",
+          "하"
+        ],
+        "rows": [
+          {
+            "row_index": 137,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "相棒つるまつの裏切り",
+            "korean": "파트너 츠루마츠의 배신",
+            "glyphs": [
+              "너",
+              "루",
+              "마",
+              "배",
+              "신",
+              "의",
+              "츠",
+              "트",
+              "파"
+            ],
+            "unique_glyph_count": 9
+          },
+          {
+            "row_index": 2,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "1991 TECHNOS JAPAN",
+            "korean": "1991 테크노스 재팬",
+            "glyphs": [
+              "노",
+              "스",
+              "재",
+              "크",
+              "테",
+              "팬"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 67,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはすいんぐ",
+            "korean": "마하 스윙",
+            "glyphs": [
+              "마",
+              "스",
+              "윙",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 10,
+            "section": "3. 스테이터스 / UI",
+            "category": "캐릭터명",
+            "source": "つるまつ",
+            "korean": "츠루마츠",
+            "glyphs": [
+              "루",
+              "마",
+              "츠"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 4,
+        "unique_glyph_count": 17,
+        "row_count": 4
+      },
+      {
+        "glyphs": [
+          "가",
+          "고",
+          "기",
+          "다",
+          "동",
+          "되",
+          "려",
+          "로",
+          "료",
+          "변",
+          "술",
+          "신",
+          "야",
+          "었",
+          "을",
+          "익",
+          "혔"
+        ],
+        "rows": [
+          {
+            "row_index": 139,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "変身の術で、やごろうに変身",
+            "korean": "변신술로 야고로 변신",
+            "glyphs": [
+              "고",
+              "로",
+              "변",
+              "술",
+              "신",
+              "야"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 125,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "なかまになった！",
+            "korean": "동료가 되었다!",
+            "glyphs": [
+              "가",
+              "다",
+              "동",
+              "되",
+              "료",
+              "었"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 127,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "わざをおぼえた！",
+            "korean": "기술을 익혔다!",
+            "glyphs": [
+              "기",
+              "다",
+              "술",
+              "을",
+              "익",
+              "혔"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 86,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "へんしんわざ",
+            "korean": "변신술",
+            "glyphs": [
+              "변",
+              "술",
+              "신"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 123,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "まってくれ！",
+            "korean": "기다려!",
+            "glyphs": [
+              "기",
+              "다",
+              "려"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 5,
+        "unique_glyph_count": 17,
+        "row_count": 5
+      },
+      {
+        "glyphs": [
+          "가",
+          "강",
+          "겨",
+          "기",
+          "네",
+          "다",
+          "랐",
+          "레",
+          "무",
+          "벨",
+          "술",
+          "숨",
+          "시",
+          "올",
+          "이",
+          "진",
+          "코"
+        ],
+        "rows": [
+          {
+            "row_index": 126,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "レベルがあがった！",
+            "korean": "레벨이 올랐다!",
+            "glyphs": [
+              "다",
+              "랐",
+              "레",
+              "벨",
+              "올",
+              "이"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 134,
+            "section": "11. 특수",
+            "category": "특수",
+            "source": "こがねむし",
+            "korean": "코가네무시",
+            "glyphs": [
+              "가",
+              "네",
+              "무",
+              "시",
+              "코"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 135,
+            "section": "11. 특수",
+            "category": "특수",
+            "source": "裏技",
+            "korean": "숨겨진 기술",
+            "glyphs": [
+              "겨",
+              "기",
+              "술",
+              "숨",
+              "진"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 15,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "レベル",
+            "korean": "레벨",
+            "glyphs": [
+              "레",
+              "벨"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 108,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "かわら",
+            "korean": "강가",
+            "glyphs": [
+              "가",
+              "강"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 6,
+        "unique_glyph_count": 17,
+        "row_count": 5
+      },
+      {
+        "glyphs": [
+          "강",
+          "경",
+          "구",
+          "달",
+          "도",
+          "둥",
+          "리",
+          "몽",
+          "설",
+          "쇠",
+          "안",
+          "의",
+          "이",
+          "인",
+          "전",
+          "창",
+          "철"
+        ],
+        "rows": [
+          {
+            "row_index": 23,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "どうのこんぼう",
+            "korean": "구리 몽둥이",
+            "glyphs": [
+              "구",
+              "둥",
+              "리",
+              "몽",
+              "이"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 25,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "はがねのこんぼう",
+            "korean": "강철 몽둥이",
+            "glyphs": [
+              "강",
+              "둥",
+              "몽",
+              "이",
+              "철"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 51,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "たつじんめがね",
+            "korean": "달인의 안경",
+            "glyphs": [
+              "경",
+              "달",
+              "안",
+              "의",
+              "인"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 60,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "でんせつのどうぐ",
+            "korean": "전설의 도구",
+            "glyphs": [
+              "구",
+              "도",
+              "설",
+              "의",
+              "전"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 24,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "てつのこんぼう",
+            "korean": "쇠 몽둥이",
+            "glyphs": [
+              "둥",
+              "몽",
+              "쇠",
+              "이"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 22,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "こんぼう",
+            "korean": "몽둥이",
+            "glyphs": [
+              "둥",
+              "몽",
+              "이"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 31,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "どうのやり",
+            "korean": "구리 창",
+            "glyphs": [
+              "구",
+              "리",
+              "창"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 33,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "はがねのやり",
+            "korean": "강철 창",
+            "glyphs": [
+              "강",
+              "창",
+              "철"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 32,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "てつのやり",
+            "korean": "쇠 창",
+            "glyphs": [
+              "쇠",
+              "창"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 30,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "やり",
+            "korean": "창",
+            "glyphs": [
+              "창"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 7,
+        "unique_glyph_count": 17,
+        "row_count": 10
+      },
+      {
+        "glyphs": [
+          "가",
+          "게",
+          "께",
+          "끼",
+          "니",
+          "로",
+          "방",
+          "봉",
+          "부",
+          "수",
+          "어",
+          "의",
+          "인",
+          "적",
+          "체",
+          "택",
+          "트"
+        ],
+        "rows": [
+          {
+            "row_index": 61,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "なぞのみせ",
+            "korean": "수수께끼 가게",
+            "glyphs": [
+              "가",
+              "게",
+              "께",
+              "끼",
+              "수"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 55,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "ふういんのふだ",
+            "korean": "봉인의 부적",
+            "glyphs": [
+              "봉",
+              "부",
+              "의",
+              "인",
+              "적"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 70,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にとろあたっく",
+            "korean": "니트로 어택",
+            "glyphs": [
+              "니",
+              "로",
+              "어",
+              "택",
+              "트"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 14,
+            "section": "3. 스테이터스 / UI",
+            "category": "능력치",
+            "source": "ぼうぎょ",
+            "korean": "방어",
+            "glyphs": [
+              "방",
+              "어"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 34,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "チェーン",
+            "korean": "체인",
+            "glyphs": [
+              "인",
+              "체"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 8,
+        "unique_glyph_count": 17,
+        "row_count": 5
+      },
+      {
+        "glyphs": [
+          "가",
+          "걸",
+          "기",
+          "드",
+          "때",
+          "라",
+          "리",
+          "마",
+          "빰",
+          "술",
+          "야",
+          "의",
+          "이",
+          "져",
+          "타",
+          "퍼",
+          "하"
+        ],
+        "rows": [
+          {
+            "row_index": 71,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "はいぱーがーど",
+            "korean": "하이퍼 가드",
+            "glyphs": [
+              "가",
+              "드",
+              "이",
+              "퍼",
+              "하"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 66,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはたたき",
+            "korean": "마하 때리기",
+            "glyphs": [
+              "기",
+              "때",
+              "리",
+              "마",
+              "하"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 87,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "やまたのじゅつ",
+            "korean": "야마타의 술",
+            "glyphs": [
+              "마",
+              "술",
+              "야",
+              "의",
+              "타"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 124,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "これをもっていけ",
+            "korean": "이걸 가져가라",
+            "glyphs": [
+              "가",
+              "걸",
+              "라",
+              "이",
+              "져"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 81,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "はりてすぺしゃる",
+            "korean": "빰 때리기 S",
+            "glyphs": [
+              "기",
+              "때",
+              "리",
+              "빰"
+            ],
+            "unique_glyph_count": 4
+          }
+        ],
+        "page_index": 9,
+        "unique_glyph_count": 17,
+        "row_count": 5
+      },
+      {
+        "glyphs": [
+          "게",
+          "다",
+          "두",
+          "라",
+          "목",
+          "몸",
+          "시",
+          "에",
+          "옷",
+          "의",
+          "익",
+          "임",
+          "작",
+          "조",
+          "토",
+          "투",
+          "혔"
+        ],
+        "rows": [
+          {
+            "row_index": 101,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "とらぞうおやぶん",
+            "korean": "토라조 두목",
+            "glyphs": [
+              "두",
+              "라",
+              "목",
+              "조",
+              "토"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 128,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "みにつけた！",
+            "korean": "몸에 익혔다!",
+            "glyphs": [
+              "다",
+              "몸",
+              "에",
+              "익",
+              "혔"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 4,
+            "section": "2. 메뉴",
+            "category": "메뉴",
+            "source": "ゲームスタート",
+            "korean": "게임 시작",
+            "glyphs": [
+              "게",
+              "시",
+              "임",
+              "작"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 50,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "すけすけのたび",
+            "korean": "투시의 옷",
+            "glyphs": [
+              "시",
+              "옷",
+              "의",
+              "투"
+            ],
+            "unique_glyph_count": 4
+          }
+        ],
+        "page_index": 10,
+        "unique_glyph_count": 17,
+        "row_count": 4
+      },
+      {
+        "glyphs": [
+          "간",
+          "갑",
+          "강",
+          "구",
+          "니",
+          "란",
+          "리",
+          "마",
+          "방",
+          "빨",
+          "사",
+          "슬",
+          "옷",
+          "철",
+          "쿠",
+          "파",
+          "패"
+        ],
+        "rows": [
+          {
+            "row_index": 9,
+            "section": "3. 스테이터스 / UI",
+            "category": "캐릭터명",
+            "source": "くにまさ",
+            "korean": "쿠니마사",
+            "glyphs": [
+              "니",
+              "마",
+              "사",
+              "쿠"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 40,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "どうのたいぼう",
+            "korean": "구리 방패",
+            "glyphs": [
+              "구",
+              "리",
+              "방",
+              "패"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 37,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "どうのよろい",
+            "korean": "구리 갑옷",
+            "glyphs": [
+              "갑",
+              "구",
+              "리",
+              "옷"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 42,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "はがねのたいぼう",
+            "korean": "강철 방패",
+            "glyphs": [
+              "강",
+              "방",
+              "철",
+              "패"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 39,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "はがねのよろい",
+            "korean": "강철 갑옷",
+            "glyphs": [
+              "갑",
+              "강",
+              "옷",
+              "철"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 59,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "あおいたま",
+            "korean": "파란 구슬",
+            "glyphs": [
+              "구",
+              "란",
+              "슬",
+              "파"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 58,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "あかいたま",
+            "korean": "빨간 구슬",
+            "glyphs": [
+              "간",
+              "구",
+              "빨",
+              "슬"
+            ],
+            "unique_glyph_count": 4
+          }
+        ],
+        "page_index": 11,
+        "unique_glyph_count": 17,
+        "row_count": 7
+      },
+      {
+        "glyphs": [
+          "굉",
+          "구",
+          "금",
+          "기",
+          "도",
+          "물",
+          "보",
+          "비",
+          "뽑",
+          "슬",
+          "약",
+          "의",
+          "장",
+          "제",
+          "지",
+          "한",
+          "황"
+        ],
+        "rows": [
+          {
+            "row_index": 56,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "きんのたま",
+            "korean": "황금 구슬",
+            "glyphs": [
+              "구",
+              "금",
+              "슬",
+              "황"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 45,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "すごいくすり",
+            "korean": "굉장한 약",
+            "glyphs": [
+              "굉",
+              "약",
+              "장",
+              "한"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 63,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "たからのちず",
+            "korean": "보물 지도",
+            "glyphs": [
+              "도",
+              "물",
+              "보",
+              "지"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 62,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "ふくびき",
+            "korean": "제비뽑기",
+            "glyphs": [
+              "기",
+              "비",
+              "뽑",
+              "제"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 46,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "きのくすり",
+            "korean": "기의 약",
+            "glyphs": [
+              "기",
+              "약",
+              "의"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 19,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "そうび",
+            "korean": "장비",
+            "glyphs": [
+              "비",
+              "장"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 12,
+        "unique_glyph_count": 17,
+        "row_count": 6
+      },
+      {
+        "glyphs": [
+          "간",
+          "고",
+          "구",
+          "군",
+          "드",
+          "뢰",
+          "릴",
+          "마",
+          "안",
+          "어",
+          "옷",
+          "의",
+          "인",
+          "자",
+          "폭",
+          "피",
+          "회"
+        ],
+        "rows": [
+          {
+            "row_index": 54,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "みかわしのたび",
+            "korean": "회피의 옷",
+            "glyphs": [
+              "옷",
+              "의",
+              "피",
+              "회"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 48,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "やきいも",
+            "korean": "군고구마",
+            "glyphs": [
+              "고",
+              "구",
+              "군",
+              "마"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 77,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "じぶんぎょらい",
+            "korean": "자폭 어뢰",
+            "glyphs": [
+              "뢰",
+              "어",
+              "자",
+              "폭"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 76,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にんげんぎょらい",
+            "korean": "인간 어뢰",
+            "glyphs": [
+              "간",
+              "뢰",
+              "어",
+              "인"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 74,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にんげんどりる",
+            "korean": "인간 드릴",
+            "glyphs": [
+              "간",
+              "드",
+              "릴",
+              "인"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 84,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "あんますぺしゃる",
+            "korean": "안마 S",
+            "glyphs": [
+              "마",
+              "안"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 13,
+        "unique_glyph_count": 17,
+        "row_count": 6
+      },
+      {
+        "glyphs": [
+          "간",
+          "기",
+          "로",
+          "마",
+          "밟",
+          "베",
+          "사",
+          "아",
+          "에",
+          "이",
+          "인",
+          "지",
+          "치",
+          "쿠",
+          "펀",
+          "하",
+          "헬"
+        ],
+        "rows": [
+          {
+            "row_index": 75,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にんげんへり",
+            "korean": "인간 헬기",
+            "glyphs": [
+              "간",
+              "기",
+              "인",
+              "헬"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 64,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはぱんち",
+            "korean": "마하 펀치",
+            "glyphs": [
+              "마",
+              "치",
+              "펀",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 78,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはぱんちII",
+            "korean": "마하 펀치 2",
+            "glyphs": [
+              "마",
+              "치",
+              "펀",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 68,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはふみふみ",
+            "korean": "마하 밟기",
+            "glyphs": [
+              "기",
+              "마",
+              "밟",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 104,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "あさじろう",
+            "korean": "아사지로",
+            "glyphs": [
+              "로",
+              "사",
+              "아",
+              "지"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 89,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "いちべえ",
+            "korean": "이치베에",
+            "glyphs": [
+              "베",
+              "에",
+              "이",
+              "치"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 90,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ろくべえ",
+            "korean": "로쿠베에",
+            "glyphs": [
+              "로",
+              "베",
+              "에",
+              "쿠"
+            ],
+            "unique_glyph_count": 4
+          }
+        ],
+        "page_index": 14,
+        "unique_glyph_count": 17,
+        "row_count": 7
+      },
+      {
+        "glyphs": [
+          "경",
+          "니",
+          "마",
+          "메",
+          "몬",
+          "시",
+          "에",
+          "을",
+          "이",
+          "자",
+          "작",
+          "츠",
+          "치",
+          "키",
+          "타",
+          "험",
+          "헤"
+        ],
+        "rows": [
+          {
+            "row_index": 99,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "たついち",
+            "korean": "타츠이치",
+            "glyphs": [
+              "이",
+              "츠",
+              "치",
+              "타"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 92,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ためきち",
+            "korean": "타메키치",
+            "glyphs": [
+              "메",
+              "치",
+              "키",
+              "타"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 98,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "にざえもん",
+            "korean": "니자에몬",
+            "glyphs": [
+              "니",
+              "몬",
+              "에",
+              "자"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 94,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "へいしち",
+            "korean": "헤이시치",
+            "glyphs": [
+              "시",
+              "이",
+              "치",
+              "헤"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 105,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はじまりのまち",
+            "korean": "시작 마을",
+            "glyphs": [
+              "마",
+              "시",
+              "을",
+              "작"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 16,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "けいけんち",
+            "korean": "경험치",
+            "glyphs": [
+              "경",
+              "치",
+              "험"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 15,
+        "unique_glyph_count": 17,
+        "row_count": 6
+      },
+      {
+        "glyphs": [
+          "기",
+          "다",
+          "딩",
+          "라",
+          "리",
+          "버",
+          "살",
+          "스",
+          "엔",
+          "움",
+          "이",
+          "임",
+          "직",
+          "진",
+          "태",
+          "프",
+          "필"
+        ],
+        "rows": [
+          {
+            "row_index": 132,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "スタッフ",
+            "korean": "스태프",
+            "glyphs": [
+              "스",
+              "태",
+              "프"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 136,
+            "section": "11. 특수",
+            "category": "특수",
+            "source": "必殺技MAX",
+            "korean": "필살기 MAX",
+            "glyphs": [
+              "기",
+              "살",
+              "필"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 143,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "真エンディング",
+            "korean": "진 엔딩",
+            "glyphs": [
+              "딩",
+              "엔",
+              "진"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 13,
+            "section": "3. 스테이터스 / UI",
+            "category": "능력치",
+            "source": "うごき",
+            "korean": "움직임",
+            "glyphs": [
+              "움",
+              "임",
+              "직"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 21,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "すてる",
+            "korean": "버리다",
+            "glyphs": [
+              "다",
+              "리",
+              "버"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 11,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "ライフ",
+            "korean": "라이프",
+            "glyphs": [
+              "라",
+              "이",
+              "프"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 131,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "エンディング",
+            "korean": "엔딩",
+            "glyphs": [
+              "딩",
+              "엔"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 111,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はし",
+            "korean": "다리",
+            "glyphs": [
+              "다",
+              "리"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 16,
+        "unique_glyph_count": 17,
+        "row_count": 8
+      },
+      {
+        "glyphs": [
+          "갑",
+          "강",
+          "검",
+          "구",
+          "나",
+          "리",
+          "방",
+          "소",
+          "쇠",
+          "옷",
+          "지",
+          "철",
+          "츠",
+          "카",
+          "타",
+          "패",
+          "품"
+        ],
+        "rows": [
+          {
+            "row_index": 18,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "もちもの",
+            "korean": "소지품",
+            "glyphs": [
+              "소",
+              "지",
+              "품"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 41,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "てつのたいぼう",
+            "korean": "쇠 방패",
+            "glyphs": [
+              "방",
+              "쇠",
+              "패"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 38,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "てつのよろい",
+            "korean": "쇠 갑옷",
+            "glyphs": [
+              "갑",
+              "쇠",
+              "옷"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 27,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "どうのカタナ",
+            "korean": "구리 검",
+            "glyphs": [
+              "검",
+              "구",
+              "리"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 29,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "はがねのカタナ",
+            "korean": "강철 검",
+            "glyphs": [
+              "강",
+              "검",
+              "철"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 26,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "カタナ",
+            "korean": "카타나",
+            "glyphs": [
+              "나",
+              "카",
+              "타"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 100,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "たつじ",
+            "korean": "타츠지",
+            "glyphs": [
+              "지",
+              "츠",
+              "타"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 28,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "てつのカタナ",
+            "korean": "쇠 검",
+            "glyphs": [
+              "검",
+              "쇠"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 82,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "どすすぺしゃる",
+            "korean": "강타 S",
+            "glyphs": [
+              "강",
+              "타"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 17,
+        "unique_glyph_count": 17,
+        "row_count": 9
+      },
+      {
+        "glyphs": [
+          "곤",
+          "과",
+          "구",
+          "독",
+          "먹",
+          "밥",
+          "배",
+          "슬",
+          "쌍",
+          "약",
+          "은",
+          "절",
+          "좋",
+          "주",
+          "해",
+          "효"
+        ],
+        "rows": [
+          {
+            "row_index": 35,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "ヌンチャク",
+            "korean": "쌍절곤",
+            "glyphs": [
+              "곤",
+              "쌍",
+              "절"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 44,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "いいくすり",
+            "korean": "좋은 약",
+            "glyphs": [
+              "약",
+              "은",
+              "좋"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 49,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "おにぎり",
+            "korean": "주먹밥",
+            "glyphs": [
+              "먹",
+              "밥",
+              "주"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 57,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "ぎんのたま",
+            "korean": "은 구슬",
+            "glyphs": [
+              "구",
+              "슬",
+              "은"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 52,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "こうかが2ばい",
+            "korean": "효과 2배",
+            "glyphs": [
+              "과",
+              "배",
+              "효"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 47,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "どくけしくすり",
+            "korean": "해독약",
+            "glyphs": [
+              "독",
+              "약",
+              "해"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 53,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "UPが2ばい",
+            "korean": "UP 2배",
+            "glyphs": [
+              "배"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 43,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "くすり",
+            "korean": "약",
+            "glyphs": [
+              "약"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 18,
+        "unique_glyph_count": 16,
+        "row_count": 8
+      },
+      {
+        "glyphs": [
+          "각",
+          "기",
+          "류",
+          "마",
+          "박",
+          "선",
+          "슛",
+          "스",
+          "워",
+          "치",
+          "케",
+          "크",
+          "킥",
+          "킨",
+          "풍",
+          "프",
+          "하"
+        ],
+        "rows": [
+          {
+            "row_index": 69,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "すくりゅう",
+            "korean": "스크류",
+            "glyphs": [
+              "류",
+              "스",
+              "크"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 80,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "すくりゅうII",
+            "korean": "스크류 2",
+            "glyphs": [
+              "류",
+              "스",
+              "크"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 83,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "ずつきすぺしゃる",
+            "korean": "박치기 S",
+            "glyphs": [
+              "기",
+              "박",
+              "치"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 72,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "せんぷうきゃく",
+            "korean": "선풍각",
+            "glyphs": [
+              "각",
+              "선",
+              "풍"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 65,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはきっく",
+            "korean": "마하 킥",
+            "glyphs": [
+              "마",
+              "킥",
+              "하"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 79,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはきっくII",
+            "korean": "마하 킥 2",
+            "glyphs": [
+              "마",
+              "킥",
+              "하"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 73,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "わーぷしゅーと",
+            "korean": "워프 슛",
+            "glyphs": [
+              "슛",
+              "워",
+              "프"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 91,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "きんすけ",
+            "korean": "킨스케",
+            "glyphs": [
+              "스",
+              "케",
+              "킨"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 19,
+        "unique_glyph_count": 17,
+        "row_count": 8
+      },
+      {
+        "glyphs": [
+          "간",
+          "결",
+          "곤",
+          "긴",
+          "대",
+          "로",
+          "사",
+          "시",
+          "장",
+          "쥬",
+          "진",
+          "치",
+          "쿠",
+          "키",
+          "톤",
+          "파",
+          "한"
+        ],
+        "rows": [
+          {
+            "row_index": 88,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ぎんぱち",
+            "korean": "긴파치",
+            "glyphs": [
+              "긴",
+              "치",
+              "파"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 93,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ごんさく",
+            "korean": "곤사쿠",
+            "glyphs": [
+              "곤",
+              "사",
+              "쿠"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 103,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "じゅうきち",
+            "korean": "쥬키치",
+            "glyphs": [
+              "쥬",
+              "치",
+              "키"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 95,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "じんろく",
+            "korean": "진로쿠",
+            "glyphs": [
+              "로",
+              "진",
+              "쿠"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 96,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "はんしろう",
+            "korean": "한시로",
+            "glyphs": [
+              "로",
+              "시",
+              "한"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 117,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "かじや",
+            "korean": "대장간",
+            "glyphs": [
+              "간",
+              "대",
+              "장"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 8,
+            "section": "2. 메뉴",
+            "category": "모드",
+            "source": "たいけつ",
+            "korean": "대결",
+            "glyphs": [
+              "결",
+              "대"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 36,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "トンファー",
+            "korean": "톤파",
+            "glyphs": [
+              "톤",
+              "파"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 20,
+        "unique_glyph_count": 17,
+        "row_count": 8
+      },
+      {
+        "glyphs": [
+          "도",
+          "등",
+          "막",
+          "모",
+          "묘",
+          "뱅",
+          "버",
+          "빅",
+          "산",
+          "옥",
+          "와",
+          "위",
+          "줘",
+          "지",
+          "튼",
+          "험",
+          "흑"
+        ],
+        "rows": [
+          {
+            "row_index": 122,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "たすけてくれ！",
+            "korean": "도와줘!",
+            "glyphs": [
+              "도",
+              "와",
+              "줘"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 3,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "プッシュ スタート ボタン",
+            "korean": "START 버튼",
+            "glyphs": [
+              "버",
+              "튼"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 7,
+            "section": "2. 메뉴",
+            "category": "모드",
+            "source": "ぼうけん",
+            "korean": "모험",
+            "glyphs": [
+              "모",
+              "험"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 85,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "びっぐばんぐ",
+            "korean": "빅뱅",
+            "glyphs": [
+              "뱅",
+              "빅"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 102,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "くろまく",
+            "korean": "흑막",
+            "glyphs": [
+              "막",
+              "흑"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 112,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "じごく",
+            "korean": "지옥",
+            "glyphs": [
+              "옥",
+              "지"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 116,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "とざん",
+            "korean": "등산",
+            "glyphs": [
+              "등",
+              "산"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 118,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はかば",
+            "korean": "묘지",
+            "glyphs": [
+              "묘",
+              "지"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 110,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "やまのうえ",
+            "korean": "산 위",
+            "glyphs": [
+              "산",
+              "위"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 21,
+        "unique_glyph_count": 17,
+        "row_count": 9
+      },
+      {
+        "glyphs": [
+          "길",
+          "끝",
+          "누",
+          "다",
+          "밭",
+          "산",
+          "성",
+          "수",
+          "숲",
+          "정",
+          "졌",
+          "호",
+          "힘"
+        ],
+        "rows": [
+          {
+            "row_index": 119,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "みずうみ",
+            "korean": "호수",
+            "glyphs": [
+              "수",
+              "호"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 106,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "やまみち",
+            "korean": "산길",
+            "glyphs": [
+              "길",
+              "산"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 113,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "ろうてい",
+            "korean": "누정",
+            "glyphs": [
+              "누",
+              "정"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 121,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "まけた…",
+            "korean": "졌다…",
+            "glyphs": [
+              "다",
+              "졌"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 130,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "おしまい",
+            "korean": "끝",
+            "glyphs": [
+              "끝"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 129,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "おわり",
+            "korean": "끝",
+            "glyphs": [
+              "끝"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 12,
+            "section": "3. 스테이터스 / UI",
+            "category": "능력치",
+            "source": "ちから",
+            "korean": "힘",
+            "glyphs": [
+              "힘"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 114,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "おしろ",
+            "korean": "성",
+            "glyphs": [
+              "성"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 115,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はたけ",
+            "korean": "밭",
+            "glyphs": [
+              "밭"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 107,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はやし",
+            "korean": "숲",
+            "glyphs": [
+              "숲"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 22,
+        "unique_glyph_count": 13,
+        "row_count": 10
+      }
+    ]
+  },
+  "theoretical_page_pack": {
+    "capacity": 45,
+    "page_count": 9,
+    "oversize_rows": [],
+    "pages": [
+      {
+        "glyphs": [
+          "게",
+          "고",
+          "군",
+          "극",
+          "노",
+          "니",
+          "다",
+          "대",
+          "동",
+          "뜨",
+          "러",
+          "력",
+          "로",
+          "료",
+          "를",
+          "리",
+          "면",
+          "밀",
+          "받",
+          "번",
+          "비",
+          "서",
+          "세",
+          "스",
+          "시",
+          "쓰",
+          "약",
+          "에",
+          "오",
+          "요",
+          "용",
+          "원",
+          "을",
+          "음",
+          "의",
+          "이",
+          "입",
+          "전",
+          "집",
+          "축",
+          "케",
+          "쿠",
+          "하",
+          "합",
+          "호"
+        ],
+        "rows": [
+          {
+            "row_index": 1,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "くにおくんの時代劇だよ全員集合！",
+            "korean": "쿠니오군의 시대극이다 전원집합!",
+            "glyphs": [
+              "군",
+              "극",
+              "니",
+              "다",
+              "대",
+              "시",
+              "오",
+              "원",
+              "의",
+              "이",
+              "전",
+              "집",
+              "쿠",
+              "합"
+            ],
+            "unique_glyph_count": 14
+          },
+          {
+            "row_index": 141,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "倒して許すと仲間に",
+            "korean": "쓰러뜨리고 용서하면 동료로",
+            "glyphs": [
+              "고",
+              "동",
+              "뜨",
+              "러",
+              "로",
+              "료",
+              "리",
+              "면",
+              "서",
+              "쓰",
+              "용",
+              "하"
+            ],
+            "unique_glyph_count": 12
+          },
+          {
+            "row_index": 140,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "よのすけから薬をもらい",
+            "korean": "요노스케에게 약을 받음",
+            "glyphs": [
+              "게",
+              "노",
+              "받",
+              "스",
+              "약",
+              "에",
+              "요",
+              "을",
+              "음",
+              "케"
+            ],
+            "unique_glyph_count": 10
+          },
+          {
+            "row_index": 6,
+            "section": "2. 메뉴",
+            "category": "메뉴",
+            "source": "パスワードを入力してください",
+            "korean": "비밀번호를 입력하세요",
+            "glyphs": [
+              "력",
+              "를",
+              "밀",
+              "번",
+              "비",
+              "세",
+              "요",
+              "입",
+              "하",
+              "호"
+            ],
+            "unique_glyph_count": 10
+          },
+          {
+            "row_index": 133,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "おめでとう！",
+            "korean": "축하합니다!",
+            "glyphs": [
+              "니",
+              "다",
+              "축",
+              "하",
+              "합"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 5,
+            "section": "2. 메뉴",
+            "category": "메뉴",
+            "source": "パスワード",
+            "korean": "비밀번호",
+            "glyphs": [
+              "밀",
+              "번",
+              "비",
+              "호"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 111,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はし",
+            "korean": "다리",
+            "glyphs": [
+              "다",
+              "리"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 43,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "くすり",
+            "korean": "약",
+            "glyphs": [
+              "약"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 0,
+        "unique_glyph_count": 45,
+        "row_count": 8
+      },
+      {
+        "glyphs": [
+          "가",
+          "고",
+          "기",
+          "너",
+          "노",
+          "다",
+          "도",
+          "돈",
+          "동",
+          "되",
+          "로",
+          "료",
+          "루",
+          "마",
+          "몸",
+          "박",
+          "배",
+          "벌",
+          "변",
+          "서",
+          "셜",
+          "술",
+          "스",
+          "신",
+          "야",
+          "었",
+          "에",
+          "와",
+          "운",
+          "을",
+          "의",
+          "이",
+          "익",
+          "장",
+          "재",
+          "츠",
+          "크",
+          "타",
+          "테",
+          "트",
+          "파",
+          "팬",
+          "페",
+          "혔",
+          "회"
+        ],
+        "rows": [
+          {
+            "row_index": 137,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "相棒つるまつの裏切り",
+            "korean": "파트너 츠루마츠의 배신",
+            "glyphs": [
+              "너",
+              "루",
+              "마",
+              "배",
+              "신",
+              "의",
+              "츠",
+              "트",
+              "파"
+            ],
+            "unique_glyph_count": 9
+          },
+          {
+            "row_index": 142,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "賭場でお金稼ぎ",
+            "korean": "도박장에서 돈벌이",
+            "glyphs": [
+              "도",
+              "돈",
+              "박",
+              "벌",
+              "서",
+              "에",
+              "이",
+              "장"
+            ],
+            "unique_glyph_count": 8
+          },
+          {
+            "row_index": 2,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "1991 TECHNOS JAPAN",
+            "korean": "1991 테크노스 재팬",
+            "glyphs": [
+              "노",
+              "스",
+              "재",
+              "크",
+              "테",
+              "팬"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 0,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "ダウンタウンスペシャル",
+            "korean": "다운타운 스페셜",
+            "glyphs": [
+              "다",
+              "셜",
+              "스",
+              "운",
+              "타",
+              "페"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 138,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "やごろうと再会",
+            "korean": "야고로와 재회",
+            "glyphs": [
+              "고",
+              "로",
+              "야",
+              "와",
+              "재",
+              "회"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 139,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "変身の術で、やごろうに変身",
+            "korean": "변신술로 야고로 변신",
+            "glyphs": [
+              "고",
+              "로",
+              "변",
+              "술",
+              "신",
+              "야"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 125,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "なかまになった！",
+            "korean": "동료가 되었다!",
+            "glyphs": [
+              "가",
+              "다",
+              "동",
+              "되",
+              "료",
+              "었"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 127,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "わざをおぼえた！",
+            "korean": "기술을 익혔다!",
+            "glyphs": [
+              "기",
+              "다",
+              "술",
+              "을",
+              "익",
+              "혔"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 87,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "やまたのじゅつ",
+            "korean": "야마타의 술",
+            "glyphs": [
+              "마",
+              "술",
+              "야",
+              "의",
+              "타"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 128,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "みにつけた！",
+            "korean": "몸에 익혔다!",
+            "glyphs": [
+              "다",
+              "몸",
+              "에",
+              "익",
+              "혔"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 10,
+            "section": "3. 스테이터스 / UI",
+            "category": "캐릭터명",
+            "source": "つるまつ",
+            "korean": "츠루마츠",
+            "glyphs": [
+              "루",
+              "마",
+              "츠"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 86,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "へんしんわざ",
+            "korean": "변신술",
+            "glyphs": [
+              "변",
+              "술",
+              "신"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 97,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "やごろう",
+            "korean": "야고로",
+            "glyphs": [
+              "고",
+              "로",
+              "야"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 17,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "おかね",
+            "korean": "돈",
+            "glyphs": [
+              "돈"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 53,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "UPが2ばい",
+            "korean": "UP 2배",
+            "glyphs": [
+              "배"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 1,
+        "unique_glyph_count": 45,
+        "row_count": 15
+      },
+      {
+        "glyphs": [
+          "가",
+          "강",
+          "게",
+          "겨",
+          "경",
+          "구",
+          "기",
+          "께",
+          "끼",
+          "네",
+          "니",
+          "다",
+          "달",
+          "도",
+          "둥",
+          "드",
+          "랐",
+          "레",
+          "로",
+          "리",
+          "몽",
+          "무",
+          "벨",
+          "봉",
+          "부",
+          "설",
+          "수",
+          "술",
+          "숨",
+          "시",
+          "안",
+          "어",
+          "올",
+          "의",
+          "이",
+          "인",
+          "적",
+          "전",
+          "진",
+          "철",
+          "코",
+          "택",
+          "트",
+          "퍼",
+          "하"
+        ],
+        "rows": [
+          {
+            "row_index": 126,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "レベルがあがった！",
+            "korean": "레벨이 올랐다!",
+            "glyphs": [
+              "다",
+              "랐",
+              "레",
+              "벨",
+              "올",
+              "이"
+            ],
+            "unique_glyph_count": 6
+          },
+          {
+            "row_index": 134,
+            "section": "11. 특수",
+            "category": "특수",
+            "source": "こがねむし",
+            "korean": "코가네무시",
+            "glyphs": [
+              "가",
+              "네",
+              "무",
+              "시",
+              "코"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 135,
+            "section": "11. 특수",
+            "category": "특수",
+            "source": "裏技",
+            "korean": "숨겨진 기술",
+            "glyphs": [
+              "겨",
+              "기",
+              "술",
+              "숨",
+              "진"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 23,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "どうのこんぼう",
+            "korean": "구리 몽둥이",
+            "glyphs": [
+              "구",
+              "둥",
+              "리",
+              "몽",
+              "이"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 25,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "はがねのこんぼう",
+            "korean": "강철 몽둥이",
+            "glyphs": [
+              "강",
+              "둥",
+              "몽",
+              "이",
+              "철"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 51,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "たつじんめがね",
+            "korean": "달인의 안경",
+            "glyphs": [
+              "경",
+              "달",
+              "안",
+              "의",
+              "인"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 60,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "でんせつのどうぐ",
+            "korean": "전설의 도구",
+            "glyphs": [
+              "구",
+              "도",
+              "설",
+              "의",
+              "전"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 61,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "なぞのみせ",
+            "korean": "수수께끼 가게",
+            "glyphs": [
+              "가",
+              "게",
+              "께",
+              "끼",
+              "수"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 55,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "ふういんのふだ",
+            "korean": "봉인의 부적",
+            "glyphs": [
+              "봉",
+              "부",
+              "의",
+              "인",
+              "적"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 70,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にとろあたっく",
+            "korean": "니트로 어택",
+            "glyphs": [
+              "니",
+              "로",
+              "어",
+              "택",
+              "트"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 71,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "はいぱーがーど",
+            "korean": "하이퍼 가드",
+            "glyphs": [
+              "가",
+              "드",
+              "이",
+              "퍼",
+              "하"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 22,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "こんぼう",
+            "korean": "몽둥이",
+            "glyphs": [
+              "둥",
+              "몽",
+              "이"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 15,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "レベル",
+            "korean": "레벨",
+            "glyphs": [
+              "레",
+              "벨"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 108,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "かわら",
+            "korean": "강가",
+            "glyphs": [
+              "가",
+              "강"
+            ],
+            "unique_glyph_count": 2
+          }
+        ],
+        "page_index": 2,
+        "unique_glyph_count": 45,
+        "row_count": 14
+      },
+      {
+        "glyphs": [
+          "가",
+          "간",
+          "갑",
+          "강",
+          "걸",
+          "게",
+          "굉",
+          "구",
+          "금",
+          "기",
+          "니",
+          "두",
+          "둥",
+          "때",
+          "라",
+          "란",
+          "리",
+          "마",
+          "목",
+          "몽",
+          "방",
+          "빨",
+          "빰",
+          "사",
+          "쇠",
+          "슬",
+          "시",
+          "약",
+          "옷",
+          "의",
+          "이",
+          "임",
+          "작",
+          "장",
+          "져",
+          "조",
+          "철",
+          "쿠",
+          "토",
+          "투",
+          "파",
+          "패",
+          "하",
+          "한",
+          "황"
+        ],
+        "rows": [
+          {
+            "row_index": 66,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはたたき",
+            "korean": "마하 때리기",
+            "glyphs": [
+              "기",
+              "때",
+              "리",
+              "마",
+              "하"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 101,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "とらぞうおやぶん",
+            "korean": "토라조 두목",
+            "glyphs": [
+              "두",
+              "라",
+              "목",
+              "조",
+              "토"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 124,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "これをもっていけ",
+            "korean": "이걸 가져가라",
+            "glyphs": [
+              "가",
+              "걸",
+              "라",
+              "이",
+              "져"
+            ],
+            "unique_glyph_count": 5
+          },
+          {
+            "row_index": 4,
+            "section": "2. 메뉴",
+            "category": "메뉴",
+            "source": "ゲームスタート",
+            "korean": "게임 시작",
+            "glyphs": [
+              "게",
+              "시",
+              "임",
+              "작"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 9,
+            "section": "3. 스테이터스 / UI",
+            "category": "캐릭터명",
+            "source": "くにまさ",
+            "korean": "쿠니마사",
+            "glyphs": [
+              "니",
+              "마",
+              "사",
+              "쿠"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 24,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "てつのこんぼう",
+            "korean": "쇠 몽둥이",
+            "glyphs": [
+              "둥",
+              "몽",
+              "쇠",
+              "이"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 40,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "どうのたいぼう",
+            "korean": "구리 방패",
+            "glyphs": [
+              "구",
+              "리",
+              "방",
+              "패"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 37,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "どうのよろい",
+            "korean": "구리 갑옷",
+            "glyphs": [
+              "갑",
+              "구",
+              "리",
+              "옷"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 42,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "はがねのたいぼう",
+            "korean": "강철 방패",
+            "glyphs": [
+              "강",
+              "방",
+              "철",
+              "패"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 39,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "はがねのよろい",
+            "korean": "강철 갑옷",
+            "glyphs": [
+              "갑",
+              "강",
+              "옷",
+              "철"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 59,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "あおいたま",
+            "korean": "파란 구슬",
+            "glyphs": [
+              "구",
+              "란",
+              "슬",
+              "파"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 58,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "あかいたま",
+            "korean": "빨간 구슬",
+            "glyphs": [
+              "간",
+              "구",
+              "빨",
+              "슬"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 56,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "きんのたま",
+            "korean": "황금 구슬",
+            "glyphs": [
+              "구",
+              "금",
+              "슬",
+              "황"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 50,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "すけすけのたび",
+            "korean": "투시의 옷",
+            "glyphs": [
+              "시",
+              "옷",
+              "의",
+              "투"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 45,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "すごいくすり",
+            "korean": "굉장한 약",
+            "glyphs": [
+              "굉",
+              "약",
+              "장",
+              "한"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 81,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "はりてすぺしゃる",
+            "korean": "빰 때리기 S",
+            "glyphs": [
+              "기",
+              "때",
+              "리",
+              "빰"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 41,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "てつのたいぼう",
+            "korean": "쇠 방패",
+            "glyphs": [
+              "방",
+              "쇠",
+              "패"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 38,
+            "section": "4. 무기 / 장비",
+            "category": "방어구",
+            "source": "てつのよろい",
+            "korean": "쇠 갑옷",
+            "glyphs": [
+              "갑",
+              "쇠",
+              "옷"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 46,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "きのくすり",
+            "korean": "기의 약",
+            "glyphs": [
+              "기",
+              "약",
+              "의"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 3,
+        "unique_glyph_count": 45,
+        "row_count": 19
+      },
+      {
+        "glyphs": [
+          "간",
+          "고",
+          "구",
+          "군",
+          "기",
+          "니",
+          "도",
+          "드",
+          "로",
+          "뢰",
+          "릴",
+          "마",
+          "메",
+          "몬",
+          "물",
+          "밟",
+          "베",
+          "보",
+          "비",
+          "뽑",
+          "사",
+          "스",
+          "시",
+          "아",
+          "어",
+          "에",
+          "옷",
+          "윙",
+          "의",
+          "이",
+          "인",
+          "자",
+          "제",
+          "지",
+          "츠",
+          "치",
+          "키",
+          "타",
+          "펀",
+          "폭",
+          "피",
+          "하",
+          "헤",
+          "헬",
+          "회"
+        ],
+        "rows": [
+          {
+            "row_index": 63,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "たからのちず",
+            "korean": "보물 지도",
+            "glyphs": [
+              "도",
+              "물",
+              "보",
+              "지"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 62,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "ふくびき",
+            "korean": "제비뽑기",
+            "glyphs": [
+              "기",
+              "비",
+              "뽑",
+              "제"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 54,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "みかわしのたび",
+            "korean": "회피의 옷",
+            "glyphs": [
+              "옷",
+              "의",
+              "피",
+              "회"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 48,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "やきいも",
+            "korean": "군고구마",
+            "glyphs": [
+              "고",
+              "구",
+              "군",
+              "마"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 77,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "じぶんぎょらい",
+            "korean": "자폭 어뢰",
+            "glyphs": [
+              "뢰",
+              "어",
+              "자",
+              "폭"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 76,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にんげんぎょらい",
+            "korean": "인간 어뢰",
+            "glyphs": [
+              "간",
+              "뢰",
+              "어",
+              "인"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 74,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にんげんどりる",
+            "korean": "인간 드릴",
+            "glyphs": [
+              "간",
+              "드",
+              "릴",
+              "인"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 75,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "にんげんへり",
+            "korean": "인간 헬기",
+            "glyphs": [
+              "간",
+              "기",
+              "인",
+              "헬"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 67,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはすいんぐ",
+            "korean": "마하 스윙",
+            "glyphs": [
+              "마",
+              "스",
+              "윙",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 64,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはぱんち",
+            "korean": "마하 펀치",
+            "glyphs": [
+              "마",
+              "치",
+              "펀",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 78,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはぱんちII",
+            "korean": "마하 펀치 2",
+            "glyphs": [
+              "마",
+              "치",
+              "펀",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 68,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはふみふみ",
+            "korean": "마하 밟기",
+            "glyphs": [
+              "기",
+              "마",
+              "밟",
+              "하"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 104,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "あさじろう",
+            "korean": "아사지로",
+            "glyphs": [
+              "로",
+              "사",
+              "아",
+              "지"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 89,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "いちべえ",
+            "korean": "이치베에",
+            "glyphs": [
+              "베",
+              "에",
+              "이",
+              "치"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 99,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "たついち",
+            "korean": "타츠이치",
+            "glyphs": [
+              "이",
+              "츠",
+              "치",
+              "타"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 92,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ためきち",
+            "korean": "타메키치",
+            "glyphs": [
+              "메",
+              "치",
+              "키",
+              "타"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 98,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "にざえもん",
+            "korean": "니자에몬",
+            "glyphs": [
+              "니",
+              "몬",
+              "에",
+              "자"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 94,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "へいしち",
+            "korean": "헤이시치",
+            "glyphs": [
+              "시",
+              "이",
+              "치",
+              "헤"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 100,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "たつじ",
+            "korean": "타츠지",
+            "glyphs": [
+              "지",
+              "츠",
+              "타"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 4,
+        "unique_glyph_count": 45,
+        "row_count": 19
+      },
+      {
+        "glyphs": [
+          "강",
+          "검",
+          "경",
+          "곤",
+          "구",
+          "기",
+          "나",
+          "다",
+          "딩",
+          "라",
+          "로",
+          "리",
+          "마",
+          "버",
+          "베",
+          "살",
+          "소",
+          "스",
+          "시",
+          "쌍",
+          "약",
+          "에",
+          "엔",
+          "움",
+          "은",
+          "을",
+          "이",
+          "임",
+          "작",
+          "절",
+          "좋",
+          "지",
+          "직",
+          "진",
+          "창",
+          "철",
+          "치",
+          "카",
+          "쿠",
+          "타",
+          "태",
+          "품",
+          "프",
+          "필",
+          "험"
+        ],
+        "rows": [
+          {
+            "row_index": 90,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ろくべえ",
+            "korean": "로쿠베에",
+            "glyphs": [
+              "로",
+              "베",
+              "에",
+              "쿠"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 105,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はじまりのまち",
+            "korean": "시작 마을",
+            "glyphs": [
+              "마",
+              "시",
+              "을",
+              "작"
+            ],
+            "unique_glyph_count": 4
+          },
+          {
+            "row_index": 132,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "スタッフ",
+            "korean": "스태프",
+            "glyphs": [
+              "스",
+              "태",
+              "프"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 136,
+            "section": "11. 특수",
+            "category": "특수",
+            "source": "必殺技MAX",
+            "korean": "필살기 MAX",
+            "glyphs": [
+              "기",
+              "살",
+              "필"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 143,
+            "section": "12. 기타",
+            "category": "이벤트",
+            "source": "真エンディング",
+            "korean": "진 엔딩",
+            "glyphs": [
+              "딩",
+              "엔",
+              "진"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 13,
+            "section": "3. 스테이터스 / UI",
+            "category": "능력치",
+            "source": "うごき",
+            "korean": "움직임",
+            "glyphs": [
+              "움",
+              "임",
+              "직"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 16,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "けいけんち",
+            "korean": "경험치",
+            "glyphs": [
+              "경",
+              "치",
+              "험"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 21,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "すてる",
+            "korean": "버리다",
+            "glyphs": [
+              "다",
+              "리",
+              "버"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 18,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "もちもの",
+            "korean": "소지품",
+            "glyphs": [
+              "소",
+              "지",
+              "품"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 11,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "ライフ",
+            "korean": "라이프",
+            "glyphs": [
+              "라",
+              "이",
+              "프"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 31,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "どうのやり",
+            "korean": "구리 창",
+            "glyphs": [
+              "구",
+              "리",
+              "창"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 27,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "どうのカタナ",
+            "korean": "구리 검",
+            "glyphs": [
+              "검",
+              "구",
+              "리"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 33,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "はがねのやり",
+            "korean": "강철 창",
+            "glyphs": [
+              "강",
+              "창",
+              "철"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 29,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "はがねのカタナ",
+            "korean": "강철 검",
+            "glyphs": [
+              "강",
+              "검",
+              "철"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 26,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "カタナ",
+            "korean": "카타나",
+            "glyphs": [
+              "나",
+              "카",
+              "타"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 35,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "ヌンチャク",
+            "korean": "쌍절곤",
+            "glyphs": [
+              "곤",
+              "쌍",
+              "절"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 44,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "いいくすり",
+            "korean": "좋은 약",
+            "glyphs": [
+              "약",
+              "은",
+              "좋"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 95,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "じんろく",
+            "korean": "진로쿠",
+            "glyphs": [
+              "로",
+              "진",
+              "쿠"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 131,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "エンディング",
+            "korean": "엔딩",
+            "glyphs": [
+              "딩",
+              "엔"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 82,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "どすすぺしゃる",
+            "korean": "강타 S",
+            "glyphs": [
+              "강",
+              "타"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 30,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "やり",
+            "korean": "창",
+            "glyphs": [
+              "창"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 5,
+        "unique_glyph_count": 45,
+        "row_count": 21
+      },
+      {
+        "glyphs": [
+          "각",
+          "간",
+          "곤",
+          "과",
+          "구",
+          "기",
+          "긴",
+          "대",
+          "도",
+          "독",
+          "로",
+          "류",
+          "마",
+          "먹",
+          "박",
+          "밥",
+          "배",
+          "사",
+          "선",
+          "슛",
+          "스",
+          "슬",
+          "시",
+          "약",
+          "와",
+          "워",
+          "은",
+          "장",
+          "주",
+          "줘",
+          "쥬",
+          "치",
+          "케",
+          "쿠",
+          "크",
+          "키",
+          "킥",
+          "킨",
+          "파",
+          "풍",
+          "프",
+          "하",
+          "한",
+          "해",
+          "효"
+        ],
+        "rows": [
+          {
+            "row_index": 49,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "おにぎり",
+            "korean": "주먹밥",
+            "glyphs": [
+              "먹",
+              "밥",
+              "주"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 57,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "ぎんのたま",
+            "korean": "은 구슬",
+            "glyphs": [
+              "구",
+              "슬",
+              "은"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 52,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "특수",
+            "source": "こうかが2ばい",
+            "korean": "효과 2배",
+            "glyphs": [
+              "과",
+              "배",
+              "효"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 47,
+            "section": "5. 회복 / 보조 아이템",
+            "category": "회복",
+            "source": "どくけしくすり",
+            "korean": "해독약",
+            "glyphs": [
+              "독",
+              "약",
+              "해"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 69,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "すくりゅう",
+            "korean": "스크류",
+            "glyphs": [
+              "류",
+              "스",
+              "크"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 80,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "すくりゅうII",
+            "korean": "스크류 2",
+            "glyphs": [
+              "류",
+              "스",
+              "크"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 83,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "ずつきすぺしゃる",
+            "korean": "박치기 S",
+            "glyphs": [
+              "기",
+              "박",
+              "치"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 72,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "せんぷうきゃく",
+            "korean": "선풍각",
+            "glyphs": [
+              "각",
+              "선",
+              "풍"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 65,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはきっく",
+            "korean": "마하 킥",
+            "glyphs": [
+              "마",
+              "킥",
+              "하"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 79,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "まっはきっくII",
+            "korean": "마하 킥 2",
+            "glyphs": [
+              "마",
+              "킥",
+              "하"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 73,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "わーぷしゅーと",
+            "korean": "워프 슛",
+            "glyphs": [
+              "슛",
+              "워",
+              "프"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 91,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "きんすけ",
+            "korean": "킨스케",
+            "glyphs": [
+              "스",
+              "케",
+              "킨"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 88,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ぎんぱち",
+            "korean": "긴파치",
+            "glyphs": [
+              "긴",
+              "치",
+              "파"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 93,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "ごんさく",
+            "korean": "곤사쿠",
+            "glyphs": [
+              "곤",
+              "사",
+              "쿠"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 103,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "じゅうきち",
+            "korean": "쥬키치",
+            "glyphs": [
+              "쥬",
+              "치",
+              "키"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 96,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "はんしろう",
+            "korean": "한시로",
+            "glyphs": [
+              "로",
+              "시",
+              "한"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 117,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "かじや",
+            "korean": "대장간",
+            "glyphs": [
+              "간",
+              "대",
+              "장"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 122,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "たすけてくれ！",
+            "korean": "도와줘!",
+            "glyphs": [
+              "도",
+              "와",
+              "줘"
+            ],
+            "unique_glyph_count": 3
+          }
+        ],
+        "page_index": 6,
+        "unique_glyph_count": 45,
+        "row_count": 18
+      },
+      {
+        "glyphs": [
+          "검",
+          "결",
+          "겼",
+          "굴",
+          "기",
+          "길",
+          "끝",
+          "누",
+          "다",
+          "대",
+          "동",
+          "등",
+          "려",
+          "마",
+          "막",
+          "먹",
+          "모",
+          "묘",
+          "방",
+          "뱅",
+          "버",
+          "비",
+          "빅",
+          "산",
+          "쇠",
+          "수",
+          "안",
+          "어",
+          "옥",
+          "위",
+          "이",
+          "인",
+          "장",
+          "정",
+          "졌",
+          "지",
+          "창",
+          "체",
+          "톤",
+          "튼",
+          "파",
+          "험",
+          "호",
+          "흑",
+          "힘"
+        ],
+        "rows": [
+          {
+            "row_index": 123,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "まってくれ！",
+            "korean": "기다려!",
+            "glyphs": [
+              "기",
+              "다",
+              "려"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 120,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "やったー！",
+            "korean": "이겼다!",
+            "glyphs": [
+              "겼",
+              "다",
+              "이"
+            ],
+            "unique_glyph_count": 3
+          },
+          {
+            "row_index": 3,
+            "section": "1. 타이틀 / 메뉴",
+            "category": "타이틀",
+            "source": "プッシュ スタート ボタン",
+            "korean": "START 버튼",
+            "glyphs": [
+              "버",
+              "튼"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 8,
+            "section": "2. 메뉴",
+            "category": "모드",
+            "source": "たいけつ",
+            "korean": "대결",
+            "glyphs": [
+              "결",
+              "대"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 7,
+            "section": "2. 메뉴",
+            "category": "모드",
+            "source": "ぼうけん",
+            "korean": "모험",
+            "glyphs": [
+              "모",
+              "험"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 19,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "そうび",
+            "korean": "장비",
+            "glyphs": [
+              "비",
+              "장"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 20,
+            "section": "3. 스테이터스 / UI",
+            "category": "UI",
+            "source": "たべる",
+            "korean": "먹다",
+            "glyphs": [
+              "다",
+              "먹"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 14,
+            "section": "3. 스테이터스 / UI",
+            "category": "능력치",
+            "source": "ぼうぎょ",
+            "korean": "방어",
+            "glyphs": [
+              "방",
+              "어"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 32,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "てつのやり",
+            "korean": "쇠 창",
+            "glyphs": [
+              "쇠",
+              "창"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 28,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "てつのカタナ",
+            "korean": "쇠 검",
+            "glyphs": [
+              "검",
+              "쇠"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 34,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "チェーン",
+            "korean": "체인",
+            "glyphs": [
+              "인",
+              "체"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 36,
+            "section": "4. 무기 / 장비",
+            "category": "무기",
+            "source": "トンファー",
+            "korean": "톤파",
+            "glyphs": [
+              "톤",
+              "파"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 84,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "あんますぺしゃる",
+            "korean": "안마 S",
+            "glyphs": [
+              "마",
+              "안"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 85,
+            "section": "6. 필살기 / 기술",
+            "category": "기술",
+            "source": "びっぐばんぐ",
+            "korean": "빅뱅",
+            "glyphs": [
+              "뱅",
+              "빅"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 102,
+            "section": "7. 보스 / 적",
+            "category": "보스",
+            "source": "くろまく",
+            "korean": "흑막",
+            "glyphs": [
+              "막",
+              "흑"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 112,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "じごく",
+            "korean": "지옥",
+            "glyphs": [
+              "옥",
+              "지"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 116,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "とざん",
+            "korean": "등산",
+            "glyphs": [
+              "등",
+              "산"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 109,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "どうくつ",
+            "korean": "동굴",
+            "glyphs": [
+              "굴",
+              "동"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 118,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はかば",
+            "korean": "묘지",
+            "glyphs": [
+              "묘",
+              "지"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 119,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "みずうみ",
+            "korean": "호수",
+            "glyphs": [
+              "수",
+              "호"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 110,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "やまのうえ",
+            "korean": "산 위",
+            "glyphs": [
+              "산",
+              "위"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 106,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "やまみち",
+            "korean": "산길",
+            "glyphs": [
+              "길",
+              "산"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 113,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "ろうてい",
+            "korean": "누정",
+            "glyphs": [
+              "누",
+              "정"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 121,
+            "section": "9. 이벤트 대사",
+            "category": "대사",
+            "source": "まけた…",
+            "korean": "졌다…",
+            "glyphs": [
+              "다",
+              "졌"
+            ],
+            "unique_glyph_count": 2
+          },
+          {
+            "row_index": 130,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "おしまい",
+            "korean": "끝",
+            "glyphs": [
+              "끝"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 129,
+            "section": "10. 엔딩",
+            "category": "엔딩",
+            "source": "おわり",
+            "korean": "끝",
+            "glyphs": [
+              "끝"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 12,
+            "section": "3. 스테이터스 / UI",
+            "category": "능력치",
+            "source": "ちから",
+            "korean": "힘",
+            "glyphs": [
+              "힘"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 7,
+        "unique_glyph_count": 45,
+        "row_count": 27
+      },
+      {
+        "glyphs": [
+          "밭",
+          "성",
+          "숲"
+        ],
+        "rows": [
+          {
+            "row_index": 114,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "おしろ",
+            "korean": "성",
+            "glyphs": [
+              "성"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 115,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はたけ",
+            "korean": "밭",
+            "glyphs": [
+              "밭"
+            ],
+            "unique_glyph_count": 1
+          },
+          {
+            "row_index": 107,
+            "section": "8. 스테이지",
+            "category": "스테이지",
+            "source": "はやし",
+            "korean": "숲",
+            "glyphs": [
+              "숲"
+            ],
+            "unique_glyph_count": 1
+          }
+        ],
+        "page_index": 8,
+        "unique_glyph_count": 3,
+        "row_count": 3
+      }
+    ]
+  }
+}

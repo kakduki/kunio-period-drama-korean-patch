@@ -1,0 +1,3873 @@
+{
+  "status": "READY_WITH_TEXT_REVISIONS",
+  "policy": {
+    "renderer": "paired_8x16_cells_for_16x16_korean",
+    "page_syllable_capacity": 17,
+    "page_switch_scope": "scene_or_record-range lifecycle required",
+    "english_reference_role": "pointer ownership and control structure only"
+  },
+  "coverage": {
+    "draft_rows": 248,
+    "active_rows": 244,
+    "excluded_rows": 4,
+    "assigned_rows": 237,
+    "oversize_rows": 7,
+    "unique_hangul_syllables": 374,
+    "planned_pages": 148
+  },
+  "pages": [
+    {
+      "page_index": 0,
+      "pointer_indices": [
+        0,
+        1
+      ],
+      "pointer_start": 0,
+      "pointer_end": 1,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "간",
+        "그",
+        "나",
+        "다",
+        "라",
+        "래",
+        "면",
+        "못",
+        "싸",
+        "않",
+        "와",
+        "우",
+        "워",
+        "으",
+        "장",
+        "젠",
+        "지"
+      ]
+    },
+    {
+      "page_index": 1,
+      "pointer_indices": [
+        2,
+        3
+      ],
+      "pointer_start": 2,
+      "pointer_end": 3,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "군",
+        "그",
+        "기",
+        "나",
+        "났",
+        "녀",
+        "놈",
+        "들",
+        "또",
+        "만",
+        "석",
+        "아",
+        "야",
+        "억",
+        "이",
+        "저"
+      ]
+    },
+    {
+      "page_index": 2,
+      "pointer_indices": [
+        4,
+        5
+      ],
+      "pointer_start": 4,
+      "pointer_end": 5,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "거",
+        "게",
+        "군",
+        "긴",
+        "내",
+        "냐",
+        "는",
+        "들",
+        "떻",
+        "부",
+        "싸",
+        "어",
+        "움",
+        "을",
+        "이",
+        "좀",
+        "하"
+      ]
+    },
+    {
+      "page_index": 3,
+      "pointer_indices": [
+        6,
+        7
+      ],
+      "pointer_start": 6,
+      "pointer_end": 7,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "것",
+        "그",
+        "끼",
+        "나",
+        "녀",
+        "니",
+        "도",
+        "무",
+        "석",
+        "아",
+        "야",
+        "워",
+        "은",
+        "줘"
+      ]
+    },
+    {
+      "page_index": 4,
+      "pointer_indices": [
+        8,
+        9
+      ],
+      "pointer_start": 8,
+      "pointer_end": 9,
+      "record_count": 2,
+      "syllable_count": 11,
+      "syllables": [
+        "가",
+        "같",
+        "나",
+        "도",
+        "리",
+        "싸",
+        "아",
+        "우",
+        "이",
+        "자",
+        "좋"
+      ]
+    },
+    {
+      "page_index": 5,
+      "pointer_indices": [
+        10
+      ],
+      "pointer_start": 10,
+      "pointer_end": 10,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "가",
+        "강",
+        "너",
+        "네",
+        "다",
+        "무",
+        "복",
+        "이",
+        "항",
+        "해"
+      ]
+    },
+    {
+      "page_index": 6,
+      "pointer_indices": [
+        11,
+        12
+      ],
+      "pointer_start": 11,
+      "pointer_end": 12,
+      "record_count": 2,
+      "syllable_count": 11,
+      "syllables": [
+        "다",
+        "력",
+        "못",
+        "봤",
+        "실",
+        "아",
+        "을",
+        "좋",
+        "직",
+        "진",
+        "짜"
+      ]
+    },
+    {
+      "page_index": 7,
+      "pointer_indices": [
+        13,
+        14
+      ],
+      "pointer_start": 13,
+      "pointer_end": 14,
+      "record_count": 2,
+      "syllable_count": 15,
+      "syllables": [
+        "가",
+        "고",
+        "내",
+        "녀",
+        "다",
+        "말",
+        "맙",
+        "석",
+        "우",
+        "을",
+        "저",
+        "정",
+        "지",
+        "치",
+        "해"
+      ]
+    },
+    {
+      "page_index": 8,
+      "pointer_indices": [
+        15,
+        16
+      ],
+      "pointer_start": 15,
+      "pointer_end": 16,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "구",
+        "냐",
+        "너",
+        "녀",
+        "누",
+        "는",
+        "대",
+        "들",
+        "석",
+        "아",
+        "을",
+        "잡",
+        "체",
+        "희"
+      ]
+    },
+    {
+      "page_index": 9,
+      "pointer_indices": [
+        17
+      ],
+      "pointer_start": 17,
+      "pointer_end": 17,
+      "record_count": 1,
+      "syllable_count": 6,
+      "syllables": [
+        "가",
+        "내",
+        "다",
+        "아",
+        "악",
+        "졌"
+      ]
+    },
+    {
+      "page_index": 10,
+      "pointer_indices": [
+        19
+      ],
+      "pointer_start": 19,
+      "pointer_end": 19,
+      "record_count": 1,
+      "syllable_count": 8,
+      "syllables": [
+        "가",
+        "겼",
+        "고",
+        "내",
+        "다",
+        "라",
+        "뭐",
+        "이"
+      ]
+    },
+    {
+      "page_index": 11,
+      "pointer_indices": [
+        21,
+        22
+      ],
+      "pointer_start": 21,
+      "pointer_end": 22,
+      "record_count": 2,
+      "syllable_count": 15,
+      "syllables": [
+        "국",
+        "까",
+        "끝",
+        "날",
+        "네",
+        "놈",
+        "들",
+        "려",
+        "마",
+        "아",
+        "을",
+        "좋",
+        "주",
+        "중",
+        "지"
+      ]
+    },
+    {
+      "page_index": 12,
+      "pointer_indices": [
+        23,
+        24
+      ],
+      "pointer_start": 23,
+      "pointer_end": 24,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "군",
+        "그",
+        "네",
+        "대",
+        "두",
+        "래",
+        "로",
+        "마",
+        "목",
+        "상",
+        "이",
+        "제",
+        "주",
+        "진",
+        "큰",
+        "해"
+      ]
+    },
+    {
+      "page_index": 13,
+      "pointer_indices": [
+        25
+      ],
+      "pointer_start": 25,
+      "pointer_end": 25,
+      "record_count": 1,
+      "syllable_count": 14,
+      "syllables": [
+        "게",
+        "들",
+        "때",
+        "를",
+        "배",
+        "보",
+        "본",
+        "에",
+        "여",
+        "이",
+        "자",
+        "주",
+        "지",
+        "패"
+      ]
+    },
+    {
+      "page_index": 14,
+      "pointer_indices": [
+        27,
+        28
+      ],
+      "pointer_start": 27,
+      "pointer_end": 28,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "군",
+        "그",
+        "나",
+        "너",
+        "당",
+        "둘",
+        "들",
+        "보",
+        "봐",
+        "악",
+        "에",
+        "이",
+        "자",
+        "중",
+        "쳇",
+        "희"
+      ]
+    },
+    {
+      "page_index": 15,
+      "pointer_indices": [
+        29
+      ],
+      "pointer_start": 29,
+      "pointer_end": 29,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "긴",
+        "나",
+        "는",
+        "다",
+        "보",
+        "수",
+        "시",
+        "자",
+        "작",
+        "해"
+      ]
+    },
+    {
+      "page_index": 16,
+      "pointer_indices": [
+        30
+      ],
+      "pointer_start": 30,
+      "pointer_end": 30,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "깝",
+        "넌",
+        "대",
+        "만",
+        "반",
+        "안",
+        "야",
+        "이",
+        "장",
+        "젠",
+        "지",
+        "타",
+        "편"
+      ]
+    },
+    {
+      "page_index": 17,
+      "pointer_indices": [
+        31
+      ],
+      "pointer_start": 31,
+      "pointer_end": 31,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "게",
+        "내",
+        "동",
+        "마",
+        "말",
+        "생",
+        "시",
+        "에",
+        "이",
+        "주",
+        "해",
+        "헤"
+      ]
+    },
+    {
+      "page_index": 18,
+      "pointer_indices": [
+        32,
+        33
+      ],
+      "pointer_start": 32,
+      "pointer_end": 33,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "나",
+        "는",
+        "다",
+        "면",
+        "봐",
+        "수",
+        "시",
+        "아",
+        "으",
+        "을",
+        "이",
+        "있",
+        "잡",
+        "헤"
+      ]
+    },
+    {
+      "page_index": 19,
+      "pointer_indices": [
+        34,
+        35
+      ],
+      "pointer_start": 34,
+      "pointer_end": 35,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "군",
+        "널",
+        "두",
+        "런",
+        "로",
+        "마",
+        "말",
+        "목",
+        "봐",
+        "세",
+        "손",
+        "이",
+        "정",
+        "주",
+        "진",
+        "큰"
+      ]
+    },
+    {
+      "page_index": 20,
+      "pointer_indices": [
+        36,
+        37
+      ],
+      "pointer_start": 36,
+      "pointer_end": 37,
+      "record_count": 2,
+      "syllable_count": 13,
+      "syllables": [
+        "겠",
+        "금",
+        "나",
+        "다",
+        "도",
+        "라",
+        "망",
+        "싸",
+        "않",
+        "와",
+        "워",
+        "지",
+        "치"
+      ]
+    },
+    {
+      "page_index": 21,
+      "pointer_indices": [
+        39,
+        40
+      ],
+      "pointer_start": 39,
+      "pointer_end": 40,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "것",
+        "구",
+        "군",
+        "라",
+        "만",
+        "미",
+        "번",
+        "봐",
+        "안",
+        "을",
+        "이",
+        "져",
+        "줘",
+        "친",
+        "하",
+        "한"
+      ]
+    },
+    {
+      "page_index": 22,
+      "pointer_indices": [
+        41,
+        42
+      ],
+      "pointer_start": 41,
+      "pointer_end": 42,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "겠",
+        "군",
+        "다",
+        "를",
+        "목",
+        "세",
+        "신",
+        "요",
+        "욕",
+        "이",
+        "졌",
+        "필",
+        "하",
+        "휴"
+      ]
+    },
+    {
+      "page_index": 23,
+      "pointer_indices": [
+        43
+      ],
+      "pointer_start": 43,
+      "pointer_end": 43,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "가",
+        "기",
+        "다",
+        "라",
+        "방",
+        "약",
+        "여",
+        "을",
+        "이",
+        "있",
+        "져",
+        "한"
+      ]
+    },
+    {
+      "page_index": 24,
+      "pointer_indices": [
+        44
+      ],
+      "pointer_start": 44,
+      "pointer_end": 44,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "그",
+        "로",
+        "료",
+        "를",
+        "상",
+        "약",
+        "으",
+        "처",
+        "치",
+        "해"
+      ]
+    },
+    {
+      "page_index": 25,
+      "pointer_indices": [
+        46
+      ],
+      "pointer_start": 46,
+      "pointer_end": 46,
+      "record_count": 1,
+      "syllable_count": 4,
+      "syllables": [
+        "고",
+        "라",
+        "뭐",
+        "허"
+      ]
+    },
+    {
+      "page_index": 26,
+      "pointer_indices": [
+        47
+      ],
+      "pointer_start": 47,
+      "pointer_end": 47,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "군",
+        "너",
+        "는",
+        "들",
+        "망",
+        "어",
+        "없",
+        "엉",
+        "영",
+        "외",
+        "이",
+        "인",
+        "지",
+        "편",
+        "형",
+        "희"
+      ]
+    },
+    {
+      "page_index": 27,
+      "pointer_indices": [
+        48,
+        49
+      ],
+      "pointer_start": 48,
+      "pointer_end": 49,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "끼",
+        "나",
+        "난",
+        "도",
+        "만",
+        "번",
+        "봐",
+        "워",
+        "은",
+        "이",
+        "일",
+        "잊",
+        "자",
+        "줘",
+        "지",
+        "한"
+      ]
+    },
+    {
+      "page_index": 28,
+      "pointer_indices": [
+        50,
+        51
+      ],
+      "pointer_start": 50,
+      "pointer_end": 51,
+      "record_count": 2,
+      "syllable_count": 8,
+      "syllables": [
+        "구",
+        "나",
+        "보",
+        "에",
+        "자",
+        "중",
+        "친",
+        "히"
+      ]
+    },
+    {
+      "page_index": 29,
+      "pointer_indices": [
+        52
+      ],
+      "pointer_start": 52,
+      "pointer_end": 52,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "감",
+        "개",
+        "다",
+        "미",
+        "안",
+        "어",
+        "없",
+        "은",
+        "인",
+        "적",
+        "정",
+        "하"
+      ]
+    },
+    {
+      "page_index": 30,
+      "pointer_indices": [
+        53
+      ],
+      "pointer_start": 53,
+      "pointer_end": 53,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "구",
+        "넌",
+        "누",
+        "다",
+        "밑",
+        "서",
+        "소",
+        "식",
+        "에",
+        "은",
+        "이",
+        "일",
+        "있",
+        "좋",
+        "지",
+        "하"
+      ]
+    },
+    {
+      "page_index": 31,
+      "pointer_indices": [
+        54
+      ],
+      "pointer_start": 54,
+      "pointer_end": 54,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "가",
+        "갔",
+        "그",
+        "녀",
+        "다",
+        "데",
+        "라",
+        "려",
+        "를",
+        "소",
+        "토"
+      ]
+    },
+    {
+      "page_index": 32,
+      "pointer_indices": [
+        55
+      ],
+      "pointer_start": 55,
+      "pointer_end": 55,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "갈",
+        "께",
+        "내",
+        "너",
+        "대",
+        "르",
+        "수",
+        "신",
+        "어",
+        "없",
+        "와",
+        "주",
+        "지",
+        "쳐",
+        "함"
+      ]
+    },
+    {
+      "page_index": 33,
+      "pointer_indices": [
+        56,
+        57
+      ],
+      "pointer_start": 56,
+      "pointer_end": 57,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "검",
+        "격",
+        "공",
+        "나",
+        "다",
+        "단",
+        "떠",
+        "명",
+        "야",
+        "유",
+        "의",
+        "이",
+        "제",
+        "한"
+      ]
+    },
+    {
+      "page_index": 34,
+      "pointer_indices": [
+        58,
+        59
+      ],
+      "pointer_start": 58,
+      "pointer_end": 59,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "고",
+        "나",
+        "다",
+        "라",
+        "를",
+        "면",
+        "보",
+        "심",
+        "에",
+        "있",
+        "자",
+        "조",
+        "중",
+        "찾",
+        "토",
+        "해"
+      ]
+    },
+    {
+      "page_index": 35,
+      "pointer_indices": [
+        60
+      ],
+      "pointer_start": 60,
+      "pointer_end": 60,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "그",
+        "납",
+        "녀",
+        "라",
+        "렇",
+        "를",
+        "리",
+        "소",
+        "어",
+        "없",
+        "을",
+        "지",
+        "치",
+        "토",
+        "했"
+      ]
+    },
+    {
+      "page_index": 36,
+      "pointer_indices": [
+        61
+      ],
+      "pointer_start": 61,
+      "pointer_end": 61,
+      "record_count": 1,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "그",
+        "녀",
+        "다",
+        "두",
+        "라",
+        "를",
+        "말",
+        "부",
+        "붙",
+        "았",
+        "와",
+        "잡",
+        "지",
+        "토",
+        "하",
+        "해"
+      ]
+    },
+    {
+      "page_index": 37,
+      "pointer_indices": [
+        62
+      ],
+      "pointer_start": 62,
+      "pointer_end": 62,
+      "record_count": 1,
+      "syllable_count": 7,
+      "syllables": [
+        "그",
+        "다",
+        "들",
+        "위",
+        "은",
+        "하",
+        "험"
+      ]
+    },
+    {
+      "page_index": 38,
+      "pointer_indices": [
+        63
+      ],
+      "pointer_start": 63,
+      "pointer_end": 63,
+      "record_count": 1,
+      "syllable_count": 17,
+      "syllables": [
+        "강",
+        "고",
+        "관",
+        "군",
+        "꽤",
+        "너",
+        "는",
+        "다",
+        "들",
+        "련",
+        "사",
+        "아",
+        "었",
+        "와",
+        "있",
+        "지",
+        "하"
+      ]
+    },
+    {
+      "page_index": 39,
+      "pointer_indices": [
+        64,
+        65,
+        66
+      ],
+      "pointer_start": 64,
+      "pointer_end": 66,
+      "record_count": 3,
+      "syllable_count": 14,
+      "syllables": [
+        "겠",
+        "끼",
+        "나",
+        "다",
+        "도",
+        "돌",
+        "부",
+        "시",
+        "아",
+        "오",
+        "워",
+        "줘",
+        "탁",
+        "한"
+      ]
+    },
+    {
+      "page_index": 40,
+      "pointer_indices": [
+        68
+      ],
+      "pointer_start": 68,
+      "pointer_end": 68,
+      "record_count": 1,
+      "syllable_count": 14,
+      "syllables": [
+        "겨",
+        "고",
+        "그",
+        "녀",
+        "다",
+        "되",
+        "라",
+        "를",
+        "리",
+        "면",
+        "싶",
+        "우",
+        "이",
+        "찾"
+      ]
+    },
+    {
+      "page_index": 41,
+      "pointer_indices": [
+        69
+      ],
+      "pointer_start": 69,
+      "pointer_end": 69,
+      "record_count": 1,
+      "syllable_count": 14,
+      "syllables": [
+        "가",
+        "간",
+        "갔",
+        "군",
+        "그",
+        "다",
+        "도",
+        "망",
+        "믿",
+        "수",
+        "얼",
+        "없",
+        "을",
+        "이"
+      ]
+    },
+    {
+      "page_index": 42,
+      "pointer_indices": [
+        70
+      ],
+      "pointer_start": 70,
+      "pointer_end": 70,
+      "record_count": 1,
+      "syllable_count": 9,
+      "syllables": [
+        "끝",
+        "내",
+        "라",
+        "식",
+        "아",
+        "을",
+        "이",
+        "자",
+        "장"
+      ]
+    },
+    {
+      "page_index": 43,
+      "pointer_indices": [
+        71
+      ],
+      "pointer_start": 71,
+      "pointer_end": 71,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "거",
+        "걸",
+        "게",
+        "날",
+        "놓",
+        "다",
+        "될",
+        "아",
+        "준",
+        "하",
+        "회",
+        "후"
+      ]
+    },
+    {
+      "page_index": 44,
+      "pointer_indices": [
+        72
+      ],
+      "pointer_start": 72,
+      "pointer_end": 72,
+      "record_count": 1,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "구",
+        "너",
+        "누",
+        "다",
+        "데",
+        "도",
+        "려",
+        "를",
+        "리",
+        "막",
+        "수",
+        "없",
+        "와",
+        "우",
+        "을",
+        "희"
+      ]
+    },
+    {
+      "page_index": 45,
+      "pointer_indices": [
+        73,
+        74
+      ],
+      "pointer_start": 73,
+      "pointer_end": 74,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "냐",
+        "너",
+        "도",
+        "때",
+        "또",
+        "라",
+        "망",
+        "수",
+        "을",
+        "있",
+        "장",
+        "젠",
+        "쳐",
+        "칠"
+      ]
+    },
+    {
+      "page_index": 46,
+      "pointer_indices": [
+        75,
+        76
+      ],
+      "pointer_start": 75,
+      "pointer_end": 76,
+      "record_count": 2,
+      "syllable_count": 12,
+      "syllables": [
+        "군",
+        "기",
+        "끼",
+        "나",
+        "너",
+        "는",
+        "도",
+        "말",
+        "웃",
+        "워",
+        "정",
+        "줘"
+      ]
+    },
+    {
+      "page_index": 47,
+      "pointer_indices": [
+        77
+      ],
+      "pointer_start": 77,
+      "pointer_end": 77,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "는",
+        "님",
+        "다",
+        "대",
+        "두",
+        "목",
+        "배",
+        "에",
+        "의",
+        "이",
+        "일",
+        "있",
+        "장",
+        "큰",
+        "후"
+      ]
+    },
+    {
+      "page_index": 48,
+      "pointer_indices": [
+        78
+      ],
+      "pointer_start": 78,
+      "pointer_end": 78,
+      "record_count": 1,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "고",
+        "깡",
+        "는",
+        "다",
+        "라",
+        "를",
+        "사",
+        "심",
+        "아",
+        "용",
+        "조",
+        "지",
+        "토",
+        "패",
+        "해",
+        "했"
+      ]
+    },
+    {
+      "page_index": 49,
+      "pointer_indices": [
+        79
+      ],
+      "pointer_start": 79,
+      "pointer_end": 79,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "고",
+        "군",
+        "다",
+        "더",
+        "두",
+        "맙",
+        "목",
+        "이",
+        "전",
+        "큰",
+        "하"
+      ]
+    },
+    {
+      "page_index": 50,
+      "pointer_indices": [
+        80
+      ],
+      "pointer_start": 80,
+      "pointer_end": 80,
+      "record_count": 1,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "구",
+        "기",
+        "내",
+        "누",
+        "는",
+        "다",
+        "를",
+        "말",
+        "사",
+        "섬",
+        "아",
+        "알",
+        "야",
+        "정",
+        "지",
+        "한"
+      ]
+    },
+    {
+      "page_index": 51,
+      "pointer_indices": [
+        81
+      ],
+      "pointer_start": 81,
+      "pointer_end": 81,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "강",
+        "고",
+        "나",
+        "난",
+        "내",
+        "다",
+        "두",
+        "목",
+        "쁘",
+        "이",
+        "큰",
+        "하"
+      ]
+    },
+    {
+      "page_index": 52,
+      "pointer_indices": [
+        82,
+        83
+      ],
+      "pointer_start": 82,
+      "pointer_end": 83,
+      "record_count": 2,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "내",
+        "다",
+        "못",
+        "서",
+        "여",
+        "용",
+        "잘",
+        "제",
+        "줘",
+        "해",
+        "했",
+        "형"
+      ]
+    },
+    {
+      "page_index": 53,
+      "pointer_indices": [
+        84
+      ],
+      "pointer_start": 84,
+      "pointer_end": 84,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "가",
+        "계",
+        "기",
+        "내",
+        "떤",
+        "막",
+        "어",
+        "은",
+        "허",
+        "획",
+        "힌"
+      ]
+    },
+    {
+      "page_index": 54,
+      "pointer_indices": [
+        85
+      ],
+      "pointer_start": 85,
+      "pointer_end": 85,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "것",
+        "는",
+        "다",
+        "를",
+        "뿐",
+        "애",
+        "야",
+        "없",
+        "은",
+        "이",
+        "일",
+        "자",
+        "저",
+        "할",
+        "해"
+      ]
+    },
+    {
+      "page_index": 55,
+      "pointer_indices": [
+        86
+      ],
+      "pointer_start": 86,
+      "pointer_end": 86,
+      "record_count": 1,
+      "syllable_count": 7,
+      "syllables": [
+        "뒤",
+        "라",
+        "를",
+        "심",
+        "조",
+        "해",
+        "히"
+      ]
+    },
+    {
+      "page_index": 56,
+      "pointer_indices": [
+        88
+      ],
+      "pointer_start": 88,
+      "pointer_end": 88,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "거",
+        "골",
+        "군",
+        "너",
+        "는",
+        "되",
+        "둘",
+        "리",
+        "사",
+        "아",
+        "어",
+        "은",
+        "지",
+        "칫",
+        "희"
+      ]
+    },
+    {
+      "page_index": 57,
+      "pointer_indices": [
+        89
+      ],
+      "pointer_start": 89,
+      "pointer_end": 89,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "게",
+        "까",
+        "들",
+        "떻",
+        "리",
+        "사",
+        "아",
+        "어",
+        "을",
+        "저",
+        "지",
+        "처",
+        "할"
+      ]
+    },
+    {
+      "page_index": 58,
+      "pointer_indices": [
+        90
+      ],
+      "pointer_start": 90,
+      "pointer_end": 90,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "가",
+        "겠",
+        "내",
+        "다",
+        "라",
+        "리",
+        "접",
+        "직",
+        "처",
+        "토",
+        "하"
+      ]
+    },
+    {
+      "page_index": 59,
+      "pointer_indices": [
+        91,
+        92,
+        93
+      ],
+      "pointer_start": 91,
+      "pointer_end": 93,
+      "record_count": 3,
+      "syllable_count": 16,
+      "syllables": [
+        "군",
+        "꽤",
+        "나",
+        "너",
+        "런",
+        "배",
+        "쁘",
+        "살",
+        "아",
+        "었",
+        "은",
+        "이",
+        "있",
+        "직",
+        "짱",
+        "희"
+      ]
+    },
+    {
+      "page_index": 60,
+      "pointer_indices": [
+        94
+      ],
+      "pointer_start": 94,
+      "pointer_end": 94,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "는",
+        "모",
+        "사",
+        "식",
+        "쓸",
+        "아",
+        "없",
+        "이",
+        "자",
+        "지"
+      ]
+    },
+    {
+      "page_index": 61,
+      "pointer_indices": [
+        95
+      ],
+      "pointer_start": 95,
+      "pointer_end": 95,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "겼",
+        "고",
+        "군",
+        "그",
+        "났",
+        "다",
+        "단",
+        "대",
+        "또",
+        "라",
+        "래",
+        "를",
+        "만",
+        "이",
+        "토",
+        "하"
+      ]
+    },
+    {
+      "page_index": 62,
+      "pointer_indices": [
+        96
+      ],
+      "pointer_start": 96,
+      "pointer_end": 96,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "기",
+        "다",
+        "라",
+        "받",
+        "부",
+        "아",
+        "여",
+        "을",
+        "이",
+        "있",
+        "적"
+      ]
+    },
+    {
+      "page_index": 63,
+      "pointer_indices": [
+        97
+      ],
+      "pointer_start": 97,
+      "pointer_end": 97,
+      "record_count": 1,
+      "syllable_count": 9,
+      "syllables": [
+        "거",
+        "금",
+        "나",
+        "냐",
+        "놀",
+        "는",
+        "를",
+        "리",
+        "지"
+      ]
+    },
+    {
+      "page_index": 64,
+      "pointer_indices": [
+        98
+      ],
+      "pointer_start": 98,
+      "pointer_end": 98,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "그",
+        "길",
+        "다",
+        "도",
+        "라",
+        "른",
+        "를",
+        "면",
+        "모",
+        "수",
+        "을",
+        "이",
+        "있",
+        "제",
+        "지"
+      ]
+    },
+    {
+      "page_index": 65,
+      "pointer_indices": [
+        99,
+        100
+      ],
+      "pointer_start": 99,
+      "pointer_end": 100,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "끼",
+        "나",
+        "다",
+        "도",
+        "라",
+        "면",
+        "배",
+        "사",
+        "싸",
+        "아",
+        "와",
+        "워",
+        "이",
+        "있",
+        "줘",
+        "지",
+        "짱"
+      ]
+    },
+    {
+      "page_index": 66,
+      "pointer_indices": [
+        101,
+        102
+      ],
+      "pointer_start": 101,
+      "pointer_end": 102,
+      "record_count": 2,
+      "syllable_count": 12,
+      "syllables": [
+        "것",
+        "님",
+        "다",
+        "돼",
+        "두",
+        "목",
+        "셨",
+        "안",
+        "을",
+        "이",
+        "주",
+        "큰"
+      ]
+    },
+    {
+      "page_index": 67,
+      "pointer_indices": [
+        103
+      ],
+      "pointer_start": 103,
+      "pointer_end": 103,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "결",
+        "나",
+        "내",
+        "에",
+        "은",
+        "이",
+        "일",
+        "자",
+        "중",
+        "판"
+      ]
+    },
+    {
+      "page_index": 68,
+      "pointer_indices": [
+        104
+      ],
+      "pointer_start": 104,
+      "pointer_end": 104,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "내",
+        "너",
+        "를",
+        "마",
+        "박",
+        "사",
+        "살",
+        "아",
+        "주",
+        "지",
+        "희"
+      ]
+    },
+    {
+      "page_index": 69,
+      "pointer_indices": [
+        105
+      ],
+      "pointer_start": 105,
+      "pointer_end": 105,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "게",
+        "너",
+        "려",
+        "만",
+        "먼",
+        "실",
+        "알",
+        "에",
+        "을",
+        "저",
+        "주",
+        "지",
+        "진",
+        "하",
+        "희"
+      ]
+    },
+    {
+      "page_index": 70,
+      "pointer_indices": [
+        106
+      ],
+      "pointer_start": 106,
+      "pointer_end": 106,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "과",
+        "그",
+        "너",
+        "는",
+        "다",
+        "말",
+        "불",
+        "에",
+        "저",
+        "했",
+        "희"
+      ]
+    },
+    {
+      "page_index": 71,
+      "pointer_indices": [
+        107
+      ],
+      "pointer_start": 107,
+      "pointer_end": 107,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "기",
+        "도",
+        "때",
+        "라",
+        "사",
+        "수",
+        "아",
+        "을",
+        "있",
+        "지",
+        "할",
+        "해"
+      ]
+    },
+    {
+      "page_index": 72,
+      "pointer_indices": [
+        108
+      ],
+      "pointer_start": 108,
+      "pointer_end": 108,
+      "record_count": 1,
+      "syllable_count": 8,
+      "syllables": [
+        "들",
+        "멍",
+        "식",
+        "이",
+        "자",
+        "청",
+        "한",
+        "허"
+      ]
+    },
+    {
+      "page_index": 73,
+      "pointer_indices": [
+        109
+      ],
+      "pointer_start": 109,
+      "pointer_end": 109,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "게",
+        "나",
+        "디",
+        "말",
+        "멋",
+        "비",
+        "악",
+        "않",
+        "오",
+        "은",
+        "음",
+        "의",
+        "이",
+        "임",
+        "정",
+        "지"
+      ]
+    },
+    {
+      "page_index": 74,
+      "pointer_indices": [
+        110,
+        111,
+        112
+      ],
+      "pointer_start": 110,
+      "pointer_end": 112,
+      "record_count": 3,
+      "syllable_count": 14,
+      "syllables": [
+        "고",
+        "군",
+        "돌",
+        "또",
+        "라",
+        "러",
+        "맞",
+        "뭐",
+        "받",
+        "아",
+        "어",
+        "얻",
+        "왔",
+        "으"
+      ]
+    },
+    {
+      "page_index": 75,
+      "pointer_indices": [
+        113,
+        114,
+        115,
+        116
+      ],
+      "pointer_start": 113,
+      "pointer_end": 116,
+      "record_count": 4,
+      "syllable_count": 15,
+      "syllables": [
+        "기",
+        "꺄",
+        "났",
+        "내",
+        "다",
+        "둠",
+        "디",
+        "말",
+        "봐",
+        "악",
+        "이",
+        "정",
+        "제",
+        "풋",
+        "화"
+      ]
+    },
+    {
+      "page_index": 76,
+      "pointer_indices": [
+        117,
+        118,
+        119,
+        120
+      ],
+      "pointer_start": 117,
+      "pointer_end": 120,
+      "record_count": 4,
+      "syllable_count": 14,
+      "syllables": [
+        "군",
+        "더",
+        "락",
+        "런",
+        "로",
+        "롤",
+        "만",
+        "말",
+        "번",
+        "별",
+        "앤",
+        "이",
+        "정",
+        "한"
+      ]
+    },
+    {
+      "page_index": 77,
+      "pointer_indices": [
+        121,
+        122
+      ],
+      "pointer_start": 121,
+      "pointer_end": 122,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "게",
+        "내",
+        "녀",
+        "대",
+        "들",
+        "때",
+        "려",
+        "뭐",
+        "석",
+        "야",
+        "을",
+        "이",
+        "주",
+        "지",
+        "체"
+      ]
+    },
+    {
+      "page_index": 78,
+      "pointer_indices": [
+        123,
+        124,
+        125
+      ],
+      "pointer_start": 123,
+      "pointer_end": 125,
+      "record_count": 3,
+      "syllable_count": 17,
+      "syllables": [
+        "거",
+        "겁",
+        "나",
+        "내",
+        "네",
+        "놈",
+        "라",
+        "마",
+        "먹",
+        "박",
+        "봐",
+        "살",
+        "어",
+        "을",
+        "이",
+        "쟁",
+        "주"
+      ]
+    },
+    {
+      "page_index": 79,
+      "pointer_indices": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "pointer_start": 126,
+      "pointer_end": 134,
+      "record_count": 9,
+      "syllable_count": 16,
+      "syllables": [
+        "겠",
+        "기",
+        "꺄",
+        "널",
+        "다",
+        "두",
+        "식",
+        "아",
+        "악",
+        "야",
+        "억",
+        "에",
+        "으",
+        "이",
+        "자",
+        "해"
+      ]
+    },
+    {
+      "page_index": 80,
+      "pointer_indices": [
+        135,
+        136
+      ],
+      "pointer_start": 135,
+      "pointer_end": 136,
+      "record_count": 2,
+      "syllable_count": 12,
+      "syllables": [
+        "나",
+        "무",
+        "서",
+        "세",
+        "시",
+        "어",
+        "엇",
+        "오",
+        "요",
+        "원",
+        "을",
+        "하"
+      ]
+    },
+    {
+      "page_index": 81,
+      "pointer_indices": [
+        137,
+        138
+      ],
+      "pointer_start": 137,
+      "pointer_end": 138,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "가",
+        "니",
+        "다",
+        "돈",
+        "득",
+        "부",
+        "소",
+        "습",
+        "이",
+        "족",
+        "지",
+        "찼",
+        "품",
+        "합"
+      ]
+    },
+    {
+      "page_index": 82,
+      "pointer_indices": [
+        139,
+        140,
+        141,
+        142,
+        143
+      ],
+      "pointer_start": 139,
+      "pointer_end": 143,
+      "record_count": 5,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "고",
+        "니",
+        "다",
+        "마",
+        "말",
+        "맙",
+        "먹",
+        "셨",
+        "습",
+        "실",
+        "얻",
+        "었",
+        "요",
+        "정",
+        "한",
+        "확"
+      ]
+    },
+    {
+      "page_index": 83,
+      "pointer_indices": [
+        144,
+        145
+      ],
+      "pointer_start": 144,
+      "pointer_end": 145,
+      "record_count": 2,
+      "syllable_count": 13,
+      "syllables": [
+        "것",
+        "나",
+        "니",
+        "다",
+        "더",
+        "른",
+        "습",
+        "없",
+        "요",
+        "은",
+        "장",
+        "착",
+        "했"
+      ]
+    },
+    {
+      "page_index": 84,
+      "pointer_indices": [
+        146,
+        147
+      ],
+      "pointer_start": 146,
+      "pointer_end": 147,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "겠",
+        "고",
+        "기",
+        "니",
+        "다",
+        "또",
+        "르",
+        "맙",
+        "머",
+        "무",
+        "세",
+        "습",
+        "시",
+        "어",
+        "여",
+        "오",
+        "요"
+      ]
+    },
+    {
+      "page_index": 85,
+      "pointer_indices": [
+        148,
+        149,
+        150
+      ],
+      "pointer_start": 148,
+      "pointer_end": 150,
+      "record_count": 3,
+      "syllable_count": 17,
+      "syllables": [
+        "니",
+        "다",
+        "도",
+        "래",
+        "박",
+        "복",
+        "볼",
+        "세",
+        "쉬",
+        "습",
+        "요",
+        "을",
+        "편",
+        "해",
+        "했",
+        "회",
+        "히"
+      ]
+    },
+    {
+      "page_index": 86,
+      "pointer_indices": [
+        151,
+        152
+      ],
+      "pointer_start": 151,
+      "pointer_end": 152,
+      "record_count": 2,
+      "syllable_count": 11,
+      "syllables": [
+        "가",
+        "금",
+        "니",
+        "다",
+        "됐",
+        "비",
+        "세",
+        "습",
+        "요",
+        "준",
+        "지"
+      ]
+    },
+    {
+      "page_index": 87,
+      "pointer_indices": [
+        153,
+        154,
+        155
+      ],
+      "pointer_start": 153,
+      "pointer_end": 155,
+      "record_count": 3,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "것",
+        "겼",
+        "고",
+        "과",
+        "는",
+        "니",
+        "다",
+        "리",
+        "습",
+        "우",
+        "을",
+        "이",
+        "있",
+        "저",
+        "졌",
+        "지"
+      ]
+    },
+    {
+      "page_index": 88,
+      "pointer_indices": [
+        156,
+        157,
+        158
+      ],
+      "pointer_start": 156,
+      "pointer_end": 158,
+      "record_count": 3,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "군",
+        "그",
+        "다",
+        "렇",
+        "무",
+        "산",
+        "셨",
+        "시",
+        "신",
+        "언",
+        "오",
+        "요",
+        "키",
+        "필",
+        "하"
+      ]
+    },
+    {
+      "page_index": 89,
+      "pointer_indices": [
+        159,
+        160,
+        161
+      ],
+      "pointer_start": 159,
+      "pointer_end": 161,
+      "record_count": 3,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "만",
+        "무",
+        "세",
+        "신",
+        "심",
+        "언",
+        "에",
+        "요",
+        "조",
+        "천",
+        "필",
+        "하"
+      ]
+    },
+    {
+      "page_index": 90,
+      "pointer_indices": [
+        163
+      ],
+      "pointer_start": 163,
+      "pointer_end": 163,
+      "record_count": 1,
+      "syllable_count": 8,
+      "syllables": [
+        "동",
+        "료",
+        "를",
+        "선",
+        "세",
+        "요",
+        "택",
+        "하"
+      ]
+    },
+    {
+      "page_index": 91,
+      "pointer_indices": [
+        164
+      ],
+      "pointer_start": 164,
+      "pointer_end": 164,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "괜",
+        "는",
+        "니",
+        "다",
+        "산",
+        "습",
+        "오",
+        "찮",
+        "코",
+        "키",
+        "토"
+      ]
+    },
+    {
+      "page_index": 92,
+      "pointer_indices": [
+        165
+      ],
+      "pointer_start": 165,
+      "pointer_end": 165,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "개",
+        "나",
+        "났",
+        "니",
+        "다",
+        "두",
+        "람",
+        "럼",
+        "번",
+        "사",
+        "산",
+        "습",
+        "이",
+        "처",
+        "키",
+        "타"
+      ]
+    },
+    {
+      "page_index": 93,
+      "pointer_indices": [
+        166
+      ],
+      "pointer_start": 166,
+      "pointer_end": 166,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "것",
+        "는",
+        "니",
+        "다",
+        "도",
+        "못",
+        "무",
+        "미",
+        "산",
+        "습",
+        "아",
+        "안",
+        "저",
+        "키",
+        "합",
+        "했"
+      ]
+    },
+    {
+      "page_index": 94,
+      "pointer_indices": [
+        167
+      ],
+      "pointer_start": 167,
+      "pointer_end": 167,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "가",
+        "것",
+        "그",
+        "다",
+        "들",
+        "리",
+        "바",
+        "보",
+        "우",
+        "을",
+        "이",
+        "찾"
+      ]
+    },
+    {
+      "page_index": 95,
+      "pointer_indices": [
+        168
+      ],
+      "pointer_start": 168,
+      "pointer_end": 168,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "과",
+        "그",
+        "나",
+        "방",
+        "았",
+        "약",
+        "어",
+        "었",
+        "이",
+        "있",
+        "한",
+        "효"
+      ]
+    },
+    {
+      "page_index": 96,
+      "pointer_indices": [
+        169
+      ],
+      "pointer_start": 169,
+      "pointer_end": 169,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "드",
+        "디",
+        "라",
+        "수",
+        "싸",
+        "어",
+        "와",
+        "울",
+        "있",
+        "토"
+      ]
+    },
+    {
+      "page_index": 97,
+      "pointer_indices": [
+        170
+      ],
+      "pointer_start": 170,
+      "pointer_end": 170,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "거",
+        "너",
+        "를",
+        "부",
+        "야",
+        "이",
+        "적",
+        "줄",
+        "지",
+        "켜"
+      ]
+    },
+    {
+      "page_index": 98,
+      "pointer_indices": [
+        171,
+        172
+      ],
+      "pointer_start": 171,
+      "pointer_end": 172,
+      "record_count": 2,
+      "syllable_count": 15,
+      "syllables": [
+        "게",
+        "구",
+        "그",
+        "기",
+        "다",
+        "래",
+        "를",
+        "릴",
+        "서",
+        "여",
+        "오",
+        "줘",
+        "코",
+        "토",
+        "해"
+      ]
+    },
+    {
+      "page_index": 99,
+      "pointer_indices": [
+        173
+      ],
+      "pointer_start": 173,
+      "pointer_end": 173,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "가",
+        "게",
+        "는",
+        "때",
+        "로",
+        "사",
+        "아",
+        "어",
+        "지",
+        "후"
+      ]
+    },
+    {
+      "page_index": 100,
+      "pointer_indices": [
+        174
+      ],
+      "pointer_start": 174,
+      "pointer_end": 174,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "게",
+        "겠",
+        "고",
+        "두",
+        "목",
+        "야",
+        "어",
+        "에",
+        "인",
+        "큰",
+        "하",
+        "확"
+      ]
+    },
+    {
+      "page_index": 101,
+      "pointer_indices": [
+        175
+      ],
+      "pointer_start": 175,
+      "pointer_end": 175,
+      "record_count": 1,
+      "syllable_count": 9,
+      "syllables": [
+        "나",
+        "내",
+        "를",
+        "보",
+        "부",
+        "야",
+        "이",
+        "줘",
+        "탁"
+      ]
+    },
+    {
+      "page_index": 102,
+      "pointer_indices": [
+        176
+      ],
+      "pointer_start": 176,
+      "pointer_end": 176,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "갔",
+        "것",
+        "고",
+        "군",
+        "누",
+        "두",
+        "문",
+        "앞",
+        "어",
+        "에",
+        "을",
+        "이"
+      ]
+    },
+    {
+      "page_index": 103,
+      "pointer_indices": [
+        177
+      ],
+      "pointer_start": 177,
+      "pointer_end": 177,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "나",
+        "납",
+        "를",
+        "사",
+        "아",
+        "어",
+        "오",
+        "지",
+        "치",
+        "코",
+        "토",
+        "했"
+      ]
+    },
+    {
+      "page_index": 104,
+      "pointer_indices": [
+        178
+      ],
+      "pointer_start": 178,
+      "pointer_end": 178,
+      "record_count": 1,
+      "syllable_count": 11,
+      "syllables": [
+        "가",
+        "걱",
+        "고",
+        "두",
+        "모",
+        "어",
+        "에",
+        "있",
+        "정",
+        "집",
+        "하"
+      ]
+    },
+    {
+      "page_index": 105,
+      "pointer_indices": [
+        179
+      ],
+      "pointer_start": 179,
+      "pointer_end": 179,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "고",
+        "낌",
+        "느",
+        "마",
+        "심",
+        "오",
+        "워",
+        "조",
+        "코",
+        "토",
+        "해",
+        "흐"
+      ]
+    },
+    {
+      "page_index": 106,
+      "pointer_indices": [
+        180,
+        181
+      ],
+      "pointer_start": 180,
+      "pointer_end": 181,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "가",
+        "기",
+        "다",
+        "라",
+        "려",
+        "빠",
+        "사",
+        "아",
+        "어",
+        "오",
+        "우",
+        "졌",
+        "지",
+        "츠"
+      ]
+    },
+    {
+      "page_index": 107,
+      "pointer_indices": [
+        182,
+        183
+      ],
+      "pointer_start": 182,
+      "pointer_end": 183,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "경",
+        "곤",
+        "니",
+        "둘",
+        "러",
+        "분",
+        "빠",
+        "서",
+        "어",
+        "에",
+        "오",
+        "졌",
+        "조",
+        "코",
+        "쿠",
+        "토"
+      ]
+    },
+    {
+      "page_index": 108,
+      "pointer_indices": [
+        184
+      ],
+      "pointer_start": 184,
+      "pointer_end": 184,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "고",
+        "니",
+        "돌",
+        "둘",
+        "러",
+        "려",
+        "서",
+        "아",
+        "어",
+        "오",
+        "쿠",
+        "했"
+      ]
+    },
+    {
+      "page_index": 109,
+      "pointer_indices": [
+        185,
+        186
+      ],
+      "pointer_start": 185,
+      "pointer_end": 186,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "나",
+        "는",
+        "람",
+        "사",
+        "아",
+        "야",
+        "약",
+        "오",
+        "은",
+        "의",
+        "이",
+        "자",
+        "지",
+        "코",
+        "토",
+        "혼"
+      ]
+    },
+    {
+      "page_index": 110,
+      "pointer_indices": [
+        187
+      ],
+      "pointer_start": 187,
+      "pointer_end": 187,
+      "record_count": 1,
+      "syllable_count": 6,
+      "syllables": [
+        "건",
+        "고",
+        "그",
+        "두",
+        "보",
+        "자"
+      ]
+    },
+    {
+      "page_index": 111,
+      "pointer_indices": [
+        188
+      ],
+      "pointer_start": 188,
+      "pointer_end": 188,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "기",
+        "님",
+        "다",
+        "두",
+        "리",
+        "목",
+        "사",
+        "신",
+        "아",
+        "용",
+        "이",
+        "조",
+        "지",
+        "해",
+        "히"
+      ]
+    },
+    {
+      "page_index": 112,
+      "pointer_indices": [
+        189
+      ],
+      "pointer_start": 189,
+      "pointer_end": 189,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "늦",
+        "니",
+        "님",
+        "다",
+        "서",
+        "송",
+        "스",
+        "승",
+        "어",
+        "오",
+        "죄",
+        "합"
+      ]
+    },
+    {
+      "page_index": 113,
+      "pointer_indices": [
+        190
+      ],
+      "pointer_start": 190,
+      "pointer_end": 190,
+      "record_count": 1,
+      "syllable_count": 10,
+      "syllables": [
+        "구",
+        "나",
+        "니",
+        "드",
+        "디",
+        "아",
+        "어",
+        "오",
+        "왔",
+        "쿠"
+      ]
+    },
+    {
+      "page_index": 114,
+      "pointer_indices": [
+        191,
+        192
+      ],
+      "pointer_start": 191,
+      "pointer_end": 192,
+      "record_count": 2,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "걸",
+        "게",
+        "나",
+        "다",
+        "라",
+        "료",
+        "를",
+        "사",
+        "아",
+        "었",
+        "에",
+        "저",
+        "주",
+        "찾",
+        "치",
+        "토"
+      ]
+    },
+    {
+      "page_index": 115,
+      "pointer_indices": [
+        193,
+        194
+      ],
+      "pointer_start": 193,
+      "pointer_end": 194,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "구",
+        "나",
+        "냐",
+        "누",
+        "람",
+        "만",
+        "믿",
+        "방",
+        "사",
+        "약",
+        "어",
+        "은",
+        "을",
+        "진",
+        "한"
+      ]
+    },
+    {
+      "page_index": 116,
+      "pointer_indices": [
+        195,
+        196,
+        197
+      ],
+      "pointer_start": 195,
+      "pointer_end": 197,
+      "record_count": 3,
+      "syllable_count": 13,
+      "syllables": [
+        "구",
+        "늘",
+        "다",
+        "둘",
+        "디",
+        "라",
+        "러",
+        "부",
+        "서",
+        "오",
+        "을",
+        "잘",
+        "했"
+      ]
+    },
+    {
+      "page_index": 117,
+      "pointer_indices": [
+        198
+      ],
+      "pointer_start": 198,
+      "pointer_end": 198,
+      "record_count": 1,
+      "syllable_count": 6,
+      "syllables": [
+        "건",
+        "그",
+        "데",
+        "런",
+        "뭐",
+        "지"
+      ]
+    },
+    {
+      "page_index": 118,
+      "pointer_indices": [
+        199
+      ],
+      "pointer_start": 199,
+      "pointer_end": 199,
+      "record_count": 1,
+      "syllable_count": 16,
+      "syllables": [
+        "가",
+        "겠",
+        "군",
+        "너",
+        "되",
+        "라",
+        "륭",
+        "면",
+        "오",
+        "와",
+        "이",
+        "족",
+        "코",
+        "토",
+        "한",
+        "훌"
+      ]
+    },
+    {
+      "page_index": 119,
+      "pointer_indices": [
+        200,
+        201,
+        202
+      ],
+      "pointer_start": 200,
+      "pointer_end": 202,
+      "record_count": 3,
+      "syllable_count": 15,
+      "syllables": [
+        "그",
+        "니",
+        "다",
+        "렇",
+        "맞",
+        "발",
+        "부",
+        "아",
+        "오",
+        "제",
+        "지",
+        "코",
+        "탁",
+        "토",
+        "합"
+      ]
+    },
+    {
+      "page_index": 120,
+      "pointer_indices": [
+        203
+      ],
+      "pointer_start": 203,
+      "pointer_end": 203,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "간",
+        "고",
+        "군",
+        "끼",
+        "느",
+        "는",
+        "복",
+        "순",
+        "아",
+        "을",
+        "의",
+        "이",
+        "좋",
+        "최",
+        "행"
+      ]
+    },
+    {
+      "page_index": 121,
+      "pointer_indices": [
+        204
+      ],
+      "pointer_start": 204,
+      "pointer_end": 204,
+      "record_count": 1,
+      "syllable_count": 9,
+      "syllables": [
+        "겠",
+        "를",
+        "문",
+        "야",
+        "어",
+        "주",
+        "축",
+        "하",
+        "해"
+      ]
+    },
+    {
+      "page_index": 122,
+      "pointer_indices": [
+        205
+      ],
+      "pointer_start": 205,
+      "pointer_end": 205,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "나",
+        "는",
+        "돌",
+        "떠",
+        "로",
+        "마",
+        "서",
+        "야",
+        "에",
+        "을",
+        "이",
+        "지"
+      ]
+    },
+    {
+      "page_index": 123,
+      "pointer_indices": [
+        206
+      ],
+      "pointer_start": 206,
+      "pointer_end": 206,
+      "record_count": 1,
+      "syllable_count": 17,
+      "syllables": [
+        "게",
+        "는",
+        "더",
+        "람",
+        "려",
+        "사",
+        "씬",
+        "어",
+        "에",
+        "오",
+        "울",
+        "은",
+        "이",
+        "좋",
+        "코",
+        "토",
+        "훨"
+      ]
+    },
+    {
+      "page_index": 124,
+      "pointer_indices": [
+        207
+      ],
+      "pointer_start": 207,
+      "pointer_end": 207,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "게",
+        "그",
+        "꼈",
+        "느",
+        "다",
+        "렇",
+        "만",
+        "면",
+        "미",
+        "안",
+        "지",
+        "하",
+        "해"
+      ]
+    },
+    {
+      "page_index": 125,
+      "pointer_indices": [
+        208,
+        209
+      ],
+      "pointer_start": 208,
+      "pointer_end": 209,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "나",
+        "든",
+        "들",
+        "러",
+        "를",
+        "리",
+        "마",
+        "만",
+        "면",
+        "언",
+        "에",
+        "오",
+        "와",
+        "우",
+        "을",
+        "제"
+      ]
+    },
+    {
+      "page_index": 126,
+      "pointer_indices": [
+        210,
+        211,
+        212
+      ],
+      "pointer_start": 210,
+      "pointer_end": 212,
+      "record_count": 3,
+      "syllable_count": 15,
+      "syllables": [
+        "가",
+        "겠",
+        "쉬",
+        "아",
+        "알",
+        "야",
+        "어",
+        "오",
+        "워",
+        "이",
+        "잘",
+        "제",
+        "코",
+        "토",
+        "해"
+      ]
+    },
+    {
+      "page_index": 127,
+      "pointer_indices": [
+        213
+      ],
+      "pointer_start": 213,
+      "pointer_end": 213,
+      "record_count": 1,
+      "syllable_count": 9,
+      "syllables": [
+        "낌",
+        "느",
+        "쉬",
+        "아",
+        "오",
+        "워",
+        "코",
+        "토",
+        "흐"
+      ]
+    },
+    {
+      "page_index": 128,
+      "pointer_indices": [
+        214
+      ],
+      "pointer_start": 214,
+      "pointer_end": 214,
+      "record_count": 1,
+      "syllable_count": 12,
+      "syllables": [
+        "가",
+        "기",
+        "나",
+        "둠",
+        "디",
+        "미",
+        "않",
+        "야",
+        "이",
+        "있",
+        "재",
+        "지"
+      ]
+    },
+    {
+      "page_index": 129,
+      "pointer_indices": [
+        215
+      ],
+      "pointer_start": 215,
+      "pointer_end": 215,
+      "record_count": 1,
+      "syllable_count": 9,
+      "syllables": [
+        "구",
+        "끝",
+        "나",
+        "냈",
+        "없",
+        "이",
+        "일",
+        "제",
+        "할"
+      ]
+    },
+    {
+      "page_index": 130,
+      "pointer_indices": [
+        216,
+        217
+      ],
+      "pointer_start": 216,
+      "pointer_end": 217,
+      "record_count": 2,
+      "syllable_count": 15,
+      "syllables": [
+        "그",
+        "끝",
+        "날",
+        "내",
+        "다",
+        "도",
+        "때",
+        "르",
+        "마",
+        "만",
+        "모",
+        "시",
+        "주",
+        "지",
+        "혼"
+      ]
+    },
+    {
+      "page_index": 131,
+      "pointer_indices": [
+        218,
+        219
+      ],
+      "pointer_start": 218,
+      "pointer_end": 219,
+      "record_count": 2,
+      "syllable_count": 14,
+      "syllables": [
+        "금",
+        "다",
+        "된",
+        "모",
+        "서",
+        "세",
+        "시",
+        "어",
+        "오",
+        "요",
+        "은",
+        "작",
+        "지",
+        "험"
+      ]
+    },
+    {
+      "page_index": 132,
+      "pointer_indices": [
+        220
+      ],
+      "pointer_start": 220,
+      "pointer_end": 220,
+      "record_count": 1,
+      "syllable_count": 15,
+      "syllables": [
+        "꾼",
+        "다",
+        "들",
+        "셜",
+        "스",
+        "싸",
+        "여",
+        "영",
+        "운",
+        "움",
+        "이",
+        "타",
+        "페",
+        "한",
+        "환"
+      ]
+    },
+    {
+      "page_index": 133,
+      "pointer_indices": [
+        221
+      ],
+      "pointer_start": 221,
+      "pointer_end": 221,
+      "record_count": 1,
+      "syllable_count": 6,
+      "syllables": [
+        "나",
+        "리",
+        "만",
+        "와",
+        "우",
+        "자"
+      ]
+    },
+    {
+      "page_index": 134,
+      "pointer_indices": [
+        222
+      ],
+      "pointer_start": 222,
+      "pointer_end": 222,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "고",
+        "께",
+        "끼",
+        "땅",
+        "루",
+        "산",
+        "수",
+        "스",
+        "의",
+        "지",
+        "향",
+        "후"
+      ]
+    },
+    {
+      "page_index": 135,
+      "pointer_indices": [
+        223
+      ],
+      "pointer_start": 223,
+      "pointer_end": 223,
+      "record_count": 1,
+      "syllable_count": 7,
+      "syllables": [
+        "거",
+        "건",
+        "너",
+        "다",
+        "를",
+        "바",
+        "친"
+      ]
+    },
+    {
+      "page_index": 136,
+      "pointer_indices": [
+        224
+      ],
+      "pointer_start": 224,
+      "pointer_end": 224,
+      "record_count": 1,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "고",
+        "그",
+        "다",
+        "도",
+        "로",
+        "른",
+        "리",
+        "맨",
+        "무",
+        "부",
+        "스",
+        "의"
+      ]
+    },
+    {
+      "page_index": 137,
+      "pointer_indices": [
+        225,
+        226
+      ],
+      "pointer_start": 225,
+      "pointer_end": 226,
+      "record_count": 2,
+      "syllable_count": 16,
+      "syllables": [
+        "그",
+        "기",
+        "까",
+        "녀",
+        "니",
+        "다",
+        "랑",
+        "린",
+        "말",
+        "사",
+        "오",
+        "의",
+        "이",
+        "일",
+        "정",
+        "쿠"
+      ]
+    },
+    {
+      "page_index": 138,
+      "pointer_indices": [
+        227
+      ],
+      "pointer_start": 227,
+      "pointer_end": 227,
+      "record_count": 1,
+      "syllable_count": 6,
+      "syllables": [
+        "니",
+        "다",
+        "사",
+        "습",
+        "용",
+        "했"
+      ]
+    },
+    {
+      "page_index": 139,
+      "pointer_indices": [
+        228
+      ],
+      "pointer_start": 228,
+      "pointer_end": 228,
+      "record_count": 1,
+      "syllable_count": 14,
+      "syllables": [
+        "가",
+        "갈",
+        "그",
+        "나",
+        "됐",
+        "래",
+        "로",
+        "비",
+        "새",
+        "역",
+        "요",
+        "으",
+        "준",
+        "지"
+      ]
+    },
+    {
+      "page_index": 140,
+      "pointer_indices": [
+        229,
+        230,
+        231,
+        232,
+        233
+      ],
+      "pointer_start": 229,
+      "pointer_end": 233,
+      "record_count": 5,
+      "syllable_count": 17,
+      "syllables": [
+        "가",
+        "능",
+        "니",
+        "다",
+        "떨",
+        "뜨",
+        "랐",
+        "력",
+        "렸",
+        "받",
+        "상",
+        "습",
+        "았",
+        "어",
+        "올",
+        "치",
+        "태"
+      ]
+    },
+    {
+      "page_index": 141,
+      "pointer_indices": [
+        234,
+        235
+      ],
+      "pointer_start": 234,
+      "pointer_end": 235,
+      "record_count": 2,
+      "syllable_count": 15,
+      "syllables": [
+        "가",
+        "기",
+        "능",
+        "니",
+        "다",
+        "대",
+        "력",
+        "배",
+        "술",
+        "습",
+        "웠",
+        "을",
+        "입",
+        "최",
+        "치"
+      ]
+    },
+    {
+      "page_index": 142,
+      "pointer_indices": [
+        236
+      ],
+      "pointer_start": 236,
+      "pointer_end": 236,
+      "record_count": 1,
+      "syllable_count": 14,
+      "syllables": [
+        "니",
+        "다",
+        "두",
+        "랐",
+        "레",
+        "배",
+        "벨",
+        "상",
+        "습",
+        "올",
+        "이",
+        "입",
+        "제",
+        "태"
+      ]
+    },
+    {
+      "page_index": 143,
+      "pointer_indices": [
+        237,
+        238
+      ],
+      "pointer_start": 237,
+      "pointer_end": 238,
+      "record_count": 2,
+      "syllable_count": 15,
+      "syllables": [
+        "니",
+        "다",
+        "도",
+        "동",
+        "렸",
+        "로",
+        "버",
+        "서",
+        "세",
+        "습",
+        "요",
+        "이",
+        "지",
+        "커",
+        "하"
+      ]
+    },
+    {
+      "page_index": 144,
+      "pointer_indices": [
+        239,
+        240
+      ],
+      "pointer_start": 239,
+      "pointer_end": 240,
+      "record_count": 2,
+      "syllable_count": 13,
+      "syllables": [
+        "가",
+        "니",
+        "다",
+        "몸",
+        "미",
+        "벼",
+        "소",
+        "습",
+        "었",
+        "워",
+        "이",
+        "졌",
+        "지"
+      ]
+    },
+    {
+      "page_index": 145,
+      "pointer_indices": [
+        241
+      ],
+      "pointer_start": 241,
+      "pointer_end": 241,
+      "record_count": 1,
+      "syllable_count": 7,
+      "syllables": [
+        "간",
+        "니",
+        "다",
+        "멋",
+        "순",
+        "입",
+        "진"
+      ]
+    },
+    {
+      "page_index": 146,
+      "pointer_indices": [
+        242
+      ],
+      "pointer_start": 242,
+      "pointer_end": 242,
+      "record_count": 1,
+      "syllable_count": 14,
+      "syllables": [
+        "가",
+        "능",
+        "니",
+        "다",
+        "두",
+        "력",
+        "배",
+        "비",
+        "와",
+        "이",
+        "입",
+        "장",
+        "제",
+        "치"
+      ]
+    },
+    {
+      "page_index": 147,
+      "pointer_indices": [
+        243,
+        245
+      ],
+      "pointer_start": 243,
+      "pointer_end": 245,
+      "record_count": 2,
+      "syllable_count": 8,
+      "syllables": [
+        "가",
+        "넘",
+        "니",
+        "다",
+        "습",
+        "어",
+        "졌",
+        "족"
+      ]
+    }
+  ],
+  "oversize_records": [
+    {
+      "pointer_index": 18,
+      "syllable_count": 18,
+      "over_by": 1,
+      "korean_text": "우린 나쁜 놈일지 몰라도 여자는 괴롭히지 않아",
+      "action": "shorten_translation_or_add_split_control"
+    },
+    {
+      "pointer_index": 20,
+      "syllable_count": 19,
+      "over_by": 2,
+      "korean_text": "진로 큰두목이 네놈들을 혼내라고 나를 보냈다",
+      "action": "shorten_translation_or_add_split_control"
+    },
+    {
+      "pointer_index": 26,
+      "syllable_count": 18,
+      "over_by": 1,
+      "korean_text": "정말 질기군! 하지만 헤이시가 널 쓰러뜨린다",
+      "action": "shorten_translation_or_add_split_control"
+    },
+    {
+      "pointer_index": 38,
+      "syllable_count": 18,
+      "over_by": 1,
+      "korean_text": "넌 누구 밑에서 일하지? 토라를 섬긴다고 들었다",
+      "action": "shorten_translation_or_add_split_control"
+    },
+    {
+      "pointer_index": 45,
+      "syllable_count": 18,
+      "over_by": 1,
+      "korean_text": "나는 토라의 성스러운 수호자다! 천벌을 받아라",
+      "action": "shorten_translation_or_add_split_control"
+    },
+    {
+      "pointer_index": 67,
+      "syllable_count": 18,
+      "over_by": 1,
+      "korean_text": "그래, 우리가 소녀를 잡았다. 위대한 분을 위해서다",
+      "action": "shorten_translation_or_add_split_control"
+    },
+    {
+      "pointer_index": 87,
+      "syllable_count": 18,
+      "over_by": 1,
+      "korean_text": "토라, 이 멍청이들이 여기까지 왔다니 믿을 수 없군",
+      "action": "shorten_translation_or_add_split_control"
+    }
+  ]
+}

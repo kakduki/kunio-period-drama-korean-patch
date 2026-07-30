@@ -14,6 +14,7 @@ from rom_utils import REPO_ROOT
 
 KEY_PYTHON = [
     "scripts/analyze_reference_ips.py",
+    "scripts/analyze_full_script_font_capacity.py",
     "scripts/analyze_dialogue_renderer.py",
     "scripts/analyze_english_font_slots.py",
     "scripts/analyze_main_menu_context.py",
@@ -49,6 +50,7 @@ KEY_PYTHON = [
     "scripts/build_pointer_dialogue_batch_candidate.py",
     "scripts/build_pointer_dialogue_8x16_candidate.py",
     "scripts/analyze_pointer_dialogue_korean_draft.py",
+    "scripts/plan_pointer_font_pages.py",
     "scripts/update_pointer_dialogue_8x16_runtime_report.py",
     "scripts/build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/build_opening_dialogue_bank8_persistent_page_proof.py",
@@ -58,6 +60,8 @@ KEY_PYTHON = [
     "scripts/build_v041_conflict_safe_candidate.py",
     "scripts/build_v042_font_expanded_candidate.py",
     "scripts/build_v043_from_broad_scan_proof.py",
+    "scripts/build_ptr181_bank8_page_probe.py",
+    "scripts/build_ptr181_dynamic_page_probe.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -138,6 +142,7 @@ KEY_PYTHON = [
     "scripts/test_compile_korean_scene_batch.py",
     "scripts/test_build_pointer_dialogue_catalog.py",
     "scripts/test_analyze_reference_ips.py",
+    "scripts/test_analyze_full_script_font_capacity.py",
     "scripts/test_extract_english_reference_script.py",
     "scripts/test_auto_input_evidence_report.py",
     "scripts/test_auto_input_review_crops.py",
@@ -155,6 +160,7 @@ KEY_PYTHON = [
     "scripts/test_build_pointer_dialogue_batch_candidate.py",
     "scripts/test_build_pointer_dialogue_8x16_candidate.py",
     "scripts/test_analyze_pointer_dialogue_korean_draft.py",
+    "scripts/test_plan_pointer_font_pages.py",
     "scripts/test_build_opening_dialogue_182_184_16x16.py",
     "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
@@ -200,6 +206,8 @@ KEY_PYTHON = [
     "scripts/test_v043_proof_gate.py",
     "scripts/test_v042_manual_proof_packet.py",
     "scripts/test_v043_proof_status.py",
+    "scripts/test_build_ptr181_bank8_page_probe.py",
+    "scripts/test_build_ptr181_dynamic_page_probe.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
 ]
@@ -267,6 +275,8 @@ LUA_SCRIPTS = [
     "lua/kunio_pointer_dialogue_batch_probe.lua",
     "lua/kunio_pointer_dialogue_route_probe.lua",
     "lua/kunio_pointer_dialogue_batch_000_002_8x16_probe.lua",
+    "lua/kunio_ptr181_renderer_probe.lua",
+    "lua/kunio_stage_progression_probe.lua",
 ]
 
 REGEN_COMMANDS = [

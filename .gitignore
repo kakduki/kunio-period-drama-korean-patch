@@ -13,6 +13,8 @@ output/opening_ptr_182_183_16x16_readability/
 output/opening_ptr_182_184_16x16_readability/
 output/opening_dialogue_bank8_page_switch_proof/
 output/opening_dialogue_bank8_persistent_page_proof/
+output/ptr181_bank8_page_probe/
+output/ptr181_dynamic_page_probe/
 output/font_comparison_handcrafted/
 !output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips
@@ -159,3 +161,15 @@ rom_analysis/pointer_dialogue_batch_002_003_route_probe/*.gd
 rom_analysis/disasm_6502_output.txt
 __pycache__/
 .DS_Store
+rom_analysis/stage_progression_probe_base/
+rom_analysis/stage_progression_probe_v042_candidate/
+rom_analysis/stage_probe_view/
+rom_analysis/stage_candidate_view/
+rom_analysis/stage_mapper_probe_base/
+rom_analysis/stage_mapper_probe_v042_candidate/
+rom_analysis/ptr181_renderer_probe_base/
+rom_analysis/ptr181_renderer_probe_v042_candidate/
+rom_analysis/ptr181_renderer_probe_view/
+rom_analysis/ptr181_bank8_page_probe_capture/
+rom_analysis/stage_progression_probe_ptr181_bank8_candidate/
+rom_analysis/ptr181_dynamic_page_probe_capture/
