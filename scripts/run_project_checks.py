@@ -51,6 +51,7 @@ KEY_PYTHON = [
     "scripts/build_pointer_dialogue_8x16_candidate.py",
     "scripts/analyze_pointer_dialogue_korean_draft.py",
     "scripts/plan_pointer_font_pages.py",
+    "scripts/pointer_page_loader.py",
     "scripts/update_pointer_dialogue_8x16_runtime_report.py",
     "scripts/build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/build_opening_dialogue_bank8_persistent_page_proof.py",
@@ -66,6 +67,7 @@ KEY_PYTHON = [
     "scripts/build_ptr181_expanded_chr_probe.py",
     "scripts/build_ptr181_expanded_code_pool_probe.py",
     "scripts/build_ptr181_korean_8x16_candidate.py",
+    "scripts/build_ptr181_pointer_page_candidate.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -165,6 +167,7 @@ KEY_PYTHON = [
     "scripts/test_build_pointer_dialogue_8x16_candidate.py",
     "scripts/test_analyze_pointer_dialogue_korean_draft.py",
     "scripts/test_plan_pointer_font_pages.py",
+    "scripts/test_pointer_page_loader.py",
     "scripts/test_build_opening_dialogue_182_184_16x16.py",
     "scripts/test_build_opening_dialogue_bank8_page_switch_proof.py",
     "scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py",
@@ -217,6 +220,7 @@ KEY_PYTHON = [
     "scripts/test_build_ptr181_expanded_chr_probe.py",
     "scripts/test_build_ptr181_expanded_code_pool_probe.py",
     "scripts/test_build_ptr181_korean_8x16_candidate.py",
+    "scripts/test_build_ptr181_pointer_page_candidate.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
 ]
@@ -286,6 +290,7 @@ LUA_SCRIPTS = [
     "lua/kunio_pointer_dialogue_batch_000_002_8x16_probe.lua",
     "lua/kunio_ptr181_renderer_probe.lua",
     "lua/kunio_ptr181_pointer_loader_probe.lua",
+    "lua/kunio_ptr181_page_restore_probe.lua",
     "lua/kunio_stage_progression_probe.lua",
 ]
 

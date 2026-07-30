@@ -1,0 +1,4 @@
+frame	reason	screenshot	target_seen	trace_count
+0	lua_start	true	true	true	B188
+392	capture	true	true	90
+392	lua_done	true	true	90
