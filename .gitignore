@@ -16,6 +16,9 @@ output/opening_dialogue_bank8_persistent_page_proof/
 output/ptr181_bank8_page_probe/
 output/ptr181_dynamic_page_probe/
 output/ptr181_conditional_mapper_probe/
+output/ptr181_expanded_chr_probe/
+output/ptr181_expanded_code_pool_probe/
+output/ptr181_korean_8x16_candidate/
 output/font_comparison_handcrafted/
 !output/kunio_period_drama_korean_prg_plan_v0.4_equal_length_static.ips
 !output/kunio_period_drama_korean_prg_plan_v0.4.1_conflict_safe.ips
@@ -177,3 +180,8 @@ rom_analysis/ptr181_dynamic_page_probe_capture/
 rom_analysis/ptr181_conditional_mapper_probe_capture/
 rom_analysis/ptr181_mapper_wrapper_probe_base/
 rom_analysis/stage_progression_probe_ptr181_conditional_mapper/
+rom_analysis/ptr181_expanded_chr_probe_capture/
+rom_analysis/stage_progression_probe_ptr181_expanded_chr/
+rom_analysis/ptr181_expanded_code_pool_probe_capture/
+rom_analysis/ptr181_korean_8x16_candidate_capture/
+rom_analysis/stage_progression_probe_ptr181_korean_8x16/

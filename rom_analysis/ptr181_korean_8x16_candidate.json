@@ -1,0 +1,20 @@
+{
+  "status": "CANDIDATE_BUILT_PENDING_8X16_READABILITY_PROOF",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "7c74a89d475492f42e17fe14fd8a3242",
+  "pointer_index": 181,
+  "korean_text": "츠우: 형님 / 기다려!",
+  "translation_basis": "English pointer structure plus Japanese-context review required",
+  "font_profile": "one_source_code_per_8x16_hangul_syllable",
+  "glyph_codes": {
+    "츠": "0x81",
+    "우": "0x82",
+    "형": "0x83",
+    "님": "0x84",
+    "기": "0x85",
+    "다": "0x86",
+    "려": "0x87"
+  },
+  "ips_path": "output\\ptr181_korean_8x16_candidate\\kunio_period_drama_korean_ptr181_semantic_8x16.ips",
+  "rom_path": "output\\ptr181_korean_8x16_candidate\\kunio_period_drama_korean_ptr181_semantic_8x16.nes"
+}

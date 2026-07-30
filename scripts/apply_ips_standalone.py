@@ -58,7 +58,7 @@ def apply_ips(base: bytes, ips_path: Path) -> bytes:
             pos += 1
             end = offset + rle_size
             if end > len(result):
-                raise ValueError(f"IPS RLE record exceeds ROM size: {ips_path}")
+                result.extend(b"\x00" * (end - len(result)))
             result[offset:end] = bytes([value]) * rle_size
             continue
 
@@ -67,7 +67,7 @@ def apply_ips(base: bytes, ips_path: Path) -> bytes:
         if end_pos > len(patch):
             raise ValueError(f"Truncated IPS data record: {ips_path}")
         if end > len(result):
-            raise ValueError(f"IPS data record exceeds ROM size: {ips_path}")
+            result.extend(b"\x00" * (end - len(result)))
         result[offset:end] = patch[pos:end_pos]
         pos = end_pos
 

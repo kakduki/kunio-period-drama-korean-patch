@@ -59,12 +59,14 @@ def make_records(original: bytes, patched: bytes) -> list[tuple[int, bytes]]:
     records: list[tuple[int, bytes]] = []
     idx = 0
     while idx < len(patched):
-        if patched[idx] == original[idx]:
+        if idx < len(original) and patched[idx] == original[idx]:
             idx += 1
             continue
         start = idx
         data = bytearray()
-        while idx < len(patched) and patched[idx] != original[idx]:
+        while idx < len(patched) and (
+            idx >= len(original) or patched[idx] != original[idx]
+        ):
             data.append(patched[idx])
             idx += 1
         records.append((start, bytes(data)))

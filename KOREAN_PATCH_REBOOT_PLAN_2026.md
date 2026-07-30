@@ -93,6 +93,14 @@ sequential plan produces 148 pages. That is an upper-bound implementation plan,
 not a proposal to store 148 duplicate fonts: the next optimizer must merge
 compatible scene pages and switch only at verified record/scene boundaries.
 
+The subsequent appended-CHR tests changed the implementation choice. A
+semantic PTR-181 candidate using one source code per 8x16 Korean syllable
+rendered `츠우: 형님 / 기다려!`, preserved the field, restored the original
+page, and completed the 7200-frame route. The optimized full draft therefore
+requires 49 pages at 34 syllables per page, inside the 64-page MMC3 extension
+budget. A wider 16x16 boundary-code experiment rendered its text but destroyed
+the field background, so it remains rejected for the full dialogue pipeline.
+
 ## Work Order
 
 ### Phase 1: Lock ownership and route checkpoints
@@ -178,8 +186,8 @@ The existing soft-gate artifacts remain the machine-readable output contract:
 
 ## Immediate Next Task
 
-Generalize the PTR-181 conditional mapper into a scene-page lookup table, then
-compile the next pointer batch with a distinct page identifier. Every added
-page must pass its target capture and the same bounded restore/regression
-route. The boss route remains a separate bounded investigation until an
-enemy-clear or boss-spawn state is confirmed.
+Generalize the PTR-181 conditional mapper into a 49-entry 8x16 scene-page
+lookup table, then compile the next pointer batch with distinct page
+identifiers. Every added page must pass its target capture and the same bounded
+restore/regression route. The boss route remains a separate bounded
+investigation until an enemy-clear or boss-spawn state is confirmed.
