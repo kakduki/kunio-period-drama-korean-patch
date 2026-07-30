@@ -11,6 +11,13 @@
   "record_loader_gap": 262,
   "font_pages": 49,
   "chr_banks": 29,
+  "layout_audit": {
+    "status": "PASS",
+    "maximum_segment_cells": 24,
+    "hard_cell_limit": 24,
+    "warning_count": 2,
+    "failure_count": 0
+  },
   "targets": [
     {
       "kind": "full_dialogue_records",

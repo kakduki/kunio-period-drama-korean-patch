@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import hashlib
+
 from build_full_pointer_korean_candidate import (
     PAGE_COUNT,
     POINTER_COUNT,
@@ -41,6 +43,7 @@ def main() -> int:
     patched, targets = apply_full_candidate(base, config, default_tall_font(None))
     assert patched[5] == 29
     assert len(patched) == len(base) + 13 * 0x2000
+    assert hashlib.md5(patched).hexdigest() == "2f706986e429a1acba9238d551f640d0"
     table = patched[PAGE_TABLE_ROM_OFFSET:PAGE_TABLE_ROM_OFFSET + POINTER_COUNT]
     assert sum(value != 0 for value in table) == 244
     assert max(table) == PAGE_COUNT
