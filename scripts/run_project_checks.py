@@ -62,6 +62,7 @@ KEY_PYTHON = [
     "scripts/build_v043_from_broad_scan_proof.py",
     "scripts/build_ptr181_bank8_page_probe.py",
     "scripts/build_ptr181_dynamic_page_probe.py",
+    "scripts/build_ptr181_conditional_mapper_probe.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -208,6 +209,7 @@ KEY_PYTHON = [
     "scripts/test_v043_proof_status.py",
     "scripts/test_build_ptr181_bank8_page_probe.py",
     "scripts/test_build_ptr181_dynamic_page_probe.py",
+    "scripts/test_build_ptr181_conditional_mapper_probe.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
 ]

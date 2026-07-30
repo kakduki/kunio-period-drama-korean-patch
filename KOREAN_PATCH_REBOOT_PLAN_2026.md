@@ -69,6 +69,13 @@ screen, but its global `R1=46` setup eventually produces a black later screen.
 An entry-only page switch also corrupts the target capture. Both are retained
 as failure evidence; neither is a release candidate.
 
+A third conditional-mapper candidate resolves that failure for PTR-181. The
+renderer sets a scene flag after matching `$B188`; the fixed-bank mapper
+wrapper selects the proven `3C/46` page only while screen state `$51=13`, then
+clears the flag and returns to `3C/3E`. It renders Korean at frame 392, restores
+the original page by frame 622, and completes the 7200-frame route with normal
+combat and late-menu screens.
+
 `rom_analysis/full_script_font_capacity.md` quantifies the English-to-Korean
 gap. The 144 current translation rows contain 220 unique Hangul syllables.
 The runtime-proven paired renderer holds 17 syllables per page, requiring at
@@ -171,8 +178,8 @@ The existing soft-gate artifacts remain the machine-readable output contract:
 
 ## Immediate Next Task
 
-The next implementation task is a fixed-bank mapper/page lifecycle helper for
-the already-proven PTR-181 target. Do not add another dialogue record until
-the same target passes both its Korean screen and the 7200-frame route. The
-boss route remains a separate bounded investigation until an enemy-clear or
-boss-spawn state is confirmed.
+Generalize the PTR-181 conditional mapper into a scene-page lookup table, then
+compile the next pointer batch with a distinct page identifier. Every added
+page must pass its target capture and the same bounded restore/regression
+route. The boss route remains a separate bounded investigation until an
+enemy-clear or boss-spawn state is confirmed.

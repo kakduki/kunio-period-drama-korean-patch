@@ -12,9 +12,11 @@ coverage probe, not release translation.
 | --- | --- | --- | --- |
 | `output/ptr181_bank8_page_probe/` | Korean glyphs visible at frame 392; field preserved | 7200 frames finish, but later capture is black; 48 unique screens | FAIL |
 | `output/ptr181_dynamic_page_probe/` | target screen is corrupted when page switches at renderer entry | not promoted | FAIL |
+| `output/ptr181_conditional_mapper_probe/` | Korean glyphs visible at frame 392 with field preserved | page restores at frame 622; 7200-frame route finishes normally | PASS |
 
 The static candidate MD5 is `fdcfcf4504b05185fe616518a8cc89cd`.
 The dynamic candidate MD5 is `a0889693feb741c6375eb22bc288d7c7`.
+The conditional candidate MD5 is `b5f326deabbbdf791d775e9e9b5ad7c0`.
 
 ## Static Result
 
@@ -45,6 +47,14 @@ not a drop-in solution. A safe implementation needs a helper that executes
 from a fixed PRG location and owns the page for every relevant tile fetch,
 then restores the original mapping at a proven boundary.
 
+## Conditional Result
+
+The fixed-bank mapper wrapper now checks a renderer-owned scene flag and
+screen state `$51`. It selects the already-proven `R0/R1=3C/46` combination
+only for PTR-181 and clears the flag on the normal path. The bounded route
+records `3C/46` at frame 392, restoration to `3C/3E` at frame 622, normal
+combat, a visible late menu at frame 7073, and finite completion at frame 7200.
+
 ## Decision
 
 | gate | result |
@@ -52,8 +62,9 @@ then restores the original mapping at a proven boundary.
 | PTR-181 pointer ownership | PASS |
 | Same renderer confirmed | PASS |
 | One-screen Korean glyph proof | PASS |
-| Whole-route font/page lifecycle | FAIL |
+| Whole-route font/page lifecycle | PASS for PTR-181 |
 | Release candidate | NO |
 
-The next engineering task is mapper/page lifecycle, followed by a clean rerun
-of this same PTR-181 target before any additional dialogue records are added.
+The next engineering task is to generalize the proven flag/page selection into
+a scene-page table and compile additional pointer records without sharing one
+global Korean font page.

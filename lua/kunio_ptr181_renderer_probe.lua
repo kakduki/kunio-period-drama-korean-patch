@@ -14,6 +14,7 @@ local parser_path = OUT_DIR .. "/parser_exec.tsv"
 local ppu_path = OUT_DIR .. "/ppu_writes.tsv"
 local nametable_path = OUT_DIR .. "/nametable_rows.tsv"
 local mapper_path = OUT_DIR .. "/mapper_state.tsv"
+local mapper_wrapper_path = OUT_DIR .. "/mapper_wrapper_exec.tsv"
 local trace_count = 0
 local target_seen = false
 local captured = false
@@ -137,6 +138,18 @@ local function on_mapper_data(addr, size, value)
     if mapper_select ~= nil then mapper_registers[mapper_select] = value or 0 end
 end
 
+local function on_mapper_wrapper()
+    append(mapper_wrapper_path, table.concat({
+        emu.framecount(), hex4(text_pointer()), hex4(stream_pointer()),
+        hex2(read_byte(0x00)), hex2(read_byte(0x10)), hex2(read_byte(0x20)),
+        hex2(read_byte(0x51)), hex2(read_byte(0x69)), hex2(read_byte(0x6A)),
+        hex2(read_byte(0x708)), hex2(read_byte(0x710)), hex2(read_byte(0x71E)),
+        hex2(read_byte(0x720)), hex2(read_byte(0x721)), hex2(read_byte(0x722)),
+        hex2(read_byte(0x723)), hex2(read_byte(0x735)), hex2(read_byte(0x7A8)),
+        hex2(read_byte(0x7A9)),
+    }, "\t"))
+end
+
 local function on_ppu_control(addr, size, value)
     ppu_control = value or 0
 end
@@ -235,6 +248,7 @@ append(parser_path, "frame\tlabel\taddress\tvalue\tpc\ta\tx\ty\ttext_pointer\tst
 append(ppu_path, "frame\tppu_address\tvalue\tpc\ttext_pointer\ty\tmapper_control\tmapper_select\tppu_control")
 append(nametable_path, "frame\trow\tvalues")
 append(mapper_path, "frame\tmapper_control\tmapper_select\tppu_control\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7")
+append(mapper_wrapper_path, "frame\ttext_pointer\tstream_pointer\tram00\tram10\tram20\tram51\tram69\tram6A\tram708\tram710\tram71E\tram720\tram721\tram722\tram723\tram735\tram7A8\tram7A9")
 
 local parser_registered = register_exec(0x915A, on_parser("parser"))
 local prep_registered = register_exec(0x955F, on_parser("emit_prep"))
@@ -248,8 +262,9 @@ local ppudata_registered = register_write(0x2007, 1, on_ppudata_write)
 local mapper_select_registered = register_write(0x8000, 1, on_mapper_select)
 local mapper_data_registered = register_write(0x8001, 1, on_mapper_data)
 local ppu_control_registered = register_write(0x2000, 1, on_ppu_control)
+local mapper_wrapper_registered = register_exec(0xEE3F, on_mapper_wrapper)
 
-append(summary_path, table.concat({0, "lua_start", tostring(parser_registered and prep_registered and dispatch_registered), tostring(source_registered), tostring(ppuaddr_registered and ppudata_registered and mapper_select_registered and mapper_data_registered and ppu_control_registered), hex4(TARGET_POINTER)}, "\t"))
+append(summary_path, table.concat({0, "lua_start", tostring(parser_registered and prep_registered and dispatch_registered), tostring(source_registered), tostring(ppuaddr_registered and ppudata_registered and mapper_select_registered and mapper_data_registered and ppu_control_registered and mapper_wrapper_registered), hex4(TARGET_POINTER)}, "\t"))
 
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
