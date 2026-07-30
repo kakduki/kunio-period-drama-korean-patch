@@ -6,17 +6,17 @@
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 83,
+    "reviewed_count": 128,
     "status_counts": {
-      "english_reference_reviewed": 83,
-      "english_semantic_draft": 161,
+      "english_reference_reviewed": 128,
+      "english_semantic_draft": 116,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 158,
+      "context_confirmation_required": 113,
       "dynamic_control_context": 27,
-      "semantic_draft_not_reviewed": 161
+      "semantic_draft_not_reviewed": 116
     },
     "duplicate_display_groups": 7
   },
@@ -1013,17 +1013,14 @@
     },
     {
       "pointer_index": 81,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M THE BEEG BOSS I M BAD AND I M STRONG",
-      "korean_draft": "내가 큰두목이다. 난 나쁘고 강하다",
-      "compiled_display_text": "내가 큰두목이다 난 나쁘고 강하다",
+      "korean_draft": "내가 큰두목이다. 난 악당이고 강하지",
+      "compiled_display_text": "내가 큰두목이다 난 악당이고 강하지",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 82,
@@ -1041,31 +1038,25 @@
     },
     {
       "pointer_index": 83,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BROTHER",
       "korean_draft": "형제여",
       "compiled_display_text": "형제여",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 84,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEH HOW DO YOU LIKE MY INGENIOUS MASTER PLAN",
       "korean_draft": "허허, 내 기막힌 계획은 어떤가?",
       "compiled_display_text": "허허 내 기막힌 계획은 어떤가",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 85,
@@ -1084,73 +1075,58 @@
     },
     {
       "pointer_index": 86,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WATCH YOUR BACKS HEEHEE",
       "korean_draft": "뒤를 조심해라. 히히",
       "compiled_display_text": "뒤를 조심해라 히히",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 87,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TORA I CAN T BELIEVE YOU IDIOTS GOT THIS FAR",
       "korean_draft": "토라, 이 멍청이들이 여기까지 왔다니 믿을 수 없군",
       "compiled_display_text": "토라 이 멍청이들이 여기까지 왔다니 믿을 수 없군",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 88,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI YOU TWO ARE BECOMING A NUISANCE",
       "korean_draft": "아사지, 너희 둘은 골칫거리가 되어 가는군",
       "compiled_display_text": "아사지 너희 둘은 골칫거리가 되어 가는군",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 89,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI WHAT DO YOU WANT DONE WITH THEM",
       "korean_draft": "아사지, 저들을 어떻게 처리할까?",
       "compiled_display_text": "아사지 저들을 어떻게 처리할까",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 90,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TORA I LL TAKE CARE OF THEM PERSONALLY",
       "korean_draft": "토라, 내가 직접 처리하겠다",
       "compiled_display_text": "토라 내가 직접 처리하겠다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 91,
@@ -1165,73 +1141,58 @@
     },
     {
       "pointer_index": 92,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YA GOT BALLS",
       "korean_draft": "배짱은 있군",
       "compiled_display_text": "배짱은 있군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 93,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU RE STILL ALIVE",
       "korean_draft": "아직 살아 있었군",
       "compiled_display_text": "아직 살아 있었군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 94,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI YOU SORRY PIECE OF SHIT",
       "korean_draft": "아사지, 이 쓸모없는 자식",
       "compiled_display_text": "아사지 이 쓸모없는 자식",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 95,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SO WE MEET AGAIN YOU BEAT TORA WOW",
       "korean_draft": "그래, 또 만났군. 토라를 이겼다고? 대단하군",
       "compiled_display_text": "그래 또 만났군 토라를 이겼다고 대단하군",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 96,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HERE TAKE THIS CHARM",
       "korean_draft": "여기 있다, 이 부적을 받아라",
       "compiled_display_text": "여기 있다 이 부적을 받아라",
       "basis": "english_reference",
-      "notes": "아이템 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 97,
@@ -1246,87 +1207,69 @@
     },
     {
       "pointer_index": 98,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "MAYBE YOU CAN BEAT HIM NOW",
       "korean_draft": "이제라면 그를 이길 수 있을지도 모른다",
       "compiled_display_text": "이제라면 그를 이길 수 있을지도 모른다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 99,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FIGHT ME IF YOU GOT THE BALLS ASAJI",
       "korean_draft": "배짱이 있다면 나와 싸워라, 아사지",
       "compiled_display_text": "배짱이 있다면 나와 싸워라 아사지",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 100,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE LET ME JOIN YOU",
       "korean_draft": "나도 끼워 줘",
       "compiled_display_text": "나도 끼워 줘",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 101,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BEEG BOSS GAVE ME THIS",
       "korean_draft": "큰두목이 이것을 주셨다",
       "compiled_display_text": "큰두목이 이것을 주셨다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 102,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OH NO BEEG BOSS",
       "korean_draft": "안 돼! 큰두목님",
       "compiled_display_text": "안 돼 큰두목님",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 103,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WE LL SETTLE THIS LATER",
       "korean_draft": "이 일은 나중에 결판내자",
       "compiled_display_text": "이 일은 나중에 결판내자",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 104,
@@ -1384,59 +1327,47 @@
     },
     {
       "pointer_index": 108,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEH STUPID BASTARDS",
       "korean_draft": "허허, 이 멍청한 자식들",
       "compiled_display_text": "허허 이 멍청한 자식들",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 109,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ISN T THE MUSIC IN THIS VIDEO GAME GREAT",
       "korean_draft": "이 비디오 게임의 음악은 정말 멋지지 않나?",
       "compiled_display_text": "이 비디오 게임의 음악은 정말 멋지지 않나",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 110,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THEY RE BACK TO HAVE THEIR ASSES KICKED AGAIN",
       "korean_draft": "또 얻어맞으러 돌아왔군",
       "compiled_display_text": "또 얻어맞으러 돌아왔군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 111,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HUH",
       "korean_draft": "어?",
       "compiled_display_text": "어",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 112,
@@ -1454,311 +1385,245 @@
     },
     {
       "pointer_index": 113,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "NOW I M REALLY PISSED",
       "korean_draft": "이제 정말 화났다",
       "compiled_display_text": "이제 정말 화났다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 114,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "AIYEE",
       "korean_draft": "꺄악!",
       "compiled_display_text": "꺄악",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 115,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DUM DEE DUM",
       "korean_draft": "둠디둠",
       "compiled_display_text": "둠디둠",
       "basis": "english_reference",
-      "notes": "의성어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 116,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEY TWERP",
       "korean_draft": "이봐, 풋내기!",
       "compiled_display_text": "이봐 풋내기",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 117,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ONE MO TIME",
       "korean_draft": "한 번만 더!",
       "compiled_display_text": "한 번만 더",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 118,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ROCK N ROLL",
       "korean_draft": "락 앤 롤!",
       "compiled_display_text": "락 앤 롤",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 119,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "JEEZ THIS SUCKS",
       "korean_draft": "이런, 정말 별로군",
       "compiled_display_text": "이런 정말 별로군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 120,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WHOOPS",
       "korean_draft": "이런!",
       "compiled_display_text": "이런",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 121,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WHAT THE",
       "korean_draft": "이게 대체 뭐야?",
       "compiled_display_text": "이게 대체 뭐야",
       "basis": "english_reference",
-      "notes": "특수 토큰 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 122,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "LEMME HIT EM",
       "korean_draft": "내가 녀석들을 때려 주지",
       "compiled_display_text": "내가 녀석들을 때려 주지",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 123,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M GONNA KICK YOUR ASS",
       "korean_draft": "네놈을 박살내 주마",
       "compiled_display_text": "네놈을 박살내 주마",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 124,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YA WIMP",
       "korean_draft": "이봐, 겁쟁이!",
       "compiled_display_text": "이봐 겁쟁이",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 125,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "EAT THIS",
       "korean_draft": "이거나 먹어라!",
       "compiled_display_text": "이거나 먹어라",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 126,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I LL REMEMBER YOU",
       "korean_draft": "널 기억해 두겠다",
       "compiled_display_text": "널 기억해 두겠다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 127,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "EEE",
       "korean_draft": "으에!",
       "compiled_display_text": "으에",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 128,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ARGH",
       "korean_draft": "으악!",
       "compiled_display_text": "으악",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 129,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DICKWEED",
       "korean_draft": "이 자식!",
       "compiled_display_text": "이 자식",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 130,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WAH",
       "korean_draft": "으아!",
       "compiled_display_text": "으아",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 131,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GWA",
       "korean_draft": "꺄!",
       "compiled_display_text": "꺄",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 132,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "AIYEE",
       "korean_draft": "꺄악!",
       "compiled_display_text": "꺄악",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 133,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ARGH",
       "korean_draft": "으악!",
       "compiled_display_text": "으악",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 134,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "AI YAI YAI",
       "korean_draft": "아야야야!",
       "compiled_display_text": "아야야야",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 135,

@@ -80,60 +80,60 @@
 78,english_reference_reviewed,BE CAREFUL TORA HIRED SOME GOON CALLED ASAJI,조심해라. 토라가 아사지라는 깡패를 고용했다,조심해라 토라가 아사지라는 깡패를 고용했다,english_reference,영어 참조 의미 대조 완료,,
 79,english_reference_reviewed,BEEG BOSS SAYS THANKS,큰두목이 고맙다고 전하더군,큰두목이 고맙다고 전하더군,english_reference,영어 참조 의미 대조 완료,,
 80,english_reference_reviewed,WE MUST FIND OUT WHO ASAJI REALLY WORKS FOR,아사지가 정말 누구를 섬기는지 알아내야 한다,아사지가 정말 누구를 섬기는지 알아내야 한다,english_reference,영어 참조 의미 대조 완료,,
-81,english_semantic_draft,I M THE BEEG BOSS I M BAD AND I M STRONG,내가 큰두목이다. 난 나쁘고 강하다,내가 큰두목이다 난 나쁘고 강하다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+81,english_reference_reviewed,I M THE BEEG BOSS I M BAD AND I M STRONG,내가 큰두목이다. 난 악당이고 강하지,내가 큰두목이다 난 악당이고 강하지,english_reference,영어 참조 의미 대조 완료,,
 82,english_semantic_draft,FORGIVE ME BRO I WAS,"용서해 줘, 형제여. 내가 잘못했다",용서해 줘 형제여 내가 잘못했다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-83,english_semantic_draft,BROTHER,형제여,형제여,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-84,english_semantic_draft,HEH HOW DO YOU LIKE MY INGENIOUS MASTER PLAN,"허허, 내 기막힌 계획은 어떤가?",허허 내 기막힌 계획은 어떤가,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+83,english_reference_reviewed,BROTHER,형제여,형제여,english_reference,영어 참조 의미 대조 완료,,
+84,english_reference_reviewed,HEH HOW DO YOU LIKE MY INGENIOUS MASTER PLAN,"허허, 내 기막힌 계획은 어떤가?",허허 내 기막힌 계획은 어떤가,english_reference,영어 참조 의미 대조 완료,,
 85,english_semantic_draft,ALL WE NEED TO DO IS ELIMINATE,해야 할 일은 저자를 없애는 것뿐이다,해야 할 일은 저자를 없애는 것뿐이다,english_reference,영어 원문의 대상 토큰 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-86,english_semantic_draft,WATCH YOUR BACKS HEEHEE,뒤를 조심해라. 히히,뒤를 조심해라 히히,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-87,english_semantic_draft,TORA I CAN T BELIEVE YOU IDIOTS GOT THIS FAR,"토라, 이 멍청이들이 여기까지 왔다니 믿을 수 없군",토라 이 멍청이들이 여기까지 왔다니 믿을 수 없군,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-88,english_semantic_draft,ASAJI YOU TWO ARE BECOMING A NUISANCE,"아사지, 너희 둘은 골칫거리가 되어 가는군",아사지 너희 둘은 골칫거리가 되어 가는군,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-89,english_semantic_draft,ASAJI WHAT DO YOU WANT DONE WITH THEM,"아사지, 저들을 어떻게 처리할까?",아사지 저들을 어떻게 처리할까,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-90,english_semantic_draft,TORA I LL TAKE CARE OF THEM PERSONALLY,"토라, 내가 직접 처리하겠다",토라 내가 직접 처리하겠다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+86,english_reference_reviewed,WATCH YOUR BACKS HEEHEE,뒤를 조심해라. 히히,뒤를 조심해라 히히,english_reference,영어 참조 의미 대조 완료,,
+87,english_reference_reviewed,TORA I CAN T BELIEVE YOU IDIOTS GOT THIS FAR,"토라, 이 멍청이들이 여기까지 왔다니 믿을 수 없군",토라 이 멍청이들이 여기까지 왔다니 믿을 수 없군,english_reference,영어 참조 의미 대조 완료,,
+88,english_reference_reviewed,ASAJI YOU TWO ARE BECOMING A NUISANCE,"아사지, 너희 둘은 골칫거리가 되어 가는군",아사지 너희 둘은 골칫거리가 되어 가는군,english_reference,영어 참조 의미 대조 완료,,
+89,english_reference_reviewed,ASAJI WHAT DO YOU WANT DONE WITH THEM,"아사지, 저들을 어떻게 처리할까?",아사지 저들을 어떻게 처리할까,english_reference,영어 참조 의미 대조 완료,,
+90,english_reference_reviewed,TORA I LL TAKE CARE OF THEM PERSONALLY,"토라, 내가 직접 처리하겠다",토라 내가 직접 처리하겠다,english_reference,영어 참조 의미 대조 완료,,
 91,english_reference_reviewed,GAWD YOU GUYS ARE BAD,"이런, 너희 정말 독하군",이런 너희 정말 독하군,english_reference,영어 참조 의미 대조 완료,,
-92,english_semantic_draft,YA GOT BALLS,배짱은 있군,배짱은 있군,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-93,english_semantic_draft,YOU RE STILL ALIVE,아직 살아 있었군,아직 살아 있었군,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-94,english_semantic_draft,ASAJI YOU SORRY PIECE OF SHIT,"아사지, 이 쓸모없는 자식",아사지 이 쓸모없는 자식,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-95,english_semantic_draft,SO WE MEET AGAIN YOU BEAT TORA WOW,"그래, 또 만났군. 토라를 이겼다고? 대단하군",그래 또 만났군 토라를 이겼다고 대단하군,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-96,english_semantic_draft,HERE TAKE THIS CHARM,"여기 있다, 이 부적을 받아라",여기 있다 이 부적을 받아라,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+92,english_reference_reviewed,YA GOT BALLS,배짱은 있군,배짱은 있군,english_reference,영어 참조 의미 대조 완료,,
+93,english_reference_reviewed,YOU RE STILL ALIVE,아직 살아 있었군,아직 살아 있었군,english_reference,영어 참조 의미 대조 완료,,
+94,english_reference_reviewed,ASAJI YOU SORRY PIECE OF SHIT,"아사지, 이 쓸모없는 자식",아사지 이 쓸모없는 자식,english_reference,영어 참조 의미 대조 완료,,
+95,english_reference_reviewed,SO WE MEET AGAIN YOU BEAT TORA WOW,"그래, 또 만났군. 토라를 이겼다고? 대단하군",그래 또 만났군 토라를 이겼다고 대단하군,english_reference,영어 참조 의미 대조 완료,,
+96,english_reference_reviewed,HERE TAKE THIS CHARM,"여기 있다, 이 부적을 받아라",여기 있다 이 부적을 받아라,english_reference,영어 참조 의미 대조 완료,,
 97,english_reference_reviewed,ARE YOU SHITTING ME,지금 장난하냐?,지금 장난하냐,english_reference,영어 참조 의미 대조 완료,,
-98,english_semantic_draft,MAYBE YOU CAN BEAT HIM NOW,이제라면 그를 이길 수 있을지도 모른다,이제라면 그를 이길 수 있을지도 모른다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-99,english_semantic_draft,FIGHT ME IF YOU GOT THE BALLS ASAJI,"배짱이 있다면 나와 싸워라, 아사지",배짱이 있다면 나와 싸워라 아사지,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-100,english_semantic_draft,PLEASE LET ME JOIN YOU,나도 끼워 줘,나도 끼워 줘,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-101,english_semantic_draft,BEEG BOSS GAVE ME THIS,큰두목이 이것을 주셨다,큰두목이 이것을 주셨다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-102,english_semantic_draft,OH NO BEEG BOSS,안 돼! 큰두목님,안 돼 큰두목님,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-103,english_semantic_draft,WE LL SETTLE THIS LATER,이 일은 나중에 결판내자,이 일은 나중에 결판내자,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+98,english_reference_reviewed,MAYBE YOU CAN BEAT HIM NOW,이제라면 그를 이길 수 있을지도 모른다,이제라면 그를 이길 수 있을지도 모른다,english_reference,영어 참조 의미 대조 완료,,
+99,english_reference_reviewed,FIGHT ME IF YOU GOT THE BALLS ASAJI,"배짱이 있다면 나와 싸워라, 아사지",배짱이 있다면 나와 싸워라 아사지,english_reference,영어 참조 의미 대조 완료,,
+100,english_reference_reviewed,PLEASE LET ME JOIN YOU,나도 끼워 줘,나도 끼워 줘,english_reference,영어 참조 의미 대조 완료,,
+101,english_reference_reviewed,BEEG BOSS GAVE ME THIS,큰두목이 이것을 주셨다,큰두목이 이것을 주셨다,english_reference,영어 참조 의미 대조 완료,,
+102,english_reference_reviewed,OH NO BEEG BOSS,안 돼! 큰두목님,안 돼 큰두목님,english_reference,영어 참조 의미 대조 완료,,
+103,english_reference_reviewed,WE LL SETTLE THIS LATER,이 일은 나중에 결판내자,이 일은 나중에 결판내자,english_reference,영어 참조 의미 대조 완료,,
 104,english_semantic_draft,ASAJI WE RE GONNA KICK YOUR ASS,"아사지, 너희를 박살내 주마",아사지 너희를 박살내 주마,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 105,english_semantic_draft,BUT FIRST LET ME CLUE YOU IN,하지만 먼저 너희에게 진실을 알려 주지,하지만 먼저 너희에게 진실을 알려 주지,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 106,english_reference_reviewed,YOU WERE JUST A PAWN,너희는 그저 꼭두각시였어,너희는 그저 꼭두각시였어,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 107,english_reference_reviewed,ASAJI SO PRAY WHILE YOU CAN,"아사지, 죽기 전에 실컷 기도해라",아사지 죽기 전에 실컷 기도해라,english_reference,영어 참조 의미 대조 완료,,
-108,english_semantic_draft,HEH STUPID BASTARDS,"허허, 이 멍청한 자식들",허허 이 멍청한 자식들,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-109,english_semantic_draft,ISN T THE MUSIC IN THIS VIDEO GAME GREAT,이 비디오 게임의 음악은 정말 멋지지 않나?,이 비디오 게임의 음악은 정말 멋지지 않나,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-110,english_semantic_draft,THEY RE BACK TO HAVE THEIR ASSES KICKED AGAIN,또 얻어맞으러 돌아왔군,또 얻어맞으러 돌아왔군,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-111,english_semantic_draft,HUH,어?,어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+108,english_reference_reviewed,HEH STUPID BASTARDS,"허허, 이 멍청한 자식들",허허 이 멍청한 자식들,english_reference,영어 참조 의미 대조 완료,,
+109,english_reference_reviewed,ISN T THE MUSIC IN THIS VIDEO GAME GREAT,이 비디오 게임의 음악은 정말 멋지지 않나?,이 비디오 게임의 음악은 정말 멋지지 않나,english_reference,영어 참조 의미 대조 완료,,
+110,english_reference_reviewed,THEY RE BACK TO HAVE THEIR ASSES KICKED AGAIN,또 얻어맞으러 돌아왔군,또 얻어맞으러 돌아왔군,english_reference,영어 참조 의미 대조 완료,,
+111,english_reference_reviewed,HUH,어?,어,english_reference,영어 참조 의미 대조 완료,,
 112,english_semantic_draft,TAKE THAT WHA,받아라! 뭐라고?,받아라 뭐라고,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-113,english_semantic_draft,NOW I M REALLY PISSED,이제 정말 화났다,이제 정말 화났다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-114,english_semantic_draft,AIYEE,꺄악!,꺄악,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-115,english_semantic_draft,DUM DEE DUM,둠디둠,둠디둠,english_reference,의성어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-116,english_semantic_draft,HEY TWERP,"이봐, 풋내기!",이봐 풋내기,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-117,english_semantic_draft,ONE MO TIME,한 번만 더!,한 번만 더,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-118,english_semantic_draft,ROCK N ROLL,락 앤 롤!,락 앤 롤,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-119,english_semantic_draft,JEEZ THIS SUCKS,"이런, 정말 별로군",이런 정말 별로군,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-120,english_semantic_draft,WHOOPS,이런!,이런,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-121,english_semantic_draft,WHAT THE,이게 대체 뭐야?,이게 대체 뭐야,english_reference,특수 토큰 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-122,english_semantic_draft,LEMME HIT EM,내가 녀석들을 때려 주지,내가 녀석들을 때려 주지,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-123,english_semantic_draft,I M GONNA KICK YOUR ASS,네놈을 박살내 주마,네놈을 박살내 주마,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-124,english_semantic_draft,YA WIMP,"이봐, 겁쟁이!",이봐 겁쟁이,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-125,english_semantic_draft,EAT THIS,이거나 먹어라!,이거나 먹어라,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-126,english_semantic_draft,I LL REMEMBER YOU,널 기억해 두겠다,널 기억해 두겠다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-127,english_semantic_draft,EEE,으에!,으에,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-128,english_semantic_draft,ARGH,으악!,으악,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-129,english_semantic_draft,DICKWEED,이 자식!,이 자식,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-130,english_semantic_draft,WAH,으아!,으아,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-131,english_semantic_draft,GWA,꺄!,꺄,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-132,english_semantic_draft,AIYEE,꺄악!,꺄악,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-133,english_semantic_draft,ARGH,으악!,으악,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-134,english_semantic_draft,AI YAI YAI,아야야야!,아야야야,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+113,english_reference_reviewed,NOW I M REALLY PISSED,이제 정말 화났다,이제 정말 화났다,english_reference,영어 참조 의미 대조 완료,,
+114,english_reference_reviewed,AIYEE,꺄악!,꺄악,english_reference,영어 참조 의미 대조 완료,,
+115,english_reference_reviewed,DUM DEE DUM,둠디둠,둠디둠,english_reference,영어 참조 의미 대조 완료,,
+116,english_reference_reviewed,HEY TWERP,"이봐, 풋내기!",이봐 풋내기,english_reference,영어 참조 의미 대조 완료,,
+117,english_reference_reviewed,ONE MO TIME,한 번만 더!,한 번만 더,english_reference,영어 참조 의미 대조 완료,,
+118,english_reference_reviewed,ROCK N ROLL,락 앤 롤!,락 앤 롤,english_reference,영어 참조 의미 대조 완료,,
+119,english_reference_reviewed,JEEZ THIS SUCKS,"이런, 정말 별로군",이런 정말 별로군,english_reference,영어 참조 의미 대조 완료,,
+120,english_reference_reviewed,WHOOPS,이런!,이런,english_reference,영어 참조 의미 대조 완료,,
+121,english_reference_reviewed,WHAT THE,이게 대체 뭐야?,이게 대체 뭐야,english_reference,영어 참조 의미 대조 완료,,
+122,english_reference_reviewed,LEMME HIT EM,내가 녀석들을 때려 주지,내가 녀석들을 때려 주지,english_reference,영어 참조 의미 대조 완료,,
+123,english_reference_reviewed,I M GONNA KICK YOUR ASS,네놈을 박살내 주마,네놈을 박살내 주마,english_reference,영어 참조 의미 대조 완료,,
+124,english_reference_reviewed,YA WIMP,"이봐, 겁쟁이!",이봐 겁쟁이,english_reference,영어 참조 의미 대조 완료,,
+125,english_reference_reviewed,EAT THIS,이거나 먹어라!,이거나 먹어라,english_reference,영어 참조 의미 대조 완료,,
+126,english_reference_reviewed,I LL REMEMBER YOU,널 기억해 두겠다,널 기억해 두겠다,english_reference,영어 참조 의미 대조 완료,,
+127,english_reference_reviewed,EEE,으에!,으에,english_reference,영어 참조 의미 대조 완료,,
+128,english_reference_reviewed,ARGH,으악!,으악,english_reference,영어 참조 의미 대조 완료,,
+129,english_reference_reviewed,DICKWEED,이 자식!,이 자식,english_reference,영어 참조 의미 대조 완료,,
+130,english_reference_reviewed,WAH,으아!,으아,english_reference,영어 참조 의미 대조 완료,,
+131,english_reference_reviewed,GWA,꺄!,꺄,english_reference,영어 참조 의미 대조 완료,,
+132,english_reference_reviewed,AIYEE,꺄악!,꺄악,english_reference,영어 참조 의미 대조 완료,,
+133,english_reference_reviewed,ARGH,으악!,으악,english_reference,영어 참조 의미 대조 완료,,
+134,english_reference_reviewed,AI YAI YAI,아야야야!,아야야야,english_reference,영어 참조 의미 대조 완료,,
 135,english_semantic_draft,WELCOME,어서 오세요,어서 오세요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 136,english_semantic_draft,WHAT WOULD YOU LIKE,무엇을 원하시나요?,무엇을 원하시나요,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 137,english_semantic_draft,YOUR INVENTORY IS FULL,소지품이 가득 찼습니다,소지품이 가득 찼습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"

@@ -6,9 +6,9 @@
     "page_indices": [
       11,
       16,
+      33,
       41,
-      42,
-      46
+      43
     ],
     "forced_context_samples": 3
   },
@@ -96,7 +96,7 @@
       "image": {
         "field_unique_colors": 14,
         "field_nonblack_pixels": 26575,
-        "bottom_nonblack_pixels": 2382,
+        "bottom_nonblack_pixels": 2383,
         "text_pixels_present": true,
         "field_background_present": true
       },
@@ -115,20 +115,20 @@
       "context_note": "field_background_preserved"
     },
     {
-      "pointer_index": 100,
-      "page_index": 46,
-      "cpu": "A6D1",
+      "pointer_index": 110,
+      "page_index": 33,
+      "cpu": "A788",
       "skip_f0": true,
-      "directory": "rom_analysis/full_pointer_forced_samples/ptr100",
-      "expected_page_state": "0x2F",
-      "actual_page_state": "0x2F",
-      "expected_r1": "0xDC",
-      "actual_r1": "0xDC",
-      "source_address_count": 11,
+      "directory": "rom_analysis/full_pointer_forced_samples/ptr110",
+      "expected_page_state": "0x22",
+      "actual_page_state": "0x22",
+      "expected_r1": "0xC2",
+      "actual_r1": "0xC2",
+      "source_address_count": 16,
       "image": {
         "field_unique_colors": 14,
         "field_nonblack_pixels": 26575,
-        "bottom_nonblack_pixels": 2197,
+        "bottom_nonblack_pixels": 2566,
         "text_pixels_present": true,
         "field_background_present": true
       },
@@ -148,14 +148,14 @@
     },
     {
       "pointer_index": 181,
-      "page_index": 42,
-      "cpu": "AAF4",
+      "page_index": 43,
+      "cpu": "AAF5",
       "skip_f0": false,
       "directory": "rom_analysis/full_pointer_forced_samples/ptr181",
-      "expected_page_state": "0x2B",
-      "actual_page_state": "0x2B",
-      "expected_r1": "0xD4",
-      "actual_r1": "0xD4",
+      "expected_page_state": "0x2C",
+      "actual_page_state": "0x2C",
+      "expected_r1": "0xD6",
+      "actual_r1": "0xD6",
       "source_address_count": 11,
       "image": {
         "field_unique_colors": 14,
