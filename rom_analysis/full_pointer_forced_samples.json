@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "coverage": {
+    "sample_count": 5,
+    "distinct_page_count": 5,
+    "page_indices": [
+      11,
+      16,
+      41,
+      43,
+      46
+    ],
+    "forced_context_samples": 3
+  },
+  "policy": {
+    "purpose": "runtime font-page sampling without full gameplay",
+    "forced_initial_f0_skip": "visual/page proof only; not event-control proof",
+    "release_scope": "representative soft gate, not all-scene visual approval"
+  },
+  "samples": [
+    {
+      "pointer_index": 0,
+      "page_index": 11,
+      "cpu": "9FB4",
+      "skip_f0": false,
+      "directory": "rom_analysis/full_pointer_forced_samples/ptr000",
+      "expected_page_state": "0x0C",
+      "actual_page_state": "0x0C",
+      "expected_r1": "0x96",
+      "actual_r1": "0x96",
+      "source_address_count": 28,
+      "image": {
+        "field_unique_colors": 14,
+        "field_nonblack_pixels": 26581,
+        "bottom_nonblack_pixels": 3056,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "checks": {
+        "lua_done": true,
+        "target_seen": true,
+        "forced_id_written": true,
+        "page_state_matches": true,
+        "mapper_r1_matches": true,
+        "source_advanced": true,
+        "source_reached_terminator": true,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "status": "PASS",
+      "context_note": "field_background_preserved"
+    },
+    {
+      "pointer_index": 25,
+      "page_index": 16,
+      "cpu": "A13E",
+      "skip_f0": true,
+      "directory": "rom_analysis/full_pointer_forced_samples/ptr025",
+      "expected_page_state": "0x11",
+      "actual_page_state": "0x11",
+      "expected_r1": "0xA0",
+      "actual_r1": "0xA0",
+      "source_address_count": 22,
+      "image": {
+        "field_unique_colors": 14,
+        "field_nonblack_pixels": 26581,
+        "bottom_nonblack_pixels": 2917,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "checks": {
+        "lua_done": true,
+        "target_seen": true,
+        "forced_id_written": true,
+        "page_state_matches": true,
+        "mapper_r1_matches": true,
+        "source_advanced": true,
+        "source_reached_terminator": true,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "status": "PASS",
+      "context_note": "field_background_preserved"
+    },
+    {
+      "pointer_index": 50,
+      "page_index": 41,
+      "cpu": "A30B",
+      "skip_f0": true,
+      "directory": "rom_analysis/full_pointer_forced_samples/ptr050",
+      "expected_page_state": "0x2A",
+      "actual_page_state": "0x2A",
+      "expected_r1": "0xD2",
+      "actual_r1": "0xD2",
+      "source_address_count": 13,
+      "image": {
+        "field_unique_colors": 14,
+        "field_nonblack_pixels": 26575,
+        "bottom_nonblack_pixels": 2371,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "checks": {
+        "lua_done": true,
+        "target_seen": true,
+        "forced_id_written": true,
+        "page_state_matches": true,
+        "mapper_r1_matches": true,
+        "source_advanced": true,
+        "source_reached_terminator": true,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "status": "PASS",
+      "context_note": "field_background_preserved"
+    },
+    {
+      "pointer_index": 100,
+      "page_index": 46,
+      "cpu": "A6D0",
+      "skip_f0": true,
+      "directory": "rom_analysis/full_pointer_forced_samples/ptr100",
+      "expected_page_state": "0x2F",
+      "actual_page_state": "0x2F",
+      "expected_r1": "0xDC",
+      "actual_r1": "0xDC",
+      "source_address_count": 11,
+      "image": {
+        "field_unique_colors": 14,
+        "field_nonblack_pixels": 26575,
+        "bottom_nonblack_pixels": 2196,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "checks": {
+        "lua_done": true,
+        "target_seen": true,
+        "forced_id_written": true,
+        "page_state_matches": true,
+        "mapper_r1_matches": true,
+        "source_advanced": true,
+        "source_reached_terminator": true,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "status": "PASS",
+      "context_note": "field_background_preserved"
+    },
+    {
+      "pointer_index": 181,
+      "page_index": 43,
+      "cpu": "AAF4",
+      "skip_f0": false,
+      "directory": "rom_analysis/full_pointer_forced_samples/ptr181",
+      "expected_page_state": "0x2C",
+      "actual_page_state": "0x2C",
+      "expected_r1": "0xD6",
+      "actual_r1": "0xD6",
+      "source_address_count": 11,
+      "image": {
+        "field_unique_colors": 14,
+        "field_nonblack_pixels": 26575,
+        "bottom_nonblack_pixels": 2307,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "checks": {
+        "lua_done": true,
+        "target_seen": true,
+        "forced_id_written": true,
+        "page_state_matches": true,
+        "mapper_r1_matches": true,
+        "source_advanced": true,
+        "source_reached_terminator": true,
+        "text_pixels_present": true,
+        "field_background_present": true
+      },
+      "status": "PASS",
+      "context_note": "field_background_preserved"
+    }
+  ]
+}

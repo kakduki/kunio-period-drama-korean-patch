@@ -51,6 +51,7 @@ KEY_PYTHON = [
     "scripts/build_pointer_dialogue_8x16_candidate.py",
     "scripts/analyze_pointer_dialogue_korean_draft.py",
     "scripts/audit_full_pointer_korean_layout.py",
+    "scripts/analyze_full_pointer_forced_samples.py",
     "scripts/plan_pointer_font_pages.py",
     "scripts/pointer_page_loader.py",
     "scripts/update_pointer_dialogue_8x16_runtime_report.py",
@@ -169,6 +170,7 @@ KEY_PYTHON = [
     "scripts/test_build_pointer_dialogue_8x16_candidate.py",
     "scripts/test_analyze_pointer_dialogue_korean_draft.py",
     "scripts/test_audit_full_pointer_korean_layout.py",
+    "scripts/test_analyze_full_pointer_forced_samples.py",
     "scripts/test_plan_pointer_font_pages.py",
     "scripts/test_pointer_page_loader.py",
     "scripts/test_build_opening_dialogue_182_184_16x16.py",
@@ -424,6 +426,7 @@ def main() -> int:
     run("three-record range-scoped opening Korean 16x16 candidate", ["scripts/test_build_opening_dialogue_182_184_16x16.py"])
     run("multi-record pointer dialogue Korean candidate", ["scripts/test_build_pointer_dialogue_batch_candidate.py"])
     run("pointer dialogue bounded runtime analyzer", ["scripts/test_analyze_pointer_dialogue_batch_probe.py"])
+    run("full pointer forced page samples", ["scripts/test_analyze_full_pointer_forced_samples.py"])
     run("opening dialogue Bank 8 page-switch proof", ["scripts/test_build_opening_dialogue_bank8_page_switch_proof.py"])
     run("opening dialogue Bank 8 persistent page proof", ["scripts/test_build_opening_dialogue_bank8_persistent_page_proof.py"])
     run("Korean tile font serialization", ["scripts/test_korean_tile_font.py"])

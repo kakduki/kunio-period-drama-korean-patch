@@ -3,6 +3,8 @@
 
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/ptr181_renderer_probe"
 local TARGET_POINTER = tonumber(os.getenv("KUNIO_TARGET_POINTER") or "B188", 16)
+local FORCE_POINTER_INDEX = tonumber(os.getenv("KUNIO_FORCE_POINTER_INDEX") or "")
+local FORCE_SKIP_INITIAL_F0 = os.getenv("KUNIO_FORCE_SKIP_INITIAL_F0") == "1"
 local CAPTURE_FRAME = 392
 local MAX_FRAMES = 450
 local TRACE_LIMIT = 5000
@@ -15,6 +17,7 @@ local ppu_path = OUT_DIR .. "/ppu_writes.tsv"
 local nametable_path = OUT_DIR .. "/nametable_rows.tsv"
 local mapper_path = OUT_DIR .. "/mapper_state.tsv"
 local mapper_wrapper_path = OUT_DIR .. "/mapper_wrapper_exec.tsv"
+local force_path = OUT_DIR .. "/forced_pointer.tsv"
 local trace_count = 0
 local target_seen = false
 local captured = false
@@ -25,6 +28,7 @@ local ppu_control = nil
 local mapper_control = nil
 local mapper_select = nil
 local mapper_registers = {}
+local force_count = 0
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -59,6 +63,11 @@ local function read_register(name)
     local ok, value = pcall(function() return memory.getregister(name) end)
     if ok and value ~= nil then return value end
     return 0
+end
+
+local function write_register(name, value)
+    local ok = pcall(function() memory.setregister(name, value) end)
+    return ok
 end
 
 local function text_pointer()
@@ -108,6 +117,27 @@ local function register_write(addr, size, callback)
     return false
 end
 
+local function write_byte(addr, value)
+    local ok = pcall(function() memory.writebyte(addr, value) end)
+    return ok
+end
+
+local function on_dialogue_loader()
+    if FORCE_POINTER_INDEX == nil or emu.framecount() < 320 then return end
+    local object_index = read_register("y")
+    local address = 0x708B + object_index
+    local dialogue_id = FORCE_POINTER_INDEX + 1
+    if write_byte(address, dialogue_id) then
+        force_count = force_count + 1
+        if force_count <= 32 then
+            append(force_path, table.concat({
+                emu.framecount(), FORCE_POINTER_INDEX, hex2(dialogue_id),
+                hex2(object_index), hex4(address), hex4(read_register("pc")),
+            }, "\t"))
+        end
+    end
+end
+
 local function on_source_read(addr, size, value)
     if text_pointer() ~= TARGET_POINTER or trace_count >= TRACE_LIMIT then return end
     target_seen = true
@@ -124,6 +154,11 @@ local function on_parser(label)
     return function()
         if text_pointer() == TARGET_POINTER then
             target_seen = true
+            if label == "parser" and FORCE_SKIP_INITIAL_F0
+                and read_register("y") == 0 and read_register("a") == 0xF0 then
+                write_register("a", read_byte((TARGET_POINTER + 1) % 0x10000))
+                write_register("y", 1)
+            end
             trace_row(label, read_register("pc"), read_register("a"))
         end
     end
@@ -249,6 +284,7 @@ append(ppu_path, "frame\tppu_address\tvalue\tpc\ttext_pointer\ty\tmapper_control
 append(nametable_path, "frame\trow\tvalues")
 append(mapper_path, "frame\tmapper_control\tmapper_select\tppu_control\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7")
 append(mapper_wrapper_path, "frame\ttext_pointer\tstream_pointer\tram00\tram10\tram20\tram51\tram69\tram6A\tram708\tram710\tram71E\tram720\tram721\tram722\tram723\tram735\tram7A8\tram7A9")
+append(force_path, "frame\tpointer_index\tdialogue_id\tobject_index\tram_address\tpc")
 
 local parser_registered = register_exec(0x915A, on_parser("parser"))
 local prep_registered = register_exec(0x955F, on_parser("emit_prep"))
@@ -263,8 +299,9 @@ local mapper_select_registered = register_write(0x8000, 1, on_mapper_select)
 local mapper_data_registered = register_write(0x8001, 1, on_mapper_data)
 local ppu_control_registered = register_write(0x2000, 1, on_ppu_control)
 local mapper_wrapper_registered = register_exec(0xEE3F, on_mapper_wrapper)
+local loader_force_registered = register_exec(0x9137, on_dialogue_loader)
 
-append(summary_path, table.concat({0, "lua_start", tostring(parser_registered and prep_registered and dispatch_registered), tostring(source_registered), tostring(ppuaddr_registered and ppudata_registered and mapper_select_registered and mapper_data_registered and ppu_control_registered and mapper_wrapper_registered), hex4(TARGET_POINTER)}, "\t"))
+append(summary_path, table.concat({0, "lua_start", tostring(parser_registered and prep_registered and dispatch_registered and loader_force_registered), tostring(source_registered), tostring(ppuaddr_registered and ppudata_registered and mapper_select_registered and mapper_data_registered and ppu_control_registered and mapper_wrapper_registered), hex4(TARGET_POINTER)}, "\t"))
 
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
