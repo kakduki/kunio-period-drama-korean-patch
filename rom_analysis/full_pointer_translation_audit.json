@@ -6,17 +6,17 @@
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 150,
+    "reviewed_count": 189,
     "status_counts": {
-      "english_reference_reviewed": 150,
-      "english_semantic_draft": 94,
+      "english_reference_reviewed": 189,
+      "english_semantic_draft": 55,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 91,
+      "context_confirmation_required": 55,
       "dynamic_control_context": 36,
-      "semantic_draft_not_reviewed": 94
+      "semantic_draft_not_reviewed": 55
     },
     "duplicate_display_groups": 7
   },
@@ -1955,17 +1955,14 @@
     },
     {
       "pointer_index": 163,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "CHOOSE ALLY",
       "korean_draft": "동료를 선택하세요",
       "compiled_display_text": "동료를 선택하세요",
       "basis": "english_reference",
-      "notes": "메뉴/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 164,
@@ -1984,31 +1981,25 @@
     },
     {
       "pointer_index": 165,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SANKI TWO GUYS STRUCK LIKE LIGHTNING",
       "korean_draft": "산키, 두 사람이 번개처럼 나타났습니다",
       "compiled_display_text": "산키 두 사람이 번개처럼 나타났습니다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 166,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SANKI I WAS HELPLESS SORRY",
       "korean_draft": "산키, 저는 아무것도 못 했습니다. 미안합니다",
       "compiled_display_text": "산키 저는 아무것도 못 했습니다 미안합니다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 167,
@@ -2027,31 +2018,25 @@
     },
     {
       "pointer_index": 168,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THE KANPOU WORKED I M CURED",
       "korean_draft": "그 한방약이 효과가 있었어! 나았어",
       "compiled_display_text": "그 한방약이 효과가 있었어 나았어",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 169,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "AT LAST I CAN JOIN THE WAR AGAINST TORA",
       "korean_draft": "드디어 토라와 싸울 수 있어",
       "compiled_display_text": "드디어 토라와 싸울 수 있어",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 170,
@@ -2070,31 +2055,25 @@
     },
     {
       "pointer_index": 171,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I LL WAIT HERE GO SAVE OKOTO",
       "korean_draft": "여기서 기다릴게. 오코토를 구해 줘",
       "compiled_display_text": "여기서 기다릴게 오코토를 구해 줘",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 172,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YEAH",
       "korean_draft": "그래",
       "compiled_display_text": "그래",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 173,
@@ -2112,17 +2091,14 @@
     },
     {
       "pointer_index": 174,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I D BETTER GO CHECK WITH BEEG BOSS",
       "korean_draft": "큰두목에게 확인하고 가야겠어",
       "compiled_display_text": "큰두목에게 확인하고 가야겠어",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 175,
@@ -2156,45 +2132,36 @@
     },
     {
       "pointer_index": 177,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO WAH ASAJI KIDNAPPED ME",
       "korean_draft": "오코토, 아사지가 나를 납치했어",
       "compiled_display_text": "오코토 아사지가 나를 납치했어",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 178,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GO HOME EVERYONE S WORRIED",
       "korean_draft": "집에 가. 모두가 걱정하고 있어",
       "compiled_display_text": "집에 가 모두가 걱정하고 있어",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 179,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO SOB THANK YOU PLEASE BE CAREFUL",
-      "korean_draft": "오코토, 흐느낌. 고마워. 조심해",
-      "compiled_display_text": "오코토 흐느낌 고마워 조심해",
+      "korean_draft": "오코토, 흑흑 고마워. 조심해",
+      "compiled_display_text": "오코토 흑흑 고마워 조심해",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 180,
@@ -2213,56 +2180,47 @@
     },
     {
       "pointer_index": 181,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TSUU BROTHER WAIT",
       "korean_draft": "츠우, 오빠! 기다려!",
       "compiled_display_text": "츠우 오빠 기다려",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 182,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "KUNIO HURRY SLUG MR BUNZO S IN TROUBLE",
       "korean_draft": "쿠니오, 서둘러! 분조가 곤경에 빠졌어!",
       "compiled_display_text": "쿠니오 서둘러 분조가 곤경에 빠졌어",
       "basis": "english_reference",
-      "notes": "opening_context",
+      "notes": "영어 참조 및 오프닝 화면 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 183,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO KUNIO",
       "korean_draft": "오코토, 쿠니오!",
       "compiled_display_text": "오코토 쿠니오",
       "basis": "english_reference",
-      "notes": "opening_context",
+      "notes": "영어 참조 및 오프닝 화면 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 184,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "KUNIO I TRIED TO HURRY BACK",
       "korean_draft": "쿠니오, 서둘러 돌아오려고 했어",
       "compiled_display_text": "쿠니오 서둘러 돌아오려고 했어",
       "basis": "english_reference",
-      "notes": "opening_context",
+      "notes": "영어 참조 및 오프닝 화면 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 185,
@@ -2280,157 +2238,124 @@
     },
     {
       "pointer_index": 186,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI HEH I M OKOTO S FIANCE",
       "korean_draft": "아사지, 나는 오코토의 약혼자야",
       "compiled_display_text": "아사지 나는 오코토의 약혼자야",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 187,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "KUNIO WE LL SEE ABOUT THAT",
       "korean_draft": "그건 두고 보자",
       "compiled_display_text": "그건 두고 보자",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 188,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI SHUT UP LOSER THE BOSS IS WAITING",
       "korean_draft": "아사지, 조용히 해. 두목님이 기다리신다",
       "compiled_display_text": "아사지 조용히 해 두목님이 기다리신다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 189,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "KUNIO OH MASTER FORGIVE MY DELAY",
       "korean_draft": "오, 스승님! 늦어서 죄송합니다",
       "compiled_display_text": "오 스승님 늦어서 죄송합니다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 190,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BUNZO AH KUNIO YOU FINALLY GOT HERE",
       "korean_draft": "아, 쿠니오! 드디어 왔구나",
       "compiled_display_text": "아 쿠니오 드디어 왔구나",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 191,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BUNZO TORA HAS CURSED ME",
       "korean_draft": "토라가 나에게 저주를 걸었다",
       "compiled_display_text": "토라가 나에게 저주를 걸었다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 192,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BUNZO GO FIND A HEALER",
       "korean_draft": "치료사를 찾아가라",
       "compiled_display_text": "치료사를 찾아가라",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 193,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BUNZO WHO HAS KANPOU",
       "korean_draft": "한방약을 가진 사람은 누구냐?",
       "compiled_display_text": "한방약을 가진 사람은 누구냐",
       "basis": "english_reference",
-      "notes": "아이템 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 194,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "KUNIO YOU CAN COUNT ON ME",
       "korean_draft": "나만 믿어",
       "compiled_display_text": "나만 믿어",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 195,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BUNZO PLEASE HURRY",
       "korean_draft": "부디 서둘러라",
       "compiled_display_text": "부디 서둘러라",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 196,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GOOD JOB",
       "korean_draft": "잘했다",
       "compiled_display_text": "잘했다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 197,
@@ -2458,45 +2383,36 @@
     },
     {
       "pointer_index": 199,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO AND YOU WILL MAKE A FINE FAMILY",
       "korean_draft": "오코토와 너라면 훌륭한 가족이 되겠군",
       "compiled_display_text": "오코토와 너라면 훌륭한 가족이 되겠군",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 200,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "RIGHT OKOTO",
       "korean_draft": "그렇지, 오코토?",
       "compiled_display_text": "그렇지 오코토",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 201,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO OH YES",
       "korean_draft": "오코토, 아 맞다",
       "compiled_display_text": "오코토 아 맞다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 202,
@@ -2515,31 +2431,25 @@
     },
     {
       "pointer_index": 203,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GREAT A MOMENT OF ULTIMATE HAPPINESS",
       "korean_draft": "좋아! 최고의 행복을 느끼는 순간이군",
       "compiled_display_text": "좋아 최고의 행복을 느끼는 순간이군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 204,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I LL ORDER SAKE TO CELEBRATE",
       "korean_draft": "축하주를 주문해야겠어",
       "compiled_display_text": "축하주를 주문해야겠어",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 205,
@@ -2573,45 +2483,36 @@
     },
     {
       "pointer_index": 207,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SORRY YOU FEEL THAT WAY BUT",
       "korean_draft": "그렇게 느꼈다면 미안해. 하지만",
       "compiled_display_text": "그렇게 느꼈다면 미안해 하지만",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 연속 문장 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 208,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "COME SEE US",
       "korean_draft": "언제든 우리를 만나러 와",
       "compiled_display_text": "언제든 우리를 만나러 와",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 연속 문장 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 209,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WHENEVER YOU RE IN TOWN",
       "korean_draft": "마을에 오면 언제든 들러",
       "compiled_display_text": "마을에 오면 언제든 들러",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 연속 문장 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 210,
@@ -2630,17 +2531,14 @@
     },
     {
       "pointer_index": 211,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FAREWELL",
       "korean_draft": "잘 가",
       "compiled_display_text": "잘 가",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 212,
@@ -2670,59 +2568,47 @@
     },
     {
       "pointer_index": 214,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DUM DE DUM DOESN T THIS STORY GRAB YOU",
       "korean_draft": "둠디둠, 이 이야기가 재미있지 않나?",
       "compiled_display_text": "둠디둠 이 이야기가 재미있지 않나",
       "basis": "english_reference",
-      "notes": "엔딩 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 215,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU FINISHED IT DON T YOU HAVE A LIFE",
-      "korean_draft": "끝냈구나. 이제 할 일이 없나?",
-      "compiled_display_text": "끝냈구나 이제 할 일이 없나",
+      "korean_draft": "끝냈구나. 할 일도 없냐?",
+      "compiled_display_text": "끝냈구나 할 일도 없냐",
       "basis": "english_reference",
-      "notes": "엔딩 문맥 확인 필요",
+      "notes": "영어 참조 도발 어조 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 216,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "MAYBE WE LL MEET AGAIN AND KICK YOUR ASS",
       "korean_draft": "다시 만날지도 모르지. 그때 혼내 주마",
       "compiled_display_text": "다시 만날지도 모르지 그때 혼내 주마",
       "basis": "english_reference",
-      "notes": "엔딩 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 217,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THE END",
       "korean_draft": "끝",
       "compiled_display_text": "끝",
       "basis": "english_reference",
-      "notes": "엔딩 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 218,

@@ -17,8 +17,8 @@ SAMPLES = (
     {"pointer_index": 0, "page_index": 11, "cpu": "9FB4", "skip_f0": False},
     {"pointer_index": 25, "page_index": 16, "cpu": "A140", "skip_f0": True},
     {"pointer_index": 50, "page_index": 41, "cpu": "A310", "skip_f0": True},
-    {"pointer_index": 110, "page_index": 33, "cpu": "A788", "skip_f0": True},
-    {"pointer_index": 181, "page_index": 43, "cpu": "AAF5", "skip_f0": False},
+    {"pointer_index": 110, "page_index": 32, "cpu": "A788", "skip_f0": True},
+    {"pointer_index": 181, "page_index": 42, "cpu": "AAF4", "skip_f0": False},
 )
 DEFAULT_INPUT = REPO_ROOT / "rom_analysis" / "full_pointer_forced_samples"
 DEFAULT_JSON = REPO_ROOT / "rom_analysis" / "full_pointer_forced_samples.json"

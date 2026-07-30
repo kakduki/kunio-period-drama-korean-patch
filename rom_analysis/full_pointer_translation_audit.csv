@@ -162,61 +162,61 @@
 160,english_reference_reviewed,NEED SOMETHING,무언가 필요하신가요?,무언가 필요하신가요,english_reference,영어 참조 의미 대조 완료,,
 161,english_reference_reviewed,BE CAREFUL,조심하세요,조심하세요,english_reference,영어 참조 의미 대조 완료,,
 162,excluded_non_dialogue,,,,english_reference,단독 종료 바이트라 번역하지 않음,,
-163,english_semantic_draft,CHOOSE ALLY,동료를 선택하세요,동료를 선택하세요,english_reference,메뉴/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+163,english_reference_reviewed,CHOOSE ALLY,동료를 선택하세요,동료를 선택하세요,english_reference,영어 참조 의미 대조 완료,,
 164,english_semantic_draft,SANKI OKOTO HAS,"산키, 오코토는 괜찮습니다",산키 오코토는 괜찮습니다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-165,english_semantic_draft,SANKI TWO GUYS STRUCK LIKE LIGHTNING,"산키, 두 사람이 번개처럼 나타났습니다",산키 두 사람이 번개처럼 나타났습니다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-166,english_semantic_draft,SANKI I WAS HELPLESS SORRY,"산키, 저는 아무것도 못 했습니다. 미안합니다",산키 저는 아무것도 못 했습니다 미안합니다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+165,english_reference_reviewed,SANKI TWO GUYS STRUCK LIKE LIGHTNING,"산키, 두 사람이 번개처럼 나타났습니다",산키 두 사람이 번개처럼 나타났습니다,english_reference,영어 참조 의미 대조 완료,,
+166,english_reference_reviewed,SANKI I WAS HELPLESS SORRY,"산키, 저는 아무것도 못 했습니다. 미안합니다",산키 저는 아무것도 못 했습니다 미안합니다,english_reference,영어 참조 의미 대조 완료,,
 167,english_semantic_draft,IDIOTS WE LL FIND THEM,바보들! 우리가 그들을 찾을 것이다,바보들 우리가 그들을 찾을 것이다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-168,english_semantic_draft,THE KANPOU WORKED I M CURED,그 한방약이 효과가 있었어! 나았어,그 한방약이 효과가 있었어 나았어,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-169,english_semantic_draft,AT LAST I CAN JOIN THE WAR AGAINST TORA,드디어 토라와 싸울 수 있어,드디어 토라와 싸울 수 있어,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+168,english_reference_reviewed,THE KANPOU WORKED I M CURED,그 한방약이 효과가 있었어! 나았어,그 한방약이 효과가 있었어 나았어,english_reference,영어 참조 의미 대조 완료,,
+169,english_reference_reviewed,AT LAST I CAN JOIN THE WAR AGAINST TORA,드디어 토라와 싸울 수 있어,드디어 토라와 싸울 수 있어,english_reference,영어 참조 의미 대조 완료,,
 170,english_semantic_draft,THIS CHARM WILL PROTECT YOU,이 부적이 너를 지켜 줄 거야,이 부적이 너를 지켜 줄 거야,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-171,english_semantic_draft,I LL WAIT HERE GO SAVE OKOTO,여기서 기다릴게. 오코토를 구해 줘,여기서 기다릴게 오코토를 구해 줘,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-172,english_semantic_draft,YEAH,그래,그래,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+171,english_reference_reviewed,I LL WAIT HERE GO SAVE OKOTO,여기서 기다릴게. 오코토를 구해 줘,여기서 기다릴게 오코토를 구해 줘,english_reference,영어 참조 의미 대조 완료,,
+172,english_reference_reviewed,YEAH,그래,그래,english_reference,영어 참조 의미 대조 완료,,
 173,english_semantic_draft,ASAJI WHY NOT GO TO,"아사지, 후지로 가는 게 어때?",아사지 후지로 가는 게 어때,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-174,english_semantic_draft,I D BETTER GO CHECK WITH BEEG BOSS,큰두목에게 확인하고 가야겠어,큰두목에게 확인하고 가야겠어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+174,english_reference_reviewed,I D BETTER GO CHECK WITH BEEG BOSS,큰두목에게 확인하고 가야겠어,큰두목에게 확인하고 가야겠어,english_reference,영어 참조 의미 대조 완료,,
 175,english_semantic_draft,PLEASE LET ME GO,"부탁이야, 나를 보내 줘",부탁이야 나를 보내 줘,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 176,english_semantic_draft,SOMEONE LEFT THIS AT THE DOOR,누군가 이것을 문 앞에 두고 갔어,누군가 이것을 문 앞에 두고 갔어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-177,english_semantic_draft,OKOTO WAH ASAJI KIDNAPPED ME,"오코토, 아사지가 나를 납치했어",오코토 아사지가 나를 납치했어,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-178,english_semantic_draft,GO HOME EVERYONE S WORRIED,집에 가. 모두가 걱정하고 있어,집에 가 모두가 걱정하고 있어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-179,english_semantic_draft,OKOTO SOB THANK YOU PLEASE BE CAREFUL,"오코토, 흐느낌. 고마워. 조심해",오코토 흐느낌 고마워 조심해,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+177,english_reference_reviewed,OKOTO WAH ASAJI KIDNAPPED ME,"오코토, 아사지가 나를 납치했어",오코토 아사지가 나를 납치했어,english_reference,영어 참조 의미 대조 완료,,
+178,english_reference_reviewed,GO HOME EVERYONE S WORRIED,집에 가. 모두가 걱정하고 있어,집에 가 모두가 걱정하고 있어,english_reference,영어 참조 의미 대조 완료,,
+179,english_reference_reviewed,OKOTO SOB THANK YOU PLEASE BE CAREFUL,"오코토, 흑흑 고마워. 조심해",오코토 흑흑 고마워 조심해,english_reference,영어 참조 의미 대조 완료,,
 180,english_semantic_draft,ASAJI HAS DISAPPEARED,아사지가 사라졌어,아사지가 사라졌어,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-181,english_semantic_draft,TSUU BROTHER WAIT,"츠우, 오빠! 기다려!",츠우 오빠 기다려,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-182,english_semantic_draft,KUNIO HURRY SLUG MR BUNZO S IN TROUBLE,"쿠니오, 서둘러! 분조가 곤경에 빠졌어!",쿠니오 서둘러 분조가 곤경에 빠졌어,english_reference,opening_context,,semantic_draft_not_reviewed
-183,english_semantic_draft,OKOTO KUNIO,"오코토, 쿠니오!",오코토 쿠니오,english_reference,opening_context,,semantic_draft_not_reviewed
-184,english_semantic_draft,KUNIO I TRIED TO HURRY BACK,"쿠니오, 서둘러 돌아오려고 했어",쿠니오 서둘러 돌아오려고 했어,english_reference,opening_context,,semantic_draft_not_reviewed
+181,english_reference_reviewed,TSUU BROTHER WAIT,"츠우, 오빠! 기다려!",츠우 오빠 기다려,english_reference,영어 참조 의미 대조 완료,,
+182,english_reference_reviewed,KUNIO HURRY SLUG MR BUNZO S IN TROUBLE,"쿠니오, 서둘러! 분조가 곤경에 빠졌어!",쿠니오 서둘러 분조가 곤경에 빠졌어,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
+183,english_reference_reviewed,OKOTO KUNIO,"오코토, 쿠니오!",오코토 쿠니오,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
+184,english_reference_reviewed,KUNIO I TRIED TO HURRY BACK,"쿠니오, 서둘러 돌아오려고 했어",쿠니오 서둘러 돌아오려고 했어,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
 185,english_semantic_draft,OKOTO THIS MAN IS,"오코토, 이 사람은",오코토 이 사람은,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-186,english_semantic_draft,ASAJI HEH I M OKOTO S FIANCE,"아사지, 나는 오코토의 약혼자야",아사지 나는 오코토의 약혼자야,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-187,english_semantic_draft,KUNIO WE LL SEE ABOUT THAT,그건 두고 보자,그건 두고 보자,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-188,english_semantic_draft,ASAJI SHUT UP LOSER THE BOSS IS WAITING,"아사지, 조용히 해. 두목님이 기다리신다",아사지 조용히 해 두목님이 기다리신다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-189,english_semantic_draft,KUNIO OH MASTER FORGIVE MY DELAY,"오, 스승님! 늦어서 죄송합니다",오 스승님 늦어서 죄송합니다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-190,english_semantic_draft,BUNZO AH KUNIO YOU FINALLY GOT HERE,"아, 쿠니오! 드디어 왔구나",아 쿠니오 드디어 왔구나,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-191,english_semantic_draft,BUNZO TORA HAS CURSED ME,토라가 나에게 저주를 걸었다,토라가 나에게 저주를 걸었다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-192,english_semantic_draft,BUNZO GO FIND A HEALER,치료사를 찾아가라,치료사를 찾아가라,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-193,english_semantic_draft,BUNZO WHO HAS KANPOU,한방약을 가진 사람은 누구냐?,한방약을 가진 사람은 누구냐,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-194,english_semantic_draft,KUNIO YOU CAN COUNT ON ME,나만 믿어,나만 믿어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-195,english_semantic_draft,BUNZO PLEASE HURRY,부디 서둘러라,부디 서둘러라,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-196,english_semantic_draft,GOOD JOB,잘했다,잘했다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+186,english_reference_reviewed,ASAJI HEH I M OKOTO S FIANCE,"아사지, 나는 오코토의 약혼자야",아사지 나는 오코토의 약혼자야,english_reference,영어 참조 의미 대조 완료,,
+187,english_reference_reviewed,KUNIO WE LL SEE ABOUT THAT,그건 두고 보자,그건 두고 보자,english_reference,영어 참조 의미 대조 완료,,
+188,english_reference_reviewed,ASAJI SHUT UP LOSER THE BOSS IS WAITING,"아사지, 조용히 해. 두목님이 기다리신다",아사지 조용히 해 두목님이 기다리신다,english_reference,영어 참조 의미 대조 완료,,
+189,english_reference_reviewed,KUNIO OH MASTER FORGIVE MY DELAY,"오, 스승님! 늦어서 죄송합니다",오 스승님 늦어서 죄송합니다,english_reference,영어 참조 의미 대조 완료,,
+190,english_reference_reviewed,BUNZO AH KUNIO YOU FINALLY GOT HERE,"아, 쿠니오! 드디어 왔구나",아 쿠니오 드디어 왔구나,english_reference,영어 참조 의미 대조 완료,,
+191,english_reference_reviewed,BUNZO TORA HAS CURSED ME,토라가 나에게 저주를 걸었다,토라가 나에게 저주를 걸었다,english_reference,영어 참조 의미 대조 완료,,
+192,english_reference_reviewed,BUNZO GO FIND A HEALER,치료사를 찾아가라,치료사를 찾아가라,english_reference,영어 참조 의미 대조 완료,,
+193,english_reference_reviewed,BUNZO WHO HAS KANPOU,한방약을 가진 사람은 누구냐?,한방약을 가진 사람은 누구냐,english_reference,영어 참조 의미 대조 완료,,
+194,english_reference_reviewed,KUNIO YOU CAN COUNT ON ME,나만 믿어,나만 믿어,english_reference,영어 참조 의미 대조 완료,,
+195,english_reference_reviewed,BUNZO PLEASE HURRY,부디 서둘러라,부디 서둘러라,english_reference,영어 참조 의미 대조 완료,,
+196,english_reference_reviewed,GOOD JOB,잘했다,잘했다,english_reference,영어 참조 의미 대조 완료,,
 197,english_reference_reviewed,YOU SAVED THE DAY,모두를 구했구나,모두를 구했구나,english_reference,영어 참조 의미 대조 완료,,
 198,english_reference_reviewed,BY THE WAY,그런데 말이다,그런데 말이다,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
-199,english_semantic_draft,OKOTO AND YOU WILL MAKE A FINE FAMILY,오코토와 너라면 훌륭한 가족이 되겠군,오코토와 너라면 훌륭한 가족이 되겠군,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-200,english_semantic_draft,RIGHT OKOTO,"그렇지, 오코토?",그렇지 오코토,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-201,english_semantic_draft,OKOTO OH YES,"오코토, 아 맞다",오코토 아 맞다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+199,english_reference_reviewed,OKOTO AND YOU WILL MAKE A FINE FAMILY,오코토와 너라면 훌륭한 가족이 되겠군,오코토와 너라면 훌륭한 가족이 되겠군,english_reference,영어 참조 의미 대조 완료,,
+200,english_reference_reviewed,RIGHT OKOTO,"그렇지, 오코토?",그렇지 오코토,english_reference,영어 참조 의미 대조 완료,,
+201,english_reference_reviewed,OKOTO OH YES,"오코토, 아 맞다",오코토 아 맞다,english_reference,영어 참조 의미 대조 완료,,
 202,english_semantic_draft,I BEG YOU,제발 부탁합니다,제발 부탁합니다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-203,english_semantic_draft,GREAT A MOMENT OF ULTIMATE HAPPINESS,좋아! 최고의 행복을 느끼는 순간이군,좋아 최고의 행복을 느끼는 순간이군,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-204,english_semantic_draft,I LL ORDER SAKE TO CELEBRATE,축하주를 주문해야겠어,축하주를 주문해야겠어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+203,english_reference_reviewed,GREAT A MOMENT OF ULTIMATE HAPPINESS,좋아! 최고의 행복을 느끼는 순간이군,좋아 최고의 행복을 느끼는 순간이군,english_reference,영어 참조 의미 대조 완료,,
+204,english_reference_reviewed,I LL ORDER SAKE TO CELEBRATE,축하주를 주문해야겠어,축하주를 주문해야겠어,english_reference,영어 참조 의미 대조 완료,,
 205,english_semantic_draft,I M A VAGABOND DRIFTING FROM TOWN TO TOWN,나는 떠돌이야. 마을에서 마을로 떠돌지,나는 떠돌이야 마을에서 마을로 떠돌지,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 206,english_semantic_draft,OKOTO DESERVES SOMETHING MUCH BETTER,오코토에게는 훨씬 더 좋은 사람이 어울려,오코토에게는 훨씬 더 좋은 사람이 어울려,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-207,english_semantic_draft,SORRY YOU FEEL THAT WAY BUT,그렇게 느꼈다면 미안해. 하지만,그렇게 느꼈다면 미안해 하지만,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-208,english_semantic_draft,COME SEE US,언제든 우리를 만나러 와,언제든 우리를 만나러 와,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-209,english_semantic_draft,WHENEVER YOU RE IN TOWN,마을에 오면 언제든 들러,마을에 오면 언제든 들러,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+207,english_reference_reviewed,SORRY YOU FEEL THAT WAY BUT,그렇게 느꼈다면 미안해. 하지만,그렇게 느꼈다면 미안해 하지만,english_reference,영어 참조 연속 문장 대조 완료,,
+208,english_reference_reviewed,COME SEE US,언제든 우리를 만나러 와,언제든 우리를 만나러 와,english_reference,영어 참조 연속 문장 대조 완료,,
+209,english_reference_reviewed,WHENEVER YOU RE IN TOWN,마을에 오면 언제든 들러,마을에 오면 언제든 들러,english_reference,영어 참조 연속 문장 대조 완료,,
 210,english_semantic_draft,YOU GOT IT NOW I MUST GO,알겠어. 이제 가야 해,알겠어 이제 가야 해,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-211,english_semantic_draft,FAREWELL,잘 가,잘 가,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+211,english_reference_reviewed,FAREWELL,잘 가,잘 가,english_reference,영어 참조 의미 대조 완료,,
 212,english_reference_reviewed,OKOTO,오코토,오코토,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 213,english_reference_reviewed,OKOTO SOB,"오코토, 흐흑",오코토 흐흑,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
-214,english_semantic_draft,DUM DE DUM DOESN T THIS STORY GRAB YOU,"둠디둠, 이 이야기가 재미있지 않나?",둠디둠 이 이야기가 재미있지 않나,english_reference,엔딩 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-215,english_semantic_draft,YOU FINISHED IT DON T YOU HAVE A LIFE,끝냈구나. 이제 할 일이 없나?,끝냈구나 이제 할 일이 없나,english_reference,엔딩 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-216,english_semantic_draft,MAYBE WE LL MEET AGAIN AND KICK YOUR ASS,다시 만날지도 모르지. 그때 혼내 주마,다시 만날지도 모르지 그때 혼내 주마,english_reference,엔딩 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-217,english_semantic_draft,THE END,끝,끝,english_reference,엔딩 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+214,english_reference_reviewed,DUM DE DUM DOESN T THIS STORY GRAB YOU,"둠디둠, 이 이야기가 재미있지 않나?",둠디둠 이 이야기가 재미있지 않나,english_reference,영어 참조 의미 대조 완료,,
+215,english_reference_reviewed,YOU FINISHED IT DON T YOU HAVE A LIFE,끝냈구나. 할 일도 없냐?,끝냈구나 할 일도 없냐,english_reference,영어 참조 도발 어조 대조 완료,,
+216,english_reference_reviewed,MAYBE WE LL MEET AGAIN AND KICK YOUR ASS,다시 만날지도 모르지. 그때 혼내 주마,다시 만날지도 모르지 그때 혼내 주마,english_reference,영어 참조 의미 대조 완료,,
+217,english_reference_reviewed,THE END,끝,끝,english_reference,영어 참조 의미 대조 완료,,
 218,english_semantic_draft,S ADVENTURE BEGINS NOW,모험은 지금 시작된다,모험은 지금 시작된다,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 219,english_semantic_draft,WELCOME TO,어서 오세요,어서 오세요,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 220,english_semantic_draft,DOWNTOWN SPECIAL HAIL FIGHTERS,"다운타운 스페셜! 싸움꾼들이여, 환영한다",다운타운 스페셜 싸움꾼들이여 환영한다,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
