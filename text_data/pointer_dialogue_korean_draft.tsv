@@ -24,62 +24,62 @@ pointer_index	translation_status	korean_text	basis	notes
 022	english_reference_reviewed	좋아	english_reference	영어 참조 의미 대조 완료
 023	english_reference_reviewed	이제 진로가 상대해 주마	english_reference	영어 참조 의미 대조 완료
 024	english_reference_reviewed	그래, 네가 큰두목이군	english_reference	영어 참조 의미 대조 완료
-025	english_semantic_draft	이 패배자들에게 본때를 보여 주지	english_reference	일본어 문맥 확인 필요
-026	english_semantic_draft	정말 질기군! 하지만 헤이시가 널 쓰러뜨린다	english_reference	이름 표기 문맥 확인 필요
-027	english_semantic_draft	쳇, 나중에 보자	english_reference	일본어 문맥 확인 필요
+025	english_reference_reviewed	이 패배자들에게 본때를 보여 주지	english_reference	영어 참조 의미 대조 완료
+026	english_reference_reviewed	정말 질기군! 하지만 헤이시가 널 쓰러뜨린다	english_reference	영어 참조 의미 대조 완료
+027	english_reference_reviewed	쳇, 나중에 보자	english_reference	영어 참조 의미 대조 완료
 028	english_reference_reviewed	이봐! 너희가 그 대단한 두 놈이군	english_reference	영어 참조 의미 대조 완료
-029	english_semantic_draft	나는 긴수다! 시작해 보자	english_reference	이름 표기 문맥 확인 필요
-030	english_semantic_draft	젠장! 안타깝지만 넌 반대편이야	english_reference	일본어 문맥 확인 필요
-031	english_semantic_draft	내 동생 헤이시에게 말해 주마	english_reference	이름 표기 문맥 확인 필요
-032	english_semantic_draft	잡을 수 있으면 잡아 봐	english_reference	일본어 문맥 확인 필요
-033	english_semantic_draft	이봐! 나는 헤이시다	english_reference	이름 표기 문맥 확인 필요
-034	english_semantic_draft	이런, 정말 세군	english_reference	일본어 문맥 확인 필요
-035	english_semantic_draft	진로 큰두목이 널 손봐 주마	english_reference	이름 표기 문맥 확인 필요
-036	english_semantic_draft	도망치지 않겠다	english_reference	일본어 문맥 확인 필요
-037	english_semantic_draft	지금 나와 싸워라	english_reference	일본어 문맥 확인 필요
+029	english_reference_reviewed	나는 긴수다! 한판 붙자	english_reference	영어 참조 의미 대조 완료
+030	english_reference_reviewed	젠장! 안타깝지만 넌 반대편이야	english_reference	영어 참조 의미 대조 완료
+031	english_reference_reviewed	내 동생 헤이시에게 말해 주마	english_reference	영어 참조 의미 대조 완료
+032	english_reference_reviewed	잡을 수 있으면 잡아 봐	english_reference	영어 참조 의미 대조 완료
+033	english_reference_reviewed	이봐! 나는 헤이시다	english_reference	영어 참조 의미 대조 완료
+034	english_reference_reviewed	이런, 정말 세군	english_reference	영어 참조 의미 대조 완료
+035	english_reference_reviewed	진로 큰두목이 널 손봐 주마	english_reference	영어 참조 의미 대조 완료
+036	english_reference_reviewed	도망치지 않겠다	english_reference	영어 참조 의미 대조 완료
+037	english_reference_reviewed	지금 나와 싸워라	english_reference	영어 참조 의미 대조 완료
 038	english_semantic_draft	넌 누구 밑에서 일하지? 토라를 섬긴다고 들었다	english_reference	이름 표기 문맥 확인 필요
-039	english_semantic_draft	미안하군 친구! 한 번만 봐 줘	english_reference	일본어 문맥 확인 필요
+039	english_reference_reviewed	미안하군 친구! 한 번만 봐 줘	english_reference	영어 참조 의미 대조 완료
 040	english_semantic_draft	이것을 가져가라	english_reference	아이템 문맥 확인 필요
 041	english_reference_reviewed	휴, 넌 목욕 좀 해야겠군	english_reference	영어 참조 의미 대조 완료
-042	english_semantic_draft	신세를 졌다	english_reference	일본어 문맥 확인 필요
+042	english_reference_reviewed	신세를 졌다	english_reference	영어 참조 의미 대조 완료
 043	english_semantic_draft	여기 있다! 이 한방약을 가져가라	english_reference	아이템 문맥 확인 필요
 044	english_semantic_draft	그 약으로 상처를 치료해	english_reference	아이템 문맥 확인 필요
-045	english_semantic_draft	나는 토라의 성스러운 수호자다! 천벌을 받아라	english_reference	이름 표기 문맥 확인 필요
-046	english_semantic_draft	허허, 뭐라고?	english_reference	일본어 문맥 확인 필요
-047	english_semantic_draft	형편없는 외지인들, 너희 영어는 엉망이군	english_reference	일본어 문맥 확인 필요
-048	english_semantic_draft	이봐! 한 번만 봐 줘, 지난 일은 잊자	english_reference	일본어 문맥 확인 필요
-049	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
-050	english_semantic_draft	나중에 보자, 친구	english_reference	일본어 문맥 확인 필요
-051	english_semantic_draft	히히	english_reference	일본어 문맥 확인 필요
-052	english_semantic_draft	개인적인 감정은 없어, 미안하다	english_reference	일본어 문맥 확인 필요
+045	english_reference_reviewed	나는 토라의 성스러운 수호자다! 천벌을 받아라	english_reference	영어 참조 의미 대조 완료
+046	english_reference_reviewed	허허, 뭐라고?	english_reference	영어 참조 의미 대조 완료
+047	english_reference_reviewed	형편없는 외지인들, 너희 영어는 엉망이군	english_reference	영어 참조 의미 대조 완료
+048	english_reference_reviewed	이봐! 한 번만 봐 줘, 지난 일은 잊자	english_reference	영어 참조 의미 대조 완료
+049	english_reference_reviewed	나도 끼워 줘	english_reference	영어 참조 의미 대조 완료
+050	english_reference_reviewed	나중에 보자, 친구	english_reference	영어 참조 의미 대조 완료
+051	english_reference_reviewed	히히	english_reference	영어 참조 의미 대조 완료
+052	english_reference_reviewed	개인적인 감정은 없어, 미안하다	english_reference	영어 참조 의미 대조 완료
 053	english_semantic_draft	넌 누구 밑에서 일하지? 좋은 소식이 있다	english_reference	일본어 문맥 확인 필요
-054	english_semantic_draft	토라가 그 소녀를 데려갔다	english_reference	이름 표기 문맥 확인 필요
-055	english_semantic_draft	너와 함께 갈 수 없어. 대신 내가 가르쳐 주지	english_reference	일본어 문맥 확인 필요
-056	english_semantic_draft	나의 유명한 단검 공격이다	english_reference	기술 문맥 확인 필요
-057	english_semantic_draft	이제 떠나야 한다	english_reference	일본어 문맥 확인 필요
-058	english_semantic_draft	나중에 보자	english_reference	일본어 문맥 확인 필요
-059	english_semantic_draft	토라를 찾고 있다면 조심해라	english_reference	이름 표기 문맥 확인 필요
-060	english_semantic_draft	토라가 소녀를 납치했을 리 없어, 그렇지?	english_reference	이름 표기 문맥 확인 필요
+054	english_reference_reviewed	토라가 그 소녀를 데려갔다	english_reference	영어 참조 의미 대조 완료
+055	english_reference_reviewed	너와 함께 갈 수 없어. 대신 내가 가르쳐 주지	english_reference	영어 참조 의미 대조 완료
+056	english_reference_reviewed	나의 유명한 단검 공격이다	english_reference	영어 참조 의미 대조 완료
+057	english_reference_reviewed	이제 떠나야 한다	english_reference	영어 참조 의미 대조 완료
+058	english_reference_reviewed	나중에 보자	english_reference	영어 참조 의미 대조 완료
+059	english_reference_reviewed	토라를 찾고 있다면 조심해라	english_reference	영어 참조 의미 대조 완료
+060	english_reference_reviewed	토라가 소녀를 납치했을 리 없어, 그렇지?	english_reference	영어 참조 의미 대조 완료
 061	english_semantic_draft	말해 두지. 토라와 부하가 그녀를 붙잡았다	english_reference	이름 표기 문맥 확인 필요
-062	english_semantic_draft	그들은 위험하다	english_reference	일본어 문맥 확인 필요
+062	english_reference_reviewed	그들은 위험하다	english_reference	영어 참조 의미 대조 완료
 063	english_semantic_draft	너는 아사지와 관련 있군. 꽤 강하다고 들었다	english_reference	이름 표기 문맥 확인 필요
-064	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
-065	english_semantic_draft	부탁한다	english_reference	일본어 문맥 확인 필요
-066	english_semantic_draft	다시 돌아오겠다	english_reference	일본어 문맥 확인 필요
+064	english_reference_reviewed	나도 끼워 줘	english_reference	영어 참조 의미 대조 완료
+065	english_reference_reviewed	부탁한다	english_reference	영어 참조 의미 대조 완료
+066	english_reference_reviewed	다시 돌아오겠다	english_reference	영어 참조 의미 대조 완료
 067	english_semantic_draft	그래, 우리가 소녀를 잡았다. 위대한 분을 위해서다	english_reference	이름 표기 문맥 확인 필요
-068	english_semantic_draft	그녀를 되찾고 싶다면 우리를 이겨라	english_reference	일본어 문맥 확인 필요
-069	english_semantic_draft	그 얼간이가 도망갔다. 믿을 수 없군	english_reference	일본어 문맥 확인 필요
-070	english_semantic_draft	끝장을 내라, 이 자식아	english_reference	일본어 문맥 확인 필요
-071	english_semantic_draft	날 놓아준 걸 후회하게 될 거다	english_reference	일본어 문맥 확인 필요
-072	english_semantic_draft	너희가 누구를 데려와도 우리를 막을 수 없다	english_reference	일본어 문맥 확인 필요
-073	english_semantic_draft	도망칠 수 있을 때 도망쳐라	english_reference	일본어 문맥 확인 필요
-074	english_semantic_draft	또 너냐? 젠장	english_reference	일본어 문맥 확인 필요
-075	english_semantic_draft	너는 정말 웃기는군	english_reference	일본어 문맥 확인 필요
-076	english_semantic_draft	나도 끼워 줘	english_reference	일본어 문맥 확인 필요
+068	english_reference_reviewed	그녀를 되찾고 싶다면 우리를 이겨라	english_reference	영어 참조 의미 대조 완료
+069	english_reference_reviewed	그 얼간이가 도망갔다. 믿을 수 없군	english_reference	영어 참조 의미 대조 완료
+070	english_reference_reviewed	끝장을 내라, 이 자식아	english_reference	영어 참조 의미 대조 완료
+071	english_reference_reviewed	날 놓아준 걸 후회하게 될 거다	english_reference	영어 참조 의미 대조 완료
+072	english_reference_reviewed	너희가 누구를 데려와도 우리를 막을 수 없다	english_reference	영어 참조 의미 대조 완료
+073	english_reference_reviewed	도망칠 수 있을 때 도망쳐라	english_reference	영어 참조 의미 대조 완료
+074	english_reference_reviewed	또 너냐? 젠장	english_reference	영어 참조 의미 대조 완료
+075	english_reference_reviewed	너는 정말 웃기는군	english_reference	영어 참조 의미 대조 완료
+076	english_reference_reviewed	나도 끼워 줘	english_reference	영어 참조 의미 대조 완료
 077	english_semantic_draft	대장님, 이 일의 배후에는 큰두목이 있다	english_reference	이름 표기 문맥 확인 필요
-078	english_semantic_draft	조심해라. 토라가 아사지라는 깡패를 고용했다	english_reference	이름 표기 문맥 확인 필요
-079	english_semantic_draft	큰두목이 고맙다고 전하더군	english_reference	이름 표기 문맥 확인 필요
-080	english_semantic_draft	아사지가 정말 누구를 섬기는지 알아내야 한다	english_reference	이름 표기 문맥 확인 필요
+078	english_reference_reviewed	조심해라. 토라가 아사지라는 깡패를 고용했다	english_reference	영어 참조 의미 대조 완료
+079	english_reference_reviewed	큰두목이 고맙다고 전하더군	english_reference	영어 참조 의미 대조 완료
+080	english_reference_reviewed	아사지가 정말 누구를 섬기는지 알아내야 한다	english_reference	영어 참조 의미 대조 완료
 081	english_semantic_draft	내가 큰두목이다. 난 나쁘고 강하다	english_reference	이름 표기 문맥 확인 필요
 082	english_semantic_draft	용서해 줘, 형제여. 내가 잘못했다	english_reference	일본어 문맥 확인 필요
 083	english_semantic_draft	형제여	english_reference	일본어 문맥 확인 필요

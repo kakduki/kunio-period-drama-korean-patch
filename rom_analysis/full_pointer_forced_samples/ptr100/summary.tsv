@@ -1,4 +1,4 @@
 frame	reason	screenshot	target_seen	trace_count
-0	lua_start	true	true	true	A6D2
+0	lua_start	true	true	true	A6D1
 392	capture	true	true	86
 392	lua_done	true	true	86

@@ -6,17 +6,17 @@
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 38,
+    "reviewed_count": 83,
     "status_counts": {
-      "english_reference_reviewed": 38,
-      "english_semantic_draft": 206,
+      "english_reference_reviewed": 83,
+      "english_semantic_draft": 161,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 203,
+      "context_confirmation_required": 158,
       "dynamic_control_context": 27,
-      "semantic_draft_not_reviewed": 206
+      "semantic_draft_not_reviewed": 161
     },
     "duplicate_display_groups": 7
   },
@@ -361,45 +361,36 @@
     },
     {
       "pointer_index": 25,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I LL SHOW THESE LOSERS A THING OR TWO",
       "korean_draft": "이 패배자들에게 본때를 보여 주지",
       "compiled_display_text": "이 패배자들에게 본때를 보여 주지",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 26,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "JEEZ YOU RE TOUGH BUT HEISI WILL CRUSH YOU",
       "korean_draft": "정말 질기군! 하지만 헤이시가 널 쓰러뜨린다",
       "compiled_display_text": "정말 질기군 하지만 헤이시가 널 쓰러뜨린다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 27,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "NYAH LATER",
       "korean_draft": "쳇, 나중에 보자",
       "compiled_display_text": "쳇 나중에 보자",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 28,
@@ -414,129 +405,102 @@
     },
     {
       "pointer_index": 29,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M KINSU LET S BOOGIE",
-      "korean_draft": "나는 긴수다! 시작해 보자",
-      "compiled_display_text": "나는 긴수다 시작해 보자",
+      "korean_draft": "나는 긴수다! 한판 붙자",
+      "compiled_display_text": "나는 긴수다 한판 붙자",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 30,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DAMN TOO BAD YOU RE ON THE WRONG SIDE",
       "korean_draft": "젠장! 안타깝지만 넌 반대편이야",
       "compiled_display_text": "젠장 안타깝지만 넌 반대편이야",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 31,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M GONNA TELL MY BROTHER HEISI",
       "korean_draft": "내 동생 헤이시에게 말해 주마",
       "compiled_display_text": "내 동생 헤이시에게 말해 주마",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 32,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "CATCH ME IF YOU CAN",
       "korean_draft": "잡을 수 있으면 잡아 봐",
       "compiled_display_text": "잡을 수 있으면 잡아 봐",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 33,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEY I M HEISI",
       "korean_draft": "이봐! 나는 헤이시다",
       "compiled_display_text": "이봐 나는 헤이시다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 34,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GAWD YOU RE TOUGH",
       "korean_draft": "이런, 정말 세군",
       "compiled_display_text": "이런 정말 세군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 35,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BEEG BOSS JINRO WILL FIX YOU",
       "korean_draft": "진로 큰두목이 널 손봐 주마",
       "compiled_display_text": "진로 큰두목이 널 손봐 주마",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 36,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I WON T RUN",
       "korean_draft": "도망치지 않겠다",
       "compiled_display_text": "도망치지 않겠다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 37,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FIGHT ME NOW",
       "korean_draft": "지금 나와 싸워라",
       "compiled_display_text": "지금 나와 싸워라",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 38,
@@ -555,17 +519,14 @@
     },
     {
       "pointer_index": 39,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SORRY PAL HEY GIMME A BREAK",
       "korean_draft": "미안하군 친구! 한 번만 봐 줘",
       "compiled_display_text": "미안하군 친구 한 번만 봐 줘",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 40,
@@ -595,17 +556,14 @@
     },
     {
       "pointer_index": 42,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I OWE YA ONE",
       "korean_draft": "신세를 졌다",
       "compiled_display_text": "신세를 졌다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 43,
@@ -639,115 +597,91 @@
     },
     {
       "pointer_index": 45,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M TORA S HOLY GUARD PREPARE FOR HEAVEN S WRATH",
       "korean_draft": "나는 토라의 성스러운 수호자다! 천벌을 받아라",
       "compiled_display_text": "나는 토라의 성스러운 수호자다 천벌을 받아라",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 46,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEH WHAT",
       "korean_draft": "허허, 뭐라고?",
       "compiled_display_text": "허허 뭐라고",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 47,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "LOUSY FOREIGNERS YOUR ENGLISH SUCKS",
       "korean_draft": "형편없는 외지인들, 너희 영어는 엉망이군",
       "compiled_display_text": "형편없는 외지인들 너희 영어는 엉망이군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 48,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEY GIMME A BREAK LET BYGONES BE BYGONES",
       "korean_draft": "이봐! 한 번만 봐 줘, 지난 일은 잊자",
       "compiled_display_text": "이봐 한 번만 봐 줘 지난 일은 잊자",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 49,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE LET ME JOIN YOU",
       "korean_draft": "나도 끼워 줘",
       "compiled_display_text": "나도 끼워 줘",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 50,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "LATER BUD",
       "korean_draft": "나중에 보자, 친구",
       "compiled_display_text": "나중에 보자 친구",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 51,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HEEHEE",
       "korean_draft": "히히",
       "compiled_display_text": "히히",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 52,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "NOTHING PERSONAL SORRY",
       "korean_draft": "개인적인 감정은 없어, 미안하다",
       "compiled_display_text": "개인적인 감정은 없어 미안하다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 53,
@@ -766,101 +700,80 @@
     },
     {
       "pointer_index": 54,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TORA TOOK THE GIRL",
       "korean_draft": "토라가 그 소녀를 데려갔다",
       "compiled_display_text": "토라가 그 소녀를 데려갔다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 55,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I CAN T GO WITH YOU SO INSTEAD LET ME TEACH YOU",
       "korean_draft": "너와 함께 갈 수 없어. 대신 내가 가르쳐 주지",
       "compiled_display_text": "너와 함께 갈 수 없어 대신 내가 가르쳐 주지",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 56,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "MY FAMOUS DAGGER ATTACK",
       "korean_draft": "나의 유명한 단검 공격이다",
       "compiled_display_text": "나의 유명한 단검 공격이다",
       "basis": "english_reference",
-      "notes": "기술 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 57,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I MUST LEAVE NOW",
       "korean_draft": "이제 떠나야 한다",
       "compiled_display_text": "이제 떠나야 한다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 58,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "CATCH YA LATER",
       "korean_draft": "나중에 보자",
       "compiled_display_text": "나중에 보자",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 59,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "LOOKING FOR TORA BE CAREFUL",
       "korean_draft": "토라를 찾고 있다면 조심해라",
       "compiled_display_text": "토라를 찾고 있다면 조심해라",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 60,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TORA WOULDN T KIDNAP A GIRL WOULD HE",
       "korean_draft": "토라가 소녀를 납치했을 리 없어, 그렇지?",
       "compiled_display_text": "토라가 소녀를 납치했을 리 없어 그렇지",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 61,
@@ -879,17 +792,14 @@
     },
     {
       "pointer_index": 62,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THEY RE DANGEROUS",
       "korean_draft": "그들은 위험하다",
       "compiled_display_text": "그들은 위험하다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 63,
@@ -908,45 +818,36 @@
     },
     {
       "pointer_index": 64,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE LET ME JOIN YOU",
       "korean_draft": "나도 끼워 줘",
       "compiled_display_text": "나도 끼워 줘",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 65,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE",
       "korean_draft": "부탁한다",
       "compiled_display_text": "부탁한다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 66,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I LL BE BACK",
       "korean_draft": "다시 돌아오겠다",
       "compiled_display_text": "다시 돌아오겠다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 67,
@@ -965,129 +866,102 @@
     },
     {
       "pointer_index": 68,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GOTTA BEAT US IF YA WANT HER BACK",
       "korean_draft": "그녀를 되찾고 싶다면 우리를 이겨라",
       "compiled_display_text": "그녀를 되찾고 싶다면 우리를 이겨라",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 69,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THAT BOZO RAN AWAY UNBELIEVABLE",
       "korean_draft": "그 얼간이가 도망갔다. 믿을 수 없군",
       "compiled_display_text": "그 얼간이가 도망갔다 믿을 수 없군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 70,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FINISH IT DAMN YOU",
       "korean_draft": "끝장을 내라, 이 자식아",
       "compiled_display_text": "끝장을 내라 이 자식아",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 71,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU LL REGRET LETTING ME GO",
       "korean_draft": "날 놓아준 걸 후회하게 될 거다",
       "compiled_display_text": "날 놓아준 걸 후회하게 될 거다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 72,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU AND WHO S ARMY WILL STOP US",
       "korean_draft": "너희가 누구를 데려와도 우리를 막을 수 없다",
       "compiled_display_text": "너희가 누구를 데려와도 우리를 막을 수 없다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 73,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "RUN WHILE YOU CAN",
       "korean_draft": "도망칠 수 있을 때 도망쳐라",
       "compiled_display_text": "도망칠 수 있을 때 도망쳐라",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 74,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU AGAIN DAMN",
       "korean_draft": "또 너냐? 젠장",
       "compiled_display_text": "또 너냐 젠장",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 75,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU RE A BIG JOKE",
       "korean_draft": "너는 정말 웃기는군",
       "compiled_display_text": "너는 정말 웃기는군",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 76,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE LET ME JOIN YOU",
       "korean_draft": "나도 끼워 줘",
       "compiled_display_text": "나도 끼워 줘",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 77,
@@ -1106,45 +980,36 @@
     },
     {
       "pointer_index": 78,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BE CAREFUL TORA HIRED SOME GOON CALLED ASAJI",
       "korean_draft": "조심해라. 토라가 아사지라는 깡패를 고용했다",
       "compiled_display_text": "조심해라 토라가 아사지라는 깡패를 고용했다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 79,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BEEG BOSS SAYS THANKS",
       "korean_draft": "큰두목이 고맙다고 전하더군",
       "compiled_display_text": "큰두목이 고맙다고 전하더군",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 80,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WE MUST FIND OUT WHO ASAJI REALLY WORKS FOR",
       "korean_draft": "아사지가 정말 누구를 섬기는지 알아내야 한다",
       "compiled_display_text": "아사지가 정말 누구를 섬기는지 알아내야 한다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 81,
