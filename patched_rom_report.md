@@ -105,21 +105,21 @@ eligible for release promotion.
   and mapper/page lifecycle are proven.
 
 The earlier draft audit reported `FULL_DRAFT_CAPACITY_BLOCKED` because one
-static page held only 34 source codes. The dynamic 49-page strategy below
+static page held only 34 source codes. The dynamic multi-page strategy below
 supersedes that capacity conclusion while retaining it as historical evidence.
 
 ## Full Pointer Korean Development Candidate
 
 - Status: **WHOLE_SCRIPT_RUNTIME_PASS_5_PAGES**.
-- Candidate MD5: `1e51b3bebb4a5d1b97d2001c84a73204`.
+- Candidate MD5: `c950aa46caaddb491989afd113686798`.
 - All 248 pointer rows are represented; 244 rows compile Korean text and four
   excluded non-dialogue rows retain Japanese bytes.
-- Packed records occupy ROM `0x05FC4-0x06EED` end-exclusive (3,881 bytes),
-  leaving 275 bytes
+- Packed records occupy ROM `0x05FC4-0x06EE6` end-exclusive (3,874 bytes),
+  leaving 282 bytes
   before the loader at `0x07000`.
 - Every active record preserves the English reference's non-letter control
   skeleton while replacing its letter/space runs.
-- The optimized 49-page plan is compiled into 13 appended CHR banks.
+- The optimized 48-page plan is compiled into 13 appended CHR banks.
 - PTR-181 relocates to `$AAF4` and passes the bounded runtime route with
   `$07FF=2B`, `R1=D4`, visible Korean text, and preserved field background.
 - Forced pointers 0, 25, 50, 110, and 181 cover five optimized pages; all pass
@@ -127,9 +127,9 @@ supersedes that capacity conclusion while retaining it as historical evidence.
   and field-background checks.
 - Pointers 25, 50, and 110 bypass their initial event-dependent `F0` only in
   the visual harness, so this evidence does not promote natural event control.
-- Translation QA found no structural failures. One hundred eighty-nine rows
-  have direct English-reference review; 55 semantic drafts remain. Thirty-six records
-  with dynamic name/item controls are separately flagged for context review.
+- Translation QA found no structural failures. Two hundred one rows have
+  direct English-reference review; 43 semantic drafts remain. Forty-seven
+  records with dynamic name/item controls are separately flagged for context review.
 - IPS apply round trip: PASS.
 - Broad runtime and translation review remain required for release.
 

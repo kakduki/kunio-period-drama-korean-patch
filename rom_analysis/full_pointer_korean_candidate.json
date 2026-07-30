@@ -1,21 +1,21 @@
 {
   "status": "WHOLE_SCRIPT_CANDIDATE_BUILT_RUNTIME_UNKNOWN",
   "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
-  "candidate_md5": "1e51b3bebb4a5d1b97d2001c84a73204",
+  "candidate_md5": "c950aa46caaddb491989afd113686798",
   "rom_path": "output\\full_pointer_korean_candidate\\kunio_period_drama_korean_full_pointer_candidate.nes",
   "ips_path": "output\\full_pointer_korean_candidate\\kunio_period_drama_korean_full_pointer_candidate.ips",
   "compiled_records": 247,
-  "record_bytes": 3881,
+  "record_bytes": 3874,
   "record_start": "0x05FC4",
-  "record_end": "0x06EED",
-  "record_loader_gap": 275,
-  "font_pages": 49,
+  "record_end": "0x06EE6",
+  "record_loader_gap": 282,
+  "font_pages": 48,
   "chr_banks": 29,
   "targets": [
     {
       "kind": "full_dialogue_records",
       "rom_offset": 24516,
-      "length": 3881
+      "length": 3874
     },
     {
       "kind": "full_dialogue_pointer_table",
@@ -71,7 +71,7 @@
       "kind": "expanded_korean_chr_pages",
       "rom_offset": 262160,
       "length": 106496,
-      "page_count": 49
+      "page_count": 48
     }
   ]
 }

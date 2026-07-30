@@ -16,7 +16,7 @@
   "coverage": {
     "active_records": 244,
     "failure_count": 0,
-    "warning_count": 2,
+    "warning_count": 1,
     "maximum_segment_cells": 24
   },
   "warnings": [
@@ -29,16 +29,6 @@
       "max_segment_cells": 24,
       "level": "WARN",
       "korean_text": "우리는 이것과 저것을 가지고 있습니다"
-    },
-    {
-      "pointer_index": 236,
-      "page_index": 18,
-      "segment_lengths": [
-        22
-      ],
-      "max_segment_cells": 22,
-      "level": "WARN",
-      "korean_text": "상태 레벨이 올랐습니다. 이제 두 배입니다"
     }
   ],
   "failures": [],
@@ -68,7 +58,7 @@
     },
     {
       "pointer_index": 2,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         3,
@@ -104,7 +94,7 @@
     },
     {
       "pointer_index": 5,
-      "page_index": 15,
+      "page_index": 35,
       "segment_lengths": [
         1,
         10
@@ -115,7 +105,7 @@
     },
     {
       "pointer_index": 6,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         7
@@ -126,7 +116,7 @@
     },
     {
       "pointer_index": 7,
-      "page_index": 30,
+      "page_index": 31,
       "segment_lengths": [
         1,
         16
@@ -137,7 +127,7 @@
     },
     {
       "pointer_index": 8,
-      "page_index": 32,
+      "page_index": 41,
       "segment_lengths": [
         1,
         8
@@ -171,7 +161,7 @@
     },
     {
       "pointer_index": 11,
-      "page_index": 31,
+      "page_index": 29,
       "segment_lengths": [
         1,
         11,
@@ -194,7 +184,7 @@
     },
     {
       "pointer_index": 13,
-      "page_index": 26,
+      "page_index": 31,
       "segment_lengths": [
         1,
         13
@@ -228,7 +218,7 @@
     },
     {
       "pointer_index": 16,
-      "page_index": 42,
+      "page_index": 15,
       "segment_lengths": [
         4,
         4
@@ -285,7 +275,7 @@
     },
     {
       "pointer_index": 21,
-      "page_index": 19,
+      "page_index": 17,
       "segment_lengths": [
         1,
         7,
@@ -319,7 +309,7 @@
     },
     {
       "pointer_index": 24,
-      "page_index": 28,
+      "page_index": 27,
       "segment_lengths": [
         1,
         12
@@ -330,7 +320,7 @@
     },
     {
       "pointer_index": 25,
-      "page_index": 16,
+      "page_index": 15,
       "segment_lengths": [
         1,
         12,
@@ -354,7 +344,7 @@
     },
     {
       "pointer_index": 27,
-      "page_index": 43,
+      "page_index": 41,
       "segment_lengths": [
         1,
         5,
@@ -366,7 +356,7 @@
     },
     {
       "pointer_index": 28,
-      "page_index": 11,
+      "page_index": 16,
       "segment_lengths": [
         1,
         2,
@@ -427,7 +417,7 @@
     },
     {
       "pointer_index": 33,
-      "page_index": 27,
+      "page_index": 40,
       "segment_lengths": [
         1,
         2,
@@ -439,7 +429,7 @@
     },
     {
       "pointer_index": 34,
-      "page_index": 43,
+      "page_index": 36,
       "segment_lengths": [
         1,
         8
@@ -450,7 +440,7 @@
     },
     {
       "pointer_index": 35,
-      "page_index": 26,
+      "page_index": 27,
       "segment_lengths": [
         1,
         7,
@@ -462,7 +452,7 @@
     },
     {
       "pointer_index": 36,
-      "page_index": 40,
+      "page_index": 41,
       "segment_lengths": [
         1,
         8
@@ -473,7 +463,7 @@
     },
     {
       "pointer_index": 37,
-      "page_index": 41,
+      "page_index": 11,
       "segment_lengths": [
         1,
         9
@@ -508,7 +498,7 @@
     },
     {
       "pointer_index": 40,
-      "page_index": 44,
+      "page_index": 31,
       "segment_lengths": [
         1,
         9
@@ -531,7 +521,7 @@
     },
     {
       "pointer_index": 42,
-      "page_index": 39,
+      "page_index": 45,
       "segment_lengths": [
         1,
         6
@@ -542,7 +532,7 @@
     },
     {
       "pointer_index": 43,
-      "page_index": 21,
+      "page_index": 19,
       "segment_lengths": [
         1,
         10,
@@ -554,7 +544,7 @@
     },
     {
       "pointer_index": 44,
-      "page_index": 31,
+      "page_index": 32,
       "segment_lengths": [
         1,
         15
@@ -577,7 +567,7 @@
     },
     {
       "pointer_index": 46,
-      "page_index": 45,
+      "page_index": 47,
       "segment_lengths": [
         1,
         7
@@ -613,7 +603,7 @@
     },
     {
       "pointer_index": 49,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         7
@@ -693,7 +683,7 @@
     },
     {
       "pointer_index": 56,
-      "page_index": 27,
+      "page_index": 28,
       "segment_lengths": [
         1,
         14
@@ -785,7 +775,7 @@
     },
     {
       "pointer_index": 64,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         7
@@ -807,7 +797,7 @@
     },
     {
       "pointer_index": 66,
-      "page_index": 36,
+      "page_index": 42,
       "segment_lengths": [
         1,
         8
@@ -842,7 +832,7 @@
     },
     {
       "pointer_index": 69,
-      "page_index": 17,
+      "page_index": 16,
       "segment_lengths": [
         1,
         11,
@@ -854,7 +844,7 @@
     },
     {
       "pointer_index": 70,
-      "page_index": 36,
+      "page_index": 32,
       "segment_lengths": [
         1,
         12
@@ -889,7 +879,7 @@
     },
     {
       "pointer_index": 73,
-      "page_index": 36,
+      "page_index": 35,
       "segment_lengths": [
         1,
         15
@@ -900,7 +890,7 @@
     },
     {
       "pointer_index": 74,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         7
@@ -922,7 +912,7 @@
     },
     {
       "pointer_index": 76,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         7
@@ -1004,7 +994,7 @@
     },
     {
       "pointer_index": 83,
-      "page_index": 31,
+      "page_index": 20,
       "segment_lengths": [
         1,
         4
@@ -1015,7 +1005,7 @@
     },
     {
       "pointer_index": 84,
-      "page_index": 28,
+      "page_index": 29,
       "segment_lengths": [
         1,
         8,
@@ -1075,7 +1065,7 @@
     },
     {
       "pointer_index": 89,
-      "page_index": 19,
+      "page_index": 20,
       "segment_lengths": [
         3,
         7,
@@ -1099,7 +1089,7 @@
     },
     {
       "pointer_index": 91,
-      "page_index": 30,
+      "page_index": 36,
       "segment_lengths": [
         1,
         8,
@@ -1122,7 +1112,7 @@
     },
     {
       "pointer_index": 93,
-      "page_index": 44,
+      "page_index": 43,
       "segment_lengths": [
         1,
         10
@@ -1133,7 +1123,7 @@
     },
     {
       "pointer_index": 94,
-      "page_index": 32,
+      "page_index": 30,
       "segment_lengths": [
         3,
         6,
@@ -1191,7 +1181,7 @@
     },
     {
       "pointer_index": 99,
-      "page_index": 16,
+      "page_index": 11,
       "segment_lengths": [
         1,
         10,
@@ -1204,7 +1194,7 @@
     },
     {
       "pointer_index": 100,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         1,
         7
@@ -1215,7 +1205,7 @@
     },
     {
       "pointer_index": 101,
-      "page_index": 35,
+      "page_index": 36,
       "segment_lengths": [
         1,
         8,
@@ -1251,7 +1241,7 @@
     },
     {
       "pointer_index": 104,
-      "page_index": 29,
+      "page_index": 30,
       "segment_lengths": [
         3,
         10,
@@ -1297,7 +1287,7 @@
     },
     {
       "pointer_index": 108,
-      "page_index": 38,
+      "page_index": 39,
       "segment_lengths": [
         1,
         12
@@ -1344,7 +1334,7 @@
     },
     {
       "pointer_index": 112,
-      "page_index": 45,
+      "page_index": 46,
       "segment_lengths": [
         1,
         9
@@ -1366,7 +1356,7 @@
     },
     {
       "pointer_index": 114,
-      "page_index": 48,
+      "page_index": 42,
       "segment_lengths": [
         1,
         2
@@ -1410,7 +1400,7 @@
     },
     {
       "pointer_index": 118,
-      "page_index": 48,
+      "page_index": 47,
       "segment_lengths": [
         1,
         5
@@ -1432,7 +1422,7 @@
     },
     {
       "pointer_index": 120,
-      "page_index": 20,
+      "page_index": 16,
       "segment_lengths": [
         1,
         2
@@ -1455,7 +1445,7 @@
     },
     {
       "pointer_index": 122,
-      "page_index": 29,
+      "page_index": 15,
       "segment_lengths": [
         1,
         13
@@ -1478,7 +1468,7 @@
     },
     {
       "pointer_index": 124,
-      "page_index": 47,
+      "page_index": 35,
       "segment_lengths": [
         1,
         6
@@ -1522,7 +1512,7 @@
     },
     {
       "pointer_index": 128,
-      "page_index": 48,
+      "page_index": 47,
       "segment_lengths": [
         1,
         3
@@ -1533,7 +1523,7 @@
     },
     {
       "pointer_index": 129,
-      "page_index": 32,
+      "page_index": 30,
       "segment_lengths": [
         1,
         4
@@ -1544,7 +1534,7 @@
     },
     {
       "pointer_index": 130,
-      "page_index": 23,
+      "page_index": 11,
       "segment_lengths": [
         1,
         2
@@ -1566,7 +1556,7 @@
     },
     {
       "pointer_index": 132,
-      "page_index": 48,
+      "page_index": 42,
       "segment_lengths": [
         1,
         2
@@ -1577,7 +1567,7 @@
     },
     {
       "pointer_index": 133,
-      "page_index": 48,
+      "page_index": 47,
       "segment_lengths": [
         1,
         3
@@ -1599,7 +1589,7 @@
     },
     {
       "pointer_index": 135,
-      "page_index": 47,
+      "page_index": 36,
       "segment_lengths": [
         6
       ],
@@ -1619,7 +1609,7 @@
     },
     {
       "pointer_index": 137,
-      "page_index": 33,
+      "page_index": 18,
       "segment_lengths": [
         13
       ],
@@ -1660,7 +1650,7 @@
     },
     {
       "pointer_index": 141,
-      "page_index": 43,
+      "page_index": 44,
       "segment_lengths": [
         7
       ],
@@ -1680,7 +1670,7 @@
     },
     {
       "pointer_index": 143,
-      "page_index": 44,
+      "page_index": 46,
       "segment_lengths": [
         7
       ],
@@ -1731,7 +1721,7 @@
     },
     {
       "pointer_index": 148,
-      "page_index": 47,
+      "page_index": 46,
       "segment_lengths": [
         6
       ],
@@ -1771,7 +1761,7 @@
     },
     {
       "pointer_index": 152,
-      "page_index": 47,
+      "page_index": 46,
       "segment_lengths": [
         6
       ],
@@ -1791,7 +1781,7 @@
     },
     {
       "pointer_index": 154,
-      "page_index": 18,
+      "page_index": 40,
       "segment_lengths": [
         5
       ],
@@ -1843,7 +1833,7 @@
     },
     {
       "pointer_index": 159,
-      "page_index": 48,
+      "page_index": 47,
       "segment_lengths": [
         1,
         4
@@ -1865,7 +1855,7 @@
     },
     {
       "pointer_index": 161,
-      "page_index": 47,
+      "page_index": 46,
       "segment_lengths": [
         1,
         5
@@ -1876,7 +1866,7 @@
     },
     {
       "pointer_index": 163,
-      "page_index": 39,
+      "page_index": 40,
       "segment_lengths": [
         9
       ],
@@ -1934,7 +1924,7 @@
     },
     {
       "pointer_index": 168,
-      "page_index": 20,
+      "page_index": 21,
       "segment_lengths": [
         1,
         10,
@@ -1994,7 +1984,7 @@
     },
     {
       "pointer_index": 173,
-      "page_index": 32,
+      "page_index": 33,
       "segment_lengths": [
         3,
         13
@@ -2066,7 +2056,7 @@
     },
     {
       "pointer_index": 179,
-      "page_index": 34,
+      "page_index": 28,
       "segment_lengths": [
         3,
         9,
@@ -2114,7 +2104,7 @@
     },
     {
       "pointer_index": 183,
-      "page_index": 34,
+      "page_index": 47,
       "segment_lengths": [
         3,
         3
@@ -2159,7 +2149,7 @@
     },
     {
       "pointer_index": 187,
-      "page_index": 45,
+      "page_index": 44,
       "segment_lengths": [
         2,
         5
@@ -2240,7 +2230,7 @@
     },
     {
       "pointer_index": 194,
-      "page_index": 48,
+      "page_index": 47,
       "segment_lengths": [
         2,
         2
@@ -2251,7 +2241,7 @@
     },
     {
       "pointer_index": 195,
-      "page_index": 45,
+      "page_index": 44,
       "segment_lengths": [
         2,
         4
@@ -2318,7 +2308,7 @@
     },
     {
       "pointer_index": 201,
-      "page_index": 45,
+      "page_index": 20,
       "segment_lengths": [
         3,
         4
@@ -2425,7 +2415,7 @@
     },
     {
       "pointer_index": 210,
-      "page_index": 40,
+      "page_index": 26,
       "segment_lengths": [
         1,
         6,
@@ -2503,7 +2493,7 @@
     },
     {
       "pointer_index": 217,
-      "page_index": 19,
+      "page_index": 17,
       "segment_lengths": [
         1
       ],
@@ -2523,7 +2513,7 @@
     },
     {
       "pointer_index": 219,
-      "page_index": 47,
+      "page_index": 36,
       "segment_lengths": [
         6
       ],
@@ -2533,14 +2523,14 @@
     },
     {
       "pointer_index": 220,
-      "page_index": 15,
+      "page_index": 18,
       "segment_lengths": [
         9,
-        11
+        9
       ],
-      "max_segment_cells": 11,
+      "max_segment_cells": 9,
       "level": "PASS",
-      "korean_text": "다운타운 스페셜! 싸움꾼들이여, 환영한다"
+      "korean_text": "다운타운 스페셜! 싸움꾼들이여 만세!"
     },
     {
       "pointer_index": 221,
@@ -2565,7 +2555,7 @@
     },
     {
       "pointer_index": 223,
-      "page_index": 41,
+      "page_index": 43,
       "segment_lengths": [
         10
       ],
@@ -2575,7 +2565,7 @@
     },
     {
       "pointer_index": 224,
-      "page_index": 34,
+      "page_index": 38,
       "segment_lengths": [
         8,
         5
@@ -2596,17 +2586,17 @@
     },
     {
       "pointer_index": 226,
-      "page_index": 45,
+      "page_index": 47,
       "segment_lengths": [
-        8
+        7
       ],
-      "max_segment_cells": 8,
+      "max_segment_cells": 7,
       "level": "PASS",
-      "korean_text": "정말 그녀일까?"
+      "korean_text": "과연 그럴까?"
     },
     {
       "pointer_index": 227,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         8
       ],
@@ -2627,7 +2617,7 @@
     },
     {
       "pointer_index": 229,
-      "page_index": 47,
+      "page_index": 46,
       "segment_lengths": [
         7
       ],
@@ -2657,7 +2647,7 @@
     },
     {
       "pointer_index": 232,
-      "page_index": 18,
+      "page_index": 38,
       "segment_lengths": [
         13
       ],
@@ -2667,7 +2657,7 @@
     },
     {
       "pointer_index": 233,
-      "page_index": 18,
+      "page_index": 38,
       "segment_lengths": [
         13
       ],
@@ -2697,17 +2687,17 @@
     },
     {
       "pointer_index": 236,
-      "page_index": 18,
+      "page_index": 26,
       "segment_lengths": [
-        22
+        18
       ],
-      "max_segment_cells": 22,
-      "level": "WARN",
-      "korean_text": "상태 레벨이 올랐습니다. 이제 두 배입니다"
+      "max_segment_cells": 18,
+      "level": "PASS",
+      "korean_text": "상태 레벨 상승! 이제 두 배입니다"
     },
     {
       "pointer_index": 237,
-      "page_index": 35,
+      "page_index": 34,
       "segment_lengths": [
         12
       ],
@@ -2717,7 +2707,7 @@
     },
     {
       "pointer_index": 238,
-      "page_index": 40,
+      "page_index": 43,
       "segment_lengths": [
         8
       ],
@@ -2757,7 +2747,7 @@
     },
     {
       "pointer_index": 242,
-      "page_index": 18,
+      "page_index": 19,
       "segment_lengths": [
         18
       ],
@@ -2767,7 +2757,7 @@
     },
     {
       "pointer_index": 243,
-      "page_index": 46,
+      "page_index": 45,
       "segment_lengths": [
         7
       ],

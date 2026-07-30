@@ -6,7 +6,7 @@ from __future__ import annotations
 import hashlib
 
 from build_full_pointer_korean_candidate import (
-    PAGE_COUNT,
+    PAGE_CAPACITY,
     POINTER_COUNT,
     SOURCE_CODES,
     apply_full_candidate,
@@ -29,7 +29,8 @@ def main() -> int:
     base = resolve_base_rom(None).read_bytes()
     config = build_config(base)
     assert len(config["records"]) == POINTER_COUNT
-    assert len(config["pages"]) == PAGE_COUNT
+    page_count = len(config["pages"])
+    assert 0 < page_count <= PAGE_CAPACITY
     assert len(SOURCE_CODES) == 34
     assert config["record_end"] <= 0x07000
     assert config["record_loader_gap"] >= 0
@@ -43,10 +44,10 @@ def main() -> int:
     patched, targets = apply_full_candidate(base, config, default_tall_font(None))
     assert patched[5] == 29
     assert len(patched) == len(base) + 13 * 0x2000
-    assert hashlib.md5(patched).hexdigest() == "1e51b3bebb4a5d1b97d2001c84a73204"
+    assert hashlib.md5(patched).hexdigest() == "c950aa46caaddb491989afd113686798"
     table = patched[PAGE_TABLE_ROM_OFFSET:PAGE_TABLE_ROM_OFFSET + POINTER_COUNT]
     assert sum(value != 0 for value in table) == 244
-    assert max(table) == PAGE_COUNT
+    assert max(table) == page_count
     assert any(target["kind"] == "full_dialogue_records" for target in targets)
     print("Full pointer Korean candidate tests passed.")
     return 0

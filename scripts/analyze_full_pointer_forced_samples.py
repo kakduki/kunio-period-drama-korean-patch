@@ -15,7 +15,7 @@ from rom_utils import REPO_ROOT
 
 SAMPLES = (
     {"pointer_index": 0, "page_index": 11, "cpu": "9FB4", "skip_f0": False},
-    {"pointer_index": 25, "page_index": 16, "cpu": "A140", "skip_f0": True},
+    {"pointer_index": 25, "page_index": 15, "cpu": "A140", "skip_f0": True},
     {"pointer_index": 50, "page_index": 41, "cpu": "A310", "skip_f0": True},
     {"pointer_index": 110, "page_index": 32, "cpu": "A788", "skip_f0": True},
     {"pointer_index": 181, "page_index": 42, "cpu": "AAF4", "skip_f0": False},

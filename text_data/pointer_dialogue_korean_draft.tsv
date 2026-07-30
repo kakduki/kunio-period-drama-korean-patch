@@ -217,17 +217,17 @@ pointer_index	translation_status	korean_text	basis	notes
 215	english_reference_reviewed	끝냈구나. 할 일도 없냐?	english_reference	영어 참조 도발 어조 대조 완료
 216	english_reference_reviewed	다시 만날지도 모르지. 그때 혼내 주마	english_reference	영어 참조 의미 대조 완료
 217	english_reference_reviewed	끝	english_reference	영어 참조 의미 대조 완료
-218	english_semantic_draft	모험은 지금 시작된다	english_reference	인트로 문맥 확인 필요
-219	english_semantic_draft	어서 오세요	english_reference	인트로 문맥 확인 필요
-220	english_semantic_draft	다운타운 스페셜! 싸움꾼들이여, 환영한다	english_reference	인트로 문맥 확인 필요
+218	english_reference_reviewed	모험은 지금 시작된다	english_reference	영어 참조 연속 인트로 대조 완료
+219	english_reference_reviewed	어서 오세요	english_reference	영어 참조 연속 인트로 대조 완료
+220	english_reference_reviewed	다운타운 스페셜! 싸움꾼들이여 만세!	english_reference	영어 참조 의미 대조 완료
 221	english_reference_reviewed	에서 우리를 만나라	english_reference	뒤따르는 장소 제어 토큰 보존
-222	english_semantic_draft	수수께끼의 땅 스루가, 후지산의 고향	english_reference	인트로 문맥 확인 필요
-223	english_semantic_draft	거친 바다를 건너	english_reference	인트로 문맥 확인 필요
+222	english_reference_reviewed	수수께끼의 땅 스루가, 후지산의 고향	english_reference	영어 참조 의미 대조 완료
+223	english_reference_reviewed	거친 바다를 건너	english_reference	영어 참조 의미 대조 완료
 224	english_reference_reviewed	의무와 사랑이 기다린다	english_reference	영어 참조 의미 대조 완료
-225	english_semantic_draft	쿠니오의 사랑이 기다린다	english_reference	인트로 문맥 확인 필요
-226	english_semantic_draft	정말 그녀일까?	english_reference	인트로 문맥 확인 필요
+225	english_reference_reviewed	쿠니오의 사랑이 기다린다	english_reference	영어 참조 의미 대조 완료
+226	english_reference_reviewed	과연 그럴까?	english_reference	영어 참조 연속 인트로 대조 완료
 227	english_semantic_draft	사용했습니다	english_reference	아이템/UI 문맥 확인 필요
-228	english_semantic_draft	새 지역으로 갈 준비가 됐나요? 그래	english_reference	이벤트/UI 문맥 확인 필요
+228	english_reference_reviewed	새 지역으로 갈 준비가 됐나요? 그래	english_reference	영어 참조 의미 대조 완료
 229	english_reference_reviewed	주었습니다	english_reference	영어 참조 의미 대조 완료
 230	english_semantic_draft	떨어뜨렸습니다	english_reference	아이템/UI 문맥 확인 필요
 231	english_semantic_draft	상태가 올랐습니다	english_reference	성장/UI 문맥 확인 필요
@@ -235,14 +235,14 @@ pointer_index	translation_status	korean_text	basis	notes
 233	english_semantic_draft	능력치가 올랐습니다	english_reference	성장/UI 문맥 확인 필요
 234	english_semantic_draft	능력치가 최대입니다	english_reference	성장/UI 문맥 확인 필요
 235	english_semantic_draft	기술을 배웠습니다	english_reference	성장/UI 문맥 확인 필요
-236	english_semantic_draft	상태 레벨이 올랐습니다. 이제 두 배입니다	english_reference	성장/UI 문맥 확인 필요
-237	english_semantic_draft	지도 커서로 이동하세요	english_reference	지도/UI 문맥 확인 필요
+236	english_reference_reviewed	상태 레벨 상승! 이제 두 배입니다	english_reference	영어 참조 의미 대조 완료
+237	english_reference_reviewed	지도 커서로 이동하세요	english_reference	영어 참조 의미 대조 완료
 238	english_reference_reviewed	해제했습니다	english_reference	장비 제거 의미로 영어 참조 대조 완료
-239	english_semantic_draft	미소 지었습니다	english_reference	이벤트/UI 문맥 확인 필요
-240	english_semantic_draft	몸이 가벼워졌습니다	english_reference	이벤트/UI 문맥 확인 필요
-241	english_semantic_draft	멋진 순간입니다	english_reference	이벤트/UI 문맥 확인 필요
-242	english_semantic_draft	장비와 능력치가 이제 두 배입니다	english_reference	성장/UI 문맥 확인 필요
-243	english_semantic_draft	넘어졌습니다	english_reference	이벤트/UI 문맥 확인 필요
+239	english_semantic_draft	미소 지었습니다	english_reference	선행 F0 주체 변수 문맥 확인 필요
+240	english_semantic_draft	몸이 가벼워졌습니다	english_reference	선행 F0 주체 변수 문맥 확인 필요
+241	english_reference_reviewed	멋진 순간입니다	english_reference	영어 참조 의미 대조 완료
+242	english_reference_reviewed	장비와 능력치가 이제 두 배입니다	english_reference	영어 참조 의미 대조 완료
+243	english_semantic_draft	넘어졌습니다	english_reference	선행 F0 주체 변수 문맥 확인 필요
 244	excluded_non_dialogue		english_reference	단독 변수 종료 레코드라 번역하지 않음
 245	english_semantic_draft	가족	english_reference	엔딩/UI 문맥 확인 필요
 246	excluded_non_dialogue		english_reference	코드/데이터 블록으로 보이며 대사 패치에서 제외

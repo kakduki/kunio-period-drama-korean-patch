@@ -7,7 +7,7 @@
 5,english_reference_reviewed,YOU FIGHT LIKE A WUS,겁쟁이처럼 싸우는군,겁쟁이처럼 싸우는군,english_reference,영어 참조 의미 대조 완료,,
 6,english_reference_reviewed,PLEASE LET ME JOIN YOU,나도 끼워 줘,나도 끼워 줘,english_reference,영어 참조 의미 대조 완료,,
 7,english_reference_reviewed,HE AIN T NOTHIN,그 녀석은 아무것도 아니야,그 녀석은 아무것도 아니야,english_reference,영어 참조 의미 대조 완료,,
-8,english_reference_reviewed,LET ME COME TOO,나도 같이 가자,나도 같이 가자,english_reference,영어 참조 의미 대조 완료,,
+8,english_reference_reviewed,LET ME COME TOO,나도 같이 가자,나도 같이 가자,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 9,english_semantic_draft,OK LET S FIGHT,"좋아, 우리도 싸우자",좋아 우리도 싸우자,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 10,english_reference_reviewed,I GIVE UP YOU RE TOO GOOD,항복이다! 네가 너무 강해,항복이다 네가 너무 강해,english_reference,영어 참조 의미 대조 완료,,
 11,english_reference_reviewed,YOU AIN T SEEN NOTHIN YET,아직 진짜 실력을 못 봤다,아직 진짜 실력을 못 봤다,english_reference,영어 참조 의미 대조 완료,,
@@ -110,7 +110,7 @@
 108,english_reference_reviewed,HEH STUPID BASTARDS,"허허, 이 멍청한 자식들",허허 이 멍청한 자식들,english_reference,영어 참조 의미 대조 완료,,
 109,english_reference_reviewed,ISN T THE MUSIC IN THIS VIDEO GAME GREAT,이 비디오 게임의 음악은 정말 멋지지 않나?,이 비디오 게임의 음악은 정말 멋지지 않나,english_reference,영어 참조 의미 대조 완료,,
 110,english_reference_reviewed,THEY RE BACK TO HAVE THEIR ASSES KICKED AGAIN,또 얻어맞으러 돌아왔군,또 얻어맞으러 돌아왔군,english_reference,영어 참조 의미 대조 완료,,
-111,english_reference_reviewed,HUH,어?,어,english_reference,영어 참조 의미 대조 완료,,
+111,english_reference_reviewed,HUH,어?,어,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 112,english_semantic_draft,TAKE THAT WHA,받아라! 뭐라고?,받아라 뭐라고,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 113,english_reference_reviewed,NOW I M REALLY PISSED,이제 정말 화났다,이제 정말 화났다,english_reference,영어 참조 의미 대조 완료,,
 114,english_reference_reviewed,AIYEE,꺄악!,꺄악,english_reference,영어 참조 의미 대조 완료,,
@@ -217,33 +217,33 @@
 215,english_reference_reviewed,YOU FINISHED IT DON T YOU HAVE A LIFE,끝냈구나. 할 일도 없냐?,끝냈구나 할 일도 없냐,english_reference,영어 참조 도발 어조 대조 완료,,
 216,english_reference_reviewed,MAYBE WE LL MEET AGAIN AND KICK YOUR ASS,다시 만날지도 모르지. 그때 혼내 주마,다시 만날지도 모르지 그때 혼내 주마,english_reference,영어 참조 의미 대조 완료,,
 217,english_reference_reviewed,THE END,끝,끝,english_reference,영어 참조 의미 대조 완료,,
-218,english_semantic_draft,S ADVENTURE BEGINS NOW,모험은 지금 시작된다,모험은 지금 시작된다,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-219,english_semantic_draft,WELCOME TO,어서 오세요,어서 오세요,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-220,english_semantic_draft,DOWNTOWN SPECIAL HAIL FIGHTERS,"다운타운 스페셜! 싸움꾼들이여, 환영한다",다운타운 스페셜 싸움꾼들이여 환영한다,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+218,english_reference_reviewed,S ADVENTURE BEGINS NOW,모험은 지금 시작된다,모험은 지금 시작된다,english_reference,영어 참조 연속 인트로 대조 완료,,
+219,english_reference_reviewed,WELCOME TO,어서 오세요,어서 오세요,english_reference,영어 참조 연속 인트로 대조 완료,,
+220,english_reference_reviewed,DOWNTOWN SPECIAL HAIL FIGHTERS,다운타운 스페셜! 싸움꾼들이여 만세!,다운타운 스페셜 싸움꾼들이여 만세,english_reference,영어 참조 의미 대조 완료,,
 221,english_reference_reviewed,MEET US IN,에서 우리를 만나라,에서 우리를 만나라,english_reference,뒤따르는 장소 제어 토큰 보존,,
-222,english_semantic_draft,SURUGA LAND OF MYSTERY HOME OF MT FUJI,"수수께끼의 땅 스루가, 후지산의 고향",수수께끼의 땅 스루가 후지산의 고향,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-223,english_semantic_draft,ACROSS THE RAGING SEA,거친 바다를 건너,거친 바다를 건너,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+222,english_reference_reviewed,SURUGA LAND OF MYSTERY HOME OF MT FUJI,"수수께끼의 땅 스루가, 후지산의 고향",수수께끼의 땅 스루가 후지산의 고향,english_reference,영어 참조 의미 대조 완료,,
+223,english_reference_reviewed,ACROSS THE RAGING SEA,거친 바다를 건너,거친 바다를 건너,english_reference,영어 참조 의미 대조 완료,,
 224,english_reference_reviewed,DUTY CALLS AND ROMANCE,의무와 사랑이 기다린다,의무와 사랑이 기다린다,english_reference,영어 참조 의미 대조 완료,,
-225,english_semantic_draft,KUNIO S LOVE AWAITS,쿠니오의 사랑이 기다린다,쿠니오의 사랑이 기다린다,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-226,english_semantic_draft,OR DOES SHE,정말 그녀일까?,정말 그녀일까,english_reference,인트로 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+225,english_reference_reviewed,KUNIO S LOVE AWAITS,쿠니오의 사랑이 기다린다,쿠니오의 사랑이 기다린다,english_reference,영어 참조 의미 대조 완료,,
+226,english_reference_reviewed,OR DOES SHE,과연 그럴까?,과연 그럴까,english_reference,영어 참조 연속 인트로 대조 완료,,
 227,english_semantic_draft,USED,사용했습니다,사용했습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-228,english_semantic_draft,ARE YOU READY FOR THIS NEW AREA YEAH,새 지역으로 갈 준비가 됐나요? 그래,새 지역으로 갈 준비가 됐나요 그래,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+228,english_reference_reviewed,ARE YOU READY FOR THIS NEW AREA YEAH,새 지역으로 갈 준비가 됐나요? 그래,새 지역으로 갈 준비가 됐나요 그래,english_reference,영어 참조 의미 대조 완료,,
 229,english_reference_reviewed,GAVE,주었습니다,주었습니다,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 230,english_semantic_draft,DROPPED,떨어뜨렸습니다,떨어뜨렸습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-231,english_semantic_draft,S STATUS IS UP,상태가 올랐습니다,상태가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-232,english_semantic_draft,S IS UP,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-233,english_semantic_draft,S UP BY,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-234,english_semantic_draft,S IS MAXXED,능력치가 최대입니다,능력치가 최대입니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-235,english_semantic_draft,LEARNED A TECHNIQUE,기술을 배웠습니다,기술을 배웠습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-236,english_semantic_draft,STATUS LEVELS UP NOW DOUBLE,상태 레벨이 올랐습니다. 이제 두 배입니다,상태 레벨이 올랐습니다 이제 두 배입니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-237,english_semantic_draft,USE MAP CURSOR TO TRAVEL,지도 커서로 이동하세요,지도 커서로 이동하세요,english_reference,지도/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+231,english_semantic_draft,S STATUS IS UP,상태가 올랐습니다,상태가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+232,english_semantic_draft,S IS UP,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+233,english_semantic_draft,S UP BY,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+234,english_semantic_draft,S IS MAXXED,능력치가 최대입니다,능력치가 최대입니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+235,english_semantic_draft,LEARNED A TECHNIQUE,기술을 배웠습니다,기술을 배웠습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+236,english_reference_reviewed,STATUS LEVELS UP NOW DOUBLE,상태 레벨 상승! 이제 두 배입니다,상태 레벨 상승 이제 두 배입니다,english_reference,영어 참조 의미 대조 완료,,
+237,english_reference_reviewed,USE MAP CURSOR TO TRAVEL,지도 커서로 이동하세요,지도 커서로 이동하세요,english_reference,영어 참조 의미 대조 완료,,
 238,english_reference_reviewed,REMOVED,해제했습니다,해제했습니다,english_reference,장비 제거 의미로 영어 참조 대조 완료,,dynamic_control_context
-239,english_semantic_draft,SMILES,미소 지었습니다,미소 지었습니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-240,english_semantic_draft,FELT LIGHTER,몸이 가벼워졌습니다,몸이 가벼워졌습니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-241,english_semantic_draft,A GREAT MOMENT,멋진 순간입니다,멋진 순간입니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-242,english_semantic_draft,EQUIPMENT STATS NOW DOUBLE,장비와 능력치가 이제 두 배입니다,장비와 능력치가 이제 두 배입니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
-243,english_semantic_draft,FELL,넘어졌습니다,넘어졌습니다,english_reference,이벤트/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+239,english_semantic_draft,SMILES,미소 지었습니다,미소 지었습니다,english_reference,선행 F0 주체 변수 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+240,english_semantic_draft,FELT LIGHTER,몸이 가벼워졌습니다,몸이 가벼워졌습니다,english_reference,선행 F0 주체 변수 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+241,english_reference_reviewed,A GREAT MOMENT,멋진 순간입니다,멋진 순간입니다,english_reference,영어 참조 의미 대조 완료,,
+242,english_reference_reviewed,EQUIPMENT STATS NOW DOUBLE,장비와 능력치가 이제 두 배입니다,장비와 능력치가 이제 두 배입니다,english_reference,영어 참조 의미 대조 완료,,
+243,english_semantic_draft,FELL,넘어졌습니다,넘어졌습니다,english_reference,선행 F0 주체 변수 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 244,excluded_non_dialogue,,,,english_reference,단독 변수 종료 레코드라 번역하지 않음,,
-245,english_semantic_draft,FAMILY,가족,가족,english_reference,엔딩/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+245,english_semantic_draft,FAMILY,가족,가족,english_reference,엔딩/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 246,excluded_non_dialogue,MF A J S X B C,,,english_reference,코드/데이터 블록으로 보이며 대사 패치에서 제외,,
 247,excluded_non_dialogue,,,,english_reference,포인터 테이블 외부 소유자이며 대사 레코드 아님,,

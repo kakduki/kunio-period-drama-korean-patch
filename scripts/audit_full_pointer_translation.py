@@ -18,7 +18,9 @@ POINTER_COUNT = 248
 TOKEN_RE = re.compile(r"<([0-9A-Fa-f]{2})>")
 ASCII_WORD_RE = re.compile(r"[A-Za-z]+")
 ALLOWED_DRAFT_PUNCTUATION = frozenset(" !?.,:~'-")
-DYNAMIC_CONTROL_CODES = frozenset({0xF1, 0xFA, 0xFB, 0xFC, 0xFD, 0xFE})
+DYNAMIC_CONTROL_CODES = frozenset(
+    {0xF1, 0xF2, 0xF5, 0xFA, 0xFB, 0xFC, 0xFD, 0xFE}
+)
 DEFAULT_DRAFT = REPO_ROOT / "text_data" / "pointer_dialogue_korean_draft.tsv"
 DEFAULT_ENGLISH = REPO_ROOT / "rom_analysis" / "english_script_dump.tsv"
 DEFAULT_JSON = REPO_ROOT / "rom_analysis" / "full_pointer_translation_audit.json"
@@ -79,7 +81,8 @@ def row_issues(
     if active and "확인 필요" in draft["notes"]:
         warnings.append("context_confirmation_required")
     raw = bytes.fromhex(english["en_raw_bytes"]) if english["en_raw_bytes"] else b""
-    if active and DYNAMIC_CONTROL_CODES.intersection(raw):
+    dynamic_f0 = 0xF0 in raw and not raw.startswith(bytes((0xF0, 0xBB)))
+    if active and (DYNAMIC_CONTROL_CODES.intersection(raw) or dynamic_f0):
         warnings.append("dynamic_control_context")
     return failures, warnings
 

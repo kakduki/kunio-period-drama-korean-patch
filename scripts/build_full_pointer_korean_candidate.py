@@ -51,7 +51,7 @@ RECORD_PACK_START = 0x05FC4
 ORIGINAL_CHR_BANKS = 16
 OUTPUT_CHR_BANKS = 29
 PAGE_SIZE = 0x0800
-PAGE_COUNT = 49
+PAGE_CAPACITY = (OUTPUT_CHR_BANKS - ORIGINAL_CHR_BANKS) * 4
 SOURCE_PAGE_OFFSET_IN_CHR = 0x0F800
 SOURCE_CODES = tuple(range(0x81, 0x9B)) + tuple(range(0xC0, 0xC8))
 BOTTOM_TILE_DELTA = 0x20
@@ -187,8 +187,10 @@ def build_config(
         raise ValueError("full pointer inputs must each contain 248 rows")
     pages = plan["optimized_pages"]
     assignments = plan["pointer_page_assignments"]
-    if len(pages) != PAGE_COUNT or len(assignments) != POINTER_COUNT:
-        raise ValueError("font page plan does not match the verified 49-page layout")
+    if not pages or len(pages) > PAGE_CAPACITY or len(assignments) != POINTER_COUNT:
+        raise ValueError(
+            f"font page plan must contain 1-{PAGE_CAPACITY} pages and {POINTER_COUNT} assignments"
+        )
 
     page_maps: list[dict[str, int]] = []
     for page in pages:
@@ -329,9 +331,10 @@ def apply_full_candidate(
     if len(source_page) != PAGE_SIZE:
         raise AssertionError("source CHR page is incomplete")
     appended = bytearray()
-    for page_index in range((OUTPUT_CHR_BANKS - ORIGINAL_CHR_BANKS) * 4):
+    page_count = len(page_maps)
+    for page_index in range(PAGE_CAPACITY):
         page = bytearray(source_page)
-        if page_index < PAGE_COUNT:
+        if page_index < page_count:
             for glyph, code in page_maps[page_index].items():
                 top, bottom = render_tall_tiles(glyph, font_path=font_path, threshold=92)
                 top_offset = ((code - 0x80) % 0x80) * 16
@@ -346,7 +349,7 @@ def apply_full_candidate(
             "kind": "expanded_korean_chr_pages",
             "rom_offset": len(base),
             "length": len(appended),
-            "page_count": PAGE_COUNT,
+            "page_count": page_count,
         }
     )
     return bytes(result), targets
@@ -405,7 +408,7 @@ def main() -> int:
         "record_start": f"0x{config['record_start']:05X}",
         "record_end": f"0x{config['record_end']:05X}",
         "record_loader_gap": config["record_loader_gap"],
-        "font_pages": PAGE_COUNT,
+        "font_pages": len(config["pages"]),
         "chr_banks": OUTPUT_CHR_BANKS,
         "targets": targets,
     }

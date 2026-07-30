@@ -6,17 +6,17 @@
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 189,
+    "reviewed_count": 201,
     "status_counts": {
-      "english_reference_reviewed": 189,
-      "english_semantic_draft": 55,
+      "english_reference_reviewed": 201,
+      "english_semantic_draft": 43,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 55,
-      "dynamic_control_context": 36,
-      "semantic_draft_not_reviewed": 55
+      "context_confirmation_required": 43,
+      "dynamic_control_context": 47,
+      "semantic_draft_not_reviewed": 43
     },
     "duplicate_display_groups": 7
   },
@@ -177,7 +177,9 @@
       "basis": "english_reference",
       "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": []
+      "warnings": [
+        "dynamic_control_context"
+      ]
     },
     {
       "pointer_index": 9,
@@ -1367,7 +1369,9 @@
       "basis": "english_reference",
       "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": []
+      "warnings": [
+        "dynamic_control_context"
+      ]
     },
     {
       "pointer_index": 112,
@@ -2612,45 +2616,36 @@
     },
     {
       "pointer_index": 218,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "S ADVENTURE BEGINS NOW",
       "korean_draft": "모험은 지금 시작된다",
       "compiled_display_text": "모험은 지금 시작된다",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 연속 인트로 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 219,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WELCOME TO",
       "korean_draft": "어서 오세요",
       "compiled_display_text": "어서 오세요",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 연속 인트로 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 220,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DOWNTOWN SPECIAL HAIL FIGHTERS",
-      "korean_draft": "다운타운 스페셜! 싸움꾼들이여, 환영한다",
-      "compiled_display_text": "다운타운 스페셜 싸움꾼들이여 환영한다",
+      "korean_draft": "다운타운 스페셜! 싸움꾼들이여 만세!",
+      "compiled_display_text": "다운타운 스페셜 싸움꾼들이여 만세",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 221,
@@ -2665,31 +2660,25 @@
     },
     {
       "pointer_index": 222,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SURUGA LAND OF MYSTERY HOME OF MT FUJI",
       "korean_draft": "수수께끼의 땅 스루가, 후지산의 고향",
       "compiled_display_text": "수수께끼의 땅 스루가 후지산의 고향",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 223,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ACROSS THE RAGING SEA",
       "korean_draft": "거친 바다를 건너",
       "compiled_display_text": "거친 바다를 건너",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 224,
@@ -2704,31 +2693,25 @@
     },
     {
       "pointer_index": 225,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "KUNIO S LOVE AWAITS",
       "korean_draft": "쿠니오의 사랑이 기다린다",
       "compiled_display_text": "쿠니오의 사랑이 기다린다",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 226,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OR DOES SHE",
-      "korean_draft": "정말 그녀일까?",
-      "compiled_display_text": "정말 그녀일까",
+      "korean_draft": "과연 그럴까?",
+      "compiled_display_text": "과연 그럴까",
       "basis": "english_reference",
-      "notes": "인트로 문맥 확인 필요",
+      "notes": "영어 참조 연속 인트로 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 227,
@@ -2747,17 +2730,14 @@
     },
     {
       "pointer_index": 228,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ARE YOU READY FOR THIS NEW AREA YEAH",
       "korean_draft": "새 지역으로 갈 준비가 됐나요? 그래",
       "compiled_display_text": "새 지역으로 갈 준비가 됐나요 그래",
       "basis": "english_reference",
-      "notes": "이벤트/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 229,
@@ -2798,7 +2778,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2812,7 +2793,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2826,7 +2808,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2840,7 +2823,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2854,36 +2838,31 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 236,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "STATUS LEVELS UP NOW DOUBLE",
-      "korean_draft": "상태 레벨이 올랐습니다. 이제 두 배입니다",
-      "compiled_display_text": "상태 레벨이 올랐습니다 이제 두 배입니다",
+      "korean_draft": "상태 레벨 상승! 이제 두 배입니다",
+      "compiled_display_text": "상태 레벨 상승 이제 두 배입니다",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 237,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "USE MAP CURSOR TO TRAVEL",
       "korean_draft": "지도 커서로 이동하세요",
       "compiled_display_text": "지도 커서로 이동하세요",
       "basis": "english_reference",
-      "notes": "지도/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 238,
@@ -2905,11 +2884,12 @@
       "korean_draft": "미소 지었습니다",
       "compiled_display_text": "미소 지었습니다",
       "basis": "english_reference",
-      "notes": "이벤트/UI 문맥 확인 필요",
+      "notes": "선행 F0 주체 변수 문맥 확인 필요",
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2919,40 +2899,35 @@
       "korean_draft": "몸이 가벼워졌습니다",
       "compiled_display_text": "몸이 가벼워졌습니다",
       "basis": "english_reference",
-      "notes": "이벤트/UI 문맥 확인 필요",
+      "notes": "선행 F0 주체 변수 문맥 확인 필요",
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 241,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "A GREAT MOMENT",
       "korean_draft": "멋진 순간입니다",
       "compiled_display_text": "멋진 순간입니다",
       "basis": "english_reference",
-      "notes": "이벤트/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 242,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "EQUIPMENT STATS NOW DOUBLE",
       "korean_draft": "장비와 능력치가 이제 두 배입니다",
       "compiled_display_text": "장비와 능력치가 이제 두 배입니다",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "영어 참조 의미 대조 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 243,
@@ -2961,11 +2936,12 @@
       "korean_draft": "넘어졌습니다",
       "compiled_display_text": "넘어졌습니다",
       "basis": "english_reference",
-      "notes": "이벤트/UI 문맥 확인 필요",
+      "notes": "선행 F0 주체 변수 문맥 확인 필요",
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
@@ -2990,7 +2966,8 @@
       "failures": [],
       "warnings": [
         "semantic_draft_not_reviewed",
-        "context_confirmation_required"
+        "context_confirmation_required",
+        "dynamic_control_context"
       ]
     },
     {
