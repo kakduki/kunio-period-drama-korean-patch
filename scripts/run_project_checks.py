@@ -285,6 +285,7 @@ LUA_SCRIPTS = [
     "lua/kunio_pointer_dialogue_route_probe.lua",
     "lua/kunio_pointer_dialogue_batch_000_002_8x16_probe.lua",
     "lua/kunio_ptr181_renderer_probe.lua",
+    "lua/kunio_ptr181_pointer_loader_probe.lua",
     "lua/kunio_stage_progression_probe.lua",
 ]
 
