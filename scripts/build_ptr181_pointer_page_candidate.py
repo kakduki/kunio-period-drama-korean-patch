@@ -115,7 +115,7 @@ def render_report(payload: dict[str, object]) -> str:
             "- Development page state: `4`; computed MMC3 R1: `$86`.",
             "- Renderer activation and CHR selection now depend on `$07FF`, not a hardcoded record pointer.",
             "- The temporary loader/table region overlaps original Japanese records and is valid only for this bounded development candidate.",
-            "- The final compiler must first relocate the complete Korean stream ending at ROM `0x06F88`.",
+            "- The common loader starts at ROM `0x07000`; the whole-script compiler packs records before it.",
             "",
             f"- Base MD5: `{payload['base_md5']}`.",
             f"- Candidate MD5: `{payload['candidate_md5']}`.",

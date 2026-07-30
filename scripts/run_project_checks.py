@@ -68,6 +68,7 @@ KEY_PYTHON = [
     "scripts/build_ptr181_expanded_code_pool_probe.py",
     "scripts/build_ptr181_korean_8x16_candidate.py",
     "scripts/build_ptr181_pointer_page_candidate.py",
+    "scripts/build_full_pointer_korean_candidate.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -221,6 +222,7 @@ KEY_PYTHON = [
     "scripts/test_build_ptr181_expanded_code_pool_probe.py",
     "scripts/test_build_ptr181_korean_8x16_candidate.py",
     "scripts/test_build_ptr181_pointer_page_candidate.py",
+    "scripts/test_build_full_pointer_korean_candidate.py",
     "scripts/verify_broad_preview_patch.py",
     "scripts/verify_primary_patch.py",
 ]

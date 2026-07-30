@@ -17,13 +17,13 @@ POINTER_COUNT = 248
 LOADER_HOOK_CPU = 0x9137
 LOADER_HOOK_ROM_OFFSET = 0x05147
 LOADER_HOOK_ORIGINAL = bytes.fromhex("B9 8B 70 0A A8")
-# The full Korean stream estimate ends at ROM 0x06F88. The final compiler
-# reserves the following bytes for this helper and its 248-byte page table.
-LOADER_CAVE_CPU = 0xAF78
-LOADER_CAVE_ROM_OFFSET = 0x06F88
+# The control-preserving full Korean stream ends before ROM 0x07000. The final
+# compiler reserves the following bytes for this helper and its page table.
+LOADER_CAVE_CPU = 0xAFF0
+LOADER_CAVE_ROM_OFFSET = 0x07000
 LOADER_CAVE_SIZE = 27
-PAGE_TABLE_CPU = 0xAF93
-PAGE_TABLE_ROM_OFFSET = 0x06FA3
+PAGE_TABLE_CPU = 0xB00B
+PAGE_TABLE_ROM_OFFSET = 0x0701B
 PAGE_STATE_ADDRESS = 0x07FF
 TEMP_DIALOGUE_ID_ADDRESS = 0x07FE
 TEMP_POINTER_HIGH_ADDRESS = 0x07FD

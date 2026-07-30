@@ -17,6 +17,7 @@ separate renderer family.
 | opening_dialogue_bank8_static_r1_page_proof | normal mapper setup `0x1EE57`; R1 `3E -> 46` | 7-glyph target ownership checked | frame 883 `18/18`; `lua_done`; mapping `28/28` | Dialogue-only black frame | FAIL_STATIC_R1_VISUAL_BACKGROUND |
 | opening_dialogue_bank8_static_r1_capacity_tier2 | normal mapper setup `0x1EE57`; R1 `3E -> 46` | 34 glyphs emit from Bank 8 but declared targets remain Bank 7 | frame 883 `37/37`; `lua_done`; mapping FAIL | Dialogue-only capture; background lost | FAIL_PAGE_SLOT_CONFLICT |
 | opening_dialogue_bank8_static_r1_safe_capacity_tier2 | normal mapper setup `0x1EE57`; R1 `3E -> 46`; actual R1 `0x800`-byte window clone | 34 glyphs declared at Bank 8 runtime slots; source Bank 7 preserved | frame 883 `37/37`; `lua_done`; mapping `67/67` | Native opening background and Korean-looking dialogue visible | SOFT_GATE_PASS_SAFE_STATIC_R1_CAPACITY |
+| full_pointer_korean_candidate | pointers `0-247`; packed records `0x05FC4-0x06EF9`; 49 appended CHR pages | all active records preserve English non-letter control skeletons; 4 excluded rows retain Japanese bytes | relocated PTR-181 `$AAF4` PASS; page state `$2C`; R1 `$D6` | Korean PTR-181 line and field background PASS | WHOLE_SCRIPT_RUNTIME_PASS_PTR181 |
 
 The current menu candidate is MD5 `d425814e4f1249e2872c9eb09f7fb93d` and uses cloned R1 page `0x46`.
 The Items action source `0x13727` reaches PPU `0x2363` through the shared R1 page.
@@ -26,3 +27,9 @@ The pointer batch 002/003 candidate has MD5 `863c62ba178973ee1a96cc7971512149`.
 The direct 8x16 p0/p1/p2 candidate has MD5 `ba3ef60856e1d2b5aa4dba40bcf1ff41`.
 Both remain separate from the opening/menu candidate until a common renderer
 guard and a non-opening target route are proven.
+
+The full pointer candidate supersedes those small batches as the current
+whole-script development build. Its MD5 is
+`2f706986e429a1acba9238d551f640d0`. It compiles 244 Korean dialogue rows,
+retains four excluded Japanese records, and proves the complete optimized-page
+runtime path on PTR-181. Broad visual coverage is still a release gate.

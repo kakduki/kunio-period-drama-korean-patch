@@ -2,7 +2,7 @@
 -- The route is finite and stops after the observed frame-392 field dialogue.
 
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/ptr181_renderer_probe"
-local TARGET_POINTER = 0xB188
+local TARGET_POINTER = tonumber(os.getenv("KUNIO_TARGET_POINTER") or "B188", 16)
 local CAPTURE_FRAME = 392
 local MAX_FRAMES = 450
 local TRACE_LIMIT = 5000

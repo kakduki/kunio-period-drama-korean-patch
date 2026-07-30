@@ -42,7 +42,7 @@ def main() -> int:
         )
     )
     hook = loader_hook()
-    assert hook == bytes((0x4C, 0x78, 0xAF, 0xEA, 0xEA))
+    assert hook == bytes((0x4C, 0xF0, 0xAF, 0xEA, 0xEA))
     assert LOADER_HOOK_CPU == 0x9137
     assert mapper_page_value(1) == 0x80
     assert mapper_page_value(4) == 0x86

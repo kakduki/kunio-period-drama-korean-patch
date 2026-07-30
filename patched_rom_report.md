@@ -104,11 +104,29 @@ eligible for release promotion.
   strategy. Full draft capacity remains blocked until non-opening contexts
   and mapper/page lifecycle are proven.
 
-The full Korean pointer draft is separately audited as `FULL_DRAFT_CAPACITY_BLOCKED`:
-244 active rows, 4 excluded rows, 378 unique non-space symbols, and 34
-currently proven direct source slots in the opening context. The next build
-must therefore remain a small, context-confirmed batch or introduce a new
- renderer/page strategy.
+The earlier draft audit reported `FULL_DRAFT_CAPACITY_BLOCKED` because one
+static page held only 34 source codes. The dynamic 49-page strategy below
+supersedes that capacity conclusion while retaining it as historical evidence.
+
+## Full Pointer Korean Development Candidate
+
+- Status: **WHOLE_SCRIPT_RUNTIME_PASS_PTR181**.
+- Candidate MD5: `2f706986e429a1acba9238d551f640d0`.
+- All 248 pointer rows are represented; 244 rows compile Korean text and four
+  excluded non-dialogue rows retain Japanese bytes.
+- Packed records occupy ROM `0x05FC4-0x06EF9` (3,894 bytes), leaving 262 bytes
+  before the loader at `0x07000`.
+- Every active record preserves the English reference's non-letter control
+  skeleton while replacing its letter/space runs.
+- The optimized 49-page plan is compiled into 13 appended CHR banks.
+- PTR-181 relocates to `$AAF4` and passes the bounded runtime route with
+  `$07FF=2C`, `R1=D6`, visible Korean text, and preserved field background.
+- IPS apply round trip: PASS.
+- Broad runtime and translation review remain required for release.
+
+This candidate resolves the earlier whole-script capacity block at the
+development soft gate. It does not retroactively promote every scene to a
+visual PASS.
 
 ## Static R1 Page Lifecycle
 

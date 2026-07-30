@@ -1,10 +1,10 @@
 {
   "status": "CANDIDATE_RUNTIME_PASS_RESTORE_UNKNOWN",
   "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
-  "candidate_md5": "d4542dc5dd87f81264443c5a00ee3ba4",
+  "candidate_md5": "e96f33023190b1eeeaf8392a09d29e63",
   "rom_path": "output\\ptr181_pointer_page_candidate\\kunio_period_drama_korean_ptr181_pointer_page_candidate.nes",
   "ips_path": "output\\ptr181_pointer_page_candidate\\kunio_period_drama_korean_ptr181_pointer_page_candidate.ips",
-  "changed_span_count": 32,
+  "changed_span_count": 35,
   "targets": [
     {
       "kind": "expanded_chr_base_candidate",
@@ -18,12 +18,12 @@
     },
     {
       "kind": "pointer_page_loader",
-      "rom_offset": 28552,
+      "rom_offset": 28672,
       "length": 27
     },
     {
       "kind": "pointer_page_table",
-      "rom_offset": 28579,
+      "rom_offset": 28699,
       "length": 248
     },
     {
