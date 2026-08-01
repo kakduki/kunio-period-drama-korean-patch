@@ -155,6 +155,6 @@ This candidate is the current bounded Items development build. It is not a relea
 
 | build | English owner path | Korean bounded runtime | PPU capture | release status |
 | --- | --- | --- | --- | --- |
-| full_korean_pre_pointer_high_candidate | PRG Bank 1; CPU `$8000 + (ROM - $4010)`; high codes `$81-$9A`; CHR Bank 7 `$181/$1A1` | exact owner 9/10; `lua_done` at frame 900; `EN-PRE-138` remains unknown | English and Korean PPU reads PASS at frame 1906; native pixel attribution UNKNOWN | NOT_READY |
+| full_korean_pre_pointer_high_candidate | PRG Bank 1; CPU `$8000 + (ROM - $4010)`; high codes `$81-$9A`; CHR Bank 7 `$181/$1A1` | exact owner 10/10; `lua_done` at frame 900 | English and Korean PPU reads PASS at frame 1906; native pixel attribution UNKNOWN | NOT_READY |
 
 This candidate composes the English reference structure first, then reapplies the current Korean composition and promotes only ten control-free, glyph-complete rows. It is a soft-gate probe, not a release ROM.

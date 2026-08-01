@@ -10,9 +10,9 @@
 | run | exact CPU owner matches | completed | capture | PPU read | status |
 | --- | ---: | --- | ---: | --- | --- |
 | English reference | 10/10 | `lua_done` at frame 900 | 285 | PASS | `PASS_CPU_OWNER_PPU_CAPTURE` |
-| Korean composed candidate | 9/10 | `lua_done` at frame 900 | 285 | PASS | `PASS_CPU_OWNER_PPU_CAPTURE_VISUAL_UNKNOWN` |
+| Korean composed candidate | 10/10 | `lua_done` at frame 900 | 285 | PASS | `PASS_CPU_OWNER_PPU_CAPTURE_VISUAL_UNKNOWN` |
 
-The Korean run did not observe `EN-PRE-138` at its exact Bank 1 CPU owner during this bounded route. This is recorded as runtime unknown, not silently promoted.
+The Korean run observed all ten exact Bank 1 CPU owners, including `EN-PRE-138`, during this bounded route.
 
 ## Main Menu Context
 
@@ -21,7 +21,7 @@ Both English and Korean runs reached the bounded capture at frame 1906 with `lua
 ## Gate
 
 - Static candidate build and English-structure composition: PASS.
-- Exact source-owner probe: PASS for 9/10 Korean rows.
+- Exact source-owner probe: PASS for 10/10 Korean rows.
 - PPU capture availability: PASS.
 - Per-row visual attribution, shared-page safety, and natural boss progression: UNKNOWN.
 - Release status: `NOT_READY`.

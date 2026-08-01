@@ -5,7 +5,18 @@
   "source_contract": {
     "prg_bank": 1,
     "cpu_mapping": "CPU $8000 + (ROM offset - $4010)",
-    "cpu_addresses": ["$9ADB", "$9B0B", "$9B14", "$9B3E", "$9B51", "$9B59", "$9B75", "$9B7B", "$9B92", "$9CD0"],
+    "cpu_addresses": [
+      "$9ADB",
+      "$9B0B",
+      "$9B14",
+      "$9B3E",
+      "$9B51",
+      "$9B59",
+      "$9B75",
+      "$9B7B",
+      "$9B92",
+      "$9CD0"
+    ],
     "input_codes": "$81-$9A",
     "chr_bank": 7,
     "top_tile_base": "$181",
@@ -26,8 +37,8 @@
     "status": "PASS_CPU_OWNER_PPU_CAPTURE_VISUAL_UNKNOWN",
     "frames": 900,
     "lua_done": true,
-    "matched_rows": 9,
-    "missing_rows": ["EN-PRE-138"],
+    "matched_rows": 10,
+    "missing_rows": [],
     "capture_frame": 285,
     "ppu_read_ok": true,
     "ppu_write_count_at_capture": 11098,
@@ -50,8 +61,7 @@
   },
   "release_status": "NOT_READY",
   "known_limits": [
-    "EN-PRE-138 was not observed at its exact Bank 1 CPU owner during the bounded candidate route.",
-    "PPU nametable bytes and GD screenshots are retained as evidence, but row-to-pixel attribution is not complete.",
+    "Per-row native pixel attribution and shared-page safety are not complete.",
     "The shared Bank 7 high-code page and natural progression remain outside the release gate."
   ]
 }

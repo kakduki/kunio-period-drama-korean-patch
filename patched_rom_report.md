@@ -291,7 +291,7 @@ The fixed-bank English name/pre-pointer family now has a machine-readable 250-re
 
 - Candidate MD5: `50617961a99d43be949cc28e2ff092a5`.
 - English reference exact CPU owner probe: 10/10 at frame 280; bounded run completed at frame 900.
-- Korean composed candidate exact CPU owner probe: 9/10 at frame 280; bounded run completed at frame 900; `EN-PRE-138` remains runtime unknown.
+- Korean composed candidate exact CPU owner probe: 10/10 at frame 280; bounded run completed at frame 900, including `EN-PRE-138`.
 - Main-menu context capture reached frame 1906 for both runs with PPU nametable reads available.
 - Per-row native visual proof and shared Bank 7 page safety remain UNKNOWN; release status remains `NOT_READY`.
 - Report: `rom_analysis/pre_pointer_high_runtime.md`.

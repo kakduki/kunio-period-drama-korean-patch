@@ -125,9 +125,9 @@ Realtime AI subtitle overlay is tracked as a parallel usability option, not as R
 - [x] Candidate uses English structure composition before Korean data overlay.
 - [x] Ten bounded control-free/glyph-complete rows are statically encoded.
 - [x] English exact CPU owner probe passes 10/10.
-- [x] Korean bounded probe completes with 9/10 exact CPU owners.
+- [x] Korean bounded probe completes with 10/10 exact CPU owners.
 - [x] PPU nametable reads are available at the bounded main-menu capture.
-- [ ] `EN-PRE-138` exact runtime owner is unresolved.
+- [x] `EN-PRE-138` exact runtime owner is observed at CPU `$9B92`.
 - [ ] Row-by-row native pixel attribution and shared-page safety are unresolved.
 - [ ] Natural boss progression and release promotion remain blocked.
 

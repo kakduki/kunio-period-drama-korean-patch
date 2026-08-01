@@ -5,7 +5,7 @@
 - Korean high-code glyphs: `9`; code range `0x81-0x89`.
 - IPS records: `940`; static scope and IPS construction completed.
 - English owner contract: Bank 1 fixed records, 0x81-0x9A input codes, Bank 7 8x16 top/bottom tiles.
-- Runtime status: pending bounded route; release status: `NOT_READY`.
+- Runtime status: `PASS_CPU_OWNER_PPU_CAPTURE_VISUAL_UNKNOWN` at frame 900; release status: `NOT_READY`.
 
 | record | offset | English | Korean | new bytes |
 | --- | --- | --- | --- | --- |
