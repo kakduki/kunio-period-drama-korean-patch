@@ -1,6 +1,8 @@
-# Full Pointer Korean Runtime Report
+# Full Pointer Korean Runtime Report (Superseded)
 
-Status: **PASS_PTR181**
+Status: **SUPERSEDED_BY_CURRENT_FULL_POINTER_REPORT**
+
+See rom_analysis/full_pointer_progression_runtime_report.md and rom_analysis/full_pointer_forced_samples.md for the current 48-page candidate. The measurements below belong to the earlier 49-page development build.
 
 ## Static Coverage
 

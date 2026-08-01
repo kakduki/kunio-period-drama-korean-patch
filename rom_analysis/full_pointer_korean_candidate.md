@@ -9,7 +9,8 @@ Status: **WHOLE_SCRIPT_CANDIDATE_BUILT_RUNTIME_UNKNOWN**
 - Gap before loader: `336` bytes.
 - Korean CHR pages: `48`; CHR banks: `16 -> 29`.
 - Excluded non-dialogue records retain their Japanese bytes.
-- This is a soft-gate whole-script candidate; translation review and broad runtime coverage remain open.
+- English-reference review covers all 244 active rows; no translation drafts remain.
+- Forty-seven dynamic name/item-control rows remain context-flagged; broad visual coverage is still open.
 
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
 - Candidate MD5: `7844f2d6f6a67e86e23b2f954d5ebf3c`.

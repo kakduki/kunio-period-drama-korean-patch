@@ -10,9 +10,10 @@ Status: **PASS**
 - Warnings: `{'dynamic_control_context': 47}`.
 
 The English patch is the semantic and control-structure reference. The
-current Korean rows compile cleanly, but all active rows are still marked
-as semantic drafts. Runtime and layout PASS results therefore do not yet
-constitute translation approval.
+Current Korean rows compile cleanly and all active rows passed the
+English-reference semantic review. Forty-seven dynamic control contexts
+remain flagged for screen-specific review; runtime/layout PASS is not
+whole-game visual approval.
 
 The CSV companion contains every English line, Korean draft, actual
 compiled display text, notes, and row-level findings for review.

@@ -300,6 +300,7 @@ LUA_SCRIPTS = [
     "lua/kunio_ptr181_pointer_loader_probe.lua",
     "lua/kunio_ptr181_page_restore_probe.lua",
     "lua/kunio_stage_progression_probe.lua",
+    "lua/kunio_full_pointer_dialogue_input_probe.lua",
 ]
 
 REGEN_COMMANDS = [

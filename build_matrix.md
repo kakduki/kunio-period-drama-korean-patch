@@ -31,7 +31,17 @@ guard and a non-opening target route are proven.
 The full pointer candidate supersedes those small batches as the current
 whole-script development build. Its MD5 is
 `7844f2d6f6a67e86e23b2f954d5ebf3c`. It compiles 244 Korean dialogue rows,
-including 240 English-reference-reviewed rows, retains four excluded
+including 244 English-reference-reviewed rows, retains four excluded
 Japanese records, and proves the optimized-page runtime path on five
 representative pages. The forced harness is page/font evidence, not natural
 event-control proof; no translation drafts remain; broad visual coverage remains open.
+
+
+## Full-pointer progression evidence
+
+| build | route | bounded result | release interpretation |
+| --- | --- | --- | --- |
+| full_pointer_progression_probe | full candidate MD5 `7844f2d6f6a67e86e23b2f954d5ebf3c`; optional `KUNIO_EXTRA_DIALOGUE_START=1` | frame 392 pointer dialogue; frame 757 page state restored; frame 915 combat entry; 16 screen changes; frame 7200 `lua_done` | `PASS_GAMEPLAY_ENTRY_UNKNOWN_BOSS` |
+
+The extra Start input is a route correction discovered by the bounded button
+probe; it is not blind autoplay. Full release-wide visual coverage remains open.

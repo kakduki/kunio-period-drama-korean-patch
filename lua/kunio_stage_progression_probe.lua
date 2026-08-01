@@ -17,6 +17,7 @@ local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or (ROOT_DIR .. "/rom_analysi
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "7200")
 local SNAPSHOT_GAP = tonumber(os.getenv("KUNIO_STAGE_SNAPSHOT_GAP") or "90")
 local UNIQUE_LIMIT = tonumber(os.getenv("KUNIO_STAGE_UNIQUE_LIMIT") or "72")
+local EXTRA_DIALOGUE_START = os.getenv("KUNIO_EXTRA_DIALOGUE_START") == "1"
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -105,6 +106,9 @@ local function entry_input(frame)
     if frame >= 480 and frame < 490 then return { down = true } end
     if frame >= 540 and frame < 550 then return { A = true } end
     if frame >= 700 and frame < 712 then return { B = true } end
+    if EXTRA_DIALOGUE_START and frame >= 650 and frame < 665 then
+        return { start = true }
+    end
     return {}
 end
 

@@ -154,3 +154,21 @@ visual PASS.
   `0x800`-byte window to the new R1 window, preserves source Bank 7, reaches
   `37/37` reads, passes `67/67` runtime mappings, and keeps the native opening
   background visible. This proves only the opening-context 17-glyph pool.
+
+
+## Full-pointer gameplay progression
+
+- Status: **PASS_GAMEPLAY_ENTRY_UNKNOWN_BOSS**.
+- Candidate MD5: `7844f2d6f6a67e86e23b2f954d5ebf3c`.
+- Bounded route: `lua/kunio_stage_progression_probe.lua` with
+  `KUNIO_EXTRA_DIALOGUE_START=1`.
+- Frame 392 reaches the first full-pointer dialogue with page state `0x2A`.
+- Frame 757 records page state `0x00` and normal R1 `0x3E` after the extra
+  Start transition.
+- Frame 915 enters the combat phase; 16 screen changes are recorded by frame
+  2046; frame 7200 ends with `lua_done`.
+- This proves gameplay entry and page recovery for the full candidate, not every
+  boss route or release-wide visual approval.
+
+See `rom_analysis/full_pointer_progression_runtime_report.md` for the exact
+checkpoint report and raw-output locations.
