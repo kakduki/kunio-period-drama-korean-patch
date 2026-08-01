@@ -1,0 +1,224 @@
+{
+    "status":  "SOFT_GATE_PASS_SOURCE_OWNER_AND_BOUNDED_SCREEN",
+    "input_rom":  "rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "font_source_rom":  "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\kunio_period_drama_korean_font_expansion_v0.5_batch32.nes",
+    "candidate_rom":  "output\\expanded_nonpointer_legacy_route_candidate\\kunio_period_drama_korean_expanded_nonpointer_candidate.nes",
+    "candidate_ips":  "output\\expanded_nonpointer_legacy_route_candidate\\kunio_period_drama_korean_expanded_nonpointer_candidate.ips",
+    "input_md5":  "0d406a85285b4de8468f0dab6aad5fe5",
+    "input_name":  "Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "font_source_md5":  "af14a5b03d3b6b8631a1bed90cf4295e",
+    "candidate_md5":  "cc450f38b32dfeaa7864b4784874b6ed",
+    "selected_target_count":  9,
+    "targets":  [
+                    {
+                        "label":  "Hashi",
+                        "rom_offset":  "0x0561A",
+                        "old_bytes":  "96 88",
+                        "new_bytes":  "8B 8C",
+                        "length":  2,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Tatsuichi",
+                        "rom_offset":  "0x0562F",
+                        "old_bytes":  "90 92 82 91",
+                        "new_bytes":  "89 98 8E 90",
+                        "length":  4,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Heishichi",
+                        "rom_offset":  "0x05643",
+                        "old_bytes":  "9D 82 8C 91",
+                        "new_bytes":  "8D 8E 8F 90",
+                        "length":  4,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Hashi",
+                        "rom_offset":  "0x0569D",
+                        "old_bytes":  "A0 92",
+                        "new_bytes":  "8B 8C",
+                        "length":  2,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Hashi",
+                        "rom_offset":  "0x056DA",
+                        "old_bytes":  "9A 8C",
+                        "new_bytes":  "8B 8C",
+                        "length":  2,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Hashi",
+                        "rom_offset":  "0x0571C",
+                        "old_bytes":  "92 84",
+                        "new_bytes":  "8B 8C",
+                        "length":  2,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Hashi",
+                        "rom_offset":  "0x057D4",
+                        "old_bytes":  "A6 98",
+                        "new_bytes":  "8B 8C",
+                        "length":  2,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Raifu",
+                        "rom_offset":  "0x0736A",
+                        "old_bytes":  "BB 95 AF",
+                        "new_bytes":  "96 8E 97",
+                        "length":  3,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    },
+                    {
+                        "label":  "Raifu",
+                        "rom_offset":  "0x0739D",
+                        "old_bytes":  "BB 95 AF",
+                        "new_bytes":  "96 8E 97",
+                        "length":  3,
+                        "evidence":  "real frame-883 dialogue screen target record"
+                    }
+                ],
+    "glyph_slot_count":  18,
+    "glyph_slots":  [
+                        {
+                            "glyph":  "힘",
+                            "tile":  "0x101",
+                            "rom_offset":  "0x2F020",
+                            "old_sha1_16":  "0906cd5a8aca157b",
+                            "new_sha1_16":  "d1cfabe721b93bde"
+                        },
+                        {
+                            "glyph":  "카",
+                            "tile":  "0x102",
+                            "rom_offset":  "0x2F030",
+                            "old_sha1_16":  "031621355e7d96ff",
+                            "new_sha1_16":  "cea49a7a886b2260"
+                        },
+                        {
+                            "glyph":  "타",
+                            "tile":  "0x103",
+                            "rom_offset":  "0x2F040",
+                            "old_sha1_16":  "ece63c2b2ba7d1a8",
+                            "new_sha1_16":  "f26bb0b08e0796a1"
+                        },
+                        {
+                            "glyph":  "나",
+                            "tile":  "0x104",
+                            "rom_offset":  "0x2F050",
+                            "old_sha1_16":  "ee535b1c00a5ccbb",
+                            "new_sha1_16":  "45642ff922489764"
+                        },
+                        {
+                            "glyph":  "다",
+                            "tile":  "0x105",
+                            "rom_offset":  "0x2F060",
+                            "old_sha1_16":  "764e3664f643b682",
+                            "new_sha1_16":  "d45ff8c829699702"
+                        },
+                        {
+                            "glyph":  "리",
+                            "tile":  "0x106",
+                            "rom_offset":  "0x2F070",
+                            "old_sha1_16":  "53b466c583530d3e",
+                            "new_sha1_16":  "586d531a419d8b04"
+                        },
+                        {
+                            "glyph":  "헤",
+                            "tile":  "0x107",
+                            "rom_offset":  "0x2F080",
+                            "old_sha1_16":  "855359141aa217ad",
+                            "new_sha1_16":  "e47c662f3019fa96"
+                        },
+                        {
+                            "glyph":  "이",
+                            "tile":  "0x108",
+                            "rom_offset":  "0x2F090",
+                            "old_sha1_16":  "cfb17d02bbafbcef",
+                            "new_sha1_16":  "6ea60e5a424f528c"
+                        },
+                        {
+                            "glyph":  "시",
+                            "tile":  "0x109",
+                            "rom_offset":  "0x2F0A0",
+                            "old_sha1_16":  "af05d7c4b4186820",
+                            "new_sha1_16":  "26503e279c570bbd"
+                        },
+                        {
+                            "glyph":  "치",
+                            "tile":  "0x10A",
+                            "rom_offset":  "0x2F0B0",
+                            "old_sha1_16":  "db76662196b607a8",
+                            "new_sha1_16":  "c8f5a2316ca5ef7d"
+                        },
+                        {
+                            "glyph":  "창",
+                            "tile":  "0x10B",
+                            "rom_offset":  "0x2F0C0",
+                            "old_sha1_16":  "a21ebdc9c0afb5be",
+                            "new_sha1_16":  "f488f3b8f52d19ae"
+                        },
+                        {
+                            "glyph":  "약",
+                            "tile":  "0x10C",
+                            "rom_offset":  "0x2F0D0",
+                            "old_sha1_16":  "db3f402452c50beb",
+                            "new_sha1_16":  "cb1c8f83d848e159"
+                        },
+                        {
+                            "glyph":  "장",
+                            "tile":  "0x10D",
+                            "rom_offset":  "0x2F0E0",
+                            "old_sha1_16":  "bdd68fe1c1f20e07",
+                            "new_sha1_16":  "a9470500762c9b28"
+                        },
+                        {
+                            "glyph":  "비",
+                            "tile":  "0x10E",
+                            "rom_offset":  "0x2F0F0",
+                            "old_sha1_16":  "8c0cf8bf61136fa4",
+                            "new_sha1_16":  "7c1335703d8aa9b3"
+                        },
+                        {
+                            "glyph":  "돈",
+                            "tile":  "0x10F",
+                            "rom_offset":  "0x2F100",
+                            "old_sha1_16":  "2368a99ddfb372f0",
+                            "new_sha1_16":  "4623ed6452fca501"
+                        },
+                        {
+                            "glyph":  "라",
+                            "tile":  "0x110",
+                            "rom_offset":  "0x2F110",
+                            "old_sha1_16":  "d352b9eb5ed38696",
+                            "new_sha1_16":  "f60fa379ad73e156"
+                        },
+                        {
+                            "glyph":  "프",
+                            "tile":  "0x111",
+                            "rom_offset":  "0x2F120",
+                            "old_sha1_16":  "d08900ee5437d7b1",
+                            "new_sha1_16":  "82ed53cc262ca9e2"
+                        },
+                        {
+                            "glyph":  "츠",
+                            "tile":  "0x112",
+                            "rom_offset":  "0x2F130",
+                            "old_sha1_16":  "f02622f1713838f4",
+                            "new_sha1_16":  "324afb7cd5c91f9c"
+                        }
+                    ],
+    "ips_records":  44,
+    "visual_route":  "kunio_input_explorer_v042, frame-883 target family",
+    "runtime_status":  "PASS_FRAME_883_TARGET_RECORDS",
+    "visual_status":  "PASS_CAPTURE_AVAILABLE_TARGET_RECORDS_9_OF_9",
+    "target_record_frame":  883,
+    "selected_target_records_active":  9,
+    "capture_directory":  "C:\\tmp\\legacy_nonpointer_input_explorer",
+    "quarantined_target":  "0x07227 Katana excluded",
+    "release_status":  "NOT_READY"
+}

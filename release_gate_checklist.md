@@ -76,3 +76,4 @@ Current report: `rom_analysis/full_korean_candidate_smoke_report.md`.
 The full pointer sweep is a bounded forced-render audit, not a natural gameplay run. It passes 244 active rows and 4 excluded rows. The expanded non-pointer candidate is a build/progression candidate only: its nine equal-length PRG edits still need exact screen-context visual proof.
 
 The input explorer now treats the Lua script's finite done row as a normal completion marker. The current composed candidate and the expanded candidate both stop after two unique screens in the bounded 1000-frame route, so this is recorded as a route-reproduction issue rather than attributed to the nine non-pointer edits.
+| Legacy-route non-pointer candidate | SOFT_GATE_PASS | Candidate MD5 cc450f38b32dfeaa7864b4784874b6ed reaches frame 883 and proves 9/9 selected target records; whole-game release remains blocked. |

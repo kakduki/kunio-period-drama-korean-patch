@@ -228,3 +228,15 @@ checkpoint report and raw-output locations.
 - Route comparison: both the current composed candidate and the expanded candidate reach only two unique screens in the 1000-frame input explorer run, then write a finite done row. This behavior predates the nine added targets and is not evidence that those targets caused the opening-screen loop.
 - Release status: NOT_READY.
 - Detailed build report: rom_analysis/expanded_nonpointer_korean_candidate.md.
+## Legacy-Route Non-Pointer Candidate (2026-08-01)
+
+- Candidate ROM: output/expanded_nonpointer_legacy_route_candidate/kunio_period_drama_korean_expanded_nonpointer_candidate.nes
+- Base ROM MD5: 0d406a85285b4de8468f0dab6aad5fe5
+- Candidate MD5: cc450f38b32dfeaa7864b4784874b6ed
+- Scope: 9 equal-length PRG targets and 18 Korean 8x8 glyph slots.
+- Bounded input route: frame 883 reached on the original English-compatible route.
+- Exact target-record proof: 9/9 selected PRG targets have active_expected_match=true at frame 883.
+- Capture directory: C:	mplegacy_nonpointer_input_explorer.
+- The quarantined 0x07227 Katana target is intentionally not included.
+- Soft-gate result: PASS for source ownership and bounded screen capture.
+- Release status: NOT_READY; the candidate is a nine-string context build, not a whole-game Korean release.

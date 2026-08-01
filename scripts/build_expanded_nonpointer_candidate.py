@@ -112,6 +112,7 @@ def build(
         "candidate_rom": str(rom_path),
         "candidate_ips": str(ips_path),
         "input_md5": md5(original),
+        "input_name": input_rom.name,
         "font_source_md5": md5(font),
         "candidate_md5": md5(patched_bytes),
         "selected_target_count": len(targets),
@@ -127,7 +128,7 @@ def build(
     lines = [
         "# Expanded Non-Pointer Korean Candidate",
         "",
-        "Candidate built from the full pointer/menu ROM using nine equal-length PRG targets and the 18 allocated 8x8 Korean glyph slots.",
+        f"Candidate built from {input_rom.name} using nine equal-length PRG targets and the 18 allocated 8x8 Korean glyph slots.",
         "",
         f"- Input MD5: `{payload['input_md5']}`.",
         f"- Candidate MD5: `{payload['candidate_md5']}`.",

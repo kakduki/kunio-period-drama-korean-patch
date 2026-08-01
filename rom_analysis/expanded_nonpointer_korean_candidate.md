@@ -34,3 +34,6 @@ The nine PRG spans are equal-length and were observed in the real frame-883 dial
 - The stage progression probe reaches combat and late event-like captures, then ends with lua_done.
 - The input explorer does not reproduce the historical frame-883 target screen on this current composed route. The current composed candidate and this expanded candidate both show only two unique screens by frame 1000 and then write a finite done row.
 - Therefore the exact visual proof for the nine changed PRG strings remains UNKNOWN. The nine targets are not promoted to release status, and the route issue is recorded separately from the candidate byte changes.
+## Full-Pointer Composition Warning
+
+The nine static offsets are active on the legacy English-compatible route but are not active target records on the current relocated full-pointer route. The legacy-route candidate is therefore kept as a separate context build. The current full-pointer-composed candidate remains BUILT_RUNTIME_VISUAL_PENDING for these offsets and must not be treated as proof of the same screens.
