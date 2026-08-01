@@ -35,3 +35,14 @@ Hard gates apply only to release candidates, not to soft-gated development build
 - [ ] IPS applies cleanly from a clean base ROM.
 - [ ] No `.nes` files in release zip.
 - [ ] Regression smoke test passes on the release candidate.
+
+## Direct-Low Candidate Status
+
+- [x] Build all 120 English-reference direct-low rows into a Korean candidate.
+- [x] Allocate 77 glyphs from the existing font assets.
+- [x] Produce a full IPS that applies from the clean Japanese base ROM.
+- [x] Run bounded menu and gameplay-entry FCEUX smoke; both report lua_done.
+- [ ] Prove each direct-low UI/item/status context on-screen.
+- [ ] Promote the candidate to release status.
+
+\n

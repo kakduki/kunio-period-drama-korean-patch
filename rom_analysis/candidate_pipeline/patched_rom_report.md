@@ -314,3 +314,24 @@ These candidates are built as isolated ROM/IPS outputs only. They are not includ
 - Combined dev inclusion: `no`
 
 
+
+## Candidate direct-low-120-labels
+
+- Build status: PASS.
+- Base ROM: rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes.
+- Base MD5: 0d406a85285b4de8468f0dab6aad5fe5.
+- Candidate ROM: output/full_korean_direct_low_candidate/kunio_period_drama_korean_full_direct_low_candidate.nes.
+- Candidate IPS: output/full_korean_direct_low_candidate/kunio_period_drama_korean_full_direct_low_candidate.ips.
+- Candidate MD5: 2c012fbb98bc93885f884a111839bcf3.
+- English reference: tools/reference/TSe-v10.ips, patched reference MD5 63e1d902807981f524af97748cd99500.
+- Scope: 120 direct-low rows across PRG Banks 1, 3, 4, 6, and 7.
+- Korean glyph allocation: 77 glyphs in CHR Bank 7 tiles 0x101-0x14D.
+- IPS record count: 493; clean-base round-trip: PASS.
+- Boot/menu/gameplay-entry smoke: PASS.
+- Visual classification: UNKNOWN per direct-low context.
+- Failure class: none for build or smoke; visual ownership remains pending.
+- Release classification: NOT_READY.
+- Detailed build report: rom_analysis/full_korean_direct_low_candidate.md.
+- English offset coverage audit: rom_analysis/full_korean_direct_low_english_coverage.md.
+- Runtime smoke report: rom_analysis/full_korean_direct_low_smoke_report.md.
+
