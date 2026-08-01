@@ -112,3 +112,15 @@ The English static occurrence at 0x0561B did not change the natural-route PPU se
 ## Input Explorer Default Transition (2026-08-01)
 
 The input explorer now enables the known dialogue Start transition by default and accepts KUNIO_EXTRA_DIALOGUE_START=0 to disable it. On the current full candidate, the default bounded run recorded four unique screens at frames 121, 361, 655, and 906, then wrote a finite done row at frame 1000.
+
+## Items Action Candidate (2026-08-01)
+
+| build | ROM offset / PRG bank | English-reference check | bounded runtime | visual | result |
+| --- | --- | --- | --- | --- | --- |
+| full_korean_items_action_candidate | 0x13727 / PRG 16 KiB bank 4, MMC3 R7 0x09 | source 0x13727 -> CPU $B717 -> SRAM $6360 -> PPU $2363; static source and IPS checks PASS | candidate FCEUX Lua output was not produced by either installed FCEUX binary; UNKNOWN | glyph/page bytes and scope PASS; native screen UNKNOWN | BUILT_STATIC_PASS_RUNTIME_UNKNOWN |
+
+The candidate composes the full direct-low development candidate with four Items action
+labels: 사용, 버리기, 주기, and 버림. It uses the normal Items R1 pages
+0x3E/0x3F, so it is intentionally a development candidate until a candidate
+screen capture proves that page's cross-context safety. KUNIO'S ITEMS and NONE
+remain separate source owners.

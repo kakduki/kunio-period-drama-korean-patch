@@ -78,3 +78,13 @@ The full pointer sweep is a bounded forced-render audit, not a natural gameplay 
 The input explorer now treats the Lua script's finite done row as a normal completion marker. The historical no-extra-Start route stops after two unique screens, while the default current full candidate reaches four unique screens after the known dialogue transition. The route note is kept separate from the nine non-pointer edits.
 | Legacy-route non-pointer candidate | SOFT_GATE_PASS | Candidate MD5 cc450f38b32dfeaa7864b4784874b6ed reaches frame 883 and proves 9/9 selected target records; whole-game release remains blocked. |
 | Input explorer default transition | PASS | Default current full candidate reaches four unique screens at frames 121, 361, 655, and 906, then writes finite done at frame 1000. |
+
+## Items Action Candidate Update (2026-08-01)
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| Items action source owner | PASS | English reference chain is proven at ROM 0x13727, CPU $B717, SRAM $6360, and PPU $2363; four fixed-width action slots compile. |
+| Items action candidate static build | PASS | Candidate MD5 5dbb442b8bda6efe9039f2e91fd1f88f; IPS round-trip, source scope, and page writes pass. |
+| Items action candidate native screen | UNKNOWN | Both installed FCEUX binaries started without producing Lua output in this session; no visual claim is made. |
+| Items title and NONE rows | PENDING | Separate dynamic source owners and queue/PPU proof remain. |
+| Release promotion | NOT_READY | Normal Items R1 page safety and title/empty/action rows are not release-proven. |

@@ -243,3 +243,18 @@ checkpoint report and raw-output locations.
 ## Input Explorer Default Transition (2026-08-01)
 
 The current full candidate no longer remains on the second dialogue screen when using the default input explorer route. The known extra Start transition is enabled by default; the bounded run reached four unique screens and ended with a finite done row at frame 1000. Set KUNIO_EXTRA_DIALOGUE_START=0 only for the historical route comparison.
+
+## Items Action Candidate
+
+- Status: BUILT_STATIC_PASS_RUNTIME_UNKNOWN.
+- Candidate MD5: 5dbb442b8bda6efe9039f2e91fd1f88f.
+- Candidate ROM/IPS are local build products and are not committed.
+- English-reference source chain: ROM 0x13727 -> PRG bank 4 / MMC3 R7 0x09
+  -> CPU $B717-$B737 -> SRAM $6360 -> PPU $2363.
+- Four action slots compile as 사용, 버리기, 주기, 버림; source padding and
+  queue layout are preserved.
+- Static source-chain, changed-scope, font-page, and IPS round-trip checks: PASS.
+- Candidate FCEUX capture: UNKNOWN because neither installed FCEUX binary
+  emitted a Lua output folder in this session.
+- Title KUNIO'S ITEMS and empty-inventory NONE remain untranslated. This is
+  not a final release ROM.

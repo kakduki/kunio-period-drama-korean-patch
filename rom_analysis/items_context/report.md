@@ -52,3 +52,14 @@ Full Korean Items translation still needs its own title/empty/action source owne
 - `english_r0_page_is_3c`: PASS
 - `base_r1_page_is_3e`: PASS
 - `english_r1_page_is_3e`: PASS
+
+
+## Action Candidate Follow-up (2026-08-01)
+
+The static English source chain is now compiled into a separate development
+candidate at rom_analysis/full_korean_items_action_candidate.md. The four
+action labels are 사용, 버리기, 주기, and 버림, sourced from ROM
+0x13727 and routed through CPU $B717, SRAM $6360, and PPU $2363.
+The candidate's static scope and IPS round-trip pass. Its native FCEUX capture
+is UNKNOWN because no Lua output was produced in the current session.
+KUNIO'S ITEMS and NONE remain pending dynamic source owners.
