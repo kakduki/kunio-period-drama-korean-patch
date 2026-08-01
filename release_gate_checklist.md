@@ -118,3 +118,17 @@ The input explorer now treats the Lua script's finite done row as a normal compl
 - [ ] Release promotion.
 
 Realtime AI subtitle overlay is tracked as a parallel usability option, not as ROM release evidence.
+
+## Pre-Pointer High-Code Gate (2026-08-01)
+
+- [x] English reference owner path recorded for PRG Bank 1 and CHR Bank 7.
+- [x] Candidate uses English structure composition before Korean data overlay.
+- [x] Ten bounded control-free/glyph-complete rows are statically encoded.
+- [x] English exact CPU owner probe passes 10/10.
+- [x] Korean bounded probe completes with 9/10 exact CPU owners.
+- [x] PPU nametable reads are available at the bounded main-menu capture.
+- [ ] `EN-PRE-138` exact runtime owner is unresolved.
+- [ ] Row-by-row native pixel attribution and shared-page safety are unresolved.
+- [ ] Natural boss progression and release promotion remain blocked.
+
+The high-code candidate remains a development soft-gate artifact and is not a final release ROM.

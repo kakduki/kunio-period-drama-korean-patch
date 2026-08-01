@@ -286,3 +286,12 @@ The fixed-bank English name/pre-pointer family now has a machine-readable 250-re
 - `0x0561A` is excluded from this composition because it overlaps the Items name seed at `0x0561B`; the exclusion is recorded, not hidden.
 - Native screenshot proof, natural boss route, and release promotion remain UNKNOWN/NOT_READY.
 - Detailed report: `rom_analysis/full_korean_composed_candidate.md`.
+
+## Pre-Pointer High-Code Runtime Update (2026-08-01)
+
+- Candidate MD5: `50617961a99d43be949cc28e2ff092a5`.
+- English reference exact CPU owner probe: 10/10 at frame 280; bounded run completed at frame 900.
+- Korean composed candidate exact CPU owner probe: 9/10 at frame 280; bounded run completed at frame 900; `EN-PRE-138` remains runtime unknown.
+- Main-menu context capture reached frame 1906 for both runs with PPU nametable reads available.
+- Per-row native visual proof and shared Bank 7 page safety remain UNKNOWN; release status remains `NOT_READY`.
+- Report: `rom_analysis/pre_pointer_high_runtime.md`.
