@@ -152,3 +152,17 @@ The high-code candidate remains a development soft-gate artifact and is not a fi
 | Release promotion | NOT_READY | Remaining renderer families, natural boss route, and release-wide visual evidence remain open. |
 
 The expanded candidate supersedes the earlier ten-row candidate for bounded development work. It remains a soft-gate artifact and is not a final release ROM.
+
+## Unified Composed Expanded Candidate Gate (2026-08-02)
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| Preserve existing composed Korean source | PASS | Input MD5 `5f348772bb6809b1df0e7f84ef2e7603`; English recomposition disabled; candidate MD5 `47637ac3f85a1458d29a285c926d30da`. |
+| 22 bounded pre-pointer owners | PASS | Exact Korean CPU owner matches `22/22`; terminators preserved; 26 glyphs fit `0x81-0x9A`. |
+| Items name/title/NONE byte path | PASS | Source seeds, title suffix, NONE, and queue output all pass the runtime byte gate. |
+| Bounded progression | PASS_SOFT_GATE | 7,200 frames reach 16 unique screens, combat checkpoints, late event frames, and `lua_done`. |
+| Native pixel proof | UNKNOWN | Available GD screenshot capture is transparent; row-level native visual review is still pending. |
+| Natural boss route | UNKNOWN | Enemy-clear, boss-spawn, and boss-dialogue ownership are not proven by this bounded automation route. |
+| Release promotion | NOT_READY | Remaining blocked/unmapped rows, shared Bank 7 safety, visual proof, and boss route remain open. |
+
+This unified candidate supersedes the standalone 22-row build for development work. It remains a soft-gate candidate and is not the final release ROM.

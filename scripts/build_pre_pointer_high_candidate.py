@@ -147,6 +147,7 @@ def build(
     out_stem: str = OUT_STEM,
     target_offsets: set[int] = TARGET_OFFSETS,
     allow_missing_glyphs: bool = False,
+    apply_reference_structure: bool = True,
 ) -> dict[str, object]:
     base = base_rom.read_bytes()
     input_candidate = input_rom.read_bytes()
@@ -155,15 +156,21 @@ def build(
     rows = load_inventory(inventory_path, target_offsets=target_offsets, allow_missing_glyphs=allow_missing_glyphs)
     reference_records, reference_truncate = parse_ips(reference_ips.read_bytes())
     reference = apply_records(base, reference_records, reference_truncate)
-    # Keep the English patch's executable/CHR structure, then reapply every
-    # already-proven change from the current Korean composition on top.
-    composed = bytearray(reference)
-    for offset in range(len(base)):
-        if input_candidate[offset] != base[offset]:
-            composed[offset] = input_candidate[offset]
-    if len(input_candidate) > len(base):
-        composed.extend(input_candidate[len(base):])
-    current = bytes(composed)
+    if apply_reference_structure:
+        # Keep the English patch's executable/CHR structure, then reapply every
+        # already-proven change from the current Korean composition on top.
+        composed = bytearray(reference)
+        for offset in range(len(base)):
+            if input_candidate[offset] != base[offset]:
+                composed[offset] = input_candidate[offset]
+        if len(input_candidate) > len(base):
+            composed.extend(input_candidate[len(base):])
+        current = bytes(composed)
+    else:
+        # An already-composed Korean candidate owns its untouched bytes too;
+        # rebuilding from the English reference would erase protected source
+        # tails that intentionally match the Japanese base.
+        current = input_candidate
     glyph_order = tuple(dict.fromkeys("".join(str(row["korean_text"]) for row in rows)))
     char_map = json.loads(char_map_path.read_text(encoding="utf-8"))
     available_glyphs = set(char_map["sorted"])
@@ -208,6 +215,7 @@ def build(
         "input_rom": str(input_rom),
         "input_md5": md5(input_candidate),
         "composed_input_md5": md5(current),
+        "reference_structure_applied": apply_reference_structure,
         "base_md5": md5(base),
         "candidate_rom": str(rom_path),
         "candidate_ips": str(ips_path),
@@ -276,6 +284,7 @@ def main() -> int:
     parser.add_argument("--out-stem", default=OUT_STEM)
     parser.add_argument("--target-offset", action="append", default=None)
     parser.add_argument("--allow-missing-glyphs", action="store_true")
+    parser.add_argument("--input-is-composed", action="store_true", help="Use the input candidate as-is instead of reapplying the English reference structure.")
     args = parser.parse_args()
     font_path = args.font.resolve() if args.font else default_tall_font(None)
     target_offsets = {int(value, 16) for value in args.target_offset} if args.target_offset else TARGET_OFFSETS
@@ -292,6 +301,7 @@ def main() -> int:
         args.out_stem,
         target_offsets=target_offsets,
         allow_missing_glyphs=args.allow_missing_glyphs,
+        apply_reference_structure=not args.input_is_composed,
     )
     print(json.dumps(payload, ensure_ascii=False))
     return 0

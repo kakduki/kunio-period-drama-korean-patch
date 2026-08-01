@@ -69,6 +69,7 @@ def main() -> int:
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
     parser.add_argument("--probe", type=Path, default=DEFAULT_PROBE)
+    parser.add_argument("--input-is-composed", action="store_true", help="Preserve an already-composed Korean input candidate.")
     args = parser.parse_args()
 
     payload = build(
@@ -84,6 +85,7 @@ def main() -> int:
         OUT_STEM,
         target_offsets=TARGET_OFFSETS,
         allow_missing_glyphs=True,
+        apply_reference_structure=not args.input_is_composed,
     )
     generated = generate(args.report_json.resolve(), DEFAULT_TEMPLATE, args.probe.resolve())
     payload["generated_probe_targets"] = generated

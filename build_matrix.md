@@ -177,3 +177,16 @@ The 250-row pre-pointer inventory was compared with 722 English dialogue owner r
 - Progression: 7,200-frame probe reaches `lua_done`, 24 unique screen fingerprints, and combat checkpoints; a boss-spawn or boss-dialogue route is not proven.
 - Result: `SOFT_GATE_PASS_RUNTIME_NOT_READY`; this is the current bounded development candidate, not a final release ROM.
 - Reports: `rom_analysis/full_korean_expanded_candidate.md` and `rom_analysis/full_korean_expanded_runtime.md`.
+
+## Unified Composed Expanded Candidate (2026-08-02)
+
+- Candidate ROM: `output/full_korean_full_composed_expanded_candidate/kunio_period_drama_korean_expanded_candidate.nes`.
+- Candidate MD5: `47637ac3f85a1458d29a285c926d30da`.
+- Input candidate MD5: `5f348772bb6809b1df0e7f84ef2e7603`.
+- Composition fix: `reference_structure_applied=false`; the already-composed Korean input is preserved byte-for-byte before adding the 22 bounded pre-pointer rows. This prevents the English reference recomposition from overwriting protected Items name data.
+- Scope: 22 fixed-label Bank 1 owners, 26 high-code Bank 7 glyphs in `0x81-0x9A`, plus the existing pointer/menu, direct-low, Items action/name/title/NONE, and non-pointer composition.
+- Exact Korean owner probe: `22/22`; `lua_done` at frame 900; matched-row PPU writes `11,098`.
+- Progression probe: `lua_done` at frame 7,200, 16 unique screens, combat frames 915/1049/1139/1229/1319/1444/1651/1866/1956/2046, and late event frames 1956/2046/7200.
+- Items source and queue byte gate: PASS for name, title suffix, and NONE; native visual gate remains UNKNOWN.
+- Result: `SOFT_GATE_PASS_RUNTIME_NOT_READY`. Boss spawn/dialogue ownership, row-level native visual proof, shared-page safety, and remaining blocked/unmapped rows are still open.
+- Regression test: `scripts/test_full_korean_full_composed_expanded_candidate.py`.

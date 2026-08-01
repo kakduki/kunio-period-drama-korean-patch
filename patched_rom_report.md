@@ -311,3 +311,15 @@ The English reference exposes 722 dialogue tile runs for comparison with the 250
 - Progression smoke: `lua_done` at frame 7200, 24 unique screens, and combat checkpoints recorded. Boss proof is UNKNOWN.
 - Release status: `NOT_READY`; row-level native pixel review, shared-page safety, and natural boss progression remain open.
 - Detailed reports: `rom_analysis/full_korean_expanded_candidate.md` and `rom_analysis/full_korean_expanded_runtime.md`.
+
+## Unified Composed Expanded Candidate (2026-08-02)
+
+- Candidate ROM: `output/full_korean_full_composed_expanded_candidate/kunio_period_drama_korean_expanded_candidate.nes`.
+- Candidate MD5: `47637ac3f85a1458d29a285c926d30da`.
+- The build starts from the existing composed candidate MD5 `5f348772bb6809b1df0e7f84ef2e7603` and deliberately skips English-reference recomposition. This preserves the verified Items name/title/NONE source tails while adding the 22 bounded pre-pointer rows.
+- Static build: PASS; 22/22 rows compile with terminators preserved and 26 glyph codes fit `0x81-0x9A`.
+- Runtime: exact Korean owner probe `22/22`, `lua_done` at frame 900, and `11,098` matched-row PPU writes.
+- Progression: 7,200-frame FCEUX run reaches 16 unique screens, combat checkpoints, late event frames, and `lua_done`; it does not prove a natural boss route.
+- Items runtime byte gate: PASS for name seed, PPU seed, title suffix, NONE, and queue output. Native screenshot pixels remain UNKNOWN because the available GD capture is transparent.
+- Release status: `NOT_READY`. This is the current bounded development build, not a final whole-game Korean release.
+- Reports: `rom_analysis/full_korean_full_composed_expanded_candidate.md`, `rom_analysis/full_korean_full_composed_expanded_runtime.md`, and `rom_analysis/full_korean_full_composed_expanded_items_runtime.json`.
