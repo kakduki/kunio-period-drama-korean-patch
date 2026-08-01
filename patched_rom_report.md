@@ -195,3 +195,13 @@ checkpoint report and raw-output locations.
 - Release status: NOT_READY.
 - Detailed build report: rom_analysis/full_nonpointer_korean_candidate.md.
 - Detailed smoke report: rom_analysis/full_nonpointer_korean_candidate_smoke.md.
+
+## Effective Name-Table Source Probe (2026-08-01)
+
+- Candidate ROM: output/name_table_korean_candidate/kunio_period_drama_korean_name_table_candidate.nes
+- Candidate MD5: df586e888e23761d2da518162444810e
+- Differential probe scope: 9 ROM occurrences of 88 96 9F 8B.
+- Only physical offset 0x3FB32 changed the live natural-route PPU sequence; the English static occurrence at 0x0561B did not.
+- Runtime proof: PPU addresses 0x2043-0x2046 changed from 88 96 9F 8B to 81 82 81 82.
+- Visual proof: corrected candidate screenshot at frame 1956 shows the test glyphs in the target renderer context.
+- Status: SOFT_GATE_PASS_ONE_CONTEXT; the test string is not a release translation and release remains NOT_READY.

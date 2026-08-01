@@ -66,3 +66,11 @@ probe; it is not blind autoplay. The reached 1926/1986 screen is the interaction
 - Bounded progression: lua_done; entry screens, combat at frame 915, and late event-like screens at frames 1956/2046 captured.
 - Automated smoke: PASS; exact non-pointer screen visual proof: UNKNOWN; release: NOT_READY.
 - Detailed report: rom_analysis/full_nonpointer_korean_candidate.md and rom_analysis/full_nonpointer_korean_candidate_smoke.md.
+
+## Effective Name-Table Source Probe (2026-08-01)
+
+| build | effective source / glyph slots | PPU target | bounded result | visual | result |
+| --- | --- | --- | --- | --- | --- |
+| name_table_korean_candidate | 0x3FB32 empirical effective source table; CHR slots 0x2F820-0x2F850 | 0x2043-0x2046: 88969F8B -> 81828182 | 9 differential probes; only 0x3FB32 changed the live sequence | PASS, frame 1956 screenshot | SOFT_GATE_PASS_ONE_CONTEXT |
+
+The English static occurrence at 0x0561B did not change the natural-route PPU sequence. The corrected candidate ROM MD5 is df586e888e23761d2da518162444810e. This proves one non-pointer renderer context with a bounded test string; it is not whole-game visual coverage and is not a release build.

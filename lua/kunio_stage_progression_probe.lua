@@ -27,6 +27,11 @@ local RAM_TRACE = os.getenv("KUNIO_RAM_TRACE") == "1"
 local RAM_TRACE_LIMIT = tonumber(os.getenv("KUNIO_RAM_TRACE_LIMIT") or "20000")
 local DIALOGUE_TRACE = os.getenv("KUNIO_DIALOGUE_TRACE") == "1"
 local DIALOGUE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_DIALOGUE_TRACE_LIMIT") or "12000")
+local PPU_TRACE = os.getenv("KUNIO_PPU_TRACE") == "1"
+local PPU_TRACE_LIMIT = tonumber(os.getenv("KUNIO_PPU_TRACE_LIMIT") or "24000")
+local PPU_TRACE_START = tonumber(os.getenv("KUNIO_PPU_TRACE_START") or "0")
+local NAME_SOURCE_TRACE = os.getenv("KUNIO_NAME_SOURCE_TRACE") == "1"
+local NAME_SOURCE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_NAME_SOURCE_TRACE_LIMIT") or "24000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -109,6 +114,12 @@ local dialogue_ppu_path = OUT_DIR .. "/dialogue_ppu_writes.tsv"
 local dialogue_last_pointer = nil
 local dialogue_ppu_addr_high = nil
 local dialogue_ppu_addr = 0
+local ppu_trace_count = 0
+local ppu_trace_path = OUT_DIR .. "/ppu_writes.tsv"
+local ppu_trace_addr_high = nil
+local ppu_trace_addr = 0
+local name_source_trace_count = 0
+local name_source_trace_path = OUT_DIR .. "/name_source_reads.tsv"
 local function read_register(name)
     local ok, value = pcall(function() return memory.getregister(name) end)
     return ok and value or 0
@@ -212,6 +223,37 @@ local function mapper_snapshot()
     values[#values + 1] = hex2(ppu_control or 0)
     return table.concat(values, "\t")
 end
+local function on_name_source_read(addr, size, value)
+    if name_source_trace_count >= NAME_SOURCE_TRACE_LIMIT then return end
+    local pc = read_register("pc")
+    if pc < 0xD700 or pc > 0xD7FF then return end
+    name_source_trace_count = name_source_trace_count + 1
+    append(name_source_trace_path, table.concat({
+        emu.framecount(), string.format("%04X", addr or 0), string.format("%02X", value or 0),
+        string.format("%04X", read_register("pc")), mapper_snapshot(),
+    }, "\t"))
+end
+local function on_ppu_trace_addr(addr, size, value)
+    local byte = value or 0
+    if ppu_trace_addr_high == nil then
+        ppu_trace_addr_high = byte % 0x40
+    else
+        ppu_trace_addr = ppu_trace_addr_high * 0x100 + byte
+        ppu_trace_addr_high = nil
+    end
+end
+local function on_ppu_trace_data(addr, size, value)
+    if ppu_trace_count < PPU_TRACE_LIMIT and emu.framecount() >= PPU_TRACE_START and ppu_trace_addr >= 0x2000 and ppu_trace_addr < 0x2400 then
+        ppu_trace_count = ppu_trace_count + 1
+        append(ppu_trace_path, table.concat({
+            emu.framecount(), string.format("%04X", ppu_trace_addr), string.format("%02X", value or 0),
+            string.format("%04X", read_register("pc")), mapper_snapshot(),
+        }, "\t"))
+    end
+    local increment = 1
+    if math.floor((ppu_control or 0) / 4) % 2 == 1 then increment = 0x20 end
+    ppu_trace_addr = (ppu_trace_addr + increment) % 0x4000
+end
 local function capture(frame, reason, fp)
     local prefix = string.format("%s/frame_%06d", OUT_DIR, frame)
     local ok, shot = pcall(function() return gui.gdscreenshot() end)
@@ -281,6 +323,12 @@ if DIALOGUE_TRACE then
     append(dialogue_parser_path, "frame\tlabel\tpc\ta\tx\ty\ttext_pointer\tstream_pointer")
     append(dialogue_ppu_path, "frame\tppu_address\tvalue\tpc\ttext_pointer\tstream_pointer\ty")
 end
+if PPU_TRACE then
+    append(ppu_trace_path, "frame\tppu_address\tvalue\tpc\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7\tppu_ctrl")
+end
+if NAME_SOURCE_TRACE then
+    append(name_source_trace_path, "frame\tcpu_address\tvalue\tpc\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7\tppu_ctrl")
+end
 if RAM_TRACE then
     append(ram_trace_path, "frame\taddress\tsize\tvalue")
 end
@@ -293,6 +341,13 @@ if DIALOGUE_TRACE then
     register_exec(0x915A, on_dialogue_parser("parser"))
     register_exec(0x955F, on_dialogue_parser("emit_prep"))
     register_exec(0x9593, on_dialogue_parser("emit_dispatch"))
+end
+if PPU_TRACE then
+    register_write(0x2006, 1, on_ppu_trace_addr)
+    register_write(0x2007, 1, on_ppu_trace_data)
+end
+if NAME_SOURCE_TRACE then
+    for address = 0x0000, 0x07FF do register_read(address, on_name_source_read) end
 end
 if RAM_TRACE then
     register_write(0x0200, 0x0300, on_ram_write)

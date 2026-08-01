@@ -1,0 +1,53 @@
+{
+  "status": "SOFT_GATE_PASS_ONE_CONTEXT",
+  "input_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_nonpointer_korean_candidate\\kunio_period_drama_korean_full_nonpointer_candidate.nes",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\name_table_korean_candidate\\kunio_period_drama_korean_name_table_candidate.nes",
+  "candidate_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\name_table_korean_candidate\\kunio_period_drama_korean_name_table_candidate.ips",
+  "input_md5": "18284402f073b91c09d05f52a16b9b9d",
+  "candidate_md5": "df586e888e23761d2da518162444810e",
+  "source_rom_offset": "0x3FB32",
+  "source_expected_bytes": "88 96 9F 8B",
+  "source_test_bytes": "81 82 81 82",
+  "source_test_text": "다리다리",
+  "ppu_target_range": "0x2043-0x2046",
+  "ppu_expected_sequence": "88 96 9F 8B",
+  "ppu_test_sequence": "81 82 81 82",
+  "mapper_contract": {
+    "ppu_control": "0x88",
+    "mmc3_r1": "0x3E",
+    "physical_chr_8k_bank": 7,
+    "physical_tile_formula": "0x100 + tile_code"
+  },
+  "chr_slot_start": "0x2F820",
+  "glyph_rows": [
+    {
+      "code": "0x81",
+      "glyph": "다",
+      "chr_rom_offset": "0x2F820",
+      "old_sha1_16": "401d90351a182cae",
+      "new_sha1_16": "029ac7e2f6491ac8"
+    },
+    {
+      "code": "0x82",
+      "glyph": "리",
+      "chr_rom_offset": "0x2F830",
+      "old_sha1_16": "00a6a2f16d13f2e3",
+      "new_sha1_16": "da511e1bd5314ef8"
+    },
+    {
+      "code": "0x81",
+      "glyph": "다",
+      "chr_rom_offset": "0x2F840",
+      "old_sha1_16": "2d69a2d0c8a9c034",
+      "new_sha1_16": "029ac7e2f6491ac8"
+    },
+    {
+      "code": "0x82",
+      "glyph": "리",
+      "chr_rom_offset": "0x2F850",
+      "old_sha1_16": "a83e6dcfb92b7fb7",
+      "new_sha1_16": "da511e1bd5314ef8"
+    }
+  ],
+  "ips_records": 4
+}

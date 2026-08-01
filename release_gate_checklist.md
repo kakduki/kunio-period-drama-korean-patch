@@ -60,3 +60,11 @@ Current report: `rom_analysis/full_korean_candidate_smoke_report.md`.
 - [x] Entry, combat, and late event-like captures exist.
 - [ ] Exact changed-string screen contexts have visual proof.
 - [ ] Release promotion approved.
+
+## New Soft-Gate Evidence (2026-08-01)
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| Effective name-table source ownership | SOFT_GATE_PASS_ONE_CONTEXT | 9 differential probes identify only 0x3FB32 as the live owner of PPU sequence 88969F8B; the 0x0561B English static occurrence is inactive on this route. |
+| Name-table candidate visual proof | PASS_ONE_CONTEXT | Candidate MD5 df586e888e23761d2da518162444810e; PPU test sequence and frame-1956 screenshot both match. |
+| Release promotion of this context | NOT_READY | The candidate uses a bounded test string and covers one renderer context only. |
