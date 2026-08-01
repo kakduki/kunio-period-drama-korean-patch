@@ -85,6 +85,6 @@ The input explorer now treats the Lua script's finite done row as a normal compl
 | --- | --- | --- |
 | Items action source owner | PASS | English reference chain is proven at ROM 0x13727, CPU $B717, SRAM $6360, and PPU $2363; four fixed-width action slots compile. |
 | Items action candidate static build | PASS | Candidate MD5 5dbb442b8bda6efe9039f2e91fd1f88f; IPS round-trip, source scope, and page writes pass. |
-| Items action candidate native screen | PASS | Relative-frame FCEUX capture completed at frame 1906; runtime verifier matches queue PC=B70D, PPU $2363, and MMC3 R1=3E/R6=08/R7=09. |
+| Items action candidate native screen | PASS_RUNTIME | Relative-frame FCEUX capture completed at frame 1906; runtime verifier matches queue PC=B70D, PPU $2363, and MMC3 R1=3E/R6=08/R7=09. GD screenshot is blank, so no visual release claim is made. |
 | Items title and NONE rows | PENDING | Separate dynamic source owners and queue/PPU proof remain. |
 | Release promotion | NOT_READY | Normal Items R1 page safety and title/empty/action rows are not release-proven. |

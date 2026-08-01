@@ -61,6 +61,7 @@
   ],
   "font_page": "CHR 1 KiB pages 0x3E/0x3F",
   "ips_record_count": 511,
+  "native_visual": "UNKNOWN_GD_BLANK",
   "runtime_verification": "rom_analysis/full_korean_items_action_candidate_runtime.json",
   "runtime_capture": "rom_analysis/main_menu_items_queue_items_action_candidate_runtime",
   "notes": [

@@ -18,4 +18,5 @@
 
 - Byte-scope, source-chain, and IPS round-trip: PASS.
 - Exact candidate Items PPU/source/queue proof: PASS; relative-frame FCEUX capture ended lua_done and the runtime verifier matched candidate source, SRAM queue, PPU action bytes, and Items MMC3 banks.
+- Native visual screenshot: UNKNOWN; the generated GD artifact is transparent blank and is not used as release evidence.
 - Title and empty-inventory rows remain untranslated and are separate follow-up owners.

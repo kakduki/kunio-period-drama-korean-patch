@@ -236,3 +236,4 @@ empty_inventory_none=PENDING
 release_status=NOT_READY
 report=rom_analysis/full_korean_items_action_candidate.md
 candidate_fceux_runtime_report=rom_analysis/full_korean_items_action_candidate_runtime.json
+candidate_native_visual=UNKNOWN_GD_BLANK

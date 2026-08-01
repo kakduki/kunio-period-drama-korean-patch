@@ -62,4 +62,5 @@ action labels are 사용, 버리기, 주기, and 버림, sourced from ROM
 0x13727 and routed through CPU $B717, SRAM $6360, and PPU $2363.
 The candidate's static scope and IPS round-trip pass. Its native FCEUX capture
 is PASS; the relative-frame FCEUX capture ended lua_done and the runtime verifier matched source-derived queue/PPU bytes.
+The generated GD screenshot is transparent blank, so this is runtime byte proof rather than manual visual approval.
 KUNIO'S ITEMS and NONE remain pending dynamic source owners.
