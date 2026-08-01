@@ -134,9 +134,17 @@ def summary_final_reason(summary: Path) -> str | None:
     if not summary.exists():
         return None
     text = summary.read_text(encoding="utf-8", errors="ignore")
-    for marker in ("lua_done", "target_capture", "target_not_seen", "stagnant_screen", "hit_limit"):
+    for marker in (
+        "lua_done",
+        "target_capture",
+        "target_not_seen",
+        "stagnant_screen",
+        "hit_limit",
+        # The input explorer writes a bounded done row instead of lua_done.
+        "\tdone\t",
+    ):
         if marker in text:
-            return marker
+            return "done" if marker == "\tdone\t" else marker
     return None
 
 

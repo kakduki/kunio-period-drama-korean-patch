@@ -205,3 +205,26 @@ checkpoint report and raw-output locations.
 - Runtime proof: PPU addresses 0x2043-0x2046 changed from 88 96 9F 8B to 81 82 81 82.
 - Visual proof: corrected candidate screenshot at frame 1956 shows the test glyphs in the target renderer context.
 - Status: SOFT_GATE_PASS_ONE_CONTEXT; the test string is not a release translation and release remains NOT_READY.
+## Full Pointer Sweep Audit (2026-08-01)
+
+- Candidate ROM: output/full_korean_candidate/kunio_period_drama_korean_full_candidate.nes
+- Candidate MD5: d062b19d23050cd4e148e22fbfff57b7
+- Scope: 248 bounded forced-pointer runs, one pointer per run, 450 frames each.
+- Active rows: 244/244 PASS.
+- Excluded non-dialogue rows: 4/4 PASS.
+- Source modes: 201 direct terminators, 41 control-stream/static terminators, 2 static terminators not reached by the watch.
+- Every run captured text pixels and the preserved field background.
+- Final mapper R1 was recorded only as a diagnostic; the page-aware renderer restores the normal mapper state before the final capture, so R1=3E is not a failure.
+- Interpretation: whole-script pointer compilation and renderer/page handling pass the development soft gate. This is forced renderer evidence, not natural enemy-clear, boss-spawn, or release-wide visual proof.
+- Detailed report: rom_analysis/full_pointer_sweep_runtime.md.
+## Expanded Non-Pointer Candidate (2026-08-01)
+
+- Candidate ROM: output/expanded_nonpointer_korean_candidate/kunio_period_drama_korean_expanded_nonpointer_candidate.nes
+- Candidate MD5: 12baf49a9b08a0a93b7f2d0e3140289c
+- Build: PASS; IPS round trip: PASS.
+- Scope: 9 equal-length PRG targets selected from the real frame-883 target record set, plus 18 Korean 8x8 glyph slots copied from the existing font expansion.
+- Bounded stage progression: PASS; the route reaches combat and late event-like captures and ends with lua_done.
+- Exact changed-string screen proof: UNKNOWN. The current composed candidate route does not reproduce the old frame-883 input-explorer screen.
+- Route comparison: both the current composed candidate and the expanded candidate reach only two unique screens in the 1000-frame input explorer run, then write a finite done row. This behavior predates the nine added targets and is not evidence that those targets caused the opening-screen loop.
+- Release status: NOT_READY.
+- Detailed build report: rom_analysis/expanded_nonpointer_korean_candidate.md.

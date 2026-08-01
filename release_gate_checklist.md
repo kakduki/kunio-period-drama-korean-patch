@@ -68,3 +68,11 @@ Current report: `rom_analysis/full_korean_candidate_smoke_report.md`.
 | Effective name-table source ownership | SOFT_GATE_PASS_ONE_CONTEXT | 9 differential probes identify only 0x3FB32 as the live owner of PPU sequence 88969F8B; the 0x0561B English static occurrence is inactive on this route. |
 | Name-table candidate visual proof | PASS_ONE_CONTEXT | Candidate MD5 df586e888e23761d2da518162444810e; PPU test sequence and frame-1956 screenshot both match. |
 | Release promotion of this context | NOT_READY | The candidate uses a bounded test string and covers one renderer context only. |
+| Full pointer forced sweep | PASS_SOFT_GATE | 244/244 active rows and 4/4 excluded rows pass bounded forced-render checks; natural event control and boss route remain unproven. |
+| Expanded non-pointer build | SOFT_GATE_BUILD_ONLY | 9 equal-length PRG targets plus 18 glyph slots build and round-trip; exact changed-string visual proof is UNKNOWN. |
+| Input explorer route comparison | UNKNOWN_ROUTE | Both current and expanded candidates reach two unique screens and finite done at frame 1000; historical frame-883 target route is not reproduced. |
+## Development Evidence Update (2026-08-01)
+
+The full pointer sweep is a bounded forced-render audit, not a natural gameplay run. It passes 244 active rows and 4 excluded rows. The expanded non-pointer candidate is a build/progression candidate only: its nine equal-length PRG edits still need exact screen-context visual proof.
+
+The input explorer now treats the Lua script's finite done row as a normal completion marker. The current composed candidate and the expanded candidate both stop after two unique screens in the bounded 1000-frame route, so this is recorded as a route-reproduction issue rather than attributed to the nine non-pointer edits.
