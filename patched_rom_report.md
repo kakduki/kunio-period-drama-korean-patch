@@ -240,3 +240,6 @@ checkpoint report and raw-output locations.
 - The quarantined 0x07227 Katana target is intentionally not included.
 - Soft-gate result: PASS for source ownership and bounded screen capture.
 - Release status: NOT_READY; the candidate is a nine-string context build, not a whole-game Korean release.
+## Input Explorer Default Transition (2026-08-01)
+
+The current full candidate no longer remains on the second dialogue screen when using the default input explorer route. The known extra Start transition is enabled by default; the bounded run reached four unique screens and ended with a finite done row at frame 1000. Set KUNIO_EXTRA_DIALOGUE_START=0 only for the historical route comparison.

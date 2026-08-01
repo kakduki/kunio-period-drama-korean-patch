@@ -109,3 +109,6 @@ The English static occurrence at 0x0561B did not change the natural-route PPU se
 - The quarantined 0x07227 Katana target is intentionally not included.
 - Soft-gate result: PASS for source ownership and bounded screen capture.
 - Release status: NOT_READY; the candidate is a nine-string context build, not a whole-game Korean release.
+## Input Explorer Default Transition (2026-08-01)
+
+The input explorer now enables the known dialogue Start transition by default and accepts KUNIO_EXTRA_DIALOGUE_START=0 to disable it. On the current full candidate, the default bounded run recorded four unique screens at frames 121, 361, 655, and 906, then wrote a finite done row at frame 1000.

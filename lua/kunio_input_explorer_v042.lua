@@ -26,7 +26,7 @@ KUNIO_MANUAL_DUMP_DEFINE_ONLY = nil
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "7200")
 local SNAPSHOT_GAP = tonumber(os.getenv("KUNIO_EXPLORER_SNAPSHOT_GAP") or "240")
 local UNIQUE_LIMIT = tonumber(os.getenv("KUNIO_EXPLORER_UNIQUE_LIMIT") or "36")
-local EXTRA_DIALOGUE_START = os.getenv("KUNIO_EXTRA_DIALOGUE_START") == "1"
+local EXTRA_DIALOGUE_START = os.getenv("KUNIO_EXTRA_DIALOGUE_START") ~= "0"
 
 local summary_path = KUNIO_MANUAL_DUMP_OUTPUT .. "/explorer_summary.tsv"
 local heartbeat_path = KUNIO_MANUAL_DUMP_OUTPUT .. "/explorer_heartbeat.tsv"
