@@ -117,7 +117,7 @@ The input explorer now enables the known dialogue Start transition by default an
 
 | build | ROM offset / PRG bank | English-reference check | bounded runtime | visual | result |
 | --- | --- | --- | --- | --- | --- |
-| full_korean_items_action_candidate | 0x13727 / PRG 16 KiB bank 4, MMC3 R7 0x09 | source 0x13727 -> CPU $B717 -> SRAM $6360 -> PPU $2363; static source and IPS checks PASS | candidate FCEUX Lua output was not produced by either installed FCEUX binary; UNKNOWN | glyph/page bytes and scope PASS; native screen UNKNOWN | BUILT_STATIC_PASS_RUNTIME_UNKNOWN |
+| full_korean_items_action_candidate | 0x13727 / PRG 16 KiB bank 4, MMC3 R7 0x09 | source 0x13727 -> CPU $B717 -> SRAM $6360 -> PPU $2363; static source and IPS checks PASS | FCEUX capture frame 1906, action row frame 1736; runtime verifier PASS | glyph/page scope PASS; screenshot artifact retained locally | BUILT_STATIC_PASS_RUNTIME_PASS |
 
 The candidate composes the full direct-low development candidate with four Items action
 labels: 사용, 버리기, 주기, and 버림. It uses the normal Items R1 pages

@@ -1,6 +1,6 @@
 # Full Korean Items Action Candidate
 
-- Status: `BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_UNKNOWN`.
+- Status: `BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_PASS`.
 - Release status: `NOT_READY`.
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
 - Candidate MD5: `5dbb442b8bda6efe9039f2e91fd1f88f`.
@@ -17,5 +17,5 @@
 ## Gate
 
 - Byte-scope, source-chain, and IPS round-trip: PASS.
-- Exact candidate Items PPU/source/queue proof: UNKNOWN; FCEUX emitted no Lua output in this environment.
+- Exact candidate Items PPU/source/queue proof: PASS; relative-frame FCEUX capture ended lua_done and the runtime verifier matched candidate source, SRAM queue, PPU action bytes, and Items MMC3 banks.
 - Title and empty-inventory rows remain untranslated and are separate follow-up owners.

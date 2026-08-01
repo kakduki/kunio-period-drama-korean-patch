@@ -61,5 +61,5 @@ candidate at rom_analysis/full_korean_items_action_candidate.md. The four
 action labels are 사용, 버리기, 주기, and 버림, sourced from ROM
 0x13727 and routed through CPU $B717, SRAM $6360, and PPU $2363.
 The candidate's static scope and IPS round-trip pass. Its native FCEUX capture
-is UNKNOWN because no Lua output was produced in the current session.
+is PASS; the relative-frame FCEUX capture ended lua_done and the runtime verifier matched source-derived queue/PPU bytes.
 KUNIO'S ITEMS and NONE remain pending dynamic source owners.

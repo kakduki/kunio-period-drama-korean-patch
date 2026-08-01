@@ -246,7 +246,7 @@ The current full candidate no longer remains on the second dialogue screen when 
 
 ## Items Action Candidate
 
-- Status: BUILT_STATIC_PASS_RUNTIME_UNKNOWN.
+- Status: BUILT_STATIC_PASS_RUNTIME_PASS.
 - Candidate MD5: 5dbb442b8bda6efe9039f2e91fd1f88f.
 - Candidate ROM/IPS are local build products and are not committed.
 - English-reference source chain: ROM 0x13727 -> PRG bank 4 / MMC3 R7 0x09
@@ -254,7 +254,7 @@ The current full candidate no longer remains on the second dialogue screen when 
 - Four action slots compile as 사용, 버리기, 주기, 버림; source padding and
   queue layout are preserved.
 - Static source-chain, changed-scope, font-page, and IPS round-trip checks: PASS.
-- Candidate FCEUX capture: UNKNOWN because neither installed FCEUX binary
-  emitted a Lua output folder in this session.
+- Candidate FCEUX capture: PASS; bounded relative-frame route ended lua_done at frame 1909, with action row output at frame 1736.
+- Runtime verifier: PASS; candidate source bytes, SRAM queue bytes, PPU $2363 bytes, and Items MMC3 banks all match.
 - Title KUNIO'S ITEMS and empty-inventory NONE remain untranslated. This is
   not a final release ROM.

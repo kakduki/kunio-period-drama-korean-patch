@@ -24,6 +24,16 @@ local DUMP_SRAM = os.getenv("KUNIO_DUMP_SRAM") == "1"
 local QUEUE_WRITE_RANGES_RAW = os.getenv("KUNIO_QUEUE_WRITE_RANGES") or ""
 local QUEUE_WRITE_LIMIT = tonumber(os.getenv("KUNIO_QUEUE_WRITE_LIMIT") or "1000")
 local QUEUE_WRITE_TRACE_START = tonumber(os.getenv("KUNIO_QUEUE_WRITE_TRACE_START") or tostring(EXTRA_SOURCE_TRACE_START))
+local RELATIVE_FRAMES = os.getenv("KUNIO_RELATIVE_FRAMES") == "1"
+local SCRIPT_START_FRAME = emu.framecount()
+
+local function trace_frame()
+    local frame = emu.framecount()
+    if RELATIVE_FRAMES then
+        return frame - SCRIPT_START_FRAME
+    end
+    return frame
+end
 -- Fixed PRG Bank 7 menu-template span: ROM 0x1F2D0-0x1F33D maps to CPU
 -- $F2C0-$F32D. The English reference changes the eight visible labels here.
 local MENU_SOURCE_CPU_START = 0xF2C0
@@ -253,9 +263,9 @@ local function append_mapper_write(kind, value, selected_register)
     -- The MMC3 registers can be updated many times during the opening. Keep
     -- their current state from frame zero, but persist only the final menu
     -- window so trace I/O cannot slow the bounded route into a pseudo-stall.
-    if emu.framecount() < PPU_TRACE_START then return end
+    if trace_frame() < PPU_TRACE_START then return end
     append(mapper_writes_path, table.concat({
-        emu.framecount(), kind, hex2(value), selected_register or "",
+        trace_frame(), kind, hex2(value), selected_register or "",
         hex4(read_register("pc")),
     }, "\t"))
 end
@@ -303,7 +313,7 @@ local function on_ppuaddr_write(addr, size, value)
 end
 
 local function on_ppudata_write(addr, size, value)
-    local frame = emu.framecount()
+    local frame = trace_frame()
     local target = ppu_addr % 0x4000
     if frame >= PPU_TRACE_START and target >= 0x2000 and target < 0x23C0 and not ppu_write_limit_reached then
         if ppu_write_count >= PPU_WRITE_LIMIT then
@@ -324,9 +334,9 @@ end
 
 local function on_menu_source_read(addr, size, value)
     callback_counts.menu_source = callback_counts.menu_source + 1
-    if emu.framecount() < PPU_TRACE_START then return end
+    if trace_frame() < PPU_TRACE_START then return end
     append(source_reads_path, table.concat({
-        emu.framecount(),
+        trace_frame(),
         hex4(addr),
         hex2(value or 0),
         hex4(read_register("pc")),
@@ -338,7 +348,7 @@ end
 
 local function on_extra_source_read(addr, size, value)
     callback_counts.extra_source = callback_counts.extra_source + 1
-    local frame = emu.framecount()
+    local frame = trace_frame()
     if frame < EXTRA_SOURCE_TRACE_START or extra_source_read_limit_reached then return end
     if extra_source_read_count >= EXTRA_SOURCE_READ_LIMIT then
         extra_source_read_limit_reached = true
@@ -361,7 +371,7 @@ end
 
 local function on_queue_write(addr, size, value)
     callback_counts.queue_write = callback_counts.queue_write + 1
-    local frame = emu.framecount()
+    local frame = trace_frame()
     if frame < QUEUE_WRITE_TRACE_START or queue_write_limit_reached then return end
     if queue_write_count >= QUEUE_WRITE_LIMIT then
         queue_write_limit_reached = true
@@ -384,9 +394,9 @@ end
 
 local function on_mapper_config_write(addr, size, value)
     callback_counts.mapper_config = callback_counts.mapper_config + 1
-    if emu.framecount() < PPU_TRACE_START then return end
+    if trace_frame() < PPU_TRACE_START then return end
     append(mapper_config_writes_path, table.concat({
-        emu.framecount(),
+        trace_frame(),
         hex4(addr or 0),
         hex2(value or 0),
         hex4(read_register("pc")),
@@ -400,7 +410,7 @@ end
 
 local function on_mapper_loader_exec()
     callback_counts.mapper_loader = callback_counts.mapper_loader + 1
-    if emu.framecount() < PPU_TRACE_START then return end
+    if trace_frame() < PPU_TRACE_START then return end
     local stack = read_register("s")
     local return_address = nil
     local caller_return_address = nil
@@ -419,7 +429,7 @@ local function on_mapper_loader_exec()
         caller_return_address = (caller_low + caller_high * 0x100 + 1) % 0x10000
     end
     append(mapper_loader_exec_path, table.concat({
-        emu.framecount(),
+        trace_frame(),
         hex4(read_register("pc")),
         hex2(stack),
         hex4(return_address),
@@ -480,7 +490,7 @@ end
 
 local function capture_mapper_snapshot()
     local values = {
-        emu.framecount(),
+        trace_frame(),
         hex2(mapper_control),
         mapper_select == nil and "" or tostring(mapper_select),
         hex2(ppu_control),
@@ -499,7 +509,7 @@ local function capture_mapper_snapshot()
 end
 
 local function capture()
-    local frame = emu.framecount()
+    local frame = trace_frame()
     local stem = OUT_DIR .. "/main_menu_frame_" .. string.format("%06d", frame)
     local screenshot_ok, screenshot = pcall(function() return gui.gdscreenshot() end)
     if screenshot_ok and screenshot ~= nil then
@@ -621,11 +631,11 @@ append(summary_path, table.concat({
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
 
-while emu.framecount() < MAX_FRAMES and not captured do
-    local frame = emu.framecount()
+while trace_frame() < MAX_FRAMES and not captured do
+    local frame = trace_frame()
     joypad.set(1, route_input(frame))
     emu.frameadvance()
-    if emu.framecount() >= CAPTURE_FRAME then
+    if trace_frame() >= CAPTURE_FRAME then
         capture()
         captured = true
     end

@@ -1,5 +1,5 @@
 {
-  "status": "BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_UNKNOWN",
+  "status": "BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_PASS",
   "release_status": "NOT_READY",
   "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
   "input_md5": "2c012fbb98bc93885f884a111839bcf3",
@@ -61,11 +61,13 @@
   ],
   "font_page": "CHR 1 KiB pages 0x3E/0x3F",
   "ips_record_count": 511,
+  "runtime_verification": "rom_analysis/full_korean_items_action_candidate_runtime.json",
+  "runtime_capture": "rom_analysis/main_menu_items_queue_items_action_candidate_runtime",
   "notes": [
     "Static source-chain, byte-scope, and IPS round-trip checks pass.",
     "Only the four action slots are changed; title and NONE remain English in this candidate.",
     "The normal Items R1 page is used so the source chain remains unchanged.",
     "The code pool is isolated from the bounded menu and English action codes, but release-wide page safety is not proven.",
-    "Candidate FCEUX capture is UNKNOWN because this environment produced no Lua output folder for either FCEUX binary."
+    "Candidate FCEUX relative-frame capture and runtime verifier PASS at action frame 1736; title and NONE remain separate owners."
   ]
 }
