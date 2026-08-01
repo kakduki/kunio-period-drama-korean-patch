@@ -31,4 +31,4 @@ At frame 883 the legacy English-compatible input route produced active expected 
 - 0x0736A Raifu
 - 0x0739D Raifu
 
-The capture files are in C:\tmplegacy_nonpointer_input_explorer. The 0x07227 Katana target remains quarantined and is not patched. This is the first concrete nine-string screen-context candidate, but it is not a whole-game release.
+The capture files are in C:\tmp\legacy_nonpointer_input_explorer. The 0x07227 Katana target remains quarantined and is not patched. This is the first concrete nine-string screen-context candidate, but it is not a whole-game release.

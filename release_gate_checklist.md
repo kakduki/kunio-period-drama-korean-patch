@@ -70,10 +70,11 @@ Current report: `rom_analysis/full_korean_candidate_smoke_report.md`.
 | Release promotion of this context | NOT_READY | The candidate uses a bounded test string and covers one renderer context only. |
 | Full pointer forced sweep | PASS_SOFT_GATE | 244/244 active rows and 4/4 excluded rows pass bounded forced-render checks; natural event control and boss route remain unproven. |
 | Expanded non-pointer build | SOFT_GATE_BUILD_ONLY | 9 equal-length PRG targets plus 18 glyph slots build and round-trip; exact changed-string visual proof is UNKNOWN. |
-| Input explorer route comparison | UNKNOWN_ROUTE | Both current and expanded candidates reach two unique screens and finite done at frame 1000; historical frame-883 target route is not reproduced. |
+| Input explorer historical route comparison | UNKNOWN_ROUTE | With KUNIO_EXTRA_DIALOGUE_START=0, the current and expanded candidates reach two unique screens and finite done at frame 1000; this is retained as the historical route comparison. |
 ## Development Evidence Update (2026-08-01)
 
 The full pointer sweep is a bounded forced-render audit, not a natural gameplay run. It passes 244 active rows and 4 excluded rows. The expanded non-pointer candidate is a build/progression candidate only: its nine equal-length PRG edits still need exact screen-context visual proof.
 
-The input explorer now treats the Lua script's finite done row as a normal completion marker. The current composed candidate and the expanded candidate both stop after two unique screens in the bounded 1000-frame route, so this is recorded as a route-reproduction issue rather than attributed to the nine non-pointer edits.
+The input explorer now treats the Lua script's finite done row as a normal completion marker. The historical no-extra-Start route stops after two unique screens, while the default current full candidate reaches four unique screens after the known dialogue transition. The route note is kept separate from the nine non-pointer edits.
 | Legacy-route non-pointer candidate | SOFT_GATE_PASS | Candidate MD5 cc450f38b32dfeaa7864b4784874b6ed reaches frame 883 and proves 9/9 selected target records; whole-game release remains blocked. |
+| Input explorer default transition | PASS | Default current full candidate reaches four unique screens at frames 121, 361, 655, and 906, then writes finite done at frame 1000. |
