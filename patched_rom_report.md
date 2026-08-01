@@ -158,17 +158,15 @@ visual PASS.
 
 ## Full-pointer gameplay progression
 
-- Status: **PASS_GAMEPLAY_ENTRY_UNKNOWN_BOSS**.
+- Status: **PASS_GAMEPLAY_ENTRY_PASS_INTERACTION_UNKNOWN_BOSS**.
 - Candidate MD5: `7844f2d6f6a67e86e23b2f954d5ebf3c`.
 - Bounded route: `lua/kunio_stage_progression_probe.lua` with
   `KUNIO_EXTRA_DIALOGUE_START=1`.
 - Frame 392 reaches the first full-pointer dialogue with page state `0x2A`.
 - Frame 757 records page state `0x00` and normal R1 `0x3E` after the extra
   Start transition.
-- Frame 915 enters the combat phase; 16 screen changes are recorded by frame
-  2046; frame 7200 ends with `lua_done`.
-- This proves gameplay entry and page recovery for the full candidate, not every
-  boss route or release-wide visual approval.
+- Frame 915 enters the combat phase; the bounded route reaches interaction pointers 135/136 (`WELCOME` / `WHAT WOULD YOU LIKE`) at frames 1926/1986; frame 7200 ends with `lua_done`.
+- This proves gameplay entry, page recovery, and one non-boss interaction route for the full candidate, not every boss route or release-wide visual approval.
 
 See `rom_analysis/full_pointer_progression_runtime_report.md` for the exact
 checkpoint report and raw-output locations.

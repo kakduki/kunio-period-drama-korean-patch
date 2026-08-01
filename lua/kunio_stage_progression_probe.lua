@@ -18,10 +18,44 @@ local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "7200")
 local SNAPSHOT_GAP = tonumber(os.getenv("KUNIO_STAGE_SNAPSHOT_GAP") or "90")
 local UNIQUE_LIMIT = tonumber(os.getenv("KUNIO_STAGE_UNIQUE_LIMIT") or "72")
 local EXTRA_DIALOGUE_START = os.getenv("KUNIO_EXTRA_DIALOGUE_START") == "1"
+local COMBAT_NO_B = os.getenv("KUNIO_COMBAT_NO_B") == "1"
+local COMBAT_SWEEP = os.getenv("KUNIO_COMBAT_SWEEP") == "1"
+local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
+local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
+local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
+local RAM_TRACE = os.getenv("KUNIO_RAM_TRACE") == "1"
+local RAM_TRACE_LIMIT = tonumber(os.getenv("KUNIO_RAM_TRACE_LIMIT") or "20000")
+local DIALOGUE_TRACE = os.getenv("KUNIO_DIALOGUE_TRACE") == "1"
+local DIALOGUE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_DIALOGUE_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
     local f = assert(io.open(path, "a")); f:write(line .. "\n"); f:close()
+end
+
+local function parse_writes(text)
+    local writes = {}
+    for part in string.gmatch(text, "([^,]+)") do
+        local addr_text, value_text = string.match(part, "^%s*([^=]+)%s*=%s*([^=]+)%s*$")
+        local addr, value = tonumber(addr_text), tonumber(value_text)
+        if addr ~= nil and value ~= nil then
+            writes[#writes + 1] = { addr = addr, value = value }
+        end
+    end
+    return writes
+end
+local STATE_WRITES = parse_writes(STATE_WRITES_TEXT)
+local function write_state_bytes()
+    for _, item in ipairs(STATE_WRITES) do
+        pcall(function() memory.writebyte(item.addr, item.value) end)
+    end
+end
+local function state_writes_label()
+    local parts = {}
+    for _, item in ipairs(STATE_WRITES) do
+        parts[#parts + 1] = string.format("0x%04X=0x%02X", item.addr, item.value)
+    end
+    return table.concat(parts, ",")
 end
 local function hex2(value) return string.format("%02X", (value or 0) % 0x100) end
 local function byte_at(addr, domain)
@@ -65,6 +99,104 @@ local function register_write(addr, size, callback)
     if size == 1 then return pcall(function() memory.registerwrite(addr, callback) end) end
     return false
 end
+local ram_trace_count = 0
+local ram_trace_path = OUT_DIR .. "/ram_writes.tsv"
+local dialogue_trace_count = 0
+local dialogue_pointer_path = OUT_DIR .. "/dialogue_pointers.tsv"
+local dialogue_source_path = OUT_DIR .. "/dialogue_source_reads.tsv"
+local dialogue_parser_path = OUT_DIR .. "/dialogue_parser_exec.tsv"
+local dialogue_ppu_path = OUT_DIR .. "/dialogue_ppu_writes.tsv"
+local dialogue_last_pointer = nil
+local dialogue_ppu_addr_high = nil
+local dialogue_ppu_addr = 0
+local function read_register(name)
+    local ok, value = pcall(function() return memory.getregister(name) end)
+    return ok and value or 0
+end
+local function text_pointer()
+    return byte_at(0x1A) + byte_at(0x1B) * 0x100
+end
+local function stream_pointer()
+    return byte_at(0x05) + byte_at(0x06) * 0x100
+end
+local function register_read(addr, callback)
+    local ok = pcall(function() memory.registerread(addr, callback) end)
+    if ok then return true end
+    return pcall(function() memory.registerread(addr, 1, callback) end)
+end
+local function register_exec(addr, callback)
+    local ok = pcall(function() memory.registerexec(addr, callback) end)
+    if ok then return true end
+    return pcall(function() memory.registerexecute(addr, callback) end)
+end
+local function dialogue_log(row, path)
+    if dialogue_trace_count >= DIALOGUE_TRACE_LIMIT then return end
+    dialogue_trace_count = dialogue_trace_count + 1
+    append(path, row)
+end
+local function on_dialogue_source_read(addr, size, value)
+    local pointer = text_pointer()
+    local pc = read_register("pc")
+    if pointer < 0x8000 or pc == (addr or 0) then return end
+    dialogue_log(table.concat({
+        emu.framecount(), string.format("%04X", addr or 0), string.format("%02X", value or byte_at(addr or 0)),
+        string.format("%04X", pc), string.format("%02X", read_register("a")),
+        string.format("%02X", read_register("x")), string.format("%02X", read_register("y")),
+        string.format("%04X", pointer), string.format("%04X", stream_pointer()),
+    }, "\t"), dialogue_source_path)
+end
+local function on_dialogue_parser(label)
+    return function()
+        local pointer = text_pointer()
+        if pointer < 0x8000 then return end
+        dialogue_log(table.concat({
+            emu.framecount(), label, string.format("%04X", read_register("pc")),
+            string.format("%02X", read_register("a")), string.format("%02X", read_register("x")),
+            string.format("%02X", read_register("y")), string.format("%04X", pointer),
+            string.format("%04X", stream_pointer()),
+        }, "\t"), dialogue_parser_path)
+    end
+end
+local function is_dialogue_row(addr)
+    return (addr >= 0x2320 and addr < 0x2340) or (addr >= 0x2360 and addr < 0x2380)
+end
+local function on_dialogue_ppuaddr(addr, size, value)
+    local byte = value or 0
+    if dialogue_ppu_addr_high == nil then
+        dialogue_ppu_addr_high = byte % 0x40
+    else
+        dialogue_ppu_addr = dialogue_ppu_addr_high * 0x100 + byte
+        dialogue_ppu_addr_high = nil
+    end
+end
+local function on_dialogue_ppudata(addr, size, value)
+    if is_dialogue_row(dialogue_ppu_addr) then
+        dialogue_log(table.concat({
+            emu.framecount(), string.format("%04X", dialogue_ppu_addr), string.format("%02X", value or 0),
+            string.format("%04X", read_register("pc")), string.format("%04X", text_pointer()),
+            string.format("%04X", stream_pointer()), string.format("%02X", read_register("y")),
+        }, "\t"), dialogue_ppu_path)
+    end
+    dialogue_ppu_addr = (dialogue_ppu_addr + 1) % 0x4000
+end
+local function register_dialogue_pointer(pointer)
+    if pointer < 0x8000 or pointer > 0xBFFF or pointer == dialogue_last_pointer then return end
+    dialogue_last_pointer = pointer
+    append(dialogue_pointer_path, table.concat({
+        emu.framecount(), string.format("%04X", pointer), string.format("%04X", stream_pointer()),
+    }, "\t"))
+    for addr = pointer, pointer + 0x50 do register_read(addr, on_dialogue_source_read) end
+end
+local function on_ram_write(addr, size, value)
+    if ram_trace_count >= RAM_TRACE_LIMIT then return end
+    ram_trace_count = ram_trace_count + 1
+    append(ram_trace_path, table.concat({
+        tostring(emu.framecount()),
+        string.format("%04X", addr or 0),
+        tostring(size or 1),
+        string.format("%02X", (value or byte_at(addr or 0) or 0) % 0x100),
+    }, "\t"))
+end
 local function on_mapper_select(addr, size, value)
     mapper_select = (value or 0) % 8
 end
@@ -92,7 +224,7 @@ local function capture(frame, reason, fp)
         tostring(frame), reason, fp, tostring(ok and shot ~= nil),
         hex2(byte_at(0x0720)), hex2(byte_at(0x0721)), hex2(byte_at(0x0722)), hex2(byte_at(0x0723)),
         hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)), hex2(byte_at(0x04FC)),
-        mapper_snapshot(),
+        mapper_snapshot(), state_writes_label(),
     }, "\t"))
 end
 
@@ -118,6 +250,18 @@ local function combat_input(frame)
     local rel = frame - 900
     if rel < 0 then return {} end
     local cycle = rel % 240
+    if COMBAT_SWEEP then
+        if cycle < 60 then return { right = true, A = true } end
+        if cycle < 120 then return { down = true, A = true } end
+        if cycle < 180 then return { left = true, A = true } end
+        return { up = true, A = true }
+    end
+    if COMBAT_NO_B then
+        if cycle < 120 then return { right = true, A = true } end
+        if cycle < 168 then return { left = true, A = true } end
+        if cycle < 216 then return { right = true, A = true } end
+        return { up = true, A = true }
+    end
     if cycle < 72 then return { right = true, A = true, B = true } end
     if cycle < 96 then return { right = true, B = true } end
     if cycle < 144 then return { left = true, A = true, B = true } end
@@ -129,11 +273,33 @@ end
 mkdir(OUT_DIR)
 append(OUT_DIR .. "/summary.tsv", "frame\treason\tunique\tlast_fingerprint")
 append(OUT_DIR .. "/summary.tsv", table.concat({"0", "lua_start", "0", ""}, "\t"))
-append(OUT_DIR .. "/captures.tsv", "frame\treason\tfingerprint\tscreenshot\t0720\t0721\t0722\t0723\t04F1\t04FA\t04FB\t04FC\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7\tppu_ctrl")
+append(OUT_DIR .. "/captures.tsv", "frame\treason\tfingerprint\tscreenshot\t0720\t0721\t0722\t0723\t04F1\t04FA\t04FB\t04FC\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7\tppu_ctrl\tstate_writes")
 append(OUT_DIR .. "/heartbeat.tsv", "frame\tphase\tbuttons\tfingerprint")
+if DIALOGUE_TRACE then
+    append(dialogue_pointer_path, "frame\ttext_pointer\tstream_pointer")
+    append(dialogue_source_path, "frame\taddress\tvalue\tpc\ta\tx\ty\ttext_pointer\tstream_pointer")
+    append(dialogue_parser_path, "frame\tlabel\tpc\ta\tx\ty\ttext_pointer\tstream_pointer")
+    append(dialogue_ppu_path, "frame\tppu_address\tvalue\tpc\ttext_pointer\tstream_pointer\ty")
+end
+if RAM_TRACE then
+    append(ram_trace_path, "frame\taddress\tsize\tvalue")
+end
 register_write(0x8000, 1, on_mapper_select)
 register_write(0x8001, 1, on_mapper_data)
 register_write(0x2000, 1, on_ppu_control)
+if DIALOGUE_TRACE then
+    register_write(0x2006, 1, on_dialogue_ppuaddr)
+    register_write(0x2007, 1, on_dialogue_ppudata)
+    register_exec(0x915A, on_dialogue_parser("parser"))
+    register_exec(0x955F, on_dialogue_parser("emit_prep"))
+    register_exec(0x9593, on_dialogue_parser("emit_dispatch"))
+end
+if RAM_TRACE then
+    register_write(0x0200, 0x0300, on_ram_write)
+    register_write(0x0050, 0x0008, on_ram_write)
+    register_write(0x04F0, 0x0020, on_ram_write)
+    register_write(0x0700, 0x0100, on_ram_write)
+end
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
 
@@ -144,9 +310,16 @@ local last_heartbeat = -1
 
 while emu.framecount() < MAX_FRAMES and unique < UNIQUE_LIMIT do
     local frame = emu.framecount()
+    if DIALOGUE_TRACE then register_dialogue_pointer(text_pointer()) end
     local buttons = frame < 900 and entry_input(frame) or combat_input(frame)
+    if frame >= STATE_WRITE_START and frame <= STATE_WRITE_END and #STATE_WRITES > 0 then
+        write_state_bytes()
+    end
     joypad.set(1, buttons)
     local phase = frame < 900 and "entry" or "combat"
+    if frame >= STATE_WRITE_START and frame <= STATE_WRITE_END and #STATE_WRITES > 0 then
+        phase = "combat_inject"
+    end
     if frame % 60 == 0 then
         local names = {}
         for key, value in pairs(buttons) do if value then names[#names + 1] = key end end
@@ -168,7 +341,7 @@ while emu.framecount() < MAX_FRAMES and unique < UNIQUE_LIMIT do
 end
 
 local reason = unique >= UNIQUE_LIMIT and "unique_limit" or "lua_done"
-append(OUT_DIR .. "/captures.tsv", table.concat({tostring(emu.framecount()), reason, fingerprint(), "false", "", "", "", "", "", "", "", "", mapper_snapshot()}, "\t"))
+append(OUT_DIR .. "/captures.tsv", table.concat({tostring(emu.framecount()), reason, fingerprint(), "false", "", "", "", "", "", "", "", "", mapper_snapshot(), state_writes_label()}, "\t"))
 append(OUT_DIR .. "/summary.tsv", table.concat({tostring(emu.framecount()), reason, tostring(unique), fingerprint()}, "\t"))
 pcall(function() FCEU.pause() end)
 pcall(function() emu.pause() end)

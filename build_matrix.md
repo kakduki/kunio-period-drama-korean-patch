@@ -41,7 +41,7 @@ event-control proof; no translation drafts remain; broad visual coverage remains
 
 | build | route | bounded result | release interpretation |
 | --- | --- | --- | --- |
-| full_pointer_progression_probe | full candidate MD5 `7844f2d6f6a67e86e23b2f954d5ebf3c`; optional `KUNIO_EXTRA_DIALOGUE_START=1` | frame 392 pointer dialogue; frame 757 page state restored; frame 915 combat entry; 16 screen changes; frame 7200 `lua_done` | `PASS_GAMEPLAY_ENTRY_UNKNOWN_BOSS` |
+| full_pointer_progression_probe | full candidate MD5 `7844f2d6f6a67e86e23b2f954d5ebf3c`; optional `KUNIO_EXTRA_DIALOGUE_START=1` | frame 392 pointer dialogue; frame 757 page state restored; frame 915 combat entry; frames 1926/1986 interaction pointers 135/136; frame 7200 `lua_done` | `PASS_GAMEPLAY_ENTRY_PASS_INTERACTION_UNKNOWN_BOSS` |
 
 The extra Start input is a route correction discovered by the bounded button
-probe; it is not blind autoplay. Full release-wide visual coverage remains open.
+probe; it is not blind autoplay. The reached 1926/1986 screen is the interaction/shop route (`WELCOME` / `WHAT WOULD YOU LIKE`), not boss proof. Full release-wide visual coverage remains open.

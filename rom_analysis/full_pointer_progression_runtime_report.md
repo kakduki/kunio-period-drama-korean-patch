@@ -1,6 +1,6 @@
 # Full Pointer Korean Progression Runtime Report
 
-Status: **PASS_GAMEPLAY_ENTRY_UNKNOWN_BOSS**
+Status: **PASS_GAMEPLAY_ENTRY_PASS_INTERACTION_UNKNOWN_BOSS**
 
 ## Candidate
 
@@ -18,7 +18,9 @@ Status: **PASS_GAMEPLAY_ENTRY_UNKNOWN_BOSS**
 | 667 | dialogue transition after the extra `Start` input | screen changed |
 | 757 | field route, `$07FF=00`, R1 restored to normal `3E` | page lifecycle recovered |
 | 915 | combat phase begins | gameplay entry PASS |
-| 1,049-2,046 | combat screen changes | 12 additional bounded changes |
+| 1,049-1,866 | combat screen changes | combat route remains active |
+| 1,926 | distinct event screen | `PTR-135` reverse-maps to English `WELCOME`; interaction/shop |
+| 1,986 | distinct event screen | `PTR-136` reverse-maps to English `WHAT WOULD YOU LIKE`; interaction/shop |
 | 7,200 | finite run completion | `lua_done` |
 
 The original stage probe did not send the `Start` input needed by this
@@ -27,10 +29,16 @@ confirmed that the extra `Start` transition changes the screen and eventually
 clears the Korean page state. The updated bounded route reaches active combat
 without blind unbounded autoplay.
 
+The same event checkpoints were reproduced on the Japanese base ROM. The
+candidate nametable differs only in the localized text and nearby event tiles:
+18 bytes at frame 1926 and 42 bytes at frame 1986. This confirms the route is
+real gameplay/event behavior, not a Korean patch boot loop.
+
 ## Limits
 
 - The route does not prove that every boss is defeated.
-- No boss-dialogue pointer was captured by this run.
+- The reached interaction screen is not a boss scene. No boss dialogue or boss
+  defeat was captured by this run.
 - This is gameplay-entry and page-lifecycle evidence, not release-wide visual
   approval for all 244 translated records.
 
@@ -39,3 +47,4 @@ without blind unbounded autoplay.
 - `rom_analysis/stage_progression_probe_full_pointer_candidate_start/summary.tsv`
 - `rom_analysis/stage_progression_probe_full_pointer_candidate_start/captures.tsv`
 - `rom_analysis/full_pointer_dialogue_input_probe/summary.tsv`
+- `rom_analysis/stage_progression_interaction_boss_audit.md`

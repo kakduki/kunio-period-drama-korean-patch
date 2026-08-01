@@ -22,7 +22,7 @@ Current release verdict: **UNKNOWN**
 | Opening-context Korean glyph capacity | SOFT_GATE_PASS | Pointer 182 proves 34 paired source slots (`0x81-0x9A` plus `0xC0-0xC7`) at frame 883; this is not global coverage. |
 | Full Korean pointer draft capacity | SOFT_GATE_PASS | The current Hangul set packs into 48 shared pages, each within the proven 34-code 8x16 pool. |
 | Static cloned-page lifecycle | SOFT_GATE_PASS | Small page mapping passes but its native visual gate fails; corrected tier-2 R1-window candidate passes `67/67` mappings with the opening background intact. |
-| Bounded full-pointer gameplay progression | PASS_GAMEPLAY_ENTRY | Full candidate reached pointer dialogue, restored page state, and active combat at frame 915; finite `lua_done` at frame 7200. Boss defeat/dialogue remains UNKNOWN. |
+| Bounded full-pointer gameplay progression | PASS_GAMEPLAY_ENTRY_PASS_INTERACTION | Full candidate reached pointer dialogue, restored page state, active combat at frame 915, and interaction pointers 135/136 (`WELCOME` / `WHAT WOULD YOU LIKE`) at frames 1926/1986; finite `lua_done` at frame 7200. Boss defeat/dialogue remains UNKNOWN. |
 | Release package | BLOCKED | Requires high-risk families and release checks to pass. |
 
 ## Required Before Release
@@ -35,5 +35,6 @@ Current release verdict: **UNKNOWN**
 - [ ] Check Korean glyph readability on every promoted screen.
 - [ ] Run cross-screen boot and gameplay smoke tests without untargeted autoplay.
 - [ ] Require manual visual evidence only for release or high-risk candidates.
+- [ ] Identify a bounded enemy-clear or boss-spawn route; the interaction/shop route is not boss proof.
 - [ ] Promote pointer-dialogue batches only after Japanese context and bounded
   early-boss screen evidence agree with the English structural reference.
