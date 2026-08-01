@@ -1,0 +1,20 @@
+{
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_nonpointer_korean_candidate\\kunio_period_drama_korean_full_nonpointer_candidate.nes",
+  "candidate_md5": "18284402f073b91c09d05f52a16b9b9d",
+  "build_report": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_nonpointer_korean_candidate\\kunio_period_drama_korean_full_nonpointer_candidate_build_report.json",
+  "trace_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\stage_progression_probe_full_nonpointer_korean_candidate_trace",
+  "checks": {
+    "candidate_exists": true,
+    "candidate_md5_matches_build": true,
+    "candidate_chr_expanded": true,
+    "build_applied_two_safe_targets": true,
+    "fceux_lua_done": true,
+    "entry_screen_captured": true,
+    "combat_screen_captured": true,
+    "late_event_screen_captured": true
+  },
+  "status": "PASS",
+  "visual_status": "UNKNOWN",
+  "release_status": "NOT_READY",
+  "failure_class": "none"
+}

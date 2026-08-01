@@ -51,3 +51,12 @@ Current release verdict: **UNKNOWN**
 | Final release | UNKNOWN | Other renderers, full visual review, boss route, and release checklist remain incomplete. |
 
 Current report: `rom_analysis/full_korean_candidate_smoke_report.md`.
+
+## Full Non-Pointer Candidate Smoke
+
+- [x] Candidate ROM generated deterministically from the current full candidate.
+- [x] Two safe equal-length targets applied; 41 unproven targets excluded.
+- [x] Bounded FCEUX progression reaches lua_done.
+- [x] Entry, combat, and late event-like captures exist.
+- [ ] Exact changed-string screen contexts have visual proof.
+- [ ] Release promotion approved.

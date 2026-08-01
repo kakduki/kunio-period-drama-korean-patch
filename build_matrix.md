@@ -55,3 +55,14 @@ probe; it is not blind autoplay. The reached 1926/1986 screen is the interaction
 - Bounded smoke: `SOFT_GATE_PASS_MENU_AND_GAMEPLAY_ENTRY`; menu template and mirror match, final R1 is `0x3E`, progression reaches combat and late event screens, and `lua_done` is recorded.
 - Pointer route probe: `UNKNOWN_TARGET_ROUTE_PROBE_ADDRESS_CONTRACT`; its old fixed-address target does not match the relocated full-pointer layout.
 - Release status: `UNKNOWN`; this is a development candidate, not a final release ROM.
+
+## Full Non-Pointer Candidate (2026-08-01)
+
+- Candidate ROM: output/full_nonpointer_korean_candidate/kunio_period_drama_korean_full_nonpointer_candidate.nes.
+- Candidate MD5: 18284402f073b91c09d05f52a16b9b9d.
+- Composition: current full pointer/menu candidate plus two safe equal-length non-pointer PRG targets.
+- Applied targets: runtime-confirmed rom_07227_candidate_84 and encoding-exact watch_rom_0569d_..._7a.
+- Excluded targets: 41 targets requiring padding proof or only static/pointer-hypothesis evidence.
+- Bounded progression: lua_done; entry screens, combat at frame 915, and late event-like screens at frames 1956/2046 captured.
+- Automated smoke: PASS; exact non-pointer screen visual proof: UNKNOWN; release: NOT_READY.
+- Detailed report: rom_analysis/full_nonpointer_korean_candidate.md and rom_analysis/full_nonpointer_korean_candidate_smoke.md.

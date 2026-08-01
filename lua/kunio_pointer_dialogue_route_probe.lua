@@ -7,6 +7,7 @@
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/pointer_dialogue_route_probe"
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "5000")
 local HIT_LIMIT = tonumber(os.getenv("KUNIO_HIT_LIMIT") or "5000")
+local READ_LOG_LIMIT = tonumber(os.getenv("KUNIO_READ_LOG_LIMIT") or "200")
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -93,27 +94,38 @@ end
 
 local targets = {
     {
-        label = "pointer_002_korean_early_boss",
-        start = 0xA004,
-        stop = 0xA010,
-        bytes = "F0 BB 00 81 82 83 84 85 86 87 88 CA FF",
+        label = "pointer_002_korean_relocated",
+        start = 0x9FD6,
+        stop = 0x9FE0,
+        bytes = "F0 BB 97 71 8C CA 8F 85 82 BA FF",
     },
     {
-        label = "pointer_003_korean_early_boss",
-        start = 0xA011,
-        stop = 0xA042,
-        bytes = "F0 BB 00 89 8A 8B 8C 8D 8E 8F 90 00 91 92 93 94 95 96 CA F8 97 98 99 9A 8F 90 C0 C1 C2 C3 CA 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF",
+        label = "pointer_003_korean_relocated",
+        start = 0x9FE1,
+        stop = 0x9FF5,
+        bytes = "F0 BB 84 00 89 95 8C 00 85 99 86 CC F8 C0 B6 8A 8C 9A 98 CA FF",
     },
 }
 
 local summary_path = OUT_DIR .. "/summary.tsv"
+local read_log_path = OUT_DIR .. "/target_reads.tsv"
 mkdir(OUT_DIR)
 append(summary_path, "frame\treason\ttarget\tscreenshot\ttarget_match\tphase\thits\tscreen_fingerprint")
 append(summary_path, table.concat({"0", "target_loaded", tostring(#targets), "false", "false", "1", "0", ""}, "\t"))
+append(read_log_path, "frame\ttarget\tstart\tvalues\tmatch")
 
 local hits = 0
+local read_logs = 0
 local captured = false
 local captured_target = ""
+local function target_values(target)
+    local values = {}
+    for addr = target.start, target.stop do
+        values[#values + 1] = hex2(byte_at(addr))
+    end
+    return table.concat(values, " ")
+end
+
 
 local function capture(target)
     local frame = emu.framecount()
@@ -141,7 +153,18 @@ for _, target in ipairs(targets) do
     for addr = target.start, target.stop do
         register_read(addr, function()
             if hits < HIT_LIMIT then hits = hits + 1 end
-            if not captured and matches(target) then
+            local is_match = matches(target)
+            if read_logs < READ_LOG_LIMIT then
+                read_logs = read_logs + 1
+                append(read_log_path, table.concat({
+                    tostring(emu.framecount()),
+                    target.label,
+                    string.format("$%04X", target.start),
+                    target_values(target),
+                    tostring(is_match),
+                }, "\t"))
+            end
+            if not captured and is_match then
                 captured = true
                 captured_target = target.label
                 capture(target)

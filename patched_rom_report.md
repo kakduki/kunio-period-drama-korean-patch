@@ -182,3 +182,16 @@ checkpoint report and raw-output locations.
 - Progression context: `lua_done`, entry route reaches combat at frame 915 and late event screens after frame 1900.
 - Pointer route probe is **UNKNOWN** because its old target address contract predates relocation.
 - Release verdict remains **UNKNOWN**. Full visual coverage, other UI renderers, boss route, and release gate evidence are still open.
+
+## Full Non-Pointer Korean Candidate
+
+- Status: SOFT_GATE_PASS for deterministic build and bounded progression smoke.
+- Candidate MD5: 18284402f073b91c09d05f52a16b9b9d.
+- Composition: full pointer/menu candidate plus two safe equal-length non-pointer PRG edits.
+- Applied targets: rom_07227_candidate_84 and watch_rom_0569d_..._7a.
+- Excluded targets: 41 candidates remain excluded because they need a padding rule or stronger screen ownership evidence.
+- Progression smoke: lua_done; entry captures, combat frame 915, and late event-like frames 1956/2046.
+- Exact screen visual proof for the changed non-pointer strings: UNKNOWN.
+- Release status: NOT_READY.
+- Detailed build report: rom_analysis/full_nonpointer_korean_candidate.md.
+- Detailed smoke report: rom_analysis/full_nonpointer_korean_candidate_smoke.md.
