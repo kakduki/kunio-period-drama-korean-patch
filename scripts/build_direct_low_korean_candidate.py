@@ -61,6 +61,7 @@ def build(
     output_dir: Path,
     report_json: Path,
     report_markdown: Path,
+    reserved_low_codes: set[int] | None = None,
 ) -> dict[str, object]:
     current = input_rom.read_bytes()
     base = base_rom.read_bytes()
@@ -96,9 +97,18 @@ def build(
     missing_glyphs = sorted({character for character in ordered_glyphs if character not in glyphs})
     if missing_glyphs:
         raise ValueError(f"glyphs missing from font assets: {missing_glyphs}")
-    if len(ordered_glyphs) > MAX_LOW_CODE:
-        raise ValueError(f"direct-low glyph pool needs {len(ordered_glyphs)} codes; max is {MAX_LOW_CODE}")
-    code_by_glyph = {character: index + 1 for index, character in enumerate(ordered_glyphs)}
+    reserved = set(reserved_low_codes or ())
+    if any(code <= 0 or code > MAX_LOW_CODE for code in reserved):
+        raise ValueError(f"reserved direct-low codes must be in 0x01-0x{MAX_LOW_CODE:02X}")
+    available_codes = [code for code in range(1, MAX_LOW_CODE + 1) if code not in reserved]
+    if len(ordered_glyphs) > len(available_codes):
+        raise ValueError(
+            f"direct-low glyph pool needs {len(ordered_glyphs)} codes; "
+            f"available after reservation: {len(available_codes)}"
+        )
+    code_by_glyph = {
+        character: available_codes[index] for index, character in enumerate(ordered_glyphs)
+    }
 
     patched = bytearray(current)
     rows_report: list[dict[str, object]] = []
@@ -167,6 +177,7 @@ def build(
         "candidate_md5": md5(candidate),
         "direct_low_run_count": len(rows_report),
         "direct_low_glyph_count": len(code_by_glyph),
+        "reserved_low_codes": [f"0x{code:02X}" for code in sorted(reserved)],
         "ips_record_count": len(records_out),
         "glyph_codes": {character: f"0x{code:02X}" for character, code in code_by_glyph.items()},
         "rows": rows_report,
@@ -182,7 +193,7 @@ def build(
         f"- Input candidate MD5: `{payload['input_md5']}`.",
         f"- Candidate MD5: `{payload['candidate_md5']}`.",
         f"- Direct-low runs: `{payload['direct_low_run_count']}`.",
-        f"- Korean glyphs allocated: `{payload['direct_low_glyph_count']}` in tiles `0x101-0x{0x100 + len(code_by_glyph):03X}`.",
+        f'- Korean glyphs allocated: `{payload["direct_low_glyph_count"]}`; reserved low codes: `{", ".join(payload["reserved_low_codes"]) or "none"}`.',
         f"- IPS records: `{payload['ips_record_count']}`; IPS round trip is checked by the builder.",
         "- Runtime/screen status: pending bounded per-context proof.",
         "- Release status: `NOT_READY`.",

@@ -1,0 +1,1203 @@
+{
+  "status": "BUILT_RUNTIME_VISUAL_PENDING",
+  "input_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_candidate\\kunio_period_drama_korean_full_candidate.nes",
+  "input_md5": "d062b19d23050cd4e148e22fbfff57b7",
+  "base_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "reference_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\tools\\reference\\TSe-v10.ips",
+  "reference_md5": "63e1d902807981f524af97748cd99500",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_direct_low_items_compatible_candidate\\kunio_period_drama_korean_full_direct_low_candidate.nes",
+  "candidate_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_direct_low_items_compatible_candidate\\kunio_period_drama_korean_full_direct_low_candidate.ips",
+  "candidate_md5": "b453fdef1c17ca3875fbd48b31454b5f",
+  "direct_low_run_count": 120,
+  "direct_low_glyph_count": 77,
+  "reserved_low_codes": [
+    "0x20",
+    "0x21",
+    "0x22",
+    "0x23",
+    "0x24",
+    "0x25",
+    "0x26",
+    "0x27",
+    "0x38"
+  ],
+  "ips_record_count": 494,
+  "glyph_codes": {
+    "성": "0x01",
+    "장": "0x02",
+    "비": "0x03",
+    "끝": "0x04",
+    "공": "0x05",
+    "기": "0x06",
+    "술": "0x07",
+    "사": "0x08",
+    "일": "0x09",
+    "회": "0x0A",
+    "선": "0x0B",
+    "수": "0x0C",
+    "메": "0x0D",
+    "밥": "0x0E",
+    "치": "0x0F",
+    "료": "0x10",
+    "가": "0x11",
+    "게": "0x12",
+    "분": "0x13",
+    "조": "0x14",
+    "주": "0x15",
+    "먹": "0x16",
+    "타": "0x17",
+    "어": "0x18",
+    "뢰": "0x19",
+    "방": "0x1A",
+    "리": "0x1B",
+    "헬": "0x1C",
+    "드": "0x1D",
+    "릴": "0x1E",
+    "검": "0x1F",
+    "박": "0x28",
+    "안": "0x29",
+    "마": "0x2A",
+    "빅": "0x2B",
+    "뱅": "0x2C",
+    "파": "0x2D",
+    "키": "0x2E",
+    "전": "0x2F",
+    "피": "0x30",
+    "클": "0x31",
+    "소": "0x32",
+    "동": "0x33",
+    "물": "0x34",
+    "생": "0x35",
+    "고": "0x36",
+    "과": "0x37",
+    "자": "0x39",
+    "약": "0x3A",
+    "강": "0x3B",
+    "제": "0x3C",
+    "도": "0x3D",
+    "야": "0x3E",
+    "길": "0x3F",
+    "보": "0x40",
+    "대": "0x41",
+    "두": "0x42",
+    "하": "0x43",
+    "부": "0x44",
+    "모": "0x45",
+    "임": "0x46",
+    "명": "0x47",
+    "배": "0x48",
+    "설": "0x49",
+    "시": "0x4A",
+    "산": "0x4B",
+    "께": "0x4C",
+    "끼": "0x4D",
+    "좋": "0x4E",
+    "은": "0x4F",
+    "때": "0x50",
+    "효": "0x51",
+    "달": "0x52",
+    "인": "0x53",
+    "프": "0x54",
+    "태": "0x55",
+    "정": "0x56"
+  },
+  "rows": [
+    {
+      "source": "GROWTH",
+      "translation": "성장",
+      "rom_offset": "0x07897",
+      "length": 6,
+      "reference_bytes": "07 12 0F 17 14 08",
+      "new_bytes": "01 02 00 00 00 00",
+      "prg_bank": 1
+    },
+    {
+      "source": "RATES",
+      "translation": "비",
+      "rom_offset": "0x0789E",
+      "length": 5,
+      "reference_bytes": "12 01 14 05 13",
+      "new_bytes": "03 00 00 00 00",
+      "prg_bank": 1
+    },
+    {
+      "source": "LEFTEND",
+      "translation": "끝",
+      "rom_offset": "0x078A4",
+      "length": 7,
+      "reference_bytes": "0C 05 06 14 05 0E 04",
+      "new_bytes": "04 00 00 00 00 00 00",
+      "prg_bank": 1
+    },
+    {
+      "source": "NONE",
+      "translation": "공",
+      "rom_offset": "0x0FC31",
+      "length": 4,
+      "reference_bytes": "0E 0F 0E 05",
+      "new_bytes": "05 00 00 00",
+      "prg_bank": 3
+    },
+    {
+      "source": "TECHNOS",
+      "translation": "기술사",
+      "rom_offset": "0x136DA",
+      "length": 7,
+      "reference_bytes": "14 05 03 08 0E 0F 13",
+      "new_bytes": "06 07 08 00 00 00 00",
+      "prg_bank": 4
+    },
+    {
+      "source": "JAPAN",
+      "translation": "일",
+      "rom_offset": "0x136E2",
+      "length": 5,
+      "reference_bytes": "0A 01 10 01 0E",
+      "new_bytes": "09 00 00 00 00",
+      "prg_bank": 4
+    },
+    {
+      "source": "CORP",
+      "translation": "회사",
+      "rom_offset": "0x136E8",
+      "length": 4,
+      "reference_bytes": "03 0F 12 10",
+      "new_bytes": "0A 08 00 00",
+      "prg_bank": 4
+    },
+    {
+      "source": "PLAYER",
+      "translation": "선수",
+      "rom_offset": "0x13AE3",
+      "length": 6,
+      "reference_bytes": "10 0C 01 19 05 12",
+      "new_bytes": "0B 0C 00 00 00 00",
+      "prg_bank": 4
+    },
+    {
+      "source": "PLAYER",
+      "translation": "선수",
+      "rom_offset": "0x13AEB",
+      "length": 6,
+      "reference_bytes": "10 0C 01 19 05 12",
+      "new_bytes": "0B 0C 00 00 00 00",
+      "prg_bank": 4
+    },
+    {
+      "source": "MENU",
+      "translation": "메",
+      "rom_offset": "0x1A2EF",
+      "length": 4,
+      "reference_bytes": "0D 05 0E 15",
+      "new_bytes": "0D 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "FOOD",
+      "translation": "밥",
+      "rom_offset": "0x1A778",
+      "length": 4,
+      "reference_bytes": "06 0F 0F 04",
+      "new_bytes": "0E 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "HEALER",
+      "translation": "치료",
+      "rom_offset": "0x1A786",
+      "length": 6,
+      "reference_bytes": "08 05 01 0C 05 12",
+      "new_bytes": "0F 10 00 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "TECH",
+      "translation": "기술",
+      "rom_offset": "0x1A790",
+      "length": 4,
+      "reference_bytes": "14 05 03 08",
+      "new_bytes": "06 07 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "FOOD",
+      "translation": "밥",
+      "rom_offset": "0x1A798",
+      "length": 4,
+      "reference_bytes": "06 0F 0F 04",
+      "new_bytes": "0E 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7A0",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "CHANCE",
+      "translation": "기회",
+      "rom_offset": "0x1A7A6",
+      "length": 6,
+      "reference_bytes": "03 08 01 0E 03 05",
+      "new_bytes": "06 0A 00 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "FOOD",
+      "translation": "밥",
+      "rom_offset": "0x1A7B0",
+      "length": 4,
+      "reference_bytes": "06 0F 0F 04",
+      "new_bytes": "0E 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOPBUNZO",
+      "translation": "분조가게",
+      "rom_offset": "0x1A7BA",
+      "length": 9,
+      "reference_bytes": "13 08 0F 10 02 15 0E 1A 0F",
+      "new_bytes": "13 14 11 12 00 00 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7CA",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "FOOD",
+      "translation": "밥",
+      "rom_offset": "0x1A7D0",
+      "length": 4,
+      "reference_bytes": "06 0F 0F 04",
+      "new_bytes": "0E 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7DA",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7E2",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7EA",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7F2",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A7FA",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A802",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A80A",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A812",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A81A",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A822",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A82A",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A832",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A83A",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A842",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A84A",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SHOP",
+      "translation": "가게",
+      "rom_offset": "0x1A852",
+      "length": 4,
+      "reference_bytes": "13 08 0F 10",
+      "new_bytes": "11 12 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "SAVED",
+      "translation": "장",
+      "rom_offset": "0x1BB4A",
+      "length": 5,
+      "reference_bytes": "13 01 16 05 04",
+      "new_bytes": "02 00 00 00 00",
+      "prg_bank": 6
+    },
+    {
+      "source": "FIST",
+      "translation": "주먹",
+      "rom_offset": "0x1C914",
+      "length": 4,
+      "reference_bytes": "06 09 13 14",
+      "new_bytes": "15 16 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "KICK",
+      "translation": "타",
+      "rom_offset": "0x1C920",
+      "length": 4,
+      "reference_bytes": "0B 09 03 0B",
+      "new_bytes": "17 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TORP",
+      "translation": "어뢰",
+      "rom_offset": "0x1C937",
+      "length": 4,
+      "reference_bytes": "14 0F 12 10",
+      "new_bytes": "18 19 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "ATTACK",
+      "translation": "공",
+      "rom_offset": "0x1C943",
+      "length": 6,
+      "reference_bytes": "01 14 14 01 03 0B",
+      "new_bytes": "05 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "FUMI",
+      "translation": "기술",
+      "rom_offset": "0x1C951",
+      "length": 4,
+      "reference_bytes": "06 15 0D 09",
+      "new_bytes": "06 07 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "GUARD",
+      "translation": "방어",
+      "rom_offset": "0x1C95D",
+      "length": 5,
+      "reference_bytes": "07 15 01 12 04",
+      "new_bytes": "1A 18 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SCREW",
+      "translation": "회",
+      "rom_offset": "0x1C968",
+      "length": 5,
+      "reference_bytes": "13 03 12 05 17",
+      "new_bytes": "0A 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TORNADO",
+      "translation": "회리",
+      "rom_offset": "0x1C973",
+      "length": 7,
+      "reference_bytes": "14 0F 12 0E 01 04 0F",
+      "new_bytes": "0A 1B 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TORP",
+      "translation": "어뢰",
+      "rom_offset": "0x1C982",
+      "length": 4,
+      "reference_bytes": "14 0F 12 10",
+      "new_bytes": "18 19 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "HELICPTR",
+      "translation": "헬기",
+      "rom_offset": "0x1C98C",
+      "length": 8,
+      "reference_bytes": "08 05 0C 09 03 10 14 12",
+      "new_bytes": "1C 06 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "DRILL",
+      "translation": "드릴",
+      "rom_offset": "0x1C99A",
+      "length": 5,
+      "reference_bytes": "04 12 09 0C 0C",
+      "new_bytes": "1D 1E 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SLAP",
+      "translation": "타",
+      "rom_offset": "0x1C9A5",
+      "length": 4,
+      "reference_bytes": "13 0C 01 10",
+      "new_bytes": "17 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "DAGGR",
+      "translation": "검",
+      "rom_offset": "0x1C9B2",
+      "length": 5,
+      "reference_bytes": "04 01 07 07 12",
+      "new_bytes": "1F 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "HEADBUTT",
+      "translation": "박치기",
+      "rom_offset": "0x1C9C0",
+      "length": 8,
+      "reference_bytes": "08 05 01 04 02 15 14 14",
+      "new_bytes": "28 0F 06 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "BMPKNART",
+      "translation": "기술",
+      "rom_offset": "0x1C9CE",
+      "length": 8,
+      "reference_bytes": "02 0D 10 0B 0E 01 12 14",
+      "new_bytes": "06 07 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "FIST",
+      "translation": "주먹",
+      "rom_offset": "0x1C9DE",
+      "length": 4,
+      "reference_bytes": "06 09 13 14",
+      "new_bytes": "15 16 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "KICK",
+      "translation": "타",
+      "rom_offset": "0x1C9EB",
+      "length": 4,
+      "reference_bytes": "0B 09 03 0B",
+      "new_bytes": "17 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SCREW",
+      "translation": "회",
+      "rom_offset": "0x1C9F6",
+      "length": 5,
+      "reference_bytes": "13 03 12 05 17",
+      "new_bytes": "0A 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "MASSAGE",
+      "translation": "안마",
+      "rom_offset": "0x1CA02",
+      "length": 7,
+      "reference_bytes": "0D 01 13 13 01 07 05",
+      "new_bytes": "29 2A 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "BIGBANG",
+      "translation": "빅뱅",
+      "rom_offset": "0x1CA0F",
+      "length": 7,
+      "reference_bytes": "02 09 07 02 01 0E 07",
+      "new_bytes": "2B 2C 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "WARPSHOT",
+      "translation": "파",
+      "rom_offset": "0x1CA1C",
+      "length": 8,
+      "reference_bytes": "17 01 12 10 13 08 0F 14",
+      "new_bytes": "2D 00 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "DEFLECT",
+      "translation": "사",
+      "rom_offset": "0x1CA2A",
+      "length": 7,
+      "reference_bytes": "04 05 06 0C 05 03 14",
+      "new_bytes": "08 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "KIUKIU",
+      "translation": "키키",
+      "rom_offset": "0x1CA39",
+      "length": 6,
+      "reference_bytes": "0B 09 15 0B 09 15",
+      "new_bytes": "2E 2E 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SWING",
+      "translation": "회전",
+      "rom_offset": "0x1CA47",
+      "length": 5,
+      "reference_bytes": "13 17 09 0E 07",
+      "new_bytes": "0A 2F 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "PICKLE",
+      "translation": "피클",
+      "rom_offset": "0x1CA52",
+      "length": 6,
+      "reference_bytes": "10 09 03 0B 0C 05",
+      "new_bytes": "30 31 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "MEAL",
+      "translation": "밥",
+      "rom_offset": "0x1CA5E",
+      "length": 4,
+      "reference_bytes": "0D 05 01 0C",
+      "new_bytes": "0E 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SOBA",
+      "translation": "소",
+      "rom_offset": "0x1CA68",
+      "length": 4,
+      "reference_bytes": "13 0F 02 01",
+      "new_bytes": "32 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "UDON",
+      "translation": "동",
+      "rom_offset": "0x1CA72",
+      "length": 4,
+      "reference_bytes": "15 04 0F 0E",
+      "new_bytes": "33 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SOUP",
+      "translation": "물",
+      "rom_offset": "0x1CA7C",
+      "length": 4,
+      "reference_bytes": "13 0F 15 10",
+      "new_bytes": "34 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "FISH",
+      "translation": "생선",
+      "rom_offset": "0x1CA8F",
+      "length": 4,
+      "reference_bytes": "06 09 13 08",
+      "new_bytes": "35 0B 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TENPURA",
+      "translation": "전",
+      "rom_offset": "0x1CA99",
+      "length": 7,
+      "reference_bytes": "14 05 0E 10 15 12 01",
+      "new_bytes": "2F 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "DANGO",
+      "translation": "고",
+      "rom_offset": "0x1CAA6",
+      "length": 5,
+      "reference_bytes": "04 01 0E 07 0F",
+      "new_bytes": "36 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "RICEBALL",
+      "translation": "주먹밥",
+      "rom_offset": "0x1CAB1",
+      "length": 8,
+      "reference_bytes": "12 09 03 05 02 01 0C 0C",
+      "new_bytes": "15 16 0E 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "MANJUU",
+      "translation": "과자",
+      "rom_offset": "0x1CABF",
+      "length": 6,
+      "reference_bytes": "0D 01 0E 0A 15 15",
+      "new_bytes": "37 39 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SUSHI",
+      "translation": "밥",
+      "rom_offset": "0x1CACB",
+      "length": 5,
+      "reference_bytes": "13 15 13 08 09",
+      "new_bytes": "0E 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SALVE",
+      "translation": "고",
+      "rom_offset": "0x1CAD6",
+      "length": 5,
+      "reference_bytes": "13 01 0C 16 05",
+      "new_bytes": "36 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "POULTICE",
+      "translation": "약",
+      "rom_offset": "0x1CAE1",
+      "length": 8,
+      "reference_bytes": "10 0F 15 0C 14 09 03 05",
+      "new_bytes": "3A 00 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TONIC",
+      "translation": "강장제",
+      "rom_offset": "0x1CAEF",
+      "length": 5,
+      "reference_bytes": "14 0F 0E 09 03",
+      "new_bytes": "3B 02 3C 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TOYAMA",
+      "translation": "도야마",
+      "rom_offset": "0x1CAFB",
+      "length": 6,
+      "reference_bytes": "14 0F 19 01 0D 01",
+      "new_bytes": "3D 3E 2A 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "ELIXIR",
+      "translation": "약",
+      "rom_offset": "0x1CB07",
+      "length": 6,
+      "reference_bytes": "05 0C 09 18 09 12",
+      "new_bytes": "3A 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "COTTON",
+      "translation": "소",
+      "rom_offset": "0x1CB14",
+      "length": 6,
+      "reference_bytes": "03 0F 14 14 0F 0E",
+      "new_bytes": "32 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "COTTON",
+      "translation": "소",
+      "rom_offset": "0x1CB21",
+      "length": 6,
+      "reference_bytes": "03 0F 14 14 0F 0E",
+      "new_bytes": "32 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "LONG",
+      "translation": "길게",
+      "rom_offset": "0x1CB2E",
+      "length": 4,
+      "reference_bytes": "0C 0F 0E 07",
+      "new_bytes": "3F 12 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "OBSCENE",
+      "translation": "야",
+      "rom_offset": "0x1CB39",
+      "length": 7,
+      "reference_bytes": "0F 02 13 03 05 0E 05",
+      "new_bytes": "3E 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "COMMON",
+      "translation": "보",
+      "rom_offset": "0x1CB47",
+      "length": 6,
+      "reference_bytes": "03 0F 0D 0D 0F 0E",
+      "new_bytes": "40 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "WIDE",
+      "translation": "대",
+      "rom_offset": "0x1CB54",
+      "length": 4,
+      "reference_bytes": "17 09 04 05",
+      "new_bytes": "41 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "THICK",
+      "translation": "두",
+      "rom_offset": "0x1CB5F",
+      "length": 5,
+      "reference_bytes": "14 08 09 03 0B",
+      "new_bytes": "42 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "WHITE",
+      "translation": "하",
+      "rom_offset": "0x1CB6B",
+      "length": 5,
+      "reference_bytes": "17 08 09 14 05",
+      "new_bytes": "43 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "PRICEY",
+      "translation": "고가",
+      "rom_offset": "0x1CB81",
+      "length": 6,
+      "reference_bytes": "10 12 09 03 05 19",
+      "new_bytes": "36 11 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SILK",
+      "translation": "비",
+      "rom_offset": "0x1CB8E",
+      "length": 4,
+      "reference_bytes": "13 09 0C 0B",
+      "new_bytes": "03 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SILK",
+      "translation": "비",
+      "rom_offset": "0x1CB99",
+      "length": 4,
+      "reference_bytes": "13 09 0C 0B",
+      "new_bytes": "03 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "THICK",
+      "translation": "두",
+      "rom_offset": "0x1CBA4",
+      "length": 5,
+      "reference_bytes": "14 08 09 03 0B",
+      "new_bytes": "42 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SAUCY",
+      "translation": "방",
+      "rom_offset": "0x1CBB0",
+      "length": 5,
+      "reference_bytes": "13 01 15 03 19",
+      "new_bytes": "1A 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "NARITA",
+      "translation": "리타",
+      "rom_offset": "0x1CBBC",
+      "length": 6,
+      "reference_bytes": "0E 01 12 09 14 01",
+      "new_bytes": "1B 17 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SOFT",
+      "translation": "부드",
+      "rom_offset": "0x1CBD3",
+      "length": 4,
+      "reference_bytes": "13 0F 06 14",
+      "new_bytes": "44 1D 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "WOOL",
+      "translation": "모",
+      "rom_offset": "0x1CBDE",
+      "length": 4,
+      "reference_bytes": "17 0F 0F 0C",
+      "new_bytes": "45 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TWISTED",
+      "translation": "임",
+      "rom_offset": "0x1CBEC",
+      "length": 7,
+      "reference_bytes": "14 17 09 13 14 05 04",
+      "new_bytes": "46 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "PONGEE",
+      "translation": "명주",
+      "rom_offset": "0x1CBFA",
+      "length": 6,
+      "reference_bytes": "10 0F 0E 07 05 05",
+      "new_bytes": "47 15 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "DOUBLEUP",
+      "translation": "두배",
+      "rom_offset": "0x1CC06",
+      "length": 8,
+      "reference_bytes": "04 0F 15 02 0C 05 15 10",
+      "new_bytes": "42 48 00 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SNOW",
+      "translation": "설",
+      "rom_offset": "0x1CC15",
+      "length": 4,
+      "reference_bytes": "13 0E 0F 17",
+      "new_bytes": "49 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SPIKED",
+      "translation": "가시",
+      "rom_offset": "0x1CC20",
+      "length": 6,
+      "reference_bytes": "13 10 09 0B 05 04",
+      "new_bytes": "11 4A 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "CAMEL",
+      "translation": "타",
+      "rom_offset": "0x1CC2D",
+      "length": 5,
+      "reference_bytes": "03 01 0D 05 0C",
+      "new_bytes": "17 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "KAPPA",
+      "translation": "파",
+      "rom_offset": "0x1CC39",
+      "length": 5,
+      "reference_bytes": "0B 01 10 10 01",
+      "new_bytes": "2D 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "MAGIC",
+      "translation": "마술",
+      "rom_offset": "0x1CC45",
+      "length": 5,
+      "reference_bytes": "0D 01 07 09 03",
+      "new_bytes": "2A 07 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SANKI",
+      "translation": "산기",
+      "rom_offset": "0x1CC51",
+      "length": 5,
+      "reference_bytes": "13 01 0E 0B 09",
+      "new_bytes": "4B 06 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "CRSR",
+      "translation": "기",
+      "rom_offset": "0x1CC60",
+      "length": 4,
+      "reference_bytes": "03 12 13 12",
+      "new_bytes": "06 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "MYSTERY",
+      "translation": "수수께끼",
+      "rom_offset": "0x1CC6B",
+      "length": 7,
+      "reference_bytes": "0D 19 13 14 05 12 19",
+      "new_bytes": "0C 0C 4C 4D 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "GOODTIME",
+      "translation": "좋은때",
+      "rom_offset": "0x1CC78",
+      "length": 8,
+      "reference_bytes": "07 0F 0F 04 14 09 0D 05",
+      "new_bytes": "4E 4F 50 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "EFFECT",
+      "translation": "효과",
+      "rom_offset": "0x1CC88",
+      "length": 6,
+      "reference_bytes": "05 06 06 05 03 14",
+      "new_bytes": "51 37 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "MASTER",
+      "translation": "달인",
+      "rom_offset": "0x1CC95",
+      "length": 6,
+      "reference_bytes": "0D 01 13 14 05 12",
+      "new_bytes": "52 53 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "JUMP",
+      "translation": "프",
+      "rom_offset": "0x1CCA2",
+      "length": 4,
+      "reference_bytes": "0A 15 0D 10",
+      "new_bytes": "54 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "ABET",
+      "translation": "도",
+      "rom_offset": "0x1CCB7",
+      "length": 5,
+      "reference_bytes": "00 01 02 05 14",
+      "new_bytes": "00 3D 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "STAY",
+      "translation": "대기",
+      "rom_offset": "0x1CCBF",
+      "length": 4,
+      "reference_bytes": "13 14 01 19",
+      "new_bytes": "41 06 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "ANONE",
+      "translation": "기",
+      "rom_offset": "0x1CCC4",
+      "length": 6,
+      "reference_bytes": "00 01 0E 0F 0E 05",
+      "new_bytes": "00 06 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "EXIT",
+      "translation": "끝",
+      "rom_offset": "0x1CCCB",
+      "length": 4,
+      "reference_bytes": "05 18 09 14",
+      "new_bytes": "04 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "HALF",
+      "translation": "하프",
+      "rom_offset": "0x1CCD4",
+      "length": 4,
+      "reference_bytes": "08 01 0C 06",
+      "new_bytes": "43 54 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "ALLY",
+      "translation": "동료",
+      "rom_offset": "0x1CCE5",
+      "length": 4,
+      "reference_bytes": "01 0C 0C 19",
+      "new_bytes": "33 10 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "STATUS",
+      "translation": "태",
+      "rom_offset": "0x1CCEA",
+      "length": 6,
+      "reference_bytes": "13 14 01 14 15 13",
+      "new_bytes": "55 00 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "ALLY",
+      "translation": "동료",
+      "rom_offset": "0x1CCF1",
+      "length": 4,
+      "reference_bytes": "01 0C 0C 19",
+      "new_bytes": "33 10 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "TECH",
+      "translation": "기술",
+      "rom_offset": "0x1CCF6",
+      "length": 4,
+      "reference_bytes": "14 05 03 08",
+      "new_bytes": "06 07 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SETUP",
+      "translation": "설정",
+      "rom_offset": "0x1CCFB",
+      "length": 5,
+      "reference_bytes": "13 05 14 15 10",
+      "new_bytes": "49 56 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SETTNG",
+      "translation": "설정",
+      "rom_offset": "0x1CD01",
+      "length": 6,
+      "reference_bytes": "13 05 14 14 0E 07",
+      "new_bytes": "49 56 00 00 00 00",
+      "prg_bank": 7
+    },
+    {
+      "source": "SAVE",
+      "translation": "장",
+      "rom_offset": "0x1CD08",
+      "length": 4,
+      "reference_bytes": "13 01 16 05",
+      "new_bytes": "02 00 00 00",
+      "prg_bank": 7
+    }
+  ],
+  "release_status": "NOT_READY",
+  "composition": {
+    "reserved_low_codes": [
+      "0x20",
+      "0x21",
+      "0x22",
+      "0x23",
+      "0x24",
+      "0x25",
+      "0x26",
+      "0x27",
+      "0x38"
+    ],
+    "reserved_owner": "Items title/NONE",
+    "direct_low_owner": "all other direct-low labels"
+  }
+}

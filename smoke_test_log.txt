@@ -259,3 +259,23 @@ mapped_runtime_unknown=10
 unmapped_glossary=190
 broad_patch_promotion=NOT_READY
 report=rom_analysis/pre_pointer_korean_candidates.md
+
+# Full composed candidate
+candidate=full_korean_composed_candidate
+candidate_md5=5f348772bb6809b1df0e7f84ef2e7603
+static_build=PASS
+ips_round_trip=PASS
+items_byte_gate=PASS_BYTE_PROOF_VISUAL_UNKNOWN
+items_capture_frame=1906
+items_queue_frame=1737
+input_explorer_frames=122,362,656,907,1147
+input_explorer_unique_screens=5
+input_explorer_final_frame=1200
+input_explorer_final_reason=done
+frame_362_nonpointer_active=8/9
+frame_362_deferred_overlap=0x0561A
+native_visual=UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT
+natural_boss_route=UNKNOWN
+release_status=NOT_READY
+regression_test=PASS
+report=rom_analysis/full_korean_composed_candidate.md

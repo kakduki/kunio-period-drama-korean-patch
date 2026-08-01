@@ -137,3 +137,16 @@ This candidate is the current bounded Items development build. It is not a relea
 - Readiness counts: BLOCKED_CONTROL_SKELETON=17, BLOCKED_MISSING_GLYPH=33, MAPPED_RUNTIME_UNKNOWN=10, UNMAPPED_GLOSSARY=190.
 - No record is promoted by this inventory alone. English reference offsets are kept separate from the legacy base-ROM nine-target screen proof because the English patch relocates and reshapes this family.
 - Source: rom_analysis/pre_pointer_korean_candidates.csv; generator: scripts/inventory_pre_pointer_korean_candidates.py.
+
+## Full Composed Candidate (2026-08-01)
+
+- Candidate ROM: `output/full_korean_items_title_none_nonpointer_candidate/kunio_period_drama_korean_expanded_nonpointer_candidate.nes`.
+- Candidate MD5: `5f348772bb6809b1df0e7f84ef2e7603`.
+- Pipeline: full pointer/menu -> direct-low with Items reservations -> Items action -> Items name/title/NONE -> 8 non-pointer records plus 18 glyph slots.
+- Static build and IPS round trip: PASS.
+- Items source/queue byte gate: PASS.
+- Bounded input explorer: finite `done` at frame 1200; five unique screen fingerprints; no opening-only infinite loop.
+- Non-pointer target records: 8/9 active at frame 362; `0x0561A` intentionally skipped because it overlaps the verified Items name seed at `0x0561B`.
+- Native GD screenshot pixels: UNKNOWN because the available buffer is transparent.
+- Natural boss route and release-wide visual coverage: UNKNOWN/NOT_READY.
+- Detailed report: `rom_analysis/full_korean_composed_candidate.md`.

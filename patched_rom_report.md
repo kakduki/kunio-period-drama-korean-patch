@@ -276,3 +276,13 @@ The fixed-bank English name/pre-pointer family now has a machine-readable 250-re
 - Inventory: rom_analysis/pre_pointer_korean_candidates.csv
 - Generator: scripts/inventory_pre_pointer_korean_candidates.py
 - Release status: NOT_READY.
+
+## Full Composed Development Candidate (2026-08-01)
+
+- Candidate MD5: `5f348772bb6809b1df0e7f84ef2e7603`.
+- Composition preserves the English pointer/menu owner chain, direct-low UI, Items action/name/title/NONE chains, and eight non-pointer frame-883-derived records.
+- Items runtime byte proof: PASS at frame 1737; bounded capture completes at frame 1906.
+- Current input route captures frames 122, 362, 656, 907, and 1147 and finishes at frame 1200.
+- `0x0561A` is excluded from this composition because it overlaps the Items name seed at `0x0561B`; the exclusion is recorded, not hidden.
+- Native screenshot proof, natural boss route, and release promotion remain UNKNOWN/NOT_READY.
+- Detailed report: `rom_analysis/full_korean_composed_candidate.md`.

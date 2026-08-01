@@ -105,3 +105,16 @@ The input explorer now treats the Lua script's finite done row as a normal compl
 | Control and glyph safety classification | PASS | 17 control-bearing rows and 33 missing-glyph rows remain blocked; no blind replacement was promoted. |
 | Runtime promotion | NOT_READY | Only the separate nine-string legacy-route candidate has bounded 9/9 screen-owner evidence. |
 | Release promotion | NOT_READY | Natural progression, visual review, and remaining renderer families are still open. |
+
+## Full Composed Candidate Gate (2026-08-01)
+
+- [x] Compose the English-reference owner chains without overwriting the verified Items name seed.
+- [x] Run static scope, IPS round trip, Items byte proof, and composition regression test.
+- [x] Confirm bounded input route reaches finite completion and multiple screens.
+- [x] Record the overlapping `0x0561A` target as deferred instead of applying a conflicting patch.
+- [ ] Native pixel review on a non-transparent screenshot.
+- [ ] Natural enemy-clear/boss route proof.
+- [ ] Remaining pre-pointer renderer ownership and release-wide shared-page audit.
+- [ ] Release promotion.
+
+Realtime AI subtitle overlay is tracked as a parallel usability option, not as ROM release evidence.

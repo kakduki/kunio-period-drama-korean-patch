@@ -49,14 +49,18 @@ def build(
     output_dir: Path,
     report_json: Path,
     report_markdown: Path,
+    skip_offsets: set[int] | None = None,
 ) -> dict[str, object]:
     original = input_rom.read_bytes()
+    skipped_offsets = set(skip_offsets or ())
     font = font_rom.read_bytes()
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     patched = bytearray(original)
     targets: list[dict[str, object]] = []
 
     for offset, label, expected, replacement in SELECTED_TARGETS:
+        if offset in skipped_offsets:
+            continue
         current = original[offset : offset + len(expected)]
         if current != expected:
             raise ValueError(
@@ -117,6 +121,7 @@ def build(
         "candidate_md5": md5(patched_bytes),
         "selected_target_count": len(targets),
         "targets": targets,
+        "skipped_offsets": [f"0x{offset:05X}" for offset in sorted(skipped_offsets)],
         "glyph_slot_count": len(glyphs),
         "glyph_slots": glyphs,
         "ips_records": len(records),
@@ -164,6 +169,7 @@ def main() -> int:
     parser.add_argument("--input-rom", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--font-rom", type=Path, default=DEFAULT_FONT)
     parser.add_argument("--plan", type=Path, default=DEFAULT_PLAN)
+    parser.add_argument("--skip-offset", action="append", default=[], type=lambda value: int(value, 0), help="PRG offsets to leave unchanged when composing overlapping owners")
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
@@ -175,6 +181,7 @@ def main() -> int:
         args.out_dir,
         args.report_json,
         args.report_markdown,
+        set(args.skip_offset),
     )
     print(json.dumps(payload, ensure_ascii=False))
     return 0
