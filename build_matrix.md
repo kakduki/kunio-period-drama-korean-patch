@@ -131,3 +131,9 @@ remain separate source owners.
 | full_korean_items_title_none_candidate | `0x0561B`, `0x3FB32`, `0x136F4`, `0x0FC31` / PRG + CHR15 | PRG/CHR duplicate name seed, dynamic title suffix, and direct-low NONE owner traced from English runtime | FCEUX capture frame 1906; name/title/NONE queue frame 1737 PASS; action queue/PPU preserved | UNKNOWN; native GD screenshot transparent | BUILT_RUNTIME_BYTE_PASS_VISUAL_UNKNOWN |
 
 This candidate is the current bounded Items development build. It is not a release ROM: the byte path is proven, but native visual review and shared-page safety remain open.
+## Pre-Pointer / Name Inventory (2026-08-01)
+
+- English reference records inventoried: **250** (21 name-table, 229 pre-pointer).
+- Readiness counts: BLOCKED_CONTROL_SKELETON=17, BLOCKED_MISSING_GLYPH=33, MAPPED_RUNTIME_UNKNOWN=10, UNMAPPED_GLOSSARY=190.
+- No record is promoted by this inventory alone. English reference offsets are kept separate from the legacy base-ROM nine-target screen proof because the English patch relocates and reshapes this family.
+- Source: rom_analysis/pre_pointer_korean_candidates.csv; generator: scripts/inventory_pre_pointer_korean_candidates.py.

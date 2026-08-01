@@ -1,0 +1,251 @@
+record_id,context,rom_offset,raw_bytes,english_text,normalized_key,korean_text,translation_source,payload_length,korean_length,length_delta,control_bytes,missing_glyphs,runtime_evidence,readiness,patch_authorized
+EN-NAME-000,Bank 1 name-table area,0x0561B,8B 95 8E 89 8F 92 89 8B 89 FF,KUNIORIKI<FF>,KUNIORIKI,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-001,Bank 1 name-table area,0x05625,82 95 8E 9A 8F 8A 95 95 8B 89 94 93 95 89 FF,BUNZOJUUKITSUI<FF>,BUNZOJUUKITSUI,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-002,Bank 1 name-table area,0x05634,94 81 94 93 95 99 81 87 8F FF,TATSUYAGO<FF>,TATSUYAGO,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-003,Bank 1 name-table area,0x0563E,8A 89 8E 92 8F 88 85 89 93 89 8B 89 8E 93 95 94 81 8D 85 FF,JINROHEISIKINSUTAME<FF>,JINROHEISIKINSUTAME,,,19,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-004,Bank 1 name-table area,0x05652,87 8F 8E 93 81 87 89 8E 90 81 89 83 88 89 FF,GONSAGINPAICHI<FF>,GONSAGINPAICHI,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-005,Bank 1 name-table area,0x05661,92 8F 8B 95 FF,ROKU<FF>,ROKU,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-006,Bank 1 name-table area,0x05666,94 93 95 95 FF,TSUU<FF>,TSUU,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-007,Bank 1 name-table area,0x0566B,81 93 81 8A 89 99 8F 8E 8F FF,ASAJIYONO<FF>,ASAJIYONO,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-008,Bank 1 name-table area,0x05675,94 8F 92 81 FF,TORA<FF>,TORA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-009,Bank 1 name-table area,0x0567A,88 81 8E FF,HAN<FF>,HAN,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-010,Bank 1 name-table area,0x0567E,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-011,Bank 1 name-table area,0x0567F,8E 89 9A 81 85 88 85 89 92 95 71 71 71 FF,NIZAEHEIRU<71><71><71><FF>,NIZAEHEIRU,,,13,0,,0x71 0x71 0x71,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-012,Bank 1 name-table area,0x0568D,8F 82 89 8E 81 8D 81 94 93 95 8F 8B 8F 94 8F FF,OBINAMATSUOKOTO<FF>,OBINAMATSUOKOTO,,,15,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-013,Bank 1 name-table area,0x0569D,FF,<FF>,,,,0,0,,,,frame-883-target,UNMAPPED_GLOSSARY,False
+EN-NAME-014,Bank 1 name-table area,0x0569E,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-015,Bank 1 name-table area,0x0569F,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-016,Bank 1 name-table area,0x056A0,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-017,Bank 1 name-table area,0x056A1,8F 8D 8F 8E FF,OMON<FF>,OMON,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-018,Bank 1 name-table area,0x056A6,92 81 8F FF,RAO<FF>,RAO,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-019,Bank 1 name-table area,0x056AA,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-NAME-020,Bank 1 name-table area,0x056AB,93 81 8E 8B 89 05 7B 19 7B 0F 7B 14 7B 0A 7B AC 96,SANKI<05><7B><19><7B><0F><7B><14><7B><0A><7B><AC>V,SANKIV,,,17,0,,0x05 0x7B 0x19 0x7B 0x0F 0x7B 0x14 0x7B 0x0A 0x7B 0xAC,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-000,Bank 1 pre-pointer text area,0x056BC,99 95 8B 89 FF,YUKI<FF>,YUKI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-001,Bank 1 pre-pointer text area,0x056C1,89 94 8F 8B 89 93 81 8B 89 FF,ITOKISAKI<FF>,ITOKISAKI,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-002,Bank 1 pre-pointer text area,0x056CB,94 81 8D 8F FF,TAMO<FF>,TAMO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-003,Bank 1 pre-pointer text area,0x056D0,93 81 89 9A 8F 88 81 87 89 FF,SAIZOHAGI<FF>,SAIZOHAGI,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-004,Bank 1 pre-pointer text area,0x056DA,88 81 93 88 89 8B 8F 93 95 FF,HASHIKOSU<FF>,HASHIKOSU,,,9,0,,,,frame-883-target,UNMAPPED_GLOSSARY,False
+EN-PRE-005,Bank 1 pre-pointer text area,0x056E4,88 81 8E 93 95 8B 8F 95 85 FF,HANSUKOUE<FF>,HANSUKOUE,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-006,Bank 1 pre-pointer text area,0x056EE,88 89 92 81 FF,HIRA<FF>,HIRA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-007,Bank 1 pre-pointer text area,0x056F3,88 89 84 85 FF,HIDE<FF>,HIDE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-008,Bank 1 pre-pointer text area,0x056F8,81 93 88 89 FF,ASHI<FF>,ASHI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-009,Bank 1 pre-pointer text area,0x056FD,82 85 8E FF,BEN<FF>,BEN,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-010,Bank 1 pre-pointer text area,0x05701,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-011,Bank 1 pre-pointer text area,0x05702,93 81 89 94 81 8D 8F 85 8D 8F 8D 95 92 81 FF,SAITAMOEMOMURA<FF>,SAITAMOEMOMURA,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-012,Bank 1 pre-pointer text area,0x05711,93 81 84 81 FF,SADA<FF>,SADA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-013,Bank 1 pre-pointer text area,0x05716,93 85 8B 89 FF,SEKI<FF>,SEKI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-014,Bank 1 pre-pointer text area,0x0571B,99 8F 94 93 95 94 8F 8D 8F FF,YOTSUTOMO<FF>,YOTSUTOMO,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-015,Bank 1 pre-pointer text area,0x05725,8B 95 8D 81 FF,KUMA<FF>,KUMA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-016,Bank 1 pre-pointer text area,0x0572A,97 81 94 81 FF,WATA<FF>,WATA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-017,Bank 1 pre-pointer text area,0x0572F,95 92 81 85 FF,URAE<FF>,URAE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-018,Bank 1 pre-pointer text area,0x05734,94 8F 8D 85 FF,TOME<FF>,TOME,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-019,Bank 1 pre-pointer text area,0x05739,8F 8E 8F 8B 89 99 81 94 81 FF,ONOKIYATA<FF>,ONOKIYATA,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-020,Bank 1 pre-pointer text area,0x05743,89 93 8F 92 8F 92 89 88 85 89 83 88 89 85 FF,ISORORIHEICHIE<FF>,ISORORIHEICHIE,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-021,Bank 1 pre-pointer text area,0x05752,93 95 8D 89 FF,SUMI<FF>,SUMI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-022,Bank 1 pre-pointer text area,0x05757,93 88 89 8E FF,SHIN<FF>,SHIN,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-023,Bank 1 pre-pointer text area,0x0575C,8D 95 8E 85 FF,MUNE<FF>,MUNE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-024,Bank 1 pre-pointer text area,0x05761,87 85 8E 93 95 8F 89 93 81 FF,GENSUOISA<FF>,GENSUOISA,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-025,Bank 1 pre-pointer text area,0x0576B,88 85 8D 8F FF,HEMO<FF>,HEMO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-026,Bank 1 pre-pointer text area,0x05770,99 8F 94 81 FF,YOTA<FF>,YOTA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-027,Bank 1 pre-pointer text area,0x05775,8B 81 8D 85 FF,KAME<FF>,KAME,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-028,Bank 1 pre-pointer text area,0x0577A,94 81 8B 89 FF,TAKI<FF>,TAKI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-029,Bank 1 pre-pointer text area,0x0577F,88 89 93 81 FF,HISA<FF>,HISA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-030,Bank 1 pre-pointer text area,0x05784,93 81 88 85 89 8B 89 93 95 FF,SAHEIKISU<FF>,SAHEIKISU,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-031,Bank 1 pre-pointer text area,0x0578E,8E 8F 92 89 FF,NORI<FF>,NORI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-032,Bank 1 pre-pointer text area,0x05793,8B 8F 95 8B 89 93 95 85 8D 81 94 81 8B 85 FF,KOUKISUEMATAKE<FF>,KOUKISUEMATAKE,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-033,Bank 1 pre-pointer text area,0x057A2,95 8D 85 8D 81 82 8F 82 95 FF,UMEMABOBU<FF>,UMEMABOBU,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-034,Bank 1 pre-pointer text area,0x057AC,99 95 95 85 FF,YUUE<FF>,YUUE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-035,Bank 1 pre-pointer text area,0x057B1,99 8F 93 88 89 92 89 88 85 FF,YOSHIRIHE<FF>,YOSHIRIHE,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-036,Bank 1 pre-pointer text area,0x057BB,88 81 83 88 89 84 85 9A 8F 95 8B 95 8D 89 FF,HACHIDEZOUKUMI<FF>,HACHIDEZOUKUMI,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-037,Bank 1 pre-pointer text area,0x057CA,94 81 92 8F FF,TARO<FF>,TARO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-038,Bank 1 pre-pointer text area,0x057CF,95 92 81 93 81 99 8F 8E 85 FF,URASAYONE<FF>,URASAYONE,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-039,Bank 1 pre-pointer text area,0x057D9,93 88 89 8D 81 94 85 92 95 FF,SHIMATERU<FF>,SHIMATERU,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-040,Bank 1 pre-pointer text area,0x057E3,93 95 99 81 FF,SUYA<FF>,SUYA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-041,Bank 1 pre-pointer text area,0x057E8,8D 8F 92 89 FF,MORI<FF>,MORI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-042,Bank 1 pre-pointer text area,0x057ED,89 93 88 89 FF,ISHI<FF>,ISHI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-043,Bank 1 pre-pointer text area,0x057F2,93 81 8B 95 FF,SAKU<FF>,SAKU,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-044,Bank 1 pre-pointer text area,0x057F7,95 92 81 8A 89 93 88 89 82 81 8A 8D 87 91 FF,URAJISHIBAJMGQ<FF>,URAJISHIBAJMGQ,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-045,Bank 1 pre-pointer text area,0x05806,93 88 89 92 8F 8A 95 8E 9A 8F 89 8E 85 94 81 81 8B 89 9A 8F 99 95 92 89 FF,SHIROJUNZOINETAAKIZOYURI<FF>,SHIROJUNZOINETAAKIZOYURI,,,24,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-046,Bank 1 pre-pointer text area,0x0581F,93 95 94 85 FF,SUTE<FF>,SUTE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-047,Bank 1 pre-pointer text area,0x05824,93 88 95 95 FF,SHUU<FF>,SHUU,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-048,Bank 1 pre-pointer text area,0x05829,85 82 89 8E 8F 83 88 89 8A 89 81 94 93 95 FF,EBINOCHIJIATSU<FF>,EBINOCHIJIATSU,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-049,Bank 1 pre-pointer text area,0x05838,8B 81 8E 81 FF,KANA<FF>,KANA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-050,Bank 1 pre-pointer text area,0x0583D,93 95 8B 85 FF,SUKE<FF>,SUKE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-051,Bank 1 pre-pointer text area,0x05842,87 8F 93 95 FF,GOSU<FF>,GOSU,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-052,Bank 1 pre-pointer text area,0x05847,94 93 95 8E 8F 8B 89 8B 95 FF,TSUNOKIKU<FF>,TSUNOKIKU,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-053,Bank 1 pre-pointer text area,0x05851,94 8F 93 88 89 94 93 95 8B 89 8F 82 89 93 81 99 81 93 95 FF,TOSHITSUKIOBISAYASU<FF>,TOSHITSUKIOBISAYASU,,,19,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-054,Bank 1 pre-pointer text area,0x05865,8B 85 8E 87 8F 8D 81 8E 93 89 8B 81 94 93 95 93 8F 8E 8F FF,KENGOMANSIKATSUSONO<FF>,KENGOMANSIKATSUSONO,,,19,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-055,Bank 1 pre-pointer text area,0x05879,87 8F 93 81 FF,GOSA<FF>,GOSA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-056,Bank 1 pre-pointer text area,0x0587E,94 8F 95 82 85 9A 85 8E 85 FF,TOUBEZENE<FF>,TOUBEZENE,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-057,Bank 1 pre-pointer text area,0x05888,8F 8D 85 8E 8F 8D 8F 83 88 89 93 88 8F 95 FF,OMENOMOCHISHOU<FF>,OMENOMOCHISHOU,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-058,Bank 1 pre-pointer text area,0x05897,89 8E 87 8F FF,INGO<FF>,INGO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-059,Bank 1 pre-pointer text area,0x0589C,8E 85 88 81 FF,NEHA<FF>,NEHA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-060,Bank 1 pre-pointer text area,0x058A1,94 85 8D 81 FF,TEMA<FF>,TEMA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-061,Bank 1 pre-pointer text area,0x058A6,8D 8F 88 85 FF,MOHE<FF>,MOHE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-062,Bank 1 pre-pointer text area,0x058AB,93 8F 8D 85 FF,SOME<FF>,SOME,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-063,Bank 1 pre-pointer text area,0x058B0,8B 81 8D 8F FF,KAMO<FF>,KAMO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-064,Bank 1 pre-pointer text area,0x058B5,8D 81 94 81 FF,MATA<FF>,MATA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-065,Bank 1 pre-pointer text area,0x058BA,95 8B 89 FF,UKI<FF>,UKI,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-066,Bank 1 pre-pointer text area,0x058BE,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-067,Bank 1 pre-pointer text area,0x058BF,87 8F 92 8F FF,GORO<FF>,GORO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-068,Bank 1 pre-pointer text area,0x058C4,8B 8F 94 81 FF,KOTA<FF>,KOTA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-069,Bank 1 pre-pointer text area,0x058C9,94 93 95 84 81 89 8E 8F 93 95 95 8D 85 94 81 95 93 95 8B 85 8D 81 8E 87 8F 8E 85 8E 8B 89 8B 95 92 8F FF,TSUDAINOSUUMETAUSUKEMANGONENKIKURO<FF>,TSUDAINOSUUMETAUSUKEMANGONENKIKURO,,,34,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-070,Bank 1 pre-pointer text area,0x058EC,94 85 88 81 FF,TEHA<FF>,TEHA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-071,Bank 1 pre-pointer text area,0x058F1,93 85 8E 82 85 93 85 8E 90 81 88 8F 8D 85 FF,SENBESENPAHOME<FF>,SENBESENPAHOME,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-072,Bank 1 pre-pointer text area,0x05900,94 81 88 81 FF,TAHA<FF>,TAHA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-073,Bank 1 pre-pointer text area,0x05905,8B 89 83 88 89 8E 85 94 81 FF,KICHINETA<FF>,KICHINETA,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-074,Bank 1 pre-pointer text area,0x0590F,94 81 87 8F FF,TAGO<FF>,TAGO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-075,Bank 1 pre-pointer text area,0x05914,8D 81 8E 90 85 8B 85 94 81 FF,MANPEKETA<FF>,MANPEKETA,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-076,Bank 1 pre-pointer text area,0x0591E,8B 95 8E 8B 89 8D 8F 8D 8F FF,KUNKIMOMO<FF>,KUNKIMOMO,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-077,Bank 1 pre-pointer text area,0x05928,94 81 8E 85 FF,TANE<FF>,TANE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-078,Bank 1 pre-pointer text area,0x0592D,88 85 8B 8F FF,HEKO<FF>,HEKO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-079,Bank 1 pre-pointer text area,0x05932,8D 81 94 81 81 8D 85 88 85 89 8D 81 93 95 FF,MATAAMEHEIMASU<FF>,MATAAMEHEIMASU,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-080,Bank 1 pre-pointer text area,0x05941,95 8E 8A 89 FF,UNJI<FF>,UNJI,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-081,Bank 1 pre-pointer text area,0x05946,8D 8F 8E 8F FF,MONO<FF>,MONO,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-082,Bank 1 pre-pointer text area,0x0594B,84 85 8E 93 95 95 8D 85 93 89 8D 81 87 8F FF,DENSUUMESIMAGO<FF>,DENSUUMESIMAGO,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-083,Bank 1 pre-pointer text area,0x0595A,92 81 88 81 FF,RAHA<FF>,RAHA,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-084,Bank 1 pre-pointer text area,0x0595F,8D 8F 88 85 89 93 85 8E 92 8F 83 88 8F 95 FF,MOHEISENROCHOU<FF>,MOHEISENROCHOU,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-085,Bank 1 pre-pointer text area,0x0596E,8B 81 8E FF,KAN<FF>,KAN,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-086,Bank 1 pre-pointer text area,0x05972,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-087,Bank 1 pre-pointer text area,0x05973,8B 81 8E 90 81 89 8D 8F 88 81 8D 89 8E 8F FF,KANPAIMOHAMINO<FF>,KANPAIMOHAMINO,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-088,Bank 1 pre-pointer text area,0x05982,8B 81 8E 94 81 86 95 8E 85 FF,KANTAFUNE<FF>,KANTAFUNE,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-089,Bank 1 pre-pointer text area,0x0598C,8B 81 8E 93 95 93 95 8A 89 FF,KANSUSUJI<FF>,KANSUSUJI,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-090,Bank 1 pre-pointer text area,0x05996,93 89 83 88 89 95 93 88 89 FF,SICHIUSHI<FF>,SICHIUSHI,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-091,Bank 1 pre-pointer text area,0x059A0,92 8F 88 85 89 8B 8F 8D 85 FF,ROHEIKOME<FF>,ROHEIKOME,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-092,Bank 1 pre-pointer text area,0x059AA,87 8F 82 85 85 9A 85 8E 8A 89 93 95 8E 85 FF,GOBEEZENJISUNE<FF>,GOBEEZENJISUNE,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-093,Bank 1 pre-pointer text area,0x059B9,8B 89 8E 85 FF,KINE<FF>,KINE,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-094,Bank 1 pre-pointer text area,0x059BE,93 95 9A 95 FF,SUZU<FF>,SUZU,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-095,Bank 1 pre-pointer text area,0x059C3,89 8E 85 8D 8F 88 81 94 81 FF,INEMOHATA<FF>,INEMOHATA,,,9,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-096,Bank 1 pre-pointer text area,0x059CD,95 8E 8F 8D 81 99 81 85 8E 8F 8E 85 8B 89 FF,UNOMAYAENONEKI<FF>,UNOMAYAENONEKI,,,14,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-097,Bank 1 pre-pointer text area,0x059DC,6A 9A 6A 9A 71 9A 78 9A 7E 9A 85 9A 8E 9A 95 9A 9D 9A A3 9A AB 9A B2 9A BB 9A C1 9A C9 9A D2 9A DB 9A E4 9A EC 9A F4 9A FB 9A 03 9B 0B 9B 14 9B 1C 9B 25 9B 2D 9B 34 9B 39 9B 3E 9B 43 9B 48 9B 4C 9B 51 9B 59 9B 5F 9B 68 9B 6F 9B 75 9B 7B 9B 84 9B 8A 9B 92 9B 99 9B A1 9B A9 9B AF 9B B8 9B C0 9B C6 9B CD 9B D4 9B D9 9B E1 9B E7 9B EE 9B F5 9B FC 9B 04 9C 09 9C 0F 9C 15 9C 1E 9C 26 9C 2F 9C 35 9C 3D 9C 44 9C 4B 9C 52 9C 59 9C 62 9C 6B 9C 74 9C 7D 9C 85 9C 8C 9C 95 9C 9C 9C 8D BA 86 89 93 94 FF,<6A>Z<6A>Z<71>Z<78>Z<7E>ZEZNZUZ<9D>Z<A3>Z<AB>Z<B2>Z<BB>Z<C1>Z<C9>Z<D2>Z<DB>Z<E4>Z<EC>Z<F4>Z<FB>Z<03><9B><0B><9B><14><9B><1C><9B><25><9B><2D><9B><34><9B><39><9B><3E><9B><43><9B><48><9B><4C><9B><51><9B><59><9B><5F><9B><68><9B><6F><9B><75><9B><7B><9B>D<9B>J<9B>R<9B>Y<9B><A1><9B><A9><9B><AF><9B><B8><9B><C0><9B><C6><9B><CD><9B><D4><9B><D9><9B><E1><9B><E7><9B><EE><9B><F5><9B><FC><9B><04><9C><09><9C><0F><9C><15><9C><1E><9C><26><9C><2F><9C><35><9C><3D><9C><44><9C><4B><9C><52><9C><59><9C><62><9C><6B><9C><74><9C><7D><9C>E<9C>L<9C>U<9C><9C><9C>M<BA>FIST<FF>,ZZZZZEZNZUZZZZZZZZZZZZZZDJRYELUMFIST,,,164,0,,0x6A 0x6A 0x71 0x78 0x7E 0x9D 0xA3 0xAB 0xB2 0xBB 0xC1 0xC9 0xD2 0xDB 0xE4 0xEC 0xF4 0xFB 0x03 0x9B 0x0B 0x9B 0x14 0x9B 0x1C 0x9B 0x25 0x9B 0x2D 0x9B 0x34 0x9B 0x39 0x9B 0x3E 0x9B 0x43 0x9B 0x48 0x9B 0x4C 0x9B 0x51 0x9B 0x59 0x9B 0x5F 0x9B 0x68 0x9B 0x6F 0x9B 0x75 0x9B 0x7B 0x9B 0x9B 0x9B 0x9B 0x9B 0xA1 0x9B 0xA9 0x9B 0xAF 0x9B 0xB8 0x9B 0xC0 0x9B 0xC6 0x9B 0xCD 0x9B 0xD4 0x9B 0xD9 0x9B 0xE1 0x9B 0xE7 0x9B 0xEE 0x9B 0xF5 0x9B 0xFC 0x9B 0x04 0x9C 0x09 0x9C 0x0F 0x9C 0x15 0x9C 0x1E 0x9C 0x26 0x9C 0x2F 0x9C 0x35 0x9C 0x3D 0x9C 0x44 0x9C 0x4B 0x9C 0x52 0x9C 0x59 0x9C 0x62 0x9C 0x6B 0x9C 0x74 0x9C 0x7D 0x9C 0x9C 0x9C 0x9C 0x9C 0x9C 0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-098,Bank 1 pre-pointer text area,0x05A81,8D BA 8B 89 83 8B FF,M<BA>KICK<FF>,MKICK,,,6,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-099,Bank 1 pre-pointer text area,0x05A88,8D BA 97 90 8E FF,M<BA>WPN<FF>,MWPN,,,5,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-100,Bank 1 pre-pointer text area,0x05A8E,85 BA 94 8F 92 90 FF,E<BA>TORP<FF>,ETORP,,,6,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-101,Bank 1 pre-pointer text area,0x05A95,8E BA 81 94 94 81 83 8B FF,N<BA>ATTACK<FF>,NATTACK,,,8,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-102,Bank 1 pre-pointer text area,0x05A9E,8D BA 86 95 8D 89 FF,M<BA>FUMI<FF>,MFUMI,,,6,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-103,Bank 1 pre-pointer text area,0x05AA5,88 BA 87 95 81 92 84 FF,H<BA>GUARD<FF>,HGUARD,,,7,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-104,Bank 1 pre-pointer text area,0x05AAD,93 83 92 85 97 FF,SCREW<FF>,SCREW,회,direct_low_korean_labels,5,0,,,회,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-105,Bank 1 pre-pointer text area,0x05AB3,94 8F 92 8E 81 84 8F FF,TORNADO<FF>,TORNADO,회리,direct_low_korean_labels,7,0,,,회,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-106,Bank 1 pre-pointer text area,0x05ABB,93 BA 94 8F 92 90 FF,S<BA>TORP<FF>,STORP,,,6,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-107,Bank 1 pre-pointer text area,0x05AC2,88 85 8C 89 83 90 94 92 FF,HELICPTR<FF>,HELICPTR,헬기,direct_low_korean_labels,8,0,,,헬,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-108,Bank 1 pre-pointer text area,0x05ACB,84 92 89 8C 8C FF,DRILL<FF>,DRILL,드릴,direct_low_korean_labels,5,0,,,드릴,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-109,Bank 1 pre-pointer text area,0x05AD1,93 8C 81 90 B8 93 90 FF,SLAP<B8>SP<FF>,SLAPSP,,,7,0,,0xB8,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-110,Bank 1 pre-pointer text area,0x05AD9,84 81 87 87 92 B8 93 90 FF,DAGGR<B8>SP<FF>,DAGGRSP,,,8,0,,0xB8,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-111,Bank 1 pre-pointer text area,0x05AE2,88 85 81 84 82 95 94 94 FF,HEADBUTT<FF>,HEADBUTT,박치기,direct_low_korean_labels,8,0,,,박,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-112,Bank 1 pre-pointer text area,0x05AEB,82 8D 90 8B 8E 81 92 94 FF,BMPKNART<FF>,BMPKNART,기술,direct_low_korean_labels,8,2,-6,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-113,Bank 1 pre-pointer text area,0x05AF4,8D BA 86 89 93 94 BC FF,M<BA>FIST<BC><FF>,MFIST,,,7,0,,0xBA 0xBC,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-114,Bank 1 pre-pointer text area,0x05AFC,8D BA 8B 89 83 8B BC FF,M<BA>KICK<BC><FF>,MKICK,,,7,0,,0xBA 0xBC,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-115,Bank 1 pre-pointer text area,0x05B04,93 83 92 85 97 BC FF,SCREW<BC><FF>,SCREW,회,direct_low_korean_labels,6,0,,0xBC,회,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-116,Bank 1 pre-pointer text area,0x05B0B,8D 81 93 93 81 87 85 FF,MASSAGE<FF>,MASSAGE,안마,direct_low_korean_labels,7,0,,,안,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-117,Bank 1 pre-pointer text area,0x05B13,82 89 87 82 81 8E 87 FF,BIGBANG<FF>,BIGBANG,빅뱅,direct_low_korean_labels,7,0,,,뱅빅,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-118,Bank 1 pre-pointer text area,0x05B1B,97 81 92 90 93 88 8F 94 FF,WARPSHOT<FF>,WARPSHOT,파,direct_low_korean_labels,8,1,-7,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-119,Bank 1 pre-pointer text area,0x05B24,84 85 86 8C 85 83 94 FF,DEFLECT<FF>,DEFLECT,사,direct_low_korean_labels,7,1,-6,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-120,Bank 1 pre-pointer text area,0x05B2C,8D BA 8B 89 95 8B 89 95 FF,M<BA>KIUKIU<FF>,MKIUKIU,,,8,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-121,Bank 1 pre-pointer text area,0x05B35,8D BA 93 97 89 8E 87 FF,M<BA>SWING<FF>,MSWING,,,7,0,,0xBA,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-122,Bank 1 pre-pointer text area,0x05B3D,90 89 83 8B 8C 85 FF,PICKLE<FF>,PICKLE,피클,direct_low_korean_labels,6,0,,,클피,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-123,Bank 1 pre-pointer text area,0x05B44,8D 85 81 8C FF,MEAL<FF>,MEAL,밥,direct_low_korean_labels,4,0,,,밥,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-124,Bank 1 pre-pointer text area,0x05B49,93 8F 82 81 FF,SOBA<FF>,SOBA,소,direct_low_korean_labels,4,0,,,소,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-125,Bank 1 pre-pointer text area,0x05B4E,95 84 8F 8E FF,UDON<FF>,UDON,동,direct_low_korean_labels,4,1,-3,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-126,Bank 1 pre-pointer text area,0x05B53,93 8F 95 90 FF,SOUP<FF>,SOUP,물,direct_low_korean_labels,4,0,,,물,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-127,Bank 1 pre-pointer text area,0x05B58,89 8D 8F FF,IMO<FF>,IMO,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-128,Bank 1 pre-pointer text area,0x05B5C,86 89 93 88 FF,FISH<FF>,FISH,생선,direct_low_korean_labels,4,0,,,생선,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-129,Bank 1 pre-pointer text area,0x05B61,94 85 8E 90 95 92 81 FF,TENPURA<FF>,TENPURA,전,direct_low_korean_labels,7,1,-6,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-130,Bank 1 pre-pointer text area,0x05B69,84 81 8E 87 8F FF,DANGO<FF>,DANGO,고,direct_low_korean_labels,5,1,-4,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-131,Bank 1 pre-pointer text area,0x05B6F,92 89 83 85 82 81 8C 8C FF,RICEBALL<FF>,RICEBALL,주먹밥,direct_low_korean_labels,8,0,,,먹밥주,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-132,Bank 1 pre-pointer text area,0x05B78,8D 81 8E 8A 95 95 FF,MANJUU<FF>,MANJUU,과자,direct_low_korean_labels,6,0,,,과자,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-133,Bank 1 pre-pointer text area,0x05B7F,93 95 93 88 89 FF,SUSHI<FF>,SUSHI,밥,direct_low_korean_labels,5,0,,,밥,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-134,Bank 1 pre-pointer text area,0x05B85,93 81 8C 96 85 FF,SALVE<FF>,SALVE,고,direct_low_korean_labels,5,1,-4,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-135,Bank 1 pre-pointer text area,0x05B8B,90 8F 95 8C 94 89 83 85 FF,POULTICE<FF>,POULTICE,약,direct_low_korean_labels,8,1,-7,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-136,Bank 1 pre-pointer text area,0x05B94,94 8F 8E 89 83 FF,TONIC<FF>,TONIC,강장제,direct_low_korean_labels,5,0,,,제,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-137,Bank 1 pre-pointer text area,0x05B9A,26 94 8F 99 81 8D 81 FF,<26>TOYAMA<FF>,TOYAMA,도야마,direct_low_korean_labels,7,3,-4,0x26,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-138,Bank 1 pre-pointer text area,0x05BA2,85 8C 89 98 89 92 FF,ELIXIR<FF>,ELIXIR,약,direct_low_korean_labels,6,1,-5,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-139,Bank 1 pre-pointer text area,0x05BA9,2A 83 8F 94 94 8F 8E FF,<2A>COTTON<FF>,COTTON,소,direct_low_korean_labels,7,0,,0x2A,소,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-140,Bank 1 pre-pointer text area,0x05BB1,27 83 8F 94 94 8F 8E FF,<27>COTTON<FF>,COTTON,소,direct_low_korean_labels,7,0,,0x27,소,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-141,Bank 1 pre-pointer text area,0x05BB9,24 8C 8F 8E 87 FF,<24>LONG<FF>,LONG,길게,direct_low_korean_labels,5,0,,0x24,길,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-142,Bank 1 pre-pointer text area,0x05BBF,28 8F 82 93 83 85 8E 85 FF,<28>OBSCENE<FF>,OBSCENE,야,direct_low_korean_labels,8,1,-7,0x28,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-143,Bank 1 pre-pointer text area,0x05BC8,25 83 8F 8D 8D 8F 8E FF,<25>COMMON<FF>,COMMON,보,direct_low_korean_labels,7,0,,0x25,보,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-144,Bank 1 pre-pointer text area,0x05BD0,20 97 89 84 85 FF,<20>WIDE<FF>,WIDE,대,direct_low_korean_labels,5,1,-4,0x20,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-145,Bank 1 pre-pointer text area,0x05BD6,21 94 88 89 83 8B FF,<21>THICK<FF>,THICK,두,direct_low_korean_labels,6,0,,0x21,두,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-146,Bank 1 pre-pointer text area,0x05BDD,2B 97 88 89 94 85 FF,<2B>WHITE<FF>,WHITE,하,direct_low_korean_labels,6,1,-5,0x2B,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-147,Bank 1 pre-pointer text area,0x05BE4,29 93 95 8E FF,<29>SUN<FF>,SUN,,,4,0,,0x29,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-148,Bank 1 pre-pointer text area,0x05BE9,23 90 92 89 83 85 99 FF,<23>PRICEY<FF>,PRICEY,고가,direct_low_korean_labels,7,2,-5,0x23,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-149,Bank 1 pre-pointer text area,0x05BF1,2A 93 89 8C 8B FF,<2A>SILK<FF>,SILK,비,direct_low_korean_labels,5,1,-4,0x2A,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-150,Bank 1 pre-pointer text area,0x05BF7,27 93 89 8C 8B FF,<27>SILK<FF>,SILK,비,direct_low_korean_labels,5,1,-4,0x27,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-151,Bank 1 pre-pointer text area,0x05BFD,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-152,Bank 1 pre-pointer text area,0x05BFE,24 94 88 89 83 8B FF,<24>THICK<FF>,THICK,두,direct_low_korean_labels,6,0,,0x24,두,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-153,Bank 1 pre-pointer text area,0x05C05,28 93 81 95 83 99 FF,<28>SAUCY<FF>,SAUCY,방,direct_low_korean_labels,6,1,-5,0x28,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-154,Bank 1 pre-pointer text area,0x05C0C,25 8E 81 92 89 94 81 FF,<25>NARITA<FF>,NARITA,리타,direct_low_korean_labels,7,2,-5,0x25,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-155,Bank 1 pre-pointer text area,0x05C14,20 8A 85 94 FF,<20>JET<FF>,JET,,,4,0,,0x20,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-156,Bank 1 pre-pointer text area,0x05C19,20 93 8F 86 94 FF,<20>SOFT<FF>,SOFT,부드,direct_low_korean_labels,5,0,,0x20,드부,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-157,Bank 1 pre-pointer text area,0x05C1F,2B 97 8F 8F 8C FF,<2B>WOOL<FF>,WOOL,모,direct_low_korean_labels,5,0,,0x2B,모,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-158,Bank 1 pre-pointer text area,0x05C25,29 94 97 89 93 94 85 84 FF,<29>TWISTED<FF>,TWISTED,임,direct_low_korean_labels,8,0,,0x29,임,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-159,Bank 1 pre-pointer text area,0x05C2E,23 90 8F 8E 87 85 85 FF,<23>PONGEE<FF>,PONGEE,명주,direct_low_korean_labels,7,0,,0x23,명주,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-160,Bank 1 pre-pointer text area,0x05C36,84 8F 95 82 8C 85 95 90 FF,DOUBLEUP<FF>,DOUBLEUP,두배,direct_low_korean_labels,8,0,,,두,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-161,Bank 1 pre-pointer text area,0x05C3F,20 93 8E 8F 97 FF,<20>SNOW<FF>,SNOW,설,direct_low_korean_labels,5,0,,0x20,설,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-162,Bank 1 pre-pointer text area,0x05C45,20 93 90 89 8B 85 84 FF,<20>SPIKED<FF>,SPIKED,가시,direct_low_korean_labels,7,2,-5,0x20,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-163,Bank 1 pre-pointer text area,0x05C4D,27 83 81 8D 85 8C FF,<27>CAMEL<FF>,CAMEL,타,direct_low_korean_labels,6,1,-5,0x27,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-164,Bank 1 pre-pointer text area,0x05C54,27 8B 81 90 90 81 FF,<27>KAPPA<FF>,KAPPA,파,direct_low_korean_labels,6,1,-5,0x27,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-165,Bank 1 pre-pointer text area,0x05C5B,23 8D 81 87 89 83 FF,<23>MAGIC<FF>,MAGIC,마술,direct_low_korean_labels,6,2,-4,0x23,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-166,Bank 1 pre-pointer text area,0x05C62,25 93 81 8E 8B 89 FF,<25>SANKI<FF>,SANKI,산기,direct_low_korean_labels,6,2,-4,0x25,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-167,Bank 1 pre-pointer text area,0x05C69,8D 81 90 38 83 92 93 92 FF,MAP<38>CRSR<FF>,MAPCRSR,,,8,0,,0x38,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-168,Bank 1 pre-pointer text area,0x05C72,26 8D 99 93 94 85 92 99 FF,<26>MYSTERY<FF>,MYSTERY,수수께끼,direct_low_korean_labels,8,0,,0x26,께끼수,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-169,Bank 1 pre-pointer text area,0x05C7B,87 8F 8F 84 94 89 8D 85 FF,GOODTIME<FF>,GOODTIME,좋은때,direct_low_korean_labels,8,0,,,때은좋,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-170,Bank 1 pre-pointer text area,0x05C84,C2 30 85 86 86 85 83 94 FF,<C2><30>EFFECT<FF>,EFFECT,효과,direct_low_korean_labels,8,0,,0xC2 0x30,과효,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-171,Bank 1 pre-pointer text area,0x05C8D,2C 8D 81 93 94 85 92 FF,<2C>MASTER<FF>,MASTER,달인,direct_low_korean_labels,7,0,,0x2C,달,none,BLOCKED_MISSING_GLYPH,False
+EN-PRE-172,Bank 1 pre-pointer text area,0x05C95,21 8A 95 8D 90 00 FF,<21>JUMP<00><FF>,JUMP,프,direct_low_korean_labels,6,1,-5,0x21 0x00,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-173,Bank 1 pre-pointer text area,0x05C9C,20 8B 81 90 90 81 FF,<20>KAPPA<FF>,KAPPA,파,direct_low_korean_labels,6,1,-5,0x20,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-174,Bank 1 pre-pointer text area,0x05CA3,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-175,Bank 1 pre-pointer text area,0x05CA4,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-176,Bank 1 pre-pointer text area,0x05CA5,27 83 81 8D 85 8C FF,<27>CAMEL<FF>,CAMEL,타,direct_low_korean_labels,6,1,-5,0x27,,none,BLOCKED_CONTROL_SKELETON,False
+EN-PRE-177,Bank 1 pre-pointer text area,0x05CAC,92 81 89 8E 83 8F 81 94 FF,RAINCOAT<FF>,RAINCOAT,,,8,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-178,Bank 1 pre-pointer text area,0x05CB5,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-179,Bank 1 pre-pointer text area,0x05CB6,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-180,Bank 1 pre-pointer text area,0x05CB7,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-181,Bank 1 pre-pointer text area,0x05CB8,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-182,Bank 1 pre-pointer text area,0x05CB9,C1 9C C6 9C CA 9C D0 9C D5 9C D9 9C DF 9C E3 9C E8 9C EC 9C F0 9C F8 9C 93 94 81 8D FF,<C1><9C><C6><9C><CA><9C><D0><9C><D5><9C><D9><9C><DF><9C><E3><9C><E8><9C><EC><9C><F0><9C><F8><9C>STAM<FF>,STAM,,,28,0,,0xC1 0x9C 0xC6 0x9C 0xCA 0x9C 0xD0 0x9C 0xD5 0x9C 0xD9 0x9C 0xDF 0x9C 0xE3 0x9C 0xE8 0x9C 0xEC 0x9C 0xF0 0x9C 0xF8 0x9C,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-183,Bank 1 pre-pointer text area,0x05CD6,96 89 94 FF,VIT<FF>,VIT,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-184,Bank 1 pre-pointer text area,0x05CDA,90 95 8E 83 88 FF,PUNCH<FF>,PUNCH,,,5,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-185,Bank 1 pre-pointer text area,0x05CE0,8B 89 83 8B FF,KICK<FF>,KICK,타,direct_low_korean_labels,4,1,-3,,,none,MAPPED_RUNTIME_UNKNOWN,False
+EN-PRE-186,Bank 1 pre-pointer text area,0x05CE5,97 90 8E FF,WPN<FF>,WPN,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-187,Bank 1 pre-pointer text area,0x05CE9,94 88 92 8F 97 FF,THROW<FF>,THROW,,,5,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-188,Bank 1 pre-pointer text area,0x05CEF,81 87 89 FF,AGI<FF>,AGI,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-189,Bank 1 pre-pointer text area,0x05CF3,97 89 8C 8C FF,WILL<FF>,WILL,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-190,Bank 1 pre-pointer text area,0x05CF8,84 85 86 FF,DEF<FF>,DEF,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-191,Bank 1 pre-pointer text area,0x05CFC,93 94 92 FF,STR<FF>,STR,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-192,Bank 1 pre-pointer text area,0x05D00,8D 81 98 00 96 89 94 FF,MAX<00>VIT<FF>,MAXVIT,,,7,0,,0x00,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-193,Bank 1 pre-pointer text area,0x05D08,8D 81 98 00 93 94 81 8D FF,MAX<00>STAM<FF>,MAXSTAM,,,8,0,,0x00,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-194,Bank 1 pre-pointer text area,0x05D11,93 95 92 95 87 81 FF,SURUGA<FF>,SURUGA,,,6,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-195,Bank 1 pre-pointer text area,0x05D18,9A FF,Z<FF>,Z,,,1,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-196,Bank 1 pre-pointer text area,0x05D1A,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-197,Bank 1 pre-pointer text area,0x05D1B,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-198,Bank 1 pre-pointer text area,0x05D1C,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-199,Bank 1 pre-pointer text area,0x05D1D,8B 8F 95 9A FF,KOUZ<FF>,KOUZ,,,4,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-200,Bank 1 pre-pointer text area,0x05D22,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-201,Bank 1 pre-pointer text area,0x05D23,92 89 8B 95 83 FF,RIKUC<FF>,RIKUC,,,5,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-202,Bank 1 pre-pointer text area,0x05D29,85 83 83 88 95 FF,ECCHU<FF>,ECCHU,,,5,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-203,Bank 1 pre-pointer text area,0x05D2F,89 8E 81 FF,INA<FF>,INA,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-204,Bank 1 pre-pointer text area,0x05D33,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-205,Bank 1 pre-pointer text area,0x05D34,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-206,Bank 1 pre-pointer text area,0x05D35,8B 81 97 FF,KAW<FF>,KAW,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-207,Bank 1 pre-pointer text area,0x05D39,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-208,Bank 1 pre-pointer text area,0x05D3A,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-209,Bank 1 pre-pointer text area,0x05D3B,94 8F FF,TO<FF>,TO,,,2,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-210,Bank 1 pre-pointer text area,0x05D3E,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-211,Bank 1 pre-pointer text area,0x05D3F,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-212,Bank 1 pre-pointer text area,0x05D40,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-213,Bank 1 pre-pointer text area,0x05D41,8E 81 87 FF,NAG<FF>,NAG,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-214,Bank 1 pre-pointer text area,0x05D45,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-215,Bank 1 pre-pointer text area,0x05D46,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-216,Bank 1 pre-pointer text area,0x05D47,88 89 9A FF,HIZ<FF>,HIZ,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-217,Bank 1 pre-pointer text area,0x05D4B,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-218,Bank 1 pre-pointer text area,0x05D4C,FF,<FF>,,,,0,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-219,Bank 1 pre-pointer text area,0x05D4D,B3 B4 B5 FF,<B3><B4><B5><FF>,,,,3,0,,0xB3 0xB4 0xB5,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-220,Bank 1 pre-pointer text area,0x05D51,8F 84 84 FF,ODD<FF>,ODD,,,3,0,,,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-221,Bank 1 pre-pointer text area,0x05D55,C0 FF,<C0><FF>,,,,1,0,,0xC0,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-222,Bank 1 pre-pointer text area,0x05D57,C1 FF,<C1><FF>,,,,1,0,,0xC1,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-223,Bank 1 pre-pointer text area,0x05D59,C2 FF,<C2><FF>,,,,1,0,,0xC2,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-224,Bank 1 pre-pointer text area,0x05D5B,C3 FF,<C3><FF>,,,,1,0,,0xC3,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-225,Bank 1 pre-pointer text area,0x05D5D,C4 FF,<C4><FF>,,,,1,0,,0xC4,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-226,Bank 1 pre-pointer text area,0x05D5F,C5 FF,<C5><FF>,,,,1,0,,0xC5,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-227,Bank 1 pre-pointer text area,0x05D61,C6 FF,<C6><FF>,,,,1,0,,0xC6,,none,UNMAPPED_GLOSSARY,False
+EN-PRE-228,Bank 1 pre-pointer text area,0x05D63,AD 7F 70 C9 B6 90 1D C9 DB B0 19 C9 BC F0 15 38 E9 B6 A8 B9 9D 9D A8 B9 50 00 09 10 99 50 00 A9 00 99 69 00 60 AD 7F 70 C9 B6 90 1D C9 DB B0 19 C9 BC F0 F0 38 E9 B6 A8 B9 9D 9D A8 B9 50 00 29 EF 99 50 00 A9 00 99 69 00 60 01 01 02 00 02 03 00 03 00 03 03 03 03 00 03 03 03 03 03 03 02 03 03 03 00 00 03 03 03 00 03 02 02 00 00 00 00 B0 9F,<AD><7F><70><C9><B6>P<1D><C9><DB><B0><19><C9><BC><F0><15><38><E9><B6><A8><B9><9D><9D><A8><B9><50><00><09><10>Y<50><00><A9><00>Y<69><00><60><AD><7F><70><C9><B6>P<1D><C9><DB><B0><19><C9><BC><F0><F0><38><E9><B6><A8><B9><9D><9D><A8><B9><50><00><29><EF>Y<50><00><A9><00>Y<69><00><60><01><01><02><00><02><03><00><03><00><03><03><03><03><00><03><03><03><03><03><03><02><03><03><03><00><00><03><03><03><00><03><02><02><00><00><00><00><B0><9F>,PYYPYY,,,113,0,,0xAD 0x7F 0x70 0xC9 0xB6 0x1D 0xC9 0xDB 0xB0 0x19 0xC9 0xBC 0xF0 0x15 0x38 0xE9 0xB6 0xA8 0xB9 0x9D 0x9D 0xA8 0xB9 0x50 0x00 0x09 0x10 0x50 0x00 0xA9 0x00 0x69 0x00 0x60 0xAD 0x7F 0x70 0xC9 0xB6 0x1D 0xC9 0xDB 0xB0 0x19 0xC9 0xBC 0xF0 0xF0 0x38 0xE9 0xB6 0xA8 0xB9 0x9D 0x9D 0xA8 0xB9 0x50 0x00 0x29 0xEF 0x50 0x00 0xA9 0x00 0x69 0x00 0x60 0x01 0x01 0x02 0x00 0x02 0x03 0x00 0x03 0x00 0x03 0x03 0x03 0x03 0x00 0x03 0x03 0x03 0x03 0x03 0x03 0x02 0x03 0x03 0x03 0x00 0x00 0x03 0x03 0x03 0x00 0x03 0x02 0x02 0x00 0x00 0x00 0x00 0xB0 0x9F,,none,UNMAPPED_GLOSSARY,False

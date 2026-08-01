@@ -97,3 +97,11 @@ The input explorer now treats the Lua script's finite done row as a normal compl
 - [x] Existing action queue and PPU bytes remain intact.
 - [ ] Native visual proof and shared R0/R1 page audit remain before release.
 - [ ] Release promotion remains blocked.
+## Pre-Pointer / Name Inventory Gate (2026-08-01)
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| 250-record ownership inventory | PASS | Name-table and pre-pointer records are catalogued separately in rom_analysis/pre_pointer_korean_candidates.csv. |
+| Control and glyph safety classification | PASS | 17 control-bearing rows and 33 missing-glyph rows remain blocked; no blind replacement was promoted. |
+| Runtime promotion | NOT_READY | Only the separate nine-string legacy-route candidate has bounded 9/9 screen-owner evidence. |
+| Release promotion | NOT_READY | Natural progression, visual review, and remaining renderer families are still open. |

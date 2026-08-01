@@ -269,3 +269,10 @@ The current full candidate no longer remains on the second dialogue screen when 
 - Release status: **NOT_READY**.
 - Detailed candidate report: `rom_analysis/full_korean_items_title_none_candidate.md`.
 - Runtime report: `rom_analysis/items_title_none_runtime.json`.
+## Pre-Pointer / Name Inventory (2026-08-01)
+
+The fixed-bank English name/pre-pointer family now has a machine-readable 250-record queue. Exact glossary matches, control-byte skeletons, missing Korean glyphs, and runtime status are reported separately. This is analysis evidence only; no broad replacement was applied. The existing nine-string legacy-route candidate remains the only pre-pointer batch with bounded 9/9 screen-owner evidence.
+
+- Inventory: rom_analysis/pre_pointer_korean_candidates.csv
+- Generator: scripts/inventory_pre_pointer_korean_candidates.py
+- Release status: NOT_READY.
