@@ -259,3 +259,13 @@ The current full candidate no longer remains on the second dialogue screen when 
 - Native visual proof: UNKNOWN; the generated GD screenshot is transparent blank, so manual visual approval is deferred.
 - Title KUNIO'S ITEMS and empty-inventory NONE remain untranslated. This is
   not a final release ROM.
+## Items Title / NONE Candidate (2026-08-01)
+
+- Candidate MD5: `fa08179cdbf1198bd7781df0b6c78477`.
+- Composition: existing Items action candidate plus PRG `0x0561B`, live CHR/PPU name seed `0x3FB32`, title suffix `0x136F4`, direct-low NONE `0x0FC31`, and eight R0 glyph tiles.
+- Bounded FCEUX route: capture frame `1906`; name/title/NONE queue frame `1737`.
+- Runtime byte gate: **PASS** for source bytes and queue output; action queue/PPU bytes remain intact.
+- Native visual gate: **UNKNOWN** because the available GD screenshot buffer contains transparent pixels.
+- Release status: **NOT_READY**.
+- Detailed candidate report: `rom_analysis/full_korean_items_title_none_candidate.md`.
+- Runtime report: `rom_analysis/items_title_none_runtime.json`.

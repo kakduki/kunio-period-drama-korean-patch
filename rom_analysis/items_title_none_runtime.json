@@ -1,0 +1,21 @@
+{
+  "candidate": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_items_title_none_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
+  "capture_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\items_title_none_runtime",
+  "capture_completed": true,
+  "source_checks": {
+    "name_prg_seed": true,
+    "name_ppu_seed": true,
+    "title_suffix": true,
+    "none": true
+  },
+  "source_bytes_pass": true,
+  "queue_frames": {
+    "name": 1737,
+    "title_suffix": 1737,
+    "none": 1737
+  },
+  "queue_title_none_pass": true,
+  "runtime_byte_gate": true,
+  "visual_gate": "UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT",
+  "status": "PASS_BYTE_PROOF_VISUAL_UNKNOWN"
+}

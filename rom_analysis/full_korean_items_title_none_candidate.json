@@ -1,0 +1,108 @@
+﻿{
+    "status":  "BUILT_ITEMS_TITLE_NONE_RUNTIME_BYTE_PASS_VISUAL_UNKNOWN",
+    "release_status":  "NOT_READY",
+    "base_md5":  "0d406a85285b4de8468f0dab6aad5fe5",
+    "input_md5":  "5dbb442b8bda6efe9039f2e91fd1f88f",
+    "candidate_md5":  "fa08179cdbf1198bd7781df0b6c78477",
+    "input_rom":  "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_items_action_candidate\\kunio_period_drama_korean_full_items_action_candidate.nes",
+    "candidate_rom":  "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_items_title_none_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
+    "candidate_ips":  "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_items_title_none_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.ips",
+    "source_chains":  {
+                          "name":  "PRG 0x00561B + CHR 0x3FB32 -\u003e PPU read -\u003e RAM $7AFB -\u003e title prefix RAM $60A8 -\u003e PPU Items row 5",
+                          "title_suffix":  "ROM 0x136F4 -\u003e title suffix RAM $60AD -\u003e PPU Items row 5",
+                          "none":  "ROM 0x0FC31 -\u003e RAM $6506 -\u003e PPU Items row 8"
+                      },
+    "source_rows":  [
+                        {
+                            "owner":  "name_prg_seed",
+                            "rom_offset":  "0x0561B",
+                            "length":  5,
+                            "base_bytes":  "88 96 9F 8B FF",
+                            "input_bytes":  "88 96 9F 8B FF",
+                            "new_bytes":  "A0 A1 A2 FF FF"
+                        },
+                        {
+                            "owner":  "name_ppu_seed",
+                            "rom_offset":  "0x3FB32",
+                            "length":  5,
+                            "base_bytes":  "88 96 9F 8B 80",
+                            "input_bytes":  "88 96 9F 8B 80",
+                            "new_bytes":  "A0 A1 A2 80 80"
+                        },
+                        {
+                            "owner":  "title_suffix",
+                            "rom_offset":  "0x136F4",
+                            "length":  12,
+                            "base_bytes":  "99 80 A3 91 A3 99 80 A8 8D 94 80 CD",
+                            "input_bytes":  "99 80 A3 91 A3 99 80 A8 8D 94 80 CD",
+                            "new_bytes":  "B6 A3 80 A4 A5 80 80 80 80 80 80 CD"
+                        },
+                        {
+                            "owner":  "none",
+                            "rom_offset":  "0x0FC31",
+                            "length":  5,
+                            "base_bytes":  "15 16 23 15 02",
+                            "input_bytes":  "05 00 00 00 02",
+                            "new_bytes":  "26 27 38 38 38"
+                        }
+                    ],
+    "glyph_rows":  [
+                       {
+                           "character":  "쿠",
+                           "low_code":  "0x20",
+                           "rom_offset":  "0x2F210",
+                           "tile_bytes":  "00 FF FF FF 08 08 08 00 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "니",
+                           "low_code":  "0x21",
+                           "rom_offset":  "0x2F220",
+                           "tile_bytes":  "01 01 01 01 FD 01 01 00 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "오",
+                           "low_code":  "0x22",
+                           "rom_offset":  "0x2F230",
+                           "tile_bytes":  "7E 42 00 42 7E 10 00 FF 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "의",
+                           "low_code":  "0x23",
+                           "rom_offset":  "0x2F240",
+                           "tile_bytes":  "00 F8 0C F8 FE 00 00 00 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "물",
+                           "low_code":  "0x24",
+                           "rom_offset":  "0x2F250",
+                           "tile_bytes":  "00 FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "건",
+                           "low_code":  "0x25",
+                           "rom_offset":  "0x2F260",
+                           "tile_bytes":  "F9 09 0F 19 E1 41 40 7F 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "없",
+                           "low_code":  "0x26",
+                           "rom_offset":  "0x2F270",
+                           "tile_bytes":  "72 8A 8E F2 02 F6 F6 FB 00 00 00 00 00 00 00 00"
+                       },
+                       {
+                           "character":  "음",
+                           "low_code":  "0x27",
+                           "rom_offset":  "0x2F280",
+                           "tile_bytes":  "7E 42 7E 00 FF 7E 42 7E 00 00 00 00 00 00 00 00"
+                       }
+                   ],
+    "font_pages":  "CHR Bank 7 R0, low tiles 0x120-0x127; normal Items R1 remains 0x3E/0x3F",
+    "ips_record_count":  516,
+    "runtime_gate":  "PASS_BYTE_PROOF_FRAME_1906",
+    "visual_gate":  "UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT",
+    "notes":  [
+                  "The English owner chain is preserved; only the three source records and eight R0 glyph tiles are added relative to the action candidate.",
+                  "Input codes 0xA0-0xA7 mask to low R0 tile codes 0x20-0x27 in the fixed-bank text parser.",
+                  "Runtime proof must verify title row 5 and NONE row 8 on the same bounded menu route before release consideration."
+              ]
+}

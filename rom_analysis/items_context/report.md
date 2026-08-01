@@ -29,7 +29,7 @@ Their runtime source bytes matched ROM, their queue writes matched those source 
 - Existing main-menu candidate: **PASS**. isolated Korean menu code pool is active without overlapping Items action codes
 
 The bounded candidate keeps the original Items action bytes while the cloned R1 page is active.
-Full Korean Items translation still needs its own title/empty/action source owners and a second PPU row; this smoke test only proves page isolation.
+The bounded title, empty-inventory, and action owners are now compiled in the development candidate below. Native visual evidence remains UNKNOWN because the available GD screenshot buffer is transparent.
 
 ## Checks
 
@@ -63,4 +63,15 @@ action labels are 사용, 버리기, 주기, and 버림, sourced from ROM
 The candidate's static scope and IPS round-trip pass. Its native FCEUX capture
 is PASS; the relative-frame FCEUX capture ended lua_done and the runtime verifier matched source-derived queue/PPU bytes.
 The generated GD screenshot is transparent blank, so this is runtime byte proof rather than manual visual approval.
-KUNIO'S ITEMS and NONE remain pending dynamic source owners.
+In this action-only candidate they remain separate; the title/NONE candidate below now proves their byte path.
+## Title / NONE Candidate (2026-08-01)
+
+- Candidate ROM: `output/full_korean_items_title_none_candidate/kunio_period_drama_korean_full_items_title_none_candidate.nes`.
+- Candidate MD5: `fa08179cdbf1198bd7781df0b6c78477`.
+- Name owner: PRG `0x0561B` plus live CHR/PPU seed `0x3FB32` -> RAM `$7AFB` -> title prefix `$60A8`.
+- Title suffix owner: PRG `0x136F4` -> RAM `$60AD`.
+- NONE owner: PRG `0x0FC31` -> RAM `$6506`.
+- FCEUX bounded route: capture frame `1906`; name/title/NONE queue proof at frame `1737`.
+- Runtime byte gate: `PASS_BYTE_PROOF`.
+- Native visual gate: `UNKNOWN`; screenshot buffer is transparent.
+- Release status: `NOT_READY`.

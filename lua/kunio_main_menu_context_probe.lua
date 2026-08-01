@@ -48,6 +48,7 @@ local ppu_rows_path = OUT_DIR .. "/ppu_rows.tsv"
 local source_reads_path = OUT_DIR .. "/menu_source_reads.tsv"
 local extra_source_reads_path = OUT_DIR .. "/extra_source_reads.tsv"
 local queue_writes_path = OUT_DIR .. "/queue_writes.tsv"
+local indirect_trace_path = OUT_DIR .. "/indirect_trace.tsv"
 local mapper_config_writes_path = OUT_DIR .. "/mapper_config_writes.tsv"
 local mapper_loader_exec_path = OUT_DIR .. "/mapper_loader_exec.tsv"
 
@@ -377,6 +378,23 @@ local function on_queue_write(addr, size, value)
         queue_write_limit_reached = true
         return
     end
+    append(indirect_trace_path, table.concat({
+        frame,
+        hex4(addr),
+        hex2(value or 0),
+        hex4(read_register("pc")),
+        hex2(read_register("a")),
+        hex2(read_register("x")),
+        hex2(read_register("y")),
+        hex2(read_cpu_byte(0x002A)),
+        hex2(read_cpu_byte(0x002B)),
+        hex2(read_cpu_byte(0x002C)),
+        hex2(read_cpu_byte(0x002D)),
+        hex2(read_cpu_byte(0x002E)),
+        hex2(read_cpu_byte(0x002F)),
+        hex2(read_cpu_byte(0x711A)),
+        hex2(read_cpu_byte(0x711B)),
+    }, "\t"))
     append(queue_writes_path, table.concat({
         frame,
         hex4(addr),

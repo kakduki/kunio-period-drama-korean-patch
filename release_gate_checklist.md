@@ -29,7 +29,7 @@ Current release verdict: **UNKNOWN**
 
 - [ ] Prove menu cursor movement and exit lifecycle with bounded state captures.
 - [ ] Audit every other context that shares the cloned R1 page before release.
-- [ ] Build an Items-specific second PPU queue row before writing 16x16 Korean action text.
+- [x] Trace and build the Items title/NONE queue owners; the existing action row remains byte-proven on the same route.
 - [ ] Audit each other context that shares the R1 raster split.
 - [ ] Add context-proven dialogue/UI strings one screen at a time.
 - [ ] Check Korean glyph readability on every promoted screen.
@@ -86,5 +86,14 @@ The input explorer now treats the Lua script's finite done row as a normal compl
 | Items action source owner | PASS | English reference chain is proven at ROM 0x13727, CPU $B717, SRAM $6360, and PPU $2363; four fixed-width action slots compile. |
 | Items action candidate static build | PASS | Candidate MD5 5dbb442b8bda6efe9039f2e91fd1f88f; IPS round-trip, source scope, and page writes pass. |
 | Items action candidate native screen | PASS_RUNTIME | Relative-frame FCEUX capture completed at frame 1906; runtime verifier matches queue PC=B70D, PPU $2363, and MMC3 R1=3E/R6=08/R7=09. GD screenshot is blank, so no visual release claim is made. |
-| Items title and NONE rows | PENDING | Separate dynamic source owners and queue/PPU proof remain. |
+| Items title and NONE rows | PASS_RUNTIME_BYTE_PROOF | PRG/CHR owners are traced; FCEUX frame 1906 proves queue bytes at frame 1737. Native visual is UNKNOWN. |
 | Release promotion | NOT_READY | Normal Items R1 page safety and title/empty/action rows are not release-proven. |
+## Items Title / NONE Soft Gate (2026-08-01)
+
+- [x] PRG/CHR source owners identified from the English runtime.
+- [x] Static source scope and IPS round trip pass.
+- [x] Bounded FCEUX route reaches capture frame 1906 without opening-loop autoplay.
+- [x] Name, title suffix, and NONE queue bytes pass at frame 1737.
+- [x] Existing action queue and PPU bytes remain intact.
+- [ ] Native visual proof and shared R0/R1 page audit remain before release.
+- [ ] Release promotion remains blocked.

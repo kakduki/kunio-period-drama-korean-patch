@@ -124,3 +124,10 @@ labels: 사용, 버리기, 주기, and 버림. It uses the normal Items R1 pages
 0x3E/0x3F, so it is intentionally a development candidate until a candidate
 screen capture proves that page's cross-context safety. KUNIO'S ITEMS and NONE
 remain separate source owners.
+## Items Title / NONE Development Candidate (2026-08-01)
+
+| build | ROM offset / owner | English-reference check | bounded runtime | visual | result |
+| --- | --- | --- | --- | --- | --- |
+| full_korean_items_title_none_candidate | `0x0561B`, `0x3FB32`, `0x136F4`, `0x0FC31` / PRG + CHR15 | PRG/CHR duplicate name seed, dynamic title suffix, and direct-low NONE owner traced from English runtime | FCEUX capture frame 1906; name/title/NONE queue frame 1737 PASS; action queue/PPU preserved | UNKNOWN; native GD screenshot transparent | BUILT_RUNTIME_BYTE_PASS_VISUAL_UNKNOWN |
+
+This candidate is the current bounded Items development build. It is not a release ROM: the byte path is proven, but native visual review and shared-page safety remain open.
