@@ -38,3 +38,16 @@ Current release verdict: **UNKNOWN**
 - [ ] Identify a bounded enemy-clear or boss-spawn route; the interaction/shop route is not boss proof.
 - [ ] Promote pointer-dialogue batches only after Japanese context and bounded
   early-boss screen evidence agree with the English structural reference.
+
+## Current Development Candidate Audit
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| Current composed ROM build | PASS | Candidate MD5 `d062b19d23050cd4e148e22fbfff57b7`; IPS round-trip passes. |
+| English ownership coverage | SOFT_GATE | 3 full, 7 partial, 89 missing records; missing regions are explicit implementation work, not hidden failures. |
+| Main-menu bounded context | PASS | Template and mirror match; Korean source-page tile codes are captured; final R1 remains `0x3E`. |
+| Progression bounded context | PASS | `lua_done`; combat starts at frame 915; late event screens are captured. |
+| Pointer relocation route | UNKNOWN | Existing probe uses stale fixed-address targets; requires a new relocation-aware route probe. |
+| Final release | UNKNOWN | Other renderers, full visual review, boss route, and release checklist remain incomplete. |
+
+Current report: `rom_analysis/full_korean_candidate_smoke_report.md`.

@@ -13,4 +13,4 @@ Status: **WHOLE_SCRIPT_CANDIDATE_BUILT_RUNTIME_UNKNOWN**
 - Forty-seven dynamic name/item-control rows remain context-flagged; broad visual coverage is still open.
 
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
-- Candidate MD5: `7844f2d6f6a67e86e23b2f954d5ebf3c`.
+- Candidate MD5: `0a983c3d8494444935f000963f415253`.

@@ -170,3 +170,15 @@ visual PASS.
 
 See `rom_analysis/full_pointer_progression_runtime_report.md` for the exact
 checkpoint report and raw-output locations.
+
+## Current Full Korean Development Candidate
+
+- Status: **SOFT_GATE_PASS_MENU_AND_GAMEPLAY_ENTRY**.
+- Candidate MD5: `d062b19d23050cd4e148e22fbfff57b7`.
+- Candidate ROM/IPS: `output/full_korean_candidate/kunio_period_drama_korean_full_candidate.nes` and `.ips`.
+- The pointer stage compiles 244 active Korean rows and preserves four excluded Japanese rows; the menu stage writes its isolated 16x16 glyphs into the original R1 source page without a global `0x3E -> 0x46` change.
+- English ownership audit: 3 fully covered records, 7 partial records, 89 missing records out of 99.
+- Menu context: `lua_done`, display/mirror template match, final R1 `0x3E`.
+- Progression context: `lua_done`, entry route reaches combat at frame 915 and late event screens after frame 1900.
+- Pointer route probe is **UNKNOWN** because its old target address contract predates relocation.
+- Release verdict remains **UNKNOWN**. Full visual coverage, other UI renderers, boss route, and release gate evidence are still open.

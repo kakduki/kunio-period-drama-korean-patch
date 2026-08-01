@@ -23,21 +23,13 @@ from build_opening_dialogue_8x16_proof import (
 )
 from build_patch import make_records, write_ips
 from build_ptr181_bank8_page_probe import BASE_MD5, CHR_BANK_SIZE, resolve_base_rom
-from build_ptr181_conditional_mapper_probe import (
-    MAPPER_SELECT_CAVE_ROM_OFFSET,
-    MAPPER_STORE_CAVE_ROM_OFFSET,
-    MAPPER_WRAPPER_ORIGINAL,
-    MAPPER_WRAPPER_ROM_OFFSET,
-)
+
 from korean_tile_font import render_tall_tiles
 from pointer_page_loader import (
     LOADER_CAVE_ROM_OFFSET,
     LOADER_HOOK_ORIGINAL,
     LOADER_HOOK_ROM_OFFSET,
-    PAGE_TABLE_ROM_OFFSET,
-    RENDER_SOURCE_RANGES,
-    build_generic_mapper_helpers,
-    build_loader_helper,
+    build_loader_helper_with_direct_mapper,
     build_page_scoped_renderer,
     encode_page_table,
     loader_hook,
@@ -53,6 +45,8 @@ OUTPUT_CHR_BANKS = 29
 PAGE_SIZE = 0x0800
 PAGE_CAPACITY = (OUTPUT_CHR_BANKS - ORIGINAL_CHR_BANKS) * 4
 SOURCE_PAGE_OFFSET_IN_CHR = 0x0F800
+DIRECT_PAGE_TABLE_ROM_OFFSET = 0x07040
+DIRECT_PAGE_TABLE_CPU = 0xB030
 SOURCE_CODES = tuple(range(0x81, 0x9B)) + tuple(range(0xC0, 0xC8))
 BOTTOM_TILE_DELTA = 0x20
 DEFAULT_DRAFT = REPO_ROOT / "text_data" / "pointer_dialogue_korean_draft.tsv"
@@ -278,7 +272,6 @@ def apply_full_candidate(
         (LOADER_HOOK_ROM_OFFSET, LOADER_HOOK_ORIGINAL, "dialogue loader"),
         (RENDER_ENTRY_ROM_OFFSET, RENDER_ENTRY_ORIGINAL, "renderer entry"),
         (RENDER_MARKER_ROM_OFFSET, RENDER_MARKER_ORIGINAL, "renderer marker"),
-        (MAPPER_WRAPPER_ROM_OFFSET, MAPPER_WRAPPER_ORIGINAL, "mapper wrapper"),
     ):
         if base[offset:offset + len(expected)] != expected:
             raise ValueError(f"{label} bytes do not match the base ROM")
@@ -317,14 +310,13 @@ def apply_full_candidate(
         }
     )
 
-    loader = build_loader_helper()
+    loader = build_loader_helper_with_direct_mapper(DIRECT_PAGE_TABLE_CPU)
     page_table = encode_page_table(assignments)
-    renderer, marker_cpu = build_page_scoped_renderer(CODE_CAVE_CPU, CODE_CAVE_SIZE)
-    wrapper, select, store = build_generic_mapper_helpers(MAPPER_WRAPPER_ORIGINAL)
+    renderer, marker_cpu = build_page_scoped_renderer(CODE_CAVE_CPU, CODE_CAVE_SIZE, map_r1_from_page_state=True)
     writes = (
         ("pointer_page_loader_hook", LOADER_HOOK_ROM_OFFSET, loader_hook()),
         ("pointer_page_loader", LOADER_CAVE_ROM_OFFSET, loader),
-        ("pointer_page_table", PAGE_TABLE_ROM_OFFSET, page_table),
+        ("pointer_page_table", DIRECT_PAGE_TABLE_ROM_OFFSET, page_table),
         (
             "renderer_entry_hook",
             RENDER_ENTRY_ROM_OFFSET,
@@ -336,9 +328,6 @@ def apply_full_candidate(
             bytes((0x4C, marker_cpu & 0xFF, marker_cpu >> 8)),
         ),
         ("page_scoped_renderer", CODE_CAVE_ROM_OFFSET, renderer),
-        ("generic_mapper_wrapper", MAPPER_WRAPPER_ROM_OFFSET, wrapper),
-        ("generic_mapper_select", MAPPER_SELECT_CAVE_ROM_OFFSET, select),
-        ("generic_mapper_store", MAPPER_STORE_CAVE_ROM_OFFSET, store),
     )
     for kind, offset, data in writes:
         result[offset:offset + len(data)] = data

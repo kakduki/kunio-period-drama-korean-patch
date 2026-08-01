@@ -45,3 +45,13 @@ event-control proof; no translation drafts remain; broad visual coverage remains
 
 The extra Start input is a route correction discovered by the bounded button
 probe; it is not blind autoplay. The reached 1926/1986 screen is the interaction/shop route (`WELCOME` / `WHAT WOULD YOU LIKE`), not boss proof. Full release-wide visual coverage remains open.
+
+## Current Composed Candidate (2026-08-01)
+
+- ROM: `output/full_korean_candidate/kunio_period_drama_korean_full_candidate.nes`.
+- Candidate MD5: `d062b19d23050cd4e148e22fbfff57b7`.
+- Composition: 244 active pointer-dialogue rows plus the bounded 16x16 main-menu template and isolated source-page glyph slots.
+- English IPS coverage audit: 3 records fully covered by same-offset ownership, 7 partial, 89 missing; this is structural coverage, not visual proof.
+- Bounded smoke: `SOFT_GATE_PASS_MENU_AND_GAMEPLAY_ENTRY`; menu template and mirror match, final R1 is `0x3E`, progression reaches combat and late event screens, and `lua_done` is recorded.
+- Pointer route probe: `UNKNOWN_TARGET_ROUTE_PROBE_ADDRESS_CONTRACT`; its old fixed-address target does not match the relocated full-pointer layout.
+- Release status: `UNKNOWN`; this is a development candidate, not a final release ROM.

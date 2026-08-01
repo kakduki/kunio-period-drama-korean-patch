@@ -271,6 +271,69 @@ def _assert_declared_scope(
         raise AssertionError(f"candidate changed bytes outside its declared targets: {escaped[:8]}")
 
 
+def apply_main_menu_source_page_candidate(
+    base: bytes,
+    glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],
+) -> tuple[bytes, list[dict[str, object]]]:
+    """Build the menu labels in the original R1 page without a global R1 hook.
+
+    The full pointer candidate owns dynamic R1 pages. A global `3E -> 46`
+    replacement would therefore overwrite a Korean dialogue page after the
+    pointer loader runs. This development variant keeps R1 at the verified
+    original value and writes only the isolated menu glyph slots into the
+    source page. It is a deliberately broader source-page change, so its
+    compatibility is limited to the audited menu/Items code set.
+    """
+
+    validate_code_pool()
+    if base[RASTER_R1_VALUE_ROM_OFFSET] != RASTER_R1_VALUE_ORIGINAL:
+        actual = base[RASTER_R1_VALUE_ROM_OFFSET]
+        raise ValueError(
+            "source-page menu candidate requires the original R1 immediate: "
+            f"0x{actual:02X}"
+        )
+
+    layout = parse_ines_layout(base)
+    patched = bytearray(base)
+    targets: list[dict[str, object]] = []
+    template = build_menu_template(base)
+    patched[TEMPLATE_ROM_OFFSET : TEMPLATE_ROM_OFFSET + TEMPLATE_LENGTH] = template
+    add_target(
+        targets,
+        kind="main_menu_template",
+        rom_offset=TEMPLATE_ROM_OFFSET,
+        length=TEMPLATE_LENGTH,
+        cpu_source=f"0x{TEMPLATE_CPU_SOURCE:04X}",
+        ppu_destination=f"0x{PPU_DESTINATION:04X}",
+    )
+
+    source_start = chr_page_offset(layout, SOURCE_CHR_1K_PAIR)
+    for glyph, (left_code, right_code) in GLYPH_CODE_PAIRS.items():
+        tiles = glyph_tiles.get(glyph)
+        if tiles is None or len(tiles) != 4 or any(len(tile) != CHR_TILE_SIZE for tile in tiles):
+            raise ValueError(f"missing four 8x8 glyph tiles for {glyph!r}")
+        placements = (
+            ("font_tile_source_top_left", left_code, tiles[0]),
+            ("font_tile_source_top_right", right_code, tiles[1]),
+            ("font_tile_source_bottom_left", left_code + 0x20, tiles[2]),
+            ("font_tile_source_bottom_right", right_code + 0x20, tiles[3]),
+        )
+        for kind, code, tile in placements:
+            offset = source_start + (code & 0x7F) * CHR_TILE_SIZE
+            patched[offset : offset + CHR_TILE_SIZE] = tile
+            add_target(
+                targets,
+                kind=kind,
+                rom_offset=offset,
+                length=CHR_TILE_SIZE,
+                glyph=glyph,
+                code=f"0x{code:02X}",
+                source_chr_1k_pair=f"0x{SOURCE_CHR_1K_PAIR:02X}",
+            )
+
+    _assert_declared_scope(base, bytes(patched), targets)
+    return bytes(patched), targets
+
 def apply_main_menu_candidate(
     base: bytes,
     glyph_tiles: dict[str, tuple[bytes, bytes, bytes, bytes]],

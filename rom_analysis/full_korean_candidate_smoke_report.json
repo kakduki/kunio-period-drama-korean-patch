@@ -1,0 +1,113 @@
+{
+  "status": "SOFT_GATE_PASS_MENU_AND_GAMEPLAY_ENTRY",
+  "release_verdict": "UNKNOWN",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_md5": "d062b19d23050cd4e148e22fbfff57b7",
+  "candidate_rom": "output\\full_korean_candidate\\kunio_period_drama_korean_full_candidate.nes",
+  "candidate_ips": "output\\full_korean_candidate\\kunio_period_drama_korean_full_candidate.ips",
+  "source_page_rom_range": [
+    194576,
+    195600
+  ],
+  "checks": {
+    "base_md5": true,
+    "candidate_chr_banks_expanded": true,
+    "ips_round_trip": true,
+    "menu_lua_done": true,
+    "menu_template_display_matches": true,
+    "menu_template_mirror_matches": true,
+    "menu_r1_restored_original": true,
+    "source_page_has_korean_changes": true,
+    "progression_lua_done": true,
+    "progression_reaches_combat": true,
+    "progression_reaches_late_event": true
+  },
+  "menu": {
+    "capture": "rom_analysis\\main_menu_full_korean_candidate_capture",
+    "final_mapper": {
+      "frame": "1906",
+      "mapper_control": "07",
+      "mapper_select": "7",
+      "ppu_control": "88",
+      "r0": "3C",
+      "r1": "3E",
+      "r2": "42",
+      "r3": "47",
+      "r4": "35",
+      "r5": "40",
+      "r6": "0C",
+      "r7": "0D",
+      "mapper_select_callbacks": "65924",
+      "mapper_data_callbacks": "65939",
+      "ppu_control_callbacks": "9262",
+      "ppu_status_callbacks": "19224",
+      "ppu_addr_callbacks": "16760",
+      "ppu_data_callbacks": "42671",
+      "menu_source_callbacks": "330"
+    },
+    "summary": {
+      "frame": "1906",
+      "reason": "lua_done",
+      "detail_a": "captured=true",
+      "detail_b": "capture_frame=1906",
+      "detail_c": "ppu_write_limit_reached=false",
+      "detail_d": "mapper_callbacks=65939",
+      "detail_e": "menu_source_callbacks=330",
+      "null": [
+        "extra_source_callbacks=0",
+        "extra_source_reads=0",
+        "extra_source_limit_reached=false",
+        "queue_write_callbacks=0",
+        "queue_writes=0",
+        "queue_write_limit_reached=false",
+        "mapper_config_callbacks=11962",
+        "mapper_loader_callbacks=4480"
+      ]
+    }
+  },
+  "progression": {
+    "capture": "rom_analysis\\stage_progression_probe_full_korean_candidate",
+    "summary": {
+      "frame": "7200",
+      "reason": "lua_done",
+      "unique": "16",
+      "last_fingerprint": "721673506:20840"
+    },
+    "combat_frames": [
+      915,
+      1049,
+      1139,
+      1229,
+      1319,
+      1444,
+      1651,
+      1866,
+      1956,
+      2046
+    ],
+    "late_event_frames": [
+      1956,
+      2046
+    ]
+  },
+  "pointer_route": {
+    "capture": "rom_analysis\\pointer_dialogue_route_probe_full_korean_candidate",
+    "summary": {
+      "frame": "5000",
+      "reason": "target_not_seen",
+      "target": "pointer_002_003",
+      "screenshot": "false",
+      "target_match": "false",
+      "phase": "3",
+      "hits": "266",
+      "screen_fingerprint": "8507662:16320"
+    },
+    "interpretation": "UNKNOWN_TARGET_ROUTE_PROBE_ADDRESS_CONTRACT"
+  },
+  "limits": [
+    "This is a soft-gate development candidate, not a release ROM.",
+    "The full 244-row script is compiled, but broad visual proof is not complete.",
+    "The pointer route probe uses an older fixed-address target contract and returned UNKNOWN.",
+    "The reached gameplay route does not prove boss defeat or every event screen."
+  ]
+}
