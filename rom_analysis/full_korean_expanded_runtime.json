@@ -1,0 +1,88 @@
+{
+  "candidate_md5": "64b599ca6c502b635d216aebf5ce61b9",
+  "candidate_size": 368656,
+  "candidate_chr_banks": 29,
+  "expected_label_count": 22,
+  "pre_pointer": {
+    "matched_rows": 22,
+    "target_ids": [
+      "EN-PRE-104",
+      "EN-PRE-105",
+      "EN-PRE-107",
+      "EN-PRE-108",
+      "EN-PRE-111",
+      "EN-PRE-112",
+      "EN-PRE-116",
+      "EN-PRE-117",
+      "EN-PRE-118",
+      "EN-PRE-119",
+      "EN-PRE-122",
+      "EN-PRE-123",
+      "EN-PRE-124",
+      "EN-PRE-125",
+      "EN-PRE-129",
+      "EN-PRE-130",
+      "EN-PRE-131",
+      "EN-PRE-133",
+      "EN-PRE-134",
+      "EN-PRE-135",
+      "EN-PRE-138",
+      "EN-PRE-185"
+    ],
+    "lua_done": true,
+    "terminal_frame": 900,
+    "ppu_write_count": 11098
+  },
+  "stage_progression": {
+    "lua_done": true,
+    "terminal_frame": 7200,
+    "unique_screens": 24,
+    "combat_frames": [
+      915,
+      1049,
+      1139,
+      1229,
+      1319,
+      1444,
+      1651,
+      1866,
+      1956,
+      2046,
+      2201,
+      2291,
+      2381,
+      2471,
+      2621,
+      2711,
+      3533,
+      3623
+    ],
+    "event_frames": [
+      1956,
+      2046,
+      2201,
+      2291,
+      2381,
+      2471,
+      2621,
+      2711,
+      3533,
+      3623,
+      7200
+    ],
+    "boss_proof": false
+  },
+  "status": "PASS_INTEGRATED_BOOT_RUNTIME_NOT_READY",
+  "release_status": "NOT_READY",
+  "known_limits": [
+    "The bounded route reaches combat and event screens but does not prove every boss route.",
+    "Native pixel review for every translated record and remaining non-pointer families is incomplete.",
+    "The ROM contains 22 runtime-mapped fixed labels; 190 inventory rows remain untranslated or blocked."
+  ],
+  "evidence": {
+    "pre_pointer_matches": "rom_analysis\\full_korean_expanded_pre_pointer_probe\\matches.tsv",
+    "pre_pointer_summary": "rom_analysis\\full_korean_expanded_pre_pointer_probe\\summary.tsv",
+    "stage_summary": "rom_analysis\\stage_progression_probe_full_korean_expanded_candidate\\summary.tsv",
+    "stage_captures": "rom_analysis\\stage_progression_probe_full_korean_expanded_candidate\\captures.tsv"
+  }
+}

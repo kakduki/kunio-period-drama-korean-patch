@@ -1,0 +1,463 @@
+{
+  "status": "BUILT_PRE_POINTER_HIGH_STATIC_PASS_RUNTIME_UNKNOWN",
+  "release_status": "NOT_READY",
+  "input_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_pointer_korean_candidate\\kunio_period_drama_korean_full_pointer_candidate.nes",
+  "input_md5": "0a983c3d8494444935f000963f415253",
+  "composed_input_md5": "b5552d2a49123fae367a8679afb98ab1",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_expanded_candidate\\kunio_period_drama_korean_expanded_candidate.nes",
+  "candidate_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_expanded_candidate\\kunio_period_drama_korean_expanded_candidate.ips",
+  "candidate_md5": "64b599ca6c502b635d216aebf5ce61b9",
+  "target_count": 22,
+  "targets": [
+    {
+      "record_id": "EN-PRE-104",
+      "english": "SCREW<FF>",
+      "korean": "회",
+      "rom_offset": "0x05AAD",
+      "old_bytes": "93 83 92 85 97 FF",
+      "new_bytes": "81 FF FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-105",
+      "english": "TORNADO<FF>",
+      "korean": "회리",
+      "rom_offset": "0x05AB3",
+      "old_bytes": "94 8F 92 8E 81 84 8F FF",
+      "new_bytes": "81 82 FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-107",
+      "english": "HELICPTR<FF>",
+      "korean": "헬기",
+      "rom_offset": "0x05AC2",
+      "old_bytes": "88 85 8C 89 83 90 94 92 FF",
+      "new_bytes": "83 84 FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-108",
+      "english": "DRILL<FF>",
+      "korean": "드릴",
+      "rom_offset": "0x05ACB",
+      "old_bytes": "84 92 89 8C 8C FF",
+      "new_bytes": "85 86 FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-111",
+      "english": "HEADBUTT<FF>",
+      "korean": "박치기",
+      "rom_offset": "0x05AE2",
+      "old_bytes": "88 85 81 84 82 95 94 94 FF",
+      "new_bytes": "87 88 84 FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-112",
+      "english": "BMPKNART<FF>",
+      "korean": "기술",
+      "rom_offset": "0x05AEB",
+      "old_bytes": "82 8D 90 8B 8E 81 92 94 FF",
+      "new_bytes": "84 89 FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-116",
+      "english": "MASSAGE<FF>",
+      "korean": "안마",
+      "rom_offset": "0x05B0B",
+      "old_bytes": "8D 81 93 93 81 87 85 FF",
+      "new_bytes": "8A 8B FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-117",
+      "english": "BIGBANG<FF>",
+      "korean": "빅뱅",
+      "rom_offset": "0x05B13",
+      "old_bytes": "82 89 87 82 81 8E 87 FF",
+      "new_bytes": "8C 8D FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-118",
+      "english": "WARPSHOT<FF>",
+      "korean": "파",
+      "rom_offset": "0x05B1B",
+      "old_bytes": "97 81 92 90 93 88 8F 94 FF",
+      "new_bytes": "8E FF FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-119",
+      "english": "DEFLECT<FF>",
+      "korean": "사",
+      "rom_offset": "0x05B24",
+      "old_bytes": "84 85 86 8C 85 83 94 FF",
+      "new_bytes": "8F FF FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-122",
+      "english": "PICKLE<FF>",
+      "korean": "피클",
+      "rom_offset": "0x05B3D",
+      "old_bytes": "90 89 83 8B 8C 85 FF",
+      "new_bytes": "90 91 FF FF FF FF FF",
+      "length": 7
+    },
+    {
+      "record_id": "EN-PRE-123",
+      "english": "MEAL<FF>",
+      "korean": "밥",
+      "rom_offset": "0x05B44",
+      "old_bytes": "8D 85 81 8C FF",
+      "new_bytes": "92 FF FF FF FF",
+      "length": 5
+    },
+    {
+      "record_id": "EN-PRE-124",
+      "english": "SOBA<FF>",
+      "korean": "소",
+      "rom_offset": "0x05B49",
+      "old_bytes": "93 8F 82 81 FF",
+      "new_bytes": "93 FF FF FF FF",
+      "length": 5
+    },
+    {
+      "record_id": "EN-PRE-125",
+      "english": "UDON<FF>",
+      "korean": "동",
+      "rom_offset": "0x05B4E",
+      "old_bytes": "95 84 8F 8E FF",
+      "new_bytes": "94 FF FF FF FF",
+      "length": 5
+    },
+    {
+      "record_id": "EN-PRE-129",
+      "english": "TENPURA<FF>",
+      "korean": "전",
+      "rom_offset": "0x05B61",
+      "old_bytes": "94 85 8E 90 95 92 81 FF",
+      "new_bytes": "95 FF FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-130",
+      "english": "DANGO<FF>",
+      "korean": "고",
+      "rom_offset": "0x05B69",
+      "old_bytes": "84 81 8E 87 8F FF",
+      "new_bytes": "96 FF FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-131",
+      "english": "RICEBALL<FF>",
+      "korean": "주먹밥",
+      "rom_offset": "0x05B6F",
+      "old_bytes": "92 89 83 85 82 81 8C 8C FF",
+      "new_bytes": "97 98 92 FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-133",
+      "english": "SUSHI<FF>",
+      "korean": "밥",
+      "rom_offset": "0x05B7F",
+      "old_bytes": "93 95 93 88 89 FF",
+      "new_bytes": "92 FF FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-134",
+      "english": "SALVE<FF>",
+      "korean": "고",
+      "rom_offset": "0x05B85",
+      "old_bytes": "93 81 8C 96 85 FF",
+      "new_bytes": "96 FF FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-135",
+      "english": "POULTICE<FF>",
+      "korean": "약",
+      "rom_offset": "0x05B8B",
+      "old_bytes": "90 8F 95 8C 94 89 83 85 FF",
+      "new_bytes": "99 FF FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-138",
+      "english": "ELIXIR<FF>",
+      "korean": "약",
+      "rom_offset": "0x05BA2",
+      "old_bytes": "85 8C 89 98 89 92 FF",
+      "new_bytes": "99 FF FF FF FF FF FF",
+      "length": 7
+    },
+    {
+      "record_id": "EN-PRE-185",
+      "english": "KICK<FF>",
+      "korean": "타",
+      "rom_offset": "0x05CE0",
+      "old_bytes": "8B 89 83 8B FF",
+      "new_bytes": "9A FF FF FF FF",
+      "length": 5
+    }
+  ],
+  "glyph_codes": {
+    "회": "0x81",
+    "리": "0x82",
+    "헬": "0x83",
+    "기": "0x84",
+    "드": "0x85",
+    "릴": "0x86",
+    "박": "0x87",
+    "치": "0x88",
+    "술": "0x89",
+    "안": "0x8A",
+    "마": "0x8B",
+    "빅": "0x8C",
+    "뱅": "0x8D",
+    "파": "0x8E",
+    "사": "0x8F",
+    "피": "0x90",
+    "클": "0x91",
+    "밥": "0x92",
+    "소": "0x93",
+    "동": "0x94",
+    "전": "0x95",
+    "고": "0x96",
+    "주": "0x97",
+    "먹": "0x98",
+    "약": "0x99",
+    "타": "0x9A"
+  },
+  "font_rows": [
+    {
+      "glyph": "회",
+      "code": "0x81",
+      "top_tile": "0x181",
+      "bottom_tile": "0x1A1",
+      "top_rom_offset": "0x2F820",
+      "bottom_rom_offset": "0x2FA20"
+    },
+    {
+      "glyph": "리",
+      "code": "0x82",
+      "top_tile": "0x182",
+      "bottom_tile": "0x1A2",
+      "top_rom_offset": "0x2F830",
+      "bottom_rom_offset": "0x2FA30"
+    },
+    {
+      "glyph": "헬",
+      "code": "0x83",
+      "top_tile": "0x183",
+      "bottom_tile": "0x1A3",
+      "top_rom_offset": "0x2F840",
+      "bottom_rom_offset": "0x2FA40"
+    },
+    {
+      "glyph": "기",
+      "code": "0x84",
+      "top_tile": "0x184",
+      "bottom_tile": "0x1A4",
+      "top_rom_offset": "0x2F850",
+      "bottom_rom_offset": "0x2FA50"
+    },
+    {
+      "glyph": "드",
+      "code": "0x85",
+      "top_tile": "0x185",
+      "bottom_tile": "0x1A5",
+      "top_rom_offset": "0x2F860",
+      "bottom_rom_offset": "0x2FA60"
+    },
+    {
+      "glyph": "릴",
+      "code": "0x86",
+      "top_tile": "0x186",
+      "bottom_tile": "0x1A6",
+      "top_rom_offset": "0x2F870",
+      "bottom_rom_offset": "0x2FA70"
+    },
+    {
+      "glyph": "박",
+      "code": "0x87",
+      "top_tile": "0x187",
+      "bottom_tile": "0x1A7",
+      "top_rom_offset": "0x2F880",
+      "bottom_rom_offset": "0x2FA80"
+    },
+    {
+      "glyph": "치",
+      "code": "0x88",
+      "top_tile": "0x188",
+      "bottom_tile": "0x1A8",
+      "top_rom_offset": "0x2F890",
+      "bottom_rom_offset": "0x2FA90"
+    },
+    {
+      "glyph": "술",
+      "code": "0x89",
+      "top_tile": "0x189",
+      "bottom_tile": "0x1A9",
+      "top_rom_offset": "0x2F8A0",
+      "bottom_rom_offset": "0x2FAA0"
+    },
+    {
+      "glyph": "안",
+      "code": "0x8A",
+      "top_tile": "0x18A",
+      "bottom_tile": "0x1AA",
+      "top_rom_offset": "0x2F8B0",
+      "bottom_rom_offset": "0x2FAB0"
+    },
+    {
+      "glyph": "마",
+      "code": "0x8B",
+      "top_tile": "0x18B",
+      "bottom_tile": "0x1AB",
+      "top_rom_offset": "0x2F8C0",
+      "bottom_rom_offset": "0x2FAC0"
+    },
+    {
+      "glyph": "빅",
+      "code": "0x8C",
+      "top_tile": "0x18C",
+      "bottom_tile": "0x1AC",
+      "top_rom_offset": "0x2F8D0",
+      "bottom_rom_offset": "0x2FAD0"
+    },
+    {
+      "glyph": "뱅",
+      "code": "0x8D",
+      "top_tile": "0x18D",
+      "bottom_tile": "0x1AD",
+      "top_rom_offset": "0x2F8E0",
+      "bottom_rom_offset": "0x2FAE0"
+    },
+    {
+      "glyph": "파",
+      "code": "0x8E",
+      "top_tile": "0x18E",
+      "bottom_tile": "0x1AE",
+      "top_rom_offset": "0x2F8F0",
+      "bottom_rom_offset": "0x2FAF0"
+    },
+    {
+      "glyph": "사",
+      "code": "0x8F",
+      "top_tile": "0x18F",
+      "bottom_tile": "0x1AF",
+      "top_rom_offset": "0x2F900",
+      "bottom_rom_offset": "0x2FB00"
+    },
+    {
+      "glyph": "피",
+      "code": "0x90",
+      "top_tile": "0x190",
+      "bottom_tile": "0x1B0",
+      "top_rom_offset": "0x2F910",
+      "bottom_rom_offset": "0x2FB10"
+    },
+    {
+      "glyph": "클",
+      "code": "0x91",
+      "top_tile": "0x191",
+      "bottom_tile": "0x1B1",
+      "top_rom_offset": "0x2F920",
+      "bottom_rom_offset": "0x2FB20"
+    },
+    {
+      "glyph": "밥",
+      "code": "0x92",
+      "top_tile": "0x192",
+      "bottom_tile": "0x1B2",
+      "top_rom_offset": "0x2F930",
+      "bottom_rom_offset": "0x2FB30"
+    },
+    {
+      "glyph": "소",
+      "code": "0x93",
+      "top_tile": "0x193",
+      "bottom_tile": "0x1B3",
+      "top_rom_offset": "0x2F940",
+      "bottom_rom_offset": "0x2FB40"
+    },
+    {
+      "glyph": "동",
+      "code": "0x94",
+      "top_tile": "0x194",
+      "bottom_tile": "0x1B4",
+      "top_rom_offset": "0x2F950",
+      "bottom_rom_offset": "0x2FB50"
+    },
+    {
+      "glyph": "전",
+      "code": "0x95",
+      "top_tile": "0x195",
+      "bottom_tile": "0x1B5",
+      "top_rom_offset": "0x2F960",
+      "bottom_rom_offset": "0x2FB60"
+    },
+    {
+      "glyph": "고",
+      "code": "0x96",
+      "top_tile": "0x196",
+      "bottom_tile": "0x1B6",
+      "top_rom_offset": "0x2F970",
+      "bottom_rom_offset": "0x2FB70"
+    },
+    {
+      "glyph": "주",
+      "code": "0x97",
+      "top_tile": "0x197",
+      "bottom_tile": "0x1B7",
+      "top_rom_offset": "0x2F980",
+      "bottom_rom_offset": "0x2FB80"
+    },
+    {
+      "glyph": "먹",
+      "code": "0x98",
+      "top_tile": "0x198",
+      "bottom_tile": "0x1B8",
+      "top_rom_offset": "0x2F990",
+      "bottom_rom_offset": "0x2FB90"
+    },
+    {
+      "glyph": "약",
+      "code": "0x99",
+      "top_tile": "0x199",
+      "bottom_tile": "0x1B9",
+      "top_rom_offset": "0x2F9A0",
+      "bottom_rom_offset": "0x2FBA0"
+    },
+    {
+      "glyph": "타",
+      "code": "0x9A",
+      "top_tile": "0x19A",
+      "bottom_tile": "0x1BA",
+      "top_rom_offset": "0x2F9B0",
+      "bottom_rom_offset": "0x2FBB0"
+    }
+  ],
+  "ips_record_count": 853,
+  "renderer_contract": {
+    "input_codes": "0x81-0x9A",
+    "bank": 7,
+    "top_tile_base": "0x181",
+    "bottom_tile_delta": "0x20",
+    "terminator": "0xFF"
+  },
+  "known_limits": [
+    "Only 22 bounded control-free inventory rows are changed.",
+    "The shared Bank 7 high-code page is not release-proven for every other screen.",
+    "Natural route and native pixel proof remain pending."
+  ]
+}

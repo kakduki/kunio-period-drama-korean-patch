@@ -301,3 +301,13 @@ The English reference exposes 722 dialogue tile runs for comparison with the 250
 
 - Audit: rom_analysis/pre_pointer_dialogue_overlap.md
 - Regression test: scripts/test_pre_pointer_dialogue_overlap.py
+## Expanded Pre-Pointer High-Code Candidate (2026-08-01)
+
+- Candidate ROM: `output/full_korean_expanded_candidate/kunio_period_drama_korean_expanded_candidate.nes`.
+- Candidate MD5: `64b599ca6c502b635d216aebf5ce61b9`.
+- Source candidate MD5: `0a983c3d8494444935f000963f415253`; base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
+- Static build: PASS; 22 bounded fixed-label rows compile with preserved `0xFF` terminators and 26 glyph codes in `0x81-0x9A`.
+- Runtime owner evidence: `22/22` exact Korean owners at frame 280; `lua_done` at frame 900; `11,098` matched-row PPU writes.
+- Progression smoke: `lua_done` at frame 7200, 24 unique screens, and combat checkpoints recorded. Boss proof is UNKNOWN.
+- Release status: `NOT_READY`; row-level native pixel review, shared-page safety, and natural boss progression remain open.
+- Detailed reports: `rom_analysis/full_korean_expanded_candidate.md` and `rom_analysis/full_korean_expanded_runtime.md`.

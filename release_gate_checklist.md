@@ -123,9 +123,9 @@ Realtime AI subtitle overlay is tracked as a parallel usability option, not as R
 
 - [x] English reference owner path recorded for PRG Bank 1 and CHR Bank 7.
 - [x] Candidate uses English structure composition before Korean data overlay.
-- [x] Ten bounded control-free/glyph-complete rows are statically encoded.
-- [x] English exact CPU owner probe passes 10/10.
-- [x] Korean bounded probe completes with 10/10 exact CPU owners.
+- [x] The original ten bounded control-free/glyph-complete rows are statically encoded; the expanded candidate adds 12 missing-glyph rows within the 26-code pool.
+- [x] English exact CPU owner probe passes 10/10 for the original subset; the expanded Korean probe passes 22/22.
+- [x] Korean bounded probe completes with 22/22 exact CPU owners in the expanded candidate.
 - [x] PPU nametable reads are available at the bounded main-menu capture.
 - [x] `EN-PRE-138` exact runtime owner is observed at CPU `$9B92`.
 - [ ] Row-by-row native pixel attribution and shared-page safety are unresolved.
@@ -136,6 +136,19 @@ The high-code candidate remains a development soft-gate artifact and is not a fi
 
 - [x] Compare all 250 pre-pointer inventory rows against 722 English dialogue owner runs.
 - [x] Keep edge-overlap, oversized, and no-owner rows out of the bounded patch subset.
-- [x] Confirm the ten fully contained runtime-mapped rows remain the only promoted high-code subset.
-- [ ] Translate and validate the remaining 133 fully contained but unmapped glossary rows.
+- [x] Confirm the promoted high-code subset is fully contained and bounded by the available 26 glyph codes.
+- [ ] Translate and validate the remaining 139 fully contained but unmapped or unpromoted glossary rows.
 - [ ] Resolve the 25 edge-overlap and 29 oversized rows without damaging control/separator bytes.
+## Expanded Pre-Pointer High-Code Gate (2026-08-01)
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| 22-row bounded static build | PASS | Candidate MD5 `64b599ca6c502b635d216aebf5ce61b9`; 26 glyph codes fit `0x81-0x9A`; terminators and fixed widths are preserved. |
+| Exact Korean runtime ownership | PASS | FCEUX probe matches `22/22` target owners at frame 280 and finishes `lua_done` at frame 900. |
+| PPU write evidence | PASS | Matched rows record `11,098` PPU writes in the bounded probe. |
+| Bounded gameplay progression | PASS_SOFT_GATE | 7,200-frame probe reaches combat checkpoints, 24 unique screens, and `lua_done`. |
+| Native pixel attribution | UNKNOWN | Row-by-row visual review and shared Bank 7 cross-context safety are not release-proven. |
+| Natural boss route | UNKNOWN | The current route does not prove enemy-clear, boss-spawn, or boss-dialogue ownership. |
+| Release promotion | NOT_READY | Remaining renderer families, natural boss route, and release-wide visual evidence remain open. |
+
+The expanded candidate supersedes the earlier ten-row candidate for bounded development work. It remains a soft-gate artifact and is not a final release ROM.

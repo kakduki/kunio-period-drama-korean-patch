@@ -157,12 +157,23 @@ This candidate is the current bounded Items development build. It is not a relea
 | --- | --- | --- | --- | --- |
 | full_korean_pre_pointer_high_candidate | PRG Bank 1; CPU `$8000 + (ROM - $4010)`; high codes `$81-$9A`; CHR Bank 7 `$181/$1A1` | exact owner 10/10; `lua_done` at frame 900 | English and Korean PPU reads PASS at frame 1906; native pixel attribution UNKNOWN | NOT_READY |
 
-This candidate composes the English reference structure first, then reapplies the current Korean composition and promotes only ten control-free, glyph-complete rows. It is a soft-gate probe, not a release ROM.
+This historical candidate composes the English reference structure first, then reapplies the current Korean composition and promotes the original ten control-free, glyph-complete rows. The expanded 22-row candidate is documented below; both are soft-gate probes, not release ROMs.
 ## Pre-Pointer Dialogue Ownership Audit (2026-08-01)
 
-The 250-row pre-pointer inventory was compared with 722 English dialogue owner runs. The audit found 161 fully contained ranges, 25 edge overlaps, 29 rows wider than their detected run, and 35 ranges with no dialogue-run overlap. Only the ten fully contained rows already classified as MAPPED_RUNTIME_UNKNOWN are promoted into the bounded high-code candidate.
+The 250-row pre-pointer inventory was compared with 722 English dialogue owner runs. The audit found 161 fully contained ranges, 25 edge overlaps, 29 rows wider than their detected run, and 35 ranges with no dialogue-run overlap. The original ten fully contained rows classified as MAPPED_RUNTIME_UNKNOWN were promoted into the first bounded high-code candidate; the expanded 22-row candidate is documented below.
 
 - Audit script: scripts/audit_pre_pointer_dialogue_overlap.py
 - Machine-readable report: rom_analysis/pre_pointer_dialogue_overlap.json
 - Human-readable report: rom_analysis/pre_pointer_dialogue_overlap.md
 - Result: no additional broad patch authorization; blocked rows retain their control/missing-glyph status.
+## Expanded Pre-Pointer High-Code Candidate (2026-08-01)
+
+- Candidate ROM: `output/full_korean_expanded_candidate/kunio_period_drama_korean_expanded_candidate.nes`.
+- Candidate MD5: `64b599ca6c502b635d216aebf5ce61b9`.
+- Input chain: the 48-page full-pointer candidate (`0a983c3d8494444935f000963f415253`) is composed with the English reference structure before the fixed-label overlay.
+- Scope: 22 bounded Bank 1 records, PRG offsets `0x05AAD-0x05CE0`, high input codes `0x81-0x9A`, and 26 appended Bank 7 8x16 glyphs.
+- Expansion rule: the original 10 runtime-mapped rows plus 12 fully-contained missing-glyph rows fit the fixed 26-code pool. Control-bearing rows and the remaining missing-glyph rows stay untouched.
+- Runtime: exact CPU owner matches `22/22` at frame 280; `lua_done` at frame 900; matched-row PPU write count `11,098`.
+- Progression: 7,200-frame probe reaches `lua_done`, 24 unique screen fingerprints, and combat checkpoints; a boss-spawn or boss-dialogue route is not proven.
+- Result: `SOFT_GATE_PASS_RUNTIME_NOT_READY`; this is the current bounded development candidate, not a final release ROM.
+- Reports: `rom_analysis/full_korean_expanded_candidate.md` and `rom_analysis/full_korean_expanded_runtime.md`.

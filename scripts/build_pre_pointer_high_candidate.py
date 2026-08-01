@@ -61,21 +61,22 @@ def md5(data: bytes) -> str:
     return hashlib.md5(data).hexdigest()
 
 
-def load_inventory(path: Path) -> list[dict[str, object]]:
+def load_inventory(path: Path, *, target_offsets: set[int] = TARGET_OFFSETS, allow_missing_glyphs: bool = False) -> list[dict[str, object]]:
     payload = json.loads(path.read_text(encoding="utf-8-sig"))
     rows = payload["rows"]
     selected = [
         row
         for row in rows
-        if int(str(row["rom_offset"]), 16) in TARGET_OFFSETS
+        if int(str(row["rom_offset"]), 16) in target_offsets
     ]
-    if {int(str(row["rom_offset"]), 16) for row in selected} != TARGET_OFFSETS:
+    if {int(str(row["rom_offset"]), 16) for row in selected} != target_offsets:
         raise ValueError("inventory does not contain the complete bounded target set")
     for row in selected:
         if row["readiness"] != "MAPPED_RUNTIME_UNKNOWN":
-            raise ValueError(f"target is no longer safe: {row['record_id']} {row['readiness']}")
-        if row["control_bytes"] or row["missing_glyphs"]:
-            raise ValueError(f"target has a control or missing glyph: {row['record_id']}")
+            if not (allow_missing_glyphs and row["readiness"] == "BLOCKED_MISSING_GLYPH"):
+                raise ValueError(f"target is no longer safe: {row['record_id']} {row['readiness']}")
+        if row["control_bytes"] or (row["missing_glyphs"] and not allow_missing_glyphs):
+            raise ValueError(f"target has a control or disallowed missing glyph: {row['record_id']}")
         if not row["korean_text"] or any(char.isspace() for char in str(row["korean_text"])):
             raise ValueError(f"target wording is not a compact glyph run: {row['record_id']}")
     return sorted(selected, key=lambda row: int(str(row["rom_offset"]), 16))
@@ -143,12 +144,15 @@ def build(
     output_dir: Path,
     report_json: Path,
     report_markdown: Path,
+    out_stem: str = OUT_STEM,
+    target_offsets: set[int] = TARGET_OFFSETS,
+    allow_missing_glyphs: bool = False,
 ) -> dict[str, object]:
     base = base_rom.read_bytes()
     input_candidate = input_rom.read_bytes()
     if len(input_candidate) < len(base):
         raise ValueError("input candidate is shorter than the base ROM")
-    rows = load_inventory(inventory_path)
+    rows = load_inventory(inventory_path, target_offsets=target_offsets, allow_missing_glyphs=allow_missing_glyphs)
     reference_records, reference_truncate = parse_ips(reference_ips.read_bytes())
     reference = apply_records(base, reference_records, reference_truncate)
     # Keep the English patch's executable/CHR structure, then reapply every
@@ -192,8 +196,8 @@ def build(
 
     candidate = bytes(patched)
     output_dir.mkdir(parents=True, exist_ok=True)
-    rom_path = output_dir / f"{OUT_STEM}.nes"
-    ips_path = output_dir / f"{OUT_STEM}.ips"
+    rom_path = output_dir / f"{out_stem}.nes"
+    ips_path = output_dir / f"{out_stem}.ips"
     rom_path.write_bytes(candidate)
     records = make_records(base, candidate)
     write_ips(ips_path, records)
@@ -221,7 +225,7 @@ def build(
             "terminator": "0xFF",
         },
         "known_limits": [
-            "Only ten control-free, glyph-complete inventory rows are changed.",
+            f"Only {len(source_rows)} bounded control-free inventory rows are changed.",
             "The shared Bank 7 high-code page is not release-proven for every other screen.",
             "Natural route and native pixel proof remain pending.",
         ],
@@ -251,7 +255,7 @@ def build(
         "",
         "- This is a probe candidate, not a release ROM.",
         "- The shared high-code Bank 7 page must be checked against every other promoted screen.",
-        "- The ten selected rows are intentionally separate from control-bearing and missing-glyph rows.",
+        f"- The {len(source_rows)} selected rows are intentionally bounded; control-bearing and excluded missing-glyph rows remain untouched.",
     ]
     report_markdown.parent.mkdir(parents=True, exist_ok=True)
     report_markdown.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -269,8 +273,12 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
+    parser.add_argument("--out-stem", default=OUT_STEM)
+    parser.add_argument("--target-offset", action="append", default=None)
+    parser.add_argument("--allow-missing-glyphs", action="store_true")
     args = parser.parse_args()
     font_path = args.font.resolve() if args.font else default_tall_font(None)
+    target_offsets = {int(value, 16) for value in args.target_offset} if args.target_offset else TARGET_OFFSETS
     payload = build(
         args.input_rom.resolve(),
         args.base_rom.resolve(),
@@ -281,6 +289,9 @@ def main() -> int:
         args.out_dir.resolve(),
         args.report_json.resolve(),
         args.report_markdown.resolve(),
+        args.out_stem,
+        target_offsets=target_offsets,
+        allow_missing_glyphs=args.allow_missing_glyphs,
     )
     print(json.dumps(payload, ensure_ascii=False))
     return 0

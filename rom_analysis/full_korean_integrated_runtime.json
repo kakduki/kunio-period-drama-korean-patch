@@ -1,0 +1,75 @@
+{
+  "candidate_md5": "81061e9283ed7f75d10454780e442e82",
+  "candidate_size": 368656,
+  "candidate_chr_banks": 29,
+  "pre_pointer": {
+    "matched_rows": 10,
+    "target_ids": [
+      "EN-PRE-112",
+      "EN-PRE-118",
+      "EN-PRE-119",
+      "EN-PRE-125",
+      "EN-PRE-129",
+      "EN-PRE-130",
+      "EN-PRE-134",
+      "EN-PRE-135",
+      "EN-PRE-138",
+      "EN-PRE-185"
+    ],
+    "lua_done": true,
+    "terminal_frame": 900,
+    "ppu_write_count": null
+  },
+  "stage_progression": {
+    "lua_done": true,
+    "terminal_frame": 7200,
+    "unique_screens": 24,
+    "combat_frames": [
+      915,
+      1049,
+      1139,
+      1229,
+      1319,
+      1444,
+      1651,
+      1866,
+      1956,
+      2046,
+      2201,
+      2291,
+      2381,
+      2471,
+      2621,
+      2711,
+      3533,
+      3623
+    ],
+    "event_frames": [
+      1956,
+      2046,
+      2201,
+      2291,
+      2381,
+      2471,
+      2621,
+      2711,
+      3533,
+      3623,
+      7200
+    ],
+    "boss_proof": false
+  },
+  "status": "PASS_INTEGRATED_BOOT_RUNTIME_NOT_READY",
+  "release_status": "NOT_READY",
+  "known_limits": [
+    "The bounded route reaches combat and event screens but does not prove every boss route.",
+    "Native pixel review for every translated record and remaining non-pointer families is incomplete.",
+    "The ROM contains the ten runtime-mapped fixed labels; 190 inventory rows remain untranslated or blocked."
+  ],
+  "evidence": {
+    "pre_pointer_matches": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\full_pointer_high_pre_pointer_probe\\matches.tsv",
+    "pre_pointer_summary": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\full_pointer_high_pre_pointer_probe\\summary.tsv",
+    "stage_summary": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\stage_progression_probe_full_pointer_high_candidate\\summary.tsv",
+    "stage_captures": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\stage_progression_probe_full_pointer_high_candidate\\captures.tsv"
+  }
+}

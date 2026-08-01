@@ -1,0 +1,202 @@
+{
+  "status": "BUILT_PRE_POINTER_HIGH_STATIC_PASS_RUNTIME_UNKNOWN",
+  "release_status": "NOT_READY",
+  "input_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_pointer_korean_candidate\\kunio_period_drama_korean_full_pointer_candidate.nes",
+  "input_md5": "0a983c3d8494444935f000963f415253",
+  "composed_input_md5": "b5552d2a49123fae367a8679afb98ab1",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_integrated_candidate\\kunio_period_drama_korean_integrated_candidate.nes",
+  "candidate_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_integrated_candidate\\kunio_period_drama_korean_integrated_candidate.ips",
+  "candidate_md5": "81061e9283ed7f75d10454780e442e82",
+  "target_count": 10,
+  "targets": [
+    {
+      "record_id": "EN-PRE-112",
+      "english": "BMPKNART<FF>",
+      "korean": "기술",
+      "rom_offset": "0x05AEB",
+      "old_bytes": "82 8D 90 8B 8E 81 92 94 FF",
+      "new_bytes": "81 82 FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-118",
+      "english": "WARPSHOT<FF>",
+      "korean": "파",
+      "rom_offset": "0x05B1B",
+      "old_bytes": "97 81 92 90 93 88 8F 94 FF",
+      "new_bytes": "83 FF FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-119",
+      "english": "DEFLECT<FF>",
+      "korean": "사",
+      "rom_offset": "0x05B24",
+      "old_bytes": "84 85 86 8C 85 83 94 FF",
+      "new_bytes": "84 FF FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-125",
+      "english": "UDON<FF>",
+      "korean": "동",
+      "rom_offset": "0x05B4E",
+      "old_bytes": "95 84 8F 8E FF",
+      "new_bytes": "85 FF FF FF FF",
+      "length": 5
+    },
+    {
+      "record_id": "EN-PRE-129",
+      "english": "TENPURA<FF>",
+      "korean": "전",
+      "rom_offset": "0x05B61",
+      "old_bytes": "94 85 8E 90 95 92 81 FF",
+      "new_bytes": "86 FF FF FF FF FF FF FF",
+      "length": 8
+    },
+    {
+      "record_id": "EN-PRE-130",
+      "english": "DANGO<FF>",
+      "korean": "고",
+      "rom_offset": "0x05B69",
+      "old_bytes": "84 81 8E 87 8F FF",
+      "new_bytes": "87 FF FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-134",
+      "english": "SALVE<FF>",
+      "korean": "고",
+      "rom_offset": "0x05B85",
+      "old_bytes": "93 81 8C 96 85 FF",
+      "new_bytes": "87 FF FF FF FF FF",
+      "length": 6
+    },
+    {
+      "record_id": "EN-PRE-135",
+      "english": "POULTICE<FF>",
+      "korean": "약",
+      "rom_offset": "0x05B8B",
+      "old_bytes": "90 8F 95 8C 94 89 83 85 FF",
+      "new_bytes": "88 FF FF FF FF FF FF FF FF",
+      "length": 9
+    },
+    {
+      "record_id": "EN-PRE-138",
+      "english": "ELIXIR<FF>",
+      "korean": "약",
+      "rom_offset": "0x05BA2",
+      "old_bytes": "85 8C 89 98 89 92 FF",
+      "new_bytes": "88 FF FF FF FF FF FF",
+      "length": 7
+    },
+    {
+      "record_id": "EN-PRE-185",
+      "english": "KICK<FF>",
+      "korean": "타",
+      "rom_offset": "0x05CE0",
+      "old_bytes": "8B 89 83 8B FF",
+      "new_bytes": "89 FF FF FF FF",
+      "length": 5
+    }
+  ],
+  "glyph_codes": {
+    "기": "0x81",
+    "술": "0x82",
+    "파": "0x83",
+    "사": "0x84",
+    "동": "0x85",
+    "전": "0x86",
+    "고": "0x87",
+    "약": "0x88",
+    "타": "0x89"
+  },
+  "font_rows": [
+    {
+      "glyph": "기",
+      "code": "0x81",
+      "top_tile": "0x181",
+      "bottom_tile": "0x1A1",
+      "top_rom_offset": "0x2F820",
+      "bottom_rom_offset": "0x2FA20"
+    },
+    {
+      "glyph": "술",
+      "code": "0x82",
+      "top_tile": "0x182",
+      "bottom_tile": "0x1A2",
+      "top_rom_offset": "0x2F830",
+      "bottom_rom_offset": "0x2FA30"
+    },
+    {
+      "glyph": "파",
+      "code": "0x83",
+      "top_tile": "0x183",
+      "bottom_tile": "0x1A3",
+      "top_rom_offset": "0x2F840",
+      "bottom_rom_offset": "0x2FA40"
+    },
+    {
+      "glyph": "사",
+      "code": "0x84",
+      "top_tile": "0x184",
+      "bottom_tile": "0x1A4",
+      "top_rom_offset": "0x2F850",
+      "bottom_rom_offset": "0x2FA50"
+    },
+    {
+      "glyph": "동",
+      "code": "0x85",
+      "top_tile": "0x185",
+      "bottom_tile": "0x1A5",
+      "top_rom_offset": "0x2F860",
+      "bottom_rom_offset": "0x2FA60"
+    },
+    {
+      "glyph": "전",
+      "code": "0x86",
+      "top_tile": "0x186",
+      "bottom_tile": "0x1A6",
+      "top_rom_offset": "0x2F870",
+      "bottom_rom_offset": "0x2FA70"
+    },
+    {
+      "glyph": "고",
+      "code": "0x87",
+      "top_tile": "0x187",
+      "bottom_tile": "0x1A7",
+      "top_rom_offset": "0x2F880",
+      "bottom_rom_offset": "0x2FA80"
+    },
+    {
+      "glyph": "약",
+      "code": "0x88",
+      "top_tile": "0x188",
+      "bottom_tile": "0x1A8",
+      "top_rom_offset": "0x2F890",
+      "bottom_rom_offset": "0x2FA90"
+    },
+    {
+      "glyph": "타",
+      "code": "0x89",
+      "top_tile": "0x189",
+      "bottom_tile": "0x1A9",
+      "top_rom_offset": "0x2F8A0",
+      "bottom_rom_offset": "0x2FAA0"
+    }
+  ],
+  "ips_record_count": 898,
+  "renderer_contract": {
+    "input_codes": "0x81-0x9A",
+    "bank": 7,
+    "top_tile_base": "0x181",
+    "bottom_tile_delta": "0x20",
+    "terminator": "0xFF"
+  },
+  "known_limits": [
+    "Only ten control-free, glyph-complete inventory rows are changed.",
+    "The shared Bank 7 high-code page is not release-proven for every other screen.",
+    "Natural route and native pixel proof remain pending."
+  ]
+}
