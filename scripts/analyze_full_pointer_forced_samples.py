@@ -16,9 +16,9 @@ from rom_utils import REPO_ROOT
 SAMPLES = (
     {"pointer_index": 0, "page_index": 10, "cpu": "9FB4", "skip_f0": False},
     {"pointer_index": 25, "page_index": 14, "cpu": "A140", "skip_f0": True},
-    {"pointer_index": 50, "page_index": 40, "cpu": "A30A", "skip_f0": True},
-    {"pointer_index": 110, "page_index": 31, "cpu": "A77C", "skip_f0": True},
-    {"pointer_index": 181, "page_index": 42, "cpu": "AADA", "skip_f0": False},
+    {"pointer_index": 50, "page_index": 39, "cpu": "A30A", "skip_f0": True},
+    {"pointer_index": 110, "page_index": 30, "cpu": "A777", "skip_f0": True},
+    {"pointer_index": 181, "page_index": 41, "cpu": "AACF", "skip_f0": False},
 )
 DEFAULT_INPUT = REPO_ROOT / "rom_analysis" / "full_pointer_forced_samples"
 DEFAULT_JSON = REPO_ROOT / "rom_analysis" / "full_pointer_forced_samples.json"

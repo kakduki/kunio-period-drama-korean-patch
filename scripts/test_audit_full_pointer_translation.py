@@ -18,15 +18,15 @@ def main() -> int:
         english_pointer_rows(load_tsv(DEFAULT_ENGLISH)),
     )
     coverage = payload["coverage"]
-    assert payload["status"] == "STRUCTURAL_PASS_TRANSLATION_REVIEW_REQUIRED"
+    assert payload["status"] == "PASS"
     assert payload["structural_status"] == "PASS"
-    assert payload["translation_status"] == "REVIEW_REQUIRED"
+    assert payload["translation_status"] == "PASS"
     assert coverage["row_count"] == 248
     assert coverage["active_count"] == 244
     assert coverage["excluded_count"] == 4
-    assert coverage["reviewed_count"] == 240
+    assert coverage["reviewed_count"] == 244
     assert coverage["failure_counts"] == {}
-    assert coverage["warning_counts"]["semantic_draft_not_reviewed"] == 4
+    assert coverage["warning_counts"].get("semantic_draft_not_reviewed", 0) == 0
     assert coverage["warning_counts"]["dynamic_control_context"] == 47
     assert len(payload["rows"]) == 248
     print("Full pointer translation audit tests passed.")

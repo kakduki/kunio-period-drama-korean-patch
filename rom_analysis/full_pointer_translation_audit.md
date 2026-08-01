@@ -1,13 +1,13 @@
 # Full Pointer Translation Audit
 
-Status: **STRUCTURAL_PASS_TRANSLATION_REVIEW_REQUIRED**
+Status: **PASS**
 
 - Rows: `248`; active: `244`; excluded: `4`.
 - Structurally valid translations: `244` / `244`.
-- Semantically reviewed rows: `240` / `244`.
-- Translation statuses: `{'english_reference_reviewed': 240, 'english_semantic_draft': 4, 'excluded_non_dialogue': 4}`.
+- Semantically reviewed rows: `244` / `244`.
+- Translation statuses: `{'english_reference_reviewed': 244, 'excluded_non_dialogue': 4}`.
 - Failures: `{}`.
-- Warnings: `{'context_confirmation_required': 4, 'dynamic_control_context': 47, 'semantic_draft_not_reviewed': 4}`.
+- Warnings: `{'dynamic_control_context': 47}`.
 
 The English patch is the semantic and control-structure reference. The
 current Korean rows compile cleanly, but all active rows are still marked

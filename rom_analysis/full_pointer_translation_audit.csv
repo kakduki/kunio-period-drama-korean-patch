@@ -81,7 +81,7 @@
 79,english_reference_reviewed,BEEG BOSS SAYS THANKS,큰두목이 고맙다고 전하더군,큰두목이 고맙다고 전하더군,english_reference,영어 참조 의미 대조 완료,,
 80,english_reference_reviewed,WE MUST FIND OUT WHO ASAJI REALLY WORKS FOR,아사지가 정말 누구를 섬기는지 알아내야 한다,아사지가 정말 누구를 섬기는지 알아내야 한다,english_reference,영어 참조 의미 대조 완료,,
 81,english_reference_reviewed,I M THE BEEG BOSS I M BAD AND I M STRONG,내가 큰두목이다. 난 악당이고 강하지,내가 큰두목이다 난 악당이고 강하지,english_reference,영어 참조 의미 대조 완료,,
-82,english_semantic_draft,FORGIVE ME BRO I WAS,"용서해 줘, 형제여. 내가 잘못했다",용서해 줘 형제여 내가 잘못했다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+82,english_reference_reviewed,FORGIVE ME BRO I WAS,용서해 줘 형제여 나는,용서해 줘 형제여 나는,english_reference,영문 분할 대사와 명시적 구간 검토 완료,,
 83,english_reference_reviewed,BROTHER,형제여,형제여,english_reference,영어 참조 의미 대조 완료,,
 84,english_reference_reviewed,HEH HOW DO YOU LIKE MY INGENIOUS MASTER PLAN,"허허, 내 기막힌 계획은 어떤가?",허허 내 기막힌 계획은 어떤가,english_reference,영어 참조 의미 대조 완료,,
 85,english_reference_reviewed,ALL WE NEED TO DO IS ELIMINATE,우리가 할 일은 을 없애는 것뿐이다,우리가 할 일은 을 없애는 것뿐이다,english_reference,FB 대상 토큰 앞뒤 명시적 구간 검토 완료,,dynamic_control_context
@@ -111,7 +111,7 @@
 109,english_reference_reviewed,ISN T THE MUSIC IN THIS VIDEO GAME GREAT,이 비디오 게임의 음악은 정말 멋지지 않나?,이 비디오 게임의 음악은 정말 멋지지 않나,english_reference,영어 참조 의미 대조 완료,,
 110,english_reference_reviewed,THEY RE BACK TO HAVE THEIR ASSES KICKED AGAIN,또 얻어맞으러 돌아왔군,또 얻어맞으러 돌아왔군,english_reference,영어 참조 의미 대조 완료,,
 111,english_reference_reviewed,HUH,어?,어,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
-112,english_semantic_draft,TAKE THAT WHA,받아라! 뭐라고?,받아라 뭐라고,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+112,english_reference_reviewed,TAKE THAT WHA,받아라! 뭐라고?,받아라 뭐라고,english_reference,영문 분할 대사와 명시적 구간 검토 완료,,
 113,english_reference_reviewed,NOW I M REALLY PISSED,이제 정말 화났다,이제 정말 화났다,english_reference,영어 참조 의미 대조 완료,,
 114,english_reference_reviewed,AIYEE,꺄악!,꺄악,english_reference,영어 참조 의미 대조 완료,,
 115,english_reference_reviewed,DUM DEE DUM,둠디둠,둠디둠,english_reference,영어 참조 의미 대조 완료,,
@@ -163,7 +163,7 @@
 161,english_reference_reviewed,BE CAREFUL,조심하세요,조심하세요,english_reference,영어 참조 의미 대조 완료,,
 162,excluded_non_dialogue,,,,english_reference,단독 종료 바이트라 번역하지 않음,,
 163,english_reference_reviewed,CHOOSE ALLY,동료를 선택하세요,동료를 선택하세요,english_reference,영어 참조 의미 대조 완료,,
-164,english_semantic_draft,SANKI OKOTO HAS,"산키, 오코토는 괜찮습니다",산키 오코토는 괜찮습니다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+164,english_reference_reviewed,SANKI OKOTO HAS,산키 오코토가,산키 오코토가,english_reference,영문 분할 대사와 명시적 구간 검토 완료,,dynamic_control_context
 165,english_reference_reviewed,SANKI TWO GUYS STRUCK LIKE LIGHTNING,"산키, 두 사람이 번개처럼 나타났습니다",산키 두 사람이 번개처럼 나타났습니다,english_reference,영어 참조 의미 대조 완료,,
 166,english_reference_reviewed,SANKI I WAS HELPLESS SORRY,"산키, 저는 아무것도 못 했습니다. 미안합니다",산키 저는 아무것도 못 했습니다 미안합니다,english_reference,영어 참조 의미 대조 완료,,
 167,english_reference_reviewed,IDIOTS WE LL FIND THEM,바보들! 우리가 그들을 찾을 것이다,바보들 우리가 그들을 찾을 것이다,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
@@ -184,7 +184,7 @@
 182,english_reference_reviewed,KUNIO HURRY SLUG MR BUNZO S IN TROUBLE,"쿠니오, 서둘러! 분조가 곤경에 빠졌어!",쿠니오 서둘러 분조가 곤경에 빠졌어,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
 183,english_reference_reviewed,OKOTO KUNIO,"오코토, 쿠니오!",오코토 쿠니오,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
 184,english_reference_reviewed,KUNIO I TRIED TO HURRY BACK,"쿠니오, 서둘러 돌아오려고 했어",쿠니오 서둘러 돌아오려고 했어,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
-185,english_semantic_draft,OKOTO THIS MAN IS,"오코토, 이 사람은",오코토 이 사람은,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+185,english_reference_reviewed,OKOTO THIS MAN IS,오코토 이 사람은,오코토 이 사람은,english_reference,영문 분할 대사와 명시적 구간 검토 완료,,
 186,english_reference_reviewed,ASAJI HEH I M OKOTO S FIANCE,"아사지, 나는 오코토의 약혼자야",아사지 나는 오코토의 약혼자야,english_reference,영어 참조 의미 대조 완료,,
 187,english_reference_reviewed,KUNIO WE LL SEE ABOUT THAT,그건 두고 보자,그건 두고 보자,english_reference,영어 참조 의미 대조 완료,,
 188,english_reference_reviewed,ASAJI SHUT UP LOSER THE BOSS IS WAITING,"아사지, 조용히 해. 두목님이 기다리신다",아사지 조용히 해 두목님이 기다리신다,english_reference,영어 참조 의미 대조 완료,,

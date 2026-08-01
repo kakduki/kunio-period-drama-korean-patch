@@ -17,7 +17,7 @@ separate renderer family.
 | opening_dialogue_bank8_static_r1_page_proof | normal mapper setup `0x1EE57`; R1 `3E -> 46` | 7-glyph target ownership checked | frame 883 `18/18`; `lua_done`; mapping `28/28` | Dialogue-only black frame | FAIL_STATIC_R1_VISUAL_BACKGROUND |
 | opening_dialogue_bank8_static_r1_capacity_tier2 | normal mapper setup `0x1EE57`; R1 `3E -> 46` | 34 glyphs emit from Bank 8 but declared targets remain Bank 7 | frame 883 `37/37`; `lua_done`; mapping FAIL | Dialogue-only capture; background lost | FAIL_PAGE_SLOT_CONFLICT |
 | opening_dialogue_bank8_static_r1_safe_capacity_tier2 | normal mapper setup `0x1EE57`; R1 `3E -> 46`; actual R1 `0x800`-byte window clone | 34 glyphs declared at Bank 8 runtime slots; source Bank 7 preserved | frame 883 `37/37`; `lua_done`; mapping `67/67` | Native opening background and Korean-looking dialogue visible | SOFT_GATE_PASS_SAFE_STATIC_R1_CAPACITY |
-| full_pointer_korean_candidate | pointers `0-247`; packed records `0x05FC4-0x06EBB` (end-exclusive); 48 appended CHR pages | all active records preserve English non-letter control skeletons; 10 token-sensitive records use explicit Korean segments; width audit max `20/24`; 240 rows reviewed; 4 excluded rows retain Japanese bytes | forced pointers 0/25/50/110/181 PASS across pages 10/14/40/31/42; state, R1, source, terminator PASS | Korean text pixels and field background PASS on all 5 samples | WHOLE_SCRIPT_RUNTIME_PASS_5_PAGES |
+| full_pointer_korean_candidate | pointers `0-247`; packed records `0x05FC4-0x06EB0` (end-exclusive); 48 appended CHR pages | all active records preserve English non-letter control skeletons; 14 token-sensitive records use explicit Korean segments; width audit max `20/24`; 244 rows reviewed; 4 excluded rows retain Japanese bytes | forced pointers 0/25/50/110/181 PASS across pages 10/14/39/30/41; state, R1, source, terminator PASS | Korean text pixels and field background PASS on all 5 samples | WHOLE_SCRIPT_RUNTIME_PASS_5_PAGES |
 
 The current menu candidate is MD5 `d425814e4f1249e2872c9eb09f7fb93d` and uses cloned R1 page `0x46`.
 The Items action source `0x13727` reaches PPU `0x2363` through the shared R1 page.
@@ -30,8 +30,8 @@ guard and a non-opening target route are proven.
 
 The full pointer candidate supersedes those small batches as the current
 whole-script development build. Its MD5 is
-`7187caa40a2761d0b373566e9cfb142d`. It compiles 244 Korean dialogue rows,
+`7844f2d6f6a67e86e23b2f954d5ebf3c`. It compiles 244 Korean dialogue rows,
 including 240 English-reference-reviewed rows, retains four excluded
 Japanese records, and proves the optimized-page runtime path on five
 representative pages. The forced harness is page/font evidence, not natural
-event-control proof; four incomplete-source draft rows and broad visual coverage remain open.
+event-control proof; no translation drafts remain; broad visual coverage remains open.

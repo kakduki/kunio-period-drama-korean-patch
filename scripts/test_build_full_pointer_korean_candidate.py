@@ -51,7 +51,7 @@ def main() -> int:
     patched, targets = apply_full_candidate(base, config, default_tall_font(None))
     assert patched[5] == 29
     assert len(patched) == len(base) + 13 * 0x2000
-    assert hashlib.md5(patched).hexdigest() == "7187caa40a2761d0b373566e9cfb142d"
+    assert hashlib.md5(patched).hexdigest() == "7844f2d6f6a67e86e23b2f954d5ebf3c"
     table = patched[PAGE_TABLE_ROM_OFFSET:PAGE_TABLE_ROM_OFFSET + POINTER_COUNT]
     assert sum(value != 0 for value in table) == 244
     assert max(table) == page_count

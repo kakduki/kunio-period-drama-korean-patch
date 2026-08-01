@@ -111,26 +111,26 @@ supersedes that capacity conclusion while retaining it as historical evidence.
 ## Full Pointer Korean Development Candidate
 
 - Status: **WHOLE_SCRIPT_RUNTIME_PASS_5_PAGES**.
-- Candidate MD5: `7187caa40a2761d0b373566e9cfb142d`.
+- Candidate MD5: `7844f2d6f6a67e86e23b2f954d5ebf3c`.
 - All 248 pointer rows are represented; 244 rows compile Korean text and four
   excluded non-dialogue rows retain Japanese bytes.
-- Packed records occupy ROM `0x05FC4-0x06EBB` end-exclusive (3,831 bytes),
-  leaving 325 bytes
+- Packed records occupy ROM `0x05FC4-0x06EB0` end-exclusive (3,820 bytes),
+  leaving 336 bytes
   before the loader at `0x07000`.
 - Every active record preserves the English reference's non-letter control
   skeleton while replacing its letter/space runs.
 - The optimized 48-page plan is compiled into 13 appended CHR banks.
-- PTR-181 relocates to `$AADA` and passes the bounded runtime route with
+- PTR-181 relocates to `$AACF` and passes the bounded runtime route with
   `$07FF=2B`, `R1=D4`, visible Korean text, and preserved field background.
 - Forced pointers 0, 25, 50, 110, and 181 cover five optimized pages; all pass
   page state, R1 mapping, source progression, terminator, Korean text-pixel,
   and field-background checks.
 - Pointers 25, 50, and 110 bypass their initial event-dependent `F0` only in
   the visual harness, so this evidence does not promote natural event control.
-- Ten token-sensitive records use explicit Korean segments around preserved
+- Fourteen token-sensitive records use explicit Korean segments around preserved
   English-patch name, item, and status variables instead of proportional splitting.
 - Translation QA found no structural failures. Two hundred forty rows have
-  direct English-reference review; four incomplete-source drafts remain. Forty-seven
+  direct English-reference review; no translation drafts remain. Forty-seven
   records with dynamic name/item controls are separately flagged for context review.
 - IPS apply round trip: PASS.
 - Broad runtime and translation review remain required for release.

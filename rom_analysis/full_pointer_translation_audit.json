@@ -1,22 +1,19 @@
 {
-  "status": "STRUCTURAL_PASS_TRANSLATION_REVIEW_REQUIRED",
+  "status": "PASS",
   "structural_status": "PASS",
-  "translation_status": "REVIEW_REQUIRED",
+  "translation_status": "PASS",
   "coverage": {
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 240,
+    "reviewed_count": 244,
     "status_counts": {
-      "english_reference_reviewed": 240,
-      "english_semantic_draft": 4,
+      "english_reference_reviewed": 244,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 4,
-      "dynamic_control_context": 47,
-      "semantic_draft_not_reviewed": 4
+      "dynamic_control_context": 47
     },
     "duplicate_display_groups": 6
   },
@@ -999,17 +996,14 @@
     },
     {
       "pointer_index": 82,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FORGIVE ME BRO I WAS",
-      "korean_draft": "용서해 줘, 형제여. 내가 잘못했다",
-      "compiled_display_text": "용서해 줘 형제여 내가 잘못했다",
+      "korean_draft": "용서해 줘 형제여 나는",
+      "compiled_display_text": "용서해 줘 형제여 나는",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 분할 대사와 명시적 구간 검토 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 83,
@@ -1342,17 +1336,14 @@
     },
     {
       "pointer_index": 112,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TAKE THAT WHA",
       "korean_draft": "받아라! 뭐라고?",
       "compiled_display_text": "받아라 뭐라고",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 분할 대사와 명시적 구간 검토 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 113,
@@ -1927,16 +1918,14 @@
     },
     {
       "pointer_index": 164,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SANKI OKOTO HAS",
-      "korean_draft": "산키, 오코토는 괜찮습니다",
-      "compiled_display_text": "산키 오코토는 괜찮습니다",
+      "korean_draft": "산키 오코토가",
+      "compiled_display_text": "산키 오코토가",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 분할 대사와 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2172,17 +2161,14 @@
     },
     {
       "pointer_index": 185,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO THIS MAN IS",
-      "korean_draft": "오코토, 이 사람은",
+      "korean_draft": "오코토 이 사람은",
       "compiled_display_text": "오코토 이 사람은",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 분할 대사와 명시적 구간 검토 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 186,
