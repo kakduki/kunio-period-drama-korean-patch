@@ -132,3 +132,10 @@ Realtime AI subtitle overlay is tracked as a parallel usability option, not as R
 - [ ] Natural boss progression and release promotion remain blocked.
 
 The high-code candidate remains a development soft-gate artifact and is not a final release ROM.
+## Dialogue Ownership Audit Gate (2026-08-01)
+
+- [x] Compare all 250 pre-pointer inventory rows against 722 English dialogue owner runs.
+- [x] Keep edge-overlap, oversized, and no-owner rows out of the bounded patch subset.
+- [x] Confirm the ten fully contained runtime-mapped rows remain the only promoted high-code subset.
+- [ ] Translate and validate the remaining 133 fully contained but unmapped glossary rows.
+- [ ] Resolve the 25 edge-overlap and 29 oversized rows without damaging control/separator bytes.

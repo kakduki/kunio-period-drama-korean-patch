@@ -295,3 +295,9 @@ The fixed-bank English name/pre-pointer family now has a machine-readable 250-re
 - Main-menu context capture reached frame 1906 for both runs with PPU nametable reads available.
 - Per-row native visual proof and shared Bank 7 page safety remain UNKNOWN; release status remains `NOT_READY`.
 - Report: `rom_analysis/pre_pointer_high_runtime.md`.
+## Pre-Pointer Dialogue Ownership Audit (2026-08-01)
+
+The English reference exposes 722 dialogue tile runs for comparison with the 250-row pre-pointer inventory. Ownership classification is now explicit: 161 rows are fully contained, 25 cross a run edge, 29 contain only a smaller detected run, and 35 have no overlap. The ten runtime-mapped rows remain the only bounded patch subset; a full glossary translation is not inferred from static overlap alone.
+
+- Audit: rom_analysis/pre_pointer_dialogue_overlap.md
+- Regression test: scripts/test_pre_pointer_dialogue_overlap.py

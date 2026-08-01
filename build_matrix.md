@@ -158,3 +158,11 @@ This candidate is the current bounded Items development build. It is not a relea
 | full_korean_pre_pointer_high_candidate | PRG Bank 1; CPU `$8000 + (ROM - $4010)`; high codes `$81-$9A`; CHR Bank 7 `$181/$1A1` | exact owner 10/10; `lua_done` at frame 900 | English and Korean PPU reads PASS at frame 1906; native pixel attribution UNKNOWN | NOT_READY |
 
 This candidate composes the English reference structure first, then reapplies the current Korean composition and promotes only ten control-free, glyph-complete rows. It is a soft-gate probe, not a release ROM.
+## Pre-Pointer Dialogue Ownership Audit (2026-08-01)
+
+The 250-row pre-pointer inventory was compared with 722 English dialogue owner runs. The audit found 161 fully contained ranges, 25 edge overlaps, 29 rows wider than their detected run, and 35 ranges with no dialogue-run overlap. Only the ten fully contained rows already classified as MAPPED_RUNTIME_UNKNOWN are promoted into the bounded high-code candidate.
+
+- Audit script: scripts/audit_pre_pointer_dialogue_overlap.py
+- Machine-readable report: rom_analysis/pre_pointer_dialogue_overlap.json
+- Human-readable report: rom_analysis/pre_pointer_dialogue_overlap.md
+- Result: no additional broad patch authorization; blocked rows retain their control/missing-glyph status.
