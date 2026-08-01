@@ -8,7 +8,7 @@
 6,english_reference_reviewed,PLEASE LET ME JOIN YOU,나도 끼워 줘,나도 끼워 줘,english_reference,영어 참조 의미 대조 완료,,
 7,english_reference_reviewed,HE AIN T NOTHIN,그 녀석은 아무것도 아니야,그 녀석은 아무것도 아니야,english_reference,영어 참조 의미 대조 완료,,
 8,english_reference_reviewed,LET ME COME TOO,나도 같이 가자,나도 같이 가자,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
-9,english_semantic_draft,OK LET S FIGHT,"좋아, 우리도 싸우자",좋아 우리도 싸우자,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+9,english_reference_reviewed,OK LET S FIGHT,"좋아, 우리도 싸우자",좋아 우리도 싸우자,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 10,english_reference_reviewed,I GIVE UP YOU RE TOO GOOD,항복이다! 네가 너무 강해,항복이다 네가 너무 강해,english_reference,영어 참조 의미 대조 완료,,
 11,english_reference_reviewed,YOU AIN T SEEN NOTHIN YET,아직 진짜 실력을 못 봤다,아직 진짜 실력을 못 봤다,english_reference,영어 참조 의미 대조 완료,,
 12,english_reference_reviewed,OK,좋아,좋아,english_reference,영어 참조 의미 대조 완료,,
@@ -37,13 +37,13 @@
 35,english_reference_reviewed,BEEG BOSS JINRO WILL FIX YOU,진로 큰두목이 널 손봐 주마,진로 큰두목이 널 손봐 주마,english_reference,영어 참조 의미 대조 완료,,
 36,english_reference_reviewed,I WON T RUN,도망치지 않겠다,도망치지 않겠다,english_reference,영어 참조 의미 대조 완료,,
 37,english_reference_reviewed,FIGHT ME NOW,지금 나와 싸워라,지금 나와 싸워라,english_reference,영어 참조 의미 대조 완료,,
-38,english_semantic_draft,YOU WORK FOR I THOUGHT YOU SERVED TORA,넌 누구 밑에서 일하지? 토라를 섬긴다고 들었다,넌 누구 밑에서 일하지 토라를 섬긴다고 들었다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+38,english_reference_reviewed,YOU WORK FOR I THOUGHT YOU SERVED TORA,너는 밑에서 일하나 토라를 섬긴다고 들었다,너는 밑에서 일하나 토라를 섬긴다고 들었다,english_reference,FB 이름 토큰 앞뒤 명시적 구간 검토 완료,,dynamic_control_context
 39,english_reference_reviewed,SORRY PAL HEY GIMME A BREAK,미안하군 친구! 한 번만 봐 줘,미안하군 친구 한 번만 봐 줘,english_reference,영어 참조 의미 대조 완료,,
-40,english_semantic_draft,TAKE WITH YOU,이것을 가져가라,이것을 가져가라,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+40,english_reference_reviewed,TAKE WITH YOU,이 을 가져가라,이 을 가져가라,english_reference,FB 아이템 토큰 앞뒤 명시적 구간 검토 완료,,dynamic_control_context
 41,english_reference_reviewed,PHEW YOU NEED A BATH,"휴, 넌 목욕 좀 해야겠군",휴 넌 목욕 좀 해야겠군,english_reference,영어 참조 의미 대조 완료,,
 42,english_reference_reviewed,I OWE YA ONE,신세를 졌다,신세를 졌다,english_reference,영어 참조 의미 대조 완료,,
-43,english_semantic_draft,HERE TAKE THIS KANPOU,여기 있다! 이 한방약을 가져가라,여기 있다 이 한방약을 가져가라,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-44,english_semantic_draft,USE IT TO CURE,그 약으로 상처를 치료해,그 약으로 상처를 치료해,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+43,english_reference_reviewed,HERE TAKE THIS KANPOU,여기 있다! 이 한방약을 가져가라,여기 있다 이 한방약을 가져가라,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
+44,english_reference_reviewed,USE IT TO CURE,의 상처를 치료해,의 상처를 치료해,english_reference,FB 대상 토큰 뒤 명시적 구간 검토 완료,,dynamic_control_context
 45,english_reference_reviewed,I M TORA S HOLY GUARD PREPARE FOR HEAVEN S WRATH,나는 토라의 성스러운 수호자다! 천벌을 받아라,나는 토라의 성스러운 수호자다 천벌을 받아라,english_reference,영어 참조 의미 대조 완료,,
 46,english_reference_reviewed,HEH WHAT,"허허, 뭐라고?",허허 뭐라고,english_reference,영어 참조 의미 대조 완료,,
 47,english_reference_reviewed,LOUSY FOREIGNERS YOUR ENGLISH SUCKS,"형편없는 외지인들, 너희 영어는 엉망이군",형편없는 외지인들 너희 영어는 엉망이군,english_reference,영어 참조 의미 대조 완료,,
@@ -52,7 +52,7 @@
 50,english_reference_reviewed,LATER BUD,"나중에 보자, 친구",나중에 보자 친구,english_reference,영어 참조 의미 대조 완료,,
 51,english_reference_reviewed,HEEHEE,히히,히히,english_reference,영어 참조 의미 대조 완료,,
 52,english_reference_reviewed,NOTHING PERSONAL SORRY,"개인적인 감정은 없어, 미안하다",개인적인 감정은 없어 미안하다,english_reference,영어 참조 의미 대조 완료,,
-53,english_semantic_draft,YOU WORK FOR WELL I HAVE SOME NEWS,넌 누구 밑에서 일하지? 좋은 소식이 있다,넌 누구 밑에서 일하지 좋은 소식이 있다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+53,english_reference_reviewed,YOU WORK FOR WELL I HAVE SOME NEWS,너는 밑에서 일하나 좋아 알려 줄 게 있다,너는 밑에서 일하나 좋아 알려 줄 게 있다,english_reference,FB 이름 토큰 앞뒤 명시적 구간 검토 완료,,dynamic_control_context
 54,english_reference_reviewed,TORA TOOK THE GIRL,토라가 그 소녀를 데려갔다,토라가 그 소녀를 데려갔다,english_reference,영어 참조 의미 대조 완료,,
 55,english_reference_reviewed,I CAN T GO WITH YOU SO INSTEAD LET ME TEACH YOU,너와 함께 갈 수 없어. 대신 내가 가르쳐 주지,너와 함께 갈 수 없어 대신 내가 가르쳐 주지,english_reference,영어 참조 의미 대조 완료,,
 56,english_reference_reviewed,MY FAMOUS DAGGER ATTACK,나의 유명한 단검 공격이다,나의 유명한 단검 공격이다,english_reference,영어 참조 의미 대조 완료,,
@@ -60,13 +60,13 @@
 58,english_reference_reviewed,CATCH YA LATER,나중에 보자,나중에 보자,english_reference,영어 참조 의미 대조 완료,,
 59,english_reference_reviewed,LOOKING FOR TORA BE CAREFUL,토라를 찾고 있다면 조심해라,토라를 찾고 있다면 조심해라,english_reference,영어 참조 의미 대조 완료,,
 60,english_reference_reviewed,TORA WOULDN T KIDNAP A GIRL WOULD HE,"토라가 소녀를 납치했을 리 없어, 그렇지?",토라가 소녀를 납치했을 리 없어 그렇지,english_reference,영어 참조 의미 대조 완료,,
-61,english_semantic_draft,I M TELLING YA AND GRABBED HER,말해 두지. 토라와 부하가 그녀를 붙잡았다,말해 두지 토라와 부하가 그녀를 붙잡았다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+61,english_reference_reviewed,I M TELLING YA AND GRABBED HER,내 말이 맞아 와 가 그녀를 잡았어,내 말이 맞아 와 가 그녀를 잡았어,english_reference,FB 인물 토큰 두 개의 명시적 구간 검토 완료,,dynamic_control_context
 62,english_reference_reviewed,THEY RE DANGEROUS,그들은 위험하다,그들은 위험하다,english_reference,영어 참조 의미 대조 완료,,
-63,english_semantic_draft,YOU RE I HEARD YOU RE PRETTY TOUGH,너는 아사지와 관련 있군. 꽤 강하다고 들었다,너는 아사지와 관련 있군 꽤 강하다고 들었다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+63,english_reference_reviewed,YOU RE I HEARD YOU RE PRETTY TOUGH,너는 아사지와 관련 있군. 꽤 강하다고 들었다,너는 아사지와 관련 있군 꽤 강하다고 들었다,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 64,english_reference_reviewed,PLEASE LET ME JOIN YOU,나도 끼워 줘,나도 끼워 줘,english_reference,영어 참조 의미 대조 완료,,
 65,english_reference_reviewed,PLEASE,부탁한다,부탁한다,english_reference,영어 참조 의미 대조 완료,,
 66,english_reference_reviewed,I LL BE BACK,다시 돌아오겠다,다시 돌아오겠다,english_reference,영어 참조 의미 대조 완료,,
-67,english_semantic_draft,YEAH WE GRABBED THE GIRL FOR THE GREAT ONE,"그래, 우리가 소녀를 잡았다. 위대한 분을 위해서다",그래 우리가 소녀를 잡았다 위대한 분을 위해서다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+67,english_reference_reviewed,YEAH WE GRABBED THE GIRL FOR THE GREAT ONE,"그래, 우리가 소녀를 잡았다. 위대한 분을 위해서다",그래 우리가 소녀를 잡았다 위대한 분을 위해서다,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 68,english_reference_reviewed,GOTTA BEAT US IF YA WANT HER BACK,그녀를 되찾고 싶다면 우리를 이겨라,그녀를 되찾고 싶다면 우리를 이겨라,english_reference,영어 참조 의미 대조 완료,,
 69,english_reference_reviewed,THAT BOZO RAN AWAY UNBELIEVABLE,그 얼간이가 도망갔다. 믿을 수 없군,그 얼간이가 도망갔다 믿을 수 없군,english_reference,영어 참조 의미 대조 완료,,
 70,english_reference_reviewed,FINISH IT DAMN YOU,"끝장을 내라, 이 자식아",끝장을 내라 이 자식아,english_reference,영어 참조 의미 대조 완료,,
@@ -76,7 +76,7 @@
 74,english_reference_reviewed,YOU AGAIN DAMN,또 너냐? 젠장,또 너냐 젠장,english_reference,영어 참조 의미 대조 완료,,
 75,english_reference_reviewed,YOU RE A BIG JOKE,너는 정말 웃기는군,너는 정말 웃기는군,english_reference,영어 참조 의미 대조 완료,,
 76,english_reference_reviewed,PLEASE LET ME JOIN YOU,나도 끼워 줘,나도 끼워 줘,english_reference,영어 참조 의미 대조 완료,,
-77,english_semantic_draft,MR THE BEEG BOSS IS BEHIND THIS,"대장님, 이 일의 배후에는 큰두목이 있다",대장님 이 일의 배후에는 큰두목이 있다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+77,english_reference_reviewed,MR THE BEEG BOSS IS BEHIND THIS,"대장님, 이 일의 배후에는 큰두목이 있다",대장님 이 일의 배후에는 큰두목이 있다,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 78,english_reference_reviewed,BE CAREFUL TORA HIRED SOME GOON CALLED ASAJI,조심해라. 토라가 아사지라는 깡패를 고용했다,조심해라 토라가 아사지라는 깡패를 고용했다,english_reference,영어 참조 의미 대조 완료,,
 79,english_reference_reviewed,BEEG BOSS SAYS THANKS,큰두목이 고맙다고 전하더군,큰두목이 고맙다고 전하더군,english_reference,영어 참조 의미 대조 완료,,
 80,english_reference_reviewed,WE MUST FIND OUT WHO ASAJI REALLY WORKS FOR,아사지가 정말 누구를 섬기는지 알아내야 한다,아사지가 정말 누구를 섬기는지 알아내야 한다,english_reference,영어 참조 의미 대조 완료,,
@@ -84,7 +84,7 @@
 82,english_semantic_draft,FORGIVE ME BRO I WAS,"용서해 줘, 형제여. 내가 잘못했다",용서해 줘 형제여 내가 잘못했다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
 83,english_reference_reviewed,BROTHER,형제여,형제여,english_reference,영어 참조 의미 대조 완료,,
 84,english_reference_reviewed,HEH HOW DO YOU LIKE MY INGENIOUS MASTER PLAN,"허허, 내 기막힌 계획은 어떤가?",허허 내 기막힌 계획은 어떤가,english_reference,영어 참조 의미 대조 완료,,
-85,english_semantic_draft,ALL WE NEED TO DO IS ELIMINATE,해야 할 일은 저자를 없애는 것뿐이다,해야 할 일은 저자를 없애는 것뿐이다,english_reference,영어 원문의 대상 토큰 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+85,english_reference_reviewed,ALL WE NEED TO DO IS ELIMINATE,우리가 할 일은 을 없애는 것뿐이다,우리가 할 일은 을 없애는 것뿐이다,english_reference,FB 대상 토큰 앞뒤 명시적 구간 검토 완료,,dynamic_control_context
 86,english_reference_reviewed,WATCH YOUR BACKS HEEHEE,뒤를 조심해라. 히히,뒤를 조심해라 히히,english_reference,영어 참조 의미 대조 완료,,
 87,english_reference_reviewed,TORA I CAN T BELIEVE YOU IDIOTS GOT THIS FAR,"토라, 이 멍청이들이 여기까지 왔다니 믿을 수 없군",토라 이 멍청이들이 여기까지 왔다니 믿을 수 없군,english_reference,영어 참조 의미 대조 완료,,
 88,english_reference_reviewed,ASAJI YOU TWO ARE BECOMING A NUISANCE,"아사지, 너희 둘은 골칫거리가 되어 가는군",아사지 너희 둘은 골칫거리가 되어 가는군,english_reference,영어 참조 의미 대조 완료,,
@@ -103,8 +103,8 @@
 101,english_reference_reviewed,BEEG BOSS GAVE ME THIS,큰두목이 이것을 주셨다,큰두목이 이것을 주셨다,english_reference,영어 참조 의미 대조 완료,,
 102,english_reference_reviewed,OH NO BEEG BOSS,안 돼! 큰두목님,안 돼 큰두목님,english_reference,영어 참조 의미 대조 완료,,
 103,english_reference_reviewed,WE LL SETTLE THIS LATER,이 일은 나중에 결판내자,이 일은 나중에 결판내자,english_reference,영어 참조 의미 대조 완료,,
-104,english_semantic_draft,ASAJI WE RE GONNA KICK YOUR ASS,"아사지, 너희를 박살내 주마",아사지 너희를 박살내 주마,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-105,english_semantic_draft,BUT FIRST LET ME CLUE YOU IN,하지만 먼저 너희에게 진실을 알려 주지,하지만 먼저 너희에게 진실을 알려 주지,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+104,english_reference_reviewed,ASAJI WE RE GONNA KICK YOUR ASS,"아사지, 너희를 박살내 주마",아사지 너희를 박살내 주마,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
+105,english_reference_reviewed,BUT FIRST LET ME CLUE YOU IN,하지만 먼저 너희에게 진실을 알려 주지,하지만 먼저 너희에게 진실을 알려 주지,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 106,english_reference_reviewed,YOU WERE JUST A PAWN,너희는 그저 꼭두각시였어,너희는 그저 꼭두각시였어,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 107,english_reference_reviewed,ASAJI SO PRAY WHILE YOU CAN,"아사지, 죽기 전에 실컷 기도해라",아사지 죽기 전에 실컷 기도해라,english_reference,영어 참조 의미 대조 완료,,
 108,english_reference_reviewed,HEH STUPID BASTARDS,"허허, 이 멍청한 자식들",허허 이 멍청한 자식들,english_reference,영어 참조 의미 대조 완료,,
@@ -140,10 +140,10 @@
 138,english_reference_reviewed,YOU DON T HAVE ENOUGH MONEY,돈이 부족합니다,돈이 부족합니다,english_reference,영어 참조 의미 대조 완료,,
 139,english_reference_reviewed,ARE YOU SURE,정말 확실한가요?,정말 확실한가요,english_reference,영어 참조 의미 대조 완료,,
 140,english_reference_reviewed,THANKS,고맙습니다,고맙습니다,english_reference,영어 참조 의미 대조 완료,,
-141,english_semantic_draft,ATE,먹었습니다,먹었습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-142,english_semantic_draft,DRANK,마셨습니다,마셨습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-143,english_semantic_draft,GOT,얻었습니다,얻었습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-144,english_semantic_draft,EQUIPPED,장착했습니다,장착했습니다,english_reference,상점/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+141,english_reference_reviewed,ATE,먹었습니다,먹었습니다,english_reference,동적 아이템 토큰 UI 문장 검토 완료,,dynamic_control_context
+142,english_reference_reviewed,DRANK,마셨습니다,마셨습니다,english_reference,동적 아이템 토큰 UI 문장 검토 완료,,dynamic_control_context
+143,english_reference_reviewed,GOT,얻었습니다,얻었습니다,english_reference,동적 아이템 토큰 UI 문장 검토 완료,,dynamic_control_context
+144,english_reference_reviewed,EQUIPPED,장착했습니다,장착했습니다,english_reference,동적 아이템 토큰 UI 문장 검토 완료,,dynamic_control_context
 145,english_reference_reviewed,ANYTHING ELSE,다른 것은 더 없나요?,다른 것은 더 없나요,english_reference,영어 참조 의미 대조 완료,,
 146,english_reference_reviewed,THANKS COME AGAIN,고맙습니다. 또 오세요,고맙습니다 또 오세요,english_reference,영어 참조 의미 대조 완료,,
 147,english_reference_reviewed,WILL YOU STAY,여기 머무르시겠어요?,여기 머무르시겠어요,english_reference,영어 참조 의미 대조 완료,,
@@ -152,7 +152,7 @@
 150,english_reference_reviewed,WANNA GAMBLE,도박을 해 볼래요?,도박을 해 볼래요,english_reference,영어 참조 의미 대조 완료,,
 151,english_reference_reviewed,READY,준비됐습니다,준비됐습니다,english_reference,영어 참조 의미 대조 완료,,
 152,english_reference_reviewed,GO NOW,지금 가세요,지금 가세요,english_reference,영어 참조 의미 대조 완료,,
-153,english_semantic_draft,WE HAVE AND,우리는 이것과 저것을 가지고 있습니다,우리는 이것과 저것을 가지고 있습니다,english_reference,아이템 변수 토큰 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+153,english_reference_reviewed,WE HAVE AND,우리에게 와,우리에게 와,english_reference,FD/FE 아이템 토큰 사이 명시적 구간 검토 완료,,dynamic_control_context
 154,english_reference_reviewed,YOU WON,이겼습니다,이겼습니다,english_reference,영어 참조 의미 대조 완료,,
 155,english_reference_reviewed,YOU LOST,졌습니다,졌습니다,english_reference,영어 참조 의미 대조 완료,,
 156,english_reference_reviewed,WELL,그렇군요,그렇군요,english_reference,영어 참조 의미 대조 완료,,
@@ -166,20 +166,20 @@
 164,english_semantic_draft,SANKI OKOTO HAS,"산키, 오코토는 괜찮습니다",산키 오코토는 괜찮습니다,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
 165,english_reference_reviewed,SANKI TWO GUYS STRUCK LIKE LIGHTNING,"산키, 두 사람이 번개처럼 나타났습니다",산키 두 사람이 번개처럼 나타났습니다,english_reference,영어 참조 의미 대조 완료,,
 166,english_reference_reviewed,SANKI I WAS HELPLESS SORRY,"산키, 저는 아무것도 못 했습니다. 미안합니다",산키 저는 아무것도 못 했습니다 미안합니다,english_reference,영어 참조 의미 대조 완료,,
-167,english_semantic_draft,IDIOTS WE LL FIND THEM,바보들! 우리가 그들을 찾을 것이다,바보들 우리가 그들을 찾을 것이다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+167,english_reference_reviewed,IDIOTS WE LL FIND THEM,바보들! 우리가 그들을 찾을 것이다,바보들 우리가 그들을 찾을 것이다,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 168,english_reference_reviewed,THE KANPOU WORKED I M CURED,그 한방약이 효과가 있었어! 나았어,그 한방약이 효과가 있었어 나았어,english_reference,영어 참조 의미 대조 완료,,
 169,english_reference_reviewed,AT LAST I CAN JOIN THE WAR AGAINST TORA,드디어 토라와 싸울 수 있어,드디어 토라와 싸울 수 있어,english_reference,영어 참조 의미 대조 완료,,
-170,english_semantic_draft,THIS CHARM WILL PROTECT YOU,이 부적이 너를 지켜 줄 거야,이 부적이 너를 지켜 줄 거야,english_reference,아이템 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+170,english_reference_reviewed,THIS CHARM WILL PROTECT YOU,이 부적이 너를 지켜 줄 거야,이 부적이 너를 지켜 줄 거야,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 171,english_reference_reviewed,I LL WAIT HERE GO SAVE OKOTO,여기서 기다릴게. 오코토를 구해 줘,여기서 기다릴게 오코토를 구해 줘,english_reference,영어 참조 의미 대조 완료,,
 172,english_reference_reviewed,YEAH,그래,그래,english_reference,영어 참조 의미 대조 완료,,
-173,english_semantic_draft,ASAJI WHY NOT GO TO,"아사지, 후지로 가는 게 어때?",아사지 후지로 가는 게 어때,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required"
+173,english_reference_reviewed,ASAJI WHY NOT GO TO,"아사지, 후지로 가는 게 어때?",아사지 후지로 가는 게 어때,english_reference,영문 의미와 제어 구조 검토 완료,,
 174,english_reference_reviewed,I D BETTER GO CHECK WITH BEEG BOSS,큰두목에게 확인하고 가야겠어,큰두목에게 확인하고 가야겠어,english_reference,영어 참조 의미 대조 완료,,
-175,english_semantic_draft,PLEASE LET ME GO,"부탁이야, 나를 보내 줘",부탁이야 나를 보내 줘,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-176,english_semantic_draft,SOMEONE LEFT THIS AT THE DOOR,누군가 이것을 문 앞에 두고 갔어,누군가 이것을 문 앞에 두고 갔어,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+175,english_reference_reviewed,PLEASE LET ME GO,"부탁이야, 나를 보내 줘",부탁이야 나를 보내 줘,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
+176,english_reference_reviewed,SOMEONE LEFT THIS AT THE DOOR,누군가 이것을 문 앞에 두고 갔어,누군가 이것을 문 앞에 두고 갔어,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 177,english_reference_reviewed,OKOTO WAH ASAJI KIDNAPPED ME,"오코토, 아사지가 나를 납치했어",오코토 아사지가 나를 납치했어,english_reference,영어 참조 의미 대조 완료,,
 178,english_reference_reviewed,GO HOME EVERYONE S WORRIED,집에 가. 모두가 걱정하고 있어,집에 가 모두가 걱정하고 있어,english_reference,영어 참조 의미 대조 완료,,
 179,english_reference_reviewed,OKOTO SOB THANK YOU PLEASE BE CAREFUL,"오코토, 흑흑 고마워. 조심해",오코토 흑흑 고마워 조심해,english_reference,영어 참조 의미 대조 완료,,
-180,english_semantic_draft,ASAJI HAS DISAPPEARED,아사지가 사라졌어,아사지가 사라졌어,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+180,english_reference_reviewed,ASAJI HAS DISAPPEARED,아사지가 사라졌어,아사지가 사라졌어,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 181,english_reference_reviewed,TSUU BROTHER WAIT,"츠우, 오빠! 기다려!",츠우 오빠 기다려,english_reference,영어 참조 의미 대조 완료,,
 182,english_reference_reviewed,KUNIO HURRY SLUG MR BUNZO S IN TROUBLE,"쿠니오, 서둘러! 분조가 곤경에 빠졌어!",쿠니오 서둘러 분조가 곤경에 빠졌어,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
 183,english_reference_reviewed,OKOTO KUNIO,"오코토, 쿠니오!",오코토 쿠니오,english_reference,영어 참조 및 오프닝 화면 대조 완료,,
@@ -201,15 +201,15 @@
 199,english_reference_reviewed,OKOTO AND YOU WILL MAKE A FINE FAMILY,오코토와 너라면 훌륭한 가족이 되겠군,오코토와 너라면 훌륭한 가족이 되겠군,english_reference,영어 참조 의미 대조 완료,,
 200,english_reference_reviewed,RIGHT OKOTO,"그렇지, 오코토?",그렇지 오코토,english_reference,영어 참조 의미 대조 완료,,
 201,english_reference_reviewed,OKOTO OH YES,"오코토, 아 맞다",오코토 아 맞다,english_reference,영어 참조 의미 대조 완료,,
-202,english_semantic_draft,I BEG YOU,제발 부탁합니다,제발 부탁합니다,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+202,english_reference_reviewed,I BEG YOU,제발 부탁합니다,제발 부탁합니다,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 203,english_reference_reviewed,GREAT A MOMENT OF ULTIMATE HAPPINESS,좋아! 최고의 행복을 느끼는 순간이군,좋아 최고의 행복을 느끼는 순간이군,english_reference,영어 참조 의미 대조 완료,,
 204,english_reference_reviewed,I LL ORDER SAKE TO CELEBRATE,축하주를 주문해야겠어,축하주를 주문해야겠어,english_reference,영어 참조 의미 대조 완료,,
-205,english_semantic_draft,I M A VAGABOND DRIFTING FROM TOWN TO TOWN,나는 떠돌이야. 마을에서 마을로 떠돌지,나는 떠돌이야 마을에서 마을로 떠돌지,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-206,english_semantic_draft,OKOTO DESERVES SOMETHING MUCH BETTER,오코토에게는 훨씬 더 좋은 사람이 어울려,오코토에게는 훨씬 더 좋은 사람이 어울려,english_reference,이름 표기 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+205,english_reference_reviewed,I M A VAGABOND DRIFTING FROM TOWN TO TOWN,나는 떠돌이야. 마을에서 마을로 떠돌지,나는 떠돌이야 마을에서 마을로 떠돌지,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
+206,english_reference_reviewed,OKOTO DESERVES SOMETHING MUCH BETTER,오코토에게는 훨씬 더 좋은 사람이 어울려,오코토에게는 훨씬 더 좋은 사람이 어울려,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 207,english_reference_reviewed,SORRY YOU FEEL THAT WAY BUT,그렇게 느꼈다면 미안해. 하지만,그렇게 느꼈다면 미안해 하지만,english_reference,영어 참조 연속 문장 대조 완료,,
 208,english_reference_reviewed,COME SEE US,언제든 우리를 만나러 와,언제든 우리를 만나러 와,english_reference,영어 참조 연속 문장 대조 완료,,
 209,english_reference_reviewed,WHENEVER YOU RE IN TOWN,마을에 오면 언제든 들러,마을에 오면 언제든 들러,english_reference,영어 참조 연속 문장 대조 완료,,
-210,english_semantic_draft,YOU GOT IT NOW I MUST GO,알겠어. 이제 가야 해,알겠어 이제 가야 해,english_reference,일본어 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+210,english_reference_reviewed,YOU GOT IT NOW I MUST GO,알겠어. 이제 가야 해,알겠어 이제 가야 해,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 211,english_reference_reviewed,FAREWELL,잘 가,잘 가,english_reference,영어 참조 의미 대조 완료,,
 212,english_reference_reviewed,OKOTO,오코토,오코토,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
 213,english_reference_reviewed,OKOTO SOB,"오코토, 흐흑",오코토 흐흑,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
@@ -226,24 +226,24 @@
 224,english_reference_reviewed,DUTY CALLS AND ROMANCE,의무와 사랑이 기다린다,의무와 사랑이 기다린다,english_reference,영어 참조 의미 대조 완료,,
 225,english_reference_reviewed,KUNIO S LOVE AWAITS,쿠니오의 사랑이 기다린다,쿠니오의 사랑이 기다린다,english_reference,영어 참조 의미 대조 완료,,
 226,english_reference_reviewed,OR DOES SHE,과연 그럴까?,과연 그럴까,english_reference,영어 참조 연속 인트로 대조 완료,,
-227,english_semantic_draft,USED,사용했습니다,사용했습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+227,english_reference_reviewed,USED,사용했습니다,사용했습니다,english_reference,동적 아이템 토큰 UI 문장 검토 완료,,dynamic_control_context
 228,english_reference_reviewed,ARE YOU READY FOR THIS NEW AREA YEAH,새 지역으로 갈 준비가 됐나요? 그래,새 지역으로 갈 준비가 됐나요 그래,english_reference,영어 참조 의미 대조 완료,,
 229,english_reference_reviewed,GAVE,주었습니다,주었습니다,english_reference,영어 참조 의미 대조 완료,,dynamic_control_context
-230,english_semantic_draft,DROPPED,떨어뜨렸습니다,떨어뜨렸습니다,english_reference,아이템/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-231,english_semantic_draft,S STATUS IS UP,상태가 올랐습니다,상태가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-232,english_semantic_draft,S IS UP,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-233,english_semantic_draft,S UP BY,능력치가 올랐습니다,능력치가 올랐습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-234,english_semantic_draft,S IS MAXXED,능력치가 최대입니다,능력치가 최대입니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-235,english_semantic_draft,LEARNED A TECHNIQUE,기술을 배웠습니다,기술을 배웠습니다,english_reference,성장/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+230,english_reference_reviewed,DROPPED,떨어뜨렸습니다,떨어뜨렸습니다,english_reference,동적 아이템 토큰 UI 문장 검토 완료,,dynamic_control_context
+231,english_reference_reviewed,S STATUS IS UP,상태가 올랐습니다,상태가 올랐습니다,english_reference,동적 주체 토큰 UI 문장 검토 완료,,dynamic_control_context
+232,english_reference_reviewed,S IS UP,의 상승량,의 상승량,english_reference,F0/F2/F5 토큰 사이 명시적 구간 검토 완료,,dynamic_control_context
+233,english_reference_reviewed,S UP BY,의 상승,의 상승,english_reference,F0/F2/F5 토큰 사이 명시적 구간 검토 완료,,dynamic_control_context
+234,english_reference_reviewed,S IS MAXXED,의 최대,의 최대,english_reference,F0/F2 토큰 사이 명시적 구간 검토 완료,,dynamic_control_context
+235,english_reference_reviewed,LEARNED A TECHNIQUE,기술을 배웠습니다,기술을 배웠습니다,english_reference,동적 주체 토큰 UI 문장 검토 완료,,dynamic_control_context
 236,english_reference_reviewed,STATUS LEVELS UP NOW DOUBLE,상태 레벨 상승! 이제 두 배입니다,상태 레벨 상승 이제 두 배입니다,english_reference,영어 참조 의미 대조 완료,,
 237,english_reference_reviewed,USE MAP CURSOR TO TRAVEL,지도 커서로 이동하세요,지도 커서로 이동하세요,english_reference,영어 참조 의미 대조 완료,,
 238,english_reference_reviewed,REMOVED,해제했습니다,해제했습니다,english_reference,장비 제거 의미로 영어 참조 대조 완료,,dynamic_control_context
-239,english_semantic_draft,SMILES,미소 지었습니다,미소 지었습니다,english_reference,선행 F0 주체 변수 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
-240,english_semantic_draft,FELT LIGHTER,몸이 가벼워졌습니다,몸이 가벼워졌습니다,english_reference,선행 F0 주체 변수 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+239,english_reference_reviewed,SMILES,미소 지었습니다,미소 지었습니다,english_reference,동적 주체 토큰 문장 검토 완료,,dynamic_control_context
+240,english_reference_reviewed,FELT LIGHTER,몸이 가벼워졌습니다,몸이 가벼워졌습니다,english_reference,동적 주체 토큰 문장 검토 완료,,dynamic_control_context
 241,english_reference_reviewed,A GREAT MOMENT,멋진 순간입니다,멋진 순간입니다,english_reference,영어 참조 의미 대조 완료,,
 242,english_reference_reviewed,EQUIPMENT STATS NOW DOUBLE,장비와 능력치가 이제 두 배입니다,장비와 능력치가 이제 두 배입니다,english_reference,영어 참조 의미 대조 완료,,
-243,english_semantic_draft,FELL,넘어졌습니다,넘어졌습니다,english_reference,선행 F0 주체 변수 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+243,english_reference_reviewed,FELL,넘어졌습니다,넘어졌습니다,english_reference,동적 주체 토큰 문장 검토 완료,,dynamic_control_context
 244,excluded_non_dialogue,,,,english_reference,단독 변수 종료 레코드라 번역하지 않음,,
-245,english_semantic_draft,FAMILY,가족,가족,english_reference,엔딩/UI 문맥 확인 필요,,"semantic_draft_not_reviewed,context_confirmation_required,dynamic_control_context"
+245,english_reference_reviewed,FAMILY,가족,가족,english_reference,영문 의미와 제어 구조 검토 완료,,dynamic_control_context
 246,excluded_non_dialogue,MF A J S X B C,,,english_reference,코드/데이터 블록으로 보이며 대사 패치에서 제외,,
 247,excluded_non_dialogue,,,,english_reference,포인터 테이블 외부 소유자이며 대사 레코드 아님,,

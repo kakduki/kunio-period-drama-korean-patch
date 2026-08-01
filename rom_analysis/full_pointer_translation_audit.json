@@ -6,19 +6,19 @@
     "row_count": 248,
     "active_count": 244,
     "excluded_count": 4,
-    "reviewed_count": 201,
+    "reviewed_count": 240,
     "status_counts": {
-      "english_reference_reviewed": 201,
-      "english_semantic_draft": 43,
+      "english_reference_reviewed": 240,
+      "english_semantic_draft": 4,
       "excluded_non_dialogue": 4
     },
     "failure_counts": {},
     "warning_counts": {
-      "context_confirmation_required": 43,
+      "context_confirmation_required": 4,
       "dynamic_control_context": 47,
-      "semantic_draft_not_reviewed": 43
+      "semantic_draft_not_reviewed": 4
     },
-    "duplicate_display_groups": 7
+    "duplicate_display_groups": 6
   },
   "policy": {
     "english_role": "semantic and control-structure reference",
@@ -69,13 +69,6 @@
       "pointer_indices": [
         158,
         160
-      ]
-    },
-    {
-      "compiled_display_text": "능력치가 올랐습니다",
-      "pointer_indices": [
-        232,
-        233
       ]
     }
   ],
@@ -183,16 +176,14 @@
     },
     {
       "pointer_index": 9,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OK LET S FIGHT",
       "korean_draft": "좋아, 우리도 싸우자",
       "compiled_display_text": "좋아 우리도 싸우자",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -506,16 +497,14 @@
     },
     {
       "pointer_index": 38,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU WORK FOR I THOUGHT YOU SERVED TORA",
-      "korean_draft": "넌 누구 밑에서 일하지? 토라를 섬긴다고 들었다",
-      "compiled_display_text": "넌 누구 밑에서 일하지 토라를 섬긴다고 들었다",
+      "korean_draft": "너는 밑에서 일하나 토라를 섬긴다고 들었다",
+      "compiled_display_text": "너는 밑에서 일하나 토라를 섬긴다고 들었다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "FB 이름 토큰 앞뒤 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -532,16 +521,14 @@
     },
     {
       "pointer_index": 40,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "TAKE WITH YOU",
-      "korean_draft": "이것을 가져가라",
-      "compiled_display_text": "이것을 가져가라",
+      "korean_draft": "이 을 가져가라",
+      "compiled_display_text": "이 을 가져가라",
       "basis": "english_reference",
-      "notes": "아이템 문맥 확인 필요",
+      "notes": "FB 아이템 토큰 앞뒤 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -569,31 +556,27 @@
     },
     {
       "pointer_index": 43,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "HERE TAKE THIS KANPOU",
       "korean_draft": "여기 있다! 이 한방약을 가져가라",
       "compiled_display_text": "여기 있다 이 한방약을 가져가라",
       "basis": "english_reference",
-      "notes": "아이템 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 44,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "USE IT TO CURE",
-      "korean_draft": "그 약으로 상처를 치료해",
-      "compiled_display_text": "그 약으로 상처를 치료해",
+      "korean_draft": "의 상처를 치료해",
+      "compiled_display_text": "의 상처를 치료해",
       "basis": "english_reference",
-      "notes": "아이템 문맥 확인 필요",
+      "notes": "FB 대상 토큰 뒤 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -687,16 +670,14 @@
     },
     {
       "pointer_index": 53,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU WORK FOR WELL I HAVE SOME NEWS",
-      "korean_draft": "넌 누구 밑에서 일하지? 좋은 소식이 있다",
-      "compiled_display_text": "넌 누구 밑에서 일하지 좋은 소식이 있다",
+      "korean_draft": "너는 밑에서 일하나 좋아 알려 줄 게 있다",
+      "compiled_display_text": "너는 밑에서 일하나 좋아 알려 줄 게 있다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "FB 이름 토큰 앞뒤 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -779,16 +760,14 @@
     },
     {
       "pointer_index": 61,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M TELLING YA AND GRABBED HER",
-      "korean_draft": "말해 두지. 토라와 부하가 그녀를 붙잡았다",
-      "compiled_display_text": "말해 두지 토라와 부하가 그녀를 붙잡았다",
+      "korean_draft": "내 말이 맞아 와 가 그녀를 잡았어",
+      "compiled_display_text": "내 말이 맞아 와 가 그녀를 잡았어",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "FB 인물 토큰 두 개의 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -805,16 +784,14 @@
     },
     {
       "pointer_index": 63,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU RE I HEARD YOU RE PRETTY TOUGH",
       "korean_draft": "너는 아사지와 관련 있군. 꽤 강하다고 들었다",
       "compiled_display_text": "너는 아사지와 관련 있군 꽤 강하다고 들었다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -853,16 +830,14 @@
     },
     {
       "pointer_index": 67,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YEAH WE GRABBED THE GIRL FOR THE GREAT ONE",
       "korean_draft": "그래, 우리가 소녀를 잡았다. 위대한 분을 위해서다",
       "compiled_display_text": "그래 우리가 소녀를 잡았다 위대한 분을 위해서다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -967,16 +942,14 @@
     },
     {
       "pointer_index": 77,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "MR THE BEEG BOSS IS BEHIND THIS",
       "korean_draft": "대장님, 이 일의 배후에는 큰두목이 있다",
       "compiled_display_text": "대장님 이 일의 배후에는 큰두목이 있다",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -1062,16 +1035,14 @@
     },
     {
       "pointer_index": 85,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ALL WE NEED TO DO IS ELIMINATE",
-      "korean_draft": "해야 할 일은 저자를 없애는 것뿐이다",
-      "compiled_display_text": "해야 할 일은 저자를 없애는 것뿐이다",
+      "korean_draft": "우리가 할 일은 을 없애는 것뿐이다",
+      "compiled_display_text": "우리가 할 일은 을 없애는 것뿐이다",
       "basis": "english_reference",
-      "notes": "영어 원문의 대상 토큰 확인 필요",
+      "notes": "FB 대상 토큰 앞뒤 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -1275,31 +1246,27 @@
     },
     {
       "pointer_index": 104,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI WE RE GONNA KICK YOUR ASS",
       "korean_draft": "아사지, 너희를 박살내 주마",
       "compiled_display_text": "아사지 너희를 박살내 주마",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 105,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "BUT FIRST LET ME CLUE YOU IN",
       "korean_draft": "하지만 먼저 너희에게 진실을 알려 주지",
       "compiled_display_text": "하지만 먼저 너희에게 진실을 알려 주지",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -1697,61 +1664,53 @@
     },
     {
       "pointer_index": 141,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ATE",
       "korean_draft": "먹었습니다",
       "compiled_display_text": "먹었습니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "동적 아이템 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 142,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DRANK",
       "korean_draft": "마셨습니다",
       "compiled_display_text": "마셨습니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "동적 아이템 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 143,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "GOT",
       "korean_draft": "얻었습니다",
       "compiled_display_text": "얻었습니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "동적 아이템 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 144,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "EQUIPPED",
       "korean_draft": "장착했습니다",
       "compiled_display_text": "장착했습니다",
       "basis": "english_reference",
-      "notes": "상점/UI 문맥 확인 필요",
+      "notes": "동적 아이템 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -1845,16 +1804,14 @@
     },
     {
       "pointer_index": 153,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "WE HAVE AND",
-      "korean_draft": "우리는 이것과 저것을 가지고 있습니다",
-      "compiled_display_text": "우리는 이것과 저것을 가지고 있습니다",
+      "korean_draft": "우리에게 와",
+      "compiled_display_text": "우리에게 와",
       "basis": "english_reference",
-      "notes": "아이템 변수 토큰 확인 필요",
+      "notes": "FD/FE 아이템 토큰 사이 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2007,16 +1964,14 @@
     },
     {
       "pointer_index": 167,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "IDIOTS WE LL FIND THEM",
       "korean_draft": "바보들! 우리가 그들을 찾을 것이다",
       "compiled_display_text": "바보들 우리가 그들을 찾을 것이다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2044,16 +1999,14 @@
     },
     {
       "pointer_index": 170,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "THIS CHARM WILL PROTECT YOU",
       "korean_draft": "이 부적이 너를 지켜 줄 거야",
       "compiled_display_text": "이 부적이 너를 지켜 줄 거야",
       "basis": "english_reference",
-      "notes": "아이템 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2081,17 +2034,14 @@
     },
     {
       "pointer_index": 173,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI WHY NOT GO TO",
       "korean_draft": "아사지, 후지로 가는 게 어때?",
       "compiled_display_text": "아사지 후지로 가는 게 어때",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
-      "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required"
-      ]
+      "warnings": []
     },
     {
       "pointer_index": 174,
@@ -2106,31 +2056,27 @@
     },
     {
       "pointer_index": 175,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "PLEASE LET ME GO",
       "korean_draft": "부탁이야, 나를 보내 줘",
       "compiled_display_text": "부탁이야 나를 보내 줘",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 176,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SOMEONE LEFT THIS AT THE DOOR",
       "korean_draft": "누군가 이것을 문 앞에 두고 갔어",
       "compiled_display_text": "누군가 이것을 문 앞에 두고 갔어",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2169,16 +2115,14 @@
     },
     {
       "pointer_index": 180,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "ASAJI HAS DISAPPEARED",
       "korean_draft": "아사지가 사라졌어",
       "compiled_display_text": "아사지가 사라졌어",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2420,16 +2364,14 @@
     },
     {
       "pointer_index": 202,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I BEG YOU",
       "korean_draft": "제발 부탁합니다",
       "compiled_display_text": "제발 부탁합니다",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2457,31 +2399,27 @@
     },
     {
       "pointer_index": 205,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "I M A VAGABOND DRIFTING FROM TOWN TO TOWN",
       "korean_draft": "나는 떠돌이야. 마을에서 마을로 떠돌지",
       "compiled_display_text": "나는 떠돌이야 마을에서 마을로 떠돌지",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 206,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "OKOTO DESERVES SOMETHING MUCH BETTER",
       "korean_draft": "오코토에게는 훨씬 더 좋은 사람이 어울려",
       "compiled_display_text": "오코토에게는 훨씬 더 좋은 사람이 어울려",
       "basis": "english_reference",
-      "notes": "이름 표기 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2520,16 +2458,14 @@
     },
     {
       "pointer_index": 210,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "YOU GOT IT NOW I MUST GO",
       "korean_draft": "알겠어. 이제 가야 해",
       "compiled_display_text": "알겠어 이제 가야 해",
       "basis": "english_reference",
-      "notes": "일본어 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2715,16 +2651,14 @@
     },
     {
       "pointer_index": 227,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "USED",
       "korean_draft": "사용했습니다",
       "compiled_display_text": "사용했습니다",
       "basis": "english_reference",
-      "notes": "아이템/UI 문맥 확인 필요",
+      "notes": "동적 아이템 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2754,91 +2688,79 @@
     },
     {
       "pointer_index": 230,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "DROPPED",
       "korean_draft": "떨어뜨렸습니다",
       "compiled_display_text": "떨어뜨렸습니다",
       "basis": "english_reference",
-      "notes": "아이템/UI 문맥 확인 필요",
+      "notes": "동적 아이템 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 231,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "S STATUS IS UP",
       "korean_draft": "상태가 올랐습니다",
       "compiled_display_text": "상태가 올랐습니다",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "동적 주체 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 232,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "S IS UP",
-      "korean_draft": "능력치가 올랐습니다",
-      "compiled_display_text": "능력치가 올랐습니다",
+      "korean_draft": "의 상승량",
+      "compiled_display_text": "의 상승량",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "F0/F2/F5 토큰 사이 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 233,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "S UP BY",
-      "korean_draft": "능력치가 올랐습니다",
-      "compiled_display_text": "능력치가 올랐습니다",
+      "korean_draft": "의 상승",
+      "compiled_display_text": "의 상승",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "F0/F2/F5 토큰 사이 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 234,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "S IS MAXXED",
-      "korean_draft": "능력치가 최대입니다",
-      "compiled_display_text": "능력치가 최대입니다",
+      "korean_draft": "의 최대",
+      "compiled_display_text": "의 최대",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "F0/F2 토큰 사이 명시적 구간 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 235,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "LEARNED A TECHNIQUE",
       "korean_draft": "기술을 배웠습니다",
       "compiled_display_text": "기술을 배웠습니다",
       "basis": "english_reference",
-      "notes": "성장/UI 문맥 확인 필요",
+      "notes": "동적 주체 토큰 UI 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2879,31 +2801,27 @@
     },
     {
       "pointer_index": 239,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "SMILES",
       "korean_draft": "미소 지었습니다",
       "compiled_display_text": "미소 지었습니다",
       "basis": "english_reference",
-      "notes": "선행 F0 주체 변수 문맥 확인 필요",
+      "notes": "동적 주체 토큰 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
     {
       "pointer_index": 240,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FELT LIGHTER",
       "korean_draft": "몸이 가벼워졌습니다",
       "compiled_display_text": "몸이 가벼워졌습니다",
       "basis": "english_reference",
-      "notes": "선행 F0 주체 변수 문맥 확인 필요",
+      "notes": "동적 주체 토큰 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2931,16 +2849,14 @@
     },
     {
       "pointer_index": 243,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FELL",
       "korean_draft": "넘어졌습니다",
       "compiled_display_text": "넘어졌습니다",
       "basis": "english_reference",
-      "notes": "선행 F0 주체 변수 문맥 확인 필요",
+      "notes": "동적 주체 토큰 문장 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },
@@ -2957,16 +2873,14 @@
     },
     {
       "pointer_index": 245,
-      "translation_status": "english_semantic_draft",
+      "translation_status": "english_reference_reviewed",
       "english_text": "FAMILY",
       "korean_draft": "가족",
       "compiled_display_text": "가족",
       "basis": "english_reference",
-      "notes": "엔딩/UI 문맥 확인 필요",
+      "notes": "영문 의미와 제어 구조 검토 완료",
       "failures": [],
       "warnings": [
-        "semantic_draft_not_reviewed",
-        "context_confirmation_required",
         "dynamic_control_context"
       ]
     },

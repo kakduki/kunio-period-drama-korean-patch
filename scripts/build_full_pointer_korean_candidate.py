@@ -56,6 +56,7 @@ SOURCE_PAGE_OFFSET_IN_CHR = 0x0F800
 SOURCE_CODES = tuple(range(0x81, 0x9B)) + tuple(range(0xC0, 0xC8))
 BOTTOM_TILE_DELTA = 0x20
 DEFAULT_DRAFT = REPO_ROOT / "text_data" / "pointer_dialogue_korean_draft.tsv"
+DEFAULT_SEGMENTS = REPO_ROOT / "text_data" / "pointer_dialogue_korean_segments.json"
 DEFAULT_ENGLISH = REPO_ROOT / "rom_analysis" / "english_script_dump.tsv"
 DEFAULT_PLAN = REPO_ROOT / "rom_analysis" / "pointer_font_page_plan.json"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "output" / "full_pointer_korean_candidate"
@@ -141,10 +142,21 @@ def encode_control_preserving_record(
     template: bytes,
     korean_text: str,
     glyph_codes: dict[str, int],
+    explicit_segments: list[str] | None = None,
 ) -> bytes:
     runs = replaceable_runs(template)
     active_runs = [run for run in runs if run[2] > 0]
-    pieces = split_text_by_weights(clean_korean_text(korean_text), [run[2] for run in active_runs])
+    if explicit_segments is None:
+        pieces = split_text_by_weights(
+            clean_korean_text(korean_text), [run[2] for run in active_runs]
+        )
+    else:
+        pieces = [clean_korean_text(segment) for segment in explicit_segments]
+        if len(pieces) != len(active_runs):
+            raise ValueError(
+                f"explicit segment count {len(pieces)} does not match "
+                f"{len(active_runs)} replaceable runs"
+            )
     replacements: dict[int, bytes] = {}
     for run, piece in zip(active_runs, pieces, strict=True):
         encoded = bytearray()
@@ -179,10 +191,12 @@ def build_config(
     draft_path: Path = DEFAULT_DRAFT,
     english_path: Path = DEFAULT_ENGLISH,
     plan_path: Path = DEFAULT_PLAN,
+    segments_path: Path = DEFAULT_SEGMENTS,
 ) -> dict[str, object]:
     draft = load_tsv(draft_path)
     english = [row for row in load_tsv(english_path) if row["record_kind"] == "pointer_pair"]
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    segment_overrides = json.loads(segments_path.read_text(encoding="utf-8"))
     if len(draft) != POINTER_COUNT or len(english) != POINTER_COUNT:
         raise ValueError("full pointer inputs must each contain 248 rows")
     pages = plan["optimized_pages"]
@@ -211,7 +225,10 @@ def build_config(
                 raise ValueError(f"active pointer {index} has no font page")
             template = bytes.fromhex(english_row["en_raw_bytes"])
             raw = encode_control_preserving_record(
-                template, draft_row["korean_text"], page_maps[page_index]
+                template,
+                draft_row["korean_text"],
+                page_maps[page_index],
+                segment_overrides.get(str(index)),
             )
         record_offset = cursor if raw else None
         if raw:
@@ -239,6 +256,7 @@ def build_config(
         "records": records,
         "pages": pages,
         "page_maps": page_maps,
+        "segment_override_count": len(segment_overrides),
         "assignments": assignments,
         "record_start": RECORD_PACK_START,
         "record_end": cursor,
@@ -384,11 +402,12 @@ def main() -> int:
     parser.add_argument("--draft", type=Path, default=DEFAULT_DRAFT)
     parser.add_argument("--english", type=Path, default=DEFAULT_ENGLISH)
     parser.add_argument("--plan", type=Path, default=DEFAULT_PLAN)
+    parser.add_argument("--segments", type=Path, default=DEFAULT_SEGMENTS)
     parser.add_argument("--font")
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     args = parser.parse_args()
     base = resolve_base_rom(args.rom).read_bytes()
-    config = build_config(base, args.draft, args.english, args.plan)
+    config = build_config(base, args.draft, args.english, args.plan, args.segments)
     patched, targets = apply_full_candidate(base, config, default_tall_font(args.font))
     args.out_dir.mkdir(parents=True, exist_ok=True)
     rom_path = args.out_dir / f"{OUT_STEM}.nes"
@@ -409,6 +428,7 @@ def main() -> int:
         "record_end": f"0x{config['record_end']:05X}",
         "record_loader_gap": config["record_loader_gap"],
         "font_pages": len(config["pages"]),
+        "segment_overrides": config["segment_override_count"],
         "chr_banks": OUTPUT_CHR_BANKS,
         "targets": targets,
     }

@@ -25,6 +25,13 @@ def main() -> int:
     encoded = encode_control_preserving_record(template, "가 나 다", glyph_codes)
     assert control_skeleton(encoded, korean_codes=True) == control_skeleton(template)
     assert bytes((0xBB,)) in encoded and encoded.endswith(bytes.fromhex("CA FF"))
+    segmented = encode_control_preserving_record(
+        bytes.fromhex("81 00 FB 00 82 FF"),
+        "",
+        {"가": 0x81, "나": 0x82},
+        ["가", "나"],
+    )
+    assert segmented == bytes.fromhex("81 FB 82 FF")
 
     base = resolve_base_rom(None).read_bytes()
     config = build_config(base)
@@ -44,7 +51,7 @@ def main() -> int:
     patched, targets = apply_full_candidate(base, config, default_tall_font(None))
     assert patched[5] == 29
     assert len(patched) == len(base) + 13 * 0x2000
-    assert hashlib.md5(patched).hexdigest() == "c950aa46caaddb491989afd113686798"
+    assert hashlib.md5(patched).hexdigest() == "7187caa40a2761d0b373566e9cfb142d"
     table = patched[PAGE_TABLE_ROM_OFFSET:PAGE_TABLE_ROM_OFFSET + POINTER_COUNT]
     assert sum(value != 0 for value in table) == 244
     assert max(table) == page_count
