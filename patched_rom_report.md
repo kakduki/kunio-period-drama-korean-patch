@@ -334,3 +334,13 @@ The English reference exposes 722 dialogue tile runs for comparison with the 250
 - Pre-pointer gate: 10 runtime-approved rows; 29 new static rows in the current extension; 84 rows remain overflow and are not silently patched.
 - Native visual gate: UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT.
 - Release status: NOT_READY.
+## Safe Expanded Pre-Pointer Items Candidate (2026-08-02)
+
+- Candidate ROM: output/pre_pointer_extended_items_title_none_candidate_runtime_pass/kunio_period_drama_korean_full_items_title_none_candidate.nes.
+- Candidate MD5: 79daec98dd6c9a6dc0ab08b4257ecd34.
+- Static extension: 70 rows patched, 22 existing rows preserved, 43 glyph-overflow rows quarantined, and one missing-glyph row skipped.
+- Renderer safety: new codes use 0x9B-0xDF while excluding 0xAC, 0xB0, 0xBB, and low-nibble 0x0E/0x0F; no newly allocated code violates these rules.
+- Items action byte gate: PASS at action frame 1737; queue and PPU values are 8C 98 00 99 9B 9C 9E 9C 99 A3.
+- Items title/NONE byte gate: PASS at frame 1737 for name seed, title suffix, and NONE owners.
+- Progression smoke: PASS at frame 7200 with 24 unique screens and lua_done; this is bounded automation, not a natural boss route.
+- Release status: NOT_READY. Native visual proof remains UNKNOWN because the available GD screenshot buffer is transparent.

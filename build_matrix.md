@@ -200,3 +200,15 @@ The 250-row pre-pointer inventory was compared with 722 English dialogue owner r
 - Normal progression: PASS; 7200 lua_done, 24 unique screens, combat changes captured.
 - Pre-pointer runtime classification: 10 approved, 152 static-only, 4 unknown-PC, 2 empty/data; 78 additional static rows remain glyph-pool overflow.
 - Release status: NOT_READY; native screenshot pixels, remaining pre-pointer coverage, shared-page audit, and boss-route proof remain open.
+## Safe Expanded Pre-Pointer Items Candidate (2026-08-02)
+
+- Candidate ROM: output/pre_pointer_extended_items_title_none_candidate_runtime_pass/kunio_period_drama_korean_full_items_title_none_candidate.nes.
+- Candidate MD5: 79daec98dd6c9a6dc0ab08b4257ecd34; static extension input MD5: 0fb9eecf4abbb2f06a0e2e150cb2582d.
+- Composition: 70 additional control-free pre-pointer rows, 56 new Bank 7 glyphs, Korean Items action labels, and the English-reference name/title/NONE owner chains.
+- Safety correction: the soft pool is 0x9B-0xDF; parser specials 0xAC, 0xB0, 0xBB and low-nibble 0x0E/0x0F paths are excluded. The new glyph allocation contains zero excluded codes.
+- Items action runtime: PASS; queue and PPU bytes match at detected frame 1737.
+- Items title/name/NONE runtime: PASS; all three source chains match at frame 1737.
+- Normal progression: PASS; 7,200 frames, 24 unique screens, finite lua_done.
+- Pre-pointer scan: 10 runtime-source reads, 152 static-only, 4 unknown-PC, 2 empty/data; 43 additional rows remain glyph-pool overflow in the expanded static report.
+- Result: SOFT_GATE_PASS_RUNTIME_NOT_READY; native pixels, full row coverage, shared-page safety, and natural boss/dialogue route remain open.
+- Reports: rom_analysis/pre_pointer_extended_static_candidate.json, rom_analysis/pre_pointer_extended_items_action_candidate_runtime.json, rom_analysis/pre_pointer_extended_items_title_none_candidate_runtime.json, and rom_analysis/pre_pointer_runtime_gate_extended_items_title_none_candidate.json.

@@ -1,11 +1,11 @@
 # Pre-Pointer Full Candidate
 
-- Candidate MD5: `e9269cf2f44b57fe739329f8edbfe2aa`.
+- Candidate MD5: `0fb9eecf4abbb2f06a0e2e150cb2582d`.
 - Patch-ready records considered: `143`.
-- Newly patched records: `29`.
+- Newly patched records: `70`.
 - Runtime gate: `not applied`.
-- New soft-gate glyphs: `34` in `0x9B-0xBF`.
-- Status counts: `{"SKIPPED_INPUT_DRIFT": 7, "PRESERVED_EXISTING": 22, "PATCHED": 29, "SKIPPED_MISSING_GLYPH": 1, "SKIPPED_GLYPH_OVERFLOW": 84}`.
+- New soft-gate glyphs: `56` in `0x9B-0xDF`.
+- Status counts: `{"SKIPPED_INPUT_DRIFT": 7, "PRESERVED_EXISTING": 22, "PATCHED": 70, "SKIPPED_MISSING_GLYPH": 1, "SKIPPED_GLYPH_OVERFLOW": 43}`.
 - Release status: `NOT_READY`; this candidate is for bounded runtime validation.
 
 | record | offset | English | Korean | status | reason |
@@ -59,97 +59,97 @@
 | EN-PRE-199 | `0x05D1D` | KOUZ<FF> | 코즈케 | PATCHED |  |
 | EN-PRE-201 | `0x05D23` | RIKUC<FF> | 리쿠 | PATCHED |  |
 | EN-PRE-202 | `0x05D29` | ECCHU<FF> | 엣추 | SKIPPED_MISSING_GLYPH | font-char-map-missing |
-| EN-PRE-203 | `0x05D2F` | INA<FF> | 이나 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-206 | `0x05D35` | KAW<FF> | 카와 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-203 | `0x05D2F` | INA<FF> | 이나 | PATCHED |  |
+| EN-PRE-206 | `0x05D35` | KAW<FF> | 카와 | PATCHED |  |
 | EN-PRE-209 | `0x05D3B` | TO<FF> | 토 | PATCHED |  |
-| EN-PRE-213 | `0x05D41` | NAG<FF> | 나가 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-216 | `0x05D47` | HIZ<FF> | 히즈 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-220 | `0x05D51` | ODD<FF> | 오드 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-000 | `0x056BC` | YUKI<FF> | 유키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-001 | `0x056C1` | ITOKISAKI<FF> | 이토키사키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-002 | `0x056CB` | TAMO<FF> | 타모 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-003 | `0x056D0` | SAIZOHAGI<FF> | 사이조하기 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-004 | `0x056DA` | HASHIKOSU<FF> | 하시코수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-005 | `0x056E4` | HANSUKOUE<FF> | 하수코우에 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-006 | `0x056EE` | HIRA<FF> | 히라 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-007 | `0x056F3` | HIDE<FF> | 히데 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-008 | `0x056F8` | ASHI<FF> | 아시 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-009 | `0x056FD` | BEN<FF> | 베 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-011 | `0x05702` | SAITAMOEMOMURA<FF> | 사이타모에모무라 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-012 | `0x05711` | SADA<FF> | 사다 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-013 | `0x05716` | SEKI<FF> | 세키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-014 | `0x0571B` | YOTSUTOMO<FF> | 요츠토모 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-213 | `0x05D41` | NAG<FF> | 나가 | PATCHED |  |
+| EN-PRE-216 | `0x05D47` | HIZ<FF> | 히즈 | PATCHED |  |
+| EN-PRE-220 | `0x05D51` | ODD<FF> | 오드 | PATCHED |  |
+| EN-PRE-000 | `0x056BC` | YUKI<FF> | 유키 | PATCHED |  |
+| EN-PRE-001 | `0x056C1` | ITOKISAKI<FF> | 이토키사키 | PATCHED |  |
+| EN-PRE-002 | `0x056CB` | TAMO<FF> | 타모 | PATCHED |  |
+| EN-PRE-003 | `0x056D0` | SAIZOHAGI<FF> | 사이조하기 | PATCHED |  |
+| EN-PRE-004 | `0x056DA` | HASHIKOSU<FF> | 하시코수 | PATCHED |  |
+| EN-PRE-005 | `0x056E4` | HANSUKOUE<FF> | 하수코우에 | PATCHED |  |
+| EN-PRE-006 | `0x056EE` | HIRA<FF> | 히라 | PATCHED |  |
+| EN-PRE-007 | `0x056F3` | HIDE<FF> | 히데 | PATCHED |  |
+| EN-PRE-008 | `0x056F8` | ASHI<FF> | 아시 | PATCHED |  |
+| EN-PRE-009 | `0x056FD` | BEN<FF> | 베 | PATCHED |  |
+| EN-PRE-011 | `0x05702` | SAITAMOEMOMURA<FF> | 사이타모에모무라 | PATCHED |  |
+| EN-PRE-012 | `0x05711` | SADA<FF> | 사다 | PATCHED |  |
+| EN-PRE-013 | `0x05716` | SEKI<FF> | 세키 | PATCHED |  |
+| EN-PRE-014 | `0x0571B` | YOTSUTOMO<FF> | 요츠토모 | PATCHED |  |
 | EN-PRE-015 | `0x05725` | KUMA<FF> | 쿠마 | PATCHED |  |
-| EN-PRE-016 | `0x0572A` | WATA<FF> | 와타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-017 | `0x0572F` | URAE<FF> | 우라에 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-018 | `0x05734` | TOME<FF> | 토메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-019 | `0x05739` | ONOKIYATA<FF> | 오노키야타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-020 | `0x05743` | ISORORIHEICHIE<FF> | 이소로리헤이치에 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-021 | `0x05752` | SUMI<FF> | 수미 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-022 | `0x05757` | SHIN<FF> | 시 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-023 | `0x0575C` | MUNE<FF> | 무네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-024 | `0x05761` | GENSUOISA<FF> | 게수오이사 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-025 | `0x0576B` | HEMO<FF> | 헤모 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-026 | `0x05770` | YOTA<FF> | 요타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-027 | `0x05775` | KAME<FF> | 카메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-028 | `0x0577A` | TAKI<FF> | 타키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-029 | `0x0577F` | HISA<FF> | 히사 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-030 | `0x05784` | SAHEIKISU<FF> | 사헤이키수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-031 | `0x0578E` | NORI<FF> | 노리 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-032 | `0x05793` | KOUKISUEMATAKE<FF> | 코우키수에마타케 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-033 | `0x057A2` | UMEMABOBU<FF> | 우메마보부 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-034 | `0x057AC` | YUUE<FF> | 유우에 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-035 | `0x057B1` | YOSHIRIHE<FF> | 요시리헤 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-036 | `0x057BB` | HACHIDEZOUKUMI<FF> | 하치데조우쿠미 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-037 | `0x057CA` | TARO<FF> | 타로 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-038 | `0x057CF` | URASAYONE<FF> | 우라사요네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-039 | `0x057D9` | SHIMATERU<FF> | 시마테루 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-040 | `0x057E3` | SUYA<FF> | 수야 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-041 | `0x057E8` | MORI<FF> | 모리 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-042 | `0x057ED` | ISHI<FF> | 이시 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-016 | `0x0572A` | WATA<FF> | 와타 | PATCHED |  |
+| EN-PRE-017 | `0x0572F` | URAE<FF> | 우라에 | PATCHED |  |
+| EN-PRE-018 | `0x05734` | TOME<FF> | 토메 | PATCHED |  |
+| EN-PRE-019 | `0x05739` | ONOKIYATA<FF> | 오노키야타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-020 | `0x05743` | ISORORIHEICHIE<FF> | 이소로리헤이치에 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-021 | `0x05752` | SUMI<FF> | 수미 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-022 | `0x05757` | SHIN<FF> | 시 | PATCHED |  |
+| EN-PRE-023 | `0x0575C` | MUNE<FF> | 무네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-024 | `0x05761` | GENSUOISA<FF> | 게수오이사 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-025 | `0x0576B` | HEMO<FF> | 헤모 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-026 | `0x05770` | YOTA<FF> | 요타 | PATCHED |  |
+| EN-PRE-027 | `0x05775` | KAME<FF> | 카메 | PATCHED |  |
+| EN-PRE-028 | `0x0577A` | TAKI<FF> | 타키 | PATCHED |  |
+| EN-PRE-029 | `0x0577F` | HISA<FF> | 히사 | PATCHED |  |
+| EN-PRE-030 | `0x05784` | SAHEIKISU<FF> | 사헤이키수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-031 | `0x0578E` | NORI<FF> | 노리 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-032 | `0x05793` | KOUKISUEMATAKE<FF> | 코우키수에마타케 | PATCHED |  |
+| EN-PRE-033 | `0x057A2` | UMEMABOBU<FF> | 우메마보부 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-034 | `0x057AC` | YUUE<FF> | 유우에 | PATCHED |  |
+| EN-PRE-035 | `0x057B1` | YOSHIRIHE<FF> | 요시리헤 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-036 | `0x057BB` | HACHIDEZOUKUMI<FF> | 하치데조우쿠미 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-037 | `0x057CA` | TARO<FF> | 타로 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-038 | `0x057CF` | URASAYONE<FF> | 우라사요네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-039 | `0x057D9` | SHIMATERU<FF> | 시마테루 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-040 | `0x057E3` | SUYA<FF> | 수야 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-041 | `0x057E8` | MORI<FF> | 모리 | PATCHED |  |
+| EN-PRE-042 | `0x057ED` | ISHI<FF> | 이시 | PATCHED |  |
 | EN-PRE-043 | `0x057F2` | SAKU<FF> | 사쿠 | PATCHED |  |
-| EN-PRE-044 | `0x057F7` | URAJISHIBAJMGQ<FF> | 우라지시바 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-045 | `0x05806` | SHIROJUNZOINETAAKIZOYURI<FF> | 시로우조이네타아키조유리 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-046 | `0x0581F` | SUTE<FF> | 수테 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-047 | `0x05824` | SHUU<FF> | 슈우 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-048 | `0x05829` | EBINOCHIJIATSU<FF> | 에비노치지아츠 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-049 | `0x05838` | KANA<FF> | 카나 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-044 | `0x057F7` | URAJISHIBAJMGQ<FF> | 우라지시바 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-045 | `0x05806` | SHIROJUNZOINETAAKIZOYURI<FF> | 시로우조이네타아키조유리 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-046 | `0x0581F` | SUTE<FF> | 수테 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-047 | `0x05824` | SHUU<FF> | 슈우 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-048 | `0x05829` | EBINOCHIJIATSU<FF> | 에비노치지아츠 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-049 | `0x05838` | KANA<FF> | 카나 | PATCHED |  |
 | EN-PRE-050 | `0x0583D` | SUKE<FF> | 수케 | PATCHED |  |
 | EN-PRE-051 | `0x05842` | GOSU<FF> | 고수 | PATCHED |  |
-| EN-PRE-052 | `0x05847` | TSUNOKIKU<FF> | 츠노키쿠 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-053 | `0x05851` | TOSHITSUKIOBISAYASU<FF> | 토시츠키오비사야수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-054 | `0x05865` | KENGOMANSIKATSUSONO<FF> | 케고마시카츠소노 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-052 | `0x05847` | TSUNOKIKU<FF> | 츠노키쿠 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-053 | `0x05851` | TOSHITSUKIOBISAYASU<FF> | 토시츠키오비사야수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-054 | `0x05865` | KENGOMANSIKATSUSONO<FF> | 케고마시카츠소노 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
 | EN-PRE-055 | `0x05879` | GOSA<FF> | 고사 | PATCHED |  |
-| EN-PRE-056 | `0x0587E` | TOUBEZENE<FF> | 토우베제네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-057 | `0x05888` | OMENOMOCHISHOU<FF> | 오메노모치쇼우 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-058 | `0x05897` | INGO<FF> | 이고 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-059 | `0x0589C` | NEHA<FF> | 네하 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-060 | `0x058A1` | TEMA<FF> | 테마 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-061 | `0x058A6` | MOHE<FF> | 모헤 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-062 | `0x058AB` | SOME<FF> | 소메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-063 | `0x058B0` | KAMO<FF> | 카모 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-056 | `0x0587E` | TOUBEZENE<FF> | 토우베제네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-057 | `0x05888` | OMENOMOCHISHOU<FF> | 오메노모치쇼우 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-058 | `0x05897` | INGO<FF> | 이고 | PATCHED |  |
+| EN-PRE-059 | `0x0589C` | NEHA<FF> | 네하 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-060 | `0x058A1` | TEMA<FF> | 테마 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-061 | `0x058A6` | MOHE<FF> | 모헤 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-062 | `0x058AB` | SOME<FF> | 소메 | PATCHED |  |
+| EN-PRE-063 | `0x058B0` | KAMO<FF> | 카모 | PATCHED |  |
 | EN-PRE-064 | `0x058B5` | MATA<FF> | 마타 | PATCHED |  |
-| EN-PRE-065 | `0x058BA` | UKI<FF> | 우키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-067 | `0x058BF` | GORO<FF> | 고로 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-070 | `0x058EC` | TEHA<FF> | 테하 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-071 | `0x058F1` | SENBESENPAHOME<FF> | 세베세파호메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-072 | `0x05900` | TAHA<FF> | 타하 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-073 | `0x05905` | KICHINETA<FF> | 키치네타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-065 | `0x058BA` | UKI<FF> | 우키 | PATCHED |  |
+| EN-PRE-067 | `0x058BF` | GORO<FF> | 고로 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-070 | `0x058EC` | TEHA<FF> | 테하 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-071 | `0x058F1` | SENBESENPAHOME<FF> | 세베세파호메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-072 | `0x05900` | TAHA<FF> | 타하 | PATCHED |  |
+| EN-PRE-073 | `0x05905` | KICHINETA<FF> | 키치네타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
 | EN-PRE-074 | `0x0590F` | TAGO<FF> | 타고 | PATCHED |  |
-| EN-PRE-077 | `0x05928` | TANE<FF> | 타네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-078 | `0x0592D` | HEKO<FF> | 헤코 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-079 | `0x05932` | MATAAMEHEIMASU<FF> | 마타아메헤이마수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-077 | `0x05928` | TANE<FF> | 타네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-078 | `0x0592D` | HEKO<FF> | 헤코 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-079 | `0x05932` | MATAAMEHEIMASU<FF> | 마타아메헤이마수 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
 | EN-PRE-080 | `0x05941` | UNJI<FF> | 우지 | PATCHED |  |
-| EN-PRE-081 | `0x05946` | MONO<FF> | 모노 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-082 | `0x0594B` | DENSUUMESIMAGO<FF> | 데수우메시마고 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-083 | `0x0595A` | RAHA<FF> | 라하 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-084 | `0x0595F` | MOHEISENROCHOU<FF> | 모헤이세로초우 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-088 | `0x05982` | KANTAFUNE<FF> | 카타후네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-089 | `0x0598C` | KANSUSUJI<FF> | 카수수지 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-090 | `0x05996` | SICHIUSHI<FF> | 시치우시 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-091 | `0x059A0` | ROHEIKOME<FF> | 로헤이코메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-092 | `0x059AA` | GOBEEZENJISUNE<FF> | 고베에제지수네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-093 | `0x059B9` | KINE<FF> | 키네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-081 | `0x05946` | MONO<FF> | 모노 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-082 | `0x0594B` | DENSUUMESIMAGO<FF> | 데수우메시마고 | PATCHED |  |
+| EN-PRE-083 | `0x0595A` | RAHA<FF> | 라하 | PATCHED |  |
+| EN-PRE-084 | `0x0595F` | MOHEISENROCHOU<FF> | 모헤이세로초우 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-088 | `0x05982` | KANTAFUNE<FF> | 카타후네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-089 | `0x0598C` | KANSUSUJI<FF> | 카수수지 | PATCHED |  |
+| EN-PRE-090 | `0x05996` | SICHIUSHI<FF> | 시치우시 | PATCHED |  |
+| EN-PRE-091 | `0x059A0` | ROHEIKOME<FF> | 로헤이코메 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-092 | `0x059AA` | GOBEEZENJISUNE<FF> | 고베에제지수네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-093 | `0x059B9` | KINE<FF> | 키네 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
 | EN-PRE-094 | `0x059BE` | SUZU<FF> | 수즈 | PATCHED |  |
-| EN-PRE-095 | `0x059C3` | INEMOHATA<FF> | 이네모하타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
-| EN-PRE-096 | `0x059CD` | UNOMAYAENONEKI<FF> | 우노마야에노네키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xBF-pool |
+| EN-PRE-095 | `0x059C3` | INEMOHATA<FF> | 이네모하타 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |
+| EN-PRE-096 | `0x059CD` | UNOMAYAENONEKI<FF> | 우노마야에노네키 | SKIPPED_GLYPH_OVERFLOW | soft-gate-0x9B-0xDF-pool |

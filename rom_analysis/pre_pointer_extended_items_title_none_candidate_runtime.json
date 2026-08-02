@@ -1,6 +1,6 @@
 {
-  "candidate": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_items_title_none_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
-  "capture_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\items_title_none_pre_pointer_safe_candidate_runtime",
+  "candidate": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_items_title_none_candidate_runtime_pass\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
+  "capture_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\pre_pointer_extended_items_title_none_candidate_runtime",
   "capture_completed": true,
   "source_checks": {
     "name_prg_seed": true,

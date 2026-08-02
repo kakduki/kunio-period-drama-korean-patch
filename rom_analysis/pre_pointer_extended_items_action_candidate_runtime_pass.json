@@ -1,0 +1,71 @@
+{
+  "status": "BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_PASS",
+  "release_status": "NOT_READY",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "input_md5": "0fb9eecf4abbb2f06a0e2e150cb2582d",
+  "candidate_md5": "a07623319e3b8100bcae422e2dd988df",
+  "input_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_static_candidate\\kunio_period_drama_korean_pre_pointer_extended_static_candidate.nes",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_items_action_candidate_runtime_pass\\kunio_period_drama_korean_full_items_action_candidate.nes",
+  "candidate_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_items_action_candidate_runtime_pass\\kunio_period_drama_korean_full_items_action_candidate.ips",
+  "source_chain": {
+    "rom_offset": "0x13727",
+    "length": 33,
+    "prg_16k_bank": 4,
+    "mmc3_8k_bank": 9,
+    "cpu_start": "0xB717",
+    "queue_ram_start": "0x6360",
+    "ppu_action_start": "0x2363"
+  },
+  "code_by_glyph": {
+    "사": "0x8C",
+    "용": "0x98",
+    "버": "0x99",
+    "리": "0x9B",
+    "기": "0x9C",
+    "주": "0x9E",
+    "림": "0xA3"
+  },
+  "slots": [
+    {
+      "english": "USE",
+      "korean": "사용",
+      "rom_offset": "0x1372B",
+      "length": 3,
+      "base_bytes": "92 86 83",
+      "new_bytes": "8C 98 00"
+    },
+    {
+      "english": "REMOVE",
+      "korean": "버리기",
+      "rom_offset": "0x13733",
+      "length": 6,
+      "base_bytes": "9A 8D 8D 00 00 00",
+      "new_bytes": "99 9B 9C 00 00 00"
+    },
+    {
+      "english": "GIVE",
+      "korean": "주기",
+      "rom_offset": "0x1373B",
+      "length": 4,
+      "base_bytes": "AC 90 8D 00",
+      "new_bytes": "9E 9C 00 00"
+    },
+    {
+      "english": "DRP",
+      "korean": "버림",
+      "rom_offset": "0x13743",
+      "length": 3,
+      "base_bytes": "8D 93 A9",
+      "new_bytes": "99 A3 00"
+    }
+  ],
+  "font_page": "CHR 1 KiB pages 0x3E/0x3F",
+  "ips_record_count": 769,
+  "notes": [
+    "Static source-chain, byte-scope, and IPS round-trip checks pass.",
+    "Only the four action slots are changed; title and NONE remain English in this candidate.",
+    "The normal Items R1 page is used so the source chain remains unchanged.",
+    "The code pool is isolated from the bounded menu and English action codes, but release-wide page safety is not proven.",
+    "Candidate FCEUX capture and byte verifier PASS."
+  ]
+}

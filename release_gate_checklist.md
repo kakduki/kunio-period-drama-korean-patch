@@ -178,3 +178,18 @@ This unified candidate supersedes the standalone 22-row build for development wo
 | Native visual evidence | UNKNOWN | FCEUX GD screenshot buffer is transparent; no release visual PASS claimed. |
 | Boss-route proof | UNKNOWN | No enemy-clear or boss-spawn route was used in this bounded verification. |
 | Release | NOT_READY | Remaining renderer coverage and visual/context gates are open. |
+## Safe Expanded Pre-Pointer Items Gate (2026-08-02)
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| Safe pre-pointer code allocation | PASS_SOFT_GATE | New glyphs occupy 0x9B-0xDF; 0xAC/0xB0/0xBB and low-nibble 0x0E/0x0F paths are excluded. |
+| Expanded static candidate | PASS | 70 new rows patched; 43 glyph-overflow rows and one missing-glyph row remain quarantined. |
+| Items action runtime | PASS | FCEUX queue and PPU bytes match at frame 1737; required Items banks are observed. |
+| Items title/name/NONE runtime | PASS | Name seed, title suffix, and NONE source chains match at frame 1737. |
+| Normal progression smoke | PASS_SOFT_GATE | 7,200 frames reach lua_done and 24 unique screen fingerprints. |
+| Pre-pointer runtime coverage | SOFT_GATE | 10 runtime-source reads; 152 static-only; 4 unknown-PC; 2 empty/data. |
+| Native visual proof | UNKNOWN | FCEUX GD screenshot pixels are transparent in this environment. |
+| Natural boss route | UNKNOWN | Enemy-clear, boss-spawn, and boss-dialogue ownership are not proven. |
+| Release promotion | NOT_READY | Remaining renderer families, row coverage, visual proof, and boss route remain open. |
+
+This is the current bounded development candidate. It is not the final Korean release ROM.

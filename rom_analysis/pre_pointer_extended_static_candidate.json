@@ -7,17 +7,17 @@
   "reference_md5": "63e1d902807981f524af97748cd99500",
   "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_static_candidate\\kunio_period_drama_korean_pre_pointer_extended_static_candidate.nes",
   "candidate_ips": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_extended_static_candidate\\kunio_period_drama_korean_pre_pointer_extended_static_candidate.ips",
-  "candidate_md5": "e9269cf2f44b57fe739329f8edbfe2aa",
+  "candidate_md5": "0fb9eecf4abbb2f06a0e2e150cb2582d",
   "label_record_count": 143,
-  "patched_count": 29,
+  "patched_count": 70,
   "runtime_gate": null,
   "runtime_approved_count": null,
   "status_counts": {
     "SKIPPED_INPUT_DRIFT": 7,
     "PRESERVED_EXISTING": 22,
-    "PATCHED": 29,
+    "PATCHED": 70,
     "SKIPPED_MISSING_GLYPH": 1,
-    "SKIPPED_GLYPH_OVERFLOW": 84
+    "SKIPPED_GLYPH_OVERFLOW": 43
   },
   "rows": [
     {
@@ -566,8 +566,8 @@
       "korean": "이나",
       "source": "curated_alias",
       "confidence": "reviewed_label",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -577,8 +577,8 @@
       "korean": "카와",
       "source": "curated_alias",
       "confidence": "reviewed_label",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -599,8 +599,8 @@
       "korean": "나가",
       "source": "curated_alias",
       "confidence": "reviewed_label",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -610,8 +610,8 @@
       "korean": "히즈",
       "source": "curated_alias",
       "confidence": "reviewed_label",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -621,8 +621,8 @@
       "korean": "오드",
       "source": "curated_alias",
       "confidence": "reviewed_label",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -632,8 +632,8 @@
       "korean": "유키",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -643,8 +643,8 @@
       "korean": "이토키사키",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -654,8 +654,8 @@
       "korean": "타모",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -665,8 +665,8 @@
       "korean": "사이조하기",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -676,8 +676,8 @@
       "korean": "하시코수",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -687,8 +687,8 @@
       "korean": "하수코우에",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -698,8 +698,8 @@
       "korean": "히라",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -709,8 +709,8 @@
       "korean": "히데",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -720,8 +720,8 @@
       "korean": "아시",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -731,8 +731,8 @@
       "korean": "베",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -742,8 +742,8 @@
       "korean": "사이타모에모무라",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 14
     },
     {
@@ -753,8 +753,8 @@
       "korean": "사다",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -764,8 +764,8 @@
       "korean": "세키",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -775,8 +775,8 @@
       "korean": "요츠토모",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -797,8 +797,8 @@
       "korean": "와타",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -808,8 +808,8 @@
       "korean": "우라에",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -819,8 +819,8 @@
       "korean": "토메",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -831,7 +831,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -842,7 +842,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -853,7 +853,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -863,8 +863,8 @@
       "korean": "시",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -875,7 +875,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -886,7 +886,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -897,7 +897,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -907,8 +907,8 @@
       "korean": "요타",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -918,8 +918,8 @@
       "korean": "카메",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -929,8 +929,8 @@
       "korean": "타키",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -940,8 +940,8 @@
       "korean": "히사",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -952,7 +952,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -963,7 +963,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -973,8 +973,8 @@
       "korean": "코우키수에마타케",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 14
     },
     {
@@ -985,7 +985,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -995,8 +995,8 @@
       "korean": "유우에",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1007,7 +1007,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1018,7 +1018,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1029,7 +1029,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1040,7 +1040,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1051,7 +1051,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1062,7 +1062,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1072,8 +1072,8 @@
       "korean": "모리",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1083,8 +1083,8 @@
       "korean": "이시",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1106,7 +1106,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1117,7 +1117,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 24
     },
     {
@@ -1128,7 +1128,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1139,7 +1139,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1150,7 +1150,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1160,8 +1160,8 @@
       "korean": "카나",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1194,7 +1194,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1205,7 +1205,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 19
     },
     {
@@ -1216,7 +1216,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 19
     },
     {
@@ -1238,7 +1238,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1249,7 +1249,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1259,8 +1259,8 @@
       "korean": "이고",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1271,7 +1271,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1282,7 +1282,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1293,7 +1293,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1303,8 +1303,8 @@
       "korean": "소메",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1314,8 +1314,8 @@
       "korean": "카모",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1336,8 +1336,8 @@
       "korean": "우키",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 3
     },
     {
@@ -1348,7 +1348,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1359,7 +1359,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1370,7 +1370,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1380,8 +1380,8 @@
       "korean": "타하",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1392,7 +1392,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1414,7 +1414,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1425,7 +1425,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1436,7 +1436,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1458,7 +1458,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1468,8 +1468,8 @@
       "korean": "데수우메시마고",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 14
     },
     {
@@ -1479,8 +1479,8 @@
       "korean": "라하",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 4
     },
     {
@@ -1491,7 +1491,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1502,7 +1502,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1512,8 +1512,8 @@
       "korean": "카수수지",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -1523,8 +1523,8 @@
       "korean": "시치우시",
       "source": "romaji_fallback",
       "confidence": "fallback_name",
-      "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "status": "PATCHED",
+      "reason": "",
       "width": 9
     },
     {
@@ -1535,7 +1535,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1546,7 +1546,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     },
     {
@@ -1557,7 +1557,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 4
     },
     {
@@ -1579,7 +1579,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 9
     },
     {
@@ -1590,7 +1590,7 @@
       "source": "romaji_fallback",
       "confidence": "fallback_name",
       "status": "SKIPPED_GLYPH_OVERFLOW",
-      "reason": "soft-gate-0x9B-0xBF-pool",
+      "reason": "soft-gate-0x9B-0xDF-pool",
       "width": 14
     }
   ],
@@ -1624,37 +1624,59 @@
     "수": "0x9B",
     "프": "0x9C",
     "감": "0x9D",
-    "자": "0x9E",
-    "생": "0x9F",
-    "선": "0xA0",
-    "만": "0xA1",
-    "강": "0xA2",
-    "장": "0xA3",
-    "제": "0xA4",
-    "두": "0xA5",
-    "배": "0xA6",
-    "우": "0xA7",
-    "비": "0xA8",
-    "체": "0xA9",
-    "력": "0xAA",
-    "펀": "0xAB",
-    "무": "0xAD",
-    "던": "0xAE",
-    "지": "0xAF",
-    "민": "0xB1",
-    "첩": "0xB2",
-    "의": "0xB3",
-    "방": "0xB4",
-    "어": "0xB5",
-    "힘": "0xB6",
-    "스": "0xB7",
-    "루": "0xB8",
-    "가": "0xB9",
-    "즈": "0xBA",
-    "코": "0xBC",
-    "케": "0xBD",
-    "쿠": "0xBE",
-    "토": "0xBF"
+    "자": "0xA0",
+    "생": "0xA1",
+    "선": "0xA2",
+    "만": "0xA3",
+    "강": "0xA4",
+    "장": "0xA5",
+    "제": "0xA6",
+    "두": "0xA7",
+    "배": "0xA8",
+    "우": "0xA9",
+    "비": "0xAA",
+    "체": "0xAB",
+    "력": "0xAD",
+    "펀": "0xB1",
+    "무": "0xB2",
+    "던": "0xB3",
+    "지": "0xB4",
+    "민": "0xB5",
+    "첩": "0xB6",
+    "의": "0xB7",
+    "방": "0xB8",
+    "어": "0xB9",
+    "힘": "0xBA",
+    "스": "0xBC",
+    "루": "0xBD",
+    "가": "0xC0",
+    "즈": "0xC1",
+    "코": "0xC2",
+    "케": "0xC3",
+    "쿠": "0xC4",
+    "이": "0xC5",
+    "나": "0xC6",
+    "카": "0xC7",
+    "와": "0xC8",
+    "토": "0xC9",
+    "히": "0xCA",
+    "오": "0xCB",
+    "유": "0xCC",
+    "키": "0xCD",
+    "모": "0xD0",
+    "조": "0xD1",
+    "하": "0xD2",
+    "시": "0xD3",
+    "에": "0xD4",
+    "라": "0xD5",
+    "데": "0xD6",
+    "아": "0xD7",
+    "베": "0xD8",
+    "다": "0xD9",
+    "세": "0xDA",
+    "요": "0xDB",
+    "츠": "0xDC",
+    "메": "0xDD"
   },
   "new_glyphs": [
     "수",
@@ -1690,7 +1712,29 @@
     "코",
     "케",
     "쿠",
-    "토"
+    "이",
+    "나",
+    "카",
+    "와",
+    "토",
+    "히",
+    "오",
+    "유",
+    "키",
+    "모",
+    "조",
+    "하",
+    "시",
+    "에",
+    "라",
+    "데",
+    "아",
+    "베",
+    "다",
+    "세",
+    "요",
+    "츠",
+    "메"
   ],
   "font_rows": [
     {
@@ -1719,22 +1763,6 @@
     },
     {
       "glyph": "자",
-      "code": "0x9E",
-      "top_tile": "0x19E",
-      "bottom_tile": "0x1BE",
-      "top_rom_offset": "0x2F9F0",
-      "bottom_rom_offset": "0x2FBF0"
-    },
-    {
-      "glyph": "생",
-      "code": "0x9F",
-      "top_tile": "0x19F",
-      "bottom_tile": "0x1BF",
-      "top_rom_offset": "0x2FA00",
-      "bottom_rom_offset": "0x2FC00"
-    },
-    {
-      "glyph": "선",
       "code": "0xA0",
       "top_tile": "0x1A0",
       "bottom_tile": "0x1C0",
@@ -1742,7 +1770,7 @@
       "bottom_rom_offset": "0x2FC10"
     },
     {
-      "glyph": "만",
+      "glyph": "생",
       "code": "0xA1",
       "top_tile": "0x1A1",
       "bottom_tile": "0x1C1",
@@ -1750,7 +1778,7 @@
       "bottom_rom_offset": "0x2FC20"
     },
     {
-      "glyph": "강",
+      "glyph": "선",
       "code": "0xA2",
       "top_tile": "0x1A2",
       "bottom_tile": "0x1C2",
@@ -1758,7 +1786,7 @@
       "bottom_rom_offset": "0x2FC30"
     },
     {
-      "glyph": "장",
+      "glyph": "만",
       "code": "0xA3",
       "top_tile": "0x1A3",
       "bottom_tile": "0x1C3",
@@ -1766,7 +1794,7 @@
       "bottom_rom_offset": "0x2FC40"
     },
     {
-      "glyph": "제",
+      "glyph": "강",
       "code": "0xA4",
       "top_tile": "0x1A4",
       "bottom_tile": "0x1C4",
@@ -1774,7 +1802,7 @@
       "bottom_rom_offset": "0x2FC50"
     },
     {
-      "glyph": "두",
+      "glyph": "장",
       "code": "0xA5",
       "top_tile": "0x1A5",
       "bottom_tile": "0x1C5",
@@ -1782,7 +1810,7 @@
       "bottom_rom_offset": "0x2FC60"
     },
     {
-      "glyph": "배",
+      "glyph": "제",
       "code": "0xA6",
       "top_tile": "0x1A6",
       "bottom_tile": "0x1C6",
@@ -1790,7 +1818,7 @@
       "bottom_rom_offset": "0x2FC70"
     },
     {
-      "glyph": "우",
+      "glyph": "두",
       "code": "0xA7",
       "top_tile": "0x1A7",
       "bottom_tile": "0x1C7",
@@ -1798,7 +1826,7 @@
       "bottom_rom_offset": "0x2FC80"
     },
     {
-      "glyph": "비",
+      "glyph": "배",
       "code": "0xA8",
       "top_tile": "0x1A8",
       "bottom_tile": "0x1C8",
@@ -1806,7 +1834,7 @@
       "bottom_rom_offset": "0x2FC90"
     },
     {
-      "glyph": "체",
+      "glyph": "우",
       "code": "0xA9",
       "top_tile": "0x1A9",
       "bottom_tile": "0x1C9",
@@ -1814,7 +1842,7 @@
       "bottom_rom_offset": "0x2FCA0"
     },
     {
-      "glyph": "력",
+      "glyph": "비",
       "code": "0xAA",
       "top_tile": "0x1AA",
       "bottom_tile": "0x1CA",
@@ -1822,7 +1850,7 @@
       "bottom_rom_offset": "0x2FCB0"
     },
     {
-      "glyph": "펀",
+      "glyph": "체",
       "code": "0xAB",
       "top_tile": "0x1AB",
       "bottom_tile": "0x1CB",
@@ -1830,7 +1858,7 @@
       "bottom_rom_offset": "0x2FCC0"
     },
     {
-      "glyph": "무",
+      "glyph": "력",
       "code": "0xAD",
       "top_tile": "0x1AD",
       "bottom_tile": "0x1CD",
@@ -1838,23 +1866,7 @@
       "bottom_rom_offset": "0x2FCE0"
     },
     {
-      "glyph": "던",
-      "code": "0xAE",
-      "top_tile": "0x1AE",
-      "bottom_tile": "0x1CE",
-      "top_rom_offset": "0x2FAF0",
-      "bottom_rom_offset": "0x2FCF0"
-    },
-    {
-      "glyph": "지",
-      "code": "0xAF",
-      "top_tile": "0x1AF",
-      "bottom_tile": "0x1CF",
-      "top_rom_offset": "0x2FB00",
-      "bottom_rom_offset": "0x2FD00"
-    },
-    {
-      "glyph": "민",
+      "glyph": "펀",
       "code": "0xB1",
       "top_tile": "0x1B1",
       "bottom_tile": "0x1D1",
@@ -1862,7 +1874,7 @@
       "bottom_rom_offset": "0x2FD20"
     },
     {
-      "glyph": "첩",
+      "glyph": "무",
       "code": "0xB2",
       "top_tile": "0x1B2",
       "bottom_tile": "0x1D2",
@@ -1870,7 +1882,7 @@
       "bottom_rom_offset": "0x2FD30"
     },
     {
-      "glyph": "의",
+      "glyph": "던",
       "code": "0xB3",
       "top_tile": "0x1B3",
       "bottom_tile": "0x1D3",
@@ -1878,7 +1890,7 @@
       "bottom_rom_offset": "0x2FD40"
     },
     {
-      "glyph": "방",
+      "glyph": "지",
       "code": "0xB4",
       "top_tile": "0x1B4",
       "bottom_tile": "0x1D4",
@@ -1886,7 +1898,7 @@
       "bottom_rom_offset": "0x2FD50"
     },
     {
-      "glyph": "어",
+      "glyph": "민",
       "code": "0xB5",
       "top_tile": "0x1B5",
       "bottom_tile": "0x1D5",
@@ -1894,7 +1906,7 @@
       "bottom_rom_offset": "0x2FD60"
     },
     {
-      "glyph": "힘",
+      "glyph": "첩",
       "code": "0xB6",
       "top_tile": "0x1B6",
       "bottom_tile": "0x1D6",
@@ -1902,7 +1914,7 @@
       "bottom_rom_offset": "0x2FD70"
     },
     {
-      "glyph": "스",
+      "glyph": "의",
       "code": "0xB7",
       "top_tile": "0x1B7",
       "bottom_tile": "0x1D7",
@@ -1910,7 +1922,7 @@
       "bottom_rom_offset": "0x2FD80"
     },
     {
-      "glyph": "루",
+      "glyph": "방",
       "code": "0xB8",
       "top_tile": "0x1B8",
       "bottom_tile": "0x1D8",
@@ -1918,7 +1930,7 @@
       "bottom_rom_offset": "0x2FD90"
     },
     {
-      "glyph": "가",
+      "glyph": "어",
       "code": "0xB9",
       "top_tile": "0x1B9",
       "bottom_tile": "0x1D9",
@@ -1926,7 +1938,7 @@
       "bottom_rom_offset": "0x2FDA0"
     },
     {
-      "glyph": "즈",
+      "glyph": "힘",
       "code": "0xBA",
       "top_tile": "0x1BA",
       "bottom_tile": "0x1DA",
@@ -1934,7 +1946,7 @@
       "bottom_rom_offset": "0x2FDB0"
     },
     {
-      "glyph": "코",
+      "glyph": "스",
       "code": "0xBC",
       "top_tile": "0x1BC",
       "bottom_tile": "0x1DC",
@@ -1942,7 +1954,7 @@
       "bottom_rom_offset": "0x2FDD0"
     },
     {
-      "glyph": "케",
+      "glyph": "루",
       "code": "0xBD",
       "top_tile": "0x1BD",
       "bottom_tile": "0x1DD",
@@ -1950,30 +1962,242 @@
       "bottom_rom_offset": "0x2FDE0"
     },
     {
+      "glyph": "가",
+      "code": "0xC0",
+      "top_tile": "0x1C0",
+      "bottom_tile": "0x1E0",
+      "top_rom_offset": "0x2FC10",
+      "bottom_rom_offset": "0x2FE10"
+    },
+    {
+      "glyph": "즈",
+      "code": "0xC1",
+      "top_tile": "0x1C1",
+      "bottom_tile": "0x1E1",
+      "top_rom_offset": "0x2FC20",
+      "bottom_rom_offset": "0x2FE20"
+    },
+    {
+      "glyph": "코",
+      "code": "0xC2",
+      "top_tile": "0x1C2",
+      "bottom_tile": "0x1E2",
+      "top_rom_offset": "0x2FC30",
+      "bottom_rom_offset": "0x2FE30"
+    },
+    {
+      "glyph": "케",
+      "code": "0xC3",
+      "top_tile": "0x1C3",
+      "bottom_tile": "0x1E3",
+      "top_rom_offset": "0x2FC40",
+      "bottom_rom_offset": "0x2FE40"
+    },
+    {
       "glyph": "쿠",
-      "code": "0xBE",
-      "top_tile": "0x1BE",
-      "bottom_tile": "0x1DE",
-      "top_rom_offset": "0x2FBF0",
-      "bottom_rom_offset": "0x2FDF0"
+      "code": "0xC4",
+      "top_tile": "0x1C4",
+      "bottom_tile": "0x1E4",
+      "top_rom_offset": "0x2FC50",
+      "bottom_rom_offset": "0x2FE50"
+    },
+    {
+      "glyph": "이",
+      "code": "0xC5",
+      "top_tile": "0x1C5",
+      "bottom_tile": "0x1E5",
+      "top_rom_offset": "0x2FC60",
+      "bottom_rom_offset": "0x2FE60"
+    },
+    {
+      "glyph": "나",
+      "code": "0xC6",
+      "top_tile": "0x1C6",
+      "bottom_tile": "0x1E6",
+      "top_rom_offset": "0x2FC70",
+      "bottom_rom_offset": "0x2FE70"
+    },
+    {
+      "glyph": "카",
+      "code": "0xC7",
+      "top_tile": "0x1C7",
+      "bottom_tile": "0x1E7",
+      "top_rom_offset": "0x2FC80",
+      "bottom_rom_offset": "0x2FE80"
+    },
+    {
+      "glyph": "와",
+      "code": "0xC8",
+      "top_tile": "0x1C8",
+      "bottom_tile": "0x1E8",
+      "top_rom_offset": "0x2FC90",
+      "bottom_rom_offset": "0x2FE90"
     },
     {
       "glyph": "토",
-      "code": "0xBF",
-      "top_tile": "0x1BF",
-      "bottom_tile": "0x1DF",
-      "top_rom_offset": "0x2FC00",
-      "bottom_rom_offset": "0x2FE00"
+      "code": "0xC9",
+      "top_tile": "0x1C9",
+      "bottom_tile": "0x1E9",
+      "top_rom_offset": "0x2FCA0",
+      "bottom_rom_offset": "0x2FEA0"
+    },
+    {
+      "glyph": "히",
+      "code": "0xCA",
+      "top_tile": "0x1CA",
+      "bottom_tile": "0x1EA",
+      "top_rom_offset": "0x2FCB0",
+      "bottom_rom_offset": "0x2FEB0"
+    },
+    {
+      "glyph": "오",
+      "code": "0xCB",
+      "top_tile": "0x1CB",
+      "bottom_tile": "0x1EB",
+      "top_rom_offset": "0x2FCC0",
+      "bottom_rom_offset": "0x2FEC0"
+    },
+    {
+      "glyph": "유",
+      "code": "0xCC",
+      "top_tile": "0x1CC",
+      "bottom_tile": "0x1EC",
+      "top_rom_offset": "0x2FCD0",
+      "bottom_rom_offset": "0x2FED0"
+    },
+    {
+      "glyph": "키",
+      "code": "0xCD",
+      "top_tile": "0x1CD",
+      "bottom_tile": "0x1ED",
+      "top_rom_offset": "0x2FCE0",
+      "bottom_rom_offset": "0x2FEE0"
+    },
+    {
+      "glyph": "모",
+      "code": "0xD0",
+      "top_tile": "0x1D0",
+      "bottom_tile": "0x1F0",
+      "top_rom_offset": "0x2FD10",
+      "bottom_rom_offset": "0x2FF10"
+    },
+    {
+      "glyph": "조",
+      "code": "0xD1",
+      "top_tile": "0x1D1",
+      "bottom_tile": "0x1F1",
+      "top_rom_offset": "0x2FD20",
+      "bottom_rom_offset": "0x2FF20"
+    },
+    {
+      "glyph": "하",
+      "code": "0xD2",
+      "top_tile": "0x1D2",
+      "bottom_tile": "0x1F2",
+      "top_rom_offset": "0x2FD30",
+      "bottom_rom_offset": "0x2FF30"
+    },
+    {
+      "glyph": "시",
+      "code": "0xD3",
+      "top_tile": "0x1D3",
+      "bottom_tile": "0x1F3",
+      "top_rom_offset": "0x2FD40",
+      "bottom_rom_offset": "0x2FF40"
+    },
+    {
+      "glyph": "에",
+      "code": "0xD4",
+      "top_tile": "0x1D4",
+      "bottom_tile": "0x1F4",
+      "top_rom_offset": "0x2FD50",
+      "bottom_rom_offset": "0x2FF50"
+    },
+    {
+      "glyph": "라",
+      "code": "0xD5",
+      "top_tile": "0x1D5",
+      "bottom_tile": "0x1F5",
+      "top_rom_offset": "0x2FD60",
+      "bottom_rom_offset": "0x2FF60"
+    },
+    {
+      "glyph": "데",
+      "code": "0xD6",
+      "top_tile": "0x1D6",
+      "bottom_tile": "0x1F6",
+      "top_rom_offset": "0x2FD70",
+      "bottom_rom_offset": "0x2FF70"
+    },
+    {
+      "glyph": "아",
+      "code": "0xD7",
+      "top_tile": "0x1D7",
+      "bottom_tile": "0x1F7",
+      "top_rom_offset": "0x2FD80",
+      "bottom_rom_offset": "0x2FF80"
+    },
+    {
+      "glyph": "베",
+      "code": "0xD8",
+      "top_tile": "0x1D8",
+      "bottom_tile": "0x1F8",
+      "top_rom_offset": "0x2FD90",
+      "bottom_rom_offset": "0x2FF90"
+    },
+    {
+      "glyph": "다",
+      "code": "0xD9",
+      "top_tile": "0x1D9",
+      "bottom_tile": "0x1F9",
+      "top_rom_offset": "0x2FDA0",
+      "bottom_rom_offset": "0x2FFA0"
+    },
+    {
+      "glyph": "세",
+      "code": "0xDA",
+      "top_tile": "0x1DA",
+      "bottom_tile": "0x1FA",
+      "top_rom_offset": "0x2FDB0",
+      "bottom_rom_offset": "0x2FFB0"
+    },
+    {
+      "glyph": "요",
+      "code": "0xDB",
+      "top_tile": "0x1DB",
+      "bottom_tile": "0x1FB",
+      "top_rom_offset": "0x2FDC0",
+      "bottom_rom_offset": "0x2FFC0"
+    },
+    {
+      "glyph": "츠",
+      "code": "0xDC",
+      "top_tile": "0x1DC",
+      "bottom_tile": "0x1FC",
+      "top_rom_offset": "0x2FDD0",
+      "bottom_rom_offset": "0x2FFD0"
+    },
+    {
+      "glyph": "메",
+      "code": "0xDD",
+      "top_tile": "0x1DD",
+      "bottom_tile": "0x1FD",
+      "top_rom_offset": "0x2FDE0",
+      "bottom_rom_offset": "0x2FFE0"
     }
   ],
-  "ips_record_count": 825,
+  "ips_record_count": 759,
   "renderer_contract": {
     "existing_input_codes": "0x81-0x9A",
-    "soft_extension_codes": "0x9B-0xBF",
+    "soft_extension_codes": "0x9B-0xDF",
     "soft_extension_reserved_controls": [
       "0xAC",
       "0xB0",
       "0xBB"
+    ],
+    "soft_extension_excluded_low_nibbles": [
+      "0x0E",
+      "0x0F"
     ],
     "bank": 7,
     "top_tile_base": "0x181",
@@ -1982,7 +2206,7 @@
   },
   "known_limits": [
     "Only control-free FF-delimited pre-pointer rows are considered.",
-    "0x9B-0xBF is a soft-gate renderer extension; parser controls 0xAC, 0xB0, and 0xBB are excluded.",
+    "0x9B-0xDF is a soft-gate renderer extension; parser controls and low-nibble 0x0E/0x0F paths are excluded.",
     "Fallback name transliterations require semantic review.",
     "Natural route and release visual proof remain pending."
   ]
