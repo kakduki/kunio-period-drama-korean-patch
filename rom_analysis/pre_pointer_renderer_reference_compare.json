@@ -1,0 +1,209 @@
+{
+  "roms": {
+    "japanese_base": {
+      "path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+      "md5": "0d406a85285b4de8468f0dab6aad5fe5"
+    },
+    "english_reference": {
+      "path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\english_reference_runtime\\kunio_period_drama_english_reference.nes",
+      "md5": "63e1d902807981f524af97748cd99500"
+    },
+    "korean_clean_candidate": {
+      "path": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_clean_merged_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
+      "md5": "2fba4bae8c65c31a2ebd96c7ed0f7fc9"
+    }
+  },
+  "regions": [
+    {
+      "name": "renderer_support",
+      "start": "0x05288",
+      "end": "0x052C8",
+      "english_changed": 27,
+      "korean_changed_vs_base": 0,
+      "korean_changed_vs_english": 27
+    },
+    {
+      "name": "pre_pointer_text",
+      "start": "0x056BC",
+      "end": "0x05D54",
+      "english_changed": 1470,
+      "korean_changed_vs_base": 465,
+      "korean_changed_vs_english": 1428
+    },
+    {
+      "name": "pointer_table",
+      "start": "0x05DD4",
+      "end": "0x05FC4",
+      "english_changed": 311,
+      "korean_changed_vs_base": 483,
+      "korean_changed_vs_english": 487
+    },
+    {
+      "name": "pointer_dialogue",
+      "start": "0x05FC4",
+      "end": "0x07767",
+      "english_changed": 5897,
+      "korean_changed_vs_base": 4057,
+      "korean_changed_vs_english": 5850
+    },
+    {
+      "name": "growth_ui",
+      "start": "0x07894",
+      "end": "0x078AB",
+      "english_changed": 20,
+      "korean_changed_vs_base": 0,
+      "korean_changed_vs_english": 20
+    },
+    {
+      "name": "menu_labels",
+      "start": "0x07FB6",
+      "end": "0x0800F",
+      "english_changed": 74,
+      "korean_changed_vs_base": 88,
+      "korean_changed_vs_english": 86
+    },
+    {
+      "name": "runtime_transform_8205",
+      "start": "0x08215",
+      "end": "0x0821D",
+      "english_changed": 0,
+      "korean_changed_vs_base": 0,
+      "korean_changed_vs_english": 0
+    }
+  ],
+  "runtime_transform": {
+    "cpu_window": "$8205-$820C",
+    "file_offset": "0x08215-0x0821C",
+    "japanese_base": "85 11 b1 07 45 1e 85 12",
+    "english_reference": "85 11 b1 07 45 1e 85 12",
+    "korean_clean_candidate": "85 11 b1 07 45 1e 85 12",
+    "unchanged_across_all_three": true
+  },
+  "trace_samples": {
+    "japanese_base": [
+      {
+        "frame": "177",
+        "entry": "8205",
+        "a": "08",
+        "y": "06",
+        "0007": "",
+        "0008": "",
+        "0011": "",
+        "0012": "",
+        "001E": "",
+        "r0": "$003C",
+        "r1": "$003E",
+        "r2": "$0030",
+        "r3": "$003D",
+        "r4": "$003E",
+        "r5": "$003F",
+        "r6": "$0004",
+        "r7": "$0005"
+      },
+      {
+        "frame": "177",
+        "entry": "8209",
+        "a": "00",
+        "y": "06",
+        "0007": "",
+        "0008": "",
+        "0011": "",
+        "0012": "",
+        "001E": "",
+        "r0": "$003C",
+        "r1": "$003E",
+        "r2": "$0030",
+        "r3": "$003D",
+        "r4": "$003E",
+        "r5": "$003F",
+        "r6": "$0004",
+        "r7": "$0005"
+      }
+    ],
+    "english_reference": [
+      {
+        "frame": "177",
+        "entry": "8205",
+        "a": "08",
+        "y": "06",
+        "0007": "",
+        "0008": "",
+        "0011": "",
+        "0012": "",
+        "001E": "",
+        "r0": "$003C",
+        "r1": "$003E",
+        "r2": "$0030",
+        "r3": "$003D",
+        "r4": "$003E",
+        "r5": "$003F",
+        "r6": "$0004",
+        "r7": "$0005"
+      },
+      {
+        "frame": "177",
+        "entry": "8209",
+        "a": "00",
+        "y": "06",
+        "0007": "",
+        "0008": "",
+        "0011": "",
+        "0012": "",
+        "001E": "",
+        "r0": "$003C",
+        "r1": "$003E",
+        "r2": "$0030",
+        "r3": "$003D",
+        "r4": "$003E",
+        "r5": "$003F",
+        "r6": "$0004",
+        "r7": "$0005"
+      }
+    ],
+    "korean_clean_candidate": [
+      {
+        "frame": "177",
+        "entry": "8205",
+        "a": "08",
+        "y": "06",
+        "0007": "0007=9A",
+        "0008": "0008=9B",
+        "0011": "0011=00",
+        "0012": "0012=00",
+        "001E": "001E=00",
+        "r0": "$003C",
+        "r1": "$003E",
+        "r2": "$0030",
+        "r3": "$003D",
+        "r4": "$003E",
+        "r5": "$003F",
+        "r6": "$0004",
+        "r7": "$0005"
+      },
+      {
+        "frame": "177",
+        "entry": "8209",
+        "a": "00",
+        "y": "06",
+        "0007": "0007=9A",
+        "0008": "0008=9B",
+        "0011": "0011=08",
+        "0012": "0012=00",
+        "001E": "001E=00",
+        "r0": "$003C",
+        "r1": "$003E",
+        "r2": "$0030",
+        "r3": "$003D",
+        "r4": "$003E",
+        "r5": "$003F",
+        "r6": "$0004",
+        "r7": "$0005"
+      }
+    ]
+  },
+  "conclusion": {
+    "english_reuses_runtime_transform": true,
+    "korean_reuses_runtime_transform": true,
+    "next_owner": "pre-pointer data encoding, renderer-support mapping, CHR font allocation, and bounded visual proof"
+  }
+}
