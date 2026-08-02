@@ -304,16 +304,22 @@ local function combat_input(frame)
     local rel = frame - 900
     if rel < 0 then return {} end
     if ADVANCE_AFTER_COMBAT and (byte_at(0x04F1) == 0x06 or byte_at(0x04F1) == 0x12) then
-        if frame % 36 < 12 then return { start = true } end
-        if frame % 36 < 24 then return { A = true } end
+        -- The encounter map route is Start -> B, then direction+B to move,
+        -- followed by direction+A+B to confirm an encounter.
+        local map_cycle = frame % 96
+        if map_cycle < 6 then return { start = true } end
+        if map_cycle < 12 then return {} end
+        if map_cycle < 54 then return { right = true, B = true } end
+        if map_cycle < 60 then return {} end
+        if map_cycle < 84 then return { right = true, A = true, B = true } end
         return {}
     end
     local cycle = rel % 240
     if COMBAT_SWEEP then
-        if cycle < 60 then return { right = true, A = true } end
-        if cycle < 120 then return { down = true, A = true } end
-        if cycle < 180 then return { left = true, A = true } end
-        return { up = true, A = true }
+        if cycle < 60 then return { right = true, A = true, B = true } end
+        if cycle < 120 then return { down = true, A = true, B = true } end
+        if cycle < 180 then return { left = true, A = true, B = true } end
+        return { up = true, A = true, B = true }
     end
     if COMBAT_NO_B then
         if cycle < 120 then return { right = true, A = true } end
