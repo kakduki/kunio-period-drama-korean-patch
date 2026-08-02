@@ -323,3 +323,14 @@ The English reference exposes 722 dialogue tile runs for comparison with the 250
 - Items runtime byte gate: PASS for name seed, PPU seed, title suffix, NONE, and queue output. Native screenshot pixels remain UNKNOWN because the available GD capture is transparent.
 - Release status: `NOT_READY`. This is the current bounded development build, not a final whole-game Korean release.
 - Reports: `rom_analysis/full_korean_full_composed_expanded_candidate.md`, `rom_analysis/full_korean_full_composed_expanded_runtime.md`, and `rom_analysis/full_korean_full_composed_expanded_items_runtime.json`.
+## Current Candidate 2026-08-02
+
+- Candidate ROM: output/pre_pointer_extended_items_title_none_candidate/kunio_period_drama_korean_full_items_title_none_candidate.nes
+- Candidate MD5: e52d4f8c6c46d85b05f7da54fdd1a545.
+- English owner chains are preserved and then replaced only at the documented Korean source owners.
+- Items action source: ROM 0x13727 -> CPU $B717 -> SRAM $6360 -> PPU $2363; runtime PASS at action frame 1737.
+- Items name/title/NONE sources: 0x0561B, 0x3FB32, 0x136F4, 0x0FC31; queue runtime PASS at frame 1737.
+- Normal route: 7200 lua_done, 24 unique screens; this is bounded progression evidence, not boss-route proof.
+- Pre-pointer gate: 10 runtime-approved rows; 29 new static rows in the current extension; 84 rows remain overflow and are not silently patched.
+- Native visual gate: UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT.
+- Release status: NOT_READY.

@@ -190,3 +190,13 @@ The 250-row pre-pointer inventory was compared with 722 English dialogue owner r
 - Items source and queue byte gate: PASS for name, title suffix, and NONE; native visual gate remains UNKNOWN.
 - Result: `SOFT_GATE_PASS_RUNTIME_NOT_READY`. Boss spawn/dialogue ownership, row-level native visual proof, shared-page safety, and remaining blocked/unmapped rows are still open.
 - Regression test: `scripts/test_full_korean_full_composed_expanded_candidate.py`.
+## Current Candidate 2026-08-02
+
+- Candidate ROM: output/pre_pointer_extended_items_title_none_candidate/kunio_period_drama_korean_full_items_title_none_candidate.nes
+- Candidate MD5: e52d4f8c6c46d85b05f7da54fdd1a545; size 368656 bytes.
+- Composition: full pointer Korean candidate base, 29 additional pre-pointer static rows, Korean Items action labels, Korean Items name/title/NONE owner chains.
+- Items action runtime: PASS; queue and PPU bytes match 8C 98 00 99 9B 9C 9E 9C 99 A3 at detected action frame 1737.
+- Items name/title/NONE runtime: PASS; all three queue owners match at frame 1737.
+- Normal progression: PASS; 7200 lua_done, 24 unique screens, combat changes captured.
+- Pre-pointer runtime classification: 10 approved, 152 static-only, 4 unknown-PC, 2 empty/data; 78 additional static rows remain glyph-pool overflow.
+- Release status: NOT_READY; native screenshot pixels, remaining pre-pointer coverage, shared-page audit, and boss-route proof remain open.

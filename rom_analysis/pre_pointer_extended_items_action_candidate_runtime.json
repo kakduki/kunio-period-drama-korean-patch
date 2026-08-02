@@ -10,7 +10,7 @@
   },
   "evidence": {
     "capture_frame": 1906,
-    "action_frame": 1736,
+    "action_frame": 1737,
     "queue_pc": "B70D",
     "queue_values": "8C 98 00 99 9B 9C 9E 9C 99 A3",
     "ppu_values": "8C 98 00 99 9B 9C 9E 9C 99 A3",

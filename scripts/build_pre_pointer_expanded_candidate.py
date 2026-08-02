@@ -35,6 +35,7 @@ OUT_STEM = "kunio_period_drama_korean_pre_pointer_full_candidate"
 
 CODE_START = 0x9B
 CODE_END = 0xB5
+RESERVED_SOFT_CODES = frozenset({0xAC, 0xB0, 0xBB})
 CHR_BANK7 = 7
 CHR_TILE_SIZE = 16
 BOTTOM_TILE_DELTA = 0x20
@@ -90,6 +91,7 @@ def build(
     report_markdown: Path,
     runtime_report: Path | None = None,
     out_stem: str = OUT_STEM,
+    code_end: int = CODE_END,
 ) -> dict[str, object]:
     base = base_rom.read_bytes()
     input_candidate = input_rom.read_bytes()
@@ -101,6 +103,9 @@ def build(
     reference = apply_records(base, reference_records, reference_truncate)
     char_glyphs = load_glyphs(char_map_path, font_path)
     runtime_gate = load_json(runtime_report) if runtime_report else None
+    if not CODE_START <= code_end <= 0xBF:
+        raise ValueError("pre-pointer soft-gate code end must be within 0x9B-0xBF")
+    soft_pool_codes = tuple(code for code in range(CODE_START, code_end + 1) if code not in RESERVED_SOFT_CODES)
     approved_ids = {str(value) for value in (runtime_gate or {}).get("approved_ids", [])}
     existing_codes = {str(glyph): int(str(code), 16) for glyph, code in dict(existing.get("glyph_codes", {})).items()}
     existing_offsets = {int(str(row["rom_offset"]), 16) for row in existing.get("targets", [])}
@@ -137,11 +142,11 @@ def build(
             status, reason = "SKIPPED_MISSING_GLYPH", "font-char-map-missing"
         else:
             missing = [char for char in dict.fromkeys(str(row["korean_text"])) if char not in glyph_codes]
-            if len(new_glyphs) + len(missing) > CODE_END - CODE_START + 1:
-                status, reason = "SKIPPED_GLYPH_OVERFLOW", "soft-gate-0x9B-0xB5-pool"
+            if len(new_glyphs) + len(missing) > len(soft_pool_codes):
+                status, reason = "SKIPPED_GLYPH_OVERFLOW", f"soft-gate-0x{CODE_START:02X}-0x{code_end:02X}-pool"
             else:
                 for char in missing:
-                    glyph_codes[char] = CODE_START + len(new_glyphs)
+                    glyph_codes[char] = soft_pool_codes[len(new_glyphs)]
                     new_glyphs.append(char)
                 encoded = bytes(glyph_codes[char] for char in str(row["korean_text"]))
                 replacement = encoded + bytes([0xFF]) * (width - len(encoded) + 1)
@@ -207,7 +212,8 @@ def build(
         "ips_record_count": len(records),
         "renderer_contract": {
             "existing_input_codes": "0x81-0x9A",
-            "soft_extension_codes": "0x9B-0xB5",
+            "soft_extension_codes": f"0x{CODE_START:02X}-0x{code_end:02X}",
+            "soft_extension_reserved_controls": [f"0x{code:02X}" for code in sorted(RESERVED_SOFT_CODES)],
             "bank": 7,
             "top_tile_base": "0x181",
             "bottom_tile_delta": "0x20",
@@ -215,7 +221,7 @@ def build(
         },
         "known_limits": [
             "Only control-free FF-delimited pre-pointer rows are considered.",
-            "0x9B-0xB5 is a soft-gate renderer extension and is not native-pixel proven.",
+            "0x9B-0xBF is a soft-gate renderer extension; parser controls 0xAC, 0xB0, and 0xBB are excluded.",
             "Fallback name transliterations require semantic review.",
             "Natural route and release visual proof remain pending.",
         ],
@@ -229,7 +235,7 @@ def build(
         f"- Patch-ready records considered: `{payload['label_record_count']}`.",
         f"- Newly patched records: `{payload['patched_count']}`.",
         f"- Runtime gate: `{payload['runtime_gate'] or 'not applied'}`.",
-        f"- New soft-gate glyphs: `{len(new_glyphs)}` in `0x9B-0xB5`.",
+        f"- New soft-gate glyphs: `{len(new_glyphs)}` in `0x{CODE_START:02X}-0x{code_end:02X}`.",
         f"- Status counts: `{json.dumps(status_counts, ensure_ascii=False)}`.",
         "- Release status: `NOT_READY`; this candidate is for bounded runtime validation.",
         "",
@@ -259,6 +265,7 @@ def main() -> int:
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
     parser.add_argument("--runtime-report", type=Path, default=None)
     parser.add_argument("--out-stem", default=OUT_STEM)
+    parser.add_argument("--code-end", type=lambda value: int(value, 0), default=CODE_END)
     args = parser.parse_args()
     font_path = args.font.resolve() if args.font else default_tall_font(None)
     payload = build(
@@ -266,6 +273,7 @@ def main() -> int:
         args.reference_ips.resolve(), args.char_map.resolve(), font_path,
         args.out_dir.resolve(), args.report_json.resolve(), args.report_markdown.resolve(),
         args.runtime_report.resolve() if args.runtime_report else None, args.out_stem,
+        args.code_end,
     )
     print(json.dumps({
         "status": payload["status"], "candidate_md5": payload["candidate_md5"],

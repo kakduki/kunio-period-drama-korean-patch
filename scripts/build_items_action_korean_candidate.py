@@ -105,6 +105,7 @@ def build(
     output_dir: Path,
     report_json: Path,
     report_markdown: Path,
+    runtime_report: Path | None = None,
 ) -> dict[str, object]:
     base = base_rom.read_bytes()
     current = input_rom.read_bytes()
@@ -121,6 +122,12 @@ def build(
     if missing:
         raise ValueError(f"font is missing Items glyphs: {missing}")
 
+    runtime_pass = False
+    if runtime_report is not None:
+        if not runtime_report.exists():
+            raise FileNotFoundError(f"Items runtime report not found: {runtime_report}")
+        runtime_pass = json.loads(runtime_report.read_text(encoding="utf-8")).get("verdict") == "PASS"
+    runtime_gate = "PASS" if runtime_pass else "UNKNOWN"
     patched = bytearray(current)
     source_after = bytearray(source)
     slot_report: list[dict[str, object]] = []
@@ -153,7 +160,7 @@ def build(
     write_ips(ips_path, make_records(base, candidate))
 
     payload: dict[str, object] = {
-        "status": "BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_UNKNOWN",
+        "status": "BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_PASS" if runtime_pass else "BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_UNKNOWN",
         "release_status": "NOT_READY",
         "base_md5": md5(base),
         "input_md5": md5(current),
@@ -179,7 +186,7 @@ def build(
             "Only the four action slots are changed; title and NONE remain English in this candidate.",
             "The normal Items R1 page is used so the source chain remains unchanged.",
             "The code pool is isolated from the bounded menu and English action codes, but release-wide page safety is not proven.",
-            "Candidate FCEUX capture is UNKNOWN because this environment produced no Lua output folder for either FCEUX binary.",
+            "Candidate FCEUX capture and byte verifier PASS." if runtime_pass else "Candidate FCEUX capture remains UNKNOWN until a bounded runtime report is supplied.",
         ],
     }
     report_json.parent.mkdir(parents=True, exist_ok=True)
@@ -204,7 +211,7 @@ def build(
         "## Gate",
         "",
         "- Byte-scope, source-chain, and IPS round-trip: PASS.",
-        "- Exact candidate Items PPU/source/queue proof: UNKNOWN; FCEUX emitted no Lua output in this environment.",
+        f"- Exact candidate Items PPU/source/queue proof: {runtime_gate}.",
         "- Title and empty-inventory rows remain untranslated and are separate follow-up owners.",
     ]
     report_markdown.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -220,6 +227,7 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
+    parser.add_argument("--runtime-report", type=Path, help="Optional bounded runtime verifier JSON report.")
     args = parser.parse_args()
     payload = build(
         args.input_rom.resolve(),
@@ -229,6 +237,7 @@ def main() -> int:
         args.out_dir.resolve(),
         args.report_json.resolve(),
         args.report_markdown.resolve(),
+        args.runtime_report.resolve() if args.runtime_report else None,
     )
     print(json.dumps(payload, ensure_ascii=False))
     return 0

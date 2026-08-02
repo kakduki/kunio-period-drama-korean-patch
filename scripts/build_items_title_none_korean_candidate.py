@@ -54,6 +54,12 @@ TITLE_SOURCE_LENGTH = 12
 NONE_SOURCE_OFFSET = 0x0FC31
 NONE_SOURCE_LENGTH = 5
 KNOWN_DIRECT_LOW_NONE_BYTES = bytes([0x05, 0x00, 0x00, 0x00, 0x02])
+ENGLISH_OWNER_BYTES = {
+    "name_prg_seed": bytes([0x8B, 0x95, 0x8E, 0x89, 0x8F]),
+    "name_ppu_seed": bytes([0x8B, 0x95, 0x8E, 0x89, 0x8F]),
+    "title_suffix": bytes([0xB6, 0x93, 0x80, 0x89, 0x94, 0x85, 0x8D, 0x93, 0x80, 0x80, 0x80, 0xCD]),
+    "none": bytes([0x0E, 0x0F, 0x0E, 0x05, 0x38]),
+}
 
 GLYPH_CODES = {
     "쿠": 0x20,
@@ -109,6 +115,7 @@ def build(
     output_dir: Path,
     report_json: Path,
     report_markdown: Path,
+    runtime_report: Path | None = None,
 ) -> dict[str, object]:
     base = base_rom.read_bytes()
     current = input_rom.read_bytes()
@@ -120,6 +127,13 @@ def build(
     if missing:
         raise ValueError(f"font is missing title/NONE glyphs: {missing}")
 
+    runtime_pass = False
+    if runtime_report is not None:
+        if not runtime_report.exists():
+            raise FileNotFoundError(f"Items title/NONE runtime report not found: {runtime_report}")
+        runtime_pass = json.loads(runtime_report.read_text(encoding="utf-8")).get("runtime_byte_gate") is True
+    runtime_gate = "PASS_BYTE_PROOF" if runtime_pass else "PENDING_FCEUX_BYTE_PROOF"
+    runtime_note = "PASS" if runtime_pass else "pending bounded runtime capture"
     source_specs = {
         "name_prg_seed": (NAME_SOURCE_OFFSET, NAME_SOURCE_LENGTH, NAME_BYTES),
         "name_ppu_seed": (NAME_PPU_SOURCE_OFFSET, NAME_SOURCE_LENGTH, NAME_PPU_BYTES),
@@ -134,6 +148,9 @@ def build(
         if len(base_bytes) != length or len(current_bytes) != length:
             raise ValueError(f"short source record for {owner} at 0x{offset:05X}")
         allowed_input_bytes = {base_bytes}
+        english_bytes = ENGLISH_OWNER_BYTES.get(owner)
+        if english_bytes is not None:
+            allowed_input_bytes.add(english_bytes)
         if owner == "none":
             # The current action candidate is composed on top of the earlier
             # direct-low candidate, which used this bounded intermediate row.
@@ -197,7 +214,7 @@ def build(
         raise AssertionError("IPS round trip differs from candidate ROM")
 
     payload: dict[str, object] = {
-        "status": "BUILT_ITEMS_TITLE_NONE_STATIC_PASS_RUNTIME_PENDING",
+        "status": "BUILT_ITEMS_TITLE_NONE_RUNTIME_BYTE_PASS_VISUAL_UNKNOWN" if runtime_pass else "BUILT_ITEMS_TITLE_NONE_STATIC_PASS_RUNTIME_PENDING",
         "release_status": "NOT_READY",
         "base_md5": md5(base),
         "input_md5": md5(current),
@@ -214,12 +231,12 @@ def build(
         "glyph_rows": glyph_rows,
         "font_pages": "CHR Bank 7 R0, low tiles 0x120-0x127; normal Items R1 remains 0x3E/0x3F",
         "ips_record_count": len(records),
-        "runtime_gate": "PENDING_FCEUX_BYTE_PROOF",
+        "runtime_gate": runtime_gate,
         "visual_gate": "UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT",
         "notes": [
             "The English owner chain is preserved; only the three source records and eight R0 glyph tiles are added relative to the action candidate.",
             "Input codes 0xA0-0xA7 mask to low R0 tile codes 0x20-0x27 in the fixed-bank text parser.",
-            "Runtime proof must verify title row 5 and NONE row 8 on the same bounded menu route before release consideration.",
+            "Runtime title/NONE byte proof passed on the bounded menu route." if runtime_pass else "Runtime proof must verify title row 5 and NONE row 8 on the same bounded menu route before release consideration.",
         ],
     }
     report_json.parent.mkdir(parents=True, exist_ok=True)
@@ -255,7 +272,7 @@ def build(
         "",
         "- Static source scope: PASS.",
         "- IPS round trip: PASS.",
-        "- FCEUX title/NONE byte proof: pending bounded runtime capture.",
+        f"- FCEUX title/NONE byte proof: {runtime_note}.",
         "- Native Lua screenshot pixels: UNKNOWN because the available screenshot buffer is transparent.",
         "- Release status: NOT_READY.",
     ]
@@ -273,6 +290,7 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
+    parser.add_argument("--runtime-report", type=Path, help="Optional bounded title/NONE runtime verifier JSON report.")
     args = parser.parse_args()
     payload = build(
         args.input_rom.resolve(),
@@ -282,6 +300,7 @@ def main() -> int:
         args.out_dir.resolve(),
         args.report_json.resolve(),
         args.report_markdown.resolve(),
+        args.runtime_report.resolve() if args.runtime_report else None,
     )
     print(json.dumps(payload, ensure_ascii=False))
     return 0

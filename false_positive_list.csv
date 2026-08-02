@@ -9,3 +9,7 @@ Main-menu edge tile,Tile 0xB8 at template rows 24/26 column 28 is layout decorat
 Unproven global Shift-JIS candidates,"No screen, pointer, or renderer context has been proven.",context_missing,Do not patch.
 English reference SETTNG typo,"The reference spelling is a structural clue, not source text to copy.",reference_text,Do not copy it.
 Historical 0x80-$9B main-menu R1 clone allocation,The first menu candidate reused code values present in the verified Items action row.,shared_mapper_page_conflict,Keep as a failed historical candidate; use the isolated code-pool allocation for the current soft-gated build.
+
+Name/pre-pointer owner collision at ROM 0x0561B,"The English patch owns this offset as the name-table seed while the pre-pointer inventory also sees it as a static occurrence. The current composition accepts the English owner bytes and applies the explicit Items title/name owner only in the final title/NONE candidate.",owner_collision,Keep one explicit owner per candidate; never apply both patches blindly.
+Pre-pointer glyph-pool overflow,"The current safe 0x9B-0xBF soft-gate pool cannot encode 78 additional rows without extending parser/control analysis.",capacity_unknown,Quarantine rows; extend only after code-level renderer probes.
+Final candidate native screenshot,"FCEUX Lua GD screenshot artifacts are transparent in this environment.",visual_evidence_missing,Keep runtime byte PASS separate from visual release PASS.

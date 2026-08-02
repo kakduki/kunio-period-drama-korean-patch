@@ -166,3 +166,15 @@ The expanded candidate supersedes the earlier ten-row candidate for bounded deve
 | Release promotion | NOT_READY | Remaining blocked/unmapped rows, shared Bank 7 safety, visual proof, and boss route remain open. |
 
 This unified candidate supersedes the standalone 22-row build for development work. It remains a soft-gate candidate and is not the final release ROM.
+## Current Candidate Gate 2026-08-02
+
+| gate | status | evidence |
+| --- | --- | --- |
+| Final candidate build | PASS | MD5 e52d4f8c6c46d85b05f7da54fdd1a545; deterministic ROM/IPS output. |
+| Items action labels | PASS | SRAM queue and PPU bytes match at detected frame 1737; action runtime report is independent. |
+| Items name/title/NONE | PASS | All three source owners match in queue at frame 1737. |
+| Normal route boot/progression | PASS | 7200 lua_done; 24 unique screens; combat changes present. |
+| Pre-pointer promotion | SOFT_GATE | 10 runtime-approved; 152 static-only; 4 unknown-PC; 2 empty/data; overflow remains quarantined. |
+| Native visual evidence | UNKNOWN | FCEUX GD screenshot buffer is transparent; no release visual PASS claimed. |
+| Boss-route proof | UNKNOWN | No enemy-clear or boss-spawn route was used in this bounded verification. |
+| Release | NOT_READY | Remaining renderer coverage and visual/context gates are open. |
