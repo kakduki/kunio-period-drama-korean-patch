@@ -20,6 +20,7 @@ local UNIQUE_LIMIT = tonumber(os.getenv("KUNIO_STAGE_UNIQUE_LIMIT") or "72")
 local EXTRA_DIALOGUE_START = os.getenv("KUNIO_EXTRA_DIALOGUE_START") ~= "0"
 local COMBAT_NO_B = os.getenv("KUNIO_COMBAT_NO_B") == "1"
 local COMBAT_SWEEP = os.getenv("KUNIO_COMBAT_SWEEP") == "1"
+local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -32,6 +33,7 @@ local PPU_TRACE_LIMIT = tonumber(os.getenv("KUNIO_PPU_TRACE_LIMIT") or "24000")
 local PPU_TRACE_START = tonumber(os.getenv("KUNIO_PPU_TRACE_START") or "0")
 local NAME_SOURCE_TRACE = os.getenv("KUNIO_NAME_SOURCE_TRACE") == "1"
 local NAME_SOURCE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_NAME_SOURCE_TRACE_LIMIT") or "24000")
+local STATE_MACHINE_TRACE = os.getenv("KUNIO_STATE_MACHINE_TRACE") == "1"
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -120,9 +122,19 @@ local ppu_trace_addr_high = nil
 local ppu_trace_addr = 0
 local name_source_trace_count = 0
 local name_source_trace_path = OUT_DIR .. "/name_source_reads.tsv"
+local state_machine_trace_path = OUT_DIR .. "/state_machine_exec.tsv"
 local function read_register(name)
     local ok, value = pcall(function() return memory.getregister(name) end)
     return ok and value or 0
+end
+local function trace_state_machine(label)
+    append(state_machine_trace_path, table.concat({
+        tostring(emu.framecount()), label, string.format("%04X", read_register("pc")),
+        string.format("%02X", read_register("a")), string.format("%02X", read_register("x")), string.format("%02X", read_register("y")),
+        hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)), hex2(byte_at(0x04FC)),
+        hex2(byte_at(0x002C)), hex2(byte_at(0x002D)), hex2(byte_at(0x0028)), hex2(byte_at(0x0029)),
+        hex2(byte_at(0x002A)), hex2(byte_at(0x002B)), hex2(byte_at(0x001A)), hex2(byte_at(0x001B))
+    }, "\t"))
 end
 local function text_pointer()
     return byte_at(0x1A) + byte_at(0x1B) * 0x100
@@ -291,6 +303,11 @@ end
 local function combat_input(frame)
     local rel = frame - 900
     if rel < 0 then return {} end
+    if ADVANCE_AFTER_COMBAT and (byte_at(0x04F1) == 0x06 or byte_at(0x04F1) == 0x12) then
+        if frame % 36 < 12 then return { start = true } end
+        if frame % 36 < 24 then return { A = true } end
+        return {}
+    end
     local cycle = rel % 240
     if COMBAT_SWEEP then
         if cycle < 60 then return { right = true, A = true } end
@@ -332,6 +349,9 @@ end
 if RAM_TRACE then
     append(ram_trace_path, "frame\taddress\tsize\tvalue")
 end
+if STATE_MACHINE_TRACE then
+    append(state_machine_trace_path, "frame\tlabel\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC\t2C\t2D\t28\t29\t2A\t2B\t1A\t1B")
+end
 register_write(0x8000, 1, on_mapper_select)
 register_write(0x8001, 1, on_mapper_data)
 register_write(0x2000, 1, on_ppu_control)
@@ -341,6 +361,10 @@ if DIALOGUE_TRACE then
     register_exec(0x915A, on_dialogue_parser("parser"))
     register_exec(0x955F, on_dialogue_parser("emit_prep"))
     register_exec(0x9593, on_dialogue_parser("emit_dispatch"))
+end
+if STATE_MACHINE_TRACE then
+    register_exec(0xD207, function() trace_state_machine("script_byte") end)
+    register_exec(0xD20D, function() trace_state_machine("script_ptr") end)
 end
 if PPU_TRACE then
     register_write(0x2006, 1, on_ppu_trace_addr)
@@ -398,5 +422,6 @@ end
 local reason = unique >= UNIQUE_LIMIT and "unique_limit" or "lua_done"
 append(OUT_DIR .. "/captures.tsv", table.concat({tostring(emu.framecount()), reason, fingerprint(), "false", "", "", "", "", "", "", "", "", mapper_snapshot(), state_writes_label()}, "\t"))
 append(OUT_DIR .. "/summary.tsv", table.concat({tostring(emu.framecount()), reason, tostring(unique), fingerprint()}, "\t"))
+append(OUT_DIR .. "/summary.tsv", table.concat({tostring(emu.framecount()), "lua_done", tostring(unique), fingerprint()}, "\t"))
 pcall(function() FCEU.pause() end)
 pcall(function() emu.pause() end)
