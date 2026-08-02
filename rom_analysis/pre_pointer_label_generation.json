@@ -3,9 +3,9 @@
   "source_script": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\english_script_dump.tsv",
   "record_count": 229,
   "counts": {
-    "fallback_name": 94,
+    "fallback_name": 88,
     "blocked": 86,
-    "reviewed_label": 49
+    "reviewed_label": 55
   },
   "records": [
     {
@@ -901,8 +901,8 @@
       "normalized_key": "KOTA",
       "control_bytes": [],
       "korean_text": "코타",
-      "source": "romaji_fallback",
-      "confidence": "fallback_name",
+      "source": "curated_alias",
+      "confidence": "reviewed_label",
       "patch_ready": true
     },
     {
@@ -913,9 +913,9 @@
       "context": "Bank 1 pre-pointer text area",
       "normalized_key": "TSUDAINOSUUMETAUSUKEMANGONENKIKURO",
       "control_bytes": [],
-      "korean_text": "츠다이노수우메타우수케마고네키쿠로",
-      "source": "romaji_fallback",
-      "confidence": "fallback_name",
+      "korean_text": "츠다이노수우메타우수케마고넨키쿠로",
+      "source": "curated_alias",
+      "confidence": "reviewed_label",
       "patch_ready": true
     },
     {
@@ -991,9 +991,9 @@
       "context": "Bank 1 pre-pointer text area",
       "normalized_key": "MANPEKETA",
       "control_bytes": [],
-      "korean_text": "마페케타",
-      "source": "romaji_fallback",
-      "confidence": "fallback_name",
+      "korean_text": "만페케타",
+      "source": "curated_alias",
+      "confidence": "reviewed_label",
       "patch_ready": true
     },
     {
@@ -1004,9 +1004,9 @@
       "context": "Bank 1 pre-pointer text area",
       "normalized_key": "KUNKIMOMO",
       "control_bytes": [],
-      "korean_text": "쿠키모모",
-      "source": "romaji_fallback",
-      "confidence": "fallback_name",
+      "korean_text": "쿤키모모",
+      "source": "curated_alias",
+      "confidence": "reviewed_label",
       "patch_ready": true
     },
     {
@@ -1121,9 +1121,9 @@
       "context": "Bank 1 pre-pointer text area",
       "normalized_key": "KAN",
       "control_bytes": [],
-      "korean_text": "카",
-      "source": "romaji_fallback",
-      "confidence": "fallback_name",
+      "korean_text": "칸",
+      "source": "curated_alias",
+      "confidence": "reviewed_label",
       "patch_ready": true
     },
     {
@@ -1147,9 +1147,9 @@
       "context": "Bank 1 pre-pointer text area",
       "normalized_key": "KANPAIMOHAMINO",
       "control_bytes": [],
-      "korean_text": "카파이모하미노",
-      "source": "romaji_fallback",
-      "confidence": "fallback_name",
+      "korean_text": "칸파이모하미노",
+      "source": "curated_alias",
+      "confidence": "reviewed_label",
       "patch_ready": true
     },
     {

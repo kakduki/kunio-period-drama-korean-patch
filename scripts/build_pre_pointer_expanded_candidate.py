@@ -22,10 +22,10 @@ from korean_tile_font import render_tall_tiles
 from rom_utils import REPO_ROOT
 
 
-DEFAULT_INPUT = REPO_ROOT / "output" / "full_korean_full_composed_expanded_candidate" / "kunio_period_drama_korean_expanded_candidate.nes"
+DEFAULT_INPUT = REPO_ROOT / "output" / "full_korean_expanded_candidate" / "kunio_period_drama_korean_expanded_candidate.nes"
 DEFAULT_BASE = REPO_ROOT / "rom" / "Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
 DEFAULT_LABELS = REPO_ROOT / "text_data" / "pre_pointer_korean_labels.json"
-DEFAULT_EXISTING_REPORT = REPO_ROOT / "rom_analysis" / "full_korean_full_composed_expanded_candidate.json"
+DEFAULT_EXISTING_REPORT = REPO_ROOT / "rom_analysis" / "full_korean_expanded_candidate.json"
 DEFAULT_REFERENCE_IPS = REPO_ROOT / "tools" / "reference" / "TSe-v10.ips"
 DEFAULT_CHAR_MAP = REPO_ROOT / "font" / "char_map.json"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "output" / "pre_pointer_full_candidate"
@@ -88,6 +88,7 @@ def build(
     output_dir: Path,
     report_json: Path,
     report_markdown: Path,
+    runtime_report: Path | None = None,
     out_stem: str = OUT_STEM,
 ) -> dict[str, object]:
     base = base_rom.read_bytes()
@@ -99,6 +100,8 @@ def build(
     reference_records, reference_truncate = parse_ips(reference_ips.read_bytes())
     reference = apply_records(base, reference_records, reference_truncate)
     char_glyphs = load_glyphs(char_map_path, font_path)
+    runtime_gate = load_json(runtime_report) if runtime_report else None
+    approved_ids = {str(value) for value in (runtime_gate or {}).get("approved_ids", [])}
     existing_codes = {str(glyph): int(str(code), 16) for glyph, code in dict(existing.get("glyph_codes", {})).items()}
     existing_offsets = {int(str(row["rom_offset"]), 16) for row in existing.get("targets", [])}
     glyph_codes = dict(existing_codes)
@@ -108,7 +111,10 @@ def build(
     patched_count = 0
     status_counts: dict[str, int] = {}
 
-    candidates = sorted((row for row in labels.get("records", []) if row.get("patch_ready")), key=row_priority)
+    candidate_rows = (row for row in labels.get("records", []) if row.get("patch_ready"))
+    if runtime_report:
+        candidate_rows = (row for row in candidate_rows if str(row.get("record_id")) in approved_ids)
+    candidates = sorted(candidate_rows, key=row_priority)
     for row in candidates:
         offset = int(str(row["rom_offset"]), 16)
         raw = bytes.fromhex(str(row["raw_bytes"]))
@@ -191,6 +197,8 @@ def build(
         "candidate_md5": md5(candidate),
         "label_record_count": len(candidates),
         "patched_count": patched_count,
+        "runtime_gate": str(runtime_report) if runtime_report else None,
+        "runtime_approved_count": len(approved_ids) if runtime_report else None,
         "status_counts": status_counts,
         "rows": rows_report,
         "glyph_codes": {glyph: f"0x{code:02X}" for glyph, code in glyph_codes.items()},
@@ -220,6 +228,7 @@ def build(
         f"- Candidate MD5: `{payload['candidate_md5']}`.",
         f"- Patch-ready records considered: `{payload['label_record_count']}`.",
         f"- Newly patched records: `{payload['patched_count']}`.",
+        f"- Runtime gate: `{payload['runtime_gate'] or 'not applied'}`.",
         f"- New soft-gate glyphs: `{len(new_glyphs)}` in `0x9B-0xB5`.",
         f"- Status counts: `{json.dumps(status_counts, ensure_ascii=False)}`.",
         "- Release status: `NOT_READY`; this candidate is for bounded runtime validation.",
@@ -248,13 +257,15 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--report-markdown", type=Path, default=DEFAULT_REPORT_MARKDOWN)
+    parser.add_argument("--runtime-report", type=Path, default=None)
     parser.add_argument("--out-stem", default=OUT_STEM)
     args = parser.parse_args()
     font_path = args.font.resolve() if args.font else default_tall_font(None)
     payload = build(
         args.input_rom.resolve(), args.base_rom.resolve(), args.labels.resolve(), args.existing_report.resolve(),
         args.reference_ips.resolve(), args.char_map.resolve(), font_path,
-        args.out_dir.resolve(), args.report_json.resolve(), args.report_markdown.resolve(), args.out_stem,
+        args.out_dir.resolve(), args.report_json.resolve(), args.report_markdown.resolve(),
+        args.runtime_report.resolve() if args.runtime_report else None, args.out_stem,
     )
     print(json.dumps({
         "status": payload["status"], "candidate_md5": payload["candidate_md5"],

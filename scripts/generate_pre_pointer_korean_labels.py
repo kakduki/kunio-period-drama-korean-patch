@@ -115,6 +115,12 @@ ALIASES = {
     "HIZ": "\ud788\uc988",
     "ODD": "\uc624\ub4dc",
     "Z": "\uc988",
+    "KOTA": "\ucf54\ud0c0",
+    "MANPEKETA": "\ub9cc\ud398\ucf00\ud0c0",
+    "KUNKIMOMO": "\ucfe4\ud0a4\ubaa8\ubaa8",
+    "KAN": "\uce78",
+    "KANPAIMOHAMINO": "\uce78\ud30c\uc774\ubaa8\ud558\ubbf8\ub178",
+    "TSUDAINOSUUMETAUSUKEMANGONENKIKURO": "\uce20\ub2e4\uc774\ub178\uc218\uc6b0\uba54\ud0c0\uc6b0\uc218\ucf00\ub9c8\uace0\ub128\ud0a4\ucfe0\ub85c",
 }
 
 

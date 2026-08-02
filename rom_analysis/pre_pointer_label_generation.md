@@ -74,15 +74,15 @@
 | EN-PRE-065 | `0x058BA` | UKI | 우키 | romaji_fallback | fallback_name |  |
 | EN-PRE-066 | `0x058BE` |  |  | empty_or_data | blocked |  |
 | EN-PRE-067 | `0x058BF` | GORO | 고로 | romaji_fallback | fallback_name |  |
-| EN-PRE-068 | `0x058C4` | KOTA | 코타 | romaji_fallback | fallback_name |  |
-| EN-PRE-069 | `0x058C9` | TSUDAINOSUUMETAUSUKEMANGONENKIKURO | 츠다이노수우메타우수케마고네키쿠로 | romaji_fallback | fallback_name |  |
+| EN-PRE-068 | `0x058C4` | KOTA | 코타 | curated_alias | reviewed_label |  |
+| EN-PRE-069 | `0x058C9` | TSUDAINOSUUMETAUSUKEMANGONENKIKURO | 츠다이노수우메타우수케마고넨키쿠로 | curated_alias | reviewed_label |  |
 | EN-PRE-070 | `0x058EC` | TEHA | 테하 | romaji_fallback | fallback_name |  |
 | EN-PRE-071 | `0x058F1` | SENBESENPAHOME | 세베세파호메 | romaji_fallback | fallback_name |  |
 | EN-PRE-072 | `0x05900` | TAHA | 타하 | romaji_fallback | fallback_name |  |
 | EN-PRE-073 | `0x05905` | KICHINETA | 키치네타 | romaji_fallback | fallback_name |  |
 | EN-PRE-074 | `0x0590F` | TAGO | 타고 | romaji_fallback | fallback_name |  |
-| EN-PRE-075 | `0x05914` | MANPEKETA | 마페케타 | romaji_fallback | fallback_name |  |
-| EN-PRE-076 | `0x0591E` | KUNKIMOMO | 쿠키모모 | romaji_fallback | fallback_name |  |
+| EN-PRE-075 | `0x05914` | MANPEKETA | 만페케타 | curated_alias | reviewed_label |  |
+| EN-PRE-076 | `0x0591E` | KUNKIMOMO | 쿤키모모 | curated_alias | reviewed_label |  |
 | EN-PRE-077 | `0x05928` | TANE | 타네 | romaji_fallback | fallback_name |  |
 | EN-PRE-078 | `0x0592D` | HEKO | 헤코 | romaji_fallback | fallback_name |  |
 | EN-PRE-079 | `0x05932` | MATAAMEHEIMASU | 마타아메헤이마수 | romaji_fallback | fallback_name |  |
@@ -91,9 +91,9 @@
 | EN-PRE-082 | `0x0594B` | DENSUUMESIMAGO | 데수우메시마고 | romaji_fallback | fallback_name |  |
 | EN-PRE-083 | `0x0595A` | RAHA | 라하 | romaji_fallback | fallback_name |  |
 | EN-PRE-084 | `0x0595F` | MOHEISENROCHOU | 모헤이세로초우 | romaji_fallback | fallback_name |  |
-| EN-PRE-085 | `0x0596E` | KAN | 카 | romaji_fallback | fallback_name |  |
+| EN-PRE-085 | `0x0596E` | KAN | 칸 | curated_alias | reviewed_label |  |
 | EN-PRE-086 | `0x05972` |  |  | empty_or_data | blocked |  |
-| EN-PRE-087 | `0x05973` | KANPAIMOHAMINO | 카파이모하미노 | romaji_fallback | fallback_name |  |
+| EN-PRE-087 | `0x05973` | KANPAIMOHAMINO | 칸파이모하미노 | curated_alias | reviewed_label |  |
 | EN-PRE-088 | `0x05982` | KANTAFUNE | 카타후네 | romaji_fallback | fallback_name |  |
 | EN-PRE-089 | `0x0598C` | KANSUSUJI | 카수수지 | romaji_fallback | fallback_name |  |
 | EN-PRE-090 | `0x05996` | SICHIUSHI | 시치우시 | romaji_fallback | fallback_name |  |
