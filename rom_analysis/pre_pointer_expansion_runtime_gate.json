@@ -1,0 +1,34 @@
+{
+  "status": "FAIL",
+  "failure_class": "ROUTE_REGRESSION_OR_FALSE_POSITIVE_DATA_OWNERSHIP",
+  "candidate_report": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\pre_pointer_full_pointer_owner_candidate.json",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\pre_pointer_full_pointer_owner_candidate\\kunio_period_drama_korean_pre_pointer_full_candidate.nes",
+  "candidate_md5": "0ce9eba51a46ec437aacdda25576b7d5",
+  "baseline": {
+    "summary": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\stage_progression_probe_full_korean_expanded_candidate\\summary.tsv",
+    "last_frame": 7200,
+    "reason": "lua_done",
+    "unique_screens": 24,
+    "last_fingerprint": "608645475:21017",
+    "has_combat": true
+  },
+  "candidate": {
+    "summary": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\stage_progression_probe_pre_pointer_full_pointer_owner_candidate\\summary.tsv",
+    "last_frame": 7200,
+    "reason": "lua_done",
+    "unique_screens": 5,
+    "last_fingerprint": "241909700:10929",
+    "has_combat": false
+  },
+  "candidate_build": {
+    "patched_count": 22,
+    "new_glyph_count": 27,
+    "status_counts": {
+      "PRESERVED_EXISTING": 22,
+      "PATCHED": 22,
+      "SKIPPED_MISSING_GLYPH": 64,
+      "SKIPPED_GLYPH_OVERFLOW": 35
+    }
+  },
+  "decision": "Keep the existing pointer-owner candidate as the runnable baseline; quarantine this expansion until each row has runtime ownership evidence."
+}
