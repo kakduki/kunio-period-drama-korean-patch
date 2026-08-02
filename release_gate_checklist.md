@@ -193,3 +193,18 @@ This unified candidate supersedes the standalone 22-row build for development wo
 | Release promotion | NOT_READY | Remaining renderer families, row coverage, visual proof, and boss route remain open. |
 
 This is the current bounded development candidate. It is not the final Korean release ROM.
+## Clean Merged Candidate Gate 2026-08-02
+
+| gate | status | evidence / reason |
+| --- | --- | --- |
+| Clean candidate build | PASS | Candidate MD5 `2fba4bae8c65c31a2ebd96c7ed0f7fc9`; IPS round trip and declared-range audit pass. |
+| Full-pointer owner preservation | PASS | Pointer hooks/table/records and appended CHR tail are byte-identical to the full-pointer owner. |
+| Fixed pre-pointer labels | PASS_SOFT_GATE | 22/22 exact Korean CPU owners at the bounded menu route; 63 additional safe rows compile; overflow and missing-glyph rows remain quarantined. |
+| Items action path | PASS | Queue and PPU bytes match; MMC3 Items pages are observed at the action frame. |
+| Items name/title/NONE path | PASS_BYTE_PROOF | All four source owners and queue bytes match at frame 1737. |
+| Gameplay progression | PASS_SOFT_GATE | First pointer dialogue route reached; 16 screen fingerprints; combat checkpoints and `lua_done` at 7200. |
+| Native visual proof | UNKNOWN | FCEUX GD screenshot buffer is transparent; no visual release claim. |
+| Natural boss route | UNKNOWN | Enemy-clear, boss-spawn, and boss-dialogue routes remain unproven. |
+| Release promotion | NOT_READY | Remaining renderer families, Japanese-context review, visual proof, and boss route are open. |
+
+The earlier recomposed candidate that reapplied the English IPS structure over the full-pointer owner is not the clean integration base. Use the clean candidate and its audit report for continued development.

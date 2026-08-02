@@ -344,3 +344,14 @@ The English reference exposes 722 dialogue tile runs for comparison with the 250
 - Items title/NONE byte gate: PASS at frame 1737 for name seed, title suffix, and NONE owners.
 - Progression smoke: PASS at frame 7200 with 24 unique screens and lua_done; this is bounded automation, not a natural boss route.
 - Release status: NOT_READY. Native visual proof remains UNKNOWN because the available GD screenshot buffer is transparent.
+## Clean Merged Candidate 2026-08-02
+
+- Candidate ROM: `output/full_korean_clean_merged_candidate/kunio_period_drama_korean_full_items_title_none_candidate.nes`.
+- Candidate MD5: `2fba4bae8c65c31a2ebd96c7ed0f7fc9`.
+- Base ROM MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
+- Build chain: full-pointer Korean renderer and appended CHR pages, clean 22-row high-code owner, 63 additional safe pre-pointer rows, Items action owner, Items name/title/NONE owners.
+- Pointer core and appended CHR tail are preserved byte-for-byte from `full_pointer_korean_candidate`.
+- FCEUX evidence: fixed-label CPU ownership `22/22`; Items action queue/PPU verifier `PASS`; name/title/NONE queue byte gate `PASS`; stage progression reaches `lua_done` at frame 7200 and combat checkpoints.
+- Status: **SOFT_GATE_PASS_CLEAN_MERGED_CANDIDATE**.
+- Release status: **NOT_READY**. Native pixel review remains unknown because the available GD screenshot buffer is transparent; natural enemy-clear/boss-spawn/boss-dialogue proof is still missing.
+- Detailed report: `rom_analysis/full_korean_clean_merged_runtime.md` and `.json`.

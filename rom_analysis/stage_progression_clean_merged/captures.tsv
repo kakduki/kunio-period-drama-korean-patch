@@ -1,0 +1,18 @@
+frame	reason	fingerprint	screenshot	0720	0721	0722	0723	04F1	04FA	04FB	04FC	r0	r1	r2	r3	r4	r5	r6	r7	ppu_ctrl	state_writes
+120	entry_screen_change	776964824:19187	true	00	00	00	00	12	3C	3D	3E	3C	3E	3C	3D	3E	3F	08	09	88	
+210	entry_screen_change	66564427:0	true	00	00	00	00	00	30	3D	3E	3C	3E	30	3D	3E	3F	0C	0D	88	
+302	entry_screen_change	721625565:2031	true	81	26	AC	39	02	30	31	32	00	02	30	31	32	33	02	03	0C	
+392	entry_screen_change	273155764:10664	true	24	24	24	6D	02	30	31	32	3C	3E	30	31	32	33	02	03	8C	
+667	entry_screen_change	66564427:0	true	00	00	00	00	02	30	31	32	3C	3E	30	31	32	33	04	05	08	
+757	entry_screen_change	996802650:19048	true	F3	F2	10	95	12	3D	47	35	3C	3E	3D	47	35	40	04	05	88	
+915	combat_screen_change	66564427:0	true	00	00	00	00	12	42	47	35	3C	3E	30	31	32	33	0C	0D	08	
+1049	combat_screen_change	614806767:1029	true	56	1D	55	CC	01	42	47	35	04	06	42	47	35	40	0C	0D	08	
+1139	combat_screen_change	862011215:6351	true	72	32	69	DB	01	42	47	35	3C	3E	42	47	35	40	06	07	88	
+1229	combat_screen_change	302390997:7713	true	7D	3D	73	40	01	42	47	35	3C	3E	42	47	35	40	06	07	88	
+1319	combat_screen_change	948549148:8892	true	8D	50	83	DF	01	42	47	35	3C	3E	42	47	35	40	0A	0B	88	
+1444	combat_screen_change	926873089:8908	true	76	36	6F	DD	01	42	47	35	3C	3E	42	47	35	40	04	05	88	
+1651	combat_screen_change	989842781:9471	true	9B	5F	8D	ED	01	42	47	35	3C	3E	42	47	35	40	0C	0D	88	
+1866	combat_screen_change	66564427:0	true	00	00	00	00	01	42	47	35	3C	3E	42	47	35	40	0C	0D	08	
+1956	combat_screen_change	135536409:21068	true	F8	14	84	43	06	30	31	32	3C	3E	30	31	32	33	0C	0D	88	
+2046	combat_screen_change	883323534:20851	true	01	21	92	7C	06	30	31	32	3C	3E	30	31	32	33	0C	0D	88	
+7200	lua_done	883323534:20851	false									3C	3E	30	31	32	33	0C	0D	88	

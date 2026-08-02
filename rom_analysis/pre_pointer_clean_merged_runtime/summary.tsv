@@ -1,0 +1,19 @@
+frame	reason	matched_targets	first_target	ppu_fingerprint
+0	callbacks	true		
+0	lua_start	0		
+0	periodic	0		00000000
+60	periodic	0		6723C130
+120	periodic	0		39869221
+180	periodic	0		6368FE11
+240	periodic	0		82E819C9
+300	periodic	22		76CF6B6D
+360	periodic	22		98062EAC
+420	periodic	22		98062EAC
+480	periodic	22		98062EAC
+540	periodic	22		98062EAC
+600	periodic	22		98062EAC
+660	periodic	22		98062EAC
+720	periodic	22		98062EAC
+780	periodic	22		98062EAC
+840	periodic	22		98062EAC
+900	lua_done	22		98062EAC	15420

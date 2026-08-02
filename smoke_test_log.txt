@@ -386,3 +386,14 @@ native_visual=UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT
 natural_boss_route=UNKNOWN
 release_status=NOT_READY
 reports=rom_analysis/pre_pointer_extended_static_candidate.json,rom_analysis/pre_pointer_extended_items_action_candidate_runtime.json,rom_analysis/pre_pointer_extended_items_title_none_candidate_runtime.json,rom_analysis/pre_pointer_runtime_gate_extended_items_title_none_candidate.json
+2026-08-02 clean merged candidate
+- ROM: output/full_korean_clean_merged_candidate/kunio_period_drama_korean_full_items_title_none_candidate.nes
+- MD5: 2fba4bae8c65c31a2ebd96c7ed0f7fc9
+- FCEUX pre-pointer probe: 22/22 Korean targets matched; lua_done frame 900.
+- FCEUX Items context: action verifier PASS; name/title/NONE byte gate PASS; queue frames 1737.
+- FCEUX stage progression: lua_done frame 7200; 16 unique screens; combat frames 915, 1049, 1139, 1229, 1319, 1444, 1651, 1866, 1956, 2046.
+- FCEUX full-pointer input route: first dialogue route reached; lua_done frame 1900.
+- Pointer core/appended CHR preservation: PASS.
+- Native visual gate: UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT.
+- Natural boss route: UNKNOWN.
+- Overall: SOFT_GATE_PASS_CLEAN_MERGED_CANDIDATE; release remains NOT_READY.

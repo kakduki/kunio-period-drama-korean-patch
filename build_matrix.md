@@ -212,3 +212,14 @@ The 250-row pre-pointer inventory was compared with 722 English dialogue owner r
 - Pre-pointer scan: 10 runtime-source reads, 152 static-only, 4 unknown-PC, 2 empty/data; 43 additional rows remain glyph-pool overflow in the expanded static report.
 - Result: SOFT_GATE_PASS_RUNTIME_NOT_READY; native pixels, full row coverage, shared-page safety, and natural boss/dialogue route remain open.
 - Reports: rom_analysis/pre_pointer_extended_static_candidate.json, rom_analysis/pre_pointer_extended_items_action_candidate_runtime.json, rom_analysis/pre_pointer_extended_items_title_none_candidate_runtime.json, and rom_analysis/pre_pointer_runtime_gate_extended_items_title_none_candidate.json.
+## Clean Merged Candidate 2026-08-02
+
+| build | owner composition | bounded runtime | visual | result |
+| --- | --- | --- | --- | --- |
+| `full_korean_clean_merged_candidate` | clean full-pointer owner + 22 high-code rows + 63 additional safe pre-pointer rows + Items action/name/title/NONE owners | fixed labels `22/22`; Items action `PASS`; Items name/title/NONE byte gate `PASS`; stage `lua_done` at 7200 with combat frames; first pointer dialogue route reached | `UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT` | `SOFT_GATE_PASS_CLEAN_MERGED_CANDIDATE` |
+
+- Candidate ROM: `output/full_korean_clean_merged_candidate/kunio_period_drama_korean_full_items_title_none_candidate.nes`.
+- Candidate MD5: `2fba4bae8c65c31a2ebd96c7ed0f7fc9`.
+- The candidate preserves the full-pointer renderer core and appended CHR tail byte-for-byte. Only declared pre-pointer, Items, and Bank 7 font ranges differ from the pointer owner.
+- This supersedes the earlier recomposed candidate whose English IPS structure was reapplied over the full-pointer owner. It is still a development candidate, not a release ROM.
+- Detailed audit: `rom_analysis/full_korean_clean_merged_runtime.md`.

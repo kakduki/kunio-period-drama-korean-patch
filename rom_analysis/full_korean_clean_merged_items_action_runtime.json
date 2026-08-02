@@ -1,0 +1,85 @@
+{
+  "verdict": "PASS",
+  "checks": {
+    "capture_completed": true,
+    "candidate_source_bytes": true,
+    "action_frame_found": true,
+    "queue_action_bytes": true,
+    "ppu_action_bytes": true,
+    "items_banks": true
+  },
+  "evidence": {
+    "capture_frame": 1906,
+    "action_frame": 1737,
+    "queue_pc": "B70D",
+    "queue_values": "8C 98 00 99 9B 9C 9E 9C 99 A3",
+    "ppu_values": "8C 98 00 99 9B 9C 9E 9C 99 A3",
+    "items_banks": [
+      {
+        "register": "0",
+        "value": "3C"
+      },
+      {
+        "register": "1",
+        "value": "3E"
+      },
+      {
+        "register": "6",
+        "value": "06"
+      },
+      {
+        "register": "7",
+        "value": "07"
+      },
+      {
+        "register": "2",
+        "value": "42"
+      },
+      {
+        "register": "3",
+        "value": "47"
+      },
+      {
+        "register": "4",
+        "value": "35"
+      },
+      {
+        "register": "5",
+        "value": "40"
+      },
+      {
+        "register": "6",
+        "value": "08"
+      },
+      {
+        "register": "7",
+        "value": "09"
+      },
+      {
+        "register": "6",
+        "value": "06"
+      },
+      {
+        "register": "7",
+        "value": "07"
+      },
+      {
+        "register": "6",
+        "value": "08"
+      },
+      {
+        "register": "7",
+        "value": "09"
+      },
+      {
+        "register": "6",
+        "value": "06"
+      },
+      {
+        "register": "7",
+        "value": "07"
+      }
+    ],
+    "source_rom_offset": "0x13727"
+  }
+}

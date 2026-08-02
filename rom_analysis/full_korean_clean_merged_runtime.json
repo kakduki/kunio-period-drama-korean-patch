@@ -1,0 +1,215 @@
+{
+  "status": "SOFT_GATE_PASS_CLEAN_MERGED_CANDIDATE",
+  "release_status": "NOT_READY",
+  "base_md5": "0d406a85285b4de8468f0dab6aad5fe5",
+  "pointer_owner_md5": "0a983c3d8494444935f000963f415253",
+  "candidate_md5": "2fba4bae8c65c31a2ebd96c7ed0f7fc9",
+  "candidate_rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_clean_merged_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
+  "candidate_size": 368656,
+  "pointer_core_same": {
+    "renderer_hooks": true,
+    "pointer_table": true,
+    "pointer_records_and_loader": true
+  },
+  "pointer_tail_same": true,
+  "changed_vs_pointer_count": 2433,
+  "unexpected_changed_vs_pointer": [],
+  "pre_pointer_build": {
+    "candidate_md5": "73f8da456819d904c280023a8dd9032b",
+    "patched_count": 63,
+    "preserved_existing": 22,
+    "overflow_quarantined": 57,
+    "missing_glyph_quarantined": 1
+  },
+  "pre_pointer_runtime": {
+    "target_count": 22,
+    "korean_target_count": 22,
+    "target_ids": [
+      "EN-PRE-104",
+      "EN-PRE-105",
+      "EN-PRE-107",
+      "EN-PRE-108",
+      "EN-PRE-111",
+      "EN-PRE-112",
+      "EN-PRE-116",
+      "EN-PRE-117",
+      "EN-PRE-118",
+      "EN-PRE-119",
+      "EN-PRE-122",
+      "EN-PRE-123",
+      "EN-PRE-124",
+      "EN-PRE-125",
+      "EN-PRE-129",
+      "EN-PRE-130",
+      "EN-PRE-131",
+      "EN-PRE-133",
+      "EN-PRE-134",
+      "EN-PRE-135",
+      "EN-PRE-138",
+      "EN-PRE-185"
+    ],
+    "capture_frame": 280,
+    "lua_done": true,
+    "terminal_frame": 900,
+    "final_matched_targets": 22
+  },
+  "items_action_runtime": {
+    "verdict": "PASS",
+    "checks": {
+      "capture_completed": true,
+      "candidate_source_bytes": true,
+      "action_frame_found": true,
+      "queue_action_bytes": true,
+      "ppu_action_bytes": true,
+      "items_banks": true
+    },
+    "evidence": {
+      "capture_frame": 1906,
+      "action_frame": 1737,
+      "queue_pc": "B70D",
+      "queue_values": "8C 98 00 99 9B 9C 9E 9C 99 A3",
+      "ppu_values": "8C 98 00 99 9B 9C 9E 9C 99 A3",
+      "items_banks": [
+        {
+          "register": "0",
+          "value": "3C"
+        },
+        {
+          "register": "1",
+          "value": "3E"
+        },
+        {
+          "register": "6",
+          "value": "06"
+        },
+        {
+          "register": "7",
+          "value": "07"
+        },
+        {
+          "register": "2",
+          "value": "42"
+        },
+        {
+          "register": "3",
+          "value": "47"
+        },
+        {
+          "register": "4",
+          "value": "35"
+        },
+        {
+          "register": "5",
+          "value": "40"
+        },
+        {
+          "register": "6",
+          "value": "08"
+        },
+        {
+          "register": "7",
+          "value": "09"
+        },
+        {
+          "register": "6",
+          "value": "06"
+        },
+        {
+          "register": "7",
+          "value": "07"
+        },
+        {
+          "register": "6",
+          "value": "08"
+        },
+        {
+          "register": "7",
+          "value": "09"
+        },
+        {
+          "register": "6",
+          "value": "06"
+        },
+        {
+          "register": "7",
+          "value": "07"
+        }
+      ],
+      "source_rom_offset": "0x13727"
+    }
+  },
+  "items_title_none_runtime": {
+    "candidate": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\output\\full_korean_clean_merged_candidate\\kunio_period_drama_korean_full_items_title_none_candidate.nes",
+    "capture_dir": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom_analysis\\items_clean_merged_runtime",
+    "capture_completed": true,
+    "source_checks": {
+      "name_prg_seed": true,
+      "name_ppu_seed": true,
+      "title_suffix": true,
+      "none": true
+    },
+    "source_bytes_pass": true,
+    "queue_frames": {
+      "name": 1737,
+      "title_suffix": 1737,
+      "none": 1737
+    },
+    "queue_title_none_pass": true,
+    "runtime_byte_gate": true,
+    "visual_gate": "UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT",
+    "status": "PASS_BYTE_PROOF_VISUAL_UNKNOWN"
+  },
+  "pointer_input_runtime": {
+    "lua_done": true,
+    "terminal_frame": 1900,
+    "screen_change_frames": [
+      302,
+      306,
+      310,
+      328,
+      655,
+      666,
+      670,
+      672,
+      678,
+      681,
+      686,
+      817,
+      819,
+      822,
+      824,
+      830
+    ],
+    "first_dialogue_route_reached": true
+  },
+  "stage_progression": {
+    "lua_done": true,
+    "terminal_frame": 7200,
+    "unique_screens": 16,
+    "combat_frames": [
+      915,
+      1049,
+      1139,
+      1229,
+      1319,
+      1444,
+      1651,
+      1866,
+      1956,
+      2046
+    ],
+    "late_event_like_frames": [
+      1956,
+      2046
+    ],
+    "boss_proof": false
+  },
+  "visual_gate": "UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT",
+  "natural_boss_route": "UNKNOWN",
+  "known_limits": [
+    "This is a development candidate, not a final release ROM.",
+    "57 pre-pointer rows were quarantined by the safe glyph pool and one by a missing font glyph.",
+    "Pointer forced page samples remain representative predecessor evidence because the pointer core and appended CHR tail are byte-identical.",
+    "Native screenshot pixels and an enemy-clear/boss-spawn route remain unproven."
+  ]
+}

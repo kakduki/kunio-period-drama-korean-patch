@@ -1,0 +1,4 @@
+frame	reason	detail_a	detail_b	detail_c	detail_d	detail_e
+0	lua_start	capture_frame=1906	max_frames=1920	ppu_trace_start=1600	extra_button=	extra_source_ranges=B5F0-B740,BC00-BC40	extra_source_trace_start=1500	queue_write_ranges=60A0-60C0,6500-650A,6360-6380,7AFB-7AFF	queue_write_trace_start=1000	callbacks=true
+1906	capture	screen=true	nametable0=777971275:24850	nametables=26750059:42252	ppu_read=true	ppu_writes=3120	sram_dump=false
+1906	lua_done	captured=true	capture_frame=1906	ppu_write_limit_reached=false	mapper_callbacks=65939	menu_source_callbacks=330	extra_source_callbacks=43795	extra_source_reads=4000	extra_source_limit_reached=true	queue_write_callbacks=1326	queue_writes=864	queue_write_limit_reached=false	mapper_config_callbacks=11962	mapper_loader_callbacks=4480
