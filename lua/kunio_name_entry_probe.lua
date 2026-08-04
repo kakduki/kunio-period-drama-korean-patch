@@ -55,6 +55,7 @@ add_cheat_button("A", 1)
 add_cheat_button("down", 3)
 add_cheat_button("right", 10)
 add_cheat_button("A", 1)
+add_cheat_button("A", 1)
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
