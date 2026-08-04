@@ -13,6 +13,7 @@ POINTER_COUNT = 248
 CPU_WINDOW_START = 0x8000
 CPU_WINDOW_END = 0xBFFF
 FILE_WINDOW_START = 0x04010
+PRG_BANK_SIZE = 0x2000
 
 
 def read_target(rom: bytes, pointer_index: int, max_length: int) -> dict[str, object]:
@@ -30,12 +31,14 @@ def read_target(rom: bytes, pointer_index: int, max_length: int) -> dict[str, ob
     if terminator < 0:
         raise ValueError(f"pointer {pointer_index} has no 0xFF terminator within 0x{max_length:X} bytes")
     payload = rom[record_offset:terminator + 1]
+    prg_bank = (record_offset - 0x10) // PRG_BANK_SIZE
     return {
         "pointer_index": pointer_index,
         "pointer_rom_offset": pointer_offset,
         "cpu_address": cpu_address,
         "record_rom_offset": record_offset,
         "record_end_cpu": cpu_address + len(payload) - 1,
+        "prg_bank": prg_bank,
         "bytes": payload,
     }
 
@@ -51,6 +54,7 @@ def render_lua(rom_path: Path, rom_md5: str, targets: list[dict[str, object]]) -
         cpu = int(target["cpu_address"])
         record_offset = int(target["record_rom_offset"])
         end_cpu = int(target["record_end_cpu"])
+        prg_bank = int(target["prg_bank"])
         payload = target["bytes"]
         assert isinstance(payload, bytes)
         hex_bytes = payload.hex(" ").upper()
@@ -58,7 +62,7 @@ def render_lua(rom_path: Path, rom_md5: str, targets: list[dict[str, object]]) -
             "  { "
             f"label = \"manifest_ptr_{index:03d}_candidate\", "
             "category = \"pointer_dialogue\", "
-            f"rom = 0x{record_offset:05X}, start = 0x{cpu:04X}, stop = 0x{end_cpu:04X}, "
+            f"rom = 0x{record_offset:05X}, prg_bank = {prg_bank}, start = 0x{cpu:04X}, stop = 0x{end_cpu:04X}, "
             f"bytes = \"{hex_bytes}\", old_bytes = \"{hex_bytes}\", "
             f"source = \"Generated from candidate pointer {index}\", "
             "korean = \"Candidate runtime target; native visual gate remains UNKNOWN\" },"
@@ -93,6 +97,7 @@ def main() -> int:
             f"pointer={target['pointer_index']} "
             f"cpu=0x{int(target['cpu_address']):04X} "
             f"rom=0x{int(target['record_rom_offset']):05X} "
+            f"prg_bank={int(target['prg_bank'])} "
             f"length={len(target['bytes'])}"
         )
     print(f"candidate_md5={digest}")

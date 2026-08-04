@@ -8,6 +8,7 @@ local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/pointer_dial
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "5000")
 local HIT_LIMIT = tonumber(os.getenv("KUNIO_HIT_LIMIT") or "5000")
 local READ_LOG_LIMIT = tonumber(os.getenv("KUNIO_READ_LOG_LIMIT") or "200")
+local TARGETS_LUA = os.getenv("KUNIO_TARGETS_LUA") or ""
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -41,7 +42,50 @@ local function parse_bytes(text)
     return values
 end
 
+local mapper_index = 0
+local mapper_registers = {}
+local prg_mode = 0
+local function register_write(addr, callback)
+    local ok = pcall(function() memory.registerwrite(addr, callback) end)
+    if ok then return true end
+    return pcall(function() memory.registerwrite(addr, 1, callback) end)
+end
+local function on_mapper_select(addr, size, value)
+    local byte = value or byte_at(addr or 0)
+    mapper_index = byte % 8
+    prg_mode = math.floor(byte / 64) % 2
+end
+local function on_mapper_data(addr, size, value)
+    mapper_registers[mapper_index] = value or byte_at(addr or 0)
+end
+local function mapped_prg_bank(address)
+    local bank
+    if address >= 0x8000 and address < 0xA000 then
+        bank = prg_mode == 0 and (mapper_registers[6] or -1) or 14
+    elseif address >= 0xA000 and address < 0xC000 then
+        bank = mapper_registers[7] or -1
+    elseif address >= 0xC000 and address < 0xE000 then
+        bank = prg_mode == 0 and 14 or (mapper_registers[6] or -1)
+    elseif address >= 0xE000 then
+        bank = 15
+    else
+        bank = -1
+    end
+    return bank
+end
+local function mapper_snapshot()
+    local values = {}
+    for index = 0, 7 do values[#values + 1] = hex2(mapper_registers[index] or 0) end
+    values[#values + 1] = hex2(prg_mode)
+    return table.concat(values, " ")
+end
+
 local function matches(target)
+    local expected_bank = target.prg_bank
+    if expected_bank == nil and target.rom ~= nil then
+        expected_bank = math.floor((target.rom - 0x10) / 0x2000)
+    end
+    if expected_bank ~= nil and mapped_prg_bank(target.start) ~= expected_bank then return false end
     local expected = parse_bytes(target.bytes)
     if #expected ~= target.stop - target.start + 1 then return false end
     for index, value in ipairs(expected) do
@@ -92,27 +136,34 @@ local function joy_for_frame(frame)
     return { right = true, A = true, B = true }
 end
 
-local targets = {
+local targets = {}
+if TARGETS_LUA ~= "" then
+    local ok, loaded = pcall(dofile, TARGETS_LUA)
+    if ok and type(loaded) == "table" then targets = loaded end
+end
+if #targets == 0 then targets = {
     {
         label = "pointer_002_korean_relocated",
         start = 0x9FD6,
         stop = 0x9FE0,
+        rom = 0x05FE6,
         bytes = "F0 BB 97 71 8C CA 8F 85 82 BA FF",
     },
     {
         label = "pointer_003_korean_relocated",
         start = 0x9FE1,
         stop = 0x9FF5,
+        rom = 0x05FF1,
         bytes = "F0 BB 84 00 89 95 8C 00 85 99 86 CC F8 C0 B6 8A 8C 9A 98 CA FF",
     },
-}
+} end
 
 local summary_path = OUT_DIR .. "/summary.tsv"
 local read_log_path = OUT_DIR .. "/target_reads.tsv"
 mkdir(OUT_DIR)
 append(summary_path, "frame\treason\ttarget\tscreenshot\ttarget_match\tphase\thits\tscreen_fingerprint")
 append(summary_path, table.concat({"0", "target_loaded", tostring(#targets), "false", "false", "1", "0", ""}, "\t"))
-append(read_log_path, "frame\ttarget\tstart\tvalues\tmatch")
+append(read_log_path, "frame\ttarget\tstart\tvalues\tmatch\tmapped_bank\tmapper")
 
 local hits = 0
 local read_logs = 0
@@ -149,6 +200,9 @@ local function capture(target)
     }, "\t"))
 end
 
+register_write(0x8000, on_mapper_select)
+register_write(0x8001, on_mapper_data)
+
 for _, target in ipairs(targets) do
     for addr = target.start, target.stop do
         register_read(addr, function()
@@ -162,6 +216,8 @@ for _, target in ipairs(targets) do
                     string.format("$%04X", target.start),
                     target_values(target),
                     tostring(is_match),
+                    tostring(mapped_prg_bank(target.start)),
+                    mapper_snapshot(),
                 }, "\t"))
             end
             if not captured and is_match then
@@ -173,7 +229,7 @@ for _, target in ipairs(targets) do
     end
 end
 
-append(summary_path, table.concat({"0", "lua_start", "pointer_002_003", "false", "false", "1", tostring(hits), ""}, "\t"))
+append(summary_path, table.concat({"0", "lua_start", "pointer_targets", "false", "false", "1", tostring(hits), ""}, "\t"))
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
 
@@ -182,13 +238,13 @@ while emu.framecount() < MAX_FRAMES and not captured do
     joypad.set(1, joy_for_frame(frame))
     gui.text(2, 8, "Pointer dialogue route probe")
     gui.text(2, 17, "bounded menu/stage route")
-    gui.text(2, 26, "frame=" .. tostring(frame) .. " hits=" .. tostring(hits))
+    gui.text(2, 26, "frame=" .. tostring(frame) .. " hits=" .. tostring(hits) .. " bank=" .. tostring(mapped_prg_bank(0x9FD6)))
     emu.frameadvance()
     if frame > 0 and frame % 600 == 0 then
         append(summary_path, table.concat({
             tostring(frame),
             "periodic",
-            "pointer_002_003",
+            "pointer_targets",
             "false",
             "false",
             tostring(frame < 200 and 1 or (frame <= 3000 and 2 or 3)),
@@ -202,7 +258,7 @@ local reason = captured and "target_capture" or "target_not_seen"
 append(summary_path, table.concat({
     tostring(emu.framecount()),
     reason,
-    captured_target ~= "" and captured_target or "pointer_002_003",
+    captured_target ~= "" and captured_target or "pointer_targets",
     "false",
     tostring(captured),
     tostring(emu.framecount() < 200 and 1 or (emu.framecount() <= 3000 and 2 or 3)),
