@@ -24,3 +24,18 @@ python scripts/run_fceux_lua_analysis.py --rom $env:TEMP\kunio-manifest.nes --lu
 
 A zero-hit result is `UNKNOWN` until the candidate's relocated PRG/loader route
 is separately proven; it is not evidence to extend free-running autoplay.
+
+## Native Manifest Loader Trace
+
+After building a manifest candidate, run the bounded loader trace and analyzer
+to distinguish a route stall from a broken relocated pointer:
+
+```powershell
+python scripts/run_fceux_lua_analysis.py --rom $env:TEMP\kunio-manifest.nes --lua-script lua\kunio_manifest_loader_trace.lua --frames 1900 --timeout 60 --final-output $env:TEMP\kunio-manifest-loader-trace --clean-output --no-dump-hex --no-dump-bin
+python scripts/analyze_manifest_loader_trace.py --trace $env:TEMP\kunio-manifest-loader-trace --json-out $env:TEMP\kunio-manifest-loader-trace.json --markdown-out $env:TEMP\kunio-manifest-loader-trace.md
+```
+
+`PASS` requires `lua_done`, the expected dialogue-ID progression, and exact
+reads of the candidate-owned selected records. A target capture must separately
+report `screenshot=true` and `target_match=true`; neither gate promotes the
+remaining unverified rows or natural boss route.

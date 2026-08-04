@@ -30,7 +30,9 @@ def main() -> int:
         TEMPLATE_ROM_OFFSET : TEMPLATE_ROM_OFFSET + TEMPLATE_LENGTH
     ]
     assert candidate[0x1EE5D] == 0x3E, "source-page menu candidate must not globally change R1"
-    assert len(build_loader_helper_with_direct_mapper(0xB030)) == 64
+    loader = build_loader_helper_with_direct_mapper(0xB030)
+    assert len(loader) == 64
+    assert bytes((0xA8, 0x88)) in loader, 'loader must preserve X by indexing the page table through Y'
     renderer, _marker = build_page_scoped_renderer(0xBFA5, 0x5B, map_r1_from_page_state=True)
     assert len(renderer) == 90
 

@@ -144,7 +144,9 @@ def build_loader_helper_with_direct_mapper(
     asm = _TinyAssembler(LOADER_CAVE_CPU)
     asm.emit(0xB9, 0x8B, 0x70)
     asm.emit(0x8D, TEMP_DIALOGUE_ID_ADDRESS & 0xFF, TEMP_DIALOGUE_ID_ADDRESS >> 8)
-    asm.emit(0xAA, 0xCA)
+    # Index the page table through Y so the original loader's X register is
+    # preserved for its caller. The original dispatch recomputes Y below.
+    asm.emit(0xA8, 0x88)
     asm.emit(0xBD, page_table_cpu & 0xFF, page_table_cpu >> 8)
     asm.emit(0x8D, PAGE_STATE_ADDRESS & 0xFF, PAGE_STATE_ADDRESS >> 8)
 

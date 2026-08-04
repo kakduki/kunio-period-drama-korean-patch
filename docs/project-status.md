@@ -152,3 +152,15 @@ source-read hits for the generated targets and ended `target_not_seen`. This is
 classified `UNKNOWN_CANDIDATE_ROUTE_OR_PRG_MAPPING`; the static build remains
 valid, but native relocated runtime is not release evidence. Details are in
 `rom_analysis/manifest_native_runtime_gate.md`.
+
+## Corrected Native Manifest Runtime Gate (2026-08-05)
+
+The two-row manifest candidate was rebuilt with the pointer loader's X-register
+preservation fix. Its candidate MD5 is `a5432d693a51e682bd23760a76e1c3ad` and
+its generated IPS MD5 is `bed2f958208ac945bb4a47dad7826973`. A bounded loader
+trace now reaches dialogue IDs `B7 -> B8 -> B9 -> BA` and reads all 37 bytes
+owned by selected rows p182/p185. Separate bounded native captures pass for
+both rows: p182 at frame 712 (`26/26`, target match true) and p185 at frame
+1661 (`11/11`, target match true). This proves the selected development rows,
+not the full dialogue/event/boss release. The full release remains `NOT_READY`.
+See `rom_analysis/manifest_native_runtime_gate.md`.

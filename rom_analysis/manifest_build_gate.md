@@ -65,3 +65,16 @@ The tracked manifest now contains two verified pointer rows: `OPENING-182` and
 The static validator reports both pointer rows as `static_status=PASS`, while
 runtime/native visual approval remains a separate gate. The temporary build
 outputs were written outside the repository under `C:\tmp`.
+
+## Corrected Native Recheck (2026-08-05)
+
+The first manifest candidate exposed a real loader defect: its page-table index
+used `TAX/DEX` and corrupted the caller's X register, producing a repeated
+`B6` dialogue-ID loop. The helper now uses `TAY/DEY` and preserves X without
+exceeding the 64-byte cave.
+
+The rebuilt candidate (`a5432d693a51e682bd23760a76e1c3ad`) passes the bounded
+loader trace and the selected-row native visual captures. p182 is read at
+`$9FB4` and captured at frame 712; p185 is read at `$9FCE` and captured at
+frame 1661. Both report exact target matches. Full dialogue and natural event
+routes remain separate `UNKNOWN` gates.

@@ -75,6 +75,7 @@ KEY_PYTHON = [
     "tools/insert_text.py",
     "tools/realtime_translation_overlay.py",
     "scripts/generate_manifest_runtime_target.py",
+    "scripts/analyze_manifest_loader_trace.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -317,6 +318,7 @@ LUA_SCRIPTS = [
     "lua/kunio_sram_route_probe.lua",
     "lua/kunio_name_entry_probe.lua",
     "lua/kunio_translation_overlay.lua",
+    "lua/kunio_manifest_loader_trace.lua",
     "lua/kunio_opening_ptr_185_base_probe.lua",
     "lua/kunio_map_crsr_source_probe.lua",
 ]
@@ -432,6 +434,7 @@ def main() -> int:
     run("default build reproducibility", ["scripts/test_default_build_reproducibility.py"])
     run("selected-only manifest plan", ["scripts/test_insert_text_manifest.py"])
     run("relocated manifest runtime target", ["scripts/test_generate_manifest_runtime_target.py"])
+    run("manifest loader trace analyzer", ["scripts/test_analyze_manifest_loader_trace.py"])
     run("realtime translation overlay receiver", ["scripts/test_realtime_translation_overlay.py"])
     run("external output paths", ["scripts/test_external_output_paths.py"])
     run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])
