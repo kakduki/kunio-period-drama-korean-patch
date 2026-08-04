@@ -8,3 +8,5 @@
 - Added safe reference application, binary diff, changed-region, string, pointer, and CHR analysis tools.
 - Extended `build.py` to generate an IPS diff from the verified Japanese base to a candidate ROM.
 - Kept release status `NOT_READY`; this is a development candidate pipeline, not a finished full translation.
+- Pointed the default build at the tracked development IPS and added a clean-build hash regression test.
+- Verified the full-pointer candidate can be regenerated from tracked translation/structure/font inputs; external output paths now produce portable reports.

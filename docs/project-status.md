@@ -46,3 +46,4 @@ Add one reviewed row to `translation/script.csv`, build from the clean base with
 - Manifest candidate bounded route: lua_done, but relocated record source-read hits 0; runtime/visual status UNKNOWN.
 - Raw extraction: 248 pointer rows with original bytes and heuristic termination status.
 - Default IPS build remains deterministic at candidate MD5 0a983c3d8494444935f000963f415253.
+- Full-pointer source rebuild from tracked TSV/JSON/font inputs reproduced the same candidate MD5 and IPS MD5 df8359ea51f9fd36de4c0d2117ad6a9c; external temp output is supported.
