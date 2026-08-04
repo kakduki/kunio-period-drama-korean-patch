@@ -58,3 +58,19 @@ Candidate MD5 is `3384157d7e72f3bf4dd3f742ffe41fc9`; the frame-883 bounded route
 matched all 47 target bytes and ended with `lua_done`. The record is pointer 182 at
 ROM `0x071B6`, PRG bank 1, CPU `$B1A6-$B1D4`, opening dialogue context. Full details
 are in `rom_analysis/minimum_feature_proof_recheck.md`.
+## Opening Three-Record Recheck (2026-08-05)
+
+The range-scoped opening candidate was rebuilt from the Japanese base with
+`text_data/korean_scene_batches/opening_ptr_182_184_16x16_readability.json`.
+The candidate MD5 is `46cedd1da6d49643f5dd6bc4895ce706`, matching the tracked
+opening component. Bounded FCEUX runs reached all three records and stopped:
+
+| pointer | ROM record | CPU range | frame | runtime result |
+|---|---:|---:|---:|---|
+| 182 | `0x071B6` | `$B1A6-$B1C5` | 883 | `target_match=true`, `lua_done` |
+| 183 | `0x071D6` | `$B1C6-$B1DE` | 1093 | `target_match=true`, `lua_done` |
+| 184 | `0x071EF` | `$B1DF-$B1F5` | 1399 | `target_match=true`, `lua_done` |
+
+This is a bounded opening-dialogue development proof, not a full-game release
+approval. The natural combat/boss route and the remaining dialogue records are
+still `UNKNOWN`.
