@@ -107,8 +107,18 @@ failure. The existing opening proof remains the runtime/visual authority.
 
 ## Real-Time Translation Overlay MVP (2026-08-05)
 The overlay MVP is now an executable sidecar path. A bounded FCEUX run on the
-verified Japanese base emitted `OPENING-182` at frame 656, and
-`tools/realtime_translation_overlay.py` resolved the Korean manifest row as
-`CACHED`. This proves the sidecar handoff for one known record; it does not
-change the native ROM release status, which remains `NOT_READY`. See
-`rom_analysis/realtime_overlay_mvp.md`.
+verified Japanese base emitted `OPENING-182` at frame 656 and
+`OPENING-183` at frames 718/1047; `tools/realtime_translation_overlay.py`
+resolved the reached rows as `CACHED`. `OPENING-184` is registered but was not
+reached before the frame cap. This proves the sidecar handoff for the reached
+known records; it does not change the native ROM release status, which remains
+`NOT_READY`. See `rom_analysis/realtime_overlay_mvp.md`.
+
+
+## Map CRSR Route Gate (2026-08-05)
+The Map CRSR label is confirmed as pre-pointer record `EN-PRE-167` at ROM
+`0x05C69` / CPU `$9C59`, with control byte `0x38`. The standard runtime target
+generator excludes it as a `control_skeleton`, and no safe RAM ownership address
+has been proven. The similarly named `$9C54` candidate is a different byte pattern
+and is not authorized for state writes. Route status remains `UNKNOWN`; details are
+in `rom_analysis/map_crsr_route_gate.md`.
