@@ -55,3 +55,12 @@ The English patch does not provide a stage warp or boss-clear cheat. Identical
 bounded runs of the English reference and Korean candidate both ended with
 `lua_done` at frame 3,600, 11 unique screens, and the same `$7A02` decrement
 trace, with no confirmed boss transition.
+
+
+## Attribution and Reuse
+
+- Reference title: Technos Samurai: Downtown Special v1.00 / TSe-v10.ips.
+- Patch creator: not identified in the local IPS metadata; do not infer authorship from byte changes.
+- Source references are recorded in om_analysis/english_patch_reference.md.
+- License and reuse terms: not established from the local file. This repository uses the IPS only as a local structural reference and does not include its patched ROM, source code, graphics, or full English script.
+- The Korean implementation is rebuilt from the verified Japanese base with independent data, font, and patch generation.

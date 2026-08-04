@@ -11,3 +11,7 @@
 ## Interpretation
 
 These are development findings, not reasons to stop producing a minimal candidate. A row can be promoted independently when its source, bank, pointer, width, glyph coverage, runtime read, and screen context are all proven.
+
+## Pipeline Verification
+
+The following development checks are now `PASS`: base identity, candidate IPS reproduction, external English-reference copy, structural extraction, binary diff, pointer scan, minimal font payload, CHR expansion audit, and external-output candidate insertion. These checks prove tooling and bounded artifacts; they do not promote the full candidate to release.

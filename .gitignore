@@ -185,3 +185,8 @@ rom_analysis/stage_progression_probe_ptr181_expanded_chr/
 rom_analysis/ptr181_expanded_code_pool_probe_capture/
 rom_analysis/ptr181_korean_8x16_candidate_capture/
 rom_analysis/stage_progression_probe_ptr181_korean_8x16/
+build/
+tests/screenshots/*
+!tests/screenshots/.gitkeep
+tests/logs/*
+!tests/logs/.gitkeep

@@ -1,5 +1,5 @@
 id,category,bank,pointer_address,text_address,original_bytes,original_text,translated_text,control_codes,max_bytes,speaker,scene,notes
-MENU-ITEMS,menu,1,,0x1F2C1,,アイテム,물건,,5,,main menu,Runtime label candidate; verify source bytes before final insertion
-OPENING-182,dialogue,1,0x05F40,0x071B6,,UNKNOWN,쿠니오,,20,쿠니오,opening,Existing bounded visual PASS; source bytes remain to be normalized
-ITEMS-USE,menu,1,,0x1F2D0,,つかう,사용,,5,,items,Existing runtime PASS candidate
-ITEMS-REMOVE,menu,1,,0x1F2D5,,すてる,버리기,,6,,items,Existing runtime PASS candidate
+MENU-ITEMS,menu,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,물건,UNKNOWN,5,UNKNOWN,main menu,Test translation only; source address and encoding are not yet proven
+OPENING-182,dialogue,1,0x05F40,UNKNOWN,UNKNOWN,UNKNOWN,쿠니오,UNKNOWN,20,UNKNOWN,opening,Pointer table slot is known; record target and Japanese meaning remain runtime/context work
+ITEMS-USE,menu,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,사용,UNKNOWN,5,UNKNOWN,items,Existing bounded action candidate; source ownership still separate from pointer dialogue
+ITEMS-REMOVE,menu,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,버리기,UNKNOWN,6,UNKNOWN,items,Existing bounded action candidate; source ownership still separate from pointer dialogue

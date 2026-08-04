@@ -1,9 +1,16 @@
 id,kind,input,command_or_artifact,expected,status,notes
-BASE-IDENTITY,integrity,Japanese base ROM,build.py input validation,size/hash/header match,UNKNOWN,Run on the local legally owned ROM
-IPS-REPRO,build,Japanese base ROM + default IPS,build.py output,new candidate with deterministic hash,UNKNOWN,Must not overwrite input
-EXTRACT-STRUCTURE,extract,Japanese base ROM,tools/extract_text.py,analysis catalog is generated,UNKNOWN,Structural extraction only until source is runtime-proven
-ENGLISH-COMPARE,analysis,Japanese base ROM + local IPS,tools/compare_original_english.py,PRG/CHR/pointer report,UNKNOWN,English is a technical reference only
-FONT-MINIMAL,font,쿠니오,tools/font_builder.py,required tiles are produced,UNKNOWN,Visual proof is separate
-OPENING-RUNTIME,runtime,opening candidate,rom_analysis/patched_rom_report.md,verified Korean source read, PASS,Existing bounded runtime proof
-OPENING-VISUAL,visual,opening candidate,native emulator capture,Korean label visible, PASS,Existing bounded visual proof
+BASE-IDENTITY,integrity,Japanese base ROM,build.py input validation,size/header/hash match,PASS,Verified against the recorded base identity
+IPS-REPRO,build,Japanese base ROM + default IPS,build.py --patch-output,candidate MD5 0a983c3d8494444935f000963f415253,PASS,Generated candidate and independent IPS in C:\tmp
+EXTRACT-STRUCTURE,extract,Japanese base ROM,tools/extract_text.py,248-row structural catalog,PASS,Japanese bytes remain tokens until runtime context is proven
+ENGLISH-COMPARE,analysis,Japanese base ROM + local IPS,tools/compare_original_english.py,PRG/CHR/pointer report,PASS,12,582 changed bytes and 99 IPS records reproduced
+REFERENCE-COPY,analysis,Japanese base ROM + local IPS,tools/apply_reference_patch.py,external English analysis copy,PASS,Source ROM write guard passed
+BINARY-DIFF,analysis,Japanese base + English copy,tools/binary_diff.py,1,170 changed spans and JSON/CSV/Markdown,PASS,Classification is heuristic evidence, not ownership proof
+POINTER-SCAN,analysis,Japanese base ROM,tools/pointer_scanner.py,248 little-endian rows,PASS,Active Bank 1 CPU window recorded explicitly
+STRING-SCAN,analysis,Japanese base ROM,tools/string_scanner.py,byte candidates with unresolved encoding,PASS,No Shift-JIS assumption
+FONT-MINIMAL,font,reviewed glyph codepoints,tools/font_builder.py,32-byte NES 2bpp payload,PASS,Two currently handcrafted glyphs
+FONT-REGION,font,Japanese base + candidate,tools/font_region_analyzer.py,CHR changes and trailing expansion recorded,PASS,106,496 trailing candidate bytes recorded
+INSERT-CANDIDATE,build,Japanese base ROM,tools/insert_text.py,candidate output with build report,PASS,External output folder supported without deleting existing files
+OPENING-RUNTIME,runtime,opening candidate,rom_analysis/patched_rom_report.md,verified Korean source read,PASS,Existing bounded runtime proof
+OPENING-VISUAL,visual,opening candidate,native emulator capture,Korean label visible,PASS,Existing bounded visual proof
 FULL-ROUTE-VISUAL,visual,full candidate,native emulator capture,all target scenes visible,UNKNOWN,Natural boss route is not proven
+RELEASE-GATE,release,development candidate,docs/project-status.md,all release checks,NOT_READY,Full dialogue and natural event/boss visual gates remain open

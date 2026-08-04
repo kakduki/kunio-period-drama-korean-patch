@@ -60,3 +60,13 @@ treated as evidence.
 
 Detailed raw evidence remains in `rom_analysis/` and the probe sources are in
 `lua/`.
+
+
+## Address and Integrity Rules
+
+- The exact dump identity is established by the filename plus the recorded hashes. A cartridge revision beyond that dump identity is not inferred.
+- PRG file offsets use the iNES header and PRG-bank boundaries. MMC3 runtime bank selection must be recorded alongside any CPU address.
+- The confirmed pointer family is two-byte little-endian data in the declared Bank 1 CPU window. The working mapping uses CPU $8000 to file offset 0x4010; mapper state remains part of the record contract.
+- Observed 0x00, 0xBB, 0xCA, 0xF8, and 0xFF values are control candidates, not universal terminators. Each record keeps them explicit until a runtime source-read proves their role.
+- The iNES header has no general ROM checksum field used by this project. Cryptographic hashes are the integrity gate; generated IPS files are verified by reapplication and candidate hashes.
+- No compression or decompression routine has been proven for the declared text families. Unresolved regions remain unpatched.

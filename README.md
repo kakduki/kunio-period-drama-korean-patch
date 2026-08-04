@@ -113,3 +113,22 @@ The first non-opening pointer batch is built by
 `scripts/build_pointer_dialogue_batch_candidate.py`. It covers pointer 2 and
 pointer 3, relocates pointer 3 from `$A012` to `$A011`, and keeps its runtime
 gate `UNKNOWN` until an early-boss state can be entered without blind autoplay.
+
+## Reproducible Pipeline
+
+The confirmed base is the Japanese NES/Famicom iNES image with mapper 4 (MMC3), 262,160 bytes, no trainer, and vertical mirroring.
+
+- CRC32: `014D63C9`
+- MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- SHA-1: `4338c3001c5e2bf5fad0f282bfee23b79e0ad959`
+- SHA-256: `54d79f15f60a32123e95fbf20661128a13ee0eee1941e0ff98ba7bb54343e23a`
+
+The local English reference is the `TSe-v10.ips` IPS. Its creator/license terms are not established by the local file metadata, so it is used only as a structural reference; its translation text, patched ROM, code, and graphics are not redistributed.
+
+Build a candidate and an independently generated IPS from the exact base:
+
+```powershell
+python build.py --input "rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes" --output "$env:TEMP\kunio-test.nes" --patch-output "$env:TEMP\kunio-development.ips" --report "$env:TEMP\kunio-build.json" --force
+```
+
+Read the requirement-specific status in `docs/project-status.md`, `docs/test-guide.md`, and `tests/known-issues.md`. Development status remains `NOT_READY` until the full dialogue, natural event/boss route, and release visual gates are proven.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply a development IPS candidate to a verified Japanese base ROM."""
+"""Apply a development IPS candidate and optionally generate a new IPS diff."""
 
 from __future__ import annotations
 
@@ -62,26 +62,62 @@ def apply_ips(base: bytes, patch: bytes) -> bytes:
     raise ValueError("IPS EOF marker is missing")
 
 
+def changed_records(original: bytes, patched: bytes) -> list[tuple[int, bytes]]:
+    records: list[tuple[int, bytes]] = []
+    index = 0
+    while index < len(patched):
+        if index < len(original) and original[index] == patched[index]:
+            index += 1
+            continue
+        start = index
+        payload = bytearray()
+        while index < len(patched) and (index >= len(original) or original[index] != patched[index]):
+            payload.append(patched[index])
+            index += 1
+        records.append((start, bytes(payload)))
+    return records
+
+
+def write_ips(path: Path, records: list[tuple[int, bytes]]) -> None:
+    with path.open("wb") as handle:
+        handle.write(b"PATCH")
+        for offset, data in records:
+            for chunk_start in range(0, len(data), 0xFFFF):
+                chunk = data[chunk_start : chunk_start + 0xFFFF]
+                handle.write(struct.pack(">I", offset + chunk_start)[1:])
+                handle.write(struct.pack(">H", len(chunk)))
+                handle.write(chunk)
+        handle.write(b"EOF")
+
+
+def resolve_path(path: Path) -> Path:
+    return path if path.is_absolute() else ROOT / path
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True, help="verified Japanese base ROM")
     parser.add_argument("--output", type=Path, required=True, help="new candidate ROM path")
     parser.add_argument("--ips", type=Path, default=DEFAULT_IPS)
+    parser.add_argument("--patch-output", type=Path, help="optional IPS generated from input to output")
     parser.add_argument("--report", type=Path)
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
-    base_path = args.input if args.input.is_absolute() else ROOT / args.input
-    output_path = args.output if args.output.is_absolute() else ROOT / args.output
-    ips_path = args.ips if args.ips.is_absolute() else ROOT / args.ips
+    base_path = resolve_path(args.input).resolve()
+    output_path = resolve_path(args.output).resolve()
+    ips_path = resolve_path(args.ips).resolve()
+    patch_output = resolve_path(args.patch_output).resolve() if args.patch_output else None
     if not base_path.is_file():
         raise SystemExit(f"base ROM not found: {base_path}")
     if not ips_path.is_file():
         raise SystemExit(f"IPS patch not found: {ips_path}")
-    if base_path.resolve() == output_path.resolve():
-        raise SystemExit("refusing to overwrite the input ROM")
+    if base_path == output_path or (patch_output is not None and patch_output == base_path):
+        raise SystemExit("refusing to write over the input ROM")
     if output_path.exists() and not args.force:
-        raise SystemExit(f"output exists; use --force to replace: {output_path}")
+        raise SystemExit(f"output exists; use --force: {output_path}")
+    if patch_output is not None and patch_output.exists() and not args.force:
+        raise SystemExit(f"patch output exists; use --force: {patch_output}")
 
     base = base_path.read_bytes()
     if len(base) != EXPECTED_SIZE or base[:16] != EXPECTED_HEADER:
@@ -93,13 +129,28 @@ def main() -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_bytes(candidate)
     candidate_hashes = hashes(candidate)
-    report_path = args.report or output_path.with_suffix(".build.json")
-    report_path = report_path if report_path.is_absolute() else ROOT / report_path
+
+    patch_report: dict[str, object] | None = None
+    if patch_output is not None:
+        records = changed_records(base, candidate)
+        patch_output.parent.mkdir(parents=True, exist_ok=True)
+        write_ips(patch_output, records)
+        patch_bytes = patch_output.read_bytes()
+        patch_report = {
+            "path": str(patch_output),
+            **hashes(patch_bytes),
+            "records": len(records),
+            "source": "generated from the verified Japanese base and candidate bytes",
+        }
+
+    report_path = resolve_path(args.report) if args.report else output_path.with_suffix(".build.json")
+    report_path = report_path.resolve()
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report = {
         "base": {"path": str(base_path), **base_hashes},
-        "ips": {"path": str(ips_path), **hashes(ips_path.read_bytes())},
+        "input_ips": {"path": str(ips_path), **hashes(ips_path.read_bytes())},
         "candidate": {"path": str(output_path), **candidate_hashes},
+        "generated_patch": patch_report,
         "default_candidate_hash_match": candidate_hashes["md5"] == DEFAULT_CANDIDATE_MD5,
         "development_status": "NOT_READY",
         "distribution": "IPS patch only; original and candidate ROMs are local artifacts",
