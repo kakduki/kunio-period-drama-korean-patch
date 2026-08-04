@@ -122,3 +122,11 @@ generator excludes it as a `control_skeleton`, and no safe RAM ownership address
 has been proven. The similarly named `$9C54` candidate is a different byte pattern
 and is not authorized for state writes. Route status remains `UNKNOWN`; details are
 in `rom_analysis/map_crsr_route_gate.md`.
+
+
+## Map CRSR Source-Read Comparison (2026-08-05)
+The dedicated bounded probe ran against both the English reference and Japanese
+base. Each completed at frame 3600 with 9 target bytes registered, 5 unique
+screen fingerprints, and 0 Map CRSR source reads. This is classified as
+`UNKNOWN_ROUTE_NOT_REACHED` for both ROMs; no state write or native patch change
+was authorized. See `rom_analysis/map_crsr_source_probe.md`.

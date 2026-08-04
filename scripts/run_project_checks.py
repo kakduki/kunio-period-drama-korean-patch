@@ -315,6 +315,7 @@ LUA_SCRIPTS = [
     "lua/kunio_sram_route_probe.lua",
     "lua/kunio_name_entry_probe.lua",
     "lua/kunio_translation_overlay.lua",
+    "lua/kunio_map_crsr_source_probe.lua",
 ]
 
 REGEN_COMMANDS = [
