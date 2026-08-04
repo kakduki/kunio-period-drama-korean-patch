@@ -94,6 +94,7 @@ KEY_PYTHON = [
     "scripts/generate_next_manual_run.py",
     "scripts/generate_object_state_probe_candidates.py",
     "scripts/generate_boss_dialogue_targets.py",
+    "scripts/summarize_boss_forced_render.py",
     "scripts/generate_object_state_pair_plan.py",
     "scripts/generate_font_expansion_readiness.py",
     "scripts/generate_patch_candidate_manifest.py",
@@ -197,6 +198,7 @@ KEY_PYTHON = [
     "scripts/test_next_manual_run.py",
     "scripts/test_object_state_probe_candidates.py",
     "scripts/test_generate_boss_dialogue_targets.py",
+    "scripts/test_summarize_boss_forced_render.py",
     "scripts/test_object_state_pair_plan.py",
     "scripts/test_patch_progress_dashboard.py",
     "scripts/test_padding_strategy_priority.py",
@@ -447,6 +449,8 @@ def main() -> int:
         ["scripts/test_extract_english_reference_script.py"],
     )
     run("boss dialogue targets", ["scripts/test_generate_boss_dialogue_targets.py"])
+    run("boss dialogue forced renderer report", ["scripts/test_summarize_boss_forced_render.py"])
+
     run("auto-input evidence report", ["scripts/test_auto_input_evidence_report.py"])
     run("auto-input review crops", ["scripts/test_auto_input_review_crops.py"])
     run("auto-input visual triage", ["scripts/test_auto_input_visual_triage.py"])

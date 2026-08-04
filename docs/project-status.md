@@ -32,6 +32,7 @@ The local structural reference is `tools/reference/TSe-v10.ips`. Its SHA-256 is 
 - Current clean merged candidate: development-only; release status `NOT_READY`.
 - Current known blockers: 57 pre-pointer overflow rows are quarantined and one required glyph is missing in the merged candidate.
 - Boss dialogue target queue: 10 structural pointer records; all remain UNKNOWN until a natural event screen is captured.
+- Bounded forced renderer probe: 10/10 target pointers were observed; 1/10 (pointer 188) reached text emit/PPU activity, while 9/10 remain UNKNOWN. Natural boss-route proof remains 0/10.
 
 The first usable milestone is one Korean word or label displayed on an actual game screen. The repository already contains that proof; the pipeline now makes it reproducible from the Japanese base.
 
