@@ -59,6 +59,15 @@ DEFAULT_REPORT_MARKDOWN = REPO_ROOT / "rom_analysis" / "full_pointer_korean_cand
 OUT_STEM = "kunio_period_drama_korean_full_pointer_candidate"
 
 
+def display_path(path: Path) -> str:
+    """Keep repository reports portable while allowing external temp output."""
+    try:
+        return path.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+
 def load_tsv(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
@@ -410,8 +419,8 @@ def main() -> int:
         "status": "WHOLE_SCRIPT_CANDIDATE_BUILT_RUNTIME_UNKNOWN",
         "base_md5": hashlib.md5(base).hexdigest(),
         "candidate_md5": hashlib.md5(patched).hexdigest(),
-        "rom_path": str(rom_path.relative_to(REPO_ROOT)),
-        "ips_path": str(ips_path.relative_to(REPO_ROOT)),
+        "rom_path": display_path(rom_path),
+        "ips_path": display_path(ips_path),
         "compiled_records": sum(bool(record["record"]) for record in config["records"]),
         "record_bytes": config["record_bytes"],
         "record_start": f"0x{config['record_start']:05X}",
