@@ -20,6 +20,9 @@ local UNIQUE_LIMIT = tonumber(os.getenv("KUNIO_STAGE_UNIQUE_LIMIT") or "72")
 local EXTRA_DIALOGUE_START = os.getenv("KUNIO_EXTRA_DIALOGUE_START") ~= "0"
 local COMBAT_NO_B = os.getenv("KUNIO_COMBAT_NO_B") == "1"
 local COMBAT_SWEEP = os.getenv("KUNIO_COMBAT_SWEEP") == "1"
+local COMBAT_MIXED = os.getenv("KUNIO_COMBAT_MIXED") == "1"
+local COMBAT_STATIONARY = os.getenv("KUNIO_COMBAT_STATIONARY") == "1"
+local COMBAT_GRID = os.getenv("KUNIO_COMBAT_GRID") == "1"
 local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
@@ -315,6 +318,40 @@ local function combat_input(frame)
         return {}
     end
     local cycle = rel % 240
+    if COMBAT_GRID then
+        local grid = rel % 640
+        local button = grid >= 320 and "B" or "A"
+        local step = grid % 320
+        if step < 80 then
+            if button == "A" then return { right = true, A = true } end
+            return { right = true, B = true }
+        end
+        if step < 160 then
+            if button == "A" then return { down = true, A = true } end
+            return { down = true, B = true }
+        end
+        if step < 240 then
+            if button == "A" then return { left = true, A = true } end
+            return { left = true, B = true }
+        end
+        if button == "A" then return { up = true, A = true } end
+        return { up = true, B = true }
+    end
+    if COMBAT_MIXED then
+        if COMBAT_STATIONARY then
+            if cycle < 40 then return { A = true } end
+            if cycle < 80 then return { B = true } end
+            if cycle < 120 then return { A = true } end
+            if cycle < 160 then return { B = true } end
+            return {}
+        end
+        if cycle < 40 then return { right = true, A = true } end
+        if cycle < 80 then return { left = true, A = true } end
+        if cycle < 120 then return { right = true, B = true } end
+        if cycle < 160 then return { left = true, B = true } end
+        if cycle < 200 then return { A = true } end
+        return { B = true }
+    end
     if COMBAT_SWEEP then
         if cycle < 60 then return { right = true, A = true, B = true } end
         if cycle < 120 then return { down = true, A = true, B = true } end
@@ -371,6 +408,9 @@ end
 if STATE_MACHINE_TRACE then
     register_exec(0xD207, function() trace_state_machine("script_byte") end)
     register_exec(0xD20D, function() trace_state_machine("script_ptr") end)
+    register_exec(0x8A87, function() trace_state_machine("dec_7a02_8xxx") end)
+    register_exec(0xAA87, function() trace_state_machine("dec_7a02_axxx") end)
+    register_exec(0xCA87, function() trace_state_machine("dec_7a02_cxxx") end)
 end
 if PPU_TRACE then
     register_write(0x2006, 1, on_ppu_trace_addr)
