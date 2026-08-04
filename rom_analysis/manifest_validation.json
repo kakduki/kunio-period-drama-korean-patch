@@ -24,13 +24,13 @@
     {
       "id": "OPENING-182",
       "category": "dialogue",
-      "translated_text": "쿠니오, 서둘러! 분조가 곤경에 빠졌어!",
+      "translated_text": "쿠니마사: 어서 움직여! 분조 두목이 큰일이야!",
       "pointer_address": "0x05F40",
       "pointer_index": 182,
       "text_address": "0x071B6",
       "original_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
       "termination_status": "HEURISTIC_FIRST_FF",
-      "missing_handcrafted_glyphs": " !,가경곤빠어에오졌",
+      "missing_handcrafted_glyphs": " !:어여움직",
       "static_status": "PASS",
       "status": "UNKNOWN",
       "reason": "runtime_source_read_and_visual_gate_pending",
@@ -65,12 +65,27 @@
       "status": "UNKNOWN",
       "reason": "runtime_source_read_and_visual_gate_pending",
       "warnings": "pointer_address_unknown;glyphs_not_in_handcrafted_minimum"
+    },
+    {
+      "id": "OPENING-185",
+      "category": "dialogue",
+      "translated_text": "오코토: 이 사람은",
+      "pointer_address": "0x05F46",
+      "pointer_index": 185,
+      "text_address": "0x07208",
+      "original_bytes": "85 8A 94 BB 81 B4 CA 00 8A 99 9B 94 9A CB FF",
+      "termination_status": "HEURISTIC_FIRST_FF",
+      "missing_handcrafted_glyphs": " :람오은코토",
+      "static_status": "PASS",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "glyphs_not_in_handcrafted_minimum"
     }
   ],
   "summary": {
-    "total": 4,
+    "total": 5,
     "PASS": 0,
     "FAIL": 0,
-    "UNKNOWN": 4
+    "UNKNOWN": 5
   }
 }

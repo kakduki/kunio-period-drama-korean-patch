@@ -130,3 +130,15 @@ base. Each completed at frame 3600 with 9 target bytes registered, 5 unique
 screen fingerprints, and 0 Map CRSR source reads. This is classified as
 `UNKNOWN_ROUTE_NOT_REACHED` for both ROMs; no state write or native patch change
 was authorized. See `rom_analysis/map_crsr_source_probe.md`.
+
+## Opening Pointer 185 Source Gate (2026-08-05)
+
+A dedicated bounded source probe reached `PTR-185` at frame `1691` after three
+explicit dialogue acknowledgements. The exact base record at ROM `0x07208` /
+CPU `$B1F8-$B206` produced `15/15` source-read hits, `target_match=true`, a
+screen capture, and `lua_done`. This is `PASS` for source ownership and bounded
+opening-route reachability. The native Korean visual gate remains `UNKNOWN`.
+
+The real-time overlay recheck now emits all four opening IDs (182-185) in one
+1,900-frame bounded run. The p184 target was corrected to its exact base window;
+p185 was emitted at frame `1655` and resolved from the cache.

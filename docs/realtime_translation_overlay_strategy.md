@@ -88,3 +88,11 @@ frames 656, 718, and 1047; the Python receiver resolved the latest Korean
 translation with status `CACHED`. `OPENING-184` was registered but not reached
 before the frame cap. Evidence is recorded in
 `rom_analysis/realtime_overlay_mvp.md`.
+
+## Latest Bounded Evidence
+
+The corrected overlay target table now covers four opening records. A 1,900-frame
+run emitted `OPENING-182` at frame 656, `OPENING-183` at 718 and 1047,
+`OPENING-184` at 1349, and `OPENING-185` at 1655. All four IDs have cache rows;
+the latest p185 event resolves as `CACHED`. This remains a sidecar development
+proof, not native ROM release evidence.

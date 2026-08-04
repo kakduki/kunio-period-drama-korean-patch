@@ -272,6 +272,7 @@ LUA_TARGETS = [
     "lua/kunio_pointer_dialogue_batch_002_003_target.lua",
     "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
+    "lua/kunio_opening_ptr_185_base_target.lua",
     "lua/kunio_translation_overlay_targets.lua",
 ]
 
@@ -315,6 +316,7 @@ LUA_SCRIPTS = [
     "lua/kunio_sram_route_probe.lua",
     "lua/kunio_name_entry_probe.lua",
     "lua/kunio_translation_overlay.lua",
+    "lua/kunio_opening_ptr_185_base_probe.lua",
     "lua/kunio_map_crsr_source_probe.lua",
 ]
 

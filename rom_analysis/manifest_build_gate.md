@@ -47,3 +47,21 @@ The watcher intentionally does not inject the opening menu route, so zero hits
 is route evidence rather than proof that the candidate text is broken. The
 existing dedicated opening proof remains the authoritative visual/source-read
 proof for the three-record component.
+
+## Two-Row Manifest Recheck (2026-08-05)
+
+The tracked manifest now contains two verified pointer rows: `OPENING-182` and
+`OPENING-185`. From the exact Japanese base, `build.py --manifest` produced:
+
+- `manifest_updates=2`
+- `manifest_skipped=3` (`MENU-ITEMS`, `ITEMS-USE`, `ITEMS-REMOVE`)
+- Candidate size: `368656` bytes
+- Candidate MD5: `03c8abce53e019b39d0efad17c82fe98`
+- Generated IPS size: `107106` bytes
+- Generated IPS MD5: `06b51f4291dfb6ef933e779915e4f377`
+- Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`
+- Development status: `NOT_READY`
+
+The static validator reports both pointer rows as `static_status=PASS`, while
+runtime/native visual approval remains a separate gate. The temporary build
+outputs were written outside the repository under `C:\tmp`.

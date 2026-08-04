@@ -1,5 +1,6 @@
 id,category,translated_text,pointer_address,pointer_index,text_address,original_bytes,termination_status,missing_handcrafted_glyphs,static_status,status,reason,warnings
 MENU-ITEMS,menu,물건,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,건물,UNKNOWN,UNKNOWN,runtime_source_read_and_visual_gate_pending,pointer_address_unknown;glyphs_not_in_handcrafted_minimum
-OPENING-182,dialogue,"쿠니오, 서둘러! 분조가 곤경에 빠졌어!",0x05F40,182,0x071B6,88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF,HEURISTIC_FIRST_FF," !,가경곤빠어에오졌",PASS,UNKNOWN,runtime_source_read_and_visual_gate_pending,glyphs_not_in_handcrafted_minimum
+OPENING-182,dialogue,쿠니마사: 어서 움직여! 분조 두목이 큰일이야!,0x05F40,182,0x071B6,88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF,HEURISTIC_FIRST_FF, !:어여움직,PASS,UNKNOWN,runtime_source_read_and_visual_gate_pending,glyphs_not_in_handcrafted_minimum
 ITEMS-USE,menu,사용,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,용,UNKNOWN,UNKNOWN,runtime_source_read_and_visual_gate_pending,pointer_address_unknown;glyphs_not_in_handcrafted_minimum
 ITEMS-REMOVE,menu,버리기,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,기리버,UNKNOWN,UNKNOWN,runtime_source_read_and_visual_gate_pending,pointer_address_unknown;glyphs_not_in_handcrafted_minimum
+OPENING-185,dialogue,오코토: 이 사람은,0x05F46,185,0x07208,85 8A 94 BB 81 B4 CA 00 8A 99 9B 94 9A CB FF,HEURISTIC_FIRST_FF, :람오은코토,PASS,UNKNOWN,runtime_source_read_and_visual_gate_pending,glyphs_not_in_handcrafted_minimum

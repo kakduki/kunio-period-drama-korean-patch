@@ -50,3 +50,27 @@ event, an optional translator command may be supplied. The command receives
 one JSON object on stdin and must print one translated line. Its output is
 marked `AI_UNCHECKED` and is not written into the ROM or promoted to the
 translation manifest automatically.
+
+## Expanded Four-Record Recheck (2026-08-05)
+
+The overlay target table was corrected for pointer 184 to use its exact base
+source window (`0x071F0`, `$B1E0-$B1F7`) and expanded with pointer 185.
+The bounded emitter was then run with a 1,900-frame ceiling:
+
+```text
+python scripts/run_fceux_lua_analysis.py --rom "rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes" --lua-script lua\kunio_translation_overlay.lua --target-lua lua\kunio_translation_overlay_targets.lua --frames 1900 --timeout 60 --final-output C:\tmp\kunio_overlay_runtime_p185_v2 --clean-output --no-dump-hex --no-dump-bin --lua-env KUNIO_OVERLAY_OUTPUT=kunio_fceux_lua_output --lua-env KUNIO_OVERLAY_TARGETS_LUA=kunio_translation_overlay_targets.lua
+```
+
+- Emulator completion: `lua_done` at frame `1900`
+- Registered target bytes: `97` across `4` targets
+- Events: `5` total covering `4` IDs
+- `OPENING-182`: frame `656`
+- `OPENING-183`: frames `718`, `1047`
+- `OPENING-184`: frame `1349`
+- `OPENING-185`: frame `1655`
+- Receiver lookup: `OPENING-185` resolved as `CACHED`
+- ROM modification: none
+
+This is a bounded four-record sidecar proof. It does not prove full-game
+coverage or native Korean visual safety. The p185 Korean text is a reviewed
+draft (`오코토: 이 사람은`) and remains separate from release approval.

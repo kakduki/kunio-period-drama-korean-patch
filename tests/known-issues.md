@@ -18,4 +18,4 @@ The following development checks are now `PASS`: base identity, candidate IPS re
 
 ## Manifest Overlay Gate
 
-The optional translation/script.csv overlay currently applies one pointer row and skips three rows with unknown ownership. Its bounded FCEUX run reaches lua_done, but the relocated pointer record has zero source-read hits. The static target snapshot is not visual or runtime proof, so this candidate remains UNKNOWN.
+The optional translation/script.csv overlay currently applies two pointer rows (182 and 185) and skips three rows with unknown ownership. The two-row build is reproducible, but native visual approval and the relocated full-candidate runtime route remain UNKNOWN.
