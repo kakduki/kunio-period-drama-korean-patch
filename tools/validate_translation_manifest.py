@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Validate translation rows against the Japanese ROM's known pointer table.
 
 This is a static gate. A row can pass address and glyph checks while its
@@ -173,4 +173,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
