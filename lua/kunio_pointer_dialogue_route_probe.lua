@@ -9,6 +9,9 @@ local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "5000")
 local HIT_LIMIT = tonumber(os.getenv("KUNIO_HIT_LIMIT") or "5000")
 local READ_LOG_LIMIT = tonumber(os.getenv("KUNIO_READ_LOG_LIMIT") or "200")
 local TARGETS_LUA = os.getenv("KUNIO_TARGETS_LUA") or ""
+local MAPPER_LOG_LIMIT = tonumber(os.getenv("KUNIO_MAPPER_LOG_LIMIT") or "2000")
+local mapper_log_count = 0
+local mapper_log_path = OUT_DIR .. "/mapper_events.tsv"
 
 local function mkdir(path)
     os.execute('mkdir "' .. path .. '" >NUL 2>NUL')
@@ -45,6 +48,7 @@ end
 local mapper_index = 0
 local mapper_registers = {}
 local prg_mode = 0
+local log_mapper
 local function register_write(addr, callback)
     local ok = pcall(function() memory.registerwrite(addr, callback) end)
     if ok then return true end
@@ -54,9 +58,11 @@ local function on_mapper_select(addr, size, value)
     local byte = value or byte_at(addr or 0)
     mapper_index = byte % 8
     prg_mode = math.floor(byte / 64) % 2
+    if log_mapper then log_mapper("select", byte) end
 end
 local function on_mapper_data(addr, size, value)
     mapper_registers[mapper_index] = value or byte_at(addr or 0)
+    if log_mapper then log_mapper("data", mapper_registers[mapper_index]) end
 end
 local function mapped_prg_bank(address)
     local bank
@@ -78,6 +84,14 @@ local function mapper_snapshot()
     for index = 0, 7 do values[#values + 1] = hex2(mapper_registers[index] or 0) end
     values[#values + 1] = hex2(prg_mode)
     return table.concat(values, " ")
+end
+log_mapper = function(event, value)
+    if mapper_log_count >= MAPPER_LOG_LIMIT then return end
+    mapper_log_count = mapper_log_count + 1
+    append(mapper_log_path, table.concat({
+        tostring(emu.framecount()), event, hex2(value), tostring(mapper_index), tostring(prg_mode),
+        mapper_snapshot(),
+    }, "\t"))
 end
 
 local function matches(target)
@@ -161,6 +175,7 @@ if #targets == 0 then targets = {
 local summary_path = OUT_DIR .. "/summary.tsv"
 local read_log_path = OUT_DIR .. "/target_reads.tsv"
 mkdir(OUT_DIR)
+append(mapper_log_path, "frame\tevent\tvalue\tselected\tprg_mode\tmapper_registers")
 append(summary_path, "frame\treason\ttarget\tscreenshot\ttarget_match\tphase\thits\tscreen_fingerprint")
 append(summary_path, table.concat({"0", "target_loaded", tostring(#targets), "false", "false", "1", "0", ""}, "\t"))
 append(read_log_path, "frame\ttarget\tstart\tvalues\tmatch\tmapped_bank\tmapper")
