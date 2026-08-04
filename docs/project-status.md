@@ -49,3 +49,12 @@ Add one reviewed row to `translation/script.csv`, build from the clean base with
 - Raw extraction: 248 pointer rows with original bytes and heuristic termination status.
 - Default IPS build remains deterministic at candidate MD5 0a983c3d8494444935f000963f415253.
 - Full-pointer source rebuild from tracked TSV/JSON/font inputs reproduced the same candidate MD5 and IPS MD5 df8359ea51f9fd36de4c0d2117ad6a9c; external temp output is supported.
+
+## Minimum Feature Recheck (2026-08-05)
+
+The first complete source-built proof was reproduced from the Japanese base using
+`text_data/korean_scene_batches/opening_ptr_182_16x16_speaker_separator_proof.json`.
+Candidate MD5 is `3384157d7e72f3bf4dd3f742ffe41fc9`; the frame-883 bounded route
+matched all 47 target bytes and ended with `lua_done`. The record is pointer 182 at
+ROM `0x071B6`, PRG bank 1, CPU `$B1A6-$B1D4`, opening dialogue context. Full details
+are in `rom_analysis/minimum_feature_proof_recheck.md`.
