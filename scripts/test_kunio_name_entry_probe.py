@@ -11,6 +11,10 @@ def test_name_probe_is_bounded_and_does_not_write_memory() -> None:
     assert "_nametable_2000_23ff.bin" in text
     assert "memory.writebyte" not in text
     assert "memory.writedword" not in text
+    assert "memory.registerwrite" in text
+    assert "cursor_write_trace.tsv" in text
+    assert "KOGANEMUSHI_ROUTE and frame >= CHEAT_START_FRAME" in text
+    assert '"lua_done"' in text
 
 
 if __name__ == "__main__":

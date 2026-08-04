@@ -71,6 +71,18 @@ local function byte_at(address, domain)
     return ok and value or 0
 end
 local function hex2(value) return string.format("%02X", (value or 0) % 0x100) end
+local function hex4(value) return string.format("%04X", (value or 0) % 0x10000) end
+local cursor_trace_path = nil
+local function register_cursor_write(address)
+    local callback = function(write_address, size, value)
+        local pc = 0
+        pcall(function() pc = memory.getregister("pc") end)
+        append(cursor_trace_path, table.concat({
+            emu.framecount(), hex4(write_address), hex2(value), hex4(pc),
+        }, "\t"))
+    end
+    pcall(function() memory.registerwrite(address, 1, callback) end)
+end
 local function dump_range(path, start_address, length, domain)
     local f = assert(io.open(path, "wb"))
     for offset = 0, length - 1 do
@@ -116,7 +128,7 @@ local function input_for(frame)
     if frame >= 700 and frame < 712 then return { B = true }, "opening_setup" end
     if frame >= 880 and frame < 892 then return { A = true }, "character_setup" end
     if frame >= 940 and frame < 952 then return { A = true }, "character_setup" end
-    if frame >= CHEAT_START_FRAME then
+    if KOGANEMUSHI_ROUTE and frame >= CHEAT_START_FRAME then
         for _, event in ipairs(cheat_events) do
             if frame >= event.frame and frame < event.frame + CHEAT_PULSE then
                 return { [event.button] = true }, "koganemushi_" .. event.button
@@ -166,6 +178,11 @@ append(OUT_DIR .. "/route.tsv", table.concat({
     "max_frames=" .. tostring(MAX_FRAMES),
 }, "\t"))
 
+cursor_trace_path = OUT_DIR .. "/cursor_write_trace.tsv"
+append(cursor_trace_path, "frame\taddress\tvalue\tpc")
+for _, address in ipairs({0x04FA, 0x04FB, 0x04FC, 0x0502, 0x0503, 0x0700, 0x0701, 0x0702}) do
+    register_cursor_write(address)
+end
 pcall(function() FCEU.speedmode("turbo") end)
 pcall(function() emu.speedmode("turbo") end)
 local last_fingerprint = nil
@@ -194,5 +211,6 @@ while emu.framecount() < MAX_FRAMES and unique < UNIQUE_LIMIT do
 end
 
 append(OUT_DIR .. "/route.tsv", table.concat({ "end", emu.framecount(), "unique=" .. tostring(unique) }, "\t"))
+append(OUT_DIR .. "/summary.tsv", table.concat({ "lua_done", emu.framecount(), "unique=" .. tostring(unique) }, "\t"))
 pcall(function() FCEU.pause() end)
 pcall(function() emu.pause() end)
