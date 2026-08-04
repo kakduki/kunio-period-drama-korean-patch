@@ -35,3 +35,13 @@ Treat the coordinate sequence as a candidate only. Use one-character-at-a-time c
 - Result: `UNKNOWN`; no ROM or RAM patch is authorized from this trace.
 
 The previous conclusion remains unchanged: the name-entry route is reproducible, but the Koganemushi coordinate candidate is not yet a verified event trigger. The next bounded probe should isolate one cursor move and one `A` press at a time, then compare the screen/PPU and RAM state before proceeding to map/event routing.
+
+## One-cell calibration (right_a / down_a)
+
+- Runs: `C:\tmp\kunio_name_probe\cal_right_a` and `C:\tmp\kunio_name_probe\cal_down_a`
+- Both bounded runs completed with `lua_done` at frame 2250.
+- The two directions produced a small, distinguishable screen delta at the stable name-entry frame, confirming that the input path is reaching the name-entry renderer.
+- Neither run produced a verified name-buffer update or an `END` acceptance transition in the watched state.
+- Result: `UNKNOWN`; direction/cursor mapping is still not sufficient to authorize a secret-code or event-state patch.
+
+The calibration mode is now available through `KUNIO_NAME_CALIBRATION=right_a|down_a|right2_a` for future single-cell tests. It is intentionally separate from the full candidate route.

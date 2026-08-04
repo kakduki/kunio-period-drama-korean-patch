@@ -57,6 +57,25 @@ add_cheat_button("right", 10)
 add_cheat_button("A", 1)
 add_cheat_button("A", 1)
 
+-- Optional one-cell calibration keeps cursor experiments separate from the full
+-- Koganemushi candidate route.
+local CALIBRATION_ROUTE = os.getenv("KUNIO_NAME_CALIBRATION") or ""
+if CALIBRATION_ROUTE ~= "" then
+    cheat_events = {}
+    cheat_cursor = CHEAT_START_FRAME
+    if CALIBRATION_ROUTE == "right_a" then
+        add_cheat_button("right", 1)
+        add_cheat_button("A", 1)
+    elseif CALIBRATION_ROUTE == "down_a" then
+        add_cheat_button("down", 1)
+        add_cheat_button("A", 1)
+    elseif CALIBRATION_ROUTE == "right2_a" then
+        add_cheat_button("right", 2)
+        add_cheat_button("A", 1)
+    else
+        error("unknown KUNIO_NAME_CALIBRATION route: " .. CALIBRATION_ROUTE)
+    end
+end
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
     local f = assert(io.open(path, "a")); f:write(line .. "\n"); f:close()

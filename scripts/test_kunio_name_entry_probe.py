@@ -14,6 +14,7 @@ def test_name_probe_is_bounded_and_does_not_write_memory() -> None:
     assert "memory.registerwrite" in text
     assert "cursor_write_trace.tsv" in text
     assert "KOGANEMUSHI_ROUTE and frame >= CHEAT_START_FRAME" in text
+    assert "KUNIO_NAME_CALIBRATION" in text
     assert '"lua_done"' in text
 
 
