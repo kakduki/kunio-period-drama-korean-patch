@@ -11,3 +11,16 @@ The project uses a soft gate during development and a hard gate only for release
 - Visual: native emulator evidence is required for release candidates and high-risk changes.
 
 Use `tests/test-cases.csv` as the compact checklist. Results are `PASS`, `FAIL`, or `UNKNOWN`, with the reason recorded in `tests/known-issues.md` or the relevant `rom_analysis/` report.
+
+## Relocated Manifest Candidate Runtime Check
+
+For a manifest candidate, generate source targets from its own pointer table
+before launching FCEUX. This avoids reusing Japanese-base addresses:
+
+```powershell
+python scripts/generate_manifest_runtime_target.py --candidate $env:TEMP\kunio-manifest.nes --pointer-index 182 --pointer-index 185 --output $env:TEMP\kunio-manifest-targets.lua
+python scripts/run_fceux_lua_analysis.py --rom $env:TEMP\kunio-manifest.nes --lua-script lua\kunio_opening_ptr_185_base_probe.lua --target-lua $env:TEMP\kunio-manifest-targets.lua --frames 1900 --timeout 60 --final-output $env:TEMP\kunio-manifest-runtime --clean-output --no-dump-hex --no-dump-bin
+```
+
+A zero-hit result is `UNKNOWN` until the candidate's relocated PRG/loader route
+is separately proven; it is not evidence to extend free-running autoplay.

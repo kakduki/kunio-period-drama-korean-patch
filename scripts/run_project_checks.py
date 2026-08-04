@@ -74,6 +74,7 @@ KEY_PYTHON = [
     "scripts/build_full_pointer_korean_candidate.py",
     "tools/insert_text.py",
     "tools/realtime_translation_overlay.py",
+    "scripts/generate_manifest_runtime_target.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -430,6 +431,7 @@ def main() -> int:
     run("combined Korean development candidate", ["scripts/test_build_korean_development_candidate.py"])
     run("default build reproducibility", ["scripts/test_default_build_reproducibility.py"])
     run("selected-only manifest plan", ["scripts/test_insert_text_manifest.py"])
+    run("relocated manifest runtime target", ["scripts/test_generate_manifest_runtime_target.py"])
     run("realtime translation overlay receiver", ["scripts/test_realtime_translation_overlay.py"])
     run("external output paths", ["scripts/test_external_output_paths.py"])
     run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])

@@ -142,3 +142,13 @@ opening-route reachability. The native Korean visual gate remains `UNKNOWN`.
 The real-time overlay recheck now emits all four opening IDs (182-185) in one
 1,900-frame bounded run. The p184 target was corrected to its exact base window;
 p185 was emitted at frame `1655` and resolved from the cache.
+
+## Native Manifest Runtime Gate (2026-08-05)
+
+The two-row manifest candidate (`03c8abce53e019b39d0efad17c82fe98`) was checked
+using targets generated from its own pointer table: p182 relocated to `$9FB4`
+and p185 to `$9FCE`. The bounded 1,900-frame opening route produced zero
+source-read hits for the generated targets and ended `target_not_seen`. This is
+classified `UNKNOWN_CANDIDATE_ROUTE_OR_PRG_MAPPING`; the static build remains
+valid, but native relocated runtime is not release evidence. Details are in
+`rom_analysis/manifest_native_runtime_gate.md`.
