@@ -31,3 +31,7 @@ Use the analysis wrappers with an external temporary output directory. They repo
 - string_scanner.py: unresolved byte candidates
 - pointer_scanner.py: explicit little-endian bank-context table
 - font_region_analyzer.py: CHR and trailing expansion report
+
+Manifest-driven candidate build (development gate):
+python build.py --input base.nes --manifest translation/script.csv --output $env:TEMP/kunio-manifest.nes --patch-output $env:TEMP/kunio-manifest.ips --report $env:TEMP/kunio-manifest.json --force
+This mode records skipped UNKNOWN rows and does not imply runtime or visual PASS.

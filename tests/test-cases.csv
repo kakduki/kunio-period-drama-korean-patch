@@ -15,3 +15,4 @@ OPENING-VISUAL,visual,opening candidate,native emulator capture,Korean label vis
 FULL-ROUTE-VISUAL,visual,full candidate,native emulator capture,all target scenes visible,UNKNOWN,Natural boss route is not proven
 RELEASE-GATE,release,development candidate,docs/project-status.md,all release checks,NOT_READY,Full dialogue and natural event/boss visual gates remain open
 MANIFEST-OVERLAY,build/runtime,translation/script.csv,tools/insert_text.py --manifest,one pointer row applied and source-read proven,UNKNOWN,Manifest overlay produced MD5 11f958c3dc3bf87c6295ef8aae75067d; bounded opening run had target_match=true from static snapshot but source-read hits=0
+BUILD-MANIFEST,build,translation/script.csv,build.py --manifest,manifest-driven candidate and IPS with hashes,PASS,Build plumbing passed; runtime gate is tracked separately as MANIFEST-OVERLAY UNKNOWN

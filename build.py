@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply a development IPS candidate and optionally generate a new IPS diff."""
+"""Build a development candidate from a verified base and an independent source."""
 
 from __future__ import annotations
 
@@ -7,6 +7,9 @@ import argparse
 import hashlib
 import json
 import struct
+import subprocess
+import sys
+import tempfile
 import zlib
 from pathlib import Path
 
@@ -94,11 +97,41 @@ def resolve_path(path: Path) -> Path:
     return path if path.is_absolute() else ROOT / path
 
 
+def manifest_candidate(base_path: Path, manifest_path: Path) -> tuple[bytes, dict[str, object]]:
+    build_root = ROOT / "build"
+    build_root.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="manifest_build_", dir=build_root) as temp:
+        output_dir = Path(temp)
+        subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "tools" / "insert_text.py"),
+                "--rom",
+                str(base_path),
+                "--manifest",
+                str(manifest_path),
+                "--output-dir",
+                str(output_dir),
+            ],
+            cwd=ROOT,
+            check=True,
+        )
+        candidates = sorted(output_dir.glob("*.nes"))
+        if len(candidates) != 1:
+            raise RuntimeError(f"manifest build expected one candidate, found {len(candidates)}")
+        return candidates[0].read_bytes(), {
+            "mode": "translation_manifest",
+            "manifest": str(manifest_path),
+            "candidate_source": str(candidates[0]),
+        }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True, help="verified Japanese base ROM")
     parser.add_argument("--output", type=Path, required=True, help="new candidate ROM path")
     parser.add_argument("--ips", type=Path, default=DEFAULT_IPS)
+    parser.add_argument("--manifest", type=Path, help="optional translation/script.csv build source")
     parser.add_argument("--patch-output", type=Path, help="optional IPS generated from input to output")
     parser.add_argument("--report", type=Path)
     parser.add_argument("--force", action="store_true")
@@ -107,11 +140,14 @@ def main() -> int:
     base_path = resolve_path(args.input).resolve()
     output_path = resolve_path(args.output).resolve()
     ips_path = resolve_path(args.ips).resolve()
+    manifest_path = resolve_path(args.manifest).resolve() if args.manifest else None
     patch_output = resolve_path(args.patch_output).resolve() if args.patch_output else None
     if not base_path.is_file():
         raise SystemExit(f"base ROM not found: {base_path}")
-    if not ips_path.is_file():
+    if manifest_path is None and not ips_path.is_file():
         raise SystemExit(f"IPS patch not found: {ips_path}")
+    if manifest_path is not None and not manifest_path.is_file():
+        raise SystemExit(f"translation manifest not found: {manifest_path}")
     if base_path == output_path or (patch_output is not None and patch_output == base_path):
         raise SystemExit("refusing to write over the input ROM")
     if output_path.exists() and not args.force:
@@ -125,7 +161,16 @@ def main() -> int:
     base_hashes = hashes(base)
     if base_hashes["md5"] != EXPECTED_MD5:
         raise SystemExit(f"base ROM MD5 mismatch: {base_hashes['md5']}")
-    candidate = apply_ips(base, ips_path.read_bytes())
+
+    if manifest_path is not None:
+        candidate, source_report = manifest_candidate(base_path, manifest_path)
+        input_ips_report = None
+    else:
+        input_patch = ips_path.read_bytes()
+        candidate = apply_ips(base, input_patch)
+        source_report = {"mode": "ips", "candidate_source": str(ips_path)}
+        input_ips_report = {"path": str(ips_path), **hashes(input_patch)}
+
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_bytes(candidate)
     candidate_hashes = hashes(candidate)
@@ -148,7 +193,8 @@ def main() -> int:
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report = {
         "base": {"path": str(base_path), **base_hashes},
-        "input_ips": {"path": str(ips_path), **hashes(ips_path.read_bytes())},
+        "source": source_report,
+        "input_ips": input_ips_report,
         "candidate": {"path": str(output_path), **candidate_hashes},
         "generated_patch": patch_report,
         "default_candidate_hash_match": candidate_hashes["md5"] == DEFAULT_CANDIDATE_MD5,
