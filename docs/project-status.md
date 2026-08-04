@@ -98,3 +98,8 @@ with MD5 `b5afc3e437238cc4e9186f2b19c56214`; the generated IPS MD5 is
 `46b7fb8914b7ef31624db97e73635426`. This is a build/runtime development gate;
 natural route and native-pixel visual status remain `UNKNOWN`, so release
 status remains `NOT_READY`.
+The manifest candidate also passed a bounded FCEUX process check: the correct
+watcher/target pairing ended `lua_done` at frame 900 with 33 target bytes
+registered. It produced 0 source-read hits because that watcher does not inject
+the opening route; this is classified `UNKNOWN_ROUTE_NOT_REACHED`, not a ROM
+failure. The existing opening proof remains the runtime/visual authority.

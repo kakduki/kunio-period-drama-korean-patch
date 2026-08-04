@@ -28,3 +28,22 @@ those gates remain `UNKNOWN`.
 - `python -m py_compile tools/insert_text.py scripts/build_full_pointer_korean_candidate.py`: `PASS`
 - The default IPS build remains independently reproducible at candidate MD5
   `0a983c3d8494444935f000963f415253`.
+## Bounded FCEUX Check (2026-08-05)
+
+The candidate was run with the correct watcher/target pairing:
+
+```text
+python scripts/run_fceux_lua_analysis.py --rom C:/tmp/kunio_manifest.nes --lua-script lua/kunio_bank1_watch.lua --target-lua lua/kunio_opening_ptr_182_183_16x16_p182_target.lua --frames 900 --timeout 90
+```
+
+- Emulator completion: `lua_done` at frame `900`
+- Registered target bytes: `33`
+- Source-read hits: `0`
+- Boot/bounded process: `PASS`
+- Opening pointer source-read: `UNKNOWN_ROUTE_NOT_REACHED`
+- Release status: `NOT_READY`
+
+The watcher intentionally does not inject the opening menu route, so zero hits
+is route evidence rather than proof that the candidate text is broken. The
+existing dedicated opening proof remains the authoritative visual/source-read
+proof for the three-record component.
