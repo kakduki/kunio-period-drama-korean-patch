@@ -397,3 +397,15 @@ reports=rom_analysis/pre_pointer_extended_static_candidate.json,rom_analysis/pre
 - Native visual gate: UNKNOWN_NATIVE_GDSCREENSHOT_TRANSPARENT.
 - Natural boss route: UNKNOWN.
 - Overall: SOFT_GATE_PASS_CLEAN_MERGED_CANDIDATE; release remains NOT_READY.
+
+# Bounded stage map route matrix (2026-08-05)
+candidate=full_korean_expanded_candidate
+candidate_md5=64b599ca6c502b635d216aebf5ce61b9
+route_budget=2600_frames_per_direction
+directions=left:10,right:10,up:10,down:9_unique_screens
+runtime=all_lua_done
+combat_entry=PASS
+boss_transition=UNKNOWN_ROUTE_NOT_REACHED
+natural_boss_dialogue=UNKNOWN
+promotion=NOT_READY
+report=rom_analysis/stage_map_route_matrix.md

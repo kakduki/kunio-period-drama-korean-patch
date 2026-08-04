@@ -74,3 +74,16 @@ opening component. Bounded FCEUX runs reached all three records and stopped:
 This is a bounded opening-dialogue development proof, not a full-game release
 approval. The natural combat/boss route and the remaining dialogue records are
 still `UNKNOWN`.
+
+## Bounded Stage Map Route Matrix (2026-08-05)
+
+A four-direction bounded probe was run against the current expanded candidate
+(MD5 `64b599ca6c502b635d216aebf5ce61b9`). `left`, `right`, and `up` each ended
+with `lua_done` after 10 unique screens; `down` ended after 9. All entered
+combat, but none produced a confirmed enemy-clear marker, map transition,
+boss-spawn state, or natural boss dialogue read. The 7,200-frame right-direction
+follow-up also ended finite with 11 unique screens and no boss marker.
+
+The route result is classified as `UNKNOWN_ROUTE_NOT_REACHED`, not a failed ROM
+build. Details and next state-contract work are in
+`rom_analysis/stage_map_route_matrix.md`.

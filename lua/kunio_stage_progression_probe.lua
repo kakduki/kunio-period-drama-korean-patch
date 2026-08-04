@@ -24,6 +24,8 @@ local COMBAT_MIXED = os.getenv("KUNIO_COMBAT_MIXED") == "1"
 local COMBAT_STATIONARY = os.getenv("KUNIO_COMBAT_STATIONARY") == "1"
 local COMBAT_GRID = os.getenv("KUNIO_COMBAT_GRID") == "1"
 local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
+local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
+local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -307,8 +309,26 @@ local function combat_input(frame)
     local rel = frame - 900
     if rel < 0 then return {} end
     if ADVANCE_AFTER_COMBAT and (byte_at(0x04F1) == 0x06 or byte_at(0x04F1) == 0x12) then
-        -- The encounter map route is Start -> B, then direction+B to move,
-        -- followed by direction+A+B to confirm an encounter.
+        if MAP_SOURCE_ROUTE then
+            -- Strategy references describe Start -> B to open the encounter map,
+            -- then direction+A for map-cursor travel. Keep B as a later confirm
+            -- phase so both documented map actions are exercised separately.
+            local map_cycle = frame % 192
+            local direction = {}
+            if MAP_DIRECTION == "left" then direction.left = true
+            elseif MAP_DIRECTION == "up" then direction.up = true
+            elseif MAP_DIRECTION == "down" then direction.down = true
+            else direction.right = true end
+            if map_cycle < 8 then return { start = true } end
+            if map_cycle < 16 then return {} end
+            if map_cycle < 24 then return { B = true } end
+            if map_cycle < 32 then return {} end
+            if map_cycle < 96 then direction.A = true; return direction end
+            if map_cycle < 104 then return {} end
+            if map_cycle < 168 then direction.B = true; return direction end
+            return {}
+        end
+        -- Legacy bounded route retained for comparison with earlier reports.
         local map_cycle = frame % 96
         if map_cycle < 6 then return { start = true } end
         if map_cycle < 12 then return {} end
