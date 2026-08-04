@@ -15,6 +15,10 @@ local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "7200")
 local CAPTURE_GAP = tonumber(os.getenv("KUNIO_SRAM_CAPTURE_GAP") or "60")
 local CAPTURE_START = tonumber(os.getenv("KUNIO_SRAM_CAPTURE_START") or "120")
 local UNIQUE_LIMIT = tonumber(os.getenv("KUNIO_STAGE_UNIQUE_LIMIT") or "72")
+-- Full SRAM snapshots are useful for inventory analysis but too slow for a
+-- route probe. Narrow the range when investigating a documented state byte.
+local SRAM_START = tonumber(os.getenv("KUNIO_SRAM_START") or "0x6000")
+local SRAM_LENGTH = tonumber(os.getenv("KUNIO_SRAM_LENGTH") or "0x2000")
 local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
 local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
 local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
@@ -137,9 +141,9 @@ while emu.framecount() < MAX_FRAMES and unique < UNIQUE_LIMIT do
             last_capture = frame
             local stem = string.format("%s/frame_%06d", OUT_DIR, frame)
             local cpu = read_blob(0x0000, 0x0800)
-            local sram = read_blob(0x6000, 0x2000)
+            local sram = read_blob(SRAM_START, SRAM_LENGTH)
             local cpu_file = stem .. "_cpu_ram.bin"
-            local sram_file = stem .. "_sram_6000_7fff.bin"
+            local sram_file = string.format("%s_sram_%04x_%04x.bin", stem, SRAM_START, SRAM_START + SRAM_LENGTH - 1)
             local f = assert(io.open(cpu_file, "wb")); f:write(cpu); f:close()
             f = assert(io.open(sram_file, "wb")); f:write(sram); f:close()
             append(snapshot_path, table.concat({
@@ -150,7 +154,7 @@ while emu.framecount() < MAX_FRAMES and unique < UNIQUE_LIMIT do
                 hex2(byte_at(0x071D)), hex2(byte_at(0x071E)), hex2(byte_at(0x071F)),
                 cpu_file, sram_file,
             }, "\t"))
-            append(delta_path, table.concat({ frame, phase, diff_snapshot(previous_cpu, cpu, 0x0000), diff_snapshot(previous_sram, sram, 0x6000) }, "\t"))
+            append(delta_path, table.concat({ frame, phase, diff_snapshot(previous_cpu, cpu, 0x0000), diff_snapshot(previous_sram, sram, SRAM_START) }, "\t"))
             previous_cpu, previous_sram = cpu, sram
             gui.text(2, 8, "Kunio SRAM route probe")
             gui.text(2, 17, phase .. " frame=" .. tostring(frame) .. " unique=" .. tostring(unique))

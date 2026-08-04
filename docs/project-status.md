@@ -174,3 +174,12 @@ selected bytes and reaches `B7 -> B8 -> B9 -> BA -> BB`. Separate native
 captures pass for all four rows at frames 712, 1059, 1345, and 1627. Full
 248-row coverage, non-pointer contexts, and natural boss routes remain
 `UNKNOWN`; release remains `NOT_READY`.
+
+## Same-Input Combat Comparison (2026-08-05)
+
+The English reference and current full Korean candidate were run with the same
+6,000-frame sweep/map route. Both entered combat at frame 915, ended with
+`lua_done`, and showed no boss transition. The localized screen fingerprints
+differ as expected, but the bounded route shape and state checkpoints match.
+This is `PASS_FINITE_SAME_GAMEPLAY_NO_BOSS`, not natural enemy-clear or release
+proof. Details are in `rom_analysis/combat_route_same_input_comparison.md`.
