@@ -30,12 +30,15 @@ produce a proven boss dialogue screen. The A+B route also reached `state 01`
 and ended with `lua_done`; it did not reach a confirmed post-combat dialogue
 or next-stage state within the cap.
 
-The one-hit probes used the documented `7A02=00` enemy-clear cheat and
-exercised mixed, stationary, and grid movement patterns. They all terminated
-with `lua_done`, reached multiple gameplay screens, and executed the `$7A02`
-decrement routine, but none produced a confirmed boss dialogue or stage
-transition. This narrows the remaining issue to the encounter's object/state
-conditions rather than the launcher or an opening-screen loop.
+The one-hit probes used the documented `7A02=00` candidate write and exercised
+mixed, stationary, and grid movement patterns. They all terminated with
+`lua_done`, reached multiple gameplay screens, and executed the routine at
+CPU `$AA87`, but none produced a confirmed boss dialogue or stage transition.
+The newer paired trace shows `$7A01` changing while `$7A02` stays zero in both
+the English reference and Korean candidate. Therefore `7A02=00` remains an
+unverified candidate condition, not a confirmed enemy-clear contract. This
+narrows the remaining issue to the encounter's object/state conditions rather
+than the launcher or an opening-screen loop.
 
 ## English Reference Comparison
 
@@ -46,13 +49,15 @@ The English reference ROM was run with the same bounded 3,600-frame route and
 | --- | --- | --- |
 | completion | `lua_done` at frame 3,600 | `lua_done` at frame 3,600 |
 | unique screens | 11 | 11 |
-| `$7A02` decrement trace | same observed `$AA87` route | same observed `$AA87` route |
+| `$AA87` route; `$7A01/$7A02` values | `$7A01` decrements; `$7A02` stays `00` | same observed route |
 | confirmed boss dialogue/transition | no | no |
 
 The timing of a few entry-screen captures differs because the rendered text
 and tile data differ, but the combat-state trace and bounded outcome do not.
 This indicates that the English patch is a valid structural reference for the
-text system, not a ready-made stage warp or boss-clear solution.## Interpretation
+text system, not a ready-made stage warp or boss-clear solution.
+
+## Interpretation
 
 The original opening-screen loop is fixed: these runs terminate and reach
 multiple gameplay states. The remaining blocker is not the emulator launcher;

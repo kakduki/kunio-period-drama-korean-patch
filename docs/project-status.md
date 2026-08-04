@@ -183,3 +183,13 @@ The English reference and current full Korean candidate were run with the same
 differ as expected, but the bounded route shape and state checkpoints match.
 This is `PASS_FINITE_SAME_GAMEPLAY_NO_BOSS`, not natural enemy-clear or release
 proof. Details are in `rom_analysis/combat_route_same_input_comparison.md`.
+
+## Counter-Zero Route Comparison (2026-08-05)
+
+The same bounded 7,200-frame combat route was run against the English reference
+and the current full Korean candidate with the new `$AA87` execution trace.
+Both runs reached `$7A01=00` at frame 6193, changed `$04F1` from `01` to `03`
+at frame 7019, and ended with `lua_done` at frame 7200. `$7A02` remained `00`
+in both runs. No confirmed dialogue source/parser/PPU event followed the
+counter-zero transition, so this is `UNKNOWN_COUNTER_ZERO_NO_DIALOGUE`, not
+boss proof. See `rom_analysis/counter_zero_route_trace.md`.

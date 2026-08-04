@@ -42,6 +42,8 @@ local PPU_TRACE_START = tonumber(os.getenv("KUNIO_PPU_TRACE_START") or "0")
 local NAME_SOURCE_TRACE = os.getenv("KUNIO_NAME_SOURCE_TRACE") == "1"
 local NAME_SOURCE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_NAME_SOURCE_TRACE_LIMIT") or "24000")
 local STATE_MACHINE_TRACE = os.getenv("KUNIO_STATE_MACHINE_TRACE") == "1"
+local SRAM_ROUTE_TRACE = os.getenv("KUNIO_SRAM_ROUTE_TRACE") == "1"
+local SRAM_ROUTE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_SRAM_ROUTE_TRACE_LIMIT") or "4000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -133,6 +135,8 @@ local ppu_trace_addr = 0
 local name_source_trace_count = 0
 local name_source_trace_path = OUT_DIR .. "/name_source_reads.tsv"
 local state_machine_trace_path = OUT_DIR .. "/state_machine_exec.tsv"
+local sram_route_trace_count = 0
+local sram_route_trace_path = OUT_DIR .. "/sram_route_exec.tsv"
 local function read_register(name)
     local ok, value = pcall(function() return memory.getregister(name) end)
     return ok and value or 0
@@ -144,6 +148,19 @@ local function trace_state_machine(label)
         hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)), hex2(byte_at(0x04FC)),
         hex2(byte_at(0x002C)), hex2(byte_at(0x002D)), hex2(byte_at(0x0028)), hex2(byte_at(0x0029)),
         hex2(byte_at(0x002A)), hex2(byte_at(0x002B)), hex2(byte_at(0x001A)), hex2(byte_at(0x001B))
+    }, "\t"))
+end
+local function trace_sram_route(label)
+    if not SRAM_ROUTE_TRACE or sram_route_trace_count >= SRAM_ROUTE_TRACE_LIMIT then return end
+    sram_route_trace_count = sram_route_trace_count + 1
+    append(sram_route_trace_path, table.concat({
+        tostring(emu.framecount()), label, string.format("%04X", read_register("pc")),
+        hex2(read_register("a")), hex2(read_register("x")), hex2(read_register("y")),
+        hex2(byte_at(0x7A00)), hex2(byte_at(0x7A01)), hex2(byte_at(0x7A02)),
+        hex2(byte_at(0x7A03)), hex2(byte_at(0x7A04)), hex2(byte_at(0x7A05)),
+        hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)),
+        hex2(byte_at(0x04FC)), hex2(byte_at(0x0050)), hex2(byte_at(0x0051)),
+        hex2(byte_at(0x0052)), hex2(byte_at(0x0053)),
     }, "\t"))
 end
 local function text_pointer()
@@ -434,6 +451,9 @@ end
 if STATE_MACHINE_TRACE then
     append(state_machine_trace_path, "frame\tlabel\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC\t2C\t2D\t28\t29\t2A\t2B\t1A\t1B")
 end
+if SRAM_ROUTE_TRACE then
+    append(sram_route_trace_path, "frame\tlabel\tpc\ta\tx\ty\t7A00\t7A01\t7A02\t7A03\t7A04\t7A05\t04F1\t04FA\t04FB\t04FC\t0050\t0051\t0052\t0053")
+end
 register_write(0x8000, 1, on_mapper_select)
 register_write(0x8001, 1, on_mapper_data)
 register_write(0x2000, 1, on_ppu_control)
@@ -450,6 +470,11 @@ if STATE_MACHINE_TRACE then
     register_exec(0x8A87, function() trace_state_machine("dec_7a02_8xxx") end)
     register_exec(0xAA87, function() trace_state_machine("dec_7a02_axxx") end)
     register_exec(0xCA87, function() trace_state_machine("dec_7a02_cxxx") end)
+end
+if SRAM_ROUTE_TRACE then
+    register_exec(0x8A87, function() trace_sram_route("dec_7a02_8xxx") end)
+    register_exec(0xAA87, function() trace_sram_route("dec_7a02_axxx") end)
+    register_exec(0xCA87, function() trace_sram_route("dec_7a02_cxxx") end)
 end
 if PPU_TRACE then
     register_write(0x2006, 1, on_ppu_trace_addr)
