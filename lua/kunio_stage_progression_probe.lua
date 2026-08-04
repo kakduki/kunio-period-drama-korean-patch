@@ -31,6 +31,9 @@ local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900"
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
 local RAM_TRACE = os.getenv("KUNIO_RAM_TRACE") == "1"
 local RAM_TRACE_LIMIT = tonumber(os.getenv("KUNIO_RAM_TRACE_LIMIT") or "20000")
+local RAM_TRACE_PC = os.getenv("KUNIO_RAM_TRACE_PC") == "1"
+local RAM_STATE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_RAM_STATE_TRACE_LIMIT") or "20000")
+local RAM_TRACE_OBJECTS = os.getenv("KUNIO_RAM_TRACE_OBJECTS") == "1"
 local DIALOGUE_TRACE = os.getenv("KUNIO_DIALOGUE_TRACE") == "1"
 local DIALOGUE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_DIALOGUE_TRACE_LIMIT") or "12000")
 local PPU_TRACE = os.getenv("KUNIO_PPU_TRACE") == "1"
@@ -113,6 +116,8 @@ local function register_write(addr, size, callback)
 end
 local ram_trace_count = 0
 local ram_trace_path = OUT_DIR .. "/ram_writes.tsv"
+local ram_state_trace_count = 0
+local ram_state_trace_path = OUT_DIR .. "/ram_state_writes.tsv"
 local dialogue_trace_count = 0
 local dialogue_pointer_path = OUT_DIR .. "/dialogue_pointers.tsv"
 local dialogue_source_path = OUT_DIR .. "/dialogue_source_reads.tsv"
@@ -216,14 +221,28 @@ local function register_dialogue_pointer(pointer)
     for addr = pointer, pointer + 0x50 do register_read(addr, on_dialogue_source_read) end
 end
 local function on_ram_write(addr, size, value)
-    if ram_trace_count >= RAM_TRACE_LIMIT then return end
-    ram_trace_count = ram_trace_count + 1
-    append(ram_trace_path, table.concat({
-        tostring(emu.framecount()),
-        string.format("%04X", addr or 0),
-        tostring(size or 1),
-        string.format("%02X", (value or byte_at(addr or 0) or 0) % 0x100),
-    }, "\t"))
+    if ram_trace_count < RAM_TRACE_LIMIT then
+        ram_trace_count = ram_trace_count + 1
+        append(ram_trace_path, table.concat({
+            tostring(emu.framecount()),
+            string.format("%04X", addr or 0),
+            tostring(size or 1),
+            string.format("%02X", (value or byte_at(addr or 0) or 0) % 0x100),
+        }, "\t"))
+    end
+    local trace_state_range = addr ~= nil and ((addr >= 0x0430 and addr <= 0x0450) or (addr >= 0x04F0 and addr <= 0x0510) or (RAM_TRACE_OBJECTS and addr >= 0x0700 and addr <= 0x07FF))
+    if RAM_TRACE_PC and ram_state_trace_count < RAM_STATE_TRACE_LIMIT and trace_state_range then
+        ram_state_trace_count = ram_state_trace_count + 1
+        append(ram_state_trace_path, table.concat({
+            tostring(emu.framecount()), string.format("%04X", addr or 0),
+            string.format("%02X", (value or byte_at(addr or 0) or 0) % 0x100),
+            string.format("%04X", read_register("pc")), hex2(read_register("a")),
+            hex2(read_register("x")), hex2(read_register("y")), hex2(byte_at(0x04F1)),
+            hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)), hex2(byte_at(0x04FC)),
+            hex2(byte_at(0x0706)), hex2(byte_at(0x07BC)), hex2(byte_at(0x07E4)),
+            hex2(byte_at(0x07FF)),
+        }, "\t"))
+    end
 end
 local function on_mapper_select(addr, size, value)
     mapper_select = (value or 0) % 8
@@ -440,6 +459,9 @@ if NAME_SOURCE_TRACE then
     for address = 0x0000, 0x07FF do register_read(address, on_name_source_read) end
 end
 if RAM_TRACE then
+    if RAM_TRACE_PC then
+        append(ram_state_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC\t0706\t07BC\t07E4\t07FF")
+    end
     register_write(0x0200, 0x0300, on_ram_write)
     register_write(0x0050, 0x0008, on_ram_write)
     register_write(0x04F0, 0x0020, on_ram_write)
