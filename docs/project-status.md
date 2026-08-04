@@ -164,3 +164,13 @@ both rows: p182 at frame 712 (`26/26`, target match true) and p185 at frame
 1661 (`11/11`, target match true). This proves the selected development rows,
 not the full dialogue/event/boss release. The full release remains `NOT_READY`.
 See `rom_analysis/manifest_native_runtime_gate.md`.
+## Four-Row Native Manifest Gate (2026-08-05)
+
+The selected manifest now builds p182-p185 together. Candidate MD5 is
+`b6ae36bb14ac1ba0836e7d02204d4b57`; generated IPS MD5 is
+`88ae9e0bf1b2d12a9dacfe73d4573b41`. Generated candidate targets relocate to
+`$9FB4`, `$9FCE`, `$9FDC`, and `$9FE9`. The bounded loader trace reads all 64
+selected bytes and reaches `B7 -> B8 -> B9 -> BA -> BB`. Separate native
+captures pass for all four rows at frames 712, 1059, 1345, and 1627. Full
+248-row coverage, non-pointer contexts, and natural boss routes remain
+`UNKNOWN`; release remains `NOT_READY`.

@@ -39,3 +39,15 @@ python scripts/analyze_manifest_loader_trace.py --trace $env:TEMP\kunio-manifest
 reads of the candidate-owned selected records. A target capture must separately
 report `screenshot=true` and `target_match=true`; neither gate promotes the
 remaining unverified rows or natural boss route.
+## Four-Row Native Manifest Example
+
+For a multi-row candidate, generate all selected targets and pass the generated
+Lua table to both the loader trace and each visual capture. The analyzer must
+receive the same candidate ROM and pointer indices so it derives relocated
+addresses instead of assuming base-ROM offsets.
+
+```powershell
+python scripts/generate_manifest_runtime_target.py --candidate $env:TEMP\kunio-manifest.nes --pointer-index 182 --pointer-index 183 --pointer-index 184 --pointer-index 185 --output $env:TEMP\kunio-manifest-targets.lua
+python scripts/run_fceux_lua_analysis.py --rom $env:TEMP\kunio-manifest.nes --lua-script lua\kunio_manifest_loader_trace.lua --target-lua $env:TEMP\kunio-manifest-targets.lua --frames 1900 --timeout 60 --final-output $env:TEMP\kunio-manifest-loader-trace --clean-output --no-dump-hex --no-dump-bin
+python scripts/analyze_manifest_loader_trace.py --trace $env:TEMP\kunio-manifest-loader-trace --candidate $env:TEMP\kunio-manifest.nes --pointer-index 182 --pointer-index 183 --pointer-index 184 --pointer-index 185 --json-out $env:TEMP\kunio-manifest-loader-trace.json --markdown-out $env:TEMP\kunio-manifest-loader-trace.md
+```

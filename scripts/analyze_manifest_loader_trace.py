@@ -8,6 +8,8 @@ import csv
 import json
 from pathlib import Path
 
+from generate_manifest_runtime_target import read_target
+
 
 EXPECTED_TARGETS = {
     182: {"start": 0x9FB4, "length": 26, "dialogue_id": 0xB7},
@@ -24,17 +26,30 @@ def parse_hex(value: str) -> int:
     return int(value.removeprefix("$"), 16)
 
 
-def analyze_trace(trace_dir: Path) -> dict[str, object]:
+def analyze_trace(trace_dir: Path, candidate: Path | None = None, pointer_indices: list[int] | None = None) -> dict[str, object]:
+    if candidate is None:
+        expected_targets = EXPECTED_TARGETS
+    else:
+        rom = candidate.read_bytes()
+        indices = pointer_indices or sorted(EXPECTED_TARGETS)
+        expected_targets = {
+            index: {
+                "start": int(read_target(rom, index, 0x200)["record_rom_offset"] - 0x04010 + 0x8000),
+                "length": len(read_target(rom, index, 0x200)["bytes"]),
+                "dialogue_id": index + 1,
+            }
+            for index in indices
+        }
     summary_rows = read_tsv(trace_dir / "summary.tsv")
     loader_rows = read_tsv(trace_dir / "loader_reads.tsv")
     record_rows = read_tsv(trace_dir / "record_reads.tsv")
     final = summary_rows[-1] if summary_rows else {}
     candidate_rows = [
-        row for row in record_rows if row.get("label") == "candidate_record_window"
+        row for row in record_rows if row.get("label", "").startswith("candidate_record_window")
     ]
     candidate_addresses = [parse_hex(row["address"]) for row in candidate_rows]
     target_results: dict[str, dict[str, object]] = {}
-    for index, expected in EXPECTED_TARGETS.items():
+    for index, expected in expected_targets.items():
         addresses = [
             address
             for address in candidate_addresses
@@ -54,7 +69,7 @@ def analyze_trace(trace_dir: Path) -> dict[str, object]:
     for value in ids:
         if not distinct_ids or distinct_ids[-1] != value:
             distinct_ids.append(value)
-    progression = all(value in distinct_ids for value in (0xB7, 0xB8, 0xB9, 0xBA))
+    progression = all(value in distinct_ids for value in (expected["dialogue_id"] for expected in expected_targets.values()))
     target_reads_pass = all(result["expected_reads"] for result in target_results.values())
     status = "PASS" if final.get("reason") == "lua_done" and progression and target_reads_pass else "UNKNOWN"
     return {
@@ -98,10 +113,14 @@ def render_markdown(payload: dict[str, object]) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--trace", type=Path, required=True)
+    parser.add_argument("--candidate", type=Path)
+    parser.add_argument("--pointer-index", type=int, action="append")
     parser.add_argument("--json-out", type=Path, required=True)
     parser.add_argument("--markdown-out", type=Path, required=True)
     args = parser.parse_args()
-    payload = analyze_trace(args.trace.expanduser().resolve())
+    args.json_out.expanduser().resolve().parent.mkdir(parents=True, exist_ok=True)
+    args.markdown_out.expanduser().resolve().parent.mkdir(parents=True, exist_ok=True)
+    payload = analyze_trace(args.trace.expanduser().resolve(), args.candidate.expanduser().resolve() if args.candidate else None, args.pointer_index)
     args.json_out.expanduser().resolve().write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

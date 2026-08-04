@@ -6,6 +6,7 @@
 
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/manifest_loader_trace"
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "1900")
+local TARGETS_LUA = os.getenv("KUNIO_TARGETS_LUA") or ""
 local FIRST_ADVANCE_START = tonumber(os.getenv("KUNIO_FIRST_ADVANCE_START") or "900")
 local FIRST_ADVANCE_END = tonumber(os.getenv("KUNIO_FIRST_ADVANCE_END") or "910")
 local SECOND_ADVANCE_START = tonumber(os.getenv("KUNIO_SECOND_ADVANCE_START") or "1110")
@@ -133,8 +134,19 @@ register_read(0x9F40, on_loader_read("pointer_182_lo"))
 register_read(0x9F41, on_loader_read("pointer_182_hi"))
 register_read(0x9F46, on_loader_read("pointer_185_lo"))
 register_read(0x9F47, on_loader_read("pointer_185_hi"))
-for address = 0x9FB4, 0x9FD8 do
-    register_read(address, on_record_read("candidate_record_window"))
+local candidate_targets = {}
+if TARGETS_LUA ~= "" then
+    local ok, loaded = pcall(dofile, TARGETS_LUA)
+    if ok and type(loaded) == "table" then candidate_targets = loaded end
+end
+if #candidate_targets == 0 then
+    candidate_targets = {{ label = "manifest_ptr_182_candidate", start = 0x9FB4, stop = 0x9FD8 }}
+end
+for _, target in ipairs(candidate_targets) do
+    local label = "candidate_record_window_" .. tostring(target.label or "unknown")
+    for address = target.start, target.stop do
+        register_read(address, on_record_read(label))
+    end
 end
 for address = 0xB1A6, 0xB206 do
     register_read(address, on_record_read("base_record_window"))

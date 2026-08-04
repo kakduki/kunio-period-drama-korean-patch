@@ -48,6 +48,16 @@ def main() -> int:
         assert payload["status"] == "PASS"
         assert payload["candidate_record_reads"] == 37
         assert "| 182 | `$9FB4` | 26 | 26 | PASS |" in render_markdown(payload)
+        candidate = root / "candidate.nes"
+        rom = bytearray(0x7000)
+        for index, start, length in ((182, 0x9FB4, 26), (185, 0x9FCE, 11)):
+            pointer_offset = 0x05DD4 + index * 2
+            rom[pointer_offset:pointer_offset + 2] = start.to_bytes(2, "little")
+            record_offset = 0x04010 + start - 0x8000
+            rom[record_offset:record_offset + length] = bytes([0x81]) * (length - 1) + bytes([0xFF])
+        candidate.write_bytes(rom)
+        dynamic = analyze_trace(root, candidate, [182, 185])
+        assert dynamic["status"] == "PASS"
         write_fixture(root, "target_not_seen")
         assert analyze_trace(root)["status"] == "UNKNOWN"
     print("OK: manifest loader trace analyzer")

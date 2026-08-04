@@ -37,6 +37,36 @@
       "warnings": "glyphs_not_in_handcrafted_minimum"
     },
     {
+      "id": "OPENING-183",
+      "category": "dialogue",
+      "translated_text": "오코토: 쿠니오! 기다렸어!",
+      "pointer_address": "0x05F42",
+      "pointer_index": 183,
+      "text_address": "0x071DB",
+      "original_bytes": "85 8A 94 BB 88 96 9F 8B 8B AE CA 85 9F 91 8C 93 9F 8C 90 CA FF",
+      "termination_status": "HEURISTIC_FIRST_FF",
+      "missing_handcrafted_glyphs": " !:기다렸어오코토",
+      "static_status": "PASS",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "glyphs_not_in_handcrafted_minimum"
+    },
+    {
+      "id": "OPENING-184",
+      "category": "dialogue",
+      "translated_text": "쿠니오: 오코토, 오랜만.",
+      "pointer_address": "0x05F44",
+      "pointer_index": 184,
+      "text_address": "0x071F0",
+      "original_bytes": "88 96 9F 8B BB 85 8A 94 8B AE CB F8 F9 00 85 9B 8B 8C 1C A8 13 B2 CA FF",
+      "termination_status": "HEURISTIC_FIRST_FF",
+      "missing_handcrafted_glyphs": " ,.:랜만오코토",
+      "static_status": "PASS",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "glyphs_not_in_handcrafted_minimum"
+    },
+    {
       "id": "ITEMS-USE",
       "category": "menu",
       "translated_text": "사용",
@@ -83,9 +113,9 @@
     }
   ],
   "summary": {
-    "total": 5,
+    "total": 7,
     "PASS": 0,
     "FAIL": 0,
-    "UNKNOWN": 5
+    "UNKNOWN": 7
   }
 }

@@ -78,3 +78,12 @@ loader trace and the selected-row native visual captures. p182 is read at
 `$9FB4` and captured at frame 712; p185 is read at `$9FCE` and captured at
 frame 1661. Both report exact target matches. Full dialogue and natural event
 routes remain separate `UNKNOWN` gates.
+## Four-Row Native Recheck (2026-08-05)
+
+The manifest now selects p182, p183, p184, and p185. The rebuilt candidate is
+`b6ae36bb14ac1ba0836e7d02204d4b57` with IPS MD5
+`88ae9e0bf1b2d12a9dacfe73d4573b41`. The generated pointer targets are
+`$9FB4`, `$9FCE`, `$9FDC`, and `$9FE9`; the loader trace reads 64/64 selected
+bytes and all four bounded visual captures report exact target matches. This
+selected-row gate is `PASS`; full dialogue, dynamic contexts, and release gates
+remain separate `UNKNOWN`/`NOT_READY` states.
