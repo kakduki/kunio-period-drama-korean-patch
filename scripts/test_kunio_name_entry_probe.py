@@ -1,0 +1,18 @@
+from pathlib import Path
+
+
+SOURCE = Path(__file__).parents[1] / "lua" / "kunio_name_entry_probe.lua"
+
+
+def test_name_probe_is_bounded_and_does_not_write_memory() -> None:
+    text = SOURCE.read_text(encoding="utf-8")
+    assert "MAX_FRAMES" in text
+    assert "KUNIO_NAME_SELECT_FRAME" in text
+    assert "_nametable_2000_23ff.bin" in text
+    assert "memory.writebyte" not in text
+    assert "memory.writedword" not in text
+
+
+if __name__ == "__main__":
+    test_name_probe_is_bounded_and_does_not_write_memory()
+    print("kunio_name_entry_probe checks passed")

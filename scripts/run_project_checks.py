@@ -165,6 +165,7 @@ KEY_PYTHON = [
     "scripts/test_katana_visual_explorer_report.py",
     "scripts/test_katana_inventory_slot_candidates.py",
     "scripts/test_kunio_sram_route_probe.py",
+    "scripts/test_kunio_name_entry_probe.py",
     "scripts/test_broad_patchability_v042_bytes.py",
     "scripts/test_batch46_text_readiness.py",
     "scripts/test_build_opening_dialogue_proof.py",
@@ -309,6 +310,7 @@ LUA_SCRIPTS = [
     "lua/kunio_stage_progression_probe.lua",
     "lua/kunio_full_pointer_dialogue_input_probe.lua",
     "lua/kunio_sram_route_probe.lua",
+    "lua/kunio_name_entry_probe.lua",
 ]
 
 REGEN_COMMANDS = [
@@ -460,6 +462,7 @@ def main() -> int:
     run("Katana visual explorer report", ["scripts/test_katana_visual_explorer_report.py"])
     run("Katana inventory slot candidates", ["scripts/test_katana_inventory_slot_candidates.py"])
     run("SRAM route probe", ["scripts/test_kunio_sram_route_probe.py"])
+    run("Koganemushi name-entry probe", ["scripts/test_kunio_name_entry_probe.py"])
     run("font expansion readiness", ["scripts/test_font_expansion_readiness.py"])
     run("manual proof routes", ["scripts/test_manual_proof_routes.py"])
     run("manual capture watcher overlay", ["scripts/test_manual_capture_watcher_overlay.py"])
