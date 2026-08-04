@@ -42,7 +42,7 @@ Add one reviewed row to `translation/script.csv`, build from the clean base with
 
 - Authoritative opening candidate MD5: 3384157d7e72f3bf4dd3f742ffe41fc9.
 - Bounded FCEUX opening proof: registered 37, source-read hits 37, target_match true, lua_done at frame 883.
-- Manifest-driven candidate MD5: 11f958c3dc3bf87c6295ef8aae75067d; one manifest row applied and three skipped as UNKNOWN.
+- Manifest-driven candidate MD5: 0a983c3d8494444935f000963f415253; one manifest row applied and three skipped as UNKNOWN.
 - Manifest candidate bounded route: lua_done, but relocated record source-read hits 0; runtime/visual status UNKNOWN.
 - Raw extraction: 248 pointer rows with original bytes and heuristic termination status.
 - Default IPS build remains deterministic at candidate MD5 0a983c3d8494444935f000963f415253.
