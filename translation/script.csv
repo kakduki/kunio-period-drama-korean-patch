@@ -1,0 +1,5 @@
+id,category,bank,pointer_address,text_address,original_bytes,original_text,translated_text,control_codes,max_bytes,speaker,scene,notes
+MENU-ITEMS,menu,1,,0x1F2C1,,アイテム,물건,,5,,main menu,Runtime label candidate; verify source bytes before final insertion
+OPENING-182,dialogue,1,0x05F40,0x071B6,,UNKNOWN,쿠니오,,20,쿠니오,opening,Existing bounded visual PASS; source bytes remain to be normalized
+ITEMS-USE,menu,1,,0x1F2D0,,つかう,사용,,5,,items,Existing runtime PASS candidate
+ITEMS-REMOVE,menu,1,,0x1F2D5,,すてる,버리기,,6,,items,Existing runtime PASS candidate

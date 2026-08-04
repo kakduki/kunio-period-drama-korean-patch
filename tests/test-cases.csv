@@ -1,0 +1,9 @@
+id,kind,input,command_or_artifact,expected,status,notes
+BASE-IDENTITY,integrity,Japanese base ROM,build.py input validation,size/hash/header match,UNKNOWN,Run on the local legally owned ROM
+IPS-REPRO,build,Japanese base ROM + default IPS,build.py output,new candidate with deterministic hash,UNKNOWN,Must not overwrite input
+EXTRACT-STRUCTURE,extract,Japanese base ROM,tools/extract_text.py,analysis catalog is generated,UNKNOWN,Structural extraction only until source is runtime-proven
+ENGLISH-COMPARE,analysis,Japanese base ROM + local IPS,tools/compare_original_english.py,PRG/CHR/pointer report,UNKNOWN,English is a technical reference only
+FONT-MINIMAL,font,쿠니오,tools/font_builder.py,required tiles are produced,UNKNOWN,Visual proof is separate
+OPENING-RUNTIME,runtime,opening candidate,rom_analysis/patched_rom_report.md,verified Korean source read, PASS,Existing bounded runtime proof
+OPENING-VISUAL,visual,opening candidate,native emulator capture,Korean label visible, PASS,Existing bounded visual proof
+FULL-ROUTE-VISUAL,visual,full candidate,native emulator capture,all target scenes visible,UNKNOWN,Natural boss route is not proven

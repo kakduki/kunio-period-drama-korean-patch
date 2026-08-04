@@ -1,0 +1,9 @@
+id,source,preferred_korean,category,notes
+kunio,くにお,쿠니오,character,Japanese source wins; confirm in scene context
+bunzo,ぶんぞう,분조,character,Use only after runtime context confirmation
+tatsuji,たつじ,타츠지,boss,Technical probe label; not a full script translation
+menu_items,アイテム,물건,menu,Keep short for the existing menu width
+menu_status,ステータス,상태,menu,Keep short for the existing menu width
+menu_growth,せいちょう,성장,menu,Keep short for the existing menu width
+action_use,つかう,사용,items,Existing action candidate
+action_remove,すてる,버리기,items,Existing action candidate
