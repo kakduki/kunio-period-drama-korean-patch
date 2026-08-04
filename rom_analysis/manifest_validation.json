@@ -1,0 +1,76 @@
+{
+  "rom": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+  "manifest": "C:\\Users\\kakdu\\OneDrive\\문서\\자산관리\\kunio-period-drama-korean-patch\\translation\\script.csv",
+  "pointer_table": {
+    "file_offset": "0x05DD4",
+    "count": 248
+  },
+  "rows": [
+    {
+      "id": "MENU-ITEMS",
+      "category": "menu",
+      "translated_text": "물건",
+      "pointer_address": "UNKNOWN",
+      "pointer_index": "UNKNOWN",
+      "text_address": "UNKNOWN",
+      "original_bytes": "UNKNOWN",
+      "termination_status": "UNKNOWN",
+      "missing_handcrafted_glyphs": "건물",
+      "static_status": "UNKNOWN",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "pointer_address_unknown;glyphs_not_in_handcrafted_minimum"
+    },
+    {
+      "id": "OPENING-182",
+      "category": "dialogue",
+      "translated_text": "쿠니오",
+      "pointer_address": "0x05F40",
+      "pointer_index": 182,
+      "text_address": "0x071B6",
+      "original_bytes": "88 96 9F 8B BB 9A A4 88 8C 98 B2 86 82 CA F8 F9 00 1C AE 0F 83 85 A4 1C AE 06 00 93 B2 9D AE 95 AE 13 84 CA FF",
+      "termination_status": "HEURISTIC_FIRST_FF",
+      "missing_handcrafted_glyphs": "오",
+      "static_status": "PASS",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "glyphs_not_in_handcrafted_minimum"
+    },
+    {
+      "id": "ITEMS-USE",
+      "category": "menu",
+      "translated_text": "사용",
+      "pointer_address": "UNKNOWN",
+      "pointer_index": "UNKNOWN",
+      "text_address": "UNKNOWN",
+      "original_bytes": "UNKNOWN",
+      "termination_status": "UNKNOWN",
+      "missing_handcrafted_glyphs": "용",
+      "static_status": "UNKNOWN",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "pointer_address_unknown;glyphs_not_in_handcrafted_minimum"
+    },
+    {
+      "id": "ITEMS-REMOVE",
+      "category": "menu",
+      "translated_text": "버리기",
+      "pointer_address": "UNKNOWN",
+      "pointer_index": "UNKNOWN",
+      "text_address": "UNKNOWN",
+      "original_bytes": "UNKNOWN",
+      "termination_status": "UNKNOWN",
+      "missing_handcrafted_glyphs": "기리버",
+      "static_status": "UNKNOWN",
+      "status": "UNKNOWN",
+      "reason": "runtime_source_read_and_visual_gate_pending",
+      "warnings": "pointer_address_unknown;glyphs_not_in_handcrafted_minimum"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "PASS": 0,
+    "FAIL": 0,
+    "UNKNOWN": 4
+  }
+}
