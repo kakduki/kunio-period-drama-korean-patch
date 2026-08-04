@@ -1,0 +1,11 @@
+pointer_index,pointer_rom_offset,english_pointer_cpu,english_record_rom_offset,korean_text,trigger_term,natural_route_status,evidence_scope
+020,0x05DFC,0xA1E7,0x061F7,진로 큰두목이 네놈들을 혼내라고 나를 보냈다,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+024,0x05E04,0xA263,0x06273,"그래, 네가 큰두목이군",BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+035,0x05E1A,0xA3BA,0x063CA,진로 큰두목이 널 손봐 주마,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+077,0x05E6E,0xA823,0x06833,"대장님, 이 일의 배후에는 큰두목이 있다",BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+079,0x05E72,0xA87C,0x0688C,큰두목이 고맙다고 전하더군,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+081,0x05E76,0xA8C7,0x068D7,내가 큰두목이다. 난 악당이고 강하지,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+101,0x05E9E,0xAB40,0x06B50,큰두목이 이것을 주셨다,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+102,0x05EA0,0xAB5B,0x06B6B,안 돼! 큰두목님,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+174,0x05F30,0xAFF8,0x07008,큰두목에게 확인하고 가야겠어,BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
+188,0x05F4C,0xB29C,0x072AC,"아사지, 조용히 해. 두목님이 기다리신다",BOSS,UNKNOWN,Structural target only; natural event and screen proof remain open.
