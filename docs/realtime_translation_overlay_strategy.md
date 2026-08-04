@@ -79,3 +79,11 @@ The current status is recorded in `rom_analysis/manifest_build_gate.md` and
 - Do not patch a byte based only on an OCR match or a guessed RAM address.
 - Do not treat an overlay translation as evidence that the ROM patch is safe.
 - Do not call the native patch complete until the release gate is green.
+
+## MVP Status
+
+The first end-to-end MVP is now verified for `OPENING-182`. A bounded run on
+the base ROM emitted one source-read event at frame 656, and the Python
+receiver resolved the Korean translation from `translation/script.csv` with
+status `CACHED`. Evidence is recorded in
+`rom_analysis/realtime_overlay_mvp.md`.

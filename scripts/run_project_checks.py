@@ -73,6 +73,7 @@ KEY_PYTHON = [
     "scripts/build_ptr181_pointer_page_candidate.py",
     "scripts/build_full_pointer_korean_candidate.py",
     "tools/insert_text.py",
+    "tools/realtime_translation_overlay.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -271,6 +272,7 @@ LUA_TARGETS = [
     "lua/kunio_pointer_dialogue_batch_002_003_target.lua",
     "lua/kunio_opening_dialogue_bank8_page_switch_proof_target.lua",
     "lua/kunio_opening_dialogue_bank8_persistent_page_proof_target.lua",
+    "lua/kunio_translation_overlay_targets.lua",
 ]
 
 LUA_SCRIPTS = [
@@ -312,6 +314,7 @@ LUA_SCRIPTS = [
     "lua/kunio_full_pointer_dialogue_input_probe.lua",
     "lua/kunio_sram_route_probe.lua",
     "lua/kunio_name_entry_probe.lua",
+    "lua/kunio_translation_overlay.lua",
 ]
 
 REGEN_COMMANDS = [
@@ -424,6 +427,7 @@ def main() -> int:
     run("combined Korean development candidate", ["scripts/test_build_korean_development_candidate.py"])
     run("default build reproducibility", ["scripts/test_default_build_reproducibility.py"])
     run("selected-only manifest plan", ["scripts/test_insert_text_manifest.py"])
+    run("realtime translation overlay receiver", ["scripts/test_realtime_translation_overlay.py"])
     run("external output paths", ["scripts/test_external_output_paths.py"])
     run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])

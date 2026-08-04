@@ -103,3 +103,12 @@ watcher/target pairing ended `lua_done` at frame 900 with 33 target bytes
 registered. It produced 0 source-read hits because that watcher does not inject
 the opening route; this is classified `UNKNOWN_ROUTE_NOT_REACHED`, not a ROM
 failure. The existing opening proof remains the runtime/visual authority.
+
+
+## Real-Time Translation Overlay MVP (2026-08-05)
+The overlay MVP is now an executable sidecar path. A bounded FCEUX run on the
+verified Japanese base emitted `OPENING-182` at frame 656, and
+`tools/realtime_translation_overlay.py` resolved the Korean manifest row as
+`CACHED`. This proves the sidecar handoff for one known record; it does not
+change the native ROM release status, which remains `NOT_READY`. See
+`rom_analysis/realtime_overlay_mvp.md`.

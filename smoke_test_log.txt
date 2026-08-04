@@ -429,3 +429,10 @@ report=rom_analysis/stage_map_route_matrix.md
 - bounded_process=PASS
 - route_status=UNKNOWN_ROUTE_NOT_REACHED
 - release_status=NOT_READY
+
+
+[2026-08-05] Real-time translation overlay MVP
+- `lua/kunio_translation_overlay.lua` bounded run: `lua_done` at frame 1000
+- Verified event: `OPENING-182` at frame 656; 33 target bytes registered; 1 event
+- Python receiver: `CACHED` from `translation/script.csv`
+- Result: PASS for the one-record overlay path; unknown-string AI output remains `AI_UNCHECKED`
