@@ -14,3 +14,4 @@ OPENING-RUNTIME,runtime,opening candidate,rom_analysis/patched_rom_report.md,ver
 OPENING-VISUAL,visual,opening candidate,native emulator capture,Korean label visible,PASS,Existing bounded visual proof
 FULL-ROUTE-VISUAL,visual,full candidate,native emulator capture,all target scenes visible,UNKNOWN,Natural boss route is not proven
 RELEASE-GATE,release,development candidate,docs/project-status.md,all release checks,NOT_READY,Full dialogue and natural event/boss visual gates remain open
+MANIFEST-OVERLAY,build/runtime,translation/script.csv,tools/insert_text.py --manifest,one pointer row applied and source-read proven,UNKNOWN,Manifest overlay produced MD5 11f958c3dc3bf87c6295ef8aae75067d; bounded opening run had target_match=true from static snapshot but source-read hits=0

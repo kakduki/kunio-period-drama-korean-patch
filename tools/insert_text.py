@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Compile the current reviewed pointer-text candidate from the Japanese base."""
+"""Compile the reviewed pointer candidate from the Japanese base ROM."""
 
 from __future__ import annotations
 
 import argparse
+import csv
 import shutil
 import subprocess
 import sys
@@ -12,6 +13,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_DRAFT = ROOT / "text_data" / "pointer_dialogue_korean_draft.tsv"
+POINTER_TABLE_OFFSET = 0x05DD4
 
 
 def inside_root(path: Path) -> bool:
@@ -20,6 +23,59 @@ def inside_root(path: Path) -> bool:
         return True
     except ValueError:
         return False
+
+
+def parse_manifest(path: Path) -> tuple[dict[int, str], list[dict[str, str]]]:
+    updates: dict[int, str] = {}
+    skipped: list[dict[str, str]] = []
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            translated = (row.get("translated_text") or "").strip()
+            pointer = (row.get("pointer_address") or "").strip()
+            row_id = (row.get("id") or "UNKNOWN").strip()
+            if not translated or translated.upper() == "UNKNOWN":
+                skipped.append({"id": row_id, "reason": "empty_or_unknown_translation"})
+                continue
+            try:
+                pointer_offset = int(pointer, 0)
+            except ValueError:
+                skipped.append({"id": row_id, "reason": "pointer_address_unknown"})
+                continue
+            delta = pointer_offset - POINTER_TABLE_OFFSET
+            if delta < 0 or delta % 2:
+                skipped.append({"id": row_id, "reason": "pointer_address_not_in_declared_table"})
+                continue
+            index = delta // 2
+            if index >= 248:
+                skipped.append({"id": row_id, "reason": "pointer_index_out_of_range"})
+                continue
+            updates[index] = translated
+    return updates, skipped
+
+
+def make_manifest_draft(manifest: Path, draft: Path, directory: Path) -> tuple[Path, int, int]:
+    updates, skipped = parse_manifest(manifest)
+    with draft.open("r", encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+    applied = 0
+    for row in rows:
+        try:
+            index = int(row["pointer_index"])
+        except (KeyError, ValueError):
+            continue
+        if index not in updates:
+            continue
+        row["korean_text"] = updates[index]
+        row["translation_status"] = "manifest_test"
+        row["basis"] = "translation/script.csv"
+        row["notes"] = "Manifest override; source context and visual gate remain separate."
+        applied += 1
+    output = directory / "pointer_dialogue_korean_manifest_overlay.tsv"
+    with output.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()), delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+    return output, applied, len(skipped)
 
 
 def main() -> int:
@@ -31,6 +87,7 @@ def main() -> int:
     parser.add_argument("--english", type=Path)
     parser.add_argument("--plan", type=Path)
     parser.add_argument("--segments", type=Path)
+    parser.add_argument("--manifest", type=Path, help="optional translation/script.csv overlay")
     args = parser.parse_args()
     rom = args.rom if args.rom.is_absolute() else ROOT / args.rom
     if not rom.is_file():
@@ -50,14 +107,24 @@ def main() -> int:
         "--segments": args.segments,
     }
 
-    # The existing compiler writes a report with repository-relative paths. Run it
-    # inside the repository when the caller requests an external artifact folder.
     build_root = ROOT / "build"
     build_root.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="pointer_candidate_", dir=build_root) as temp:
-        compiler_out = out if inside_root(out) else Path(temp)
+        temp_path = Path(temp)
+        manifest_updates = 0
+        manifest_skipped = 0
+        draft_path = values["--draft"]
+        if args.manifest:
+            manifest = args.manifest if args.manifest.is_absolute() else ROOT / args.manifest
+            source_draft = (draft_path if draft_path and draft_path.is_absolute() else ROOT / draft_path) if draft_path else DEFAULT_DRAFT
+            overlay, manifest_updates, manifest_skipped = make_manifest_draft(manifest, source_draft, temp_path)
+            draft_path = overlay
+        compiler_out = out if inside_root(out) else temp_path / "candidate"
         command = command_base + ["--out-dir", str(compiler_out)]
-        for flag, value in values.items():
+        if draft_path:
+            command.extend(["--draft", str(draft_path if draft_path.is_absolute() else ROOT / draft_path)])
+        for flag in ("--font", "--english", "--plan", "--segments"):
+            value = values[flag]
             if value:
                 command.extend([flag, str(value if value.is_absolute() else ROOT / value)])
         subprocess.run(command, cwd=ROOT, check=True)
@@ -67,6 +134,9 @@ def main() -> int:
                 destination = out / source.name
                 if source.is_file():
                     shutil.copy2(source, destination)
+    if args.manifest:
+        print(f"manifest_updates={manifest_updates}")
+        print(f"manifest_skipped={manifest_skipped}")
     print(f"pointer candidate: {out}")
     return 0
 
