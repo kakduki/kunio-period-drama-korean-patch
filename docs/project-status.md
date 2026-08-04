@@ -193,3 +193,13 @@ at frame 7019, and ended with `lua_done` at frame 7200. `$7A02` remained `00`
 in both runs. No confirmed dialogue source/parser/PPU event followed the
 counter-zero transition, so this is `UNKNOWN_COUNTER_ZERO_NO_DIALOGUE`, not
 boss proof. See `rom_analysis/counter_zero_route_trace.md`.
+
+
+## Direct Counter-Read Trace (2026-08-05)
+
+The optional direct-read trace was run against both ROMs for 7,200 frames.
+Each executed `$AD76` (`LDA $7A01`) exactly twice at frame 1064 with the same
+values; `$A661`, `$AD86`, and `$AD89` did not execute. No direct counter read
+occurred near the later `$7A01=00` or `$04F1=03` checkpoints. This supports
+classifying `$7A01` as a shared route/setup value, not a confirmed enemy HP or
+boss-clear variable. The natural boss route remains `UNKNOWN`.

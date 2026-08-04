@@ -15,13 +15,15 @@ using the same automated combat route.
 - Lua probe: `lua/kunio_stage_progression_probe.lua`
 - Route: `KUNIO_COMBAT_MIXED=1`, `KUNIO_ADVANCE_AFTER_COMBAT=0`
 - Limit: `KUNIO_MAX_FRAMES=7200`
-- Trace: `KUNIO_SRAM_ROUTE_TRACE=1`, `KUNIO_RAM_TRACE_OBJECTS=0`
+- Trace: `KUNIO_SRAM_ROUTE_TRACE=1`, `KUNIO_COUNTER_READ_TRACE=1`, `KUNIO_RAM_TRACE_OBJECTS=0`
 
 Both runs ended with `lua_done` at frame 7200. The exact raw outputs were
 written outside the repository during the investigation:
 
 - `C:\tmp\korean_sram_exec_route_7200`
 - `C:\tmp\english_sram_exec_route_7200`
+- `C:\tmp\korean_counter_reads_7200\counter_reads.tsv`
+- `C:\tmp\english_counter_reads_7200\counter_reads.tsv`
 
 ## Observed Contract
 
@@ -39,6 +41,13 @@ The current trace therefore demonstrates a decrementing `$7A01` value while
 `$7A02` remains zero. The old description of this as a confirmed `$7A02`
 enemy-clear counter is not supported by this run; the `7A02` name is only a
 routine/address label until ownership is proven.
+
+The direct-read trace is narrower: both ROMs executed `LDA $7A01` at CPU
+`$AD76` exactly twice at frame `1064`, with `$7A01=$3F`; the other registered
+direct references (`$A661`, `$AD86`, `$AD89`) did not execute in the 7,200-frame
+route. No direct counter read occurred near frame 6193 or 7019. This makes the
+observed `$7A01` decrement a route/setup value, not evidence of an enemy HP or
+boss-clear variable.
 
 ## Result
 
@@ -58,6 +67,7 @@ of a boss screen or boss dialogue.
 - bounded execution: `PASS`
 - same-input Korean/English route shape: `PASS`
 - counter-zero event observed: `PASS`
+- direct counter-read trace: `PASS` (same two reads in both ROMs)
 - enemy-clear ownership: `UNKNOWN`
 - boss spawn/dialogue: `UNKNOWN`
 - release readiness: `NOT_READY`
