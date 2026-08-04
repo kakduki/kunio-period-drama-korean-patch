@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-DEFAULT_IPS = ROOT / "output" / "full_pointer_korean_candidate" / "kunio_period_drama_korean_full_pointer_candidate.ips"
+DEFAULT_IPS = ROOT / "patches" / "kunio_period_drama_korean_development.ips"
 EXPECTED_SIZE = 262_160
 EXPECTED_HEADER = bytes.fromhex("4E 45 53 1A 08 10 41 00 00 00 00 00 00 00 00 00")
 EXPECTED_MD5 = "0d406a85285b4de8468f0dab6aad5fe5"

@@ -8,7 +8,7 @@ The build starts from a clean, legally owned Japanese base ROM. It never modifie
 python build.py --input "rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes" --output "build\korean_test_game.nes" --force
 ```
 
-The default IPS is the current pointer candidate patch. The command writes a JSON report beside the output. A default build is expected to reproduce the known candidate hash; a custom IPS is still recorded as a development candidate and is not release approval.
+The default IPS is the tracked development patch at `patches/kunio_period_drama_korean_development.ips`, so a clean clone can reproduce the candidate without ignored `output/` files. The command writes a JSON report beside the output. A default build is expected to reproduce the known candidate hash; a custom IPS is still recorded as a development candidate and is not release approval.
 
 ## Development tools
 

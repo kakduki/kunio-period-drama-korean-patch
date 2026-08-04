@@ -140,6 +140,7 @@ KEY_PYTHON = [
     "scripts/build_korean_development_candidate.py",
     "scripts/test_build_main_menu_korean_candidate.py",
     "scripts/test_build_korean_development_candidate.py",
+    "scripts/test_default_build_reproducibility.py",
     "scripts/test_analyze_pointer_dialogue_batch_probe.py",
     "scripts/test_generate_main_menu_pipeline_artifacts.py",
     "scripts/test_analyze_opening_dialogue_proof_capture.py",
@@ -411,6 +412,7 @@ def main() -> int:
     run("main-menu Korean candidate smoke analyzer", ["scripts/test_analyze_main_menu_korean_candidate.py"])
     run("main-menu Korean 16x16 candidate", ["scripts/test_build_main_menu_korean_candidate.py"])
     run("combined Korean development candidate", ["scripts/test_build_korean_development_candidate.py"])
+    run("default build reproducibility", ["scripts/test_default_build_reproducibility.py"])
     run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])
     run("opening dialogue renderer probe analyzer", ["scripts/test_analyze_opening_dialogue_renderer_probe.py"])
