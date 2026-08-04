@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import shutil
 import subprocess
 import sys
@@ -64,6 +65,11 @@ def make_manifest_draft(manifest: Path, draft: Path, directory: Path) -> tuple[P
         except (KeyError, ValueError):
             continue
         if index not in updates:
+            # A manifest build is an explicit allow-list. Do not compile the
+            # draft's unverified Korean rows just because they exist in the
+            # full-pointer source catalog; preserve their Japanese bytes.
+            row["translation_status"] = "excluded_manifest_unselected"
+            row["basis"] = "manifest allow-list; runtime and visual gates remain separate"
             continue
         row["korean_text"] = updates[index]
         row["translation_status"] = "manifest_test"
@@ -76,6 +82,36 @@ def make_manifest_draft(manifest: Path, draft: Path, directory: Path) -> tuple[P
         writer.writeheader()
         writer.writerows(rows)
     return output, applied, len(skipped)
+
+
+def make_manifest_plan(plan: Path, updates: dict[int, str], directory: Path) -> Path:
+    """Give each explicitly selected manifest row a private compact font page."""
+    payload = json.loads(plan.read_text(encoding="utf-8"))
+    pages = list(payload["optimized_pages"])
+    assignments = [None] * len(payload["pointer_page_assignments"])
+    max_pages = 52
+    max_glyphs = 34
+    for index, translated in sorted(updates.items()):
+        glyphs = sorted({
+            character
+            for character in translated
+            if "\uac00" <= character <= "\ud7a3"
+        })
+        if len(glyphs) > max_glyphs:
+            raise ValueError(
+                f"manifest pointer {index} needs {len(glyphs)} glyphs; "
+                f"one page supports {max_glyphs}"
+            )
+        if len(pages) >= max_pages:
+            raise ValueError("manifest font pages exceed the MMC3 expansion budget")
+        page_index = len(pages)
+        pages.append({"page_index": page_index, "syllables": glyphs})
+        assignments[index] = page_index
+    payload["optimized_pages"] = pages
+    payload["pointer_page_assignments"] = assignments
+    output = directory / "pointer_font_manifest_plan.json"
+    output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return output
 
 
 def main() -> int:
@@ -119,6 +155,14 @@ def main() -> int:
             source_draft = (draft_path if draft_path and draft_path.is_absolute() else ROOT / draft_path) if draft_path else DEFAULT_DRAFT
             overlay, manifest_updates, manifest_skipped = make_manifest_draft(manifest, source_draft, temp_path)
             draft_path = overlay
+            selected, _ = parse_manifest(manifest)
+            base_plan = values["--plan"]
+            base_plan = (base_plan if base_plan and base_plan.is_absolute() else ROOT / base_plan) if base_plan else ROOT / "rom_analysis" / "pointer_font_page_plan.json"
+            values["--plan"] = make_manifest_plan(base_plan, selected, temp_path)
+            if values["--segments"] is None:
+                empty_segments = temp_path / "manifest_segments.json"
+                empty_segments.write_text("{}\n", encoding="utf-8")
+                values["--segments"] = empty_segments
         compiler_out = out if inside_root(out) else temp_path / "candidate"
         command = command_base + ["--out-dir", str(compiler_out)]
         if draft_path:

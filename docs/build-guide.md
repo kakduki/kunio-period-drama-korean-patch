@@ -39,3 +39,16 @@ This reports pointer ownership and original record bytes. Runtime and visual pro
 Manifest-driven candidate build (development gate):
 python build.py --input base.nes --manifest translation/script.csv --output $env:TEMP/kunio-manifest.nes --patch-output $env:TEMP/kunio-manifest.ips --report $env:TEMP/kunio-manifest.json --force
 This mode records skipped UNKNOWN rows and does not imply runtime or visual PASS.
+
+### Manifest allow-list behavior
+
+`--manifest translation/script.csv` is intentionally conservative. Only rows
+with a verified pointer-table address are compiled; rows with `UNKNOWN` source
+ownership are skipped. Each selected row receives an isolated compact font page
+and the other pointer records retain their original Japanese path. This build
+is suitable for a minimal candidate, but it does not imply runtime or visual
+release approval.
+
+The selected-only behavior is covered by
+`scripts/test_insert_text_manifest.py` and documented in
+`rom_analysis/manifest_build_gate.md`.

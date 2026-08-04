@@ -409,3 +409,14 @@ boss_transition=UNKNOWN_ROUTE_NOT_REACHED
 natural_boss_dialogue=UNKNOWN
 promotion=NOT_READY
 report=rom_analysis/stage_map_route_matrix.md
+2026-08-05 manifest selected-only build
+- command: python build.py --input base.nes --manifest translation/script.csv --output external-temp.nes --patch-output external-temp.ips --report external-temp.json --force
+- manifest_updates=1
+- manifest_skipped=3
+- candidate_md5=b5afc3e437238cc4e9186f2b19c56214
+- generated_ips_md5=46b7fb8914b7ef31624db97e73635426
+- allowlist_regression_test=PASS
+- runtime=UNKNOWN_NOT_RUN
+- native_visual=UNKNOWN
+- release_status=NOT_READY
+- report=rom_analysis/manifest_build_gate.md

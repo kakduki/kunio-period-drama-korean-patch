@@ -72,6 +72,7 @@ KEY_PYTHON = [
     "scripts/build_ptr181_korean_8x16_candidate.py",
     "scripts/build_ptr181_pointer_page_candidate.py",
     "scripts/build_full_pointer_korean_candidate.py",
+    "tools/insert_text.py",
     "scripts/check_lua_target_syntax.py",
     "scripts/check_lua_script_balance.py",
     "scripts/confirm_next_primary_visual.py",
@@ -422,6 +423,7 @@ def main() -> int:
     run("main-menu Korean 16x16 candidate", ["scripts/test_build_main_menu_korean_candidate.py"])
     run("combined Korean development candidate", ["scripts/test_build_korean_development_candidate.py"])
     run("default build reproducibility", ["scripts/test_default_build_reproducibility.py"])
+    run("selected-only manifest plan", ["scripts/test_insert_text_manifest.py"])
     run("external output paths", ["scripts/test_external_output_paths.py"])
     run("main-menu pipeline artifact generator", ["scripts/test_generate_main_menu_pipeline_artifacts.py"])
     run("opening dialogue proof capture analyzer", ["scripts/test_analyze_opening_dialogue_proof_capture.py"])

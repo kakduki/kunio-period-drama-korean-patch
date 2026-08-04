@@ -221,7 +221,9 @@ def build_config(
     for index, (draft_row, english_row) in enumerate(zip(draft, english, strict=True)):
         excluded = draft_row["translation_status"].startswith("excluded")
         page_index = assignments[index]
-        if excluded:
+        if draft_row["translation_status"] == "excluded_manifest_unselected":
+            raw = b""
+        elif excluded:
             raw = bytes.fromhex(english_row["jp_raw_bytes"]) if english_row["jp_raw_bytes"] else b""
         else:
             if page_index is None:

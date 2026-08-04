@@ -87,3 +87,14 @@ follow-up also ended finite with 11 unique screens and no boss marker.
 The route result is classified as `UNKNOWN_ROUTE_NOT_REACHED`, not a failed ROM
 build. Details and next state-contract work are in
 `rom_analysis/stage_map_route_matrix.md`.
+## Translation Manifest Minimal Build Gate (2026-08-05)
+
+The manifest path was re-run from the verified Japanese base after tightening
+`tools/insert_text.py` to treat `translation/script.csv` as an explicit
+allow-list. One verified pointer row was compiled, three rows without proven
+pointer ownership were skipped, and unselected full-pointer draft rows were
+left on the original Japanese path. The candidate was generated successfully
+with MD5 `b5afc3e437238cc4e9186f2b19c56214`; the generated IPS MD5 is
+`46b7fb8914b7ef31624db97e73635426`. This is a build/runtime development gate;
+natural route and native-pixel visual status remain `UNKNOWN`, so release
+status remains `NOT_READY`.
