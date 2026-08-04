@@ -53,7 +53,7 @@ add_cheat_button("down", 1)
 add_cheat_button("left", 6)
 add_cheat_button("A", 1)
 add_cheat_button("down", 3)
-add_cheat_button("right", 9)
+add_cheat_button("right", 10)
 add_cheat_button("A", 1)
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
@@ -146,8 +146,8 @@ local function input_for(frame)
         if frame >= 1880 and frame < 1892 then return { down = true }, "menu_setup" end
         if frame >= 1960 and frame < 1972 then return { A = true }, "menu_setup" end
         if frame >= 2100 and frame < 2112 then return { select = true }, "name_entry" end
-        if frame >= 2240 and frame < 2252 then return { select = true }, "name_entry_retry" end
-        if frame >= 2500 and frame < 2512 then return { select = true }, "name_entry_retry_2" end
+        if (not KOGANEMUSHI_ROUTE) and frame >= 2240 and frame < 2252 then return { select = true }, "name_entry_retry" end
+
     elseif frame >= SELECT_FRAME and frame < SELECT_FRAME + 10 then
         return { select = true }, "select_probe"
     end
