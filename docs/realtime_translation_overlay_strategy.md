@@ -20,7 +20,7 @@ patch distribution, or a final visual proof inside the ROM.
 3. A local Windows overlay renders the Korean line above the emulator window.
 4. A glossary/cache is checked first; an AI translation request is used only
    for an uncached Japanese line.
-5. The accepted Korean result is written back to `translation/script.csv` as
+5. The accepted Korean result is written back to `translation/realtime_overlay.csv` as
    a reviewable draft, never directly into a release ROM.
 
 Screenshot OCR is a fallback only. NES text is small and tile-based, so the
@@ -82,8 +82,9 @@ The current status is recorded in `rom_analysis/manifest_build_gate.md` and
 
 ## MVP Status
 
-The first end-to-end MVP is now verified for `OPENING-182`. A bounded run on
-the base ROM emitted one source-read event at frame 656, and the Python
-receiver resolved the Korean translation from `translation/script.csv` with
-status `CACHED`. Evidence is recorded in
+The first end-to-end MVP is now verified for the reached `OPENING-182` and
+`OPENING-183` records. A bounded run on the base ROM emitted three events at
+frames 656, 718, and 1047; the Python receiver resolved the latest Korean
+translation with status `CACHED`. `OPENING-184` was registered but not reached
+before the frame cap. Evidence is recorded in
 `rom_analysis/realtime_overlay_mvp.md`.

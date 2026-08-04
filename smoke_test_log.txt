@@ -436,3 +436,10 @@ report=rom_analysis/stage_map_route_matrix.md
 - Verified event: `OPENING-182` at frame 656; 33 target bytes registered; 1 event
 - Python receiver: `CACHED` from `translation/script.csv`
 - Result: PASS for the one-record overlay path; unknown-string AI output remains `AI_UNCHECKED`
+
+
+[2026-08-05] Real-time translation overlay three-record recheck
+- Bounded FCEUX run: `lua_done` at frame 1500; 81 target bytes registered
+- Reached events: `OPENING-182` at 656 and `OPENING-183` at 718/1047
+- `OPENING-184` target registered but route not reached: `UNKNOWN_ROUTE_NOT_REACHED`
+- Receiver cache status: `CACHED`; result: PASS for reached overlay records

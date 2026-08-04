@@ -137,7 +137,7 @@ def run_window(events: Path, cache: dict[str, str], command: str | None, timeout
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--events", type=Path, default=Path("rom_analysis/realtime_overlay/events.tsv"))
-    parser.add_argument("--cache", type=Path, default=Path("translation/script.csv"))
+    parser.add_argument("--cache", type=Path, default=Path("translation/realtime_overlay.csv"))
     parser.add_argument("--translator-command", help="Optional command receiving one JSON event on stdin.")
     parser.add_argument("--translator-timeout", type=float, default=20.0)
     parser.add_argument("--poll-ms", type=int, default=250)
