@@ -457,3 +457,16 @@ report=rom_analysis/stage_map_route_matrix.md
 - natural_boss_route=UNKNOWN_NOT_REACHED
 - release_status=NOT_READY
 - report=rom_analysis/manifest_candidate_recheck_2026-08-06.md
+
+2026-08-06 late pointer runtime follow-up
+- target_set=p196-p201
+- p196=UNKNOWN_NOT_REACHED
+- p197=first_read_5384; complete_match=NO; ppu_writes=277; lower_dialogue_band_writes=0; classification=UNKNOWN_PARTIAL_SOURCE_READ_NON_DIALOGUE_BAND
+- p198=UNKNOWN_NOT_REACHED
+- p199=UNKNOWN_NOT_REACHED
+- p200=UNKNOWN_NOT_REACHED
+- p201=UNKNOWN_NOT_REACHED
+- promotion=FAIL_NOT_PROVEN
+- natural_boss_route=UNKNOWN
+- release_status=NOT_READY
+- report=rom_analysis/late_pointer_runtime_followup_2026-08-06.md

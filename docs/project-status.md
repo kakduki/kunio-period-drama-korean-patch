@@ -229,3 +229,7 @@ The main development manifest now contains fourteen reviewed opening dialogue ro
 ## Manifest Candidate Recheck (2026-08-06)
 
 The current fourteen-row manifest rebuilt reproducibly from the verified Japanese base with candidate MD5 27894ba832e2b01473c78e9676d6581e and generated IPS MD5 7a1d6178fdcbc2b20c5ac4d83c51b058. A 2,400-frame FCEUX stage-progression smoke completed with lua_done, 10 unique screen fingerprints, and combat checkpoints beginning at frame 915. This is PASS_BOOT_AND_BOUNDED_COMBAT_ROUTE; natural boss transition and full native visual coverage remain UNKNOWN, so release status remains NOT_READY. See rom_analysis/manifest_candidate_recheck_2026-08-06.md.
+
+## Late Pointer Runtime Follow-up (2026-08-06)
+
+p196-p201 were rechecked against the Japanese base with an 800-frame PPU observation window. p197 produced a partial source-read at frame 5384 and 277 writes in `$2023-$22E6`, but no complete record match and zero writes in the lower dialogue band beginning at `$2302`. p196 and p198-p201 were not reached. No rows were promoted; natural boss progression remains UNKNOWN and release remains NOT_READY. See `rom_analysis/late_pointer_runtime_followup_2026-08-06.md`.
