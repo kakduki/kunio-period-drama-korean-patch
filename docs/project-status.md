@@ -360,3 +360,6 @@ The current fourteen-row manifest rebuilt from the verified Japanese base with c
 ### 2026-08-06 Hashi Route Probe
 
 A 7,200-frame Japanese-base stage/map sweep with dialogue tracing completed with lua_done and ten screen fingerprints. It did not read the Hashi A0 92 source pair and did not show a confirmed collision, enemy-slot clear, map transition, boss marker, or boss dialogue. This is UNKNOWN_ROUTE_NOT_REACHED, not a first-screen hang or ROM failure; no speculative state write was promoted. See rom_analysis/hashi_route_probe_2026-08-06.md.
+### 2026-08-06 Targeted Overlap Probe
+
+A dedicated fixed-direction attack probe reached a visible player/enemy overlap at frame 1131 and completed with lua_done. The watched FAD9 collision, FC82 slot-clear, and FCEF clear dispatches were all zero, so those addresses are not yet proven as this interaction's path. No cheat or ROM state write was promoted; the next diagnostic is execution tracing from the attack/object update. See rom_analysis/targeted_overlap_probe_2026-08-06.md.
