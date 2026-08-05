@@ -122,7 +122,10 @@ def manifest_candidate(base_path: Path, manifest_path: Path) -> tuple[bytes, dic
         return candidates[0].read_bytes(), {
             "mode": "translation_manifest",
             "manifest": str(manifest_path),
-            "candidate_source": str(candidates[0]),
+            # The compiler output lives in a temporary directory that is
+            # removed when this function returns. Keep the report useful
+            # after the build by recording the stable source recipe instead.
+            "candidate_source": "tools/insert_text.py --manifest translation/script.csv",
         }
 
 

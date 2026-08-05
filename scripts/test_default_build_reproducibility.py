@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "rom" / "Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
 TRACKED_IPS = ROOT / "patches" / "kunio_period_drama_korean_development.ips"
 EXPECTED_CANDIDATE_MD5 = "0a983c3d8494444935f000963f415253"
+MANIFEST = ROOT / "translation" / "script.csv"
 
 
 def md5(path: Path) -> str:
@@ -58,6 +59,33 @@ def main() -> int:
         )
         assert md5(output) == EXPECTED_CANDIDATE_MD5
         assert payload["candidate"]["md5"] == EXPECTED_CANDIDATE_MD5
+
+        manifest_output = temp_dir / "manifest.nes"
+        manifest_report = temp_dir / "manifest.json"
+        subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "build.py"),
+                "--input",
+                str(BASE),
+                "--manifest",
+                str(MANIFEST),
+                "--output",
+                str(manifest_output),
+                "--report",
+                str(manifest_report),
+                "--force",
+            ],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        manifest_payload = json.loads(manifest_report.read_text(encoding="utf-8"))
+        assert manifest_payload["source"]["candidate_source"] == (
+            "tools/insert_text.py --manifest translation/script.csv"
+        )
+        assert "manifest_build_" not in json.dumps(manifest_payload)
+        assert manifest_output.is_file()
 
     print("OK: default build uses the tracked IPS and reproduces the candidate hash")
     return 0
