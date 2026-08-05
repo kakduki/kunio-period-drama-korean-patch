@@ -32,6 +32,7 @@ local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
 local RAM_TRACE = os.getenv("KUNIO_RAM_TRACE") == "1"
 local RAM_TRACE_LIMIT = tonumber(os.getenv("KUNIO_RAM_TRACE_LIMIT") or "20000")
 local RAM_TRACE_PC = os.getenv("KUNIO_RAM_TRACE_PC") == "1"
+local RAM_TRACE_OBJECT_PC = os.getenv("KUNIO_RAM_TRACE_OBJECT_PC") == "1"
 local RAM_STATE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_RAM_STATE_TRACE_LIMIT") or "20000")
 local RAM_TRACE_OBJECTS = os.getenv("KUNIO_RAM_TRACE_OBJECTS") == "1"
 local DIALOGUE_TRACE = os.getenv("KUNIO_DIALOGUE_TRACE") == "1"
@@ -263,7 +264,7 @@ local function on_ram_write(addr, size, value)
             string.format("%02X", (value or byte_at(addr or 0) or 0) % 0x100),
         }, "\t"))
     end
-    local trace_state_range = addr ~= nil and ((addr >= 0x0430 and addr <= 0x0450) or (addr >= 0x04F0 and addr <= 0x0510) or (RAM_TRACE_OBJECTS and addr >= 0x0700 and addr <= 0x07FF))
+    local trace_state_range = addr ~= nil and ((addr >= 0x0430 and addr <= 0x0450) or (addr >= 0x04F0 and addr <= 0x0510) or (RAM_TRACE_OBJECTS and addr >= 0x0700 and addr <= 0x07FF) or (RAM_TRACE_OBJECT_PC and addr >= 0x02A8 and addr <= 0x02FF))
     if RAM_TRACE_PC and ram_state_trace_count < RAM_STATE_TRACE_LIMIT and trace_state_range then
         ram_state_trace_count = ram_state_trace_count + 1
         append(ram_state_trace_path, table.concat({
