@@ -443,3 +443,17 @@ report=rom_analysis/stage_map_route_matrix.md
 - Reached events: `OPENING-182` at 656 and `OPENING-183` at 718/1047
 - `OPENING-184` target registered but route not reached: `UNKNOWN_ROUTE_NOT_REACHED`
 - Receiver cache status: `CACHED`; result: PASS for reached overlay records
+
+2026-08-06 manifest candidate recheck
+- candidate_md5=27894ba832e2b01473c78e9676d6581e
+- generated_ips_md5=7a1d6178fdcbc2b20c5ac4d83c51b058
+- manifest_updates=14
+- manifest_skipped=3
+- fceux_frames=2400
+- completion=lua_done
+- unique_screen_fingerprints=10
+- combat_checkpoints=915,1049,1139,1229
+- bounded_status=PASS_BOOT_AND_BOUNDED_COMBAT_ROUTE
+- natural_boss_route=UNKNOWN_NOT_REACHED
+- release_status=NOT_READY
+- report=rom_analysis/manifest_candidate_recheck_2026-08-06.md

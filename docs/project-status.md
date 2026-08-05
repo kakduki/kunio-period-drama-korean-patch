@@ -225,3 +225,7 @@ The main development manifest now contains twelve reviewed opening dialogue rows
 ## Fourteen-Row Native Promotion (2026-08-06)
 
 The main development manifest now contains fourteen reviewed opening dialogue rows, `p182-p195`. Rows `p194-p195` passed bounded source-read and native lower-dialogue-band PPU gates. Rows `p196-p197` remain `UNKNOWN` because the bounded natural stage/combat route did not select them; they were not promoted. Release status remains `NOT_READY`.
+
+## Manifest Candidate Recheck (2026-08-06)
+
+The current fourteen-row manifest rebuilt reproducibly from the verified Japanese base with candidate MD5 27894ba832e2b01473c78e9676d6581e and generated IPS MD5 7a1d6178fdcbc2b20c5ac4d83c51b058. A 2,400-frame FCEUX stage-progression smoke completed with lua_done, 10 unique screen fingerprints, and combat checkpoints beginning at frame 915. This is PASS_BOOT_AND_BOUNDED_COMBAT_ROUTE; natural boss transition and full native visual coverage remain UNKNOWN, so release status remains NOT_READY. See rom_analysis/manifest_candidate_recheck_2026-08-06.md.
