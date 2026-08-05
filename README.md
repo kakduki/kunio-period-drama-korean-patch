@@ -114,6 +114,20 @@ The first non-opening pointer batch is built by
 pointer 3, relocates pointer 3 from `$A012` to `$A011`, and keeps its runtime
 gate `UNKNOWN` until an early-boss state can be entered without blind autoplay.
 
+## Manual Real-Time Translation
+
+The repository also includes a manual-play overlay for practical use while the
+native patch is still under development. It does not autoplay or loop the
+opening screen:
+
+```powershell
+python scripts/run_realtime_overlay.py --rom "rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
+```
+
+Known verified records are shown from `translation/realtime_overlay.csv`.
+Unknown records can be sent to an optional translator command, but are logged
+as `AI_UNCHECKED` and are never inserted into a ROM automatically.
+
 ## Reproducible Pipeline
 
 The confirmed base is the Japanese NES/Famicom iNES image with mapper 4 (MMC3), 262,160 bytes, no trainer, and vertical mirroring.

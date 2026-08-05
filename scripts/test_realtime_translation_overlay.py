@@ -63,5 +63,11 @@ def test_overlay_targets_cover_verified_records() -> None:
     assert "OPENING-196" not in target_text
     assert "OPENING-197" not in target_text
 
+def test_manual_launcher_contract() -> None:
+    launcher = (Path(__file__).parents[1] / "scripts" / "run_realtime_overlay.py").read_text(encoding="utf-8")
+    assert '"KUNIO_OVERLAY_DRIVE": "0"' in launcher
+    assert '"KUNIO_OVERLAY_INTERACTIVE": "1"' in launcher
+    assert "Close FCEUX" in launcher
+
 if __name__ == "__main__":
     raise SystemExit(main())

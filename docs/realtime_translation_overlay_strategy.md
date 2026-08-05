@@ -121,3 +121,17 @@ translation, status, latency, and acceptance classification.
 Cached reviewed rows use reviewed_cache. Optional translator-command results
 use AI_UNCHECKED and pending_review. Unresolved events use UNCHECKED and
 unresolved. None of these rows is inserted into the native ROM automatically.
+## Manual Play Launcher
+
+For actual play, use the interactive launcher instead of the bounded analysis
+runner:
+
+```powershell
+python scripts/run_realtime_overlay.py --rom "rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes"
+```
+
+It opens FCEUX with the verified target observer and a separate always-on-top
+Korean window. It does not inject buttons, use turbo speed, or stop at a frame
+limit. The player can advance through encounters normally; closing FCEUX also
+closes the overlay. An optional translator command can be supplied with
+`--translator-command`. Its output remains `AI_UNCHECKED` until reviewed.

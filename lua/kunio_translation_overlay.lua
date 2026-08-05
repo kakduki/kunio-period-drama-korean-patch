@@ -9,6 +9,7 @@ local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "1200")
 local COOLDOWN = tonumber(os.getenv("KUNIO_OVERLAY_COOLDOWN") or "90")
 local TARGETS_LUA = os.getenv("KUNIO_OVERLAY_TARGETS_LUA") or "kunio_translation_overlay_targets.lua"
 local DRIVE_ROUTE = os.getenv("KUNIO_OVERLAY_DRIVE") ~= "0"
+local INTERACTIVE = os.getenv("KUNIO_OVERLAY_INTERACTIVE") == "1"
 
 local events_path = OUT_DIR .. "/events.tsv"
 local summary_path = OUT_DIR .. "/summary.tsv"
@@ -171,7 +172,7 @@ local function joy_for_frame(frame)
   return {}
 end
 
-while emu.framecount() < MAX_FRAMES do
+while INTERACTIVE or emu.framecount() < MAX_FRAMES do
   local frame = emu.framecount()
   joypad.set(1, joy_for_frame(frame))
   gui.text(2, 8, "Kunio overlay emitter " .. tostring(frame))
@@ -179,5 +180,7 @@ while emu.framecount() < MAX_FRAMES do
   emu.frameadvance()
 end
 
-append(summary_path, table.concat({emu.framecount(), "lua_done", registered, hits, #targets}, "\t"))
+if not INTERACTIVE then
+  append(summary_path, table.concat({emu.framecount(), "lua_done", registered, hits, #targets}, "\t"))
+end
 pcall(function() FCEU.pause() end)
