@@ -125,6 +125,8 @@ python scripts/run_realtime_overlay.py --rom "rom\Kunio Kun no Jidaigeki Dayo Ze
 ```
 
 Known verified records are shown from `translation/realtime_overlay.csv`.
+
+The hybrid rationale and current limits are documented in docs/realtime_translation_strategy.md.
 Unknown records can be sent to an optional translator command, but are logged
 as `AI_UNCHECKED` and are never inserted into a ROM automatically.
 
