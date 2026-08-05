@@ -357,3 +357,6 @@ artifact, not full translation completion. See
 ### 2026-08-06 Manifest Build Smoke Recheck
 
 The current fourteen-row manifest rebuilt from the verified Japanese base with candidate MD5 27894ba832e2b01473c78e9676d6581e and generated IPS MD5 7a1d6178fdcbc2b20c5ac4d83c51b058. Applying that IPS back to the base reproduced the candidate SHA-256 exactly. The exact inventory menu route completed with lua_done at frame 1960. The separate opening proof script also timed out on the Japanese base, so it is classified UNKNOWN_ROUTE_SCRIPT_TIMEOUT; it is not evidence of a manifest candidate boot failure. Full dialogue, natural combat/boss/ending, and release gates remain UNKNOWN/NOT_READY. See rom_analysis/manifest_build_smoke_2026-08-06.md.
+### 2026-08-06 Hashi Route Probe
+
+A 7,200-frame Japanese-base stage/map sweep with dialogue tracing completed with lua_done and ten screen fingerprints. It did not read the Hashi A0 92 source pair and did not show a confirmed collision, enemy-slot clear, map transition, boss marker, or boss dialogue. This is UNKNOWN_ROUTE_NOT_REACHED, not a first-screen hang or ROM failure; no speculative state write was promoted. See rom_analysis/hashi_route_probe_2026-08-06.md.
