@@ -5,6 +5,7 @@ local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "3600")
 local PULSE_ATTACK = os.getenv("KUNIO_PULSE_ATTACK") == "1"
 local MAP_ENTRY = os.getenv("KUNIO_MAP_ENTRY") == "1"
 local SELECT_MODE = os.getenv("KUNIO_SELECT_MODE") == "1"
+local ADVANCE_DIALOGUE = os.getenv("KUNIO_ADVANCE_DIALOGUE") == "1"
 local function mkdir(p) os.execute('mkdir "' .. p .. '" >NUL 2>NUL') end
 local function append(p, line)
   local f=assert(io.open(p,"a")); f:write(line); f:write(string.char(10)); f:close()
@@ -37,6 +38,13 @@ local function input(frame)
   if SELECT_MODE then
     if rel<20 then return {A=true} end
     if rel<180 then return {} end
+  end
+  if ADVANCE_DIALOGUE then
+    if rel<180 then return {} end
+    local phase=(rel-180)%180
+    if phase<12 then return {A=true} end
+    if phase>=90 and phase<102 then return {start=true} end
+    return {}
   end
   if MAP_ENTRY then
     local cycle=rel%768

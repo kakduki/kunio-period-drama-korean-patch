@@ -369,4 +369,7 @@ The targeted overlap probe was rerun with six-frame A/B attack pulses and changi
 ### 2026-08-06 Mode-selection route correction
 
 A native capture showed that frame 900 was the `1P ? COM` / `1P ? 2P` mode-selection screen, not combat. The overlap probe now supports `KUNIO_SELECT_MODE=1`; after confirming the default mode it reached a field/bridge screen at frame 990 and a town/actor screen at frame 1225. A 7,200-frame rerun completed with 66 screen captures, but no known collision/clear dispatch, boss spawn, or dialogue proof. Earlier overlap evidence is therefore downgraded to `PASS_MODE_SELECT_AND_FIELD_ENTRY; UNKNOWN_NATURAL_ENCOUNTER`. See `rom_analysis/targeted_overlap_probe_2026-08-06.md`.
+### 2026-08-06 Corrected dialogue runtime trace
+
+The shared stage probe now supports `KUNIO_SELECT_MODE=1` and `KUNIO_ADVANCE_OPENING_DIALOGUE=1`. On the Japanese base it completed 2,400 frames with 23 unique screens, 140 dialogue source reads, and 204 parser execution rows. This proves the corrected mode-selection and dialogue runtime path, but the dialogue-specific PPU output was empty in this run and no boss transition was reached. The native dialogue visual gate remains UNKNOWN. See `rom_analysis/corrected_mode_dialogue_trace_2026-08-06.md`.
 

@@ -30,6 +30,8 @@ local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
 local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
 local MAP_SWEEP = os.getenv("KUNIO_MAP_SWEEP") == "1"
 local MAP_ENTRY_PROBE = os.getenv("KUNIO_MAP_ENTRY_PROBE") == "1"
+local SELECT_MODE = os.getenv("KUNIO_SELECT_MODE") == "1"
+local ADVANCE_OPENING_DIALOGUE = os.getenv("KUNIO_ADVANCE_OPENING_DIALOGUE") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -453,6 +455,16 @@ end
 -- input cannot pin the player against the first obstacle forever.
 local function combat_input(frame)
     local rel = frame - 900
+    if SELECT_MODE then
+        if rel < 20 then return { A = true } end
+        if rel < 180 then return {} end
+        if ADVANCE_OPENING_DIALOGUE then
+            local phase = (rel - 180) % 180
+            if phase < 12 then return { A = true } end
+            if phase >= 90 and phase < 102 then return { start = true } end
+            return {}
+        end
+    end
     if rel < 0 then return {} end
     if MAP_ENTRY_PROBE then
         -- Probe the documented Start -> B encounter-map input independently
