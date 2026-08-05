@@ -33,6 +33,7 @@ The local structural reference is `tools/reference/TSe-v10.ips`. Its SHA-256 is 
 - Current known blockers: 57 pre-pointer overflow rows are quarantined and one required glyph is missing in the merged candidate.
 - Boss dialogue target queue: 10 structural pointer records; all remain UNKNOWN until a natural event screen is captured.
 - Bounded forced renderer probe: 10/10 target pointers were observed; 1/10 (pointer 188) reached text emit/PPU activity, while 9/10 remain UNKNOWN. Natural boss-route proof remains 0/10.
+- Full pointer sweep: `PASS` for 244/244 active Korean pointer records and 4/4 excluded records. This is bounded forced-renderer evidence, not natural event proof.
 
 The first usable milestone is one Korean word or label displayed on an actual game screen. The repository already contains that proof; the pipeline now makes it reproducible from the Japanese base.
 
@@ -72,8 +73,8 @@ opening component. Bounded FCEUX runs reached all three records and stopped:
 | 184 | `0x071EF` | `$B1DF-$B1F5` | 1399 | `target_match=true`, `lua_done` |
 
 This is a bounded opening-dialogue development proof, not a full-game release
-approval. The natural combat/boss route and the remaining dialogue records are
-still `UNKNOWN`.
+approval. The full-pointer forced-render sweep is separately `PASS` for 244/244 active rows;
+natural combat/boss route proof remains `UNKNOWN`.
 
 ## Bounded Stage Map Route Matrix (2026-08-05)
 
@@ -171,9 +172,9 @@ The selected manifest now builds p182-p185 together. Candidate MD5 is
 `88ae9e0bf1b2d12a9dacfe73d4573b41`. Generated candidate targets relocate to
 `$9FB4`, `$9FCE`, `$9FDC`, and `$9FE9`. The bounded loader trace reads all 64
 selected bytes and reaches `B7 -> B8 -> B9 -> BA -> BB`. Separate native
-captures pass for all four rows at frames 712, 1059, 1345, and 1627. Full
-248-row coverage, non-pointer contexts, and natural boss routes remain
-`UNKNOWN`; release remains `NOT_READY`.
+captures pass for all four rows at frames 712, 1059, 1345, and 1627. Non-pointer
+contexts and natural boss routes remain `UNKNOWN`; the 244 active pointer rows have
+separate bounded forced-render coverage; release remains `NOT_READY`.
 
 ## Same-Input Combat Comparison (2026-08-05)
 

@@ -13,6 +13,7 @@ INSERT-CANDIDATE,build,Japanese base ROM,tools/insert_text.py,candidate output w
 OPENING-RUNTIME,runtime,opening candidate,rom_analysis/patched_rom_report.md,verified Korean source read,PASS,Existing bounded runtime proof
 OPENING-VISUAL,visual,opening candidate,native emulator capture,Korean label visible,PASS,Existing bounded visual proof
 FULL-ROUTE-VISUAL,visual,full candidate,native emulator capture,all target scenes visible,UNKNOWN,Natural boss route is not proven
+FULL-POINTER-SWEEP,runtime,full pointer Korean candidate,scripts/analyze_full_pointer_sweep.py,244 active pointer rows forced-rendered,PASS,Bounded renderer/page/source evidence; natural event and boss routes remain UNKNOWN
 RELEASE-GATE,release,development candidate,docs/project-status.md,all release checks,NOT_READY,Full dialogue and natural event/boss visual gates remain open
 MANIFEST-OVERLAY,build/runtime,translation/script.csv,tools/insert_text.py --manifest,four reviewed pointer rows applied and candidate is reproducible,PASS,Selected p182-p185 native source-read and visual captures pass; full dialogue and release gates remain separate
 BUILD-MANIFEST,build,translation/script.csv,build.py --manifest,manifest-driven candidate and IPS with hashes,PASS,Build plumbing passed; selected-row native runtime/visual gate is PASS, full release remains NOT_READY
