@@ -267,3 +267,27 @@ but it is still not a real enemy-clear route. No cheat or candidate promotion
 was made; natural boss progression and later dialogue remain `UNKNOWN`, and
 release remains `NOT_READY`. See
 `rom_analysis/map_entry_input_probe_2026-08-06.md`.
+
+## English Reference Combat Route Comparison (2026-08-06)
+
+The verified Japanese base and the local English reference ROM were run through
+the same 3,600-frame mixed combat route. Both completed with `lua_done`, eleven
+unique screen fingerprints, 1,234 FC65 slot scans, and zero calls to FAD9
+collision dispatch, FC82 slot-clear dispatch, or FCEF slot clearing. The final
+fingerprint was identical. This is `PASS_SAME_ROUTE_SHAPE_NO_COLLISION`: the
+long-running bounded pattern is not caused by the Korean localization, and the
+English patch does not contain a boss warp or complete gameplay macro. Natural
+combat, boss dialogue, save/load, ending, and full regression remain `UNKNOWN`;
+release remains `NOT_READY`. See
+`rom_analysis/english_reference_combat_route_comparison_2026-08-06.md`.
+
+## External Cheat RAM Probe (2026-08-06)
+
+A public cheat hypothesis (`$7A00=$44`, `$7A01=$44`, `$7A02=$00`) was applied
+only as per-frame FCEUX RAM writes to the English reference ROM. The run
+completed with `lua_done` and eleven screen fingerprints, but recorded 1,235
+FC65 scans and zero FAD9 collision dispatches, FC82 slot-clear dispatches, or
+FCEF slot clears. Changed fingerprints are not sufficient evidence of a boss
+warp or stage-clear flag. Classification is
+`PASS_EXTERNAL_CHEAT_PROBE_NO_ROUTE_ADVANCE`; no writes were promoted to the
+Korean patch. See `rom_analysis/external_cheat_ram_probe_2026-08-06.md`.

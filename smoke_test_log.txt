@@ -516,3 +516,18 @@ report=rom_analysis/stage_map_route_matrix.md
 - natural_boss_route=UNKNOWN_NOT_REACHED
 - release_status=NOT_READY
 - report=rom_analysis/map_entry_input_probe_2026-08-06.md
+
+2026-08-06 English reference combat route comparison
+- japanese_base=3600 frames; lua_done; unique=11; fc65=1234; fad9=0; fc82=0; fcef=0; fingerprint=553498214:7247
+- english_reference=3600 frames; lua_done; unique=11; fc65=1234; fad9=0; fc82=0; fcef=0; fingerprint=553498214:7247
+- classification=PASS_SAME_ROUTE_SHAPE_NO_COLLISION
+- localization_cause_of_route_failure=NOT_SUPPORTED
+- natural_boss_route=UNKNOWN_NOT_REACHED
+- report=rom_analysis/english_reference_combat_route_comparison_2026-08-06.md
+
+2026-08-06 external cheat RAM probe
+- rom=english_reference; frames=3600; writes=7A00:44,7A01:44,7A02:00 for frames 0-3600
+- completion=lua_done; unique_screen_fingerprints=11; fc65=1235; fad9=0; fc82=0; fcef=0
+- classification=PASS_EXTERNAL_CHEAT_PROBE_NO_ROUTE_ADVANCE
+- promotion=FAIL_NOT_PROVEN; natural_boss_route=UNKNOWN_NOT_REACHED
+- report=rom_analysis/external_cheat_ram_probe_2026-08-06.md
