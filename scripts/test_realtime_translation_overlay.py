@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tools.realtime_translation_overlay import format_event, load_translation_cache, parse_event
+from tools.realtime_translation_overlay import format_event, load_translation_cache, parse_event, render_event
 
 
 
@@ -40,6 +40,12 @@ def main() -> int:
         ai_rendered = format_event(unknown, cache, command=command)
         assert "AI translated" in ai_rendered
         assert "AI_UNCHECKED" in ai_rendered
+
+        draft_path = Path(directory) / "drafts.tsv"
+        render_event(unknown, cache, command=command, draft_log=draft_path)
+        draft = draft_path.read_text(encoding="utf-8")
+        assert "pending_review" in draft
+        assert "UNKNOWN-1" in draft
 
 
     test_overlay_targets_cover_verified_records()

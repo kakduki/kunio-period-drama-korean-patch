@@ -111,3 +111,13 @@ launcher-exit timeout rather than an unbounded emulator run.
 p196-p197 remain excluded from the overlay target table until their source
 record and renderer context are proven. The sidecar result is still not
 native ROM release evidence.
+## Review Log
+
+The receiver writes each newly displayed event to
+rom_analysis/realtime_overlay/drafts.tsv by default. Each row retains the
+frame, event ID, context, expected source bytes, record snapshot, displayed
+translation, status, latency, and acceptance classification.
+
+Cached reviewed rows use reviewed_cache. Optional translator-command results
+use AI_UNCHECKED and pending_review. Unresolved events use UNCHECKED and
+unresolved. None of these rows is inserted into the native ROM automatically.

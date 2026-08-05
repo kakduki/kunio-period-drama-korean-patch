@@ -91,6 +91,51 @@ def format_event(event: TextEvent, cache: dict[str, str], command: str | None = 
     return f"{translated}\n[{status} | frame {event.frame} | {event.context}]"
 
 
+def append_draft(path: Path, event: TextEvent, translated: str, status: str, latency_ms: int) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    write_header = not path.exists()
+    with path.open("a", encoding="utf-8", newline="") as handle:
+        fields = [
+            "frame", "event_id", "category", "context", "source_bytes",
+            "record_snapshot", "translated_text", "status", "acceptance", "latency_ms",
+        ]
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="	")
+        if write_header:
+            writer.writeheader()
+        acceptance = {
+            "CACHED": "reviewed_cache",
+            "AI_UNCHECKED": "pending_review",
+            "UNCHECKED": "unresolved",
+        }.get(status, "pending_review")
+        writer.writerow({
+            "frame": event.frame,
+            "event_id": event.event_id,
+            "category": event.category,
+            "context": event.context,
+            "source_bytes": event.expected_bytes,
+            "record_snapshot": event.record_snapshot,
+            "translated_text": translated,
+            "status": status,
+            "acceptance": acceptance,
+            "latency_ms": latency_ms,
+        })
+
+
+def render_event(
+    event: TextEvent,
+    cache: dict[str, str],
+    command: str | None = None,
+    timeout: float = 20.0,
+    draft_log: Path | None = None,
+) -> str:
+    started = time.perf_counter()
+    translated, status = resolve_text(event, cache, command, timeout)
+    latency_ms = round((time.perf_counter() - started) * 1000)
+    if draft_log is not None:
+        append_draft(draft_log, event, translated, status, latency_ms)
+    return f"{translated}\n[{status} | frame {event.frame} | {event.context}]"
+
+
 def latest_event(path: Path) -> TextEvent | None:
     if not path.exists():
         return None
@@ -102,7 +147,7 @@ def latest_event(path: Path) -> TextEvent | None:
     return last
 
 
-def run_window(events: Path, cache: dict[str, str], command: str | None, timeout: float, poll_ms: int) -> None:
+def run_window(events: Path, cache: dict[str, str], command: str | None, timeout: float, poll_ms: int, draft_log: Path | None) -> None:
     root = tk.Tk()
     root.title("Kunio Korean Overlay")
     root.configure(bg="#111111")
@@ -126,7 +171,7 @@ def run_window(events: Path, cache: dict[str, str], command: str | None, timeout
         nonlocal seen_frame
         event = latest_event(events)
         if event is not None and event.frame != seen_frame:
-            label.configure(text=format_event(event, cache, command, timeout))
+            label.configure(text=render_event(event, cache, command, timeout, draft_log))
             seen_frame = event.frame
         root.after(poll_ms, poll)
 
@@ -141,6 +186,7 @@ def main() -> int:
     parser.add_argument("--translator-command", help="Optional command receiving one JSON event on stdin.")
     parser.add_argument("--translator-timeout", type=float, default=20.0)
     parser.add_argument("--poll-ms", type=int, default=250)
+    parser.add_argument("--draft-log", type=Path, default=Path("rom_analysis/realtime_overlay/drafts.tsv"))
     parser.add_argument("--once", action="store_true", help="Print the latest resolved event and exit.")
     args = parser.parse_args()
     cache = load_translation_cache(args.cache)
@@ -149,9 +195,9 @@ def main() -> int:
         if event is None:
             print("NO_EVENT")
             return 2
-        print(format_event(event, cache, args.translator_command, args.translator_timeout))
+        print(render_event(event, cache, args.translator_command, args.translator_timeout, args.draft_log))
         return 0
-    run_window(args.events, cache, args.translator_command, args.translator_timeout, args.poll_ms)
+    run_window(args.events, cache, args.translator_command, args.translator_timeout, args.poll_ms, args.draft_log)
     return 0
 
 
