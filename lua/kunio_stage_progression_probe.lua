@@ -344,7 +344,7 @@ local function on_ram_write(addr, size, value)
             string.format("%04X", read_register("pc")), hex2(read_register("a")),
             hex2(read_register("x")), hex2(read_register("y")),
             hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)),
-            hex2(byte_at(0x04FC)),
+            hex2(byte_at(0x04FC)), hex2(byte_at(0x0430)), hex2(byte_at(0x0431)), hex2(byte_at(0x0432)), hex2(byte_at(0x0433)), hex2(byte_at(0x0434)), hex2(byte_at(0x0435)), hex2(byte_at(0x0436)), hex2(byte_at(0x0437)), hex2(byte_at(0x0706)), hex2(byte_at(0x07BC)), hex2(byte_at(0x07E4)), hex2(byte_at(0x0010)), hex2(byte_at(0x0011)), hex2(byte_at(0x0012)), hex2(byte_at(0x0013)), hex2(byte_at(0x0028)), hex2(byte_at(0x0029)), hex2(byte_at(0x002A)), hex2(byte_at(0x002B)), hex2(byte_at(0x002C)), hex2(byte_at(0x002D)),
         }, "\t"))
     end
     if ram_trace_count < RAM_TRACE_LIMIT then
@@ -695,7 +695,7 @@ if RAM_TRACE or OAM_WRITE_TRACE then
     if RAM_TRACE_PC then
         append(ram_state_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC\t0706\t07BC\t07E4\t07FF")
     end
-    if OAM_WRITE_TRACE then append(oam_write_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC") end
+    if OAM_WRITE_TRACE then append(oam_write_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC\t0430\t0431\t0432\t0433\t0434\t0435\t0436\t0437\t0706\t07BC\t07E4\t0010\t0011\t0012\t0013\t0028\t0029\t002A\t002B\t002C\t002D") end
     register_write(0x0200, 0x0300, on_ram_write)
     register_write(0x0050, 0x0008, on_ram_write)
     register_write(0x04F0, 0x0020, on_ram_write)

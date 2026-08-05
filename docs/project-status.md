@@ -340,3 +340,6 @@ The probe now supports an OAM-directed directional sweep and an A/B mixed-button
 ### 2026-08-06 OAM write ownership trace
 
 The stage probe now records post-entry writes to OAM shadow RAM with `KUNIO_OAM_WRITE_TRACE=1`. A 1,400-frame OAM-directed run completed with `lua_done`, 9 unique screens, and 22,380 OAM write rows. The dominant active-sprite writer family was `$8438/$843D/$8442/$8447`, while `$DB32-$DB49` and `$DAEB-$DAF4` were repeated fill paths. This establishes runtime ownership of rendered sprite records but not collision eligibility. See `rom_analysis/oam_write_ownership_trace_2026-08-06.md`.
+### 2026-08-06 OAM-to-object source correlation
+
+The OAM trace now includes renderer source bytes `$0010-$0013`, object workspace `$0430-$0437`, `$0706/$07BC/$07E4`, and state candidates `$0028-$002D`. A 1,400-frame run captured 22,380 post-entry writes and repeated workspace signatures at the `$8438` active-sprite writer. This correlates rendered sprite records with runtime object data but does not yet identify player/enemy roles or collision eligibility. See `rom_analysis/oam_object_source_correlation_2026-08-06.md`.
