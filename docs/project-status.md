@@ -343,3 +343,13 @@ The stage probe now records post-entry writes to OAM shadow RAM with `KUNIO_OAM_
 ### 2026-08-06 OAM-to-object source correlation
 
 The OAM trace now includes renderer source bytes `$0010-$0013`, object workspace `$0430-$0437`, `$0706/$07BC/$07E4`, and state candidates `$0028-$002D`. A 1,400-frame run captured 22,380 post-entry writes and repeated workspace signatures at the `$8438` active-sprite writer. This correlates rendered sprite records with runtime object data but does not yet identify player/enemy roles or collision eligibility. See `rom_analysis/oam_object_source_correlation_2026-08-06.md`.
+## Translation Coverage Bridge (2026-08-06)
+
+The readable translation reference contains 144 Korean entries. The new
+`generate_translation_coverage_bridge.py` report joins those entries to the
+current static pattern-scan candidates without promoting them to patch targets:
+8 entries intersect known Bank 1 candidates, 16 have unverified static hits,
+115 have no current static candidate, and 5 were intentionally skipped by the
+scanner. Every row remains `not_runtime_proven`; this is a coverage and triage
+artifact, not full translation completion. See
+`rom_analysis/translation_coverage_bridge.md`.
