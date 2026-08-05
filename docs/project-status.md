@@ -221,3 +221,7 @@ See `rom_analysis/manifest_native_visual_comparison_2026-08-05.md`.
 ## Twelve-Row Native Promotion (2026-08-05)
 
 The main development manifest now contains twelve reviewed opening dialogue rows, `p182-p193`. Rows `p190-p193` were promoted only after a bounded FCEUX route confirmed complete source reads and lower-dialogue-band PPU writes at `$2302`. Candidate MD5: `e0f8f2970874da5413fc907b3449947d`. Natural gameplay, combat, boss, save/load, ending, and full 244-row regression remain `UNKNOWN`; release status remains `NOT_READY`.
+
+## Fourteen-Row Native Promotion (2026-08-06)
+
+The main development manifest now contains fourteen reviewed opening dialogue rows, `p182-p195`. Rows `p194-p195` passed bounded source-read and native lower-dialogue-band PPU gates. Rows `p196-p197` remain `UNKNOWN` because the bounded natural stage/combat route did not select them; they were not promoted. Release status remains `NOT_READY`.

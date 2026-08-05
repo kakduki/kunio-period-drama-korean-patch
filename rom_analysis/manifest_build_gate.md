@@ -98,3 +98,7 @@ contexts and release approval remain `NOT_READY`.
 ## Twelve-Row Promotion Gate (2026-08-05)
 
 `p190-p193` are now included in the main development manifest after bounded native runtime evidence. The build applied 12 manifest rows and skipped 3 intentionally unresolved menu rows. This is a development promotion only; pixel screenshot, natural gameplay/event/boss, full 244-row regression, and release gates remain open.
+
+## Fourteen-Row Promotion Gate (2026-08-06)
+
+`p194-p195` are promoted after both the full-pointer candidate and the 14-row main candidate produced complete source reads and lower-dialogue-band PPU writes. `p196-p197` remain outside the main manifest as `UNKNOWN`; their first/absent reads were insufficient evidence. Combat, boss, save/load, ending, and full 244-row gates remain open.

@@ -14,3 +14,5 @@ OPENING-190,dialogue,1,0x05F50,UNKNOWN,UNKNOWN,UNKNOWN,"아, 쿠니오! 드디�
 OPENING-191,dialogue,1,0x05F52,UNKNOWN,UNKNOWN,UNKNOWN,토라가 나에게 저주를 걸었다,UNKNOWN,17,UNKNOWN,opening,Native source-read and PPU dialogue-band gate PASS; candidate CPU $AB6D; bounded batch 190-193
 OPENING-192,dialogue,1,0x05F54,UNKNOWN,UNKNOWN,UNKNOWN,치료사를 찾아가라,UNKNOWN,11,UNKNOWN,opening,Native source-read and PPU dialogue-band gate PASS; candidate CPU $AB7E; bounded batch 190-193
 OPENING-193,dialogue,1,0x05F56,UNKNOWN,UNKNOWN,UNKNOWN,한방약을 가진 사람은 누구냐?,UNKNOWN,19,UNKNOWN,opening,Native source-read and PPU dialogue-band gate PASS; candidate CPU $AB89; bounded batch 190-193
+OPENING-194,dialogue,1,0x05F58,UNKNOWN,UNKNOWN,UNKNOWN,나만 믿어,UNKNOWN,7,UNKNOWN,opening,Native source-read and PPU dialogue-band gate PASS; bounded batch 194-197; p196-p197 remain unverified
+OPENING-195,dialogue,1,0x05F5A,UNKNOWN,UNKNOWN,UNKNOWN,부디 서둘러라,UNKNOWN,9,UNKNOWN,opening,Native source-read and PPU dialogue-band gate PASS; bounded batch 194-197; p196-p197 remain unverified
