@@ -48,6 +48,8 @@ local SRAM_ROUTE_TRACE = os.getenv("KUNIO_SRAM_ROUTE_TRACE") == "1"
 local SRAM_ROUTE_TRACE_LIMIT = tonumber(os.getenv("KUNIO_SRAM_ROUTE_TRACE_LIMIT") or "4000")
 local COUNTER_READ_TRACE = os.getenv("KUNIO_COUNTER_READ_TRACE") == "1"
 local COUNTER_READ_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COUNTER_READ_TRACE_LIMIT") or "4000")
+local STATE_READ_TRACE = os.getenv("KUNIO_STATE_READ_TRACE") == "1"
+local STATE_READ_TRACE_LIMIT = tonumber(os.getenv("KUNIO_STATE_READ_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -167,6 +169,18 @@ local function trace_sram_route(label)
         hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)),
         hex2(byte_at(0x04FC)), hex2(byte_at(0x0050)), hex2(byte_at(0x0051)),
         hex2(byte_at(0x0052)), hex2(byte_at(0x0053)),
+    }, "\t"))
+end
+local state_read_trace_count = 0
+local state_read_trace_path = OUT_DIR .. "/state_reads.tsv"
+local function trace_state_read(addr, size, value)
+    if not STATE_READ_TRACE or state_read_trace_count >= STATE_READ_TRACE_LIMIT then return end
+    state_read_trace_count = state_read_trace_count + 1
+    append(state_read_trace_path, table.concat({
+        tostring(emu.framecount()), string.format("%04X", addr or 0), hex2(value or byte_at(addr or 0)),
+        string.format("%04X", read_register("pc")), hex2(read_register("a")), hex2(read_register("x")),
+        hex2(read_register("y")), hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)),
+        hex2(byte_at(0x04FC)), hex2(byte_at(0x04F3)), hex2(byte_at(0x04F4)), hex2(byte_at(0x0706)), hex2(byte_at(0x7A01)), hex2(byte_at(0x7A02)),
     }, "\t"))
 end
 local function trace_counter_read(label)
@@ -482,6 +496,9 @@ end
 if COUNTER_READ_TRACE then
     append(counter_read_trace_path, "frame\tlabel\tpc\ta\tx\ty\t7A00\t7A01\t7A02\t7A03\t7A04\t7A05\t04F1\t04FA\t04FB\t04FC")
 end
+if STATE_READ_TRACE then
+    append(state_read_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04F2\t04F3\t04F4\t04FA\t04FB\t04FC\t0706\t7A01\t7A02")
+end
 register_write(0x8000, 1, on_mapper_select)
 register_write(0x8001, 1, on_mapper_data)
 register_write(0x2000, 1, on_ppu_control)
@@ -503,6 +520,12 @@ if SRAM_ROUTE_TRACE then
     register_exec(0x8A87, function() trace_sram_route("dec_7a02_8xxx") end)
     register_exec(0xAA87, function() trace_sram_route("dec_7a02_axxx") end)
     register_exec(0xCA87, function() trace_sram_route("dec_7a02_cxxx") end)
+end
+if STATE_READ_TRACE then
+    register_read(0x04F1, trace_state_read)
+    register_read(0x04F2, trace_state_read)
+    register_read(0x04F3, trace_state_read)
+    register_read(0x04F4, trace_state_read)
 end
 if COUNTER_READ_TRACE then
     register_exec(0xA661, function() trace_counter_read("ora_7a01") end)
