@@ -147,6 +147,7 @@ KEY_PYTHON = [
     "scripts/test_build_main_menu_korean_candidate.py",
     "scripts/test_build_korean_development_candidate.py",
     "scripts/test_default_build_reproducibility.py",
+    "scripts/test_manifest_p182_p189_candidate.py",
     "scripts/test_external_output_paths.py",
     "scripts/test_analyze_pointer_dialogue_batch_probe.py",
     "scripts/test_generate_main_menu_pipeline_artifacts.py",
@@ -433,6 +434,7 @@ def main() -> int:
     run("main-menu Korean 16x16 candidate", ["scripts/test_build_main_menu_korean_candidate.py"])
     run("combined Korean development candidate", ["scripts/test_build_korean_development_candidate.py"])
     run("default build reproducibility", ["scripts/test_default_build_reproducibility.py"])
+    run("tracked eight-row manifest candidate", ["scripts/test_manifest_p182_p189_candidate.py"])
     run("selected-only manifest plan", ["scripts/test_insert_text_manifest.py"])
     run("relocated manifest runtime target", ["scripts/test_generate_manifest_runtime_target.py"])
     run("manifest loader trace analyzer", ["scripts/test_analyze_manifest_loader_trace.py"])

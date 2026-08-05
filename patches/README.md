@@ -32,3 +32,16 @@ development candidate generated from `translation/script.csv`. It contains
 the four verified opening pointer rows (182-185) and is not a release patch.
 Its build and runtime evidence are recorded in
 `rom_analysis/manifest_4row_reaudit_2026-08-05.md`.
+
+## Eight-row manifest candidate
+
+`kunio_period_drama_korean_manifest_p182_p189_candidate.ips` is a separate
+candidate-only IPS generated from the tracked
+`translation/script_manifest_p182_p189_candidate.csv`. It contains rows 182-189
+and is reproducible, but rows 186-189 still have `UNKNOWN` native visual gates.
+It is not the release patch.
+
+- Candidate MD5: `e0b450a50083dc9dc67aee10af9d130d`
+- Candidate SHA-256: `70d40561a2425eb7e228a89b0678f98e4b4a7c1a5652cfcf976dff1cd9fdf019`
+- IPS SHA-256: `d1ff5e14a1829f06e93eff7c76fbe28dc3de9bd18545830e0d64898aeff03e35`
+- Reproducibility test: `scripts/test_manifest_p182_p189_candidate.py`

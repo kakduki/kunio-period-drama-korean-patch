@@ -115,3 +115,22 @@ did not produce a reliable match for the new rows. Therefore these captures are
 runtime evidence and a reproducible next-review packet, not native visual
 approval. Rows 186-189 remain unpromoted and the release gate remains
 `NOT_READY`.
+
+## Tracked candidate inputs
+
+The candidate is now reproducible from repository inputs without committing any
+ROM:
+
+```text
+python build.py --input "rom\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes" --manifest translation\script_manifest_p182_p189_candidate.csv --output build\manifest_p182_p189\candidate.nes --patch-output build\manifest_p182_p189\candidate.ips --force
+python scripts/test_manifest_p182_p189_candidate.py
+```
+
+Tracked candidate inputs are:
+
+- `translation/script_manifest_p182_p189_candidate.csv`
+- `patches/kunio_period_drama_korean_manifest_p182_p189_candidate.ips`
+- `scripts/test_manifest_p182_p189_candidate.py`
+
+The candidate ROM and build directory remain local and are intentionally not
+tracked.
