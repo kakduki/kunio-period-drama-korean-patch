@@ -55,6 +55,7 @@ local COMBAT_BRANCH_TRACE = os.getenv("KUNIO_COMBAT_BRANCH_TRACE") == "1"
 local COMBAT_BRANCH_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_BRANCH_TRACE_LIMIT") or "12000")
 local COMBAT_OBJECT_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_TRACE") == "1"
 local COMBAT_OBJECT_REGION_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_REGION_TRACE") == "1"
+local OAM_TRACE = os.getenv('KUNIO_OAM_TRACE') == '1'
 local COMBAT_OBJECT_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_OBJECT_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
@@ -117,6 +118,12 @@ end
 local function dump_ppu(prefix)
     local f = assert(io.open(prefix .. "_nametable.bin", "wb"))
     for addr = 0x2000, 0x23FF do f:write(string.char(ppu_byte(addr))) end
+    f:close()
+end
+local function dump_oam(prefix)
+    if not OAM_TRACE then return end
+    local f = assert(io.open(prefix .. "_oam.bin", "wb"))
+    for addr = 0x200, 0x2FF do f:write(string.char(byte_at(addr))) end
     f:close()
 end
 local mapper_select = nil
@@ -400,6 +407,7 @@ local function capture(frame, reason, fp)
     end
     dump_ram(prefix)
     dump_ppu(prefix)
+    dump_oam(prefix)
     append(OUT_DIR .. "/captures.tsv", table.concat({
         tostring(frame), reason, fp, tostring(ok and shot ~= nil),
         hex2(byte_at(0x0720)), hex2(byte_at(0x0721)), hex2(byte_at(0x0722)), hex2(byte_at(0x0723)),

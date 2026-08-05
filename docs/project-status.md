@@ -331,3 +331,6 @@ completion; unknown rows remain intentionally unpatched. See
 ### 2026-08-06 collision-pattern comparison
 
 Two clean Japanese-base FCEUX runs compared stationary mixed attacks with a grid movement attack for 2,400 frames. Both reached the bounded combat-like route and completed with `lua_done`; the runs produced 9 and 10 unique screen fingerprints and 652 and 639 FC65 slot scans respectively. Neither invoked FAD9 collision dispatch, FC82 slot-clear dispatch, or FCEF slot clearing. This is evidence that the current automated inputs do not establish target overlap, not evidence of a safe cheat or a broken Korean candidate. Natural enemy-clear and boss transition remain `UNKNOWN`; release remains `NOT_READY`. See `rom_analysis/combat_attack_pattern_comparison_2026-08-06.md`.
+### 2026-08-06 OAM sprite probe
+
+The stage probe now supports `KUNIO_OAM_TRACE=1`, producing 256-byte OAM shadow dumps for each capture. A 1,400-frame grid run completed with `lua_done`, 10 unique screens, and 10 OAM dumps. Frames 1139 and 1229 show multiple sprite clusters with separated screen-space X ranges; no collision dispatch or slot clear occurred. This provides a coordinate-based next diagnostic, not boss or cheat proof. See `rom_analysis/oam_sprite_probe_2026-08-06.md`.
