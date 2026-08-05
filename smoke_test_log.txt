@@ -552,3 +552,5 @@ report=rom_analysis/stage_map_route_matrix.md
 - manifest_rows=17; native_pointer_rows=14; native_menu_action_rows=3
 - classification=PASS_EXTRACTION_COVERAGE_RECORDED
 - report=rom_analysis/text_extraction_coverage_2026-08-06.md
+
+2026-08-06 collision-pattern comparison: stationary mixed and grid movement runs reached bounded combat-like screens; FAD9/FC82/FCEF were 0 in both. Classification=PASS_COMBAT_LOOP_REACHED;UNKNOWN_COLLISION_AND_NATURAL_BOSS_ROUTE.

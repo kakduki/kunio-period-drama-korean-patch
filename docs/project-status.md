@@ -327,3 +327,7 @@ three menu/action rows, but only the 14 pointer rows enter the native dialogue
 candidate. This is `PASS_EXTRACTION_COVERAGE_RECORDED`, not full translation
 completion; unknown rows remain intentionally unpatched. See
 `rom_analysis/text_extraction_coverage_2026-08-06.md`.
+
+### 2026-08-06 collision-pattern comparison
+
+Two clean Japanese-base FCEUX runs compared stationary mixed attacks with a grid movement attack for 2,400 frames. Both reached the bounded combat-like route and completed with `lua_done`; the runs produced 9 and 10 unique screen fingerprints and 652 and 639 FC65 slot scans respectively. Neither invoked FAD9 collision dispatch, FC82 slot-clear dispatch, or FCEF slot clearing. This is evidence that the current automated inputs do not establish target overlap, not evidence of a safe cheat or a broken Korean candidate. Natural enemy-clear and boss transition remain `UNKNOWN`; release remains `NOT_READY`. See `rom_analysis/combat_attack_pattern_comparison_2026-08-06.md`.
