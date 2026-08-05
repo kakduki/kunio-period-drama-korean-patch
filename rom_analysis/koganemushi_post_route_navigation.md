@@ -24,3 +24,12 @@ This is a bounded follow-up after the verified Koganemushi name-entry route. It 
 | Boss/event trigger | UNKNOWN | No boss dialogue or event transition was observed. |
 
 The post-route result is intentionally not promoted to a cheat or release prerequisite. The next probe should identify the exact setup-menu state transition from a captured screen and compare it with the already verified normal combat route before testing Map Cursor or boss events.
+
+## Field-state follow-up source watch
+
+- Run: `C:\tmp\koganemushi_map_source_probe`
+- The corrected Koganemushi route reached a distinct green field/map-like screen at frames `3845-3925` with `$04F1=08`.
+- A read watch on the Map CRSR candidate window `$9C59-$9C61` recorded `0` reads through frame `4200`.
+- Result: `PASS_FIELD_STATE_TRANSITION`; `UNKNOWN_MAP_CRSR_SOURCE`.
+
+The state transition is useful route evidence, but the zero source-read count prevents promoting the Map CRSR label or any related RAM address. Boss dialogue and natural event progression remain unproven.
