@@ -247,3 +247,11 @@ fields. The $AD31/$AD34 comparison path appeared only during setup. This is
 PASS_TRACE_NOT_A_BOSS_FLAG; no cheat target was promoted. Natural boss
 progression remains UNKNOWN, and release remains NOT_READY. See
 rom_analysis/combat_object_execution_trace_2026-08-06.md.
+## Combat Slot-Clear Trace (2026-08-06)
+
+The FC65 slot scan ran in three bounded input variants, but FCEF was never
+called: mixed 7,200 frames, grid 3,600 frames, and stationary 3,600 frames.
+This confirms that the existing autoplay routes do not perform a real enemy
+clear. No counter or slot byte was promoted. Natural boss progression and
+later dialogue remain UNKNOWN; release remains NOT_READY. See
+rom_analysis/combat_slot_clear_trace_2026-08-06.md.

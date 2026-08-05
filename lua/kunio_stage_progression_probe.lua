@@ -181,6 +181,10 @@ local combat_branch_trace_count = 0
 local combat_branch_trace_path = OUT_DIR .. "/combat_branch_trace.tsv"
 local combat_object_trace_count = 0
 local combat_object_trace_path = OUT_DIR .. "/combat_object_trace.tsv"
+local COMBAT_SLOT_TRACE = os.getenv("KUNIO_COMBAT_SLOT_TRACE") == "1"
+local COMBAT_SLOT_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_SLOT_TRACE_LIMIT") or "20000")
+local combat_slot_trace_count = 0
+local combat_slot_trace_path = OUT_DIR .. "/combat_slot_trace.tsv"
 local function trace_combat_branch(label)
     if not COMBAT_BRANCH_TRACE or combat_branch_trace_count >= COMBAT_BRANCH_TRACE_LIMIT then return end
     combat_branch_trace_count = combat_branch_trace_count + 1
@@ -200,6 +204,23 @@ local function trace_combat_object(label)
         hex2(byte_at(0x0434)), hex2(byte_at(0x0435)), hex2(byte_at(0x0436)), hex2(byte_at(0x0437)),
         hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)), hex2(byte_at(0x04FC)),
         hex2(byte_at(0x0706)), hex2(byte_at(0x07BC)), hex2(byte_at(0x07E4)),
+    }, "\t"))
+end
+
+local function trace_combat_slot(label)
+    if not COMBAT_SLOT_TRACE or combat_slot_trace_count >= COMBAT_SLOT_TRACE_LIMIT then return end
+    combat_slot_trace_count = combat_slot_trace_count + 1
+    local x = read_register("x")
+    append(combat_slot_trace_path, table.concat({
+        tostring(emu.framecount()), label, string.format("%04X", read_register("pc")),
+        hex2(read_register("a")), hex2(x), hex2(read_register("y")),
+        hex2(byte_at(0x0049 + x)), hex2(byte_at(0x0050 + x)), hex2(byte_at(0x0057 + x)),
+        hex2(byte_at(0x00BA + x)), hex2(byte_at(0x00C3 + x)),
+        hex2(byte_at(0x0496 + x)), hex2(byte_at(0x04AC + x)), hex2(byte_at(0x04B4 + x)),
+        hex2(byte_at(0x76AF + x)), hex2(byte_at(0x76B4 + x)),
+        hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)),
+        hex2(byte_at(0x04FC)), hex2(byte_at(0x7A00)), hex2(byte_at(0x7A01)),
+        hex2(byte_at(0x7A02)), hex2(byte_at(0x7A03)),
     }, "\t"))
 end
 
@@ -507,6 +528,16 @@ if DIALOGUE_TRACE then
     append(dialogue_source_path, "frame\taddress\tvalue\tpc\ta\tx\ty\ttext_pointer\tstream_pointer")
     append(dialogue_parser_path, "frame\tlabel\tpc\ta\tx\ty\ttext_pointer\tstream_pointer")
     append(dialogue_ppu_path, "frame\tppu_address\tvalue\tpc\ttext_pointer\tstream_pointer\ty")
+end
+
+if COMBAT_SLOT_TRACE then
+    append(combat_slot_trace_path, "frame\tlabel\tpc\ta\tx\ty\t0049\t0050\t0057\t00BA\t00C3\t0496\t04AC\t04B4\t76AF\t76B4\t04F1\t04FA\t04FB\t04FC\t7A00\t7A01\t7A02\t7A03")
+    register_exec(0xFC65, function() trace_combat_slot("slot_scan_start") end)
+    register_exec(0xFCEF, function() trace_combat_slot("slot_clear") end)
+    register_exec(0xFD28, function() trace_combat_slot("slot_transition_check") end)
+    register_exec(0xEF85, function() trace_combat_slot("frame_counter") end)
+    register_exec(0xEF88, function() trace_combat_slot("sub_counter") end)
+    register_exec(0xEFA7, function() trace_combat_slot("post_clear_dispatch") end)
 end
 
 if PPU_TRACE then

@@ -497,3 +497,13 @@ report=rom_analysis/stage_map_route_matrix.md
 - natural_boss_route=UNKNOWN_NOT_REACHED
 - release_status=NOT_READY
 - report=rom_analysis/combat_object_execution_trace_2026-08-06.md
+2026-08-06 combat slot-clear trace
+- routes=mixed_7200,grid_3600,stationary_3600
+- completion=lua_done_all
+- fc65_scans=2914,1212,1237
+- fcef_slot_clears=0,0,0
+- transition_checks=0,0,0
+- classification=PASS_NO_SLOT_CLEAR_REACHED
+- natural_boss_route=UNKNOWN_NOT_REACHED
+- release_status=NOT_READY
+- report=rom_analysis/combat_slot_clear_trace_2026-08-06.md
