@@ -538,3 +538,10 @@ report=rom_analysis/stage_map_route_matrix.md
 - fad9_collision_dispatch=0; fc82_slot_clear_dispatch=0; fcef_slot_clears=0
 - classification=PASS_OBJECT_REGION_TRACE_NO_COLLISION
 - report=rom_analysis/object_region_execution_trace_2026-08-06.md
+
+2026-08-06 rebuilt manifest candidate smoke
+- rebuild=14_updates/3_skipped; candidate_md5=27894ba832e2b01473c78e9676d6581e; ips_md5=7a1d6178fdcbc2b20c5ac4d83c51b058
+- frames=2400; completion=lua_done; unique_screen_fingerprints=10; fc65_scans=649; fcef_slot_clears=0
+- classification=PASS_REBUILT_CANDIDATE_BOOT_AND_BOUNDED_ROUTE
+- natural_boss_route=UNKNOWN_NOT_REACHED; release_status=NOT_READY
+- report=rom_analysis/manifest_rebuild_smoke_2026-08-06.md

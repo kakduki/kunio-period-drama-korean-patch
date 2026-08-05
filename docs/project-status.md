@@ -303,3 +303,14 @@ or FCEF clears. Classification is
 this route does not reach a confirmed enemy-hit/death transition. The new
 region option is disabled by default; see
 `rom_analysis/object_region_execution_trace_2026-08-06.md`.
+
+## Rebuilt Manifest Candidate Smoke (2026-08-06)
+
+The fourteen-row manifest was rebuilt from the clean verified Japanese base.
+The candidate MD5 `27894ba832e2b01473c78e9676d6581e` and generated IPS MD5
+`7a1d6178fdcbc2b20c5ac4d83c51b058` match the recorded candidate. A fresh
+2,400-frame FCEUX smoke completed with `lua_done`, ten screen fingerprints,
+649 FC65 scans, and zero FCEF slot clears. This is
+`PASS_REBUILT_CANDIDATE_BOOT_AND_BOUNDED_ROUTE`; full native visual coverage,
+natural boss progression, and release remain `UNKNOWN`/`NOT_READY`. See
+`rom_analysis/manifest_rebuild_smoke_2026-08-06.md`.
