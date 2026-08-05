@@ -507,3 +507,12 @@ report=rom_analysis/stage_map_route_matrix.md
 - natural_boss_route=UNKNOWN_NOT_REACHED
 - release_status=NOT_READY
 - report=rom_analysis/combat_slot_clear_trace_2026-08-06.md
+2026-08-06 map entry input probe
+- frames=1400; completion=lua_done; unique_screen_fingerprints=9
+- input=Start->B->right+A/right+B after frame 900; no RAM writes
+- fc65_scans=observed; fad9_collision_dispatch=0; fae0_fb16_selectors=0
+- fc82_slot_clear_dispatch=0; fcef_slot_clears=0
+- classification=PASS_INPUT_PROBE_NO_MAP_OR_COLLISION
+- natural_boss_route=UNKNOWN_NOT_REACHED
+- release_status=NOT_READY
+- report=rom_analysis/map_entry_input_probe_2026-08-06.md

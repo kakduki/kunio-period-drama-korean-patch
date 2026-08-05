@@ -27,6 +27,7 @@ local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
 local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
 local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
 local MAP_SWEEP = os.getenv("KUNIO_MAP_SWEEP") == "1"
+local MAP_ENTRY_PROBE = os.getenv("KUNIO_MAP_ENTRY_PROBE") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -427,6 +428,21 @@ end
 local function combat_input(frame)
     local rel = frame - 900
     if rel < 0 then return {} end
+    if MAP_ENTRY_PROBE then
+        -- Probe the documented Start -> B encounter-map input independently
+        -- of the unresolved stage-clear state. This only sends controller input.
+        local map_cycle = rel % 768
+        local direction = { right = true }
+        local phase = map_cycle % 192
+        if phase < 8 then return { start = true } end
+        if phase < 16 then return {} end
+        if phase < 24 then return { B = true } end
+        if phase < 32 then return {} end
+        if phase < 96 then direction.A = true; return direction end
+        if phase < 104 then return {} end
+        if phase < 168 then direction.B = true; return direction end
+        return {}
+    end
     if ADVANCE_AFTER_COMBAT and (byte_at(0x04F1) == 0x06 or byte_at(0x04F1) == 0x12) then
         if MAP_SOURCE_ROUTE then
             -- Strategy references describe Start -> B to open the encounter map,
@@ -533,11 +549,18 @@ end
 if COMBAT_SLOT_TRACE then
     append(combat_slot_trace_path, "frame\tlabel\tpc\ta\tx\ty\t0049\t0050\t0057\t00BA\t00C3\t0496\t04AC\t04B4\t76AF\t76B4\t04F1\t04FA\t04FB\t04FC\t7A00\t7A01\t7A02\t7A03")
     register_exec(0xFC65, function() trace_combat_slot("slot_scan_start") end)
+    register_exec(0xFC6B, function() trace_combat_slot("slot_low_status_read") end)
+    register_exec(0xFC8F, function() trace_combat_slot("slot_high_status_read") end)
+    register_exec(0xFC9E, function() trace_combat_slot("slot_high_object_read") end)
     register_exec(0xFCEF, function() trace_combat_slot("slot_clear") end)
     register_exec(0xFD28, function() trace_combat_slot("slot_transition_check") end)
     register_exec(0xEF85, function() trace_combat_slot("frame_counter") end)
     register_exec(0xEF88, function() trace_combat_slot("sub_counter") end)
     register_exec(0xEFA7, function() trace_combat_slot("post_clear_dispatch") end)
+    register_exec(0xFAD9, function() trace_combat_slot("collision_dispatch") end)
+    register_exec(0xFAE0, function() trace_combat_slot("collision_low_select") end)
+    register_exec(0xFB16, function() trace_combat_slot("collision_high_select") end)
+    register_exec(0xFC82, function() trace_combat_slot("slot_clear_dispatch") end)
 end
 
 if PPU_TRACE then

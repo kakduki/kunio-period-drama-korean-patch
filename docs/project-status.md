@@ -255,3 +255,15 @@ This confirms that the existing autoplay routes do not perform a real enemy
 clear. No counter or slot byte was promoted. Natural boss progression and
 later dialogue remain UNKNOWN; release remains NOT_READY. See
 rom_analysis/combat_slot_clear_trace_2026-08-06.md.
+## Map Entry Input Probe (2026-08-06)
+
+A 1,400-frame input-only probe sent the documented Start -> B encounter-map
+sequence after the bounded combat entry, independent of the unresolved
+stage-clear state. It completed with `lua_done` and nine screen fingerprints,
+but reached neither collision dispatch (`FAD9`) nor slot clearing (`FCEF`), and
+no confirmed map transition or boss dialogue appeared. This is
+`PASS_INPUT_PROBE_NO_MAP_OR_COLLISION`: the route is not a first-screen hang,
+but it is still not a real enemy-clear route. No cheat or candidate promotion
+was made; natural boss progression and later dialogue remain `UNKNOWN`, and
+release remains `NOT_READY`. See
+`rom_analysis/map_entry_input_probe_2026-08-06.md`.
