@@ -1,0 +1,37 @@
+{
+  "base": {
+    "path": "C:\\Users\\kakdu\\OneDrive\\\ubb38\uc11c\\\uc790\uc0b0\uad00\ub9ac\\kunio-period-drama-korean-patch\\rom\\Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes",
+    "size": 262160,
+    "crc32": "014D63C9",
+    "md5": "0d406a85285b4de8468f0dab6aad5fe5",
+    "sha1": "4338c3001c5e2bf5fad0f282bfee23b79e0ad959",
+    "sha256": "54d79f15f60a32123e95fbf20661128a13ee0eee1941e0ff98ba7bb54343e23a"
+  },
+  "source": {
+    "mode": "translation_manifest",
+    "manifest": "C:\\Users\\kakdu\\OneDrive\\\ubb38\uc11c\\\uc790\uc0b0\uad00\ub9ac\\kunio-period-drama-korean-patch\\translation\\script.csv",
+    "candidate_source": "tools/insert_text.py --manifest translation/script.csv"
+  },
+  "input_ips": null,
+  "candidate": {
+    "path": "C:\\tmp\\kunio_main_manifest_14row_repro.nes",
+    "size": 368656,
+    "crc32": "5CE2CDFB",
+    "md5": "27894ba832e2b01473c78e9676d6581e",
+    "sha1": "b7b84a71b10bf13e5e791d385ebd49c4e9527926",
+    "sha256": "411677108c540df5517d3ba0d0cc7f20e1ec287e729a55cc9e86a5fdce8bae35"
+  },
+  "generated_patch": {
+    "path": "C:\\Users\\kakdu\\OneDrive\\\ubb38\uc11c\\\uc790\uc0b0\uad00\ub9ac\\kunio-period-drama-korean-patch\\patches\\kunio_period_drama_korean_manifest_p182_p195_candidate.ips",
+    "size": 107321,
+    "crc32": "B2E6A8CF",
+    "md5": "7a1d6178fdcbc2b20c5ac4d83c51b058",
+    "sha1": "095a1d0c40fef61b3db94acee713922f4f4d5b38",
+    "sha256": "c06919951faa337276624c022711e522a6250d7b38a812cf480dbc6320d672d8",
+    "records": 35,
+    "source": "generated from the verified Japanese base and candidate bytes"
+  },
+  "default_candidate_hash_match": false,
+  "development_status": "NOT_READY",
+  "distribution": "IPS patch only; original and candidate ROMs are local artifacts"
+}

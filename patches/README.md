@@ -45,3 +45,13 @@ It is not the release patch.
 - Candidate SHA-256: `70d40561a2425eb7e228a89b0678f98e4b4a7c1a5652cfcf976dff1cd9fdf019`
 - IPS SHA-256: `d1ff5e14a1829f06e93eff7c76fbe28dc3de9bd18545830e0d64898aeff03e35`
 - Reproducibility test: `scripts/test_manifest_p182_p189_candidate.py`
+
+## Fourteen-row manifest candidate
+
+`kunio_period_drama_korean_manifest_p182_p195_candidate.ips` is the current bounded development candidate generated from the Japanese base and the tracked `translation/script.csv`. It contains the fourteen reviewed opening rows `p182-p195`; three menu rows remain intentionally skipped. Rows `p182-p195` have native source-read and lower-dialogue-band PPU evidence in bounded routes. It is not a release patch: combat, boss, save/load, ending, and full-game gates remain open.
+
+- Candidate MD5: `27894ba832e2b01473c78e9676d6581e`
+- Candidate SHA-256: `411677108c540df5517d3ba0d0cc7f20e1ec287e729a55cc9e86a5fdce8bae35`
+- IPS SHA-256: `c06919951faa337276624c022711e522a6250d7b38a812cf480dbc6320d672d8`
+- Reproduction report: `rom_analysis/manifest_p182_p195_build_2026-08-06.json`
+- Development status: `NOT_READY`
