@@ -3,6 +3,8 @@
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/target_overlap_probe"
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "3600")
 local PULSE_ATTACK = os.getenv("KUNIO_PULSE_ATTACK") == "1"
+local MAP_ENTRY = os.getenv("KUNIO_MAP_ENTRY") == "1"
+local SELECT_MODE = os.getenv("KUNIO_SELECT_MODE") == "1"
 local function mkdir(p) os.execute('mkdir "' .. p .. '" >NUL 2>NUL') end
 local function append(p, line)
   local f=assert(io.open(p,"a")); f:write(line); f:write(string.char(10)); f:close()
@@ -32,6 +34,18 @@ end
 local function input(frame)
   if frame < 900 then return entry(frame) end
   local rel=frame-900
+  if SELECT_MODE then
+    if rel<20 then return {A=true} end
+    if rel<180 then return {} end
+  end
+  if MAP_ENTRY then
+    local cycle=rel%768
+    if cycle<12 then return {start=true} end
+    if cycle>=24 and cycle<36 then return {B=true} end
+    if cycle>=48 and cycle<160 then return {right=true,A=true} end
+    if cycle>=192 and cycle<304 then return {left=true,A=true} end
+    return {}
+  end
   if PULSE_ATTACK then
     local segment=math.floor(rel/300)%4
     local direction=segment==0 and "right" or segment==1 and "left" or segment==2 and "down" or "up"

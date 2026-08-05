@@ -366,4 +366,7 @@ A dedicated fixed-direction attack probe reached a visible player/enemy overlap 
 ### 2026-08-06 Target-overlap pulse rerun
 
 The targeted overlap probe was rerun with six-frame A/B attack pulses and changing directions instead of continuously held attack buttons. It completed at frame 2400 with 19 captures and continued to execute the object and slot loops, but FAD9 collision dispatch, FC82 slot-clear dispatch, and FCEF slot clear remained zero. This rules out a simple held-button edge hypothesis; the visible actor roles and natural enemy-clear/boss route remain UNKNOWN. No cheat or RAM write was promoted. See `rom_analysis/targeted_overlap_probe_2026-08-06.md`.
+### 2026-08-06 Mode-selection route correction
+
+A native capture showed that frame 900 was the `1P ? COM` / `1P ? 2P` mode-selection screen, not combat. The overlap probe now supports `KUNIO_SELECT_MODE=1`; after confirming the default mode it reached a field/bridge screen at frame 990 and a town/actor screen at frame 1225. A 7,200-frame rerun completed with 66 screen captures, but no known collision/clear dispatch, boss spawn, or dialogue proof. Earlier overlap evidence is therefore downgraded to `PASS_MODE_SELECT_AND_FIELD_ENTRY; UNKNOWN_NATURAL_ENCOUNTER`. See `rom_analysis/targeted_overlap_probe_2026-08-06.md`.
 

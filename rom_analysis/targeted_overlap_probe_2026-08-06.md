@@ -25,6 +25,18 @@ Date: 2026-08-06
 - The overlap window therefore reaches the object update and slot-scan paths, but not the known collision/clear dispatches. Slot-relative fields are now recorded for the next run (`0049,X`, `0050,X`, `0057,X`, `0496,X`, `04AC,X`, `04B4,X`).
 - Slot evidence in the rerun: slot X=01 retained `0050=81`; slot X=05 retained `0050=80` and `04B4=01`; both remained present while the two sprites crossed. This is useful actor-slot evidence, but it is not sufficient to label slot 5 as an enemy or to promote a cheat.
 
+## Mode-selection correction and bounded route
+
+The frame-900 screen was reviewed as a native capture and identified as the mode-selection screen (`1P ? COM` / `1P ? 2P`), not combat. The probe now supports `KUNIO_SELECT_MODE=1`, which confirms the default `1P ? COM` choice with A and waits for field entry.
+
+- Frame 900: mode selection screen.
+- Frame 990: field/bridge screen after confirmation.
+- Frame 1225: town/actor screen with two visible characters.
+- 7,200-frame rerun with `KUNIO_SELECT_MODE=1` and `KUNIO_PULSE_ATTACK=1`: `lua_done`, 66 screen captures, latest capture at frame 7197.
+- FAD9/FC82/FCEF remained zero; no boss spawn, dialogue-band proof, or enemy-clear transition was observed.
+
+This corrects the earlier context label: the old ?combat overlap? evidence includes a mode-selection and early-field route. The route is now more accurately classified as `PASS_MODE_SELECT_AND_FIELD_ENTRY; UNKNOWN_NATURAL_ENCOUNTER`.
+
 ## Pulse-input rerun
 
 - Mode: `KUNIO_PULSE_ATTACK=1`; direction held per 300-frame segment, A/B pressed in six-frame pulses.
