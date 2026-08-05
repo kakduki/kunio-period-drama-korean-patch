@@ -55,3 +55,16 @@ It is not the release patch.
 - IPS SHA-256: `c06919951faa337276624c022711e522a6250d7b38a812cf480dbc6320d672d8`
 - Reproduction report: `rom_analysis/manifest_p182_p195_build_2026-08-06.json`
 - Development status: `NOT_READY`
+
+## Full 244-row pointer candidate
+
+`kunio_period_drama_korean_full_pointer_candidate.ips` contains all 244 reviewed
+pointer rows and is a whole-script development candidate. It is not a release
+patch: runtime evidence is partial, and combat, boss, save/load, ending, and full
+game visual gates remain open.
+
+- Candidate MD5: `165ede9d7cf426a3f8aa841af4268a44`
+- Candidate SHA-256: `D2955399B7EBEF39A325BEA79BEBE04815E0337100E51FCA3B7440B50259D4BA`
+- IPS SHA-256: `6045C979B784D0A795E930F8A424406EE71E37A57C779C8A19852E054C07FC77`
+- Build report: `rom_analysis/full_pointer_candidate_build_2026-08-06.md`
+- Development status: `NOT_READY`
