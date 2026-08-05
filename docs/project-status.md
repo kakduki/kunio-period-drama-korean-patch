@@ -337,3 +337,6 @@ The stage probe now supports `KUNIO_OAM_TRACE=1`, producing 256-byte OAM shadow 
 ### 2026-08-06 OAM-directed attack sweep
 
 The probe now supports an OAM-directed directional sweep and an A/B mixed-button variant. Two clean Japanese-base 3,600-frame runs reached `lua_done` with 10 unique screens and 1,218/1,211 FC65 scans, but both recorded zero FAD9 collision dispatches, FC82 slot-clear dispatches, and FCEF slot clears. This rules out the narrow wrong-button/fixed-direction hypothesis; natural enemy-clear and boss progression remain `UNKNOWN`. See `rom_analysis/oam_directed_attack_sweep_2026-08-06.md`.
+### 2026-08-06 OAM write ownership trace
+
+The stage probe now records post-entry writes to OAM shadow RAM with `KUNIO_OAM_WRITE_TRACE=1`. A 1,400-frame OAM-directed run completed with `lua_done`, 9 unique screens, and 22,380 OAM write rows. The dominant active-sprite writer family was `$8438/$843D/$8442/$8447`, while `$DB32-$DB49` and `$DAEB-$DAF4` were repeated fill paths. This establishes runtime ownership of rendered sprite records but not collision eligibility. See `rom_analysis/oam_write_ownership_trace_2026-08-06.md`.

@@ -58,6 +58,8 @@ local COMBAT_BRANCH_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_BRANCH_TRACE_
 local COMBAT_OBJECT_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_TRACE") == "1"
 local COMBAT_OBJECT_REGION_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_REGION_TRACE") == "1"
 local OAM_TRACE = os.getenv('KUNIO_OAM_TRACE') == '1'
+local OAM_WRITE_TRACE = os.getenv('KUNIO_OAM_WRITE_TRACE') == '1'
+local OAM_WRITE_TRACE_START = tonumber(os.getenv('KUNIO_OAM_WRITE_TRACE_START') or '900')
 local COMBAT_OBJECT_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_OBJECT_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
@@ -141,6 +143,8 @@ local ram_trace_count = 0
 local ram_trace_path = OUT_DIR .. "/ram_writes.tsv"
 local ram_state_trace_count = 0
 local ram_state_trace_path = OUT_DIR .. "/ram_state_writes.tsv"
+local oam_write_trace_count = 0
+local oam_write_trace_path = OUT_DIR .. "/oam_writes.tsv"
 local dialogue_trace_count = 0
 local dialogue_pointer_path = OUT_DIR .. "/dialogue_pointers.tsv"
 local dialogue_source_path = OUT_DIR .. "/dialogue_source_reads.tsv"
@@ -332,6 +336,17 @@ local function register_dialogue_pointer(pointer)
     for addr = pointer, pointer + 0x50 do register_read(addr, on_dialogue_source_read) end
 end
 local function on_ram_write(addr, size, value)
+    if OAM_WRITE_TRACE and emu.framecount() >= OAM_WRITE_TRACE_START and addr ~= nil and addr >= 0x0200 and addr < 0x0300 and oam_write_trace_count < 120000 then
+        oam_write_trace_count = oam_write_trace_count + 1
+        append(oam_write_trace_path, table.concat({
+            tostring(emu.framecount()), string.format("%04X", addr),
+            string.format("%02X", (value or byte_at(addr) or 0) % 0x100),
+            string.format("%04X", read_register("pc")), hex2(read_register("a")),
+            hex2(read_register("x")), hex2(read_register("y")),
+            hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)),
+            hex2(byte_at(0x04FC)),
+        }, "\t"))
+    end
     if ram_trace_count < RAM_TRACE_LIMIT then
         ram_trace_count = ram_trace_count + 1
         append(ram_trace_path, table.concat({
@@ -676,10 +691,11 @@ end
 if NAME_SOURCE_TRACE then
     for address = 0x0000, 0x07FF do register_read(address, on_name_source_read) end
 end
-if RAM_TRACE then
+if RAM_TRACE or OAM_WRITE_TRACE then
     if RAM_TRACE_PC then
         append(ram_state_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC\t0706\t07BC\t07E4\t07FF")
     end
+    if OAM_WRITE_TRACE then append(oam_write_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04FA\t04FB\t04FC") end
     register_write(0x0200, 0x0300, on_ram_write)
     register_write(0x0050, 0x0008, on_ram_write)
     register_write(0x04F0, 0x0020, on_ram_write)
