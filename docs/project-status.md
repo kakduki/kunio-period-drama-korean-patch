@@ -233,3 +233,7 @@ The current fourteen-row manifest rebuilt reproducibly from the verified Japanes
 ## Late Pointer Runtime Follow-up (2026-08-06)
 
 p196-p201 were rechecked against the Japanese base with an 800-frame PPU observation window. p197 produced a partial source-read at frame 5384 and 277 writes in `$2023-$22E6`, but no complete record match and zero writes in the lower dialogue band beginning at `$2302`. p196 and p198-p201 were not reached. No rows were promoted; natural boss progression remains UNKNOWN and release remains NOT_READY. See `rom_analysis/late_pointer_runtime_followup_2026-08-06.md`.
+
+## Combat Branch Trace (2026-08-06)
+
+The optional AA80-AA8F execution hook ran for 2,400 frames and completed with `lua_done`. It recorded 181 rows at frames 1060 and 1064; AA87 executed 9 times per frame while `$7A02` remained `$00`, `$7A01` was `$3F`, and `$04F1` was `$01`. Neighboring AA8C/AA8E execution advanced an X-indexed loop. This is diagnostic evidence against treating `$7A02` or `$04F1` as a safe boss cheat, not boss proof. Release remains `NOT_READY`. See `rom_analysis/combat_branch_trace_2026-08-06.md`.

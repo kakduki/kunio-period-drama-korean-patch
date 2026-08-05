@@ -50,6 +50,8 @@ local COUNTER_READ_TRACE = os.getenv("KUNIO_COUNTER_READ_TRACE") == "1"
 local COUNTER_READ_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COUNTER_READ_TRACE_LIMIT") or "4000")
 local STATE_READ_TRACE = os.getenv("KUNIO_STATE_READ_TRACE") == "1"
 local STATE_READ_TRACE_LIMIT = tonumber(os.getenv("KUNIO_STATE_READ_TRACE_LIMIT") or "12000")
+local COMBAT_BRANCH_TRACE = os.getenv("KUNIO_COMBAT_BRANCH_TRACE") == "1"
+local COMBAT_BRANCH_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_BRANCH_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -173,6 +175,17 @@ local function trace_sram_route(label)
 end
 local state_read_trace_count = 0
 local state_read_trace_path = OUT_DIR .. "/state_reads.tsv"
+local combat_branch_trace_count = 0
+local combat_branch_trace_path = OUT_DIR .. "/combat_branch_trace.tsv"
+local function trace_combat_branch(label)
+    if not COMBAT_BRANCH_TRACE or combat_branch_trace_count >= COMBAT_BRANCH_TRACE_LIMIT then return end
+    combat_branch_trace_count = combat_branch_trace_count + 1
+    append(combat_branch_trace_path, table.concat({
+        tostring(emu.framecount()), label, string.format("%04X", read_register("pc")),
+        hex2(read_register("a")), hex2(read_register("x")), hex2(read_register("y")), hex2(read_register("p")),
+        hex2(byte_at(0x7A00)), hex2(byte_at(0x7A01)), hex2(byte_at(0x7A02)), hex2(byte_at(0x04F1))
+    }, "\t"))
+end
 local function trace_state_read(addr, size, value)
     if not STATE_READ_TRACE or state_read_trace_count >= STATE_READ_TRACE_LIMIT then return end
     state_read_trace_count = state_read_trace_count + 1
@@ -498,6 +511,12 @@ if COUNTER_READ_TRACE then
 end
 if STATE_READ_TRACE then
     append(state_read_trace_path, "frame\taddress\tvalue\tpc\ta\tx\ty\t04F1\t04F2\t04F3\t04F4\t04FA\t04FB\t04FC\t0706\t7A01\t7A02")
+end
+if COMBAT_BRANCH_TRACE then
+    append(combat_branch_trace_path, "frame\tlabel\tpc\ta\tx\ty\tp\t7A00\t7A01\t7A02\t04F1")
+    for address = 0x8A80, 0x8A8F do register_exec(address, function() trace_combat_branch(string.format("8xxx_%04X", address)) end) end
+    for address = 0xAA80, 0xAA8F do register_exec(address, function() trace_combat_branch(string.format("Axxx_%04X", address)) end) end
+    for address = 0xCA80, 0xCA8F do register_exec(address, function() trace_combat_branch(string.format("Cxxx_%04X", address)) end) end
 end
 register_write(0x8000, 1, on_mapper_select)
 register_write(0x8001, 1, on_mapper_data)

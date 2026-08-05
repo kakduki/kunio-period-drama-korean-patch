@@ -470,3 +470,15 @@ report=rom_analysis/stage_map_route_matrix.md
 - natural_boss_route=UNKNOWN
 - release_status=NOT_READY
 - report=rom_analysis/late_pointer_runtime_followup_2026-08-06.md
+
+2026-08-06 combat branch trace
+- frames=1060,1064
+- trace_rows=181
+- aa87_callbacks=9_per_frame
+- values=7A00:3F;7A01:3F;7A02:00;04F1:01
+- completion=lua_done
+- unique_screen_fingerprints=10
+- classification=PASS_EXECUTION_TRACE_NOT_BOSS_FLAG
+- promotion=FAIL_NOT_PROVEN
+- natural_boss_route=UNKNOWN
+- report=rom_analysis/combat_branch_trace_2026-08-06.md
