@@ -26,6 +26,7 @@ local COMBAT_GRID = os.getenv("KUNIO_COMBAT_GRID") == "1"
 local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
 local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
 local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
+local MAP_SWEEP = os.getenv("KUNIO_MAP_SWEEP") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -366,19 +367,26 @@ local function combat_input(frame)
             -- Strategy references describe Start -> B to open the encounter map,
             -- then direction+A for map-cursor travel. Keep B as a later confirm
             -- phase so both documented map actions are exercised separately.
-            local map_cycle = frame % 192
+            local map_cycle = frame % 768
             local direction = {}
-            if MAP_DIRECTION == "left" then direction.left = true
-            elseif MAP_DIRECTION == "up" then direction.up = true
-            elseif MAP_DIRECTION == "down" then direction.down = true
+            local segment = math.floor(map_cycle / 192)
+            local direction_name = MAP_DIRECTION
+            if MAP_SWEEP then
+                local sweep = { "right", "down", "left", "up" }
+                direction_name = sweep[(segment % #sweep) + 1]
+            end
+            if direction_name == "left" then direction.left = true
+            elseif direction_name == "up" then direction.up = true
+            elseif direction_name == "down" then direction.down = true
             else direction.right = true end
-            if map_cycle < 8 then return { start = true } end
-            if map_cycle < 16 then return {} end
-            if map_cycle < 24 then return { B = true } end
-            if map_cycle < 32 then return {} end
-            if map_cycle < 96 then direction.A = true; return direction end
-            if map_cycle < 104 then return {} end
-            if map_cycle < 168 then direction.B = true; return direction end
+            local phase = map_cycle % 192
+            if phase < 8 then return { start = true } end
+            if phase < 16 then return {} end
+            if phase < 24 then return { B = true } end
+            if phase < 32 then return {} end
+            if phase < 96 then direction.A = true; return direction end
+            if phase < 104 then return {} end
+            if phase < 168 then direction.B = true; return direction end
             return {}
         end
         -- Legacy bounded route retained for comparison with earlier reports.
