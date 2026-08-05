@@ -373,3 +373,7 @@ A native capture showed that frame 900 was the `1P ? COM` / `1P ? 2P` mode-selec
 
 The shared stage probe now supports `KUNIO_SELECT_MODE=1` and `KUNIO_ADVANCE_OPENING_DIALOGUE=1`. On the Japanese base it completed 2,400 frames with 23 unique screens, 140 dialogue source reads, and 204 parser execution rows. This proves the corrected mode-selection and dialogue runtime path, but the dialogue-specific PPU output was empty in this run and no boss transition was reached. The native dialogue visual gate remains UNKNOWN. See `rom_analysis/corrected_mode_dialogue_trace_2026-08-06.md`.
 
+
+### 2026-08-06 Map cursor to field entry
+
+The corrected route now selects the mode, advances opening dialogue, opens the encounter map, and cycles the map cursor with bounded A/B pulses. A 3,000-frame right-travel run proved the map screen; a 5,000-frame directional sweep reached a different town/field scene at frame 1980, and the traced 8,000-frame rerun completed with `lua_done`, 17 unique fingerprints, and 399 dialogue source-read rows. Collision dispatch, enemy-slot clear, boss spawn, and boss dialogue remained zero, so the result is `PASS_MODE_SELECT_DIALOGUE_MAP_FIELD_ENTRY; UNKNOWN_NATURAL_ENCOUNTER`. See `rom_analysis/map_cursor_field_entry_2026-08-06.md`.

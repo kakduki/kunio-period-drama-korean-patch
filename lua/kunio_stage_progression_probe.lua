@@ -32,6 +32,11 @@ local MAP_SWEEP = os.getenv("KUNIO_MAP_SWEEP") == "1"
 local MAP_ENTRY_PROBE = os.getenv("KUNIO_MAP_ENTRY_PROBE") == "1"
 local SELECT_MODE = os.getenv("KUNIO_SELECT_MODE") == "1"
 local ADVANCE_OPENING_DIALOGUE = os.getenv("KUNIO_ADVANCE_OPENING_DIALOGUE") == "1"
+local OPEN_MAP_AFTER_DIALOGUE = os.getenv("KUNIO_OPEN_MAP_AFTER_DIALOGUE") == "1"
+local ATTACK_AFTER_OPENING = os.getenv("KUNIO_ATTACK_AFTER_OPENING") == "1"
+local MAP_ONCE_AFTER_DIALOGUE = os.getenv("KUNIO_MAP_ONCE_AFTER_DIALOGUE") == "1"
+local MAP_CURSOR_TRAVEL = os.getenv("KUNIO_MAP_CURSOR_TRAVEL") == "1"
+local MAP_CURSOR_SWEEP = os.getenv("KUNIO_MAP_CURSOR_SWEEP") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -459,6 +464,49 @@ local function combat_input(frame)
         if rel < 20 then return { A = true } end
         if rel < 180 then return {} end
         if ADVANCE_OPENING_DIALOGUE then
+            if ATTACK_AFTER_OPENING and rel >= 1600 then
+                local phase = (rel - 1600) % 240
+                if phase < 60 then return { right = true, A = true, B = true } end
+                if phase < 120 then return { left = true, A = true, B = true } end
+                if phase < 180 then return { right = true, A = true } end
+                return { up = true, A = true, B = true }
+            end
+            if OPEN_MAP_AFTER_DIALOGUE and rel >= 600 then
+                if MAP_ONCE_AFTER_DIALOGUE then
+                    if rel < 612 then return { start = true } end
+                    if rel >= 624 and rel < 636 then return { B = true } end
+                    if rel >= 900 and rel < 912 then return { B = true } end
+                    if rel >= 912 then
+                        if MAP_CURSOR_TRAVEL then
+                            local travel = (rel - 912) % 768
+                            local segment = math.floor(travel / 192)
+                            local direction_name = "right"
+                            if MAP_CURSOR_SWEEP then
+                                local sweep = { "right", "down", "left", "up" }
+                                direction_name = sweep[(segment % #sweep) + 1]
+                            end
+                            local direction = {}
+                            if direction_name == "left" then direction.left = true
+                            elseif direction_name == "up" then direction.up = true
+                            elseif direction_name == "down" then direction.down = true
+                            else direction.right = true end
+                            local phase = travel % 192
+                            if phase < 96 then direction.A = true; return direction end
+                            if phase < 112 then return {} end
+                            if phase < 128 then direction.B = true; return direction end
+                            return {}
+                        end
+                        return { right = true }
+                    end
+                    return {}
+                end
+                local phase = (rel - 600) % 768
+                if phase < 12 then return { start = true } end
+                if phase >= 24 and phase < 36 then return { B = true } end
+                if phase >= 48 and phase < 160 then return { right = true, A = true } end
+                if phase >= 192 and phase < 304 then return { left = true, A = true } end
+                return {}
+            end
             local phase = (rel - 180) % 180
             if phase < 12 then return { A = true } end
             if phase >= 90 and phase < 102 then return { start = true } end
