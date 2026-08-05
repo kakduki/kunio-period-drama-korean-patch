@@ -45,3 +45,13 @@ The previous conclusion remains unchanged: the name-entry route is reproducible,
 - Result: `UNKNOWN`; direction/cursor mapping is still not sufficient to authorize a secret-code or event-state patch.
 
 The calibration mode is now available through `KUNIO_NAME_CALIBRATION=right_a|down_a|right2_a` for future single-cell tests. It is intentionally separate from the full candidate route.
+## Verified Koganemushi route (English reference)
+
+- Run: `C:\tmp\english_koganemushi_end_row7`
+- Input timing: direction keys are one frame; `A`/`B` confirmation keys are eight frames; inter-input gap is 20 frames.
+- Route: the documented character coordinates, then `down 4`, `right 9` to the bottom-right `END` cell.
+- At frame 3605 the name-entry screen entered its transition state; by frame 3665 the post-name setup screen was rendered.
+- A deliberately wrong control run (`C:\tmp\english_koganemushi_wrong_first`) did not leave the name-entry screen through frame 4285. This is a bounded differential check that the corrected route is meaningful, not merely a timeout or generic `END` action.
+- Result: `PASS_ROUTE_EXIT_DIFFERENTIAL`; the Koganemushi code path is now reproducible on the English reference.
+
+This result authorizes follow-up observation of the resulting game state, but it does not by itself prove that all techniques, money, Map Cursor ownership, or a natural boss event were reached. Those remain separate runtime gates.

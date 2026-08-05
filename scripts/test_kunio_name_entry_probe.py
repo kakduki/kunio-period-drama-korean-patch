@@ -15,6 +15,11 @@ def test_name_probe_is_bounded_and_does_not_write_memory() -> None:
     assert "cursor_write_trace.tsv" in text
     assert "KOGANEMUSHI_ROUTE and frame >= CHEAT_START_FRAME" in text
     assert "KUNIO_NAME_CALIBRATION" in text
+    assert "CHEAT_DIRECTION_PULSE" in text
+    assert "CHEAT_CONFIRM_PULSE" in text
+    assert 'add_cheat_button("down", 4)' in text
+    assert 'add_cheat_button("right", 9)' in text
+    assert "POST_CHEAT_ROUTE" in text
     assert '"lua_done"' in text
 
 

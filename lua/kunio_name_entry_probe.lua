@@ -22,13 +22,20 @@ local SETUP_ROUTE = os.getenv("KUNIO_NAME_SETUP_ROUTE") == "1"
 local KOGANEMUSHI_ROUTE = os.getenv("KUNIO_KOGANEMUSHI") == "1"
 local CHEAT_START_FRAME = tonumber(os.getenv("KUNIO_CHEAT_START_FRAME") or "2300")
 local CHEAT_PULSE = tonumber(os.getenv("KUNIO_CHEAT_PULSE") or "8")
+local CHEAT_DIRECTION_PULSE = tonumber(os.getenv("KUNIO_CHEAT_DIRECTION_PULSE") or tostring(CHEAT_PULSE))
+local CHEAT_CONFIRM_PULSE = tonumber(os.getenv("KUNIO_CHEAT_CONFIRM_PULSE") or tostring(CHEAT_PULSE))
 local CHEAT_GAP = tonumber(os.getenv("KUNIO_CHEAT_GAP") or "18")
+local POST_CHEAT_ROUTE = os.getenv("KUNIO_POST_CHEAT_ROUTE") == "1"
 
 local cheat_events = {}
 local cheat_cursor = CHEAT_START_FRAME
-local function add_cheat_button(button, count)
+local function add_cheat_button(button, count, pulse)
     for _ = 1, count do
-        cheat_events[#cheat_events + 1] = { frame = cheat_cursor, button = button }
+        cheat_events[#cheat_events + 1] = {
+            frame = cheat_cursor,
+            button = button,
+            pulse = pulse or ((button == "A" or button == "B") and CHEAT_CONFIRM_PULSE or CHEAT_DIRECTION_PULSE),
+        }
         cheat_cursor = cheat_cursor + CHEAT_GAP
     end
 end
@@ -52,8 +59,8 @@ add_cheat_button("A", 1)
 add_cheat_button("down", 1)
 add_cheat_button("left", 6)
 add_cheat_button("A", 1)
-add_cheat_button("down", 3)
-add_cheat_button("right", 10)
+add_cheat_button("down", 4)
+add_cheat_button("right", 9)
 add_cheat_button("A", 1)
 add_cheat_button("A", 1)
 
@@ -76,6 +83,7 @@ if CALIBRATION_ROUTE ~= "" then
         error("unknown KUNIO_NAME_CALIBRATION route: " .. CALIBRATION_ROUTE)
     end
 end
+local POST_CHEAT_START = tonumber(os.getenv("KUNIO_POST_CHEAT_START") or tostring(cheat_cursor + 100))
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
     local f = assert(io.open(path, "a")); f:write(line .. "\n"); f:close()
@@ -149,10 +157,21 @@ local function input_for(frame)
     if frame >= 940 and frame < 952 then return { A = true }, "character_setup" end
     if KOGANEMUSHI_ROUTE and frame >= CHEAT_START_FRAME then
         for _, event in ipairs(cheat_events) do
-            if frame >= event.frame and frame < event.frame + CHEAT_PULSE then
+            if frame >= event.frame and frame < event.frame + event.pulse then
                 return { [event.button] = true }, "koganemushi_" .. event.button
             end
         end
+    end
+    if POST_CHEAT_ROUTE and frame >= POST_CHEAT_START then
+        local post_frame = frame - POST_CHEAT_START
+        if post_frame >= 500 and post_frame < 512 then return { start = true }, "post_game_menu" end
+        if post_frame >= 600 and post_frame < 612 then return { B = true }, "post_map_open" end
+        if post_frame >= 700 and post_frame < 712 then return { right = true }, "post_map_right" end
+        if post_frame >= 760 and post_frame < 772 then return { A = true }, "post_map_select" end
+        if post_frame >= 900 and post_frame < 912 then return { start = true, B = true }, "post_map_start_b" end
+        if post_frame < 12 then return { B = true }, "post_cheat_back_1" end
+        if post_frame >= 100 and post_frame < 112 then return { B = true }, "post_cheat_back_2" end
+        if post_frame >= 200 and post_frame < 212 then return { start = true }, "post_cheat_menu" end
     end
     if SETUP_ROUTE then
         -- Finish the proven initial character/mode setup first. The first
