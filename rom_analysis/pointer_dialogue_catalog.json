@@ -7,8 +7,8 @@
   },
   "source_policy": "English patch supplies structure only; Japanese ROM and contextual transcription supply meaning.",
   "status_counts": {
-    "development_verified_opening": 3,
-    "structural_unknown": 240,
+    "development_verified_opening": 14,
+    "structural_unknown": 229,
     "structural_unknown_missing_conservative_row": 5
   },
   "missing_conservative_rows": [
@@ -21,7 +21,18 @@
   "verified_development_rows": [
     "PTR-182",
     "PTR-183",
-    "PTR-184"
+    "PTR-184",
+    "PTR-185",
+    "PTR-186",
+    "PTR-187",
+    "PTR-188",
+    "PTR-189",
+    "PTR-190",
+    "PTR-191",
+    "PTR-192",
+    "PTR-193",
+    "PTR-194",
+    "PTR-195"
   ],
   "rows": [
     {
@@ -4048,7 +4059,7 @@
       "korean_work_status": "development_verified_opening",
       "screen_context": "opening dialogue",
       "route_requirement": "bounded opening route; no combat required",
-      "notes": "Three opening records have a scoped 16x16 candidate. This is not release translation approval."
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-183",
@@ -4070,7 +4081,7 @@
       "korean_work_status": "development_verified_opening",
       "screen_context": "opening dialogue",
       "route_requirement": "bounded opening route; no combat required",
-      "notes": "Three opening records have a scoped 16x16 candidate. This is not release translation approval."
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-184",
@@ -4092,7 +4103,7 @@
       "korean_work_status": "development_verified_opening",
       "screen_context": "opening dialogue",
       "route_requirement": "bounded opening route; no combat required",
-      "notes": "Three opening records have a scoped 16x16 candidate. This is not release translation approval."
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-185",
@@ -4111,10 +4122,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-186",
@@ -4133,10 +4144,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-187",
@@ -4155,10 +4166,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-188",
@@ -4177,10 +4188,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-189",
@@ -4199,10 +4210,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-190",
@@ -4221,10 +4232,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-191",
@@ -4243,10 +4254,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-192",
@@ -4265,10 +4276,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-193",
@@ -4287,10 +4298,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-194",
@@ -4309,10 +4320,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-195",
@@ -4331,10 +4342,10 @@
       "target_scope": "bank1_after_pointer_table",
       "english_pointer_changed": "true",
       "conservative_catalog_status": "needs_japanese_dialogue_glyph_map",
-      "korean_work_status": "structural_unknown",
-      "screen_context": "unresolved pointer-dialogue context",
-      "route_requirement": "named route, save state, or cheat state required",
-      "notes": "Present in the conservative catalog, but Japanese dialogue glyph mapping and screen context are incomplete."
+      "korean_work_status": "development_verified_opening",
+      "screen_context": "opening dialogue",
+      "route_requirement": "bounded opening route; no combat required",
+      "notes": "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval."
     },
     {
       "id": "PTR-196",

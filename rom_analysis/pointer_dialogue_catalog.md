@@ -8,13 +8,13 @@ reference rendering path only. Its wording is not Korean translation.
 
 - Pointer table: `0x05DD4-0x05FC3`
 - Records: `248` / `248`
-- Development-verified opening rows: `PTR-182, PTR-183, PTR-184`
+- Development-verified opening rows: `PTR-182, PTR-183, PTR-184, PTR-185, PTR-186, PTR-187, PTR-188, PTR-189, PTR-190, PTR-191, PTR-192, PTR-193, PTR-194, PTR-195`
 - Rows absent from the conservative catalog: `PTR-012, PTR-022, PTR-162, PTR-244, PTR-247`
 
 | Korean work status | Count |
 | --- | ---: |
-| `development_verified_opening` | 3 |
-| `structural_unknown` | 240 |
+| `development_verified_opening` | 14 |
+| `structural_unknown` | 229 |
 | `structural_unknown_missing_conservative_row` | 5 |
 
 ## Per-record contract
@@ -210,17 +210,17 @@ and a bounded capture result. Unknown rows remain worklist entries.
 | `PTR-182` | `0x071B6` | KUNIO<BB><00>HURRY<B9><00>SLUG<CA><F8>MR<BA><00>BUNZO<B6>S<00>IN<00>TROUBLE<CA><FF> | 37 | `development_verified_opening` | bounded opening route; no combat required |
 | `PTR-183` | `0x071DB` | OKOTO<BB><00>KUNIO<CA><FF> | 21 | `development_verified_opening` | bounded opening route; no combat required |
 | `PTR-184` | `0x071F0` | KUNIO<BB><00>I<00>TRIED<00>TO<00>HURRY<00>BACK<CA><FF> | 24 | `development_verified_opening` | bounded opening route; no combat required |
-| `PTR-185` | `0x07208` | OKOTO<BB><00>THIS<00>MAN<00>IS<CB><FF> | 15 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-186` | `0x07217` | ASAJI<BB><00>HEH<CB>I<B6>M<00>OKOTO<B6>S<F8>FIANCE<BA><FF> | 43 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-187` | `0x07242` | KUNIO<BB><00>WE<B6>LL<00>SEE<00>ABOUT<00>THAT<CA><FF> | 7 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-188` | `0x07249` | ASAJI<BB><00>SHUT<00>UP<B9><00>LOSER<CA><00>THE<F8>BOSS<00>IS<00>WAITING<CB><FF> | 30 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-189` | `0x07267` | KUNIO<BB><00>OH<B9><00>MASTER<CA><F8>FORGIVE<00>MY<00>DELAY<CA><FF> | 25 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-190` | `0x07280` | BUNZO<BB><00>AH<B9><00>KUNIO<CA><F8>YOU<00>FINALLY<00>GOT<00>HERE<CA><FF> | 44 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-191` | `0x072AC` | BUNZO<BB><00>TORA<00>HAS<00>CURSED<00>ME<CA><FF> | 26 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-192` | `0x072C6` | BUNZO<BB><00>GO<00>FIND<00>A<00>HEALER<CB><FF> | 22 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-193` | `0x072DC` | BUNZO<BB><00><CB>WHO<00>HAS<00>KANPOU<CA><FF> | 27 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-194` | `0x072F7` | KUNIO<BB><00>YOU<00>CAN<00>COUNT<00>ON<00>ME<CA><FF> | 41 | `structural_unknown` | named route, save state, or cheat state required |
-| `PTR-195` | `0x07320` | BUNZO<BB><00>PLEASE<00>HURRY<CA><FF> | 20 | `structural_unknown` | named route, save state, or cheat state required |
+| `PTR-185` | `0x07208` | OKOTO<BB><00>THIS<00>MAN<00>IS<CB><FF> | 15 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-186` | `0x07217` | ASAJI<BB><00>HEH<CB>I<B6>M<00>OKOTO<B6>S<F8>FIANCE<BA><FF> | 43 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-187` | `0x07242` | KUNIO<BB><00>WE<B6>LL<00>SEE<00>ABOUT<00>THAT<CA><FF> | 7 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-188` | `0x07249` | ASAJI<BB><00>SHUT<00>UP<B9><00>LOSER<CA><00>THE<F8>BOSS<00>IS<00>WAITING<CB><FF> | 30 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-189` | `0x07267` | KUNIO<BB><00>OH<B9><00>MASTER<CA><F8>FORGIVE<00>MY<00>DELAY<CA><FF> | 25 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-190` | `0x07280` | BUNZO<BB><00>AH<B9><00>KUNIO<CA><F8>YOU<00>FINALLY<00>GOT<00>HERE<CA><FF> | 44 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-191` | `0x072AC` | BUNZO<BB><00>TORA<00>HAS<00>CURSED<00>ME<CA><FF> | 26 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-192` | `0x072C6` | BUNZO<BB><00>GO<00>FIND<00>A<00>HEALER<CB><FF> | 22 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-193` | `0x072DC` | BUNZO<BB><00><CB>WHO<00>HAS<00>KANPOU<CA><FF> | 27 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-194` | `0x072F7` | KUNIO<BB><00>YOU<00>CAN<00>COUNT<00>ON<00>ME<CA><FF> | 41 | `development_verified_opening` | bounded opening route; no combat required |
+| `PTR-195` | `0x07320` | BUNZO<BB><00>PLEASE<00>HURRY<CA><FF> | 20 | `development_verified_opening` | bounded opening route; no combat required |
 | `PTR-196` | `0x07334` | <F0><BB><00>GOOD<00>JOB<CA><FF> | 13 | `structural_unknown` | named route, save state, or cheat state required |
 | `PTR-197` | `0x07341` | <F0><BB><00>YOU<00>SAVED<00>THE<00>DAY<CA><FF> | 40 | `structural_unknown` | named route, save state, or cheat state required |
 | `PTR-198` | `0x07369` | <F0><BB><00>BY<00>THE<00>WAY<B9><00><FA><CB><FF> | 12 | `structural_unknown` | named route, save state, or cheat state required |

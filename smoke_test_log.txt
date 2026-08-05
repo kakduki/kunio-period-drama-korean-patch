@@ -545,3 +545,10 @@ report=rom_analysis/stage_map_route_matrix.md
 - classification=PASS_REBUILT_CANDIDATE_BOOT_AND_BOUNDED_ROUTE
 - natural_boss_route=UNKNOWN_NOT_REACHED; release_status=NOT_READY
 - report=rom_analysis/manifest_rebuild_smoke_2026-08-06.md
+
+2026-08-06 full text extraction coverage
+- base_md5=0d406a85285b4de8468f0dab6aad5fe5; pointer_rows=248; missing_conservative_rows=5
+- catalog_status=development_verified_opening:14, structural_unknown:229, missing_conservative:5
+- manifest_rows=17; native_pointer_rows=14; native_menu_action_rows=3
+- classification=PASS_EXTRACTION_COVERAGE_RECORDED
+- report=rom_analysis/text_extraction_coverage_2026-08-06.md

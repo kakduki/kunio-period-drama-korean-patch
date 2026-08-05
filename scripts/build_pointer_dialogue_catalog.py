@@ -83,12 +83,12 @@ def validate_english_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def status_for(index: int, conservative: dict[str, str] | None) -> tuple[str, str, str, str]:
-    if index in {182, 183, 184}:
+    if 182 <= index <= 195:
         return (
             "development_verified_opening",
             "opening dialogue",
             "bounded opening route; no combat required",
-            "Three opening records have a scoped 16x16 candidate. This is not release translation approval.",
+            "Fourteen opening records have bounded source/PPU evidence and development candidates. This is not release translation approval.",
         )
     if conservative is not None:
         return (

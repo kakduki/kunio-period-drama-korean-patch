@@ -23,9 +23,7 @@ def main() -> int:
         for row in rows
     )
     assert [row["id"] for row in rows if row["korean_work_status"] == "development_verified_opening"] == [
-        "PTR-182",
-        "PTR-183",
-        "PTR-184",
+        *[f"PTR-{index:03d}" for index in range(182, 196)],
     ]
     missing = [row for row in rows if row["conservative_catalog_status"] == "missing"]
     assert len(missing) == 5

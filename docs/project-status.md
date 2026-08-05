@@ -314,3 +314,16 @@ The candidate MD5 `27894ba832e2b01473c78e9676d6581e` and generated IPS MD5
 `PASS_REBUILT_CANDIDATE_BOOT_AND_BOUNDED_ROUTE`; full native visual coverage,
 natural boss progression, and release remain `UNKNOWN`/`NOT_READY`. See
 `rom_analysis/manifest_rebuild_smoke_2026-08-06.md`.
+
+## Full Text Extraction Coverage (2026-08-06)
+
+`tools/extract_text.py` was rerun against the verified Japanese base and
+produced all 248 pointer rows. Five rows are absent from the conservative
+catalog. The regenerated pointer catalog now matches the current native gate:
+14 development-verified opening rows (`PTR-182`-`PTR-195`), 229 structural
+unknown rows, and five structural unknown rows missing conservative ownership.
+The translation manifest contains 17 development rows in total, including
+three menu/action rows, but only the 14 pointer rows enter the native dialogue
+candidate. This is `PASS_EXTRACTION_COVERAGE_RECORDED`, not full translation
+completion; unknown rows remain intentionally unpatched. See
+`rom_analysis/text_extraction_coverage_2026-08-06.md`.
