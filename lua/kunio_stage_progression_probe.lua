@@ -23,6 +23,8 @@ local COMBAT_SWEEP = os.getenv("KUNIO_COMBAT_SWEEP") == "1"
 local COMBAT_MIXED = os.getenv("KUNIO_COMBAT_MIXED") == "1"
 local COMBAT_STATIONARY = os.getenv("KUNIO_COMBAT_STATIONARY") == "1"
 local COMBAT_GRID = os.getenv("KUNIO_COMBAT_GRID") == "1"
+local COMBAT_OAM_SWEEP = os.getenv("KUNIO_COMBAT_OAM_SWEEP") == "1"
+local COMBAT_OAM_SWEEP_MIXED = os.getenv("KUNIO_COMBAT_OAM_SWEEP_MIXED") == "1"
 local ADVANCE_AFTER_COMBAT = os.getenv("KUNIO_ADVANCE_AFTER_COMBAT") == "1"
 local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
 local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
@@ -523,7 +525,18 @@ local function combat_input(frame)
         if cycle < 200 then return { A = true } end
         return { B = true }
     end
-    if COMBAT_SWEEP then
+    if COMBAT_OAM_SWEEP then
+        local sweep = rel % 640
+        local buttons = {}
+        if sweep < 128 then buttons.left = true; buttons.down = true
+        elseif sweep < 256 then buttons.left = true
+        elseif sweep < 384 then buttons.down = true
+        elseif sweep < 512 then buttons.right = true
+        else buttons.up = true end
+        if COMBAT_OAM_SWEEP_MIXED and math.floor(rel / 128) % 2 == 1 then buttons.B = true
+        else buttons.A = true end
+        return buttons
+    end    if COMBAT_SWEEP then
         if cycle < 60 then return { right = true, A = true, B = true } end
         if cycle < 120 then return { down = true, A = true, B = true } end
         if cycle < 180 then return { left = true, A = true, B = true } end

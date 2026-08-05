@@ -334,3 +334,6 @@ Two clean Japanese-base FCEUX runs compared stationary mixed attacks with a grid
 ### 2026-08-06 OAM sprite probe
 
 The stage probe now supports `KUNIO_OAM_TRACE=1`, producing 256-byte OAM shadow dumps for each capture. A 1,400-frame grid run completed with `lua_done`, 10 unique screens, and 10 OAM dumps. Frames 1139 and 1229 show multiple sprite clusters with separated screen-space X ranges; no collision dispatch or slot clear occurred. This provides a coordinate-based next diagnostic, not boss or cheat proof. See `rom_analysis/oam_sprite_probe_2026-08-06.md`.
+### 2026-08-06 OAM-directed attack sweep
+
+The probe now supports an OAM-directed directional sweep and an A/B mixed-button variant. Two clean Japanese-base 3,600-frame runs reached `lua_done` with 10 unique screens and 1,218/1,211 FC65 scans, but both recorded zero FAD9 collision dispatches, FC82 slot-clear dispatches, and FCEF slot clears. This rules out the narrow wrong-button/fixed-direction hypothesis; natural enemy-clear and boss progression remain `UNKNOWN`. See `rom_analysis/oam_directed_attack_sweep_2026-08-06.md`.

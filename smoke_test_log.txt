@@ -554,3 +554,5 @@ report=rom_analysis/stage_map_route_matrix.md
 - report=rom_analysis/text_extraction_coverage_2026-08-06.md
 
 2026-08-06 collision-pattern comparison: stationary mixed and grid movement runs reached bounded combat-like screens; FAD9/FC82/FCEF were 0 in both. Classification=PASS_COMBAT_LOOP_REACHED;UNKNOWN_COLLISION_AND_NATURAL_BOSS_ROUTE.
+
+2026-08-06 OAM-directed sweep: A-only and A/B mixed 3600-frame runs reached lua_done; FAD9/FC82/FCEF=0 in both. Classification=UNKNOWN_NO_COLLISION.
