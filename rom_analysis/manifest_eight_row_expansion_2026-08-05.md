@@ -88,3 +88,30 @@ The next verification should capture native screens for rows 186-189 using the
 candidate's generated targets. The allocator improvement is independently
 useful and does not authorize speculative menu or boss-text patches.
 
+
+## Native capture trace
+
+A dedicated Lua trace was added at `lua/kunio_manifest_native_visual_trace.lua`.
+It generates target addresses from the candidate pointer table, waits 30 frames
+after each matched record read, and saves a GD screen, CPU RAM, and PPU
+`0x2000-0x2FFF` dump. It performs no state writes.
+
+The delayed run reached all eight targets:
+
+| pointer | capture frame | read count | GD | PPU dump |
+|---:|---:|---:|---|---|
+| 182 | 724 | 26 | PASS | saved |
+| 183 | 1071 | 14 | PASS | saved |
+| 184 | 1357 | 13 | PASS | saved |
+| 185 | 1639 | 11 | PASS | saved |
+| 186 | 1937 | 20 | PASS | saved |
+| 187 | 2225 | 14 | PASS | saved |
+| 188 | 2527 | 22 | PASS | saved |
+| 189 | 2879 | 22 | PASS | saved |
+
+The PPU nametable dumps for 182-187 were byte-identical, while the GD captures
+changed. A mechanical exact 8x16 glyph-mask scan over the dialogue-box region
+did not produce a reliable match for the new rows. Therefore these captures are
+runtime evidence and a reproducible next-review packet, not native visual
+approval. Rows 186-189 remain unpromoted and the release gate remains
+`NOT_READY`.
