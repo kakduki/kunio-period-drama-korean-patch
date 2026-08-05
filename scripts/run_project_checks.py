@@ -323,6 +323,7 @@ LUA_SCRIPTS = [
     "lua/kunio_manifest_loader_trace.lua",
     "lua/kunio_opening_ptr_185_base_probe.lua",
     "lua/kunio_map_crsr_source_probe.lua",
+    "lua/kunio_manifest_native_visual_window.lua",
 ]
 
 REGEN_COMMANDS = [

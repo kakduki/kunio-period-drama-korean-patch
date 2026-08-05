@@ -3,40 +3,46 @@
 Date: 2026-08-05
 
 This is a bounded comparison between the Japanese base ROM and the eight-row
-manifest candidate. Both runs used the same opening-route Lua trace and
-captured a screenshot 30 frames after the target string was read.
+manifest candidate. Both runs used the same opening-route Lua trace. The
+window trace captured frames at 0, 16, 32, 48, 64, 80, 96, 112, 128, 144,
+and 160 frames after a complete target-span read.
 
 ## Inputs
 
 - Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Candidate ROM: `C:/tmp/kunio_manifest_p182_p189_rebuild.nes`
-- Trace: `lua/kunio_manifest_native_visual_trace.lua`
+- Fixed trace: `lua/kunio_manifest_native_visual_trace.lua`
+- Window trace: `lua/kunio_manifest_native_visual_window.lua`
 - Base target pointers: PRG offsets `0x071B6..0x0727F`
 - Candidate target pointers: PRG offsets `0x05FC4..0x06052`
 
 ## Results
 
-| Row | Base frame | Candidate frame | Pixel-diff result | Soft gate |
-|---:|---:|---:|---|---|
-| p182 | 746 | 724 | 1,799 changed pixels; differences concentrate in dialogue rows y=112..144 | PASS |
-| p183 | 1107 | 1071 | not compared in this bounded pass | UNKNOWN |
-| p184 | 1413 | 1357 | not compared in this bounded pass | UNKNOWN |
-| p185 | 1703 | 1639 | not compared in this bounded pass | UNKNOWN |
-| p186 | 2047 | 1937 | 763 changed pixels; no corresponding dialogue-row change detected | UNKNOWN |
-| p187 | 2321 | 2225 | not compared in this bounded pass | UNKNOWN |
-| p188 | 2639 | 2527 | not compared in this bounded pass | UNKNOWN |
-| p189 | 2999 | 2879 | not compared in this bounded pass | UNKNOWN |
+| Row | Complete-read capture | Dialogue-band change in 0..160 frames | Soft gate |
+|---:|---:|---:|---|
+| p182 | 26 reads; all window samples differ | 534..1104 changed pixels | PASS |
+| p183 | 14 reads | 0 pixels | UNKNOWN |
+| p184 | 13 reads | 0..10 pixels only; no string-shaped change | UNKNOWN |
+| p185 | 11 reads | 0..2 pixels only; no string-shaped change | UNKNOWN |
+| p186 | 20 reads | 0 pixels | UNKNOWN |
+| p187 | 14 reads | 0 pixels | UNKNOWN |
+| p188 | 22 reads | 0..10 pixels only; no string-shaped change | UNKNOWN |
+| p189 | 22 reads | 0 pixels | UNKNOWN |
 
-The p182 result is consistent with a real rendered-string change. The p186
-result is not sufficient to claim that the Korean string was rendered; the
-observed changes are outside the expected dialogue text band. Rows p186-p189
-remain candidate-only until their own dialogue-region comparison or manual
-visual evidence passes.
+The complete-read condition prevents the earlier initial-buffer false positive.
+The p182 result is consistent with a real rendered-string change. For
+p183-p189, the target bytes are read and the loader progression is observed,
+but the candidate/base pixel comparison does not show a corresponding
+string-shaped change in the dialogue band, even after 160 frames. These rows
+remain candidate-only; they must not be promoted without a corrected pointer,
+renderer-context trace, or manual visual evidence.
 
 ## Artifacts
 
-- Candidate captures: `C:/tmp/kunio_manifest_p182_p189_native_visual_delayed/`
-- Base captures: `C:/tmp/kunio_manifest_base_p182_p189_native_visual/`
+- Candidate fixed captures: `C:/tmp/kunio_manifest_p182_p189_native_visual_delayed/`
+- Base fixed captures: `C:/tmp/kunio_manifest_base_p182_p189_native_visual/`
+- Candidate window captures: `C:/tmp/kunio_manifest_p182_p189_native_window_v4/`
+- Base window captures: `C:/tmp/kunio_manifest_base_p182_p189_native_window_v4/`
 - Converted spot checks: `rom_analysis/native_visual_base_p182.png`,
   `rom_analysis/native_visual_p182.png`, `rom_analysis/native_visual_base_p186.png`,
   `rom_analysis/native_visual_p186.png`
