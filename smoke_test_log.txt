@@ -531,3 +531,10 @@ report=rom_analysis/stage_map_route_matrix.md
 - classification=PASS_EXTERNAL_CHEAT_PROBE_NO_ROUTE_ADVANCE
 - promotion=FAIL_NOT_PROVEN; natural_boss_route=UNKNOWN_NOT_REACHED
 - report=rom_analysis/external_cheat_ram_probe_2026-08-06.md
+
+2026-08-06 object region execution trace
+- rom=english_reference; frames=2400; completion=lua_done; unique=10
+- AD00_rows=1300; AD30_AD7E_setup_rows=78_at_frame_1064_only; 8D02_rows=634
+- fad9_collision_dispatch=0; fc82_slot_clear_dispatch=0; fcef_slot_clears=0
+- classification=PASS_OBJECT_REGION_TRACE_NO_COLLISION
+- report=rom_analysis/object_region_execution_trace_2026-08-06.md

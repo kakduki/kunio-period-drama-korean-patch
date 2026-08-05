@@ -54,6 +54,7 @@ local STATE_READ_TRACE_LIMIT = tonumber(os.getenv("KUNIO_STATE_READ_TRACE_LIMIT"
 local COMBAT_BRANCH_TRACE = os.getenv("KUNIO_COMBAT_BRANCH_TRACE") == "1"
 local COMBAT_BRANCH_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_BRANCH_TRACE_LIMIT") or "12000")
 local COMBAT_OBJECT_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_TRACE") == "1"
+local COMBAT_OBJECT_REGION_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_REGION_TRACE") == "1"
 local COMBAT_OBJECT_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_OBJECT_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
@@ -634,6 +635,16 @@ if COMBAT_OBJECT_TRACE then
     end
     for _, address in ipairs({0xCD02, 0xCD05, 0xCD31, 0xCD34, 0xCD60, 0xCD63}) do
         register_exec(address, function() trace_combat_object(string.format("Cxxx_%04X", address)) end)
+    end
+    if COMBAT_OBJECT_REGION_TRACE then
+        for address = 0xAD00, 0xAD7F do
+            register_exec(address, function() trace_combat_object(string.format("AD_region_%04X", address)) end)
+        end
+    end
+    if COMBAT_OBJECT_REGION_TRACE then
+        for address = 0xAD00, 0xAD7F do
+            register_exec(address, function() trace_combat_object(string.format("AD_region_%04X", address)) end)
+        end
     end
 end
 

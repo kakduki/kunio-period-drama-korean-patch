@@ -291,3 +291,15 @@ FCEF slot clears. Changed fingerprints are not sufficient evidence of a boss
 warp or stage-clear flag. Classification is
 `PASS_EXTERNAL_CHEAT_PROBE_NO_ROUTE_ADVANCE`; no writes were promoted to the
 Korean patch. See `rom_analysis/external_cheat_ram_probe_2026-08-06.md`.
+
+## Object Region Execution Trace (2026-08-06)
+
+An optional `$AD00-$AD7F` execution trace on the English reference ROM found
+1,300 repeated `$AD00` object-loop rows, while the `$AD30-$AD7E`
+coordinate-table pass produced 78 rows at frame 1064 only. The route also had
+634 `$8D02` calls and zero FAD9 collision dispatches, FC82 slot-clear dispatches,
+or FCEF clears. Classification is
+`PASS_OBJECT_REGION_TRACE_NO_COLLISION`: the visible actor loop is active but
+this route does not reach a confirmed enemy-hit/death transition. The new
+region option is disabled by default; see
+`rom_analysis/object_region_execution_trace_2026-08-06.md`.
