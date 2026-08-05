@@ -85,12 +85,18 @@ def make_manifest_draft(manifest: Path, draft: Path, directory: Path) -> tuple[P
 
 
 def make_manifest_plan(plan: Path, updates: dict[int, str], directory: Path) -> Path:
-    """Give each explicitly selected manifest row a private compact font page."""
+    """Append compact shared pages for the explicitly selected manifest rows."""
     payload = json.loads(plan.read_text(encoding="utf-8"))
     pages = list(payload["optimized_pages"])
     assignments = [None] * len(payload["pointer_page_assignments"])
     max_pages = 52
     max_glyphs = 34
+
+    # Unselected draft rows are kept on the Japanese path, so only the
+    # manifest rows need new page maps. Share pages by glyph set rather than
+    # reserving one page per row; this keeps incremental manifest builds within
+    # the MMC3 expansion budget as the reviewed set grows.
+    bins: list[tuple[list[int], set[str]]] = []
     for index, translated in sorted(updates.items()):
         glyphs = sorted({
             character
@@ -102,11 +108,26 @@ def make_manifest_plan(plan: Path, updates: dict[int, str], directory: Path) -> 
                 f"manifest pointer {index} needs {len(glyphs)} glyphs; "
                 f"one page supports {max_glyphs}"
             )
-        if len(pages) >= max_pages:
-            raise ValueError("manifest font pages exceed the MMC3 expansion budget")
+        choices = [
+            (len(syllables | set(glyphs)), page_index)
+            for page_index, (_, syllables) in enumerate(bins)
+            if len(syllables | set(glyphs)) <= max_glyphs
+        ]
+        if choices:
+            _, bin_index = min(choices)
+            bins[bin_index][0].append(index)
+            bins[bin_index][1].update(glyphs)
+        else:
+            bins.append(([index], set(glyphs)))
+
+    if len(pages) + len(bins) > max_pages:
+        raise ValueError("manifest font pages exceed the MMC3 expansion budget")
+    for pointer_indices, syllables in bins:
         page_index = len(pages)
-        pages.append({"page_index": page_index, "syllables": glyphs})
-        assignments[index] = page_index
+        pages.append({"page_index": page_index, "pointer_indices": pointer_indices, "syllables": sorted(syllables)})
+        for index in pointer_indices:
+            assignments[index] = page_index
+
     payload["optimized_pages"] = pages
     payload["pointer_page_assignments"] = assignments
     output = directory / "pointer_font_manifest_plan.json"
