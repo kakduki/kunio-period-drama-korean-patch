@@ -52,6 +52,8 @@ local STATE_READ_TRACE = os.getenv("KUNIO_STATE_READ_TRACE") == "1"
 local STATE_READ_TRACE_LIMIT = tonumber(os.getenv("KUNIO_STATE_READ_TRACE_LIMIT") or "12000")
 local COMBAT_BRANCH_TRACE = os.getenv("KUNIO_COMBAT_BRANCH_TRACE") == "1"
 local COMBAT_BRANCH_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_BRANCH_TRACE_LIMIT") or "12000")
+local COMBAT_OBJECT_TRACE = os.getenv("KUNIO_COMBAT_OBJECT_TRACE") == "1"
+local COMBAT_OBJECT_TRACE_LIMIT = tonumber(os.getenv("KUNIO_COMBAT_OBJECT_TRACE_LIMIT") or "12000")
 
 local function mkdir(path) os.execute('mkdir "' .. path .. '" >NUL 2>NUL') end
 local function append(path, line)
@@ -177,6 +179,8 @@ local state_read_trace_count = 0
 local state_read_trace_path = OUT_DIR .. "/state_reads.tsv"
 local combat_branch_trace_count = 0
 local combat_branch_trace_path = OUT_DIR .. "/combat_branch_trace.tsv"
+local combat_object_trace_count = 0
+local combat_object_trace_path = OUT_DIR .. "/combat_object_trace.tsv"
 local function trace_combat_branch(label)
     if not COMBAT_BRANCH_TRACE or combat_branch_trace_count >= COMBAT_BRANCH_TRACE_LIMIT then return end
     combat_branch_trace_count = combat_branch_trace_count + 1
@@ -186,6 +190,19 @@ local function trace_combat_branch(label)
         hex2(byte_at(0x7A00)), hex2(byte_at(0x7A01)), hex2(byte_at(0x7A02)), hex2(byte_at(0x04F1))
     }, "\t"))
 end
+local function trace_combat_object(label)
+    if not COMBAT_OBJECT_TRACE or combat_object_trace_count >= COMBAT_OBJECT_TRACE_LIMIT then return end
+    combat_object_trace_count = combat_object_trace_count + 1
+    append(combat_object_trace_path, table.concat({
+        tostring(emu.framecount()), label, string.format("%04X", read_register("pc")),
+        hex2(read_register("a")), hex2(read_register("x")), hex2(read_register("y")),
+        hex2(byte_at(0x0430)), hex2(byte_at(0x0431)), hex2(byte_at(0x0432)), hex2(byte_at(0x0433)),
+        hex2(byte_at(0x0434)), hex2(byte_at(0x0435)), hex2(byte_at(0x0436)), hex2(byte_at(0x0437)),
+        hex2(byte_at(0x04F1)), hex2(byte_at(0x04FA)), hex2(byte_at(0x04FB)), hex2(byte_at(0x04FC)),
+        hex2(byte_at(0x0706)), hex2(byte_at(0x07BC)), hex2(byte_at(0x07E4)),
+    }, "\t"))
+end
+
 local function trace_state_read(addr, size, value)
     if not STATE_READ_TRACE or state_read_trace_count >= STATE_READ_TRACE_LIMIT then return end
     state_read_trace_count = state_read_trace_count + 1
@@ -491,6 +508,7 @@ if DIALOGUE_TRACE then
     append(dialogue_parser_path, "frame\tlabel\tpc\ta\tx\ty\ttext_pointer\tstream_pointer")
     append(dialogue_ppu_path, "frame\tppu_address\tvalue\tpc\ttext_pointer\tstream_pointer\ty")
 end
+
 if PPU_TRACE then
     append(ppu_trace_path, "frame\tppu_address\tvalue\tpc\tr0\tr1\tr2\tr3\tr4\tr5\tr6\tr7\tppu_ctrl")
 end
@@ -552,6 +570,19 @@ if COUNTER_READ_TRACE then
     register_exec(0xAD86, function() trace_counter_read("lda_7a03") end)
     register_exec(0xAD89, function() trace_counter_read("cmp_7a02") end)
 end
+if COMBAT_OBJECT_TRACE then
+    append(combat_object_trace_path, "frame\tlabel\tpc\ta\tx\ty\t0430\t0431\t0432\t0433\t0434\t0435\t0436\t0437\t04F1\t04FA\t04FB\t04FC\t0706\t07BC\t07E4")
+    for _, address in ipairs({0x8D02, 0x8D05, 0x8D31, 0x8D34, 0x8D60, 0x8D63}) do
+        register_exec(address, function() trace_combat_object(string.format("8xxx_%04X", address)) end)
+    end
+    for _, address in ipairs({0xAD02, 0xAD05, 0xAD31, 0xAD34, 0xAD60, 0xAD63}) do
+        register_exec(address, function() trace_combat_object(string.format("Axxx_%04X", address)) end)
+    end
+    for _, address in ipairs({0xCD02, 0xCD05, 0xCD31, 0xCD34, 0xCD60, 0xCD63}) do
+        register_exec(address, function() trace_combat_object(string.format("Cxxx_%04X", address)) end)
+    end
+end
+
 if PPU_TRACE then
     register_write(0x2006, 1, on_ppu_trace_addr)
     register_write(0x2007, 1, on_ppu_trace_data)

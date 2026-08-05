@@ -482,3 +482,18 @@ report=rom_analysis/stage_map_route_matrix.md
 - promotion=FAIL_NOT_PROVEN
 - natural_boss_route=UNKNOWN
 - report=rom_analysis/combat_branch_trace_2026-08-06.md
+
+2026-08-06 combat object execution trace
+- frames=2400
+- completion=lua_done
+- unique_screen_fingerprints=10
+- trace_rows=652
+- 8D02_calls=642; frame_range=1065-2401
+- AD31_AD34_setup_calls=frame_1064
+- 0430=00;0431=00 across 8D02 calls
+- 0432_0435=changing_object_coordinate_render_fields
+- classification=PASS_TRACE_NOT_A_BOSS_FLAG
+- promotion=FAIL_NOT_PROVEN
+- natural_boss_route=UNKNOWN_NOT_REACHED
+- release_status=NOT_READY
+- report=rom_analysis/combat_object_execution_trace_2026-08-06.md

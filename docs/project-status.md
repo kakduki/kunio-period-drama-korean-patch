@@ -237,3 +237,13 @@ p196-p201 were rechecked against the Japanese base with an 800-frame PPU observa
 ## Combat Branch Trace (2026-08-06)
 
 The optional AA80-AA8F execution hook ran for 2,400 frames and completed with `lua_done`. It recorded 181 rows at frames 1060 and 1064; AA87 executed 9 times per frame while `$7A02` remained `$00`, `$7A01` was `$3F`, and `$04F1` was `$01`. Neighboring AA8C/AA8E execution advanced an X-indexed loop. This is diagnostic evidence against treating `$7A02` or `$04F1` as a safe boss cheat, not boss proof. Release remains `NOT_READY`. See `rom_analysis/combat_branch_trace_2026-08-06.md`.
+
+## Combat Object Execution Trace (2026-08-06)
+
+The new optional object-routine trace completed a 2,400-frame Japanese-base run
+with lua_done. $8D02 executed 642 times during combat, but $0430/$0431 stayed
+$00; changing $0432-$0435 values behaved like object coordinate and render
+fields. The $AD31/$AD34 comparison path appeared only during setup. This is
+PASS_TRACE_NOT_A_BOSS_FLAG; no cheat target was promoted. Natural boss
+progression remains UNKNOWN, and release remains NOT_READY. See
+rom_analysis/combat_object_execution_trace_2026-08-06.md.
