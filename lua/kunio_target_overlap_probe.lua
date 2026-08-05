@@ -2,6 +2,7 @@
 -- directional attack long enough to test collision and slot-clear dispatch.
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/target_overlap_probe"
 local MAX_FRAMES = tonumber(os.getenv("KUNIO_MAX_FRAMES") or "3600")
+local PULSE_ATTACK = os.getenv("KUNIO_PULSE_ATTACK") == "1"
 local function mkdir(p) os.execute('mkdir "' .. p .. '" >NUL 2>NUL') end
 local function append(p, line)
   local f=assert(io.open(p,"a")); f:write(line); f:write(string.char(10)); f:close()
@@ -31,6 +32,15 @@ end
 local function input(frame)
   if frame < 900 then return entry(frame) end
   local rel=frame-900
+  if PULSE_ATTACK then
+    local segment=math.floor(rel/300)%4
+    local direction=segment==0 and "right" or segment==1 and "left" or segment==2 and "down" or "up"
+    local phase=rel%60
+    local buttons={[direction]=true}
+    if phase<6 then buttons.A=true end
+    if phase>=24 and phase<30 then buttons.B=true end
+    return buttons
+  end
   if rel < 1200 then return {right=true,A=true,B=true} end
   if rel < 1800 then return {left=true,A=true,B=true} end
   if rel < 2400 then return {right=true,A=true,B=true} end

@@ -25,6 +25,16 @@ Date: 2026-08-06
 - The overlap window therefore reaches the object update and slot-scan paths, but not the known collision/clear dispatches. Slot-relative fields are now recorded for the next run (`0049,X`, `0050,X`, `0057,X`, `0496,X`, `04AC,X`, `04B4,X`).
 - Slot evidence in the rerun: slot X=01 retained `0050=81`; slot X=05 retained `0050=80` and `04B4=01`; both remained present while the two sprites crossed. This is useful actor-slot evidence, but it is not sufficient to label slot 5 as an enemy or to promote a cheat.
 
+## Pulse-input rerun
+
+- Mode: `KUNIO_PULSE_ATTACK=1`; direction held per 300-frame segment, A/B pressed in six-frame pulses.
+- Output: `C:/tmp/kunio_target_overlap_pulse_2026_08_06`
+- Completion: `lua_done` at frame 2400; 19 screen captures.
+- Execution counts: FC65 638, FC6B 2552, FC8F 1914, 8D02 572, AA8C 240, AA8E 240, AA87 31.
+- Collision/clear counts: FAD9 0, FC82 0, FCEF 0.
+
+The pulse rerun rules out a simple held-button or attack-edge explanation for the missing watched dispatches. It still does not prove that the visible second actor is a valid damage target, so no state write or cheat is promoted.
+
 ## Classification
 
 PASS_COMBAT_OVERLAP_SCREEN_NO_KNOWN_COLLISION_DISPATCH

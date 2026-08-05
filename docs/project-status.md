@@ -363,3 +363,7 @@ A 7,200-frame Japanese-base stage/map sweep with dialogue tracing completed with
 ### 2026-08-06 Targeted Overlap Probe
 
 A dedicated fixed-direction attack probe reached a visible player/enemy overlap at frame 1131 and completed with lua_done. The watched FAD9 collision, FC82 slot-clear, and FCEF clear dispatches were all zero, so those addresses are not yet proven as this interaction's path. No cheat or ROM state write was promoted; the next diagnostic is execution tracing from the attack/object update. See rom_analysis/targeted_overlap_probe_2026-08-06.md.
+### 2026-08-06 Target-overlap pulse rerun
+
+The targeted overlap probe was rerun with six-frame A/B attack pulses and changing directions instead of continuously held attack buttons. It completed at frame 2400 with 19 captures and continued to execute the object and slot loops, but FAD9 collision dispatch, FC82 slot-clear dispatch, and FCEF slot clear remained zero. This rules out a simple held-button edge hypothesis; the visible actor roles and natural enemy-clear/boss route remain UNKNOWN. No cheat or RAM write was promoted. See `rom_analysis/targeted_overlap_probe_2026-08-06.md`.
+
