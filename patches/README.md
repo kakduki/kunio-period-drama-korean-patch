@@ -24,3 +24,11 @@ Generated artifact identity:
 - SHA-1: 7af669f79247243cc14cff1bce5d9c4be534722e
 - SHA-256: aafef7806b705e189111be02e3b6f596a7c2adb1b939da2c5a4527f5bc055873
 - Reproduced candidate MD5: 0a983c3d8494444935f000963f415253
+
+## Four-row manifest candidate
+
+`kunio_period_drama_korean_manifest_4row.ips` is a separate reproducible
+development candidate generated from `translation/script.csv`. It contains
+the four verified opening pointer rows (182-185) and is not a release patch.
+Its build and runtime evidence are recorded in
+`rom_analysis/manifest_4row_reaudit_2026-08-05.md`.
