@@ -96,3 +96,18 @@ run emitted `OPENING-182` at frame 656, `OPENING-183` at 718 and 1047,
 `OPENING-184` at 1349, and `OPENING-185` at 1655. All four IDs have cache rows;
 the latest p185 event resolves as `CACHED`. This remains a sidecar development
 proof, not native ROM release evidence.
+
+## Updated Evidence (2026-08-06)
+
+The sidecar target table now covers six verified records: p182-p185 and
+p194-p195. A bounded 5,000-frame run registered 158 source-read bytes and
+finished with a Lua lua_done row. It emitted p194 at frames 1671 and 4517
+and p195 at frame 4857; both resolved from the reviewed Korean cache.
+
+The wrapper also reported a timeout while waiting for FCEUX to exit. Because
+the copied summary contains lua_done at frame 5000, this is classified as a
+launcher-exit timeout rather than an unbounded emulator run.
+
+p196-p197 remain excluded from the overlay target table until their source
+record and renderer context are proven. The sidecar result is still not
+native ROM release evidence.
