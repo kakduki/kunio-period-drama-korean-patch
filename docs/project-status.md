@@ -204,3 +204,17 @@ values; `$A661`, `$AD86`, and `$AD89` did not execute. No direct counter read
 occurred near the later `$7A01=00` or `$04F1=03` checkpoints. This supports
 classifying `$7A01` as a shared route/setup value, not a confirmed enemy HP or
 boss-clear variable. The natural boss route remains `UNKNOWN`.
+
+## Eight-Row Native PPU Gate (2026-08-05)
+
+The main translation manifest now selects opening rows p182-p189. From the
+verified Japanese base, `build.py --manifest translation/script.csv` reproduces
+candidate MD5 `e0b450a50083dc9dc67aee10af9d130d` and IPS SHA-256
+`d1ff5e14a1829f06e93eff7c76fbe28dc3de9bd18545830e0d64898aeff03e35`.
+
+The renderer-context trace found the lower dialogue nametable at `$2302` and
+recorded candidate-specific PPU bytes for all eight rows. Fixed base/candidate
+screenshots showed nonzero pixel differences in y=160..240 for every row. The
+bounded native visual gate for p182-p189 is `PASS`; menu, combat, boss,
+save/load, ending, and full-game release gates remain `UNKNOWN`/`NOT_READY`.
+See `rom_analysis/manifest_native_visual_comparison_2026-08-05.md`.

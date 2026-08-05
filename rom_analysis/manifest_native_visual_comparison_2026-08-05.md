@@ -4,48 +4,46 @@ Date: 2026-08-05
 
 This is a bounded comparison between the Japanese base ROM and the eight-row
 manifest candidate. Both runs used the same opening-route Lua trace. The
-window trace captured frames at 0, 16, 32, 48, 64, 80, 96, 112, 128, 144,
-and 160 frames after a complete target-span read.
+renderer trace confirmed that the dialogue transfer writes to nametable
+`$2302` onward, which is the lower dialogue band (screen y approximately
+192..224). The earlier report checked y=112..144 and therefore under-reported
+rows after p182.
 
 ## Inputs
 
 - Base ROM: `rom/Kunio Kun no Jidaigeki Dayo Zenin Shuugou! (J).nes`
 - Candidate ROM: `C:/tmp/kunio_manifest_p182_p189_rebuild.nes`
-- Fixed trace: `lua/kunio_manifest_native_visual_trace.lua`
-- Window trace: `lua/kunio_manifest_native_visual_window.lua`
+- Fixed visual trace: `lua/kunio_manifest_native_visual_trace.lua`
+- Renderer trace: `lua/kunio_manifest_renderer_context_trace.lua`
 - Base target pointers: PRG offsets `0x071B6..0x0727F`
 - Candidate target pointers: PRG offsets `0x05FC4..0x06052`
 
 ## Results
 
-| Row | Complete-read capture | Dialogue-band change in 0..160 frames | Soft gate |
-|---:|---:|---:|---|
-| p182 | 26 reads; all window samples differ | 534..1104 changed pixels | PASS |
-| p183 | 14 reads | 0 pixels | UNKNOWN |
-| p184 | 13 reads | 0..10 pixels only; no string-shaped change | UNKNOWN |
-| p185 | 11 reads | 0..2 pixels only; no string-shaped change | UNKNOWN |
-| p186 | 20 reads | 0 pixels | UNKNOWN |
-| p187 | 14 reads | 0 pixels | UNKNOWN |
-| p188 | 22 reads | 0..10 pixels only; no string-shaped change | UNKNOWN |
-| p189 | 22 reads | 0 pixels | UNKNOWN |
+| Row | Candidate PPU writes | Base PPU writes | PPU byte differences | Changed pixels y=160..240 | Soft gate |
+|---:|---:|---:|---:|---:|---|
+| p182 | 48 | 68 | 27 | 656 | PASS |
+| p183 | 26 | 40 | 13 | 355 | PASS |
+| p184 | 24 | 42 | 12 | 366 | PASS |
+| p185 | 20 | 28 | 9 | 227 | PASS |
+| p186 | 36 | 80 | 19 | 707 | PASS |
+| p187 | 26 | 12 | 6 | 208 | PASS |
+| p188 | 40 | 54 | 23 | 590 | PASS |
+| p189 | 40 | 48 | 20 | 526 | PASS |
 
-The complete-read condition prevents the earlier initial-buffer false positive.
-The p182 result is consistent with a real rendered-string change. For
-p183-p189, the target bytes are read and the loader progression is observed,
-but the candidate/base pixel comparison does not show a corresponding
-string-shaped change in the dialogue band, even after 160 frames. These rows
-remain candidate-only; they must not be promoted without a corrected pointer,
-renderer-context trace, or manual visual evidence.
+Every row reached a complete source-record read, wrote candidate-specific
+bytes to the dialogue nametable band, and produced a nonzero lower-band pixel
+difference against the Japanese base capture. This is sufficient for the
+soft native visual gate for rows p182-p189. It does not prove unrelated menu,
+combat, boss, save/load, or ending contexts.
 
 ## Artifacts
 
+- Candidate renderer trace: `C:/tmp/kunio_manifest_p182_p189_renderer_context_v5/`
+- Base renderer trace: `C:/tmp/kunio_manifest_base_p182_p189_renderer_context_v5/`
 - Candidate fixed captures: `C:/tmp/kunio_manifest_p182_p189_native_visual_delayed/`
 - Base fixed captures: `C:/tmp/kunio_manifest_base_p182_p189_native_visual/`
-- Candidate window captures: `C:/tmp/kunio_manifest_p182_p189_native_window_v4/`
-- Base window captures: `C:/tmp/kunio_manifest_base_p182_p189_native_window_v4/`
-- Converted spot checks: `rom_analysis/native_visual_base_p182.png`,
-  `rom_analysis/native_visual_p182.png`, `rom_analysis/native_visual_base_p186.png`,
-  `rom_analysis/native_visual_p186.png`
 
-This report does not change the release gate. The release build remains
-`NOT_READY`.
+The eight-row manifest is now promoted from candidate-only to the main
+translation manifest. The overall release build remains `NOT_READY` until the
+broader release gates are completed.

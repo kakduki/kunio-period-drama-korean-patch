@@ -6,3 +6,7 @@ OPENING-184,dialogue,1,0x05F44,UNKNOWN,UNKNOWN,UNKNOWN,"쿠니오: 오코토, �
 ITEMS-USE,menu,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,사용,UNKNOWN,5,UNKNOWN,items,Existing bounded action candidate; source ownership still separate from pointer dialogue
 ITEMS-REMOVE,menu,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,버리기,UNKNOWN,6,UNKNOWN,items,Existing bounded action candidate; source ownership still separate from pointer dialogue
 OPENING-185,dialogue,1,0x05F46,UNKNOWN,UNKNOWN,UNKNOWN,오코토: 이 사람은,UNKNOWN,20,UNKNOWN,opening,Verified four-row native manifest capture at frame 1627; candidate CPU $9FE9 and visual target match PASS
+OPENING-186,dialogue,1,0x05F48,UNKNOWN,UNKNOWN,UNKNOWN,"아사지: 나는 오코토의 약혼자야",UNKNOWN,44,UNKNOWN,opening,"Native source-read and PPU/pixel dialogue-band gates PASS; candidate CPU $9FF4"
+OPENING-187,dialogue,1,0x05F4A,UNKNOWN,UNKNOWN,UNKNOWN,쿠니오: 그건 두고 보자,UNKNOWN,20,UNKNOWN,opening,"Native source-read and PPU/pixel dialogue-band gates PASS; candidate CPU $A008"
+OPENING-188,dialogue,1,0x05F4C,UNKNOWN,UNKNOWN,UNKNOWN,"아사지: 조용히 해. 두목님이 기다리신다",UNKNOWN,40,UNKNOWN,opening,"Native source-read and PPU/pixel dialogue-band gates PASS; candidate CPU $A016"
+OPENING-189,dialogue,1,0x05F4E,UNKNOWN,UNKNOWN,UNKNOWN,"쿠니오: 오, 스승님! 늦어서 죄송합니다",UNKNOWN,36,UNKNOWN,opening,"Native source-read and PPU/pixel dialogue-band gates PASS; candidate CPU $A02C"

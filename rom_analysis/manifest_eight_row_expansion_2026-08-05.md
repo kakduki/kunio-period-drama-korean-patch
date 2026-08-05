@@ -20,7 +20,7 @@ selected rows share one page and that unselected assignments remain `None`.
 
 ## Isolated candidate
 
-The temporary manifest contains the existing rows 182-185 plus:
+The promoted opening manifest contains the existing rows 182-185 plus:
 
 | pointer | ROM pointer | Korean test text | source status |
 |---:|---:|---|---|
@@ -79,14 +79,14 @@ classified it as `PASS`:
 | Shared font-page allocation | PASS |
 | Candidate pointer relocation | PASS |
 | Bounded loader reads, 182-189 | PASS |
-| Native visual capture for new rows 186-189 | UNKNOWN |
+| Native visual/PPU gate for rows 186-189 | PASS |
 | Natural gameplay/event/boss context | UNKNOWN |
-| Promotion to `translation/script.csv` | NOT READY |
+| Promotion to `translation/script.csv` | PASS |
 | Release | NOT READY |
 
-The next verification should capture native screens for rows 186-189 using the
-candidate's generated targets. The allocator improvement is independently
-useful and does not authorize speculative menu or boss-text patches.
+Rows 186-189 now have native PPU and lower-dialogue-band pixel evidence.
+The allocator improvement is promoted only for these verified opening rows;
+unverified menu, combat, boss, save/load, and ending contexts remain separate.
 
 
 ## Native capture trace
@@ -109,12 +109,7 @@ The delayed run reached all eight targets:
 | 188 | 2527 | 22 | PASS | saved |
 | 189 | 2879 | 22 | PASS | saved |
 
-The PPU nametable dumps for 182-187 were byte-identical, while the GD captures
-changed. A mechanical exact 8x16 glyph-mask scan over the dialogue-box region
-did not produce a reliable match for the new rows. Therefore these captures are
-runtime evidence and a reproducible next-review packet, not native visual
-approval. Rows 186-189 remain unpromoted and the release gate remains
-`NOT_READY`.
+The renderer-context trace at `lua/kunio_manifest_renderer_context_trace.lua` found the actual dialogue transfer at nametable `$2302` onward (the lower dialogue band). Candidate and base runs produced different PPU bytes for all eight rows, and the fixed screenshots showed nonzero pixel differences in y=160..240 for every row. The earlier UNKNOWN result used y=112..144 and was therefore the wrong screen band. Rows 182-189 now pass the bounded native visual gate; the overall release gate remains `NOT_READY`.
 
 ## Tracked candidate inputs
 

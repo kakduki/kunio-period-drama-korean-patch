@@ -38,7 +38,7 @@ Its build and runtime evidence are recorded in
 `kunio_period_drama_korean_manifest_p182_p189_candidate.ips` is a separate
 candidate-only IPS generated from the tracked
 `translation/script_manifest_p182_p189_candidate.csv`. It contains rows 182-189
-and is reproducible, but rows 186-189 still have `UNKNOWN` native visual gates.
+and is reproducible. Rows 182-189 pass the bounded native PPU/pixel gate; broader game-context gates remain open.
 It is not the release patch.
 
 - Candidate MD5: `e0b450a50083dc9dc67aee10af9d130d`

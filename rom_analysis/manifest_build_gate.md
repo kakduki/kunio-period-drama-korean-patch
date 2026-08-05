@@ -87,3 +87,11 @@ The manifest now selects p182, p183, p184, and p185. The rebuilt candidate is
 bytes and all four bounded visual captures report exact target matches. This
 selected-row gate is `PASS`; full dialogue, dynamic contexts, and release gates
 remain separate `UNKNOWN`/`NOT_READY` states.
+## Current Eight-Row Promotion (2026-08-05)
+
+The tracked main manifest has since been promoted to eight opening rows
+p182-p189. The reproducible candidate is MD5
+`e0b450a50083dc9dc67aee10af9d130d`; native source-read and lower-dialogue-band
+PPU/pixel gates pass for all eight rows. This supersedes the earlier one-,
+two-, and four-row milestone counts in this historical report. Broader game
+contexts and release approval remain `NOT_READY`.
