@@ -218,3 +218,6 @@ screenshots showed nonzero pixel differences in y=160..240 for every row. The
 bounded native visual gate for p182-p189 is `PASS`; menu, combat, boss,
 save/load, ending, and full-game release gates remain `UNKNOWN`/`NOT_READY`.
 See `rom_analysis/manifest_native_visual_comparison_2026-08-05.md`.
+## Twelve-Row Native Promotion (2026-08-05)
+
+The main development manifest now contains twelve reviewed opening dialogue rows, `p182-p193`. Rows `p190-p193` were promoted only after a bounded FCEUX route confirmed complete source reads and lower-dialogue-band PPU writes at `$2302`. Candidate MD5: `e0f8f2970874da5413fc907b3449947d`. Natural gameplay, combat, boss, save/load, ending, and full 244-row regression remain `UNKNOWN`; release status remains `NOT_READY`.

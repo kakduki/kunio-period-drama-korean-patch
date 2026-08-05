@@ -95,3 +95,6 @@ p182-p189. The reproducible candidate is MD5
 PPU/pixel gates pass for all eight rows. This supersedes the earlier one-,
 two-, and four-row milestone counts in this historical report. Broader game
 contexts and release approval remain `NOT_READY`.
+## Twelve-Row Promotion Gate (2026-08-05)
+
+`p190-p193` are now included in the main development manifest after bounded native runtime evidence. The build applied 12 manifest rows and skipped 3 intentionally unresolved menu rows. This is a development promotion only; pixel screenshot, natural gameplay/event/boss, full 244-row regression, and release gates remain open.
