@@ -52,6 +52,12 @@ def glyph_8x16_to_8x8_tile(glyph: bytes) -> bytes:
     for row in range(8):
         plane0[row] = glyph[row * 2] | glyph[row * 2 + 1]
         plane1[row] = glyph[16 + row * 2] | glyph[16 + row * 2 + 1]
+    # The generated Korean asset is currently 1bpp: its second 8x16 plane is
+    # empty. The game's text palette expects the foreground bit in both NES
+    # planes (pixel value 3), so promote a one-plane glyph to the same bright
+    # foreground used by the original font while preserving true 2bpp input.
+    if not any(plane1):
+        plane1[:] = plane0
     return bytes(plane0 + plane1)
 
 
