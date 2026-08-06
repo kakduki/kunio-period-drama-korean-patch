@@ -381,3 +381,7 @@ The corrected route now selects the mode, advances opening dialogue, opens the e
 ### 2026-08-06 Japanese Koganemushi field entry
 
 The documented Koganemushi name-entry route was reproduced on the verified Japanese base using 1-frame direction pulses, 8-frame A/B confirmation pulses, and 20-frame gaps. The run rendered the Japanese name-entry screen at frame 2145, the entered-name state at frame 3600, the setup screen at frame 3660, and a real town/field scene with the large-money value visible at frame 4260. The 5,200-frame run completed with `lua_done` and 31 unique fingerprints. Map CRSR ownership, map travel, natural enemy/boss progression, and boss dialogue remain `UNKNOWN`; no RAM or ROM write was promoted. See `rom_analysis/japanese_koganemushi_field_entry_2026-08-06.md`.
+
+### 2026-08-06 Japanese Koganemushi field roam
+
+A directional-only post-cheat roam mode ran 6,500 frames after the verified Japanese Koganemushi field entry. It completed with `lua_done` and 31 total fingerprints, but the player remained at the left-edge town/field scene and no encounter, defeat, or boss transition was recorded. The result is `PASS_CHEAT_FIELD_STATE; UNKNOWN_FIELD_MOVEMENT_AND_ENCOUNTER`; the roam mode remains diagnostic and no state write was promoted. See `rom_analysis/japanese_koganemushi_field_roam_2026-08-06.md`.

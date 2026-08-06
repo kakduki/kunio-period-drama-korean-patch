@@ -26,6 +26,7 @@ local CHEAT_DIRECTION_PULSE = tonumber(os.getenv("KUNIO_CHEAT_DIRECTION_PULSE") 
 local CHEAT_CONFIRM_PULSE = tonumber(os.getenv("KUNIO_CHEAT_CONFIRM_PULSE") or tostring(CHEAT_PULSE))
 local CHEAT_GAP = tonumber(os.getenv("KUNIO_CHEAT_GAP") or "18")
 local POST_CHEAT_ROUTE = os.getenv("KUNIO_POST_CHEAT_ROUTE") == "1"
+local POST_FIELD_ROAM = os.getenv("KUNIO_POST_FIELD_ROAM") == "1"
 
 local cheat_events = {}
 local cheat_cursor = CHEAT_START_FRAME
@@ -164,6 +165,18 @@ local function input_for(frame)
     end
     if POST_CHEAT_ROUTE and frame >= POST_CHEAT_START then
         local post_frame = frame - POST_CHEAT_START
+        if POST_FIELD_ROAM and post_frame >= 260 then
+            local roam = (post_frame - 260) % 1200
+            local segment = math.floor(roam / 300)
+            local direction = {}
+            if segment == 0 then direction.right = true
+            elseif segment == 1 then direction.left = true
+            elseif segment == 2 then direction.down = true
+            else direction.up = true end
+            local phase = roam % 300
+            if phase < 220 then return direction, "post_field_roam" end
+            return {}, "post_field_pause"
+        end
         if post_frame >= 500 and post_frame < 512 then return { start = true }, "post_game_menu" end
         if post_frame >= 600 and post_frame < 612 then return { B = true }, "post_map_open" end
         if post_frame >= 700 and post_frame < 712 then return { right = true }, "post_map_right" end
