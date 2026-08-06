@@ -1,4 +1,4 @@
--- Bounded native visual trace for relocated manifest dialogue records.
+﻿-- Bounded native visual trace for relocated manifest dialogue records.
 -- Captures one post-read screen and PPU nametable per target; no state writes.
 
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/manifest_native_visual_trace"
@@ -75,5 +75,6 @@ while emu.framecount()<MAX_FRAMES and seen_count<#targets do
   for index,delay in pairs(pending) do if delay<=0 then if not seen[index] then capture(index,emu.framecount()) end; pending[index]=nil else pending[index]=delay-1 end end
   gui.text(2,8,"Manifest native visual trace "); gui.text(2,17,"frame="..tostring(frame))
 end
-append(summary,table.concat({emu.framecount(),"DONE","",tostring(seen_count==#targets),fingerprint(),"","",""},"\t"))
-print("KUNIO_NATIVE_VISUAL_DONE"); pcall(function() FCEU.pause() end); pcall(function() emu.pause() end)
+append(summary,table.concat({emu.framecount(),"lua_done","",tostring(seen_count==#targets),fingerprint(),"","",""},"\t"))
+print("KUNIO_NATIVE_VISUAL_DONE"); print("lua_done"); pcall(function() FCEU.pause() end); pcall(function() emu.pause() end)
+

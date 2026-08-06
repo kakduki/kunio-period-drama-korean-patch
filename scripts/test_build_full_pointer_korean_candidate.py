@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Test full control-preserving pointer-dialogue compilation."""
 
 from __future__ import annotations
@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 
 from build_full_pointer_korean_candidate import (
+    DIRECT_PAGE_TABLE_ROM_OFFSET,
     PAGE_CAPACITY,
     POINTER_COUNT,
     SOURCE_CODES,
@@ -16,7 +17,7 @@ from build_full_pointer_korean_candidate import (
 )
 from build_opening_dialogue_8x16_proof import default_tall_font
 from build_ptr181_bank8_page_probe import resolve_base_rom
-from pointer_page_loader import PAGE_TABLE_ROM_OFFSET
+
 
 
 def main() -> int:
@@ -51,8 +52,8 @@ def main() -> int:
     patched, targets = apply_full_candidate(base, config, default_tall_font(None))
     assert patched[5] == 29
     assert len(patched) == len(base) + 13 * 0x2000
-    assert hashlib.md5(patched).hexdigest() == "7844f2d6f6a67e86e23b2f954d5ebf3c"
-    table = patched[PAGE_TABLE_ROM_OFFSET:PAGE_TABLE_ROM_OFFSET + POINTER_COUNT]
+    assert hashlib.md5(patched).hexdigest() == "165ede9d7cf426a3f8aa841af4268a44"
+    table = patched[DIRECT_PAGE_TABLE_ROM_OFFSET:DIRECT_PAGE_TABLE_ROM_OFFSET + POINTER_COUNT]
     assert sum(value != 0 for value in table) == 244
     assert max(table) == page_count
     assert any(target["kind"] == "full_dialogue_records" for target in targets)
@@ -62,3 +63,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+

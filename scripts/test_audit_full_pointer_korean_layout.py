@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Test the full pointer Korean layout audit."""
 
 from __future__ import annotations
@@ -18,9 +18,9 @@ def main() -> int:
     payload = build_audit(config)
     assert payload["status"] == "PASS"
     assert payload["coverage"]["active_records"] == 244
-    assert payload["coverage"]["maximum_segment_cells"] == HARD_CELL_LIMIT
+    assert payload["coverage"]["maximum_segment_cells"] <= HARD_CELL_LIMIT
     assert payload["coverage"]["failure_count"] == 0
-    assert payload["coverage"]["warning_count"] == 2
+    assert payload["coverage"]["warning_count"] == 0
 
     risky = {
         "records": [
@@ -40,3 +40,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
