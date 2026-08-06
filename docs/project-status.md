@@ -377,3 +377,7 @@ The shared stage probe now supports `KUNIO_SELECT_MODE=1` and `KUNIO_ADVANCE_OPE
 ### 2026-08-06 Map cursor to field entry
 
 The corrected route now selects the mode, advances opening dialogue, opens the encounter map, and cycles the map cursor with bounded A/B pulses. A 3,000-frame right-travel run proved the map screen; a 5,000-frame directional sweep reached a different town/field scene at frame 1980, and the traced 8,000-frame rerun completed with `lua_done`, 17 unique fingerprints, and 399 dialogue source-read rows. Collision dispatch, enemy-slot clear, boss spawn, and boss dialogue remained zero, so the result is `PASS_MODE_SELECT_DIALOGUE_MAP_FIELD_ENTRY; UNKNOWN_NATURAL_ENCOUNTER`. See `rom_analysis/map_cursor_field_entry_2026-08-06.md`.
+
+### 2026-08-06 Japanese Koganemushi field entry
+
+The documented Koganemushi name-entry route was reproduced on the verified Japanese base using 1-frame direction pulses, 8-frame A/B confirmation pulses, and 20-frame gaps. The run rendered the Japanese name-entry screen at frame 2145, the entered-name state at frame 3600, the setup screen at frame 3660, and a real town/field scene with the large-money value visible at frame 4260. The 5,200-frame run completed with `lua_done` and 31 unique fingerprints. Map CRSR ownership, map travel, natural enemy/boss progression, and boss dialogue remain `UNKNOWN`; no RAM or ROM write was promoted. See `rom_analysis/japanese_koganemushi_field_entry_2026-08-06.md`.

@@ -37,6 +37,7 @@ local ATTACK_AFTER_OPENING = os.getenv("KUNIO_ATTACK_AFTER_OPENING") == "1"
 local MAP_ONCE_AFTER_DIALOGUE = os.getenv("KUNIO_MAP_ONCE_AFTER_DIALOGUE") == "1"
 local MAP_CURSOR_TRAVEL = os.getenv("KUNIO_MAP_CURSOR_TRAVEL") == "1"
 local MAP_CURSOR_SWEEP = os.getenv("KUNIO_MAP_CURSOR_SWEEP") == "1"
+local FIELD_SWEEP_AFTER_MAP = os.getenv("KUNIO_FIELD_SWEEP_AFTER_MAP") == "1"
 local STATE_WRITES_TEXT = os.getenv("KUNIO_STATE_WRITES") or ""
 local STATE_WRITE_START = tonumber(os.getenv("KUNIO_STATE_WRITE_START") or "900")
 local STATE_WRITE_END = tonumber(os.getenv("KUNIO_STATE_WRITE_END") or "1300")
@@ -479,6 +480,22 @@ local function combat_input(frame)
                     if rel >= 912 then
                         if MAP_CURSOR_TRAVEL then
                             local travel = (rel - 912) % 768
+                            if FIELD_SWEEP_AFTER_MAP and travel >= 192 then
+                                local field = (rel - 1104) % 960
+                                local segment = math.floor(field / 240)
+                                local direction = {}
+                                if segment == 0 then direction.right = true
+                                elseif segment == 1 then direction.left = true
+                                elseif segment == 2 then direction.right = true
+                                else direction.left = true end
+                                local phase = field % 240
+                                if phase < 160 then
+                                    direction.A = true
+                                    if math.floor(field / 32) % 2 == 1 then direction.B = true end
+                                    return direction
+                                end
+                                return {}
+                            end
                             local segment = math.floor(travel / 192)
                             local direction_name = "right"
                             if MAP_CURSOR_SWEEP then
