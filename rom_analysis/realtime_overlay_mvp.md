@@ -74,3 +74,16 @@ python scripts/run_fceux_lua_analysis.py --rom "rom\Kunio Kun no Jidaigeki Dayo 
 This is a bounded four-record sidecar proof. It does not prove full-game
 coverage or native Korean visual safety. The p185 Korean text is a reviewed
 draft (`오코토: 이 사람은`) and remains separate from release approval.
+
+## Fourteen-Record Cache Sync (2026-08-07)
+
+`translation/realtime_overlay.csv` and
+`lua/kunio_translation_overlay_targets.lua` now cover the same fourteen
+opening rows already promoted in `translation/script.csv`
+(`OPENING-182` through `OPENING-195`). Pointers 186-193 use the Japanese
+Bank 1 source windows from `rom_analysis/pointer_dialogue_catalog.tsv`.
+Pointers 196-197 remain excluded until a natural route reaches them.
+
+This is a sidecar cache/target sync only. It does not change native ROM
+release status, which remains `NOT_READY`. A bounded FCEUX emitter recheck
+still requires the verified Japanese base ROM in `rom/`.

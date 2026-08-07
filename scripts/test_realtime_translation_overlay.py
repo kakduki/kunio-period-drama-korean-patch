@@ -57,7 +57,22 @@ def main() -> int:
 def test_overlay_targets_cover_verified_records() -> None:
     target_text = (Path(__file__).parents[1] / "lua" / "kunio_translation_overlay_targets.lua").read_text(encoding="utf-8")
     cache_text = (Path(__file__).parents[1] / "translation" / "realtime_overlay.csv").read_text(encoding="utf-8-sig")
-    for event_id in ("OPENING-182", "OPENING-183", "OPENING-184", "OPENING-185", "OPENING-194", "OPENING-195"):
+    for event_id in (
+        "OPENING-182",
+        "OPENING-183",
+        "OPENING-184",
+        "OPENING-185",
+        "OPENING-186",
+        "OPENING-187",
+        "OPENING-188",
+        "OPENING-189",
+        "OPENING-190",
+        "OPENING-191",
+        "OPENING-192",
+        "OPENING-193",
+        "OPENING-194",
+        "OPENING-195",
+    ):
         assert event_id in target_text
         assert event_id in cache_text
     assert "OPENING-196" not in target_text

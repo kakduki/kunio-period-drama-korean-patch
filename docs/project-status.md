@@ -385,3 +385,7 @@ The documented Koganemushi name-entry route was reproduced on the verified Japan
 ### 2026-08-06 Japanese Koganemushi field roam
 
 A directional-only post-cheat roam mode ran 6,500 frames after the verified Japanese Koganemushi field entry. It completed with `lua_done` and 31 total fingerprints, but the player remained at the left-edge town/field scene and no encounter, defeat, or boss transition was recorded. The result is `PASS_CHEAT_FIELD_STATE; UNKNOWN_FIELD_MOVEMENT_AND_ENCOUNTER`; the roam mode remains diagnostic and no state write was promoted. See `rom_analysis/japanese_koganemushi_field_roam_2026-08-06.md`.
+
+### 2026-08-07 Realtime overlay fourteen-row sync
+
+The realtime overlay cache and emitter targets now cover `OPENING-182` through `OPENING-195`, matching the fourteen reviewed opening rows in `translation/script.csv`. Pointers 196-197 remain excluded. This is a sidecar sync only; native ROM release remains `NOT_READY`, and a bounded FCEUX recheck still requires the verified Japanese base ROM. See `rom_analysis/realtime_overlay_mvp.md`.
