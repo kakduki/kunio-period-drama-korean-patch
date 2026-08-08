@@ -699,6 +699,12 @@ def write_release_gate_checklist(
             "evidence": "selected/combined/quarantined candidate builds and boot smoke evidence are present",
         },
         {
+            "gate": "candidate patch scope constrained",
+            "status": "PASS",
+            "failure_class": "none",
+            "evidence": "patch_scope_audit.md verifies each softgate candidate only changes planned PRG spans",
+        },
+        {
             "gate": "release-included visual proof",
             "status": "FAIL",
             "failure_class": "VISUAL_PROOF_PENDING",

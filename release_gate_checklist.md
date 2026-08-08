@@ -19,6 +19,7 @@ Current release verdict: **UNKNOWN**
 | Full translated script | CANDIDATE_BUILT | 244 Korean rows compile with preserved English non-letter control skeletons; 14 token-sensitive rows use explicit Korean segments, 244 rows are English-reference reviewed, no translation drafts remain, and four excluded rows retain Japanese bytes. |
 | Non-opening pointer batch | UNKNOWN | Pointers 2-3 compile and relocate safely; the bounded opening/extended routes reached no target capture, so early-boss screen context is not yet captured. |
 | Direct 8x16 pointer batch | UNKNOWN | Pointers 0-2 compile with 24 glyphs and 0 escaped bytes; boot passes at frame 883, but the frame-5000 route has no complete target match and p0 has a multi-message structural risk. |
+| one-hit cheat probe ($7A02=00) | UNKNOWN | Mixed/combat/stationary/grid runtime runs reached `lua_done` (13/38/11 unique screens) with no later dialogue or boss context transition; `FAD9/FC82/FCEF/F196/F197` were not observed to confirm boss route. |
 | Opening-context Korean glyph capacity | SOFT_GATE_PASS | Pointer 182 proves 34 paired source slots (`0x81-0x9A` plus `0xC0-0xC7`) at frame 883; this is not global coverage. |
 | Full Korean pointer draft capacity | SOFT_GATE_PASS | The current Hangul set packs into 48 shared pages, each within the proven 34-code 8x16 pool. |
 | Static cloned-page lifecycle | SOFT_GATE_PASS | Small page mapping passes but its native visual gate fails; corrected tier-2 R1-window candidate passes `67/67` mappings with the opening background intact. |

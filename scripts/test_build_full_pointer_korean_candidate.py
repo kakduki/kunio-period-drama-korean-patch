@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Test full control-preserving pointer-dialogue compilation."""
 
 from __future__ import annotations

@@ -1,4 +1,4 @@
-﻿-- Bounded native visual trace for relocated manifest dialogue records.
+-- Bounded native visual trace for relocated manifest dialogue records.
 -- Captures one post-read screen and PPU nametable per target; no state writes.
 
 local OUT_DIR = os.getenv("KUNIO_ANALYSIS_OUTPUT") or "rom_analysis/manifest_native_visual_trace"

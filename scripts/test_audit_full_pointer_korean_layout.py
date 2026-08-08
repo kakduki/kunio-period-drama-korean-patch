@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Test the full pointer Korean layout audit."""
 
 from __future__ import annotations

@@ -225,7 +225,7 @@ source_chain_rom=0x13727
 source_chain_cpu=B717-B737
 source_chain_sram=6360
 source_chain_ppu=2363
-actions=USE->사용,REMOVE->버리기,GIVE->주기,DRP->버림
+actions=USE->????REMOVE->甕곌쑬?곫묾?GIVE->雅뚯눊由?DRP->甕곌쑬??
 static_source_scope=PASS
 font_page_scope=PASS
 ips_round_trip=PASS
@@ -531,6 +531,16 @@ report=rom_analysis/stage_map_route_matrix.md
 - classification=PASS_EXTERNAL_CHEAT_PROBE_NO_ROUTE_ADVANCE
 - promotion=FAIL_NOT_PROVEN; natural_boss_route=UNKNOWN_NOT_REACHED
 - report=rom_analysis/external_cheat_ram_probe_2026-08-06.md
+ 
+2026-08-08 one-hit cheat RAM probe (7A02=00 runtime write)
+- rom=verified_japanese_base; mode=mixed/stationary/grid combat routes with combat-window write of RAM 7A02=00
+- completion=lua_done all runs; unique_screens=mixed:13, stationary:38, grid:11
+- collisions=fad9:0, fc82:0, fcef:0; fc65_scan pattern unchanged; no clear boss dispatch observed
+- state_observed=04F1=03 (combat routes), 04F1=01 (grid); final states had no boss-route markers
+- p196/p197 status=NOT_REACHED; boss-route transition not confirmed
+- classification=CHEAT_EFFECT_OBSERVED_BOSS_ROUTE_UNKNOWN
+- promotion=FAIL_NOT_PROVEN
+- report=rom_analysis/7a02_one_hit_cheat_probe_2026-08-08.md
 
 2026-08-06 object region execution trace
 - rom=english_reference; frames=2400; completion=lua_done; unique=10

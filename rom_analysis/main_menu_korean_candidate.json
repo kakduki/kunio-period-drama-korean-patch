@@ -964,7 +964,8 @@
         "rom_offset": 202768,
         "length": 2048,
         "source_chr_1k_pair": "0x3E",
-        "clone_chr_1k_pair": "0x46"
+        "clone_chr_1k_pair": "0x46",
+        "clone_source": "target_rom"
       },
       {
         "kind": "font_tile_top_left",

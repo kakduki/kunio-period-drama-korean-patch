@@ -1,9 +1,9 @@
 # Full Korean Items Action Candidate
 
-- Status: `BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_PASS`.
+- Status: `BUILT_ITEMS_ACTION_STATIC_PASS_RUNTIME_UNKNOWN`.
 - Release status: `NOT_READY`.
 - Base MD5: `0d406a85285b4de8468f0dab6aad5fe5`.
-- Candidate MD5: `257cadcc80ac1400f20c1ea581d493a8`.
+- Candidate MD5: `a07623319e3b8100bcae422e2dd988df`.
 - Source chain: ROM `0x13727` -> SRAM `$6360` -> PPU `$2363`.
 - Font page: normal Items R1 `0x3E/0x3F`.
 
@@ -17,5 +17,5 @@
 ## Gate
 
 - Byte-scope, source-chain, and IPS round-trip: PASS.
-- Exact candidate Items PPU/source/queue proof: PASS.
+- Exact candidate Items PPU/source/queue proof: UNKNOWN.
 - Title and empty-inventory rows remain untranslated and are separate follow-up owners.

@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QFCEUX = ROOT / "tools" / "fceux-2.6.6-win64-QtSDL" / "bin" / "qfceux.exe"
 DEFAULT_FCEUX = ROOT / "tools" / "fceux-2.6.6-win64" / "fceux64.exe"
-STAGED_FCEUX = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
+STAGED_FCEUX_BASE = Path(tempfile.gettempdir()) / "kunio_fceux_ascii_bin"
 BLIND_AUTOPLAY_FRAME_CAP = 900
 BLIND_AUTOPLAY_TIMEOUT_CAP = 45
 BLIND_AUTOPLAY_SCRIPT_NAMES = {"kunio_auto_dump.lua", "kunio_autoplay_watch.lua"}
@@ -220,21 +220,51 @@ def print_manual_capture_hint(reason: str) -> None:
         )
 
 
+def cleanup_stage_directory(staged_root: Path) -> None:
+    """Best-effort cleanup for staged binaries.
+
+    FCEUX may still hold a locked DLL during shutdown; do not fail a run for that.
+    """
+    if not staged_root.exists():
+        return
+    try:
+        shutil.rmtree(staged_root)
+    except PermissionError:
+        # Leave locked folders for a later sweep; they are isolated per run.
+        pass
+
+
+def make_staged_fceux_dir() -> Path:
+    """Create a uniquely named staging directory per run."""
+    for attempt in range(20):
+        candidate = (
+            STAGED_FCEUX_BASE
+            if attempt == 0
+            else STAGED_FCEUX_BASE.with_name(
+                f"{STAGED_FCEUX_BASE.name}_{os.getpid()}_{int(time.time() * 1000)}_{attempt}"
+            )
+        )
+        if not candidate.exists():
+            return candidate
+        time.sleep(0.05)
+    candidate = STAGED_FCEUX_BASE.with_name(
+        f"{STAGED_FCEUX_BASE.name}_{os.getpid()}_{int(time.time() * 1000)}_fallback"
+    )
+    return candidate
+
+
 def stage_fceux(exe: Path) -> Path:
     """Copy FCEUX beside ASCII-only runtime files.
 
     FCEUX 2.6.6 on Windows can launch from a non-ASCII path, but Lua loading is
     unreliable there. Running from %TEMP% avoids mojibake in the Lua loader.
     """
-
-    if STAGED_FCEUX.exists():
-        shutil.rmtree(STAGED_FCEUX)
-    shutil.copytree(exe.parent, STAGED_FCEUX)
-    staged_exe = STAGED_FCEUX / exe.name
+    staged_root = make_staged_fceux_dir()
+    shutil.copytree(exe.parent, staged_root, dirs_exist_ok=False)
+    staged_exe = staged_root / exe.name
     if not staged_exe.exists():
         raise FileNotFoundError(f"Staged FCEUX executable was not copied: {staged_exe}")
     return staged_exe
-
 
 def update_cfg(exe: Path, lua_script_name: str, output_dir_name: str) -> None:
     cfg = exe.parent / "fceux.cfg"
@@ -376,6 +406,7 @@ def launch(args: argparse.Namespace) -> int:
     mirrored = mirror_staged_manual_outputs(staged_analysis_root)
     for destination in mirrored:
         print("Copied manual dump output into:", destination)
+    cleanup_stage_directory(ascii_output.parent)
     if completed:
         return 0
     return proc.returncode or 0

@@ -120,21 +120,3 @@ candidate_rom=output/kunio_period_drama_softgate_quarantine_07227_katana.nes
 lua_script=lua/kunio_auto_dump.lua
 summary=rom_analysis/candidate_pipeline/smoke_summary_softgate-quarantine-07227-katana.tsv
 
-
-[direct-low-120-labels]
-build_status=PASS
-candidate_md5=2c012fbb98bc93885f884a111839bcf3
-candidate_rom=output/full_korean_direct_low_candidate/kunio_period_drama_korean_full_direct_low_candidate.nes
-candidate_ips=output/full_korean_direct_low_candidate/kunio_period_drama_korean_full_direct_low_candidate.ips
-direct_low_rows=120
-korean_glyphs=77
-ips_records=493
-ips_round_trip=PASS
-menu_lua_done=PASS
-progression_lua_done=PASS
-progression_reaches_combat=PASS
-progression_reaches_late_event=PASS
-visual_context_proof=UNKNOWN
-release_status=NOT_READY
-failure_class=none_for_build_or_smoke
-
