@@ -30,6 +30,8 @@ local MAP_SOURCE_ROUTE = os.getenv("KUNIO_MAP_SOURCE_ROUTE") == "1"
 local MAP_DIRECTION = os.getenv("KUNIO_MAP_DIRECTION") or "right"
 local MAP_SWEEP = os.getenv("KUNIO_MAP_SWEEP") == "1"
 local MAP_ENTRY_PROBE = os.getenv("KUNIO_MAP_ENTRY_PROBE") == "1"
+local POST_COMBAT_INPUT = os.getenv("KUNIO_POST_COMBAT_INPUT") == "1"
+local POST_COMBAT_START = tonumber(os.getenv("KUNIO_POST_COMBAT_START") or "7000")
 local SELECT_MODE = os.getenv("KUNIO_SELECT_MODE") == "1"
 local ADVANCE_OPENING_DIALOGUE = os.getenv("KUNIO_ADVANCE_OPENING_DIALOGUE") == "1"
 local OPEN_MAP_AFTER_DIALOGUE = os.getenv("KUNIO_OPEN_MAP_AFTER_DIALOGUE") == "1"
@@ -531,6 +533,16 @@ local function combat_input(frame)
         end
     end
     if rel < 0 then return {} end
+    if POST_COMBAT_INPUT and frame >= POST_COMBAT_START then
+        local cycle = (frame - POST_COMBAT_START) % 384
+        if cycle < 12 then return { start = true } end
+        if cycle < 24 then return {} end
+        if cycle < 36 then return { B = true } end
+        if cycle < 48 then return {} end
+        if cycle < 96 then return { A = true } end
+        if cycle < 120 then return { start = true } end
+        return {}
+    end
     if MAP_ENTRY_PROBE then
         -- Probe the documented Start -> B encounter-map input independently
         -- of the unresolved stage-clear state. This only sends controller input.
